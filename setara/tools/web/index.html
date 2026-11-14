@@ -146,6 +146,16 @@
       if (left === 0) { document.getElementById('loading').style.display = 'none'; Module.canvas.focus(); }
     }
   };
+  // Make the WebGL context now, before love.js reserves its memory and loads the
+  // big game file. Phones refuse a new context once the page holds that much
+  // (about 0.9 GB), and LÖVE then shows a misleading "EGL_BAD_CONFIG". love.js
+  // gets this same context later: the attributes are the ones LÖVE asks for.
+  var gl = Module.canvas.getContext('webgl', { alpha: true, depth: false, stencil: true, antialias: false });
+  function startGame() {
+    if (gl) { Love(Module); return; }
+    statusEl.textContent = 'This browser cannot show the game: WebGL is not available.';   // do not download 140 MB for nothing
+    document.getElementById('bar').style.display = 'none';
+  }
   Module.canvas.addEventListener('webglcontextlost', function (e) { statusEl.textContent = 'The picture was lost. Reload the page.'; e.preventDefault(); });
   window.addEventListener('keydown', function (e) {
     if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) e.preventDefault();   // keep the page from scrolling
@@ -174,6 +184,6 @@
   }).catch(function () {});
 </script>
 <script src="game.js"></script>
-<script async src="love.js" onload="Love(Module)"></script>
+<script async src="love.js" onload="startGame()"></script>
 </body>
 </html>
