@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<g transform="translate(76 54) scale(0.4)">
+<g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" transform="translate(64 64) scale(0.93) translate(-64 -56.75)">
+<path d="M64 100c-2-24 2-50 0-80" fill="none" stroke-width="9"/>
+<path d="M64 100c-2-24 2-50 0-80" fill="none" stroke="#9a6b3f" stroke-width="4"/>
+<g transform="translate(64 80) rotate(-30) scale(1)" stroke-width="5.00">
+<path d="M0 0c8-12 24-12 32 0-8 12-24 12-32 0z" fill="#4e9a51"/>
+</g>
+<g transform="translate(64 68) rotate(210) scale(1)" stroke-width="5.00">
+<path d="M0 0c8-12 24-12 32 0-8 12-24 12-32 0z" fill="#4e9a51"/>
+</g>
+<g transform="translate(64 54) rotate(-30) scale(1)" stroke-width="5.00">
+<path d="M0 0c8-12 24-12 32 0-8 12-24 12-32 0z" fill="#4e9a51"/>
+</g>
+<g transform="translate(64 42) rotate(210) scale(1)" stroke-width="5.00">
+<path d="M0 0c8-12 24-12 32 0-8 12-24 12-32 0z" fill="#4e9a51"/>
+</g>
+<g transform="translate(64 24) rotate(-90) scale(0.9)" stroke-width="5.56">
+<path d="M0 0c8-12 24-12 32 0-8 12-24 12-32 0z" fill="#9ccb7a"/>
+</g>
+<path d="M22 118c8-16 24-22 42-22s34 6 42 22z" fill="#9a6b3f"/>
+</g>
+</g><g transform="translate(-14 30) scale(0.8)">
+<g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M36 82V114" fill="none" stroke-width="13"/><path d="M36 82V114" fill="none" stroke="#e8d2a6" stroke-width="6"/><path d="M48 84V114" fill="none" stroke-width="13"/><path d="M48 84V114" fill="none" stroke="#e8d2a6" stroke-width="6"/><path d="M76 84V114" fill="none" stroke-width="13"/><path d="M76 84V114" fill="none" stroke="#e8d2a6" stroke-width="6"/><path d="M88 82V114" fill="none" stroke-width="13"/><path d="M88 82V114" fill="none" stroke="#e8d2a6" stroke-width="6"/><path d="M26 62c-8-4-10-12-6-16 6 2 10 6 12 12z" fill="#e8d2a6"/><path d="M104 46l2 18 8-14z" fill="#6b4a2b"/><ellipse cx="58" cy="70" rx="36" ry="21" fill="#e8d2a6"/><path d="M74 60L86 32c2-8 12-10 18-6l14 14c4 4 0 10-6 8l-10-2-8 28z" fill="#e8d2a6"/><ellipse cx="58" cy="70" rx="36" ry="21" fill="#e8d2a6" stroke="none"/><path d="M74 60L86 32c2-8 12-10 18-6l14 14c4 4 0 10-6 8l-10-2-8 28z" fill="#e8d2a6" stroke="none"/><path d="M94 28C92 14 82 8 70 10" fill="none" stroke-width="11"/><path d="M94 28C92 14 82 8 70 10" fill="none" stroke="#6b4a2b" stroke-width="4"/><path d="M88 36c-8 0-14 4-16 10 8 0 14-2 16-10z" fill="#c9a66b" stroke-width="4"/><circle cx="103" cy="37" r="2.8" fill="#3b2f2f" stroke="none"/>
+</g>
+</g><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><path d="M82 66c7-3 12 0 14 6-7 3-12 0-14-6z" fill="#4e9a51" stroke-width="4"/></g>
+</svg>

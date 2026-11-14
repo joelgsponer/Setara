@@ -1,0 +1,12 @@
+round,intro_fa,say_en,say_fa,targets,others,need,help_fa
+01,خوراک برای کلان شدن. گوش کن که کدام خوراک‌ها را بگیری.,,خوراک‌های نمو را بگیر: تخم، شیر، لوبیا و مانند آن.,egg|milk|beans|lentils|yoghurt|meat|fish|chickpeas|cheese,bread|rice|apple|candy,6,خوراک‌های نمو این‌هاست: تخم، شیر، ماست، پنیر، لوبیا، دال، نخود، گوشت و ماهی.
+01,,,خوراک‌های محافظت را بگیر: میوه و ترکاری.,apple|carrot|tomato|spinach|orange|pumpkin|apricot|grape,bread|egg|candy|rice,6,میوه و ترکاری رنگارنگ بدن را از مریضی نگه می‌کند.
+01,,,خوراک‌های قوت را بگیر: نان، برنج و مانند آن.,bread|rice|potato|corn,apple|egg|candy|spinach,5,نان، برنج، کچالو و جواری به ما قوت می‌دهد.
+01,,,نان صبح پیش از مکتب: خوراک‌های خوب را بگیر.,bread|egg|milk|yoghurt|apple|cheese,candy|soda|sugar,6,کسی که صبح نان خورده، در صنف خوب‌تر یاد می‌گیرد. شیرینی و نوشابه نان صبح نیست.
+02,طفل خورد و احساس‌ها. گوش کن که چه را بگیری.,,خوراک نرم برای طفل خورد را بگیر.,food_bowl|yoghurt|milk,walnut|almond|candy|soda,5,به طفل خورد خوراک نرم و میده می‌دهیم. مغز درسته و شیرینی سخت در گلویش بند می‌ماند.
+02,,,چیزهایی را بگیر که از طفل خورد دور، در جای بلند می‌مانیم.,knife|matches|fa_medicine|fa_fuel_can|coin|button,ball|pillow|blanket|food_bowl,6,کارد، گوگرد، دوا، تیل و چیزهای بسیار خورد را دور از دست طفل می‌مانیم.
+02,,,چیزهایی را بگیر که وقت غم و ترس کمک می‌کند.,tell_adult|breathe_slow|listen_friend|play|draw|sleep,tease|take_away|candy|soda,6,گفتن به یک کلان، آهسته نفس کشیدن، دوستی که گوش می‌کند، بازی، رسم و خواب کمک می‌کند.
+03,آب، خاک و آفتاب. گوش کن که چه را بگیری.,,کارهایی را بگیر که آب را نگه می‌کند.,water_jug|rain_barrel|water_covered|water_reuse,tap_waste|water_tap|garbage_water,5,کمی آب از کوزه، ظرف سرپوش‌دار، جمع کردن آب باران، و دادن آب شستن به نهال، آب را نگه می‌کند.
+03,,,چیزهایی را بگیر که خاک را نگه می‌کند.,sapling|tree|root|fence|tree_hill,tree_stump|goat_sapling|plastic_bag|fire,6,ریشه درخت خاک را محکم می‌گیرد. نهال می‌نشانیم و آن را با کتاره نگه می‌کنیم.
+03,,,روشنی بی‌دود را بگیر.,sun|solar_lamp|solar_charge,lamp|candle|plastic_fire|stove_open,5,آفتاب و چراغ آفتابی روشنی می‌دهد، بی دود و بی تیل.
+03,,,سیلاب می‌آید. کارهای درست را بگیر.,high_ground|tell_adult|hold_hand,fast_water|river|carpet,5,به کلان‌ها می‌گوییم، دست خوردها را می‌گیریم و به جای بلند می‌رویم. از میان آب تیز تیر نمی‌شویم و پشت سامان نمی‌گردیم.

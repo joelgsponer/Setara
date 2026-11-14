@@ -20,4 +20,4 @@ round,say_en,say_fa,show,answer,distractors,help_fa,hop
 20,It is one hundred afghani. I give two hundred afghani. How much is the change?,,,t:100,t:200|t:300|t:10,صد افغانی است. من دوصد افغانی می‌دهم. باقی پول چند است؟,
 20,Which one can you drink?,,,juice,kebab|biscuits|samosa,کدام یک را نوشیده می‌توانی؟,
 20,The tailor needs it. What is it?,,,needle,hammer|shovel|lock,خیاط به آن ضرورت دارد. آن چیست؟,
-20,"f: Can you carry the sack? // m: No, I can't. It is too heavy. // f: What is too heavy?",,,rice_sack,basket|bottle|purse,بوجی را برده می‌توانید؟ نه، نمی‌توانم. بسیار سنگین است. چه چیز بسیار سنگین است؟,
+20,"f: Can you carry the sack? // m: No, I can't. It is too heavy. // f: What is too heavy?",,,sack,basket|bottle|purse,بوجی را برده می‌توانید؟ نه، نمی‌توانم. بسیار سنگین است. چه چیز بسیار سنگین است؟,

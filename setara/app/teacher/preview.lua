@@ -37,7 +37,8 @@ end
 function Preview:enter()
   if self.lesson then
     store.count_teacher("preview_" .. self.lesson.id)
-    store.stats.teacher.course_lesson = math.max(store.stats.teacher.course_lesson or 0, self.lesson.n)
+    local reached, key = T.course_reached()
+    if key then store.stats.teacher[key] = math.max(reached, self.lesson.n) end
   end
   self:play()
 end

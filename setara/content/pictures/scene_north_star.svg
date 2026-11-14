@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<g stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect width="400" height="300" fill="#2b3a67" stroke="none"/>
+<path d="M292 190L304 226L252 240L246 202L292 190" fill="none" stroke="#bfe3f0" stroke-width="4"/><path d="M246 202L206 186L168 170L130 180" fill="none" stroke="#bfe3f0" stroke-width="4"/>
+<path d="M292 190L238 40" fill="none" stroke="#f2b705" stroke-width="4" stroke-dasharray="3 12"/>
+<path d="M304 209L309.1 220.9L321 226L309.1 231.1L304 243L298.9 231.1L287 226L298.9 220.9z" fill="#f2b705" stroke-width="2.5"/>
+<path d="M292 173L297.1 184.9L309 190L297.1 195.1L292 207L286.9 195.1L275 190L286.9 184.9z" fill="#f2b705" stroke-width="2.5"/>
+<path d="M252 223L257.1 234.9L269 240L257.1 245.1L252 257L246.9 245.1L235 240L246.9 234.9z" fill="#f2b705" stroke-width="2.5"/>
+<path d="M246 185L251.1 196.9L263 202L251.1 207.1L246 219L240.9 207.1L229 202L240.9 196.9z" fill="#f2b705" stroke-width="2.5"/>
+<path d="M206 169L211.1 180.9L223 186L211.1 191.1L206 203L200.9 191.1L189 186L200.9 180.9z" fill="#f2b705" stroke-width="2.5"/>
+<path d="M168 153L173.1 164.9L185 170L173.1 175.1L168 187L162.9 175.1L151 170L162.9 164.9z" fill="#f2b705" stroke-width="2.5"/>
+<path d="M130 163L135.1 174.9L147 180L135.1 185.1L130 197L124.9 185.1L113 180L124.9 174.9z" fill="#f2b705" stroke-width="2.5"/>
+<circle cx="236" cy="34" r="27" fill="none" stroke="#f2b705" stroke-width="3"/><path d="M236 15L241.7 28.3L255 34L241.7 39.7L236 53L230.3 39.7L217 34L230.3 28.3z" fill="#fff6dc" stroke-width="2.5"/>
+<path d="M60 55L61.5 58.5L65 60L61.5 61.5L60 65L58.5 61.5L55 60L58.5 58.5z" fill="#fff6dc" stroke-width="2"/>
+<path d="M350 85L351.5 88.5L355 90L351.5 91.5L350 95L348.5 91.5L345 90L348.5 88.5z" fill="#fff6dc" stroke-width="2"/>
+<path d="M100 116L101.2 118.8L104 120L101.2 121.2L100 124L98.8 121.2L96 120L98.8 118.8z" fill="#fff6dc" stroke-width="2"/>
+<path d="M360 26L361.2 28.8L364 30L361.2 31.2L360 34L358.8 31.2L356 30L358.8 28.8z" fill="#fff6dc" stroke-width="2"/>
+<path d="M40 196L41.2 198.8L44 200L41.2 201.2L40 204L38.8 201.2L36 200L38.8 198.8z" fill="#fff6dc" stroke-width="2"/>
+<path d="M-4 276C60 256 120 284 200 270S340 262 404 280V304H-4z" fill="#17254a"/>
+</g>
+</svg>

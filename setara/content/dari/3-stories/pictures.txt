@@ -1,0 +1,11 @@
+# Scenes drawn for the Dari story book (fa-3-stories). All other pictures come from the shared library.
+scene_fox_stork: A white stork with a long orange beak eating out of a tall narrow-necked clay jar; beside it a fox who cannot get his muzzle in, a flat plate of soup on the ground in front of him. No people.
+scene_girl_kite: A girl in a headscarf on a green hill flying a kite she made herself: the kite is cream paper with blue ruled lines like a notebook page and has a tail of knotted cloth strips.
+scene_pot_baby: A big copper cooking pot with two handles on a red carpet and next to it a very small pot of exactly the same shape. No people.
+scene_moon_in_well: Night. An old man with a white turban and beard (Mulla Nasruddin) stands at a round stone well and reaches towards it with a rope; the round yellow moon is reflected in the water of the well and the same moon is in the sky.
+scene_moon_phases: Night sky with five moons in a row: thin crescent, half, full, half, thin crescent. No people.
+scene_water_cycle: A snowy mountain, a river running from it to the sea, the sun, a cloud with snowflakes over the mountain, and two arrows: from the sea up to the sky, and from there to the cloud. No people.
+scene_bee_dance: A honey bee on a honeycomb; a dotted path shaped like two circles side by side shows how she runs, a zigzag in the middle shows her waggling; two small bees watch.
+scene_north_star: Night sky with the seven stars of the Big Dipper joined by a thin line, and a dotted line from the two stars at the edge of the bowl up to one star with a ring round it (the Pole Star). Dark hills below. No people.
+scene_girl_lamp_roof: Dusk and fog. A girl in a headscarf stands on the flat roof of a mud house and holds a lit lamp up high; its yellow glow shines through the fog.
+scene_rag_ball: A big home-made ball sewn from patches of cloth in many colours, with visible stitches, on a grass field; two goal posts behind. No people.

@@ -46,7 +46,6 @@ unit,key,en,fa,picture,tags
 04,purse,purse,بکس پول,purse,money
 04,pay,pay,پول دادن,pay,verb
 04,change,change,باقی پول,,money
-04,r04_money,money,پول,money,review
 04,i_have_fifty_afghani,I have fifty afghani.,من پنجاه افغانی دارم.,,phrase
 04,i_pay_the_shopkeeper,I pay the shopkeeper.,من به دکاندار پول می‌دهم.,,phrase
 04,here_is_your_change,Here is your change.,این باقی پول شما است.,,phrase
@@ -79,9 +78,9 @@ unit,key,en,fa,picture,tags
 # 07 A kilo of rice
 07,kilo,kilo,کیلو,kilo,measure
 07,scales,scales,ترازو,scales,measure
-07,sack,sack,بوجی,rice_sack,thing
+07,sack,sack,بوجی,sack,thing
 07,heavy,heavy,سنگین,heavy_load,measure
-07,r07_rice,rice,برنج,rice,review
+07,r07_onion,onion,پیاز,onion,review
 07,r07_potato,potato,کچالو,potato,review
 07,a_kilo_of_rice,a kilo of rice,یک کیلو برنج,,phrase
 07,half_a_kilo_of_meat,half a kilo of meat,نیم کیلو گوشت,,phrase
@@ -106,7 +105,7 @@ unit,key,en,fa,picture,tags
 09,tin,tin,قطی,can,thing
 09,packet,packet,پاکت,packet,thing
 09,jar,jar,مرتبان,jar,thing
-09,r09_sack,sack,بوجی,rice_sack,review
+09,r09_sack,sack,بوجی,sack,review
 09,a_bottle_of_oil,a bottle of oil,یک بوتل روغن,,phrase
 09,a_packet_of_tea,a packet of tea,یک پاکت چای,,phrase
 09,a_jar_of_honey,a jar of honey,یک مرتبان عسل,,phrase
@@ -167,7 +166,7 @@ unit,key,en,fa,picture,tags
 14,juice,juice,آب میوه,juice,food
 14,kebab,kebab,کباب,kebab,food
 14,samosa,samosa,سمبوسه,samosa,food
-14,r14_bread,bread,نان,bread,review
+14,chocolate,chocolate,چاکلیت,chocolate,food
 14,the_bread_is_hot_and_fresh,The bread is hot and fresh.,نان گرم و تازه است.,,phrase
 14,the_baker_sells_bread,The baker sells bread.,نانوا نان می‌فروشد.,,phrase
 14,can_i_have_some_bread,"Can I have some bread, please?",لطفاً کمی نان بدهید.,,phrase
@@ -178,7 +177,8 @@ unit,key,en,fa,picture,tags
 15,tailor,tailor,خیاط,tailor,people
 15,scissors,scissors,قیچی,scissors,thing
 15,needle,needle,سوزن,needle,thing
-15,button,button,دکمه,button,thing
+15,button,button,دکمه,button,review
+15,wool,wool,پشم,wool,thing
 15,metre,metre,متر,metre,measure
 15,three_metres_of_cloth,three metres of cloth,سه متر تکه,,phrase
 15,i_need_a_needle,I need a needle and some thread.,من به یک سوزن و کمی تار ضرورت دارم.,,phrase
@@ -187,11 +187,12 @@ unit,key,en,fa,picture,tags
 
 # 16 Things for the house
 16,lamp,lamp,چراغ,lamp,review
-16,candle,candle,شمع,candle,thing
+16,candle,candle,شمع,candle,review
 16,matches,matches,گوگرد,matches,thing
 16,hammer,hammer,چکش,hammer,thing
 16,lock,lock,قفل,lock,thing
 16,shovel,shovel,بیل,shovel,thing
+16,axe,axe,تبر,axe,thing
 16,a_box_of_matches,a box of matches,یک قطی گوگرد,,phrase
 16,i_need_a_lamp,I need a lamp and some candles.,من به یک چراغ و چند شمع ضرورت دارم.,,phrase
 16,any_dialogue_2,"f: Do you have any locks? // m: Yes, I have some. They are fifty afghani.",شما قفل دارید؟ بلی، دارم. پنجاه افغانی است.,,dialogue
@@ -202,7 +203,7 @@ unit,key,en,fa,picture,tags
 17,youre_welcome,You're welcome.,قابل تشکر نیست.,,phrase
 17,r17_bakery,bakery,نانوایی,bakery,review
 17,r17_tailor,tailor,خیاط,tailor,review
-17,r17_shop,shop,دکان,shop,review
+17,r17_lamp,lamp,چراغ,lamp,review
 17,r17_street,street,سرک,street,review
 17,r17_candle,candle,شمع,candle,review
 17,where_dialogue_2,"f: Excuse me, where is the bakery? // m: It is next to the tailor.",ببخشید، نانوایی کجاست؟ پهلوی خیاط است.,,dialogue
@@ -223,16 +224,17 @@ unit,key,en,fa,picture,tags
 18,too_dialogue,f: How much is the scarf? // m: It is three hundred afghani. // f: That is too expensive.,چادر چند است؟ سه‌صد افغانی است. بسیار گران است.,,dialogue
 18,cheaper_dialogue,m: Can you make it cheaper? // f: All right. Two hundred and fifty afghani.,ارزانتر کرده می‌توانید؟ خوب است. دوصد و پنجاه افغانی.,,dialogue
 
-# 19 My stall
+# 19 What do you sell?
+19,wheat,wheat,گندم,wheat,thing
+19,firewood,firewood,هیزم,firewood,thing
+19,charcoal,charcoal,زغال,charcoal,thing
+19,umbrella,umbrella,چتری,umbrella,thing
+19,glasses,glasses,عینک,glasses,thing
 19,r19_cart,cart,کراچی,cart,review
-19,r19_customer,customer,مشتری,customer,review
-19,r19_shopkeeper,shopkeeper,دکاندار,shopkeeper,review
-19,r19_coin,coin,سکه,coin,review
-19,r19_basket,basket,سبد,basket,review
 19,i_sell_eggs_at_the_bazaar,I sell eggs at the bazaar.,من در بازار تخم مرغ می‌فروشم.,,phrase
 19,the_shop_is_open,The shop is open.,دکان باز است.,,phrase
 19,the_shop_is_closed,The shop is closed.,دکان بسته است.,,phrase
-19,sell_dialogue_2,f: What do you sell? // m: I sell vegetables. They are fresh and cheap.,شما چه می‌فروشید؟ من ترکاری می‌فروشم. تازه و ارزان است.,,dialogue
+19,sell_dialogue_2,f: What do you sell? // m: I sell firewood and charcoal. They are cheap.,شما چه می‌فروشید؟ من هیزم و زغال می‌فروشم. ارزان است.,,dialogue
 19,open_dialogue,"m: Is the bakery open? // f: No, it is closed. Come back tomorrow.",نانوایی باز است؟ نه، بسته است. فردا دوباره بیایید.,,dialogue
 
 # 20 Review: at the bazaar

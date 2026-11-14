@@ -1,0 +1,19 @@
+run: a boy running, motion lines behind him (می‌دود)
+snowman: a snowman with a red scarf and a carrot nose on a light blue card (آدم برفی)
+scene_girl_feeds_hens: a girl in a courtyard scatters seed for two hens
+scene_hen_three_eggs: a hen beside a straw nest with three white eggs
+scene_girl_eggs_mother: a girl brings a bowl of eggs to her mother, indoors
+scene_boy_walks_home: a boy with a school bag on the path to a house, mountains behind
+scene_boy_under_tree_rain: a boy shelters under a big tree while it rains
+scene_boy_picks_grapes: a boy picks grapes from a vine into a basket
+scene_girl_asks_mother: a girl asks her mother something, a kitten sits beside them
+scene_kitten_sleeps: an orange cat asleep on a mat beside an empty bowl, night window
+scene_roof_snow: a father and his son clear snow from a flat roof with shovels
+scene_snowman: a boy and a girl beside a snowman, snow falling
+scene_girl_reads_to_brother: a girl reads a book to her little brother in the evening, a lamp beside them
+scene_boy_sheep_hill: a boy with a stick and three sheep on a green hill, mountains behind
+scene_boy_calls_lamb: a boy calls with his hands at his mouth, evening, a big stone on the hill
+scene_boy_carries_lamb: a boy carries a lamb in his arms towards a house, evening
+scene_children_go_shop: a girl and her little brother walk to a shop stall
+scene_mulberry_sheet: a boy and a girl hold a white sheet under a mulberry tree
+scene_mulberry_shake: a father shakes the mulberry tree, berries fall into the sheet the children hold

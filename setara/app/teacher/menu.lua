@@ -126,7 +126,13 @@ function Menu:draw()
     ui.arrow("left", 32, 80, 9, ui.c.ink)
     ui.arrow("right", 608, 80, 9, ui.c.ink)
     ui.set(ui.c.teacher)
-    text.print(tostring(n), 50, 56, 60, "left", 36, true)
+    if T.pack_count() > 1 then
+      -- which book: English 1, English 2 ...
+      text.print(tostring(pack.level or ""), 48, 54, 20, "left", 18, true)
+      text.print(tostring(n), 60, 60, 44, "left", 32, true)
+    else
+      text.print(tostring(n), 50, 56, 60, "left", 36, true)
+    end
     ui.set(ui.c.ink)
     text.print(info.title_en or "", 100, 66, 250, "left", 20, true)
     if info.title_fa and info.title_fa[1] and text.locale ~= "en" then

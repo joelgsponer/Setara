@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<g stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect width="400" height="300" fill="#fff6dc" stroke="none"/><rect x="-4" y="206" width="408" height="98" fill="#e8d2a6"/>
+<path d="M78 196L70 262M98 198L104 262" fill="none" stroke="#e0483f" stroke-width="5"/><path d="M60 262h14M100 262h14" fill="none" stroke="#e0483f" stroke-width="5"/>
+<path d="M40 150C20 190 60 206 96 204C136 202 146 172 128 150C110 132 60 128 40 150z" fill="#ffffff"/><path d="M22 168C30 196 60 204 86 200C60 190 40 178 22 168z" fill="#3b2f2f"/>
+<path d="M120 160C132 130 122 104 128 76" fill="none" stroke-width="20"/><path d="M120 160C132 130 122 104 128 76" fill="none" stroke="#ffffff" stroke-width="12"/>
+<path d="M183 122V170C150 184 150 234 170 252H222C242 234 242 184 209 170V122z" fill="#e07a3f"/><ellipse cx="196" cy="122" rx="15" ry="5" fill="#6b4a2b"/><path d="M162 206Q196 216 230 206" fill="none" stroke="#6b4a2b" stroke-width="3"/>
+<path d="M138 62L194 128L130 82z" fill="#e07a3f"/><circle cx="128" cy="68" r="17" fill="#ffffff"/><circle cx="133" cy="64" r="3.2" fill="#3b2f2f" stroke="none"/>
+<g transform="translate(244 128)  scale(1.2)"><g transform="translate(3 2) scale(.96)">
+<g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><path d="M84 66c8-22 34-28 40-10 4 16-14 28-40 16z" fill="#e07a3f"/><path d="M110 46c10 0 16 8 14 16-2 8-8 12-16 14 6-10 6-20 2-30z" fill="#fff"/><rect x="40" y="76" width="8" height="36" rx="3" fill="#6b4a2b"/><rect x="51" y="76" width="8" height="36" rx="3" fill="#6b4a2b"/><rect x="76" y="76" width="8" height="36" rx="3" fill="#6b4a2b"/><rect x="87" y="76" width="8" height="36" rx="3" fill="#6b4a2b"/><ellipse cx="66" cy="70" rx="32" ry="16" fill="#e07a3f"/><path d="M20 40l0-24 16 14z" fill="#e07a3f"/><path d="M36 32l12-18 6 22z" fill="#e07a3f"/><path d="M2 58L20 38c8-8 26-6 32 6 6 14-4 26-18 24-12-2-24-4-32-10z" fill="#e07a3f"/></g><path d="M8 59c8 4 18 6 26 7 6 0 10-2 12-6-10 2-24 0-38-1z" fill="#fff"/><ellipse cx="46" cy="78" rx="9" ry="6" fill="#fff"/><circle cx="5" cy="57" r="4.5" fill="#3b2f2f"/><circle cx="30" cy="48" r="3.2" fill="#3b2f2f"/>
+</g></g>
+<ellipse cx="290" cy="276" rx="56" ry="11" fill="#ffffff"/><ellipse cx="290" cy="275" rx="40" ry="6" fill="#f2b705" stroke-width="3"/>
+</g>
+</svg>

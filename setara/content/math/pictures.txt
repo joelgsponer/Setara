@@ -2,16 +2,22 @@ apple: one whole red apple with a small leaf
 apple_half: half an apple, cut side with seeds showing
 apple_quarter: a quarter of an apple
 ball: a round ball, clearly a circle
+basket: an empty woven basket (icon of Number Rain)
 blanket: a folded blanket
 book: a closed rectangular book seen from the front
 box: a square box seen from the front
 bread: one whole round flat naan bread seen from above
 bread_half: half of a round naan: a half disc, clean straight cut
 bread_quarter: a quarter of a round naan: a quarter disc
+bread_third: a third of a round naan: one of three equal wedges, drawn like bread_half and bread_quarter
 brick: one clay brick
 button: a round button with four holes
 carpet: a rectangular red Afghan carpet with a simple pattern, clearly longer than wide
 carrot: one orange carrot with green top
+chart_bars_1: a block chart with four columns, a small picture under each column and one block per unit: 4 apple, 5 bread, 2 egg, 3 carrot (drawn by content/math/draw_pictures.py)
+chart_bars_2: a block chart with four columns, a small picture under each column and one block per unit: 5 pencil, 3 notebook, 4 book, 1 ball (drawn by content/math/draw_pictures.py)
+chart_table_1: a picture table with four rows read from the right: a small picture, then one dot per unit: 3 sheep, 2 goat, 5 hen, 1 cow (drawn by content/math/draw_pictures.py)
+chart_table_2: a picture table with four rows read from the right: a small picture, then one dot per unit: 3 pomegranate, 1 watermelon, 5 orange, 4 walnut (drawn by content/math/draw_pictures.py)
 clock_1: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 1 and the long hand at 12
 clock_10: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 10 and the long hand at 12
 clock_11: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 11 and the long hand at 12
@@ -25,17 +31,34 @@ clock_7: a round clock face with the numbers 1 to 12 in Western digits, the shor
 clock_8: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 8 and the long hand at 12
 clock_9: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 9 and the long hand at 12
 coin: a round plain metal coin with no writing
+cow: one cow, side view
 cup: one small tea bowl (piala) without handle
 door: a rectangular wooden door, taller than wide
 egg: one white egg
 fish: one fish, side view
 flour_sack: a large tied sack of flour
 flower: one red flower on a short green stem
+frac_1_2: a circle cut into 2 equal parts by lines from the centre, 1 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_1_3: a circle cut into 3 equal parts by lines from the centre, 1 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_1_4: a circle cut into 4 equal parts by lines from the centre, 1 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_1_5: a circle cut into 5 equal parts by lines from the centre, 1 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_1_6: a circle cut into 6 equal parts by lines from the centre, 1 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_1_8: a circle cut into 8 equal parts by lines from the centre, 1 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_2_3: a circle cut into 3 equal parts by lines from the centre, 2 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_2_5: a circle cut into 5 equal parts by lines from the centre, 2 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_3_4: a circle cut into 4 equal parts by lines from the centre, 3 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_3_5: a circle cut into 5 equal parts by lines from the centre, 3 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_3_8: a circle cut into 8 equal parts by lines from the centre, 3 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_4_5: a circle cut into 5 equal parts by lines from the centre, 4 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_5_6: a circle cut into 6 equal parts by lines from the centre, 5 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_5_8: a circle cut into 8 equal parts by lines from the centre, 5 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
+frac_7_8: a circle cut into 8 equal parts by lines from the centre, 7 of them filled blue (from the top, going left, as shape_quarter_circle does), the others white
 frog: a green frog in mid-jump (icon of Number Hop)
 goat: one goat with small horns, side view
 handkerchief: a square cloth handkerchief laid flat
 hen: one brown hen, side view
 milk: a glass of milk
+moon: a crescent moon (icon of Days and Months)
 mountain: a single mountain peak drawn as a clear triangle with a snow cap
 notebook: one closed school notebook
 oil_can: a yellow can of cooking oil
@@ -59,6 +82,7 @@ shape_half_circle: half of a circle: a filled half disc, the missing half as a d
 shape_quarter_circle: a quarter of a circle: a filled quarter disc, the rest as a dotted outline
 shape_rectangle: a plain filled rectangle, twice as wide as high
 shape_square: a plain filled square
+shape_third_circle: a third of a circle: a filled third of a disc, the rest as a dotted outline
 shape_triangle: a plain filled triangle, point up
 sheep: one white woolly sheep, side view
 shoes: a pair of simple shoes

@@ -26,19 +26,21 @@ round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 12,,I wear a red dress.,,t:I|t:wear|t:a|t:red|t:dress,,,I wear a red dress.,,من پیراهن زنانهٔ سرخ می‌پوشم.
 12,,Put on your shoes.,,t:Put|t:on|t:your|t:shoes,t:off,,Put on your shoes.,,بوت‌هایت را بپوش.
 12,,Take off your hat.,,t:Take|t:off|t:your|t:hat,t:on,,Take off your hat.,,کلاهت را بکش.
-12,,My coat is brown.,,t:My|t:coat|t:is|t:brown,t:am,,My coat is brown.,,بالاپوش من نصواری است.
+12,,My coat is warm.,,t:My|t:coat|t:is|t:warm,t:am,,My coat is warm.,,بالاپوش من گرم است.
+12,,My shoes are new.,,t:My|t:shoes|t:are|t:new,t:is,,My shoes are new.,,بوت‌های من نو است.
 13,,My mother cooks.,,t:My|t:mother|t:cooks,t:cook,,My mother cooks.,,مادرم غذا می‌پزد.
-13,,My father works.,,t:My|t:father|t:works,t:work,,My father works.,,پدرم کار می‌کند.
+13,,They work in the field.,,t:They|t:work|t:in|t:the|t:field,t:works,,They work in the field.,,آن‌ها در کشتزار کار می‌کنند.
 13,,She gets up at five.,,t:She|t:gets|t:up|t:at|t:five,t:get,,She gets up at five.,,او ساعت پنج از خواب می‌خیزد.
 13,,He goes to school.,,t:He|t:goes|t:to|t:school,t:go,,He goes to school.,,او به مکتب می‌رود.
 13,,My sister carries water.,,t:My|t:sister|t:carries|t:water,t:carry,,My sister carries water.,,خواهرم آب می‌آورد.
-13,,I help my mother.,,t:I|t:help|t:my|t:mother,t:helps,,I help my mother.,,من به مادرم کمک می‌کنم.
+13,,We help our mother.,,t:We|t:help|t:our|t:mother,t:helps,,We help our mother.,,ما به مادر خود کمک می‌کنیم.
 14,,Do you go to school?,,t:Do|t:you|t:go|t:to|t:school,t:Does,,Do you go to school?,,تو به مکتب می‌روی؟
 14,,"Yes, I do.",,t:Yes|t:I|t:do,t:does,,"Yes, I do.",,بلی، می‌روم.
 14,,Does she play?,,t:Does|t:she|t:play,t:Do,,Does she play?,,او بازی می‌کند؟
 14,,"Yes, she does.",,t:Yes|t:she|t:does,t:do,,"Yes, she does.",,بلی، می‌کند.
 14,,Does he cook?,,t:Does|t:he|t:cook,t:cooks,,Does he cook?,,او غذا می‌پزد؟
 14,,"No, he doesn't.",,t:No|t:he|t:doesn't,t:don't,,"No, he doesn't.",,نه، نمی‌پزد.
+14,,I always do my homework.,,t:I|t:always|t:do|t:my|t:homework,t:never,,I always do my homework.,,من همیشه کار خانگی‌ام را می‌کنم.
 14,,He doesn't go to school.,,t:He|t:doesn't|t:go|t:to|t:school,t:goes,,He doesn't go to school.,,او به مکتب نمی‌رود.
 17,,Where is my shoe?,,t:Where|t:is|t:my|t:shoe,t:What,,Where is my shoe?,,بوت من کجاست؟
 17,,It is under the bed.,,t:It|t:is|t:under|t:the|t:bed,,,It is under the bed.,,زیر تخت خواب است.

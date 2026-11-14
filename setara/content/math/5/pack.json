@@ -1,0 +1,112 @@
+{
+ "pack": "math-5",
+ "subject": "math",
+ "level": 5,
+ "version": 1,
+ "title_en": "Math 5: Large Numbers and Fractions",
+ "title_fa": "ریاضی ۵: عددهای بزرگ و کسرها",
+ "games": [
+  {
+   "id": "count_the_flock",
+   "engine": "listen_pick",
+   "letter": "a",
+   "title_en": "Count the Flock",
+   "title_fa": "رمه را بشمار",
+   "intro_fa": "بشمار و عدد درست را انتخاب کن.",
+   "icon": "sheep",
+   "v1": true,
+   "sheet": "count_the_flock.csv"
+  },
+  {
+   "id": "number_hop",
+   "engine": "journey",
+   "letter": "b",
+   "title_en": "Number Hop",
+   "title_fa": "خیز عددها",
+   "intro_fa": "حساب کن و جواب درست را انتخاب کن.",
+   "icon": "frog",
+   "v1": true,
+   "sheet": "number_hop.csv"
+  },
+  {
+   "id": "market_scales",
+   "engine": "market",
+   "letter": "c",
+   "title_en": "Market Scales",
+   "title_fa": "ترازوی بازار",
+   "intro_fa": "حساب کن و با سکه‌ها و نوت‌ها پول بده.",
+   "icon": "scales",
+   "sheet": "market_scales.csv"
+  },
+  {
+   "id": "carpet_weaver",
+   "engine": "builder",
+   "letter": "d",
+   "title_en": "Carpet Weaver",
+   "title_fa": "قالین‌باف",
+   "intro_fa": "عددها را به ترتیب درست بگذار.",
+   "icon": "carpet",
+   "sheet": "carpet_weaver.csv"
+  },
+  {
+   "id": "share_the_bread",
+   "engine": "sorter",
+   "letter": "e",
+   "title_en": "Share the Bread",
+   "title_fa": "نان را تقسیم کن",
+   "intro_fa": "هر چیز را در سبد درست بینداز.",
+   "icon": "bread",
+   "sheet": "share_the_bread.csv"
+  },
+  {
+   "id": "shape_mason",
+   "engine": "listen_pick",
+   "letter": "f",
+   "title_en": "Shape Mason",
+   "title_fa": "گلکار شکل‌ها",
+   "intro_fa": "گوش کن و جواب درست را انتخاب کن.",
+   "icon": "brick",
+   "sheet": "shape_mason.csv"
+  },
+  {
+   "id": "twin_tiles",
+   "engine": "pairs",
+   "letter": "g",
+   "title_en": "Twin Tiles",
+   "title_fa": "جوره‌ها",
+   "intro_fa": "دو کارت را که با هم جور است پیدا کن.",
+   "icon": "box",
+   "sheet": "twin_tiles.csv"
+  },
+  {
+   "id": "number_rain",
+   "engine": "catch",
+   "letter": "h",
+   "title_en": "Number Rain",
+   "title_fa": "باران عددها",
+   "intro_fa": "گوش کن و فقط عددهای درست را بگیر.",
+   "icon": "basket",
+   "sheet": "number_rain.csv"
+  },
+  {
+   "id": "tables_and_charts",
+   "engine": "listen_pick",
+   "letter": "j",
+   "title_en": "Tables and Charts",
+   "title_fa": "جدول و گراف",
+   "intro_fa": "جدول یا گراف را ببین و جواب بده.",
+   "icon": "chart_bars_1",
+   "sheet": "tables_and_charts.csv"
+  },
+  {
+   "id": "fair_shares",
+   "engine": "listen_pick",
+   "letter": "k",
+   "title_en": "Fair Shares",
+   "title_fa": "حصه‌های برابر",
+   "intro_fa": "کسر درست را پیدا کن.",
+   "icon": "frac_3_4",
+   "sheet": "fair_shares.csv"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+# NEW pictures drawn for the English story book (everything else reuses the shared library in content/pictures/). Format: name: what is drawn.
+# Style (docs/authoring.md): thick dark outline, flat colours, no text, readable at 3 cm. Scenes are 4:3 with a full background.
+# People: rural Afghan, modest everyday dress; girls and women with a headscarf, men in a long shirt with a turban or cap.
+# A local reviewer approves every picture of a person.
+
+scene_crow_jug: a black crow sits on the rim of a tall clay jug in a yard and holds a small stone in its beak; more small stones on the ground
+scene_lion_mouse: a lion lies under a hunter's net by a tree; a small mouse stands at the edge of the net
+scene_tortoise_hare: a hare sleeps under a tree by a path up a hill; a tortoise walks past it towards a tree at the top
+scene_doves_net: five white doves fly up together and carry a net between them, over hills
+scene_nasruddin_donkeys: an old man with a white beard and turban rides a grey donkey and points at the donkeys walking in front of him
+scene_nasruddin_coat: two men sit at a cloth with rice and a bowl of soup; the old man in a brown coat dips his sleeve into the bowl, the other man looks surprised
+scene_elephant_dark: an elephant in a dark room; a girl touches its trunk and a boy touches it from behind
+scene_stone_soup: an old woman stirs a big pot on a fire in a village in the evening; a girl brings a carrot; a grey stone lies by the fire
+scene_hen_eggs: a girl sits in a yard beside a basket of eggs and a brown hen
+scene_turnip_pull: a huge turnip in the ground; a grandmother, a grandfather and a girl pull it in a row, a small dog behind them
+scene_wind_sun: a smiling sun and a grey cloud that blows wind at a girl who walks along a road and holds her brown coat closed
+scene_two_goats_bridge: a white goat and a dark goat meet head to head on a narrow tree-trunk bridge over a river between two cliffs

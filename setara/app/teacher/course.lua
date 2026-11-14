@@ -75,7 +75,7 @@ function Course:draw()
   end
   local list = self:list()
   local first = math.max(1, math.min(self.sel - 2, #list - 4))
-  local reached = store.stats.teacher.course_lesson or 0
+  local reached = T.course_reached()
   for i = first, math.min(#list, first + 4) do
     local item = list[i]
     local y = 106 + (i - first) * 66

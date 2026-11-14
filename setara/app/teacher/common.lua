@@ -14,19 +14,62 @@ M.MINUTES = { hello = 3, listen = 5, say = 8, ["do"] = 8, play = 8, goodbye = 3 
 
 function M.S(key) return packs.string(key) end
 
--- The teacher pack in use (the first one installed).
-function M.pack() return packs.teacher[1] end
+-- The teacher pack in use: the one the teacher last worked in, else the
+-- lowest level installed. Packs follow each other: after the last lesson of
+-- English 1 comes the first of English 2.
+local function pack_index()
+  local want = store.progress.teacher_pack
+  for i, p in ipairs(packs.teacher) do
+    if p.pack == want then return i end
+  end
+  return 1
+end
 
--- The lesson number the teacher is on. Remembered on the device.
+function M.pack() return packs.teacher[pack_index()] end
+function M.pack_count() return #packs.teacher end
+
+local function lessons_of(pack)
+  return pack and type(pack.lessons) == "table" and #pack.lessons or 0
+end
+
+local function remembered(pack)
+  local per = store.progress.teacher_lessons
+  local n = type(per) == "table" and tonumber(per[pack.pack])
+  -- before there could be two packs, one number was kept for the only one
+  if not n and pack == packs.teacher[1] then n = tonumber(store.progress.teacher_lesson) end
+  return n or 1
+end
+
+-- The lesson number the teacher is on. Remembered on the device, per pack.
 function M.lesson_number()
   local pack = M.pack()
-  if not pack or type(pack.lessons) ~= "table" or #pack.lessons == 0 then return nil end
-  local n = tonumber(store.progress.teacher_lesson) or 1
-  return math.max(1, math.min(#pack.lessons, n))
+  if lessons_of(pack) == 0 then return nil end
+  return math.max(1, math.min(#pack.lessons, remembered(pack)))
 end
 
 function M.set_lesson(n)
-  store.progress.teacher_lesson = n
+  local i = pack_index()
+  local pack = packs.teacher[i]
+  if not pack then return end
+  if n > lessons_of(pack) and lessons_of(packs.teacher[i + 1]) > 0 then
+    pack, n = packs.teacher[i + 1], 1
+  elseif n < 1 and lessons_of(packs.teacher[i - 1]) > 0 then
+    pack = packs.teacher[i - 1]
+    n = #pack.lessons
+  end
+  n = math.max(1, math.min(math.max(1, lessons_of(pack)), n))
+  if type(store.progress.teacher_lessons) ~= "table" then store.progress.teacher_lessons = {} end
+  store.progress.teacher_lessons[pack.pack] = n
+  store.progress.teacher_pack = pack.pack
+  if pack == packs.teacher[1] then store.progress.teacher_lesson = n end
+end
+
+-- How far the teacher has prepared in this pack (Tonight's Preview).
+function M.course_reached()
+  local pack = M.pack()
+  if not pack then return 0 end
+  local key = pack == packs.teacher[1] and "course_lesson" or ("course_lesson_" .. tostring(pack.pack))
+  return store.stats.teacher[key] or 0, key
 end
 
 function M.lesson_info(n)

@@ -1,0 +1,73 @@
+# NEW pictures drawn for English level 4 (everything else reuses the shared library in content/pictures/). Format: name: what was drawn.
+# Style (docs/authoring.md): thick dark outline, flat colours, no text, no digits, readable at 3 cm.
+# People: rural Afghan, modest everyday dress; girls and women with a headscarf, boys and men in perahan tunban with a cap.
+# A local reviewer approves every picture of a person.
+
+# Unit 01
+bazaar: three small stalls side by side with red, blue and yellow awnings and goods on the counters (several shops, not one)
+shopkeeper: a man with a beard and a cap behind a wooden counter with two piles of fruit
+customer: a girl with a basket on one arm, holding out a coin
+cart: a two-wheeled wooden handcart (karachi) loaded with fruit, one wheel and the handle showing
+
+# Units 02 to 04
+money: two green notes and three coins together
+price: an orange price tag on a string with a coin drawn on it (no digits)
+cheap: a blue clay pot with one coin beside it (pair with expensive)
+expensive: the same pot with a tall pile of seven coins beside it
+note: one green banknote, generic: a frame and a plain circle, no numerals, no artwork of a real note
+purse: a brown cloth purse with a yellow clasp and a coin on the front
+pay: a hand from above putting a coin into an open hand below
+
+# Units 05 and 06
+banana: one yellow banana
+melon: an oblong yellow melon (kharbuza) with lengthwise stripes, clearly not the round green watermelon
+peach: a round orange peach with a cleft, a red cheek and a leaf
+cherries: two red cherries on joined stalks with a leaf
+cucumber: one long green cucumber, diagonal
+eggplant: one dark purple eggplant with a green cap
+garlic: one white garlic bulb with clove lines and small roots
+pepper: one red chili pepper with a green stalk
+cabbage: a round light-green cabbage with darker outer leaves
+
+# Units 07 to 12
+kilo: an iron shop weight with a ring on top (no numeral)
+sack: a plain tied burlap sack (nothing drawn on it, so that it is not rice or flour)
+packet: a red paper packet with a cream label and a leaf on it
+jar: an empty glass jar with a red lid
+shelf: a wooden shelf unit with three boards and a few small things on it
+
+# Units 13 to 16
+help: a girl and a boy carrying one sack between them
+bakery: a stall with a brown striped awning and three long flat breads standing in the window
+biscuits: three round biscuits with dark dots
+juice: a glass of orange juice with a straw and a slice of orange on the rim
+kebab: one skewer with pieces of meat, tomato and pepper
+cloth: a roll of purple cloth with yellow dots, one end hanging down
+tailor: a man with a beard and a cap, a yellow measuring tape round his neck, a pair of scissors beside him
+scissors: open scissors with red handles
+needle: a needle with a red thread through its eye
+metre: a yellow measuring stick with tick marks (no numerals)
+lamp: a red hurricane lamp with a glass and a flame
+matches: an open blue matchbox with three matches standing out of it
+hammer: a hammer with a wooden handle
+
+# Unit 18 and story 20 (same shape as the library's scarf.svg, only the colour differs)
+scarf_red: a red scarf with yellow dots and a fringe
+scarf_blue: the same scarf in blue
+
+# Story scenes (4:3, full background)
+# Story 10: Mina, a girl of eleven (orange headscarf, green dress), her mother (blue headscarf, purple dress), a shopkeeper (beard, cap, grey shirt, brown waistcoat)
+scene_mina_mother: at home; the mother gives Mina three coins; Mina holds an empty basket
+scene_mina_bazaar: three stalls in a row (vegetables, bread, cloth); Mina stands in front with her basket
+scene_mina_stall: a stall under a red striped awning; on the counter tomatoes, cucumbers and a basket of eggs; the shopkeeper behind it, Mina in front with her basket
+scene_mina_pays: the same stall; Mina holds out a note, the shopkeeper holds out coins (the change); tomatoes in her basket
+scene_mina_home: at home; Mina shows the full basket (tomatoes and eggs) to her mother, who raises both hands, happy
+# Story 15: Hamid, a boy of twelve (cap, light green shirt), and a customer, a woman (cream headscarf, blue-grey dress)
+scene_hamid_cart: Hamid waves beside his handcart; on it a tray of eggs and a block of cheese
+scene_hamid_customer: the customer with a basket stands at the cart and talks to Hamid
+scene_hamid_carries: Hamid carries the basket full of eggs for the customer, who walks beside him; both smile
+# Story 20: Roya, a girl of twelve (pink headscarf, purple dress), her brother Navid, nine (cap, blue shirt), a shopkeeper (beard, cap, blue-grey shirt), their grandmother (white headscarf)
+scene_roya_navid: Roya and Navid in front of the row of stalls; Roya holds a note
+scene_scarf_shop: a stall with a red scarf and a blue scarf hanging on a rail; the shopkeeper behind the counter; Roya and Navid in front
+scene_roya_pays: the same stall; only the blue scarf hangs; the folded red scarf lies on the counter under the shopkeeper's hand; Roya holds out two notes
+scene_grandmother_scarf: at home; the grandmother sits on a cushion with the red scarf round her shoulders and laughs; Roya and Navid on either side

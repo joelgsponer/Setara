@@ -41,8 +41,8 @@ round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 17,It is next to the tailor.,,t:It|t:is|t:next|t:to|t:the|t:tailor,,,It is next to the tailor.,,پهلوی خیاط است.
 17,Thank you very much.,,t:Thank|t:you|t:very|t:much,t:many,,Thank you very much.,,بسیار تشکر.
 17,"Can I have some bread, please?",,t:Can|t:I|t:have|t:some|t:bread|t:please,,,"Can I have some bread, please?",,لطفاً کمی نان بدهید.
-18,It is too expensive.,,t:It|t:is|t:too|t:expensive,t:are,,It is too expensive.,,بسیار گران است.
+18,How much is the scarf?,,t:How|t:much|t:is|t:the|t:scarf,t:are,,How much is the scarf?,,چادر چند است؟
 18,Can you make it cheaper?,,t:Can|t:you|t:make|t:it|t:cheaper,t:cheap,,Can you make it cheaper?,,ارزانتر کرده می‌توانید؟
-18,How much is it all together?,,t:How|t:much|t:is|t:it|t:all|t:together,,,How much is it all together?,,جمله چند می‌شود؟
+18,That is too expensive.,,t:That|t:is|t:too|t:expensive,t:cheap,,That is too expensive.,,بسیار گران است.
 18,Here is your change.,,t:Here|t:is|t:your|t:change,t:are,,Here is your change.,,این باقی پول شما است.
 18,The shop is closed.,,t:The|t:shop|t:is|t:closed,t:are,,The shop is closed.,,دکان بسته است.

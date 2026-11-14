@@ -27,7 +27,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa,hop
 17,,I wear a dress and a scarf.,,,dress,shirt|trousers|coat,من پیراهن زنانه و چادر می‌پوشم.,
 17,,Put on your socks.,,,socks,shoes|sandals|hat,جراب‌هایت را بپوش.,
 17,,My mother cooks.,,,cook,sweep|work|carry,مادرم غذا می‌پزد.,
-17,,My father works.,,,work,cook|sweep|play,پدرم کار می‌کند.,
+17,,My father works in the field.,,,work,cook|sweep|play,پدرم در کشتزار کار می‌کند.,
 17,,My sister carries water.,,,carry,cook|sweep|drink,خواهرم آب می‌آورد.,
 17,,The ball is under the table.,,,pos_under,pos_on|pos_in|pos_next_to,توپ زیر میز است.,
 17,,The ball is in the box.,,,pos_in,pos_on|pos_under|pos_next_to,توپ در صندوق است.,

@@ -1,0 +1,160 @@
+{
+ "pack": "garden-4",
+ "subject": "garden",
+ "level": 4,
+ "version": 1,
+ "title_en": "Health and environment 4: My future",
+ "title_fa": "صحت و محیط زیست ۴: آینده من",
+ "games": [
+  {
+   "id": "good_plate",
+   "engine": "sorter",
+   "letter": "g",
+   "title_en": "A Plate for Growing",
+   "title_fa": "بشقاب نمو",
+   "intro_fa": "هر خوراک را در سبد خودش بینداز.",
+   "icon": "breakfast",
+   "sheet": "good_plate.csv"
+  },
+  {
+   "id": "growth_catch",
+   "engine": "catch",
+   "letter": "h",
+   "title_en": "Catch It",
+   "title_fa": "بگیر!",
+   "intro_fa": "گوش کن که چه را بگیری. تنها همان‌ها را بگیر.",
+   "icon": "egg",
+   "sheet": "growth_catch.csv"
+  },
+  {
+   "id": "plate_story",
+   "engine": "story",
+   "letter": "i",
+   "title_en": "Zainab's Morning Meal",
+   "title_fa": "نان صبح زینب",
+   "intro_fa": "قصه را گوش کن و به زینب و میلاد کمک کن که خوب انتخاب کنند.",
+   "icon": "bread",
+   "sheet": "plate_story.csv"
+  },
+  {
+   "id": "feelings",
+   "engine": "listen_pick",
+   "letter": "j",
+   "title_en": "My Feelings",
+   "title_fa": "احساس‌های من",
+   "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+   "icon": "happy",
+   "sheet": "feelings.csv"
+  },
+  {
+   "id": "feelings_story",
+   "engine": "story",
+   "letter": "k",
+   "title_en": "Three Stories about Feelings",
+   "title_fa": "سه قصه درباره احساس",
+   "intro_fa": "قصه را گوش کن و کمک کن که کار درست انتخاب شود.",
+   "icon": "sad",
+   "sheet": "feelings_story.csv"
+  },
+  {
+   "id": "little_one",
+   "engine": "story",
+   "letter": "l",
+   "title_en": "Looking After the Little One",
+   "title_fa": "نگهداری طفل خورد",
+   "intro_fa": "قصه را گوش کن و کمک کن که طفل خورد بی‌خطر و سیر باشد.",
+   "icon": "hold_hand",
+   "sheet": "little_one.csv"
+  },
+  {
+   "id": "small_child",
+   "engine": "sorter",
+   "letter": "m",
+   "title_en": "A Safe Home for the Little One",
+   "title_fa": "خانه بی‌خطر برای طفل خورد",
+   "intro_fa": "هر تصویر را در سبد درست بینداز.",
+   "icon": "keep_high",
+   "sheet": "small_child.csv"
+  },
+  {
+   "id": "right_order",
+   "engine": "builder",
+   "letter": "n",
+   "title_en": "Step by Step",
+   "title_fa": "قدم به قدم",
+   "intro_fa": "تصویرها را به ترتیب درست بمان.",
+   "icon": "feed_child",
+   "sheet": "right_order.csv"
+  },
+  {
+   "id": "flood_story",
+   "engine": "story",
+   "letter": "o",
+   "title_en": "Too Much Water, Too Little Water",
+   "title_fa": "آب بسیار، آب کم",
+   "intro_fa": "قصه را گوش کن و کمک کن که فامیل کار درست را بکند.",
+   "icon": "flood",
+   "sheet": "flood_story.csv"
+  },
+  {
+   "id": "tree_keeper",
+   "engine": "journey",
+   "letter": "p",
+   "title_en": "Tree Keeper",
+   "title_fa": "باغبان خورد",
+   "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+   "icon": "tree_hill",
+   "sheet": "tree_keeper.csv"
+  },
+  {
+   "id": "land_water",
+   "engine": "sorter",
+   "letter": "q",
+   "title_en": "Our Land and Our Water",
+   "title_fa": "زمین و آب ما",
+   "intro_fa": "هر تصویر را در سبد درست بینداز.",
+   "icon": "water_reuse",
+   "sheet": "land_water.csv"
+  },
+  {
+   "id": "energy_story",
+   "engine": "story",
+   "letter": "r",
+   "title_en": "The Story of the Sun Lamp",
+   "title_fa": "قصه چراغ آفتابی",
+   "intro_fa": "قصه را گوش کن و به نرگس و ولی کمک کن که تیل و هیزم را کم بسوزانند.",
+   "icon": "solar_lamp",
+   "sheet": "energy_story.csv"
+  },
+  {
+   "id": "land_story",
+   "engine": "story",
+   "letter": "s",
+   "title_en": "The Hill and the Stream",
+   "title_fa": "تپه و جوی",
+   "intro_fa": "قصه را گوش کن و کمک کن که خاک و آب ده پاک و سالم بماند.",
+   "icon": "sapling",
+   "sheet": "land_story.csv"
+  },
+  {
+   "id": "future_pairs",
+   "engine": "pairs",
+   "letter": "t",
+   "title_en": "Pairs",
+   "title_fa": "جوره‌ها",
+   "intro_fa": "کارت‌ها را دو دو باز کن و جوره‌ها را پیدا کن.",
+   "icon": "feel_calm",
+   "sheet": "future_pairs.csv"
+  },
+  {
+   "id": "future_duel",
+   "engine": "duel",
+   "letter": "u",
+   "title_en": "Quick Quiz for Two",
+   "title_fa": "مسابقه دو نفره",
+   "intro_fa": "گوش کن. هر کس زودتر تصویر درست را انتخاب کند، یک نمره می‌گیرد.",
+   "icon": "friends",
+   "sheet": "future_duel.csv"
+  }
+ ]
+}

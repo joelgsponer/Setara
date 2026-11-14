@@ -302,7 +302,12 @@ learner pack `en-1` (see
 | 19 | Review: my classroom |
 | 20 | Review: I can speak English |
 
-There are no teacher lessons for other levels or subjects yet.
+There are lesson packs for English 1 and English 2 (20 lessons each). Packs
+follow each other: after lesson 20 of English 1, right on the lesson row
+moves to lesson 1 of English 2, and left goes back. With more than one pack
+installed the small number before the lesson number says which book it is.
+The Phrase Board, the tips and the class games are those of the book the
+teacher is in. There are no teacher lessons for other subjects yet.
 
 ## What else teacher mode records
 

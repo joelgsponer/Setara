@@ -16,7 +16,7 @@ round,a,b,say_en,say_fa
 09,t:tin,can,tin,
 09,t:packet,packet,packet,
 09,t:jar,jar,jar,
-09,t:sack,rice_sack,sack,
+09,t:sack,sack,sack,
 09,t:scales,scales,scales,
 11,t:flour,flour_sack,flour,
 11,t:oil,oil_can,oil,

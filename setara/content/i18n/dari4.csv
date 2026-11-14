@@ -571,7 +571,7 @@ fa,en
 بهار,spring
 خزان,autumn
 جمله را بخوان. از کدام فصل می‌گوید؟ در سبد همان فصل بگذار.,Read the sentence. Which season is it about? Put it in the basket of that season.
-برف می‌بارد,It snows
+برف می‌بارد,It is snowing
 هوا گرم است,It is warm
 آب یخ می‌زند,The water freezes
 گندم می‌رسد,The wheat ripens
@@ -584,7 +584,7 @@ fa,en
 نهال می‌کاریم,We plant saplings
 برگ زرد است,The leaves are yellow
 روز,day
-شب,night
+شب,shab (night)
 جمله را بخوان. روز است یا شب؟ در سبد درست بگذار.,Read the sentence. Is it day or night? Put it in the right basket.
 آفتاب می‌تابد,The sun shines
 ماه می‌تابد,The moon shines
@@ -610,7 +610,7 @@ fa,en
 نان,bread
 مادر در تنور چه می‌پزد؟ کلمه درست را بگیر.,What does mother bake in the oven? Catch the right word.
 نام,name
-بام,roof
+بام,bām (roof)
 جان,dear
 جواب این است: نان.,The answer is: bread.
 شیر,milk
@@ -618,34 +618,34 @@ fa,en
 سیر,full
 شهر,city
 جواب این است: شیر.,The answer is: milk.
-برف,snow
+برف,barf (snow)
 در زمستان چه می‌بارد؟ کلمه درست را بگیر.,What falls in winter? Catch the right word.
 برگ,leaf
 برق,lightning
 بره,lamb
 جواب این است: برف.,The answer is: snow.
-ماه,moon
+ماه,māh (moon)
 شب در آسمان چه می‌تابد؟ کلمه درست را بگیر.,What shines in the sky at night? Catch the right word.
-مار,snake
-راه,road
+مار,mār (snake)
+راه,rāh (way)
 مال,livestock
 جواب این است: ماه.,The answer is: moon.
-آب,water
+آب,āb (water)
 ماهی در چه شنا می‌کند؟ کلمه درست را بگیر.,What does the fish swim in? Catch the right word.
 آش,soup
 تب,fever
-آن,that
+آن,ān (that)
 جواب این است: آب.,The answer is: water.
-تخم,egg
+تخم,tokhm (egg)
 مرغ چه می‌دهد؟ کلمه درست را بگیر.,What does the hen lay? Catch the right word.
-تخت,bed
+تخت,takht (bed)
 تلخ,bitter
 زخم,wound
 جواب این است: تخم.,The answer is: egg.
 کوه,mountain
 چوپان رمه را کجا می‌برد؟ کلمه درست را بگیر.,Where does the shepherd take the flock? Catch the right word.
 کاه,straw
-کور,blind
+کور,kur
 کوزه,jug
 جواب این است: کوه.,The answer is: mountain.
 سگ,dog
@@ -679,10 +679,10 @@ fa,en
 پای,foot
 جواب این است: چای.,The answer is: tea.
 ما چه وقت می‌خوابیم؟ کلمه درست را بگیر.,When do we sleep? Catch the right word.
-شش,six
+شش,6
 لب,lip
 جواب این است: شب.,The answer is: night.
-قلم,pen
+قلم,qalam (pen)
 با چه می‌نویسیم؟ کلمه درست را بگیر.,What do we write with? Catch the right word.
 قدم,step
 علم,knowledge
@@ -696,7 +696,7 @@ fa,en
 ببر,tiger
 تر,wet
 جواب این است: تبر.,The answer is: axe.
-ابر,cloud
+ابر,abr (cloud)
 باران از کجا می‌بارد؟ کلمه درست را بگیر.,Where does the rain fall from? Catch the right word.
 امر,order
 ابرو,eyebrow
@@ -704,20 +704,20 @@ fa,en
 کدام حیوان شیر می‌دهد؟ کلمه درست را بگیر.,Which animal gives milk? Catch the right word.
 گاه,time
 گام,step
-کاو,dig
+گاز,gas
 جواب این است: گاو.,The answer is: cow.
 آفتاب چه وقت می‌تابد؟ کلمه درست را بگیر.,When does the sun shine? Catch the right word.
 زور,strength
-دور,far
+دور,away
 روی,face
 جواب این است: روز.,The answer is: day.
 توت,mulberry
 کدام میوه در تابستان می‌رسد؟ کلمه درست را بگیر.,Which fruit ripens in summer? Catch the right word.
-بوت,shoe
+بوت,but (shoe)
 تور,net
 قوت,strength
 جواب این است: توت.,The answer is: mulberry.
-باغ,garden
+باغ,bāgh (garden)
 درخت‌های میوه در کجا است؟ کلمه درست را بگیر.,Where are the fruit trees? Catch the right word.
 داغ,hot
 باد,wind
@@ -726,7 +726,7 @@ fa,en
 بخت,luck
 جواب این است: تخت.,The answer is: bed.
 در دیگ چه می‌پزیم؟ کلمه درست را بگیر.,What do we cook in the pot? Catch the right word.
-آس,mill
+آه,sigh
 جواب این است: آش.,The answer is: soup.
 آرد,flour
 نان را از چه می‌پزیم؟ کلمه درست را بگیر.,What do we bake bread from? Catch the right word.
@@ -763,7 +763,7 @@ fa,en
 زهرا می‌گوید: بیا، پهلوی من بنشین!,"Zahra says: Come, sit next to me!"
 کی گفت: پهلوی من بنشین؟,Who said: sit next to me?
 سارا,Sara
-معلم,teacher
+معلم,mo'alem (teacher)
 زهرا,Zahra
 نه. زهرا گفت: پهلوی من بنشین.,No. Zahra said: sit next to me.
 حالا سارا و زهرا دوست هستند.,Now Sara and Zahra are friends.
@@ -869,15 +869,15 @@ fa,en
 درخت انار,pomegranate tree
 درخت توت,mulberry tree
 نه. در حویلی علی درخت توت است.,No. In Ali's courtyard there is a mulberry tree.
-این,this
+این,in (this)
 سیب,apple
 است.,is.
-من,I
-دختر,girl
+من,man (I)
+دختر,dokhtar (girl)
 هستم.,am.
-بچه,boy
+بچه,bacha (boy)
 هوا,weather
-گرم,warm
+گرم,garm (warm)
 پاک,clean
 تازه,fresh
 می‌دهد.,gives.
@@ -890,30 +890,30 @@ fa,en
 توپ,ball
 سفید,white
 سیاه,black
-به,to
+به,ba (to)
 مکتب,school
 می‌روم.,go.
 پشک,cat
-در,in
+در,dar (in)
 علی,Ali
 دارد.,has.
-خانه,house
+خانه,home
 آمد.,came.
-ما,we
-صنف,classroom
+ما,mā
+صنف,senf (class)
 هستیم.,are.
-تخته,board
+تخته,takhta (board)
 می‌نویسد.,writes.
 نوید,Navid
 می‌رود.,goes.
-از,from
+از,az (from)
 دو,two
 خواهر,sister
-است,is
+است,ast (is)
 پیش,by
 دروازه,door
 زیر,under
-دارد,has
+دارد,dārad (has)
 بز,goat
 مادرکلان,grandmother
 قصه,story
@@ -926,13 +926,13 @@ fa,en
 فرید,Farid
 پدرکلان,grandfather
 داد.,gave.
-حویلی,courtyard
+حویلی,hawili (courtyard)
 عمر,Omar
-با,with
+با,bā
 رفت.,went.
 بازی,play
 می‌کند.,does.
-تو,you
+تو,tu
 چیست؟,what is?
 کجا,where
 می‌روی؟,are going?
@@ -945,36 +945,36 @@ fa,en
 چطور,how
 می‌روی.,are going.
 می‌روم؟,go?
-چه,what
+چه,cha
 انار,pomegranate
 کی,who
 آمد؟,came?
-زیاد,much
+زیاد,a lot
 می‌بارد.,falls.
 کم,little
 نهال,sapling
 کاشتیم.,we planted.
 چوپان,shepherd
 رمه,flock
-را,(object mark)
+را,rā
 برد.,took.
 کریم,Karim
 هر,every
-زنبور,bee
+زنبور,zanbur (bee)
 عسل,honey
 می‌سازد.,makes.
 خواهرم,my sister
 نیست.,is not.
 رخصت,closed
-کلان,big
+کلان,kalān (big)
 کوچک,small
 درخت,tree
 ندارد.,has not.
-دوست,friend
+دوست,dost (friend)
 دارم.,I have.
 ندارم.,I have not.
 امشب,tonight
-آسمان,sky
+آسمان,āsmān (sky)
 شما,you (plural)
 پهلوی,next to
 می‌خوری؟,are eating?
@@ -997,5 +997,5 @@ fa,en
 جمله را بخوان. بعد به سوال جواب بده.,Read the sentence. Then answer the question.
 کلمه را بگیر,Catch the word
 به سوال گوش کن و فقط کلمه درست را بگیر.,Listen to the question and catch only the right word.
-با هم بخوانیم,Let us read together
+با هم بخوانیم,Read Along
 قصه را بخوان و به آن گوش کن. در میان قصه به سوال‌ها جواب بده.,Read the story and listen to it. Answer the questions along the way.

@@ -44,3 +44,22 @@ t.press("right") t.press("right") t.press("a") t.wait(0.4) t.shot("t24_course")
 t.press("right") t.press("a") t.wait(2) t.shot("t25_tip")
 t.press("b") t.press("b") t.wait(0.3)
 t.press("start") t.wait(0.3) t.shot("t26_pause")
+
+-- Two lesson packs follow each other: past the last lesson of the first comes
+-- lesson 1 of the next, and back again.
+do
+  local T = require("teacher.common")
+  local packs = require("core.packs")
+  if #packs.teacher > 1 then
+    T.set_lesson(1)
+    local first = T.pack()
+    T.set_lesson(#first.lessons)
+    T.set_lesson(#first.lessons + 1)
+    assert(T.pack() ~= first and T.lesson_number() == 1, "the next lesson pack did not follow")
+    assert(T.load_lesson(), "the first lesson of the next pack does not load")
+    t.wait(0.3) t.shot("teacher_second_pack")
+    T.set_lesson(0)
+    assert(T.pack() == first and T.lesson_number() == #first.lessons, "going back did not return to the first pack")
+    T.set_lesson(1)
+  end
+end

@@ -1,4 +1,13 @@
 round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
+# 01: clean or dirty? New words, heard with words the child knows (hands, plate, yard, tooth, bucket).
+01,گوش کن و تصویر را ببین. پاک است یا چتل؟ تصویر را در سبد درست بینداز.,clean_hands,clean hands,,t:clean,پاک,clean
+01,,dirty_hands,dirty hands,,t:dirty,چتل,dirty
+01,,plate_dirty,a dirty plate,,t:dirty,,
+01,,plate_clean,a clean plate,,t:clean,,
+01,,tooth_clean,a clean tooth,,t:clean,,
+01,,yard_dirty,a dirty yard,,t:dirty,,
+01,,bucket_dirty,a dirty bucket,,t:dirty,,
+01,,yard_clean,a clean yard,,t:clean,,
 # 03: morning or night? The sentence is spoken; the picture goes into the morning or the night basket.
 03,جمله را گوش کن. این کار صبح است یا شب؟ تصویر را در سبد درست بینداز.,wake_up,I get up.,,morning,صبح,morning
 03,,sleep,I sleep.,,night,شب,night

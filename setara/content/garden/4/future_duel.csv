@@ -1,0 +1,25 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+01,بدن و احساس ما. گوش کن و زود تصویر درست را انتخاب کن.,,کدام خوراک نمو است؟,,egg,candy|bread|apple,تخم خوراک نمو است.
+01,,,کدام خوراک محافظت است؟,,carrot,rice|meat|sugar,زردک ترکاری است. ترکاری و میوه خوراک محافظت است.
+01,,,کدام را تنها کم‌کم و گاهی می‌خوریم؟,,candy,beans|spinach|yoghurt,شیرینی بدن را کلان نمی‌سازد و دندان را خراب می‌کند.
+01,,,کدام روی خوش است؟,,happy,sad|feel_angry|feel_afraid,این روی خوش است.
+01,,,کدام روی ترسیده است؟,,feel_afraid,happy|feel_calm|feel_tired,این روی ترسیده است. ترسیدن شرم نیست.
+01,,,وقتی غمگین هستی، کدام کار کمک می‌کند؟,,tell_adult,tease|take_away|soda,به یک کلان که به او باور داری بگو.
+01,,,کدام را از طفل خورد دور می‌مانیم؟,,matches,ball|pillow|blanket,گوگرد را در جای بلند می‌مانیم.
+01,,,به طفل خورد کدام را می‌دهیم؟,,food_bowl,walnut|candy|soda,به طفل خورد خوراک نرم و میده می‌دهیم.
+02,آب، خاک و آفتاب. گوش کن و زود تصویر درست را انتخاب کن.,,سیلاب می‌آید. به کجا می‌رویم؟,,high_ground,river|fast_water|bridge,به جای بلند می‌رویم.
+02,,,کدام چراغ از آفتاب قوت می‌گیرد؟,,solar_lamp,lamp|candle|fire,چراغ آفتابی از آفتاب قوت می‌گیرد.
+02,,,کدام یک آب را ضایع می‌کند؟,,tap_waste,water_jug|water_covered|rain_barrel,نل را باز نمی‌مانیم.
+02,,,کدام تپه خاک خود را نگه می‌کند؟,,tree_hill,bare_hill|tree_stump|plastic_fire,ریشه درخت خاک را محکم می‌گیرد.
+02,,,کدام هیزم خوب‌تر می‌سوزد؟,,wood_dry,wood_wet|plastic_bag|garbage,هیزم خشک گرمی بیشتر می‌دهد و کم‌تر دود می‌کند.
+02,,,کثافات را در کجا می‌اندازیم؟,,waste_pit,water_stream|street|well_open,در چقوری کثافات، دور از آب.
+02,,,زمین خشکسالی کدام است؟,,dry_field,field|flood|pond,در خشکسالی زمین خشک و چاک‌چاک است.
+02,,,نهال را از بز با چه نگه می‌کنیم؟,,fence,axe|fire|plastic_bag,دور نهال کتاره می‌مانیم.
+03,همه یکجا. گوش کن و زود تصویر درست را انتخاب کن.,,صبح پیش از مکتب چه می‌کنیم؟,,breakfast,candy|soda|feel_tired,نان صبح می‌خوریم.
+03,,,پیش از نان دادن به طفل چه می‌کنیم؟,,wash_hands,dirty_hands|ball|sleep,دست‌ها را با صابون می‌شوییم.
+03,,,نزدیک آب با طفل خورد چه می‌کنیم؟,,hold_hand,toddler_water|sleep|reading,دستش را محکم می‌گیریم.
+03,,,وقتی قهر هستی، اول چه می‌کنی؟,,breathe_slow,tease|take_away|plastic_fire,ایستاد می‌شوم و آهسته نفس می‌کشم.
+03,,,از میان کدام هیچ وقت تیر نمی‌شویم؟,,fast_water,bridge|street|yard,از میان آب تیز هیچ وقت تیر نمی‌شویم.
+03,,,بعد از سیلاب با آب نوشیدنی چه می‌کنیم؟,,water_boiling,water_puddle|water_cup_dirty|ice,آن را جوش می‌دهیم.
+03,,,تخته آفتابی را در کجا می‌مانیم؟,,solar_charge,box|cave|bed,در آفتاب، تمام روز.
+03,,,به جای درختی که قطع شد، چه می‌نشانیم؟,,sapling,stone|plastic_bag|tree_stump,نهال نو می‌نشانیم.
