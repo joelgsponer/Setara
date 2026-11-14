@@ -1,0 +1,43 @@
+key,en,fa,say
+# The valley
+home_welcome,Hello! Where shall we go?,سلام! کجا برویم؟,fa
+place_en,Bazaar,بازار,fa
+place_fa,Library,کتابخانه,fa
+place_math,Workshop,کارگاه,fa
+place_garden,Garden,باغ,fa
+level_1,Level one,سطح اول,fa
+level_2,Level two,سطح دوم,fa
+level_3,Level three,سطح سوم,fa
+level_4,Level four,سطح چهارم,fa
+level_5,Level five,سطح پنجم,fa
+level_6,Level six,سطح ششم,fa
+find_level,Find my level,سطح مرا پیدا کن,fa
+find_level_intro,Let us find your level. Listen and pick.,بیا سطح تو را پیدا کنیم. گوش کن و انتخاب کن.,fa
+find_level_done,This level is good for you:,این سطح برای تو خوب است:,fa
+one_player,One player,یک نفر,fa
+two_players,Two players,دو نفر,fa
+# Rounds
+warmup,First a little practice.,اول کمی تمرین می‌کنیم.,fa
+praise_1,Good. One star!,خوب است. یک ستاره!,fa
+praise_2,Very good. Two stars!,بسیار خوب. دو ستاره!,fa
+praise_3,Well done! Three stars!,آفرین! سه ستاره!,fa
+pass_on,Now it is your friend's turn. Pass the device on.,حالا نوبت دوستت است. دستگاه را به او بده.,fa
+your_turn,Now you say it.,حالا تو بگو.,fa
+listen_again,Listen again.,دوباره گوش کن.,fa
+was_it_good,Did you say it well?,خوب گفتی؟,fa
+player_1,Player one,بازیکن اول,fa
+player_2,Player two,بازیکن دوم,fa
+# Pause
+resume,Continue,ادامه,none
+go_home,Home,خانه,none
+# Tutorial
+tut_hello,Hello! I am your friend. Let us learn the buttons.,سلام! من دوست تو هستم. بیا دکمه‌ها را یاد بگیریم.,fa
+tut_up,Press the up button.,دکمهٔ بالا را فشار بده.,fa
+tut_down,Press the down button.,دکمهٔ پایین را فشار بده.,fa
+tut_left,Press the left button.,دکمهٔ چپ را فشار بده.,fa
+tut_right,Press the right button.,دکمهٔ راست را فشار بده.,fa
+tut_a,This button means yes. Press it.,این دکمه یعنی بلی. فشارش بده.,fa
+tut_b,This button goes back. Press it.,این دکمه برمی‌گردد. فشارش بده.,fa
+tut_x,This button says it again slowly. Press it.,این دکمه دوباره و آهسته می‌گوید. فشارش بده.,fa
+tut_y,This button explains in Dari. Press it.,این دکمه به دری توضیح می‌دهد. فشارش بده.,fa
+tut_done,Well done! Now let us play.,آفرین! حالا بازی کنیم.,fa

@@ -1,0 +1,72 @@
+{
+ "pack": "fa-2",
+ "subject": "fa",
+ "level": 2,
+ "version": 1,
+ "title_en": "Dari 2: The whole alphabet",
+ "title_fa": "دری ۲: همه الفبا",
+ "games": [
+  {
+   "id": "alefba_garden",
+   "engine": "listen_pick",
+   "letter": "a",
+   "title_en": "Alefba Garden",
+   "title_fa": "باغ الفبا",
+   "intro_fa": "گوش کن و جواب درست را انتخاب کن.",
+   "icon": "flower",
+   "v1": true,
+   "sheet": "alefba_garden.csv"
+  },
+  {
+   "id": "letter_shapes",
+   "engine": "sorter",
+   "letter": "b",
+   "title_en": "Letter Shapes",
+   "title_fa": "شکل حرف‌ها",
+   "intro_fa": "هر حرف چند شکل دارد. هر شکل را در سبد درست بگذار: اول کلمه، وسط کلمه، آخر کلمه، یا تنها.",
+   "icon": "basket",
+   "v1": true,
+   "sheet": "letter_shapes.csv"
+  },
+  {
+   "id": "word_weaver",
+   "engine": "builder",
+   "letter": "c",
+   "title_en": "Word Weaver",
+   "title_fa": "کلمه‌باف",
+   "intro_fa": "حرف‌ها را از راست به چپ کنار هم بگذار و کلمه بساز.",
+   "icon": "rope",
+   "sheet": "word_weaver.csv"
+  },
+  {
+   "id": "syllable_catch",
+   "engine": "catch",
+   "letter": "d",
+   "title_en": "Syllable Catch",
+   "title_fa": "بگیر بگیر",
+   "intro_fa": "گوش کن و فقط حرف درست را بگیر.",
+   "icon": "ball",
+   "sheet": "syllable_catch.csv"
+  },
+  {
+   "id": "read_along",
+   "engine": "story",
+   "letter": "e",
+   "title_en": "Read Along",
+   "title_fa": "با هم بخوانیم",
+   "intro_fa": "به قصه گوش کن و با آن بخوان. بعد به سوال‌ها جواب بده.",
+   "icon": "book",
+   "sheet": "read_along.csv"
+  },
+  {
+   "id": "verse_corner",
+   "engine": "pairs",
+   "letter": "f",
+   "title_en": "Verse Corner",
+   "title_fa": "گوشه شعر",
+   "intro_fa": "هر حرف را با تصویری جوره کن که نامش با آن حرف شروع می‌شود.",
+   "icon": "moon",
+   "sheet": "verse_corner.csv"
+  }
+ ]
+}

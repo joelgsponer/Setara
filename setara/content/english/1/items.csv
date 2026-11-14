@@ -1,0 +1,212 @@
+unit,key,en,fa,picture,tags
+# English level 1 "Hello". unit = classroom lesson number.
+# Rows tagged review repeat an earlier word so that the picture game has at least four pictures in the unit.
+
+# 01 Hello!
+01,hello,Hello,سلام,wave,greeting
+01,goodbye,Goodbye,خداحافظ,goodbye,greeting
+01,good_morning,Good morning,صبح بخیر,sun,greeting
+01,teacher,teacher,معلم,teacher,word
+01,class,class,صنف,class,word
+01,hello_teacher,"Hello, teacher!",سلام معلم,,phrase
+01,good_morning_dialogue,"f: Good morning, class! // m: Good morning, teacher!",صبح بخیر صنف. صبح بخیر معلم.,,dialogue
+01,goodbye_dialogue,"f: Goodbye, class! // m: Goodbye, teacher!",خداحافظ صنف. خداحافظ معلم.,,dialogue
+
+# 02 Stand up, sit down
+02,stand_up,Stand up,ایستاده شو,stand_up,command
+02,sit_down,Sit down,بنشین,sit_down,command
+02,clap,Clap,چک چک کن,clap,command
+02,listen,Listen,گوش کن,listen,command
+02,look,Look,ببین,look,command
+02,look_and_listen,Look and listen.,ببین و گوش کن.,,phrase
+02,stand_up_and_clap,Stand up and clap.,ایستاده شو و چک چک کن.,,phrase
+
+# 03 What's your name?
+03,i,I,من,me,word
+03,you,you,تو,you,word
+03,name,name,نام,,word
+03,whats_your_name,What's your name?,نام تو چیست؟,,phrase
+03,my_name_is_sara,My name is Sara.,نام من سارا است.,,phrase
+03,name_dialogue_1,f: What's your name? // m: My name is Omar.,نام تو چیست؟ نام من عمر است.,,dialogue
+03,name_dialogue_2,m: What's your name? // f: My name is Zahra.,نام تو چیست؟ نام من زهرا است.,,dialogue
+03,r03_stand_up,Stand up,ایستاده شو,stand_up,review
+03,r03_sit_down,Sit down,بنشین,sit_down,review
+
+# 04 Boy and girl, yes and no
+04,boy,boy,پسر,boy,word
+04,girl,girl,دختر,girl,word
+04,yes,yes,بلی,yes,word
+04,no,no,نه,no,word
+04,i_am_a_girl,I am a girl.,من دختر هستم.,,phrase
+04,i_am_a_boy,I am a boy.,من پسر هستم.,,phrase
+04,boy_dialogue,"f: Are you a boy? // m: Yes, I am a boy.",تو پسر هستی؟ بلی، من پسر هستم.,,dialogue
+04,girl_dialogue,m: Are you a boy? // f: No. I am a girl.,تو پسر هستی؟ نه. من دختر هستم.,,dialogue
+
+# 05 Numbers 1-5 (pictures and numerals are in numbers.csv)
+05,one,one,یک,,number
+05,two,two,دو,,number
+05,three,three,سه,,number
+05,four,four,چهار,,number
+05,five,five,پنج,,number
+05,one_to_five,"One, two, three, four, five.",یک، دو، سه، چهار، پنج.,,phrase
+
+# 06 Numbers 6-10
+06,six,six,شش,,number
+06,seven,seven,هفت,,number
+06,eight,eight,هشت,,number
+06,nine,nine,نه,,number
+06,ten,ten,ده,,number
+06,six_to_ten,"Six, seven, eight, nine, ten.",شش، هفت، هشت، نه، ده.,,phrase
+
+# 07 How old are you?
+07,how_old_are_you,How old are you?,چند ساله هستی؟,,phrase
+07,i_am_eight,I am eight.,من هشت ساله هستم.,,phrase
+07,age_dialogue_1,f: How old are you? // m: I am seven.,چند ساله هستی؟ من هفت ساله هستم.,,dialogue
+07,age_dialogue_2,m: How old are you? // f: I am ten.,چند ساله هستی؟ من ده ساله هستم.,,dialogue
+07,r07_boy,boy,پسر,boy,review
+07,r07_girl,girl,دختر,girl,review
+07,r07_teacher,teacher,معلم,teacher,review
+07,r07_class,class,صنف,class,review
+
+# 08 Classroom things 1
+08,book,book,کتاب,book,word
+08,pen,pen,قلم,pen,word
+08,pencil,pencil,پنسل,pencil,word
+08,bag,bag,بکس,bag,word
+08,what_is_this,What is this?,این چیست؟,,phrase
+08,this_is_a_book,This is a book.,این کتاب است.,,phrase
+08,this_is_a_bag,This is a bag.,این بکس است.,,phrase
+08,thing_dialogue_1,f: What is this? // m: This is a pen.,این چیست؟ این قلم است.,,dialogue
+08,thing_dialogue_2,m: What is this? // f: This is a pencil.,این چیست؟ این پنسل است.,,dialogue
+
+# 09 Classroom things 2
+09,chair,chair,چوکی,chair,word
+09,table,table,میز,table,word
+09,door,door,دروازه,door,word
+09,window,window,کلکین,window,word
+09,board,board,تخته,board,word
+09,this_is_a_door,This is a door.,این دروازه است.,,phrase
+09,thing_dialogue_3,m: What is this? // f: This is a window.,این چیست؟ این کلکین است.,,dialogue
+09,thing_dialogue_4,f: What is this? // m: This is a chair.,این چیست؟ این چوکی است.,,dialogue
+
+# 10 Commands 2
+10,open,Open,باز کن,open,command
+10,close,Close,بسته کن,close,command
+10,come_here,Come here,اینجا بیا,come_here,command
+10,go,Go,برو,go,command
+10,point_to,Point to,نشان بده,point,command
+10,open_the_door,Open the door.,دروازه را باز کن.,,phrase
+10,close_the_window,Close the window.,کلکین را بسته کن.,,phrase
+10,point_to_the_board,Point to the board.,تخته را نشان بده.,,phrase
+10,open_your_book,Open your book.,کتابت را باز کن.,,phrase
+10,close_your_book,Close your book.,کتابت را بسته کن.,,phrase
+
+# 11 Colours 1
+11,red,red,سرخ,color_red,colour
+11,blue,blue,آبی,color_blue,colour
+11,green,green,سبز,color_green,colour
+11,yellow,yellow,زرد,color_yellow,colour
+11,a_red_book,a red book,یک کتاب سرخ,,phrase
+11,a_blue_pen,a blue pen,یک قلم آبی,,phrase
+11,this_is_a_green_bag,This is a green bag.,این یک بکس سبز است.,,phrase
+11,this_is_a_yellow_pencil,This is a yellow pencil.,این یک پنسل زرد است.,,phrase
+
+# 12 Colours 2
+12,black,black,سیاه,color_black,colour
+12,white,white,سفید,color_white,colour
+12,brown,brown,نصواری,color_brown,colour
+12,orange,orange,نارنجی,color_orange,colour
+12,what_colour_is_it,What colour is it?,این چه رنگ است؟,,phrase
+12,it_is_black,It is black.,سیاه است.,,phrase
+12,colour_dialogue_1,f: What colour is it? // m: It is white.,این چه رنگ است؟ سفید است.,,dialogue
+12,colour_dialogue_2,m: What colour is it? // f: It is brown.,این چه رنگ است؟ نصواری است.,,dialogue
+
+# 13 Food
+13,apple,apple,سیب,apple,food
+13,bread,bread,نان,bread,food
+13,water,water,آب,water,food
+13,egg,egg,تخم مرغ,egg,food
+13,tea,tea,چای,tea,food
+13,this_is_bread,This is bread.,این نان است.,,phrase
+13,a_red_apple,a red apple,یک سیب سرخ,,phrase
+13,food_dialogue,f: What is this? // m: This is an egg.,این چیست؟ این تخم مرغ است.,,dialogue
+
+# 14 My friend
+14,friend,friend,دوست,friends,word
+14,he,he,او، برای پسر یا مرد,he,word
+14,she,she,او، برای دختر یا زن,she,word
+14,this_is_my_friend,This is my friend.,این دوست من است.,,phrase
+14,he_is_my_friend,He is my friend.,او دوست من است.,,phrase
+14,she_is_my_friend,She is my friend.,او دوست من است.,,phrase
+14,she_is_nine,This is my friend. She is nine.,این دوست من است. او نه ساله است.,,phrase
+14,friend_dialogue,"f: This is my friend, Laila. // m: Hello, Laila!",این دوست من لیلا است. سلام لیلا!,,dialogue
+14,r14_bag,bag,بکس,bag,review
+
+# 15 Commands 3
+15,draw,Draw,رسم کن,draw,command
+15,write,Write,بنویس,write,command
+15,read,Read,بخوان,read,command
+15,count,Count,حساب کن,count,command
+15,say,Say,بگو,say,command
+15,draw_an_apple,Draw an apple.,یک سیب رسم کن.,,phrase
+15,write_your_name,Write your name.,نامت را بنویس.,,phrase
+15,read_the_book,Read the book.,کتاب را بخوان.,,phrase
+15,count_to_ten,Count to ten.,تا ده حساب کن.,,phrase
+15,say_hello,Say hello.,سلام بگو.,,phrase
+
+# 16 How are you?
+16,happy,happy,خوش,happy,word
+16,sad,sad,غمگین,sad,word
+16,how_are_you,How are you?,چطور هستی؟,,phrase
+16,im_fine_thank_you,"I'm fine, thank you.",خوب هستم، تشکر.,,phrase
+16,i_am_happy,I am happy.,من خوش هستم.,,phrase
+16,i_am_sad,I am sad.,من غمگین هستم.,,phrase
+16,how_dialogue_1,"f: How are you? // m: I'm fine, thank you.",چطور هستی؟ خوب هستم، تشکر.,,dialogue
+16,how_dialogue_2,"m: Hello, Sara. How are you? // f: I'm fine, thank you.",سلام سارا. چطور هستی؟ خوب هستم، تشکر.,,dialogue
+16,r16_hello,Hello,سلام,wave,review
+16,r16_goodbye,Goodbye,خداحافظ,goodbye,review
+
+# 17 Big and small
+17,big,big,کلان,big,word
+17,small,small,خرد,small,word
+17,two_books,two books,دو کتاب,p:book*2,phrase
+17,three_pens,three pens,سه قلم,p:pen*3,phrase
+17,four_apples,four apples,چهار سیب,p:apple*4,phrase
+17,a_big_book,a big book,یک کتاب کلان,,phrase
+17,a_small_bag,a small bag,یک بکس خرد,,phrase
+17,the_door_is_big,The door is big.,دروازه کلان است.,,phrase
+17,the_egg_is_small,The egg is small.,تخم مرغ خرد است.,,phrase
+
+# 18 Please and thank you
+18,please,please,لطفاً,please,word
+18,thank_you,thank you,تشکر,thank_you,word
+18,sorry,sorry,ببخشید,sorry,word
+18,give,give,بده,give,word
+18,give_me_the_pen,"Give me the pen, please.",لطفاً قلم را به من بده.,,phrase
+18,here_you_are,Here you are.,بفرما، بگیر.,,phrase
+18,give_dialogue_1,"f: Give me the book, please. // m: Here you are. // f: Thank you.",لطفاً کتاب را به من بده. بفرما، بگیر. تشکر.,,dialogue
+18,give_dialogue_2,"m: Give me the pencil, please. // f: Here you are. // m: Thank you.",لطفاً پنسل را به من بده. بفرما، بگیر. تشکر.,,dialogue
+
+# 19 Review: my classroom
+19,classroom,classroom,اطاق صنف,classroom,word
+19,a_red_pen,a red pen,یک قلم سرخ,pen_red,phrase
+19,a_blue_book,a blue book,یک کتاب آبی,book_blue,phrase
+19,a_green_bag,a green bag,یک بکس سبز,bag_green,phrase
+19,three_red_pens,three red pens,سه قلم سرخ,p:pen_red*3,phrase
+19,two_blue_books,two blue books,دو کتاب آبی,p:book_blue*2,phrase
+19,this_is_my_classroom,This is my classroom.,این صنف من است.,,phrase
+19,review_dialogue_1,f: What is this? // m: This is a table.,این چیست؟ این میز است.,,dialogue
+19,review_dialogue_2,m: What colour is it? // f: It is green.,این چه رنگ است؟ سبز است.,,dialogue
+
+# 20 Review: I can speak English
+20,english,English,انگلیسی,,word
+20,i_can_speak_english,I can speak English.,من انگلیسی گپ زده می‌توانم.,,phrase
+20,review_dialogue_3,f: Hello! What's your name? // m: My name is Ali.,سلام! نام تو چیست؟ نام من علی است.,,dialogue
+20,review_dialogue_4,m: How old are you? // f: I am nine.,چند ساله هستی؟ من نه ساله هستم.,,dialogue
+20,review_dialogue_5,"f: How are you? // m: I'm fine, thank you.",چطور هستی؟ خوب هستم، تشکر.,,dialogue
+20,review_dialogue_6,"m: This is my friend, Ahmad. // f: Hello, Ahmad!",این دوست من احمد است. سلام احمد!,,dialogue
+20,r20_teacher,teacher,معلم,teacher,review
+20,r20_friend,friend,دوست,friends,review
+20,r20_book,book,کتاب,book,review
+20,r20_apple,apple,سیب,apple,review
+20,r20_happy,happy,خوش,happy,review

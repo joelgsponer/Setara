@@ -1,0 +1,72 @@
+{
+ "pack": "garden-1",
+ "subject": "garden",
+ "level": 1,
+ "version": 1,
+ "title_en": "Garden 1: Me",
+ "title_fa": "باغ ۱: من",
+ "games": [
+  {
+   "id": "clean_hands",
+   "engine": "builder",
+   "letter": "a",
+   "title_en": "Clean Hands",
+   "title_fa": "دست‌های پاک",
+   "intro_fa": "تصویرها را به ترتیب درست بمان.",
+   "icon": "soap",
+   "v1": true,
+   "sheet": "clean_hands.csv"
+  },
+  {
+   "id": "safe_water",
+   "engine": "sorter",
+   "letter": "b",
+   "title_en": "Clean or Dirty",
+   "title_fa": "پاک یا چتل",
+   "intro_fa": "هر تصویر را در سبد درست بینداز.",
+   "icon": "water",
+   "v1": true,
+   "sheet": "safe_water.csv"
+  },
+  {
+   "id": "hygiene_story",
+   "engine": "story",
+   "letter": "c",
+   "title_en": "Omid's Day",
+   "title_fa": "روز امید",
+   "intro_fa": "قصه را گوش کن و به امید کمک کن که کار درست را بکند.",
+   "icon": "toothbrush",
+   "sheet": "hygiene_story.csv"
+  },
+  {
+   "id": "good_plate",
+   "engine": "sorter",
+   "letter": "d",
+   "title_en": "Garden Baskets",
+   "title_fa": "سبدهای باغ",
+   "intro_fa": "هر تصویر را در سبد درست بینداز.",
+   "icon": "sheep",
+   "sheet": "good_plate.csv"
+  },
+  {
+   "id": "tree_keeper",
+   "engine": "journey",
+   "letter": "e",
+   "title_en": "Tree Keeper",
+   "title_fa": "باغبان خورد",
+   "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+   "icon": "tree",
+   "sheet": "tree_keeper.csv"
+  },
+  {
+   "id": "my_body",
+   "engine": "listen_pick",
+   "letter": "f",
+   "title_en": "My Body",
+   "title_fa": "بدن من",
+   "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+   "icon": "hand",
+   "sheet": "my_body.csv"
+  }
+ ]
+}

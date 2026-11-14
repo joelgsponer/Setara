@@ -1,0 +1,141 @@
+unit,key,en,fa,picture,tags
+01,hw_wet,wet the hands,دست را تر کردن,hw_wet,steps
+01,hw_soap,put soap on,صابون زدن,hw_soap,steps
+01,hw_palms,rub the palms,مالیدن کف دست‌ها,hw_palms,steps
+01,hw_rinse,rinse,آب کشیدن,hw_rinse,steps
+01,wash_hands,washing hands with soap,دست شستن با صابون,wash_hands,
+01,tooth,tooth,دندان,tooth,
+01,sleep,sleeping,خواب,sleep,
+01,foot,foot,پا,foot,
+01,finger,finger,انگشت,finger,
+01,eye,eye,چشم,eye,
+01,soap,soap,صابون,soap,
+01,towel,towel,دستمال,towel,
+01,water,water,آب,water,water
+01,pillow,pillow,بالشت,pillow,
+01,garbage,rubbish,کثافات,garbage,
+01,book,book,کتاب,book,
+01,ball,ball,توپ,ball,
+01,plate,plate,بشقاب,plate,
+01,stone,stone,سنگ,stone,
+01,house,house,خانه,house,
+01,sandals,sandals,چپلک,sandals,
+01,parents,mother and father,مادر و پدر,parents,
+01,mother,mother,مادر,mother,
+01,clinic,clinic,کلینیک,clinic,
+01,bread,bread,نان,bread,
+01,rice,rice,برنج,rice,
+01,potato,potato,کچالو,potato,
+01,corn,maize,جواری,corn,
+01,egg,egg,تخم مرغ,egg,
+01,milk,milk,شیر,milk,
+01,yoghurt,yoghurt,ماست,yoghurt,
+01,beans,beans,لوبیا,beans,
+01,lentils,lentils,دال,lentils,
+01,chickpeas,chickpeas,نخود,chickpeas,
+01,meat,meat,گوشت,meat,
+01,apple,apple,سیب,apple,
+01,carrot,carrot,زردک,carrot,
+01,tomato,tomato,بادنجان رومی,tomato,
+01,spinach,spinach,پالک,spinach,
+01,pumpkin,pumpkin,کدو,pumpkin,
+01,grape,grapes,انگور,grape,
+01,apricot,apricot,زردآلو,apricot,
+01,pomegranate,pomegranate,انار,pomegranate,
+01,candy,sweets,شیرینی,candy,
+01,soda,fizzy sweet drink,نوشابه,soda,
+01,sugar,sugar,بوره,sugar,
+01,food_bowl,bowl of soft food,خوراک نرم,food_bowl,
+01,bowl_empty,empty bowl,کاسه خالی,bowl_empty,
+01,food_covered,covered food,خوراک سرپوشیده,food_covered,
+01,food_uncovered,uncovered food with flies,خوراک سرباز,food_uncovered,
+01,sheep,sheep,گوسفند,sheep,
+01,hen,hen,مرغ,hen,
+01,cat,cat,پشک,cat,
+01,fish,fish,ماهی,fish,
+01,bee,bee,زنبور عسل,bee,
+01,butterfly,butterfly,پروانه,butterfly,
+01,ant,ant,مورچه,ant,
+01,fly,fly,مگس,fly,
+01,tree,tree,درخت,tree,
+01,flower,flower,گل,flower,
+01,leaf,leaf,برگ,leaf,
+01,sun,sun,آفتاب,sun,
+01,moon,moon,مهتاب,moon,
+01,star,star,ستاره,star,
+01,cloud,cloud,ابر,cloud,
+01,snow,snow,برف,snow,
+01,ice,ice,یخ,ice,
+01,steam,steam,بخار,steam,
+01,fire,fire,آتش,fire,
+01,sand,sand,ریگ,sand,
+01,mountain,mountain,کوه,mountain,
+01,river,river,دریا,river,
+01,soil,soil,خاک,soil,
+01,water_boiled,boiled water,آب جوش‌داده,water_boiled,water
+01,water_boiling,boiling water,آب در حال جوش,water_boiling,water
+01,water_covered,covered water container,ظرف آب سرپوش‌دار,water_covered,water
+01,water_bucket,bucket of fetched water,سطل آب,water_bucket,water
+01,water_bucket_open,uncovered bucket,سطل سرباز,water_bucket_open,water
+01,water_cloudy,muddy water,آب گل‌آلود,water_cloudy,water
+01,water_filter_cloth,filtering water through a clean cloth,صاف کردن آب با تکه,water_filter_cloth,water
+01,water_tap,tap,نل آب,water_tap,water
+01,water_pump,hand pump,بمبه آب,water_pump,water
+01,water_puddle,puddle,آب ایستاده,water_puddle,water
+01,water_stream,open stream,آب جوی,water_stream,water
+01,water_pond,pond,آب حوض,water_pond,water
+01,water_ladle,taking water with a clean ladle,آب گرفتن با چمچه,water_ladle,water
+01,water_cup_dirty,dirty cup,گیلاس چتل,water_cup_dirty,water
+01,water_hand_dip,dipping a hand into the water pot,دست در آب زدن,water_hand_dip,water
+01,water_animal,animal drinking from the family water,حیوان از ظرف آب می‌نوشد,water_animal,water
+01,well_covered,covered well,چاه سرپوشیده,well_covered,water
+01,well_open,open well,چاه سرباز,well_open,water
+01,well,well,چاه,well,water
+01,latrine_far,latrine far from the well,تشناب دور از چاه,latrine_far,latrine
+01,latrine_near_well,latrine next to the well,تشناب نزدیک چاه,latrine_near_well,latrine
+01,bucket_clean,clean bucket,سطل پاک,bucket_clean,
+01,bucket_dirty,dirty bucket,سطل چتل,bucket_dirty,
+01,waste_pit,rubbish pit,چقوری کثافات,waste_pit,
+01,garbage_water,rubbish in the stream,کثافات در جوی,garbage_water,
+01,animals_water,animals standing in the water,حیوان در آب,animals_water,
+01,latrine,latrine,تشناب,latrine,latrine
+01,latrine_cover,cover on the latrine hole,سرپوش تشناب,latrine_cover,latrine
+01,latrine_open,uncovered latrine hole,تشناب سرباز,latrine_open,latrine
+01,latrine_clean,clean latrine,تشناب پاک,latrine_clean,latrine
+01,latrine_dirty,dirty latrine,تشناب چتل,latrine_dirty,latrine
+01,field,open field,دشت,field,
+01,street,village lane,کوچه,street,
+01,broom,broom,جاروب,broom,
+01,germ,germs,میکروب,germ,
+01,window,open window,کلکین,window,
+01,door,door,دروازه,door,
+01,chimney,chimney,دودکش,chimney,
+01,stove,cooking fire,دیگدان,stove,
+01,stove_chimney,stove with a chimney,دیگدان دودکش‌دار,stove_chimney,
+01,stove_open,open fire indoors,آتش سرباز در خانه,stove_open,
+01,kitchen_smoky,smoky kitchen,آشپزخانه پر دود,kitchen_smoky,
+01,yard,"yard, fresh air",حویلی,yard,
+01,wood_dry,dry firewood,هیزم خشک,wood_dry,
+01,wood_wet,wet firewood,هیزم تر,wood_wet,
+01,charcoal,charcoal,زغال,charcoal,
+01,twigs,twigs,خاشه,twigs,
+01,plastic_bag,plastic bag,خریطه پلاستیکی,plastic_bag,
+01,peel,fruit peel,پوست میوه,peel,
+01,bottle,bottle,بوتل,bottle,
+01,can,tin can,قطی,can,
+01,bottle_reuse,bottle used again,بوتل دوباره کار گرفته شده,bottle_reuse,
+01,garbage_street,rubbish in the lane,کثافات در کوچه,garbage_street,
+01,plastic_fire,burning plastic,سوختاندن پلاستیک,plastic_fire,
+01,yard_clean,clean yard,حویلی پاک,yard_clean,
+01,yard_dirty,dirty yard,حویلی چتل,yard_dirty,
+01,nest,nest,آشیانه,nest,
+01,sapling,sapling,نهال,sapling,
+01,axe,axe,تبر,axe,
+01,fence,fence,کتاره,fence,
+01,shovel,shovel,بیل,shovel,
+01,bucket,bucket,سطل,bucket,
+01,ors_packet,ORS packet,پاکت او آر اس,ors_packet,steps
+01,ors_water,clean water measured into a clean container,آب پاک در ظرف پاک,ors_water,steps
+01,ors_pour,pour the whole packet in,تمام پاکت را در آب انداختن,ors_pour,steps
+01,ors_stir,stir until dissolved,شور دادن,ors_stir,steps
+01,ors_sip,give small sips,کم‌کم نوشاندن,ors_sip,steps

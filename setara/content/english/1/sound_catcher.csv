@@ -1,0 +1,15 @@
+round,say_en,say_fa,targets,others,need,help_fa
+# Phonics: first letter sounds of level 1 words. Small and capital letter are both right.
+# say_fa names a Dari word that starts with the same sound, so the hint does not depend on how a letter name is read.
+01,Catch the first letter of sit and six. Sss.,حرف اول این کلمه‌ها را بگیر.,t:s|t:S,t:m|t:t|t:b|t:o,4,این حرف مثل اول کلمهٔ «سیب» صدا می‌دهد.
+01,Catch the first letter of ten and table.,حرف اول این کلمه‌ها را بگیر.,t:t|t:T,t:s|t:m|t:b|t:o,4,این حرف مثل اول کلمهٔ «توت» صدا می‌دهد.
+02,Catch the first letter of book and bag.,حرف اول این کلمه‌ها را بگیر.,t:b|t:B,t:s|t:t|t:m|t:r,4,این حرف مثل اول کلمهٔ «بز» صدا می‌دهد.
+02,Catch the first letter of pen and pencil.,حرف اول این کلمه‌ها را بگیر.,t:p|t:P,t:s|t:t|t:m|t:n,4,این حرف مثل اول کلمهٔ «پدر» صدا می‌دهد.
+03,Catch the first letter of morning and my. Mmm.,حرف اول این کلمه‌ها را بگیر.,t:m|t:M,t:s|t:t|t:b|t:r,4,این حرف مثل اول کلمهٔ «مادر» صدا می‌دهد.
+03,Catch the first letter of name and nine. Nnn.,حرف اول این کلمه‌ها را بگیر.,t:n|t:N,t:s|t:t|t:b|t:p,4,این حرف مثل اول کلمهٔ «نان» صدا می‌دهد.
+04,Catch the first letter of door and draw.,حرف اول این کلمه‌ها را بگیر.,t:d|t:D,t:s|t:t|t:m|t:n,4,این حرف مثل اول کلمهٔ «دروازه» صدا می‌دهد.
+04,Catch the first letter of girl and go.,حرف اول این کلمه‌ها را بگیر.,t:g|t:G,t:s|t:t|t:m|t:b,4,این حرف مثل اول کلمهٔ «گل» صدا می‌دهد.
+05,Catch the first letter of hello and happy.,حرف اول این کلمه‌ها را بگیر.,t:h|t:H,t:s|t:t|t:m|t:p,4,این حرف مثل اول کلمهٔ «هفت» صدا می‌دهد.
+05,Catch the first letter of red and read. Rrr.,حرف اول این کلمه‌ها را بگیر.,t:r|t:R,t:s|t:t|t:m|t:b,4,این حرف مثل اول کلمهٔ «روز» صدا می‌دهد.
+06,Catch the first letter of four and five. Fff.,حرف اول این کلمه‌ها را بگیر.,t:f|t:F,t:s|t:m|t:b|t:d,4,این حرف مثل اول کلمهٔ «فیل» صدا می‌دهد.
+06,Catch the first letter of listen and look. Lll.,حرف اول این کلمه‌ها را بگیر.,t:l|t:L,t:s|t:m|t:b|t:d,4,این حرف مثل اول کلمهٔ «لب» صدا می‌دهد.

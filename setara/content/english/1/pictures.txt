@@ -1,0 +1,117 @@
+# Pictures used by English level 1. Format: name: what to draw.
+# Style (docs/authoring.md): thick dark outline, flat colours, no text, readable at 3 cm.
+# People: rural Afghan children about 8 years old, modest everyday dress; girls with a headscarf, boys in perahan tunban (long shirt), with or without a cap.
+# Girls and boys alternate through the list on purpose. A local reviewer approves every picture of a person.
+
+# Unit 01
+wave: a girl facing us, smiling, one hand raised and waving hello
+goodbye: a boy seen walking away through a doorway with his school bag, turning his head back and waving
+sun: a yellow morning sun rising over two low hills
+teacher: a woman teacher standing next to a blackboard, holding a piece of chalk (modest long dress, headscarf)
+class: a group of five small children sitting in two rows on the floor, seen from the front, some girls and some boys (the local reviewer may ask for a girls-only and a boys-only version)
+
+# Unit 02 commands (one child doing the action)
+stand_up: a girl standing up straight in front of a low bench, with an arrow pointing up beside her
+sit_down: a boy sitting cross-legged on a floor mat, with an arrow pointing down beside him
+clap: a girl clapping her hands, small motion lines around the hands
+listen: a boy holding one hand behind his ear, small sound waves coming towards the ear
+look: a girl shading her eyes with one hand and looking to the side, a dotted line going from her eyes
+
+# Unit 03
+me: a girl pointing at her own chest with her hand (meaning "I")
+you: a boy pointing straight out of the picture at the viewer (meaning "you")
+
+# Unit 04
+boy: one boy standing, facing us, smiling, hands at his sides
+girl: one girl standing, facing us, smiling, hands at her sides
+yes: a large green tick mark
+no: a large red cross mark (an X)
+
+# Unit 08 (plain versions: keep these colours so that the coloured versions below look different)
+book: one closed book with a brown cover
+pen: one black ballpoint pen, lying diagonally
+pencil: one yellow pencil with a sharp point, lying diagonally
+bag: one tan cloth school bag with a shoulder strap
+
+# Unit 09
+chair: a simple wooden chair
+table: a simple wooden table
+door: a closed wooden door in its frame
+window: a window with four panes in a mud-brick wall
+board: a black classroom board on a wall, empty, with a piece of chalk on its ledge
+
+# Unit 10 commands
+open: a boy pulling a door open; the door is half open and a curved arrow shows it swinging open
+close: a girl pushing a door shut; the door is almost closed and a curved arrow shows it swinging shut
+come_here: a girl beckoning with her whole hand towards herself, an arrow pointing towards her
+go: a boy walking away from us, an arrow on the ground pointing ahead of him
+point: a girl pointing with her arm stretched out at a board on the wall
+
+# Units 11 and 12 (a round paint blob in the colour, same shape for all eight)
+color_red: a red paint blob
+color_blue: a blue paint blob
+color_green: a green paint blob
+color_yellow: a yellow paint blob
+color_black: a black paint blob (lighter outline so the shape stays visible)
+color_white: a white paint blob with the dark outline, on a pale grey disc so the white shows
+color_brown: a brown paint blob
+color_orange: an orange paint blob
+
+# Unit 13
+apple: one red apple with a small green leaf
+bread: one long flat Afghan naan bread
+water: a clear glass full of water
+egg: one whole white egg
+tea: a small glass of green tea on a saucer, with steam, next to a small teapot
+
+# Unit 14
+friends: two girls standing side by side, smiling, one with her arm around the other's shoulder
+he: a boy standing on the right; from the left edge a hand and arm point at him
+she: a girl standing on the right; from the left edge a hand and arm point at her
+
+# Unit 15 commands
+draw: a girl drawing a flower on a sheet of paper with a pencil; the flower is clearly visible
+write: a boy writing in a notebook with a pen; the page shows wavy lines of writing (no real letters)
+read: a girl holding an open book up in both hands and looking into it
+count: a boy counting on his fingers, touching the fingers of one hand with the other hand
+say: a girl speaking with her mouth open, sound waves coming out of her mouth (no speech bubble text)
+
+# Unit 16
+happy: the face of a boy with a big smile
+sad: the face of a girl with a sad mouth and one tear
+
+# Unit 17
+big: a large ball and a tiny ball side by side; the large ball is bright red, the tiny one pale grey, and an arrow points at the large ball
+small: the same two balls; the tiny ball is bright red, the large one pale grey, and an arrow points at the tiny ball
+
+# Unit 18
+please: a boy holding out both open hands, palms up, asking politely
+thank_you: a girl smiling with her right hand on her chest (the local gesture of thanks)
+sorry: a boy looking sorry, hand on his head, beside a glass of water he has knocked over
+give: two girls; one hands a pen to the other, an arrow shows the pen moving to the second girl
+
+# Unit 19
+classroom: an empty village classroom: board on the wall, a table and chair, a door, a window, mats on the floor
+pen_red: the same pen as "pen", coloured red
+book_blue: the same book as "book", with a blue cover
+bag_green: the same bag as "bag", coloured green
+
+# Game icons
+train: a small toy-like train engine with two wagons, seen from the side
+shop: a small bazaar stall with an awning and baskets of fruit, no person
+radio: a small portable radio with an aerial and a speaker grille
+# other icons reuse apple, say, listen, count
+
+# Story scenes (4:3, full background)
+scene_sara_hello: Sara, a girl of eight with a headscarf, stands in front of her mud-brick house in the morning and waves
+scene_sara_bag: Sara holds up her green cloth school bag with both hands to show it; the bag is clearly green
+scene_sara_apple: Sara takes a big red apple out of her green bag and holds it up
+scene_laila_sad: Laila, another girl with a headscarf, sits on a step outside the school with a sad face; Sara walks up to her with her green bag
+scene_sara_gives_apple: Sara hands the red apple to Laila; Laila starts to smile
+scene_girls_happy: Sara and Laila sit side by side, both smiling; Laila holds the apple; Sara waves goodbye to us
+scene_omar_hello: Omar, a boy of nine in perahan tunban, stands at the door of the village school and waves
+scene_omar_classroom: Omar inside the empty classroom; the door, the black board, a window and a table are all clearly visible and apart from each other
+scene_omar_ali: Omar stands beside his friend Ali, a slightly smaller boy; Omar's hand is on Ali's shoulder
+scene_three_pens: a table top with exactly three pens in a row: one red, one blue, one black; the two boys look at them
+scene_omar_gives_pen: Omar hands the red pen to Ali; both smile
+scene_boys_goodbye: Omar and Ali stand at the classroom door, smiling and waving goodbye to us

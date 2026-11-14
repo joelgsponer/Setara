@@ -1,0 +1,13 @@
+local t = ...
+t.wait(1.5)
+t.shot("01_tutorial")
+t.press("start")
+t.wait(4)
+t.shot("02_home")
+t.press("right") t.wait(0.5) t.press("left") t.wait(0.5)
+t.press("a") t.wait(1)
+t.shot("03_place")
+t.press("a") t.wait(1)
+t.shot("04_intro")
+t.wait(6)
+t.shot("05_play")

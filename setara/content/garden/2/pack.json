@@ -1,0 +1,82 @@
+{
+ "pack": "garden-2",
+ "subject": "garden",
+ "level": 2,
+ "version": 1,
+ "title_en": "Garden 2: My Home",
+ "title_fa": "باغ ۲: خانه من",
+ "games": [
+  {
+   "id": "clean_hands",
+   "engine": "builder",
+   "letter": "a",
+   "title_en": "Clean Hands",
+   "title_fa": "دست‌های پاک",
+   "intro_fa": "تصویرها را به ترتیب درست بمان.",
+   "icon": "soap",
+   "v1": true,
+   "sheet": "clean_hands.csv"
+  },
+  {
+   "id": "safe_water",
+   "engine": "sorter",
+   "letter": "b",
+   "title_en": "Safe Water",
+   "title_fa": "آب پاک",
+   "intro_fa": "هر تصویر را در سبد درست بینداز.",
+   "icon": "water",
+   "v1": true,
+   "sheet": "safe_water.csv"
+  },
+  {
+   "id": "safe_water_story",
+   "engine": "story",
+   "letter": "c",
+   "title_en": "Shirin and the Safe Water",
+   "title_fa": "شیرین و آب پاک",
+   "intro_fa": "قصه را گوش کن و به شیرین کمک کن که کار درست را بکند.",
+   "icon": "water_boiled",
+   "sheet": "safe_water_story.csv"
+  },
+  {
+   "id": "good_plate",
+   "engine": "sorter",
+   "letter": "d",
+   "title_en": "Good Plate",
+   "title_fa": "بشقاب خوب",
+   "intro_fa": "هر خوراک را در سبد خودش بینداز.",
+   "icon": "bread",
+   "sheet": "good_plate.csv"
+  },
+  {
+   "id": "tree_keeper",
+   "engine": "journey",
+   "letter": "e",
+   "title_en": "Tree Keeper",
+   "title_fa": "باغبان خورد",
+   "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+   "icon": "tree",
+   "sheet": "tree_keeper.csv"
+  },
+  {
+   "id": "my_body",
+   "engine": "listen_pick",
+   "letter": "f",
+   "title_en": "Healthy Home",
+   "title_fa": "خانه سالم",
+   "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+   "icon": "house",
+   "sheet": "my_body.csv"
+  },
+  {
+   "id": "little_nurse",
+   "engine": "story",
+   "letter": "g",
+   "title_en": "Little Nurse",
+   "title_fa": "پرستار خورد",
+   "intro_fa": "قصه را گوش کن و به لیلا و فرید کمک کن که کار درست را بکنند.",
+   "icon": "ors_packet",
+   "sheet": "little_nurse.csv"
+  }
+ ]
+}

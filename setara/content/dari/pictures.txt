@@ -1,0 +1,117 @@
+almond: three almonds, one in its shell (بادام)
+apple: a red apple with a leaf (سیب)
+ball: a plain coloured ball (توپ)
+basket: an empty woven basket with a handle (سبد)
+bed: a simple wooden bed with a blanket (تخت)
+bee: a yellow and black bee (زنبور)
+bell: a hand bell (زنگ)
+book: a closed book (کتاب)
+box: a wooden chest with a lid and a metal clasp (صندوق)
+bread: a long flat Afghan naan with the stamped pattern (نان)
+bridge: a small arched bridge over a stream (پل)
+broom: a short hand broom made of straw (جاروب)
+camel: a one-humped camel, side view (شتر)
+candle: a burning candle (شمع)
+carrot: an orange carrot with green top (زردک)
+cat: a cat sitting (پشک)
+cave: a dark cave opening in a rock wall (غار)
+classroom: an empty classroom: blackboard, mat on the floor, small window; no people (صنف)
+comb: a hair comb (شانه)
+corn: one cob of maize, husk partly open (جواری)
+courtyard: a walled courtyard seen from above the wall: mud walls, a gate, a tree inside (حویلی)
+cow: a cow, side view (گاو)
+dog: a village dog standing, side view (سگ)
+donkey: a grey donkey with long ears, side view (خر)
+door: a closed wooden door in a mud wall (دروازه)
+ear: one ear (گوش)
+egg: one white egg (تخم)
+elephant: a grey elephant, side view (فیل)
+eye: one open eye with eyebrow (چشم)
+father: a father: a man with a short beard in shalwar kameez and a cap, friendly, standing (پدر)
+fire: a small wood fire with orange flames (آتش)
+firewood: a tied bundle of firewood sticks (هیزم)
+fish: one fish, side view (ماهی)
+flower: one red flower with a green stem and two leaves (گل)
+fox: an orange fox with a bushy tail (روباه)
+glasses: a pair of eyeglasses (عینک)
+goat: a goat with horns and a small beard, side view (بز)
+grapes: a bunch of green grapes with a leaf (انگور)
+hail: a dark cloud with round white hailstones falling and bouncing on the ground (ژاله)
+hand: an open hand, palm facing the viewer (دست)
+hat: a round embroidered Afghan cap, no person (کلاه)
+hen: a brown hen standing, side view (مرغ)
+honey: a jar of golden honey with a spoon dripping honey (عسل)
+horse: a brown horse standing, side view (اسپ)
+ice: a block of ice with icicles, light blue (یخ)
+key: one metal key (کلید)
+leaf: one green leaf (برگ)
+lemon: a yellow lemon with a leaf (لیمو)
+lips: a closed mouth, the lips only (لب)
+lock: a padlock (قفل)
+moon: a full yellow moon in a dark blue night sky with two small stars (ماه)
+mountain: a mountain with snow on the top (کوه)
+mouse: a grey mouse with a long tail (موش)
+mulberry: white and dark mulberries on a twig with a leaf (توت)
+onion: an onion with its dry skin (پیاز)
+parrot: a green parrot on a perch (طوطی)
+peacock: a peacock with its tail open (طاووس)
+pear: a yellow-green pear with a stalk and leaf (ناک)
+pen: one pen (قلم)
+pigeon: a white pigeon standing, side view (کبوتر)
+pocket: a shirt pocket shown large on a piece of cloth (جیب)
+pomegranate: a red pomegranate with its crown, one cut piece showing seeds (انار)
+pond: a small square built water basin (hawz) in a yard (حوض)
+pot: a metal cooking pot with two handles and a lid (دیگ)
+pumpkin: an orange pumpkin (کدو)
+radio: a small battery radio with an aerial (رادیو)
+rain: a grey cloud with rain drops falling (باران)
+roof: a mud village house with a flat roof; the roof is drawn in a strong colour and a ladder leans against it (بام)
+rooster: a rooster with a red comb and big tail (خروس)
+rope: a coil of thick rope (ریسمان)
+salt: a small bowl of white salt with a pinch falling into it (نمک)
+sapling: a very young tree: thin stem, a few leaves, in a small earth mound (نهال)
+school: a small plain village school building with an open door; no people, no flag (مکتب)
+seed: a few seeds or grains in a small heap (دانه)
+shoe: one simple closed shoe, side view (بوت)
+snake: a green snake curled in an S shape (مار)
+soap: a bar of soap with bubbles (صابون)
+spoon: one spoon (قاشق)
+star: one yellow five-pointed star (ستاره)
+stone: a grey stone (سنگ)
+stream: a narrow water channel running between fields (جوی)
+tap: a water tap (standpipe) with water running from it (نل)
+tea: a glass of tea with steam next to a teapot (چای)
+tooth: one white tooth (دندان)
+tree: a tree with a brown trunk and a round green crown (درخت)
+umbrella: an open umbrella (چتری)
+waistcoat: a sleeveless Afghan waistcoat with buttons, no person (واسکت)
+wall: a piece of mud-brick wall (دیوار)
+water: a glass of clear water with one drop above it (آب)
+watermelon: a watermelon with one red slice cut out (تربوز)
+well: a round stone well with a bucket on a rope (چاه)
+wheat: three golden ears of wheat (گندم)
+wool: a heap of raw white sheep wool (پشم)
+scene_apple_tree: the full-grown tree carries red apples
+scene_boy_gives_bread_grandfather: the boy hands one bread to a seated grandfather with a white beard and turban
+scene_boy_gives_bread_sister: the boy hands one bread to his small sister (about 4, small headscarf)
+scene_boy_one_bread: the boy smiles, holding the one bread that is left
+scene_boy_plants_sapling: the boy plants the sapling in a hole in an orchard; a small spade lies next to him
+scene_boy_shares_apples: the boy and two friends (one girl with headscarf, one boy) sit under the tree eating apples
+scene_boy_takes_bread: a boy of about 9 (shalwar kameez, cap) holds three flat breads in a cloth
+scene_boy_waters_sapling: the boy pours water from a watering can onto the sapling
+scene_boy_with_sapling: a boy of about 10 (shalwar kameez, cap) holds a small sapling with its roots in a ball of earth
+scene_cat_eats_bread: the cat eats the piece of bread on the ground
+scene_family_eats_bread_tea: the family (mother, grandfather, boy, small sister) sit on a mat around a cloth with bread and tea glasses
+scene_girl_brings_goat_home: the girl holds a bowl of water for the goat in front of the house; both look content
+scene_girl_calls_goat: the same girl stands at the gate with a hand at her mouth, calling; the lane is empty
+scene_girl_gives_cat_bread: the girl crouches and holds out a piece of bread to the cat
+scene_girl_happy_at_school: the girl, smiling, at the school door with her bag
+scene_girl_looks_by_stream: the girl looks behind a tree next to a narrow water channel
+scene_girl_sees_cat: the same girl stops on the path; a thin cat sits by a mud wall and looks at her
+scene_girl_walks_to_school: a girl of about 9 (headscarf, long dress over trousers, cloth school bag) walks on a village path toward a small school building
+scene_girl_with_goat: a girl of about 8 (headscarf, long dress over trousers) kneels in a walled mud courtyard and strokes a small goat
+scene_goat_eats_leaves: the goat stands in an orchard eating leaves from a low branch
+scene_goat_leaves_yard: the small goat walks out through the open courtyard gate; nobody is watching
+scene_hungry_cat: the thin cat alone, mouth open, meowing
+scene_mother_bakes_bread: a mother (headscarf, modest dress) sits by a clay tandoor oven in the ground and lifts out a flat bread
+scene_sapling_grows: the sapling is now a young tree taller than the boy, who stands next to it

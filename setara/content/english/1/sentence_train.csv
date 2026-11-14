@@ -1,0 +1,46 @@
+round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
+# Round = the unit whose language it uses. The child hears the sentence, builds it, and hears it again.
+03,My name is Sara.,,t:My|t:name|t:is|t:Sara,,,My name is Sara.,,نام من سارا است.
+03,What's your name?,,t:What's|t:your|t:name,,,What's your name?,,نام تو چیست؟
+03,My name is Omar.,,t:My|t:name|t:is|t:Omar,t:your,,My name is Omar.,,نام من عمر است.
+03,"Good morning, teacher!",,t:Good|t:morning|t:teacher,,,"Good morning, teacher!",,صبح بخیر معلم.
+04,I am a girl.,,t:I|t:am|t:a|t:girl,,,I am a girl.,,من دختر هستم.
+04,I am a boy.,,t:I|t:am|t:a|t:boy,t:is,,I am a boy.,,من پسر هستم.
+04,"Yes, I am a girl.",,t:Yes|t:I|t:am|t:a|t:girl,,,"Yes, I am a girl.",,بلی، من دختر هستم.
+04,"Yes, I am a boy.",,t:Yes|t:I|t:am|t:a|t:boy,,,"Yes, I am a boy.",,بلی، من پسر هستم.
+07,How old are you?,,t:How|t:old|t:are|t:you,,,How old are you?,,چند ساله هستی؟
+07,I am eight.,,t:I|t:am|t:eight,,,I am eight.,,من هشت ساله هستم.
+07,I am ten.,,t:I|t:am|t:ten,t:is,,I am ten.,,من ده ساله هستم.
+07,My name is Zahra.,,t:My|t:name|t:is|t:Zahra,t:am,,My name is Zahra.,,نام من زهرا است.
+08,What is this?,,t:What|t:is|t:this,,,What is this?,,این چیست؟
+08,This is a book.,,t:This|t:is|t:a|t:book,,,This is a book.,,این کتاب است.
+08,This is a pen.,,t:This|t:is|t:a|t:pen,t:am,,This is a pen.,,این قلم است.
+08,This is a bag.,,t:This|t:is|t:a|t:bag,t:am,,This is a bag.,,این بکس است.
+08,This is a chair.,,t:This|t:is|t:a|t:chair,t:I,,This is a chair.,,این چوکی است.
+10,Open the door.,,t:Open|t:the|t:door,,,Open the door.,,دروازه را باز کن.
+10,Close the window.,,t:Close|t:the|t:window,,,Close the window.,,کلکین را بسته کن.
+10,Point to the board.,,t:Point|t:to|t:the|t:board,,,Point to the board.,,تخته را نشان بده.
+10,Open your book.,,t:Open|t:your|t:book,t:is,,Open your book.,,کتابت را باز کن.
+12,What colour is it?,,t:What|t:colour|t:is|t:it,,,What colour is it?,,این چه رنگ است؟
+12,It is red.,,t:It|t:is|t:red,,,It is red.,,سرخ است.
+12,It is black.,,t:It|t:is|t:black,t:am,,It is black.,,سیاه است.
+12,This is a blue pen.,,t:This|t:is|t:a|t:blue|t:pen,,,This is a blue pen.,,این یک قلم آبی است.
+12,This is a white door.,,t:This|t:is|t:a|t:white|t:door,,,This is a white door.,,این یک دروازهٔ سفید است.
+14,This is my friend.,,t:This|t:is|t:my|t:friend,,,This is my friend.,,این دوست من است.
+14,He is my friend.,,t:He|t:is|t:my|t:friend,,,He is my friend.,,او دوست من است.
+14,She is my friend.,,t:She|t:is|t:my|t:friend,t:am,,She is my friend.,,او دوست من است.
+14,She is nine.,,t:She|t:is|t:nine,t:am,,She is nine.,,او نه ساله است.
+14,This is an apple.,,t:This|t:is|t:an|t:apple,,,This is an apple.,,این سیب است.
+16,How are you?,,t:How|t:are|t:you,,,How are you?,,چطور هستی؟
+16,"I'm fine, thank you.",,t:I'm|t:fine|t:thank|t:you,,,"I'm fine, thank you.",,خوب هستم، تشکر.
+16,I am happy.,,t:I|t:am|t:happy,t:is,,I am happy.,,من خوش هستم.
+16,She is sad.,,t:She|t:is|t:sad,t:am,,She is sad.,,او غمگین است.
+18,"Give me the pen, please.",,t:Give|t:me|t:the|t:pen|t:please,,,"Give me the pen, please.",,لطفاً قلم را به من بده.
+18,Here you are.,,t:Here|t:you|t:are,,,Here you are.,,بفرما، بگیر.
+18,"Give me the bag, please.",,t:Give|t:me|t:the|t:bag|t:please,,,"Give me the bag, please.",,لطفاً بکس را به من بده.
+18,"Open the door, please.",,t:Open|t:the|t:door|t:please,,,"Open the door, please.",,لطفاً دروازه را باز کن.
+20,I can speak English.,,t:I|t:can|t:speak|t:English,,,I can speak English.,,من انگلیسی گپ زده می‌توانم.
+20,Three red pens.,,t:Three|t:red|t:pens,,,Three red pens.,,سه قلم سرخ.
+20,Two blue books.,,t:Two|t:blue|t:books,t:book,,Two blue books.,,دو کتاب آبی.
+20,This is my classroom.,,t:This|t:is|t:my|t:classroom,,,This is my classroom.,,این صنف من است.
+20,The door is big.,,t:The|t:door|t:is|t:big,t:am,,The door is big.,,دروازه کلان است.

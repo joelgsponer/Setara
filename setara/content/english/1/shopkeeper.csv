@@ -1,0 +1,22 @@
+round,say_en,say_fa,goods,target,units,mode,help_fa
+# Level 1 version: the customer asks for a number of things, the child counts them onto the scale.
+13,"One apple, please.",,apple,1,1,count,لطفاً یک سیب.
+13,"Three apples, please.",,apple,3,1,count,لطفاً سه سیب.
+13,"Two eggs, please.",,egg,2,1,count,لطفاً دو تخم مرغ.
+13,"Five eggs, please.",,egg,5,1,count,لطفاً پنج تخم مرغ.
+13,"Four apples, please.",,apple,4,1,count,لطفاً چهار سیب.
+13b,"Six apples, please.",,apple,6,1,count,لطفاً شش سیب.
+13b,"Eight eggs, please.",,egg,8,1,count,لطفاً هشت تخم مرغ.
+13b,"Ten eggs, please.",,egg,10,1,count,لطفاً ده تخم مرغ.
+13b,"Seven apples, please.",,apple,7,1,count,لطفاً هفت سیب.
+13b,"Nine eggs, please.",,egg,9,1,count,لطفاً نه تخم مرغ.
+17,"Two books, please.",,book,2,1,count,لطفاً دو کتاب.
+17,"Five pens, please.",,pen,5,1,count,لطفاً پنج قلم.
+17,"One bag, please.",,bag,1,1,count,لطفاً یک بکس.
+17,"Seven pencils, please.",,pencil,7,1,count,لطفاً هفت پنسل.
+17,"Four books, please.",,book,4,1,count,لطفاً چهار کتاب.
+18,"Give me three pens, please.",,pen,3,1,count,لطفاً سه قلم به من بده.
+18,"Give me six eggs, please.",,egg,6,1,count,لطفاً شش تخم مرغ به من بده.
+18,"Give me ten pencils, please.",,pencil,10,1,count,لطفاً ده پنسل به من بده.
+18,"Give me eight apples, please.",,apple,8,1,count,لطفاً هشت سیب به من بده.
+18,"Give me nine books, please.",,book,9,1,count,لطفاً نه کتاب به من بده.
