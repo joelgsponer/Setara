@@ -141,6 +141,7 @@ do
   t.wait(3)
 end
 t.app.pop()
+t.mark("story")
 play = t.start_round("garden-2", "safe_water_story", 1)
 listen(8)
 do
@@ -209,7 +210,7 @@ t.press("right") listen(3) t.press("down") listen(3) t.press("left") listen(3) t
 t.mark("teacher")
 require("teacher.common").set_lesson(3)
 t.hold("l") t.hold("r") t.wait(2.3) t.release("l") t.release("r") t.wait(1.5)
-t.press("left") t.wait(0.3) t.press("right") t.wait(0.8)
+t.press("up") t.wait(0.5) t.press("right") t.wait(0.6) t.press("left") t.wait(0.6) t.press("down") t.wait(0.6)
 
 t.mark("lesson")
 t.press("a") t.wait(1.5)

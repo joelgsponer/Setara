@@ -189,7 +189,11 @@ function Games:draw()
         ui.card(x, 262, w - 8, 170, { selected = k == self.team })
         ui.set(ui.c.soft)
         local s = T.S("game_team")
-        if s.fa then text.fa(s.fa[1] .. " " .. k, x, 264, w - 16, 24, "right") end
+        if text.locale == "en" then
+          text.print((s.en or "") .. " " .. k, x + 10, 268, w - 16, "left", 16)
+        elseif s.fa then
+          text.fa(s.fa[1] .. " " .. k, x, 264, w - 16, 24, "right")
+        end
         ui.set(ui.c.teacher)
         text.centered("bold", tostring(self.score[k]), x, 300, w - 8, 120, 72)
       end

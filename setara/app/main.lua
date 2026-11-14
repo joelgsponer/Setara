@@ -163,26 +163,36 @@ function love.draw()
   local first = #app.stack
   while first > 1 and app.stack[first].overlay do first = first - 1 end
   first = math.max(1, first)
+  -- English mode draws the screen a little smaller and keeps a band under it
+  -- for the captions, so that a caption never covers what is being shown.
+  local english = require("core.text").locale == "en"
+  if english then
+    love.graphics.clear(ui.c.ink[1], ui.c.ink[2], ui.c.ink[3])
+    love.graphics.push()
+    love.graphics.translate(ui.W * 0.0625, 0)
+    love.graphics.scale(0.875, 0.875)
+    ui.background()
+  end
   for i = first, #app.stack do
     local scene = app.stack[i]
     if scene.draw then scene:draw() end
   end
-  -- English mode: a caption for whatever is being spoken.
-  local text = require("core.text")
-  if text.locale == "en" then
+  if english then love.graphics.pop() end
+  -- English mode: a caption for whatever is being spoken, in the band below.
+  if english then
     local clip = audio.playing()
-    local caption = clip and require("core.packs").captions and require("core.packs").captions[clip]
+    local captions = require("core.packs").captions
+    local caption = clip and captions and captions[clip]
     if caption then
-      local f = text.font("latin", 20)
-      local _, lines = f:getWrap(caption, ui.W - 32)
+      local text = require("core.text")
+      local f = text.font("latin", 16)
+      local _, lines = f:getWrap(caption, ui.W - 24)
       local n = math.min(3, #lines)
-      local h = n * f:getHeight() + 10
-      ui.set(ui.c.ink, 0.86)
-      love.graphics.rectangle("fill", 0, ui.H - h, ui.W, h)
+      local lh = f:getHeight() - 4
       ui.set(ui.c.white)
       love.graphics.setFont(f)
       for i = 1, n do
-        love.graphics.printf(lines[i], 16, ui.H - h + 5 + (i - 1) * f:getHeight(), ui.W - 32, "center")
+        love.graphics.printf(lines[i], 12, 420 + (60 - n * lh) / 2 + (i - 1) * lh - 2, ui.W - 24, "center")
       end
     end
   end

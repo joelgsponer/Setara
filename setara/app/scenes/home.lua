@@ -112,7 +112,11 @@ function Home:draw()
     local px, py = p.x + 30, p.y + 122
     ui.card(px, py, 160, 30, { fill = ui.c.paper, border = ui.c[p.subject], width = 3, radius = 10 })
     ui.set(ui.c.ink)
-    if s.fa then text.fa(s.fa, px + 44, py - 6, 108, 24, "right", true) end
+    if text.locale == "en" then
+      text.print(s.en or "", px + 66, py + 5, 90, "left", 16, true)
+    elseif s.fa then
+      text.fa(s.fa, px + 60, py - 6, 92, 24, "right", true)
+    end
     ui.star(px + 16, py + 15, 9, true)
     ui.set(ui.c.ink)
     text.print(tostring(self.stars[p.subject] or 0), px + 28, py + 3, 40, "left", 20, true)
