@@ -5,14 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Setara</title>
 <style>
-  :root { --ink: #3b2f2f; --paper: #fffbf0; --bg: #f6eedc; --line: #d8cbb0; --gold: #f2b705; --teal: #2f6f73; }
+  @font-face { font-family: 'Fraunces'; src: url(assets/fonts/fraunces-latin-wght-normal.woff2) format('woff2'); font-weight: 100 900; font-display: swap; }
+  @font-face { font-family: 'Albert Sans'; src: url(assets/fonts/albert-sans-latin-wght-normal.woff2) format('woff2'); font-weight: 100 900; font-display: swap; }
+  /* Colours and type follow humanitaere-hilfe-afghanistan.org: warm paper, dark ink, saffron and deep green. */
+  :root { --ink: #2b2320; --ink-soft: #5c514b; --paper: #faf6ef; --bg: #f3ecdf; --line: #dccfb8; --gold: #b04f0e; --gold-dark: #93400a;
+    --green: #1f5c4d; --green-dark: #174639; --teal: #1f5c4d; }
   * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.45 system-ui, sans-serif; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 'Albert Sans', system-ui, sans-serif; }
   main { max-width: 1000px; margin: 0 auto; padding: 12px 16px 40px; }
-  h1 { font-size: 22px; margin: 6px 0 2px; }
-  .top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 12px; }
-  .src { font-size: 14px; color: var(--teal); text-decoration: underline; padding: 6px 0; }
+  .site { background: var(--paper); border-bottom: 1px solid rgba(43,35,32,.12); }
+  .site > div { max-width: 1000px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; min-width: 0; }
+  .brand img { width: 48px; height: 48px; border-radius: 50%; flex: none; }
+  .brand span { display: flex; flex-direction: column; line-height: 1.2; }
+  .brand b { font: 600 16px 'Fraunces', Georgia, serif; }
+  .brand small { font-size: 12px; color: var(--ink-soft); }
+  .site nav { display: flex; align-items: center; gap: 16px; flex: none; }
+  .site nav a { font-size: 14px; font-weight: 500; color: var(--ink-soft); text-decoration: none; }
+  .site nav a:hover, .site nav a:focus-visible { color: var(--ink); }
+  a.cta { background: var(--gold); color: var(--paper) !important; font-weight: 700 !important; padding: 8px 16px; border-radius: 999px; box-shadow: 0 1px 2px rgba(0,0,0,.15); }
+  a.cta:hover, a.cta:focus-visible { background: var(--gold-dark); }
+  @media (max-width: 480px) { .brand small { display: none; } .site nav { gap: 10px; } a.cta { padding: 7px 12px; } }
+  @media (max-width: 400px) { .site nav a.src { display: none; } }
+  h1 { font: 600 28px/1.15 'Fraunces', Georgia, serif; margin: 16px 0 2px; }
+  .top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 14px; }
+  .src { font-size: 14px; color: var(--green); text-decoration: underline; text-underline-offset: 3px; padding: 6px 0; }
   .src:hover, .src:focus-visible { color: var(--ink); }
+  .by { margin: 0 0 4px; color: var(--ink-soft); font-size: 14px; }
+  .by a { color: var(--green); text-underline-offset: 3px; }
+  footer { max-width: 1000px; margin: 0 auto; padding: 18px 16px 32px; border-top: 1px solid rgba(43,35,32,.12); color: var(--ink-soft); font-size: 14px; }
+  footer a { color: var(--green); text-underline-offset: 3px; }
   p { margin: 6px 0; }
   .stage { position: relative; width: 100%; max-width: 960px; aspect-ratio: 4 / 3; margin: 10px auto; background: var(--ink);
     border-radius: 12px; overflow: hidden; }
@@ -20,7 +42,7 @@
   #loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
     gap: 14px; background: var(--paper); text-align: center; padding: 16px; }
   #bar { width: min(70%, 420px); height: 14px; border-radius: 7px; background: var(--line); overflow: hidden; }
-  #bar i { display: block; height: 100%; width: 0; background: var(--gold); }
+  #bar i { display: block; height: 100%; width: 0; background: var(--green); }
   .pad { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 960px; margin: 8px auto;
     user-select: none; -webkit-user-select: none; touch-action: manipulation; }
   .cross, .face { display: grid; grid-template-columns: repeat(3, 52px); grid-template-rows: repeat(3, 52px); gap: 4px; }
@@ -28,8 +50,14 @@
   .mid div { display: flex; gap: 8px; }
   button.k { border: 3px solid var(--ink); background: var(--paper); border-radius: 12px; font: 700 18px system-ui, sans-serif;
     color: var(--ink); min-width: 52px; min-height: 44px; cursor: pointer; }
-  button.k:active, button.k.down { background: var(--gold); }
+  button.k:active, button.k.down { background: #f2b705; }
   .face button.k { border-radius: 50%; }
+  @media (max-width: 520px) {   /* phones: D-pad and buttons side by side, the middle keys below */
+    .pad { flex-wrap: wrap; justify-content: space-between; }
+    .cross, .face { grid-template-columns: repeat(3, 44px); grid-template-rows: repeat(3, 44px); }
+    button.k { min-width: 44px; }
+    .mid { order: 3; width: 100%; flex-direction: row; justify-content: center; flex-wrap: wrap; }
+  }
   .a { background: #cfe8cf !important; } .b { background: #f3cdc4 !important; }
   .x { background: #cfdff0 !important; } .y { background: #f6e3b0 !important; }
   table { border-collapse: collapse; margin: 8px 0; }
@@ -39,11 +67,21 @@
 </style>
 </head>
 <body>
+<header class="site"><div>
+  <a class="brand" href="https://humanitaere-hilfe-afghanistan.org" rel="noopener">
+    <img src="assets/logo.webp" width="48" height="48" alt="Humanitäre Hilfe Afghanistan logo">
+    <span><b>Humanitäre Hilfe Afghanistan</b><small>humanitaere-hilfe-afghanistan.org</small></span>
+  </a>
+  <nav aria-label="Charity">
+    <a class="src" href="https://github.com/joelgsponer/Setara" target="_blank" rel="noopener">Source on GitHub</a>
+    <a class="cta" href="https://humanitaere-hilfe-afghanistan.org">Visit the charity</a>
+  </nav>
+</div></header>
 <main>
   <div class="top">
-    <h1>Setara <small id="version" style="font-weight:400;color:#8a7b6a"></small></h1>
-    <a class="src" href="https://github.com/joelgsponer/Setara" target="_blank" rel="noopener">Source on GitHub</a>
+    <h1>Setara <small id="version" style="font-weight:400;font-size:14px;color:var(--ink-soft);font-family:'Albert Sans',system-ui,sans-serif"></small></h1>
   </div>
+  <p class="by">A project of <a href="https://humanitaere-hilfe-afghanistan.org" rel="noopener">Humanitäre Hilfe Afghanistan</a></p>
   <p>An offline learning app for village classrooms, shown here in a browser so that it can be tried.
      The product itself runs on a small game handheld. This page starts in <b>English mode</b>: the children hear Dari,
      and what is spoken appears as an English caption under the screen.</p>
@@ -87,6 +125,8 @@
      has reviewed yet, and the voices are placeholders. Nothing you do here is sent anywhere: the page works offline
      once loaded and stores only stars and settings in your browser.</p>
 </main>
+<footer>Setara is a project of <a href="https://humanitaere-hilfe-afghanistan.org" rel="noopener">Humanitäre Hilfe Afghanistan</a>.
+  <a href="https://github.com/joelgsponer/Setara" target="_blank" rel="noopener">Source on GitHub</a></footer>
 
 <script>
   var statusEl = document.getElementById('status'), barEl = document.querySelector('#bar i');

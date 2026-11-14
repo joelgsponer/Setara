@@ -68,6 +68,9 @@ def main() -> None:
     page = (Path(__file__).parent / "index.html").read_text("utf-8").replace("__MEMORY__", str(memory))
     (args.out / "index.html").write_text(page, "utf-8")
     shutil.rmtree(args.out / "theme", ignore_errors=True)
+    assets = Path(__file__).parent / "assets"      # logo and fonts of the host page
+    if assets.is_dir():
+        shutil.copytree(assets, args.out / "assets")
     version = (ROOT / "app" / "version.lua").read_text().split('"')[1]
     (args.out / "version.json").write_text(json.dumps({"version": version, "packs": [p.stem for p in packs]}))
     total = sum(f.stat().st_size for f in args.out.rglob("*") if f.is_file()) / 1e6

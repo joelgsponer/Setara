@@ -29,7 +29,7 @@ COPY app app
 COPY content content
 RUN cd builder && python3 -m setara_builder.cli build --quiet --tts "$TTS"
 COPY tools/web tools/web-src
-RUN cp tools/web-src/make_web.py tools/web-src/index.html tools/web/ && \
+RUN cp -r tools/web-src/make_web.py tools/web-src/index.html tools/web-src/assets tools/web/ && \
     if [ "$START" = "dari" ]; then python3 tools/web/make_web.py --dari; else python3 tools/web/make_web.py; fi
 
 FROM nginx:1.27-alpine
