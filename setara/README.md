@@ -27,8 +27,11 @@ gates of the spec's own roadmap, and they are still ahead.
 | Pack builder: validation, speech, Dari shaping, pictures, checksums | Built, unit tested |
 | Card updates, damaged-pack handling, crash restart | Built, tested |
 | Content | See the table below |
-| Pictures | 450 drawn as SVG, none reviewed locally |
+| Pictures | 508 drawn as SVG, none reviewed locally |
 | Speech | Stand-in local voices. ElevenLabs path written, never run |
+| English mode for testers: English text and captions | Built. Translated by Claude, not checked by a native speaker |
+| Browser version, with a Dockerfile for hosting | Built, tested in Chromium and as a Docker image |
+| Introduction video (`tools/film/make.py`) | Built from the app playing itself |
 | Running on the RG35XX H and R36S | Not done. See [docs/device.md](docs/device.md) |
 | Direct updates over Wi-Fi, buzzers | Not in version 1, as the spec says |
 
@@ -44,20 +47,27 @@ gates of the spec's own roadmap, and they are still ahead.
 | `fa-2` Dari 2: The whole alphabet | 6 | 42 | 8 MB |
 | `garden-1` Garden 1: Me | 6 | 22 | 7 MB |
 | `garden-2` Garden 2: My Home | 7 | 20 | 9 MB |
+| `garden-3` Health 3: First aid | 7 | 19 | 15 MB |
 | `math-1` Math 1: Counting to 20 | 6 | 44 | 11 MB |
 | `math-2` Math 2: Numbers to 100 | 6 | 42 | 12 MB |
 | `math-3` Math 3: Numbers to 1,000 | 6 | 40 | 16 MB |
 | `teacher-en-1` English 1 lessons | 20 lessons, Phrase Board, tips | | 10 MB |
-| **Total** | | **380** | |
+| **Total** | | **399** | |
 <!-- /content -->
 
-Not written yet: English 3–6, Dari 3–6, math 4–6, health 3–4, teacher lessons
+Health 3 is the first-aid pack: burns, cuts, bites, nosebleed, choking, what
+to do when someone collapses, and when to take a sick relative to the clinic.
+Its facts and what was simplified are in `content/garden/3/SOURCES.md`.
+
+Not written yet: English 3–6, Dari 3–6, math 4–6, health 4, teacher lessons
 beyond English 1, and the two optional packs.
 
 All of it is a first draft written by Claude. Before it reaches children it
 needs what the spec asks for in section 9: review of text, audio and pictures
 by a Dari-speaking educator, a check of the health content by someone
-qualified, and a pilot with real children.
+qualified, and a pilot with real children. This holds most of all for the first-aid
+pack: it follows standard first-aid guidance as Claude understands it and has
+not been seen by a health professional.
 
 ### Where this differs from the spec
 
