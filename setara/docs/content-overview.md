@@ -30,21 +30,31 @@ changed on that day, so its numbers may have moved. The table in the project
 
 | Id | Title | Subject | Level | Optional | Games | Rounds |
 | --- | --- | --- | --- | --- | --- | --- |
-| `en-1` | English 1: Hello | English (`en`) | 1 | no | 7 | 65 |
-| `en-2` | English 2: My world | English (`en`) | 2 | no | 7 | 67 |
-| `fa-1` | Dari 1: Sounds and first letters | Dari reading (`fa`) | 1 | no | 6 | 38 |
-| `fa-2` | Dari 2: The whole alphabet | Dari reading (`fa`) | 2 | no | 6 | 42 |
-| `math-1` | Math 1: Counting to 20 | Math (`math`) | 1 | no | 6 | 44 |
-| `math-2` | Math 2: Numbers to 100 | Math (`math`) | 2 | no | 6 | 42 |
-| `math-3` | Math 3: Numbers to 1,000 | Math (`math`) | 3 | no | 6 | 40 |
-| `garden-1` | Garden 1: Me | Health and environment (`garden`) | 1 | no | 6 | 22 |
-| `garden-2` | Garden 2: My Home | Health and environment (`garden`) | 2 | no | 7 | 20 |
-| `garden-3` | Health 3: First aid | Health and environment (`garden`) | 3 | no | 8 | 25 |
-| `garden-4-rights` | My rights, your rights | Health and environment (`garden`) | 4 | **yes** | 6 | 13 |
-| `garden-4-world` | The world, Switzerland and Basel | Health and environment (`garden`) | 4 | **yes** | 6 | 16 |
-| **Total** | 12 learner packs | | | 2 optional | **77** | **434** |
+| `en-1` | English 1: Hello | `en` | 1 | no | 7 | 65 |
+| `en-2` | English 2: My world | `en` | 2 | no | 7 | 67 |
+| `en-3-stories` | English story book | `en` | 3 | **yes** | 4 | 16 |
+| `en-3` | English 3: My day | `en` | 3 | no | 11 | 86 |
+| `en-4` | English 4: At the bazaar | `en` | 4 | no | 11 | 76 |
+| `fa-1` | Dari 1: Sounds and first letters | `fa` | 1 | no | 6 | 38 |
+| `fa-2` | Dari 2: The whole alphabet | `fa` | 2 | no | 6 | 42 |
+| `fa-3-stories` | Dari story book | `fa` | 3 | **yes** | 4 | 16 |
+| `fa-3` | Dari 3: Syllables and words | `fa` | 3 | no | 7 | 60 |
+| `fa-4` | Dari 4: Sentences | `fa` | 4 | no | 7 | 50 |
+| `garden-1` | Garden 1: Me | `garden` | 1 | no | 6 | 22 |
+| `garden-2` | Garden 2: My Home | `garden` | 2 | no | 7 | 20 |
+| `garden-3` | Health 3: First aid | `garden` | 3 | no | 8 | 25 |
+| `garden-4-rights` | My rights, your rights | `garden` | 4 | **yes** | 6 | 13 |
+| `garden-4-world` | The world, Switzerland and Basel | `garden` | 4 | **yes** | 9 | 32 |
+| `garden-4` | Health and environment 4: My future | `garden` | 4 | no | 15 | 40 |
+| `math-1` | Math 1: Counting to 20 | `math` | 1 | no | 6 | 44 |
+| `math-2-puzzles` | Logic Puzzles | `math` | 2 | **yes** | 9 | 43 |
+| `math-2` | Math 2: Numbers to 100 | `math` | 2 | no | 6 | 42 |
+| `math-3` | Math 3: Numbers to 1,000 | `math` | 3 | no | 6 | 40 |
+| `math-4` | Math 4: Times Tables and Sharing | `math` | 4 | no | 9 | 45 |
+| `math-5` | Math 5: Large Numbers and Fractions | `math` | 5 | no | 10 | 47 |
+| **Total** | 22 learner packs | | | 5 optional | **167** | **929** |
 
-Without the two optional packs: 65 games, 405 rounds.
+The per-pack descriptions further down cover the first 14 packs; for the newer ones read each pack's `SOURCES.md`.
 
 ### Other packs
 

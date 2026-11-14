@@ -51,16 +51,26 @@ More of it:
 
 ## What is in it
 
-434 rounds in 14 packs, about 600 pictures, and 20 classroom lessons:
+929 rounds in 25 packs, about 1,050 pictures, and 40 classroom lessons:
 
-- English 1 and 2, with the teacher's lessons for level 1
-- Dari reading 1 and 2: sounds, letters, letter shapes, first words
-- Math 1 to 3: counting in both digit systems, the number line, money
-- Health 1 to 3: hygiene, safe water, food, and a first-aid pack (burns,
-  bleeding, bites, choking, poisoning, what to do when someone collapses,
-  when to take a sick relative to the clinic)
-- Two optional packs the local team can leave out: children's rights, and a
-  geography session from the globe to Switzerland and Basel
+- English 1 to 4, with the teacher's lessons for levels 1 and 2
+- Dari reading 1 to 4: sounds, letters, letter shapes, words, sentences
+- Math 1 to 5: counting in both digit systems, the number line, money,
+  times tables, fractions, decimals, charts
+- Health and environment 1 to 4: hygiene, safe water, food, a first-aid
+  pack (burns, bleeding, bites, choking, poisoning, what to do when someone
+  collapses, when to take a sick relative to the clinic), growth, feelings,
+  caring for small children, drought and flood, energy
+- Story books for children who can already read, in Dari and in English:
+  16 stories each, mostly text, with questions
+- Logic puzzles: patterns, odd one out, shadows and mirrors, order from
+  clues, grids, riddles, thinking stories
+- Two packs the local team may prefer to leave out: children's rights, and
+  geography from the globe to Switzerland and Basel
+
+Everything from English 3, Dari 3, Math 4 and Health 4 upwards, the story
+books and the puzzles were written in one day and have had less checking
+than the earlier packs.
 
 ## Try it
 

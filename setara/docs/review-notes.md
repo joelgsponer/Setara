@@ -170,3 +170,39 @@ A review pass corrected 68 pictures and redrew seven. Still weak:
 - `boy` and `girl` are head-and-shoulders, not standing figures.
 - Story characters were drawn by several hands; the same person does not
   always wear the same colours in every scene of a story.
+
+## The packs added on 14 November 2026
+
+English 3 and 4, Dari 3 and 4, math 4 and 5, health 4, the teacher lessons
+for English 2, the two story books, the logic puzzles and the second version
+of the geography pack were written in one day, each by one AI writer, and
+have had less checking than the packs above: the builder accepts them and
+every round opens, nothing more. Each pack folder has a `SOURCES.md` with
+its decisions and its open questions; start there. The points that most need
+a person:
+
+- **Health 4** (`content/garden/4/SOURCES.md`): its fact sheet was written
+  from general knowledge of WHO/UNICEF-level guidance, not from a document.
+  Check the fact sheet first: breastfeeding wording, tea as "not for a small
+  child", nuts and choking with no age, flood rules, what the health worker
+  can really do for a child who is sad or afraid for many days.
+- **Dari 3 and 4**: these are the first packs where some rounds can only be
+  answered by reading, and Dari 4 does not speak the sentence that is to be
+  read. Syllable breaks, the 153 words, colloquial verb forms.
+- **English 3 and 4** teach about 125 and 100 new words, fewer than the
+  curriculum's 200 and 250. Bargaining as classroom language; the week from
+  Saturday to Friday; who does which chore in the pictures.
+- **Teacher lessons English 2**: the "finger family" (no child is asked about
+  their own family), animal sounds and mimes, lessons about 37 lines long.
+- **Story books**: Mulla Nasruddin as a comic hero; a girl flying a kite;
+  the bees' "dance"; rounds of 11 to 14 pages. In the English book the
+  questions are heard in Dari first, then English. Three Dari answer cards
+  are drawn at 24 px, under the 30 px rule.
+- **Logic puzzles**: odd-one-out sets rest on the writer's judgement (table,
+  chair, bed against tree); riddles are common ones retold, not from a Dari
+  collection; two thinking stories have 15 and 20 pages.
+- **Math 4 and 5**: sums, fractions and decimals are in Western digits only;
+  the words for division, thirds, fractions, decimals; solar month names;
+  charts are about 15 mm on the device.
+- **Geography, version 2**: names Afghanistan's six neighbours once as a list
+  (no borders drawn); "about three hours" for the time difference to Basel.

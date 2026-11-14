@@ -15,7 +15,9 @@ import argparse
 import json
 import os
 import shutil
+import hashlib
 import subprocess
+from concurrent.futures import ThreadPoolExecutor
 import zipfile
 from pathlib import Path
 
@@ -30,10 +32,29 @@ def find_lovejs() -> Path:
     raise SystemExit("love.js not found: run `npm install love.js` in tools/web, or set LOVEJS")
 
 
+def lighter(data: bytes, cache: Path) -> bytes:
+    """A speech clip at a lower rate for the browser (16 kHz, low quality): about
+    a third of the size. The card keeps the full clips. Cached by content."""
+    cache.mkdir(parents=True, exist_ok=True)
+    out = cache / (hashlib.sha1(data).hexdigest() + ".ogg")
+    if not out.exists():
+        tmp = out.with_suffix(f".{os.getpid()}.{hashlib.sha1(os.urandom(8)).hexdigest()[:6]}.ogg")
+        done = subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", "pipe:0", "-ar", "16000", "-ac", "1",
+                               "-c:a", "libvorbis", "-q:a", "0", str(tmp)], input=data)
+        if done.returncode != 0 or not tmp.exists():
+            return data
+        tmp.replace(out)
+    small = out.read_bytes()
+    return small if 0 < len(small) < len(data) else data
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", type=Path, default=ROOT / "dist" / "web")
     ap.add_argument("--dari", action="store_true", help="start in Dari instead of English mode")
+    ap.add_argument("--headroom", type=int, default=160, help="memory beyond the game file, in MB")
+    ap.add_argument("--slow", action="store_true", help="include the slow speech variants (much larger)")
+    ap.add_argument("--light-audio", action="store_true", help="re-encode speech at 16 kHz: a smaller download, duller sound")
     ap.add_argument("--only", action="append", help="include only these packs (smaller download)")
     args = ap.parse_args()
 
@@ -55,16 +76,34 @@ def main() -> None:
             if args.only and pack.stem not in args.only and pack.stem != "core":
                 continue
             with zipfile.ZipFile(pack) as src:
-                for name in src.namelist():
-                    kind = zipfile.ZIP_DEFLATED if name.endswith(".json") else zipfile.ZIP_STORED
-                    z.writestr(zipfile.ZipInfo(f"webpacks/{pack.stem}/{name}"), src.read(name), kind)
+                names = [n for n in src.namelist() if args.slow or not n.endswith(".slow.ogg")]
+                # X then repeats at normal speed without the slow variants; halves the download
+                blobs = {n: src.read(n) for n in names}
+            if args.light_audio:
+                oggs = [n for n in names if n.endswith(".ogg")]
+                with ThreadPoolExecutor(os.cpu_count() or 4) as pool:
+                    for n, small in zip(oggs, pool.map(lambda n: lighter(blobs[n], work / "audio"), oggs)):
+                        blobs[n] = small
+            for name in names:
+                kind = zipfile.ZIP_DEFLATED if name.endswith(".json") else zipfile.ZIP_STORED
+                z.writestr(zipfile.ZipInfo(f"webpacks/{pack.stem}/{name}"), blobs[name], kind)
     size = love.stat().st_size
     if args.out.exists():
         shutil.rmtree(args.out)
     # memory: the whole game file is held in memory, plus room for the app itself
-    memory = (size + 160 * 1024 * 1024) // (1 << 20) * (1 << 20)
+    memory = (size + args.headroom * 1024 * 1024) // (1 << 20) * (1 << 20)
     subprocess.run(["node", str(find_lovejs() / "index.js"), "-c", "-t", "Setara", "-m", str(memory), str(love), str(args.out)],
                    check=True)
+    # The stock loader also stores the whole data file in the browser's
+    # database after the download. With a large file that write never returns
+    # and the app never starts, so the data goes straight to the app; the
+    # browser's ordinary cache still keeps it for the next visit.
+    loader = (args.out / "game.js").read_text("utf-8")
+    start = loader.index("cacheRemotePackage(db, PACKAGE_PATH + PACKAGE_NAME, packageData")
+    end = loader.index("}", loader.index("processPackageData(packageData);", start)) + 1
+    end = loader.index(");", end) + 2
+    loader = loader[:start] + "processPackageData(packageData);" + loader[end:]
+    (args.out / "game.js").write_text(loader, "utf-8")
     page = (Path(__file__).parent / "index.html").read_text("utf-8").replace("__MEMORY__", str(memory))
     (args.out / "index.html").write_text(page, "utf-8")
     shutil.rmtree(args.out / "theme", ignore_errors=True)
@@ -72,7 +111,7 @@ def main() -> None:
     if assets.is_dir():
         shutil.copytree(assets, args.out / "assets")
     version = (ROOT / "app" / "version.lua").read_text().split('"')[1]
-    (args.out / "version.json").write_text(json.dumps({"version": version, "packs": [p.stem for p in packs]}))
+    (args.out / "version.json").write_text(json.dumps({"version": version, "packs": [p.stem for p in packs if not args.only or p.stem in args.only or p.stem == "core"]}))
     total = sum(f.stat().st_size for f in args.out.rglob("*") if f.is_file()) / 1e6
     print(f"web build: {args.out}  ({total:.0f} MB)")
     print("try it:  cd", args.out, "&& python3 -m http.server 8000")

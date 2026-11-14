@@ -70,7 +70,7 @@ This writes one zip per pack into `packs/`.
 | Variant | Command (inside `builder/`) | Time |
 | --- | --- | --- |
 | With the piper voices | `python3 -m setara_builder.cli build` | First run: about 20 minutes of speech generation, according to the project README. Later runs reuse `builder/.cache/` and take seconds to a minute |
-| Without speech | `python3 -m setara_builder.cli build --tts silent` | About 6 minutes for all 14 packs on the machine this guide was written on (ffmpeg still encodes every clip). Every clip is half a second of silence |
+| Without speech | `python3 -m setara_builder.cli build --tts silent` | About 6 minutes for the 14 packs that existed then (there are 25 now, so expect about twice that) on the machine this guide was written on (ffmpeg still encodes every clip). Every clip is half a second of silence |
 | Robotic speech | `python3 -m setara_builder.cli build --tts espeak` | Faster than piper |
 | One pack only | `python3 -m setara_builder.cli build --only en-1` | `--only` can be given several times |
 | The smallest thing that runs | `python3 -m setara_builder.cli build --tts silent --only core --only en-1` | Under a minute on the machine this guide was written on |

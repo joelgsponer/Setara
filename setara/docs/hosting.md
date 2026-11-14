@@ -32,7 +32,7 @@ Build arguments (Dokploy: Advanced, Build args):
 
 The server needs outbound access while building (Python and Node packages,
 and the voices from huggingface.co when `TTS=piper`). Running it needs
-nothing but the static files: about 130 MB.
+nothing but the static files: about 230 MB.
 
 By hand:
 
@@ -56,8 +56,13 @@ it. `--only en-1 --only garden-1` makes a smaller page with just those packs.
 
 ## What to know
 
-- **The first load is large**: about 110 MB with all packs, because every
-  lesson, picture and clip of speech is in it. After that the browser keeps it.
+- **The first load is large**: about 225 MB with all 25 packs, because every
+  lesson, picture and clip of speech is in it. The browser's ordinary cache
+  keeps it for the next visit. To stay at that size the browser build leaves
+  out the slow speech variants (X repeats at normal speed). For a smaller
+  page: `make_web.py --light-audio` (speech at 16 kHz, about 160 MB, duller
+  sound) or `--only <pack>` for a selection; `--slow` puts the slow variants
+  back (about 360 MB).
 - **Sound starts after the first click or key press.** Browsers do not let a
   page play sound before that.
 - **Keys:** arrows, Z = A, X = B, A = X, S = Y, Q and W = L and R, Enter =

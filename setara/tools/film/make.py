@@ -102,9 +102,9 @@ FILM = [
      ["Phrase Board, class games,", "story time, a timer for", "working in groups."]),
     ("card", "list", PURPLE, "Content is data",
      ["Lessons and levels are spreadsheets", "One command builds speech, pictures and Dari text",
-      "430 rounds, 600 pictures, 20 lessons so far", "Updates travel on a memory card"],
+      "900 rounds, 1000 pictures, 40 lessons so far", "Updates travel on a memory card"],
      "Games are data. Lessons and levels are written as spreadsheets, and one command turns them into packs, "
-     "with speech, pictures, and Dari text. So far there are more than four hundred and thirty rounds, six hundred pictures, and twenty classroom lessons. New content travels on a memory card."),
+     "with speech, pictures, and Dari text. So far there are more than nine hundred rounds, a thousand pictures, and forty classroom lessons. New content travels on a memory card."),
     ("card", "list", ORANGE, "Where we are",
      ["The software runs on a computer today", "Not yet tried on the handheld", "Content is a first draft",
       "Voices are placeholders",
