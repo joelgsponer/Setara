@@ -243,10 +243,10 @@ Swallowed poison (poison_story 01, first_steps 06, do_dont 06, danger_signs 04)
   picture (`fa_nothing_by_mouth`: the mother holds the child and keeps a cup
   and spoon away). Milk, oil and egg have pictures as wrong choices; salt
   water, raw egg and "home remedy" are spoken only.
-- Rinsing the mouth: the story adds "Laila does not swallow the water". The
-  fact sheet says "rinse the mouth with clean water and spit it out". The
-  existing tooth-brushing picture `tb_spit` (a child spitting into a basin) is
-  reused for it.
+- Rinsing the mouth: changed in the safety review (see below). The small child
+  in the story does not rinse; her mother wipes her mouth and lips with a clean
+  wet cloth. Rinsing and spitting is spoken only for someone able to spit. The
+  picture `tb_spit` is no longer used by the poisoning story.
 - "Say when it happened" is shown as the mother saying "an hour ago".
 - "Take the bottle, packet or plant along": the pictures show only the bottle;
   packet and plant are spoken in the help texts.
@@ -255,9 +255,10 @@ Swallowed poison (poison_story 01, first_steps 06, do_dont 06, danger_signs 04)
   page in the story, with the existing `fa_recovery` picture (which shows a
   man). It is not played out; Laila stays awake. It is not in the ordering
   game.
-- The older child himself takes the bottle out of the small child's hand
-  (fact sheet step 1), and only then calls the mother. "Stay safe yourself" is
-  spoken in danger_signs 04.
+- The older child calls his mother and, at the same moment, takes the bottle
+  out of the small child's hand (changed in the safety review: calling comes
+  first in every text). "Stay safe yourself" and "do not touch field poison
+  with bare hands" are spoken in danger_signs 04.
 - Story details that are not medical and not in the fact sheet: the child is
   three and cries; the father fetches a car; the mother praises the boy; "fuel
   looks like water and a small child does not know the difference" (from the
@@ -275,9 +276,9 @@ Poison on the skin or in the eye (first_steps 06, do_dont 06, danger_signs 04)
 - Skin: the existing hand-washing picture `wash_hands` stands for "wash with
   plenty of clean water and soap for 15 minutes". Taking off wet clothes
   without touching the wet part is spoken only (danger_signs 04).
-- The fact sheet says "then go to the clinic" in the eye line; for skin the
-  pack relies on the general rule "clinic after any poisoning", which is
-  spoken in the swallowed-poison texts but not on the skin card.
+- The fact sheet says "then go to the clinic" in the eye line; for skin, the
+  help text of danger_signs 04 now says when to go (safety review, below);
+  the skin card in do_dont 06 says only "wash".
 
 Smoke or gas in a closed room (poison_story 02, first_steps 06, danger_signs 04)
 - The fire is a charcoal brazier ("منقل زغال"). Wood fires, stoves and heaters
@@ -296,8 +297,8 @@ Smoke or gas in a closed room (poison_story 02, first_steps 06, danger_signs 04)
   woken or has trouble breathing". **Open question for a health professional:**
   the fact sheet's last line says "clinic NOW after any poisoning, even if the
   person seems well", while its smoke paragraph sends only the confused,
-  unwakeable or breathless to the clinic. The pack follows the smoke paragraph
-  in its rules and lets the whole family be seen in the story.
+  unwakeable or breathless to the clinic. Settled in the safety review (below): the
+  rules now also say that everyone who became unwell is seen.
 - "If they do not answer, treat as collapsed" is spoken in danger_signs 04 and
   points to the existing game "When Someone Has Collapsed".
 - "Fresh air helps" (the girl's headache gets less, the boy is awake again) is
@@ -324,6 +325,86 @@ Not covered by any game (in the fact sheet, left out to keep the rounds short)
   vegetables.
 - "Never put food or water in an empty poison container" is spoken once
   (danger_signs 04), without a picture.
+
+### Safety review of the poisoning part (first-aid review, not a health professional's sign-off)
+
+The texts were reviewed against lay first-aid guidance (IFRC first aid
+guidelines; WHO on poisoning, kerosene ingestion, pesticides, carbon monoxide).
+The fact sheet below is kept as it was given to the author; where the pack now
+differs from it, this list says so. The Dari of the changed sentences was
+written by the reviewer, who is not a native speaker: a Dari-speaking educator
+must read them.
+
+Changed in the sheets
+- Tell an adult first: poison_story 01 (page 2 and last page), first_steps 06
+  (swallowed poison) and danger_signs 04 (help of the second question) now say
+  "call an adult" before "take the poison away". The picture is unchanged (it
+  shows both at once).
+- Mouth rinsing in a small child: a three-year-old cannot reliably rinse and
+  spit; she swallows the water or chokes on it. In poison_story 01 the mother
+  now wipes the child's mouth and lips with a clean wet cloth (picture changed
+  from `tb_spit` to `fa_nothing_by_mouth`). danger_signs 04 says: rinse and
+  spit only if the person is able to spit; an adult wipes a small child's mouth.
+- Vomiting by itself (not in the fact sheet): "if she vomits by herself, hold
+  her head forward and down, so that nothing gets into the chest" added to
+  poison_story 01 and danger_signs 04. After kerosene this is the main danger.
+- Fuel on clothes and skin: in poison_story 01 the mother takes off the
+  fuel-wet clothes and washes the skin with water and soap (the fact sheet's
+  skin rule applied to the story; kerosene left on the skin burns it).
+- Danger signs after swallowing fuel (not in the fact sheet): much coughing,
+  fast or difficult breathing, great sleepiness. New page in poison_story 01
+  (existing picture `fa_breath_hard`) and one sentence in danger_signs 04.
+- The container: carried closed; not smelled or tasted; field poison
+  (pesticide) is carried by an adult, not with bare hands (poison_story 01,
+  first_steps 06, danger_signs 04). In the story the father closes the bottle
+  before the boy carries it.
+- first_steps 06, swallowed poison: "give nothing to drink" is now "give
+  nothing to eat or drink".
+- Eye: "fifteen minutes" is now "at least fifteen minutes", and "start
+  quickly, do not wait" is said (first_steps 06, danger_signs 04).
+- Skin: danger_signs 04 now says tell an adult, wash your own hands
+  afterwards, and go to the clinic now if it was field poison, if the skin is
+  red and burning, or if the person is unwell.
+- Smoke: everyone who became unwell is to be seen by the health worker, even
+  if they seem well in fresh air; the confused, unwakeable or breathless go
+  NOW (poison_story 02, first_steps 06, danger_signs 04). This settles the
+  author's open question in the conservative direction. The first_steps
+  sentence now also starts with "tell an adult" and no longer tells the child
+  to open door and window personally ("the door and window are opened").
+- Going back into the room: only when the fire is outside and the air in the
+  room is fresh with door and window open (poison_story 02, first_steps 06).
+- English only: story 02 opens "It is night" (the Dari says شب).
+
+Checked and left as they are
+- All right/wrong answers, the three orderings, every card of do_dont 06 and
+  07 (including "high up / within reach").
+- "Nothing to eat or drink" is kept as the single rule for a lay person with
+  no poison centre. Some authorities (WHO hospital pocket book, several
+  national first-aid manuals) allow sips of water or milk after a caustic
+  such as a cleaning liquid; for fuel, drink can bring on vomiting. See the
+  questions below.
+
+Still to be decided by a qualified health professional
+- Sips of water after swallowing a caustic cleaning liquid, for an awake
+  person far from a clinic: allow or not.
+- Smoke: whether "everyone who became unwell is seen" is workable where the
+  clinic is hours away at night, and whether pregnant women and babies should
+  be named as going even without signs.
+- Skin: whether a small splash of fuel on unbroken skin, washed off, really
+  needs no clinic visit (the pack now sends field poison, burnt skin and
+  unwell people only).
+- Chest pushes for a poisoned person: the collapse game teaches rescue
+  breaths; with pesticide or a caustic on the mouth, mouth-to-mouth can harm
+  the helper. The poisoning texts say "chest pushes" only; confirm.
+- The fact sheet's "never sleep in a closed room with burning charcoal" and
+  "a room needs an opening for air" understate the risk: an unvented charcoal
+  brazier indoors is dangerous while people are awake too (as the story itself
+  shows), and a small opening does not make it safe. Decide how strongly to
+  say this where the brazier is the family's only heating.
+- How long to air the room before going back in (the pack gives no time).
+- Not covered at all: pesticide breathed in or sprayed on a person in the
+  field, fits after poisoning, unknown plants and mushrooms, medicines taken
+  by mistake (only "keep high up").
 
 ### The poisoning fact sheet
 
