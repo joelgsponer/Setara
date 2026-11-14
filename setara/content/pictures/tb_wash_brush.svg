@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
 <g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
-<g transform="translate(100 22) rotate(-110)">
+<g transform="translate(100 29) rotate(-110)">
 <rect x="-15" y="-16" width="30" height="32" rx="4" fill="#b9ae9b"/>
 <path d="M15 -6c12 0 12 16 0 16" fill="none"/>
 </g>
-<rect x="83" y="38" width="11" height="34" rx="0" fill="#5da9d6" stroke-width="3.5"/>
+<rect x="83" y="45" width="11" height="27" rx="0" fill="#5da9d6" stroke-width="3.5"/>
 <path d="M-6 70h22v30H-6z" fill="#8e5bb5"/>
 <rect x="2" y="84" width="108" height="10" rx="5" fill="#4e9a51"/>
 <rect x="74" y="68" width="34" height="17" rx="3" fill="#ffffff" stroke-width="4"/>

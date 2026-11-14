@@ -113,6 +113,19 @@ def font(size, bold=False):
     return ImageFont.truetype(str(FONTS / ("Andika-Bold.ttf" if bold else "Andika-Regular.ttf")), size)
 
 
+def wrap(text, fnt, width):
+    """Break a text into lines that fit a width in pixels."""
+    lines, line = [], ""
+    for word in text.split():
+        trial = (line + " " + word).strip()
+        if line and fnt.getlength(trial) > width:
+            lines.append(line)
+            line = word
+        else:
+            line = trial
+    return lines + ([line] if line else [])
+
+
 def run(cmd, **kw):
     subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, **kw)
 
@@ -255,13 +268,32 @@ def card(kind, colour, title, lines, base):
         d.line((90, 190, W - 90, 190), fill=INK, width=5)
         d.rounded_rectangle((90, 70, W - 90, H - 70), 28, outline=INK, width=5)
         d.text((140, 130), title, font=font(60, True), fill="white", anchor="lm")
-        step = min(84, 410 / max(1, len(lines)))
-        size = 42 if len(lines) <= 4 else 36
-        for i, line in enumerate(lines):
-            y = 250 + i * step
-            d.ellipse((150, y - 9, 168, y + 9), fill=colour)
-            d.text((196, y), line, font=font(size), fill=INK, anchor="lm")
+        # the largest size at which every point fits the card, wrapped where needed
+        for size in (42, 38, 34, 30, 26):
+            fnt = font(size)
+            rows = [wrap(line, fnt, W - 90 - 196 - 50) for line in lines]
+            height = sum(len(r) for r in rows) * size * 1.3 + (len(rows) - 1) * size * 0.55
+            if height <= 400:
+                break
+        y = 230 + (410 - height) / 2
+        for row in rows:
+            d.ellipse((150, y + size * 0.65 - 9, 168, y + size * 0.65 + 9), fill=colour)
+            for part in row:
+                d.text((196, y), part, font=fnt, fill=INK, anchor="la")
+                y += size * 1.3
+            y += size * 0.55
     return img
+
+
+def _groups(lines):
+    out, cur = [], []
+    for line in lines:
+        if line:
+            cur.append(line)
+        elif cur:
+            out.append(cur)
+            cur = []
+    return out + ([cur] if cur else [])
 
 
 def panel(colour, title, lines):
@@ -270,9 +302,13 @@ def panel(colour, title, lines):
     d = ImageDraw.Draw(img)
     d.rectangle((960, 0, W, H), fill=PAPER)
     d.rectangle((960, 0, W, 96), fill=colour)
-    d.text((984, 48), title, font=font(30 if len(title) < 18 else 25, True), fill="white", anchor="lm")
-    for i, line in enumerate(lines):
-        d.text((984, 140 + i * 40), line, font=font(23), fill=INK, anchor="lm")
+    d.text((982, 48), title, font=font(30 if len(title) < 16 else 23, True), fill="white", anchor="lm")
+    fnt, y = font(22), 126
+    for para in "\n".join(" ".join(g) for g in _groups(lines)).split("\n"):
+        for part in wrap(para, fnt, 320 - 44):
+            d.text((982, y), part, font=fnt, fill=INK, anchor="la")
+            y += 31
+        y += 16
     d.text((984, H - 34), "Setara, running by itself", font=font(17), fill="#8a7b6a", anchor="lm")
     return img
 

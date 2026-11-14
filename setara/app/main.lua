@@ -64,7 +64,8 @@ function love.load()
     or (os.time() % 2147483647 + store.progress.starts * 7919 + math.floor(os.clock() * 1e6) % 100000))
   store.ensure_device()
   audio.set_volume(store.progress.settings.volume)
-  local learned = require("core.json").decode(love.filesystem.read("data/buttons.json") or "")
+  local learned = love.filesystem.getInfo("data/buttons.json") and
+    require("core.json").decode(love.filesystem.read("data/buttons.json") or "")
   if input.complete(learned) then input.custom = learned end
   -- English mode: chosen in the pause menu, or forced by a file named
   -- "english" on the card or by SETARA_LOCALE=en.

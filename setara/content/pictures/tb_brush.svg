@@ -10,7 +10,7 @@
 </g>
 <path d="M46 66h24c0 10-5 16-12 16s-12-6-12-16z" fill="#ffffff" stroke-width="3.5"/>
 <path d="M47 72h22" fill="none" stroke-width="2.5"/>
-<path d="M104 124l2-30h20v30z" fill="#8e5bb5"/>
+<path d="M96 134L100 82H114L120 134z" fill="#8e5bb5"/>
 <rect x="70" y="69" width="50" height="8" rx="4" fill="#4e9a51"/>
 <rect x="54" y="65" width="20" height="13" rx="3" fill="#ffffff" stroke-width="3.5"/>
 <path d="M60 66v11M66 66v11" fill="none" stroke-width="2" stroke="#b9ae9b"/>

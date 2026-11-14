@@ -23,7 +23,8 @@ local function hexhash(data)
 end
 
 local function read_json(path)
-  local raw = love.filesystem.read(path)
+  -- ask first: in the browser build a failed read cannot be caught
+  local raw = love.filesystem.getInfo(path, "file") and love.filesystem.read(path)
   if not raw then return nil, "missing " .. path end
   return json.decode(raw)
 end
@@ -76,7 +77,7 @@ local function verify(root, tick)
   if not ok then return nil, why end
   local n = 0
   for path, want in pairs(manifest.files) do
-    local data = love.filesystem.read(root .. path)
+    local data = love.filesystem.getInfo(root .. path, "file") and love.filesystem.read(root .. path)
     if not data then return nil, "missing file " .. path end
     if "sha256:" .. hexhash(data) ~= want then return nil, "checksum " .. path end
     n = n + 1
@@ -181,6 +182,15 @@ function M.load()
           store.log("pack not a zip: " .. id)
         end
       end
+    end
+  end
+  -- The browser build carries its packs unpacked inside the app itself.
+  for _, id in ipairs(love.filesystem.getDirectoryItems("webpacks")) do
+    local root = "webpacks/" .. id .. "/"
+    local manifest = read_json(root .. "manifest.json")
+    if not M.list[id] and type(manifest) == "table" and manifest.pack == id and usable(manifest, root) then
+      manifest.root = root
+      M.list[id] = manifest
     end
   end
   for _, p in pairs(M.list) do

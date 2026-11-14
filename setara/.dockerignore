@@ -1,0 +1,7 @@
+dist
+packs
+builder/.cache
+builder/voices
+**/__pycache__
+**/node_modules
+tests

@@ -118,6 +118,7 @@ teacher mode.
 - [Putting it on a device](docs/device.md)
 - [Speech](docs/speech.md)
 - [English mode, for testers who do not read Dari](docs/english-mode.md)
+- [In a browser, and hosting it](docs/hosting.md)
 
 ## Tests
 

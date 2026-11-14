@@ -9,6 +9,6 @@
 <path d="M46 100l44-18 8 16-44 22c-12 4-18-14-8-20z" fill="#f2a7a0"/>
 <ellipse cx="98" cy="80" rx="8" ry="14" fill="#e8b98a" transform="rotate(25 98 80)"/>
 <ellipse cx="106" cy="84" rx="8" ry="14" fill="#e8b98a" transform="rotate(25 106 84)"/>
-<path d="M104 60l3-9M116 66l8-6M120 80h7M88 62l-3-8" fill="none" stroke-width="4"/>
+<path d="M104 60l3-9M116 66l8-6M119 80h5M93 62l-3-8" fill="none" stroke-width="4"/>
 </g>
 </svg>

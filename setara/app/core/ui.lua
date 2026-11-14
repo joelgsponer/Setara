@@ -56,7 +56,8 @@ local images = {}
 function M.image(path)
   local img = images[path]
   if img == nil then
-    local ok, res = pcall(g.newImage, path)
+    local ok, res = false, nil
+    if love.filesystem.getInfo(path, "file") then ok, res = pcall(g.newImage, path) end
     img = ok and res or false
     if img then img:setFilter("linear", "linear") end
     images[path] = img

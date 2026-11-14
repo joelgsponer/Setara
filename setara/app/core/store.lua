@@ -13,15 +13,20 @@ local DIR = "data"
 -- Reads the file, or its backup. A file that reads well refreshes the
 -- backup, so the backup is always an older state that was known to be good,
 -- never written in the same instant as the file itself.
+local function slurp(path)
+  -- ask first: in the browser build a failed read cannot be caught
+  return love.filesystem.getInfo(path, "file") and love.filesystem.read(path) or nil
+end
+
 local function read(name)
   local path = DIR .. "/" .. name
-  local raw = love.filesystem.read(path)
+  local raw = slurp(path)
   local data = raw and json.decode(raw)
   if type(data) == "table" then
-    if love.filesystem.read(path .. ".bak") ~= raw then love.filesystem.write(path .. ".bak", raw) end
+    if slurp(path .. ".bak") ~= raw then love.filesystem.write(path .. ".bak", raw) end
     return data
   end
-  raw = love.filesystem.read(path .. ".bak")
+  raw = slurp(path .. ".bak")
   data = raw and json.decode(raw)
   if type(data) == "table" then return data end
   return nil

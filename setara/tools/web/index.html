@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setara</title>
+<style>
+  :root { --ink: #3b2f2f; --paper: #fffbf0; --bg: #f6eedc; --line: #d8cbb0; --gold: #f2b705; --teal: #2f6f73; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.45 system-ui, sans-serif; }
+  main { max-width: 1000px; margin: 0 auto; padding: 12px 16px 40px; }
+  h1 { font-size: 22px; margin: 6px 0 2px; }
+  p { margin: 6px 0; }
+  .stage { position: relative; width: 100%; max-width: 960px; aspect-ratio: 4 / 3; margin: 10px auto; background: var(--ink);
+    border-radius: 12px; overflow: hidden; }
+  canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: block; }
+  #loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 14px; background: var(--paper); text-align: center; padding: 16px; }
+  #bar { width: min(70%, 420px); height: 14px; border-radius: 7px; background: var(--line); overflow: hidden; }
+  #bar i { display: block; height: 100%; width: 0; background: var(--gold); }
+  .pad { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 960px; margin: 8px auto;
+    user-select: none; -webkit-user-select: none; touch-action: manipulation; }
+  .cross, .face { display: grid; grid-template-columns: repeat(3, 52px); grid-template-rows: repeat(3, 52px); gap: 4px; }
+  .mid { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+  .mid div { display: flex; gap: 8px; }
+  button.k { border: 3px solid var(--ink); background: var(--paper); border-radius: 12px; font: 700 18px system-ui, sans-serif;
+    color: var(--ink); min-width: 52px; min-height: 44px; cursor: pointer; }
+  button.k:active, button.k.down { background: var(--gold); }
+  .face button.k { border-radius: 50%; }
+  .a { background: #cfe8cf !important; } .b { background: #f3cdc4 !important; }
+  .x { background: #cfdff0 !important; } .y { background: #f6e3b0 !important; }
+  table { border-collapse: collapse; margin: 8px 0; }
+  td, th { border: 1px solid var(--line); padding: 4px 10px; text-align: left; }
+  kbd { border: 1px solid var(--ink); border-radius: 4px; padding: 0 5px; background: var(--paper); font: 14px ui-monospace, monospace; }
+  .note { background: var(--paper); border: 2px solid var(--line); border-radius: 10px; padding: 8px 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Setara <small id="version" style="font-weight:400;color:#8a7b6a"></small></h1>
+  <p>An offline learning app for village classrooms, shown here in a browser so that it can be tried.
+     The product itself runs on a small game handheld. This page starts in <b>English mode</b>: the children hear Dari,
+     and what is spoken appears as an English caption under the screen.</p>
+
+  <div class="stage">
+    <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+    <div id="loading"><b id="status">Loading…</b><div id="bar"><i></i></div>
+      <span>The first load fetches all lessons, pictures and speech. Click the screen once it starts, so that it hears the keys.</span></div>
+  </div>
+
+  <div class="pad" aria-label="On-screen buttons">
+    <div class="cross">
+      <span></span><button class="k" data-key="ArrowUp" data-code="38">▲</button><span></span>
+      <button class="k" data-key="ArrowLeft" data-code="37">◀</button><span></span><button class="k" data-key="ArrowRight" data-code="39">▶</button>
+      <span></span><button class="k" data-key="ArrowDown" data-code="40">▼</button><span></span>
+    </div>
+    <div class="mid">
+      <div><button class="k" data-key="q" data-code="81">L</button><button class="k" data-key="w" data-code="87">R</button></div>
+      <div><button class="k" data-key="Enter" data-code="13">Start</button></div>
+      <div><button class="k" id="teacher">Teacher mode</button></div>
+    </div>
+    <div class="face">
+      <span></span><button class="k x" data-key="a" data-code="65">X</button><span></span>
+      <button class="k y" data-key="s" data-code="83">Y</button><span></span><button class="k a" data-key="z" data-code="90">A</button>
+      <span></span><button class="k b" data-key="x" data-code="88">B</button><span></span>
+    </div>
+  </div>
+
+  <table>
+    <tr><th>Button</th><th>Keyboard</th><th>Does</th></tr>
+    <tr><td>D-pad</td><td>Arrow keys</td><td>Move, or answer directly: the choices sit up, down, left and right</td></tr>
+    <tr><td>A</td><td><kbd>Z</kbd> or <kbd>Space</kbd></td><td>Yes, choose, continue</td></tr>
+    <tr><td>B</td><td><kbd>X</kbd></td><td>Back one step</td></tr>
+    <tr><td>X</td><td><kbd>A</kbd></td><td>Say it again, slowly</td></tr>
+    <tr><td>Y</td><td><kbd>S</kbd></td><td>Explain in Dari</td></tr>
+    <tr><td>L + R</td><td>hold <kbd>Q</kbd> and <kbd>W</kbd> for two seconds</td><td>Teacher mode, from the home screen</td></tr>
+    <tr><td>Start</td><td><kbd>Enter</kbd></td><td>Pause: volume, brightness, language, home</td></tr>
+  </table>
+
+  <p class="note">This is a prototype. The content is a first draft that no Dari-speaking educator or health professional
+     has reviewed yet, and the voices are placeholders. Nothing you do here is sent anywhere: the page works offline
+     once loaded and stores only stars and settings in your browser.</p>
+</main>
+
+<script>
+  var statusEl = document.getElementById('status'), barEl = document.querySelector('#bar i');
+  var Module = {
+    arguments: ['./game.love'],
+    INITIAL_MEMORY: __MEMORY__,
+    printErr: console.error.bind(console),
+    canvas: document.getElementById('canvas'),
+    totalDependencies: 0,
+    setStatus: function (text) {
+      var m = text && text.match(/\((\d+(?:\.\d+)?)\/(\d+)\)/);
+      if (m) barEl.style.width = (100 * m[1] / m[2]) + '%';
+      if (text) statusEl.textContent = text.replace(/\s*\(.*\)/, '');
+    },
+    monitorRunDependencies: function (left) {
+      this.totalDependencies = Math.max(this.totalDependencies, left);
+      if (left === 0) { document.getElementById('loading').style.display = 'none'; Module.canvas.focus(); }
+    }
+  };
+  Module.canvas.addEventListener('webglcontextlost', function (e) { statusEl.textContent = 'The picture was lost. Reload the page.'; e.preventDefault(); });
+  window.addEventListener('keydown', function (e) {
+    if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) e.preventDefault();   // keep the page from scrolling
+  });
+  window.onerror = function () { statusEl.textContent = 'Something went wrong. Reload the page.'; document.getElementById('loading').style.display = 'flex'; };
+
+  // On-screen buttons send the same keys as the keyboard.
+  function send(type, key, code) {
+    var e = new KeyboardEvent(type, { key: key, bubbles: true, cancelable: true });
+    Object.defineProperty(e, 'keyCode', { get: function () { return code; } });
+    Object.defineProperty(e, 'which', { get: function () { return code; } });
+    window.dispatchEvent(e);
+  }
+  document.querySelectorAll('button.k[data-key]').forEach(function (b) {
+    var key = b.dataset.key, code = +b.dataset.code;
+    function down(ev) { ev.preventDefault(); b.classList.add('down'); send('keydown', key, code); }
+    function up(ev) { ev.preventDefault(); b.classList.remove('down'); send('keyup', key, code); }
+    b.addEventListener('pointerdown', down); b.addEventListener('pointerup', up); b.addEventListener('pointerleave', function (ev) { if (b.classList.contains('down')) up(ev); });
+  });
+  document.getElementById('teacher').addEventListener('click', function () {   // holds L and R for a little over two seconds
+    send('keydown', 'q', 81); send('keydown', 'w', 87);
+    setTimeout(function () { send('keyup', 'q', 81); send('keyup', 'w', 87); }, 2400);
+  });
+  fetch('version.json').then(function (r) { return r.json(); }).then(function (v) {
+    document.getElementById('version').textContent = v.version + ' · ' + (v.packs.length - 1) + ' content packs';
+  }).catch(function () {});
+</script>
+<script src="game.js"></script>
+<script async src="love.js" onload="Love(Module)"></script>
+</body>
+</html>
