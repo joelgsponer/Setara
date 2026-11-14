@@ -41,3 +41,82 @@ tut_b,This button goes back. Press it.,این دکمه برمی‌گردد. فش
 tut_x,This button says it again slowly. Press it.,این دکمه دوباره و آهسته می‌گوید. فشارش بده.,fa
 tut_y,This button explains in Dari. Press it.,این دکمه به دری توضیح می‌دهد. فشارش بده.,fa
 tut_done,Well done! Now let us play.,آفرین! حالا بازی کنیم.,fa
+# Teacher mode (text on screen for the teacher; spoken only where marked)
+t_title,Teacher mode,حالت معلم,none
+t_lesson,Lesson,درس,none
+t_no_pack,No teacher pack installed.,بستهٔ معلم نصب نیست.,none
+tool_lesson,Lesson Runner,اجرای درس,none
+tool_preview,Tonight's Preview,تمرین امشب,none
+tool_phrases,Phrase Board,جمله‌های صنف,none
+tool_drill,Drill Master,تکرار با صنف,none
+tool_games,Class Games,بازی‌های صنف,none
+tool_story,Story Time,وقت قصه,none
+tool_stations,Station Timer,گروه‌ها و وقت,none
+tool_check,Quick Check,ارزیابی کوتاه,none
+tool_course,Teacher's Course,آموزش معلم,none
+step_hello,Hello,سلام,none
+step_listen,Listen,گوش کن,none
+step_say,Say,بگو,none
+step_do,Do,کار,none
+step_play,Play,بازی,none
+step_goodbye,Goodbye,خداحافظ,none
+hint_play,Play,پخش,none
+hint_slow,Slow,آهسته,none
+hint_meaning,Meaning,معنی,none
+hint_next,Next,بعدی,none
+hint_start,Start,شروع,none
+hint_stop,Stop,ایست,none
+hint_point,Point,امتیاز,none
+t_tune,The device plays a tune. Press the button to start and stop.,دستگاه آهنگ می‌نوازد. برای شروع و ایست دکمه را فشار دهید.,none
+t_lesson_done,Lesson finished. Well done!,درس تمام شد. خسته نباشید!,fa
+t_you_say,Now you say it.,حالا شما بگویید.,fa
+drill_listen,Listen,گوش کنید,none
+drill_all,The whole class repeats,تمام صنف تکرار کند,none
+drill_left_ask,Left half asks,نیم چپ بپرسد,none
+drill_right_answer,Right half answers,نیم راست جواب بدهد,none
+drill_right_ask,Right half asks,نیم راست بپرسد,none
+drill_left_answer,Left half answers,نیم چپ جواب بدهد,none
+drill_rows,Row by row,قطار به قطار,none
+drill_none,This lesson has no drills.,این درس تکرار ندارد.,none
+check_hands,How many hands were right?,چند دست درست بود؟,none
+check_done,Saved. Thank you!,ثبت شد. تشکر!,fa
+check_repeat,Repeat this lesson tomorrow.,این درس را فردا تکرار کنید.,none
+check_good,The class is ready for the next lesson.,صنف برای درس بعدی آماده است.,none
+game_quiz,Row quiz,مسابقهٔ قطارها,none
+game_do,Listen and Do,بشنو و بکن,none
+game_bingo,Picture bingo,بینگوی تصویر,none
+game_numbers,Number caller,عددها,none
+game_math,Mental math,حساب ذهنی,none
+game_team,Row,قطار,none
+st_teacher,With the teacher,با معلم,none
+st_device,With the devices,با دستگاه,none
+st_writing,Writing,نوشتن,none
+st_minutes,minutes,دقیقه,none
+st_swap,Time is up. Groups change places.,وقت تمام شد. گروه‌ها جای خود را بدل کنند.,fa
+st_done,All groups have finished.,همه گروه‌ها تمام کردند.,fa
+course_lessons,My English lessons,درس‌های انگلیسی من,none
+course_tips,Teaching tips,نکته‌های تدریس,none
+# Numbers and sums, spoken in English for the class games
+num_0,zero,صفر,en
+num_1,one,یک,en
+num_2,two,دو,en
+num_3,three,سه,en
+num_4,four,چهار,en
+num_5,five,پنج,en
+num_6,six,شش,en
+num_7,seven,هفت,en
+num_8,eight,هشت,en
+num_9,nine,نه,en
+num_10,ten,ده,en
+num_11,eleven,یازده,en
+num_12,twelve,دوازده,en
+num_13,thirteen,سیزده,en
+num_14,fourteen,چهارده,en
+num_15,fifteen,پانزده,en
+num_16,sixteen,شانزده,en
+num_17,seventeen,هفده,en
+num_18,eighteen,هجده,en
+num_19,nineteen,نزده,en
+num_20,twenty,بیست,en
+math_plus,plus,جمع,en
+math_minus,minus,منفی,en

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<g stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect width="400" height="300" fill="#e8d2a6" stroke="none"/>
+<rect x="-4" y="-4" width="408" height="34" fill="#c9a66b"/>
+<rect x="236" y="62" width="124" height="210" fill="#3f7fbf"/>
+<path d="M 298 62 v 210" fill="none"/>
+<rect x="40" y="84" width="70" height="64" fill="#5da9d6"/>
+<path d="M 75 84 v 64 M 40 116 h 70" fill="none" stroke-width="3"/>
+<rect x="-4" y="268" width="408" height="40" fill="#dcc28e"/>
+<path d="M 147.7 254.1 L 147.7 280.2 L 162.2 280.2 L 162.2 254.1 Z" fill="#fff6dc"/>
+<path d="M 173.8 254.1 L 173.8 280.2 L 188.3 280.2 L 188.3 254.1 Z" fill="#fff6dc"/>
+<ellipse cx="153.5" cy="281.6" rx="11.6" ry="6.5" fill="#6b4a2b"/>
+<ellipse cx="182.5" cy="281.6" rx="11.6" ry="6.5" fill="#6b4a2b"/>
+<path d="M 146.2 152.6 Q 168 145.3 189.8 152.6 L 205.7 259.9 Q 168 268.6 130.3 259.9 Z" fill="#8e5bb5"/>
+<path d="M 149.2 158.4 L 197 210.6" fill="none"/>
+<path d="M 181.1 204.8 L 215.8 204.8 L 215.8 245.4 L 181.1 245.4 Z" fill="#e07a3f"/>
+<path d="M 181.1 217.9 L 215.8 217.9" fill="none"/>
+<path d="M 133.2 123.6 C 133.2 80.1 202.8 80.1 202.8 123.6 C 202.8 141 201.3 152.6 207.2 167.1 Q 168 175.8 128.8 167.1 C 134.7 152.6 133.2 141 133.2 123.6 Z" fill="#3f7fbf"/>
+<ellipse cx="168" cy="126.5" rx="22.5" ry="23.9" fill="#e8b98a"/>
+<path d="M 147.7 116.3 Q 168 96.1 188.3 116.3" fill="none"/>
+<circle cx="159.3" cy="128" r="3.3" fill="#3b2f2f" stroke="none"/>
+<circle cx="176.7" cy="128" r="3.3" fill="#3b2f2f" stroke="none"/>
+<path d="M 158.6 136.7 Q 168 152.6 177.4 136.7 Z" fill="#ffffff" stroke-width="3"/>
+<path d="M 144.8 164.2 Q 115.8 146.8 110 100.4" fill="none" stroke-width="17.1"/>
+<path d="M 144.8 164.2 Q 115.8 146.8 110 100.4" fill="none" stroke="#8e5bb5" stroke-width="10.2"/>
+<ellipse cx="110" cy="100.4" rx="8" ry="8" fill="#e8b98a"/>
+<path d="M 191.2 164.2 Q 220.2 146.8 226 100.4" fill="none" stroke-width="17.1"/>
+<path d="M 191.2 164.2 Q 220.2 146.8 226 100.4" fill="none" stroke="#8e5bb5" stroke-width="10.2"/>
+<ellipse cx="226" cy="100.4" rx="8" ry="8" fill="#e8b98a"/>
+</g>
+</svg>

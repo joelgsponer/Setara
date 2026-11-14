@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<g stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect width="400" height="300" fill="#bfe3f0" stroke="none"/>
+<path d="M -4 196 l 70 -60 l 60 40 l 80 -70 l 90 80 l 50 -40 l 60 50 v 60 h -410 Z" fill="#b9ae9b"/>
+<rect x="-4" y="196" width="408" height="108" fill="#dcc28e"/>
+<path d="M 170 304 C 220 256 290 220 340 196 L 384 196 C 350 230 340 270 350 304 Z" fill="#fff6dc"/>
+<rect x="-4" y="84" width="216" height="150" fill="#c9a66b"/>
+<rect x="40" y="104" width="130" height="130" fill="#9a6b3f"/>
+<path d="M 105 104 v 130 M 72 104 v 130 M 138 104 v 130" fill="none" stroke-width="3"/>
+<path d="M 97.1 252.3 L 97.1 276.6 L 110.6 276.6 L 110.6 252.3 Z" fill="#fff6dc"/>
+<path d="M 121.4 252.3 L 121.4 276.6 L 134.9 276.6 L 134.9 252.3 Z" fill="#fff6dc"/>
+<ellipse cx="102.5" cy="277.9" rx="10.8" ry="6.1" fill="#6b4a2b"/>
+<ellipse cx="129.5" cy="277.9" rx="10.8" ry="6.1" fill="#6b4a2b"/>
+<path d="M 95.8 157.8 Q 116 151 136.2 157.8 L 151.1 257.7 Q 116 265.8 80.9 257.7 Z" fill="#8e5bb5"/>
+<path d="M 83.6 130.8 C 83.6 90.3 148.4 90.3 148.4 130.8 C 148.4 147 147.1 157.8 152.4 171.3 Q 116 179.4 79.5 171.3 C 85 157.8 83.6 147 83.6 130.8 Z" fill="#3f7fbf"/>
+<ellipse cx="116" cy="133.5" rx="20.9" ry="22.3" fill="#e8b98a"/>
+<path d="M 97.1 124 Q 116 105.1 134.9 124" fill="none"/>
+<circle cx="110.9" cy="134.8" r="3.1" fill="#3b2f2f" stroke="none"/>
+<circle cx="127.1" cy="134.8" r="3.1" fill="#3b2f2f" stroke="none"/>
+<ellipse cx="119" cy="147" rx="6.1" ry="6.8" fill="#3b2f2f" stroke="none"/>
+<path d="M 94.4 168.6 L 85 217.2" fill="none" stroke-width="16.5"/>
+<path d="M 94.4 168.6 L 85 217.2" fill="none" stroke="#8e5bb5" stroke-width="9.5"/>
+<ellipse cx="85" cy="217.2" rx="7.4" ry="7.4" fill="#e8b98a"/>
+<path d="M 137.6 168.6 Q 172.7 168.6 145.7 148.3" fill="none" stroke-width="16.5"/>
+<path d="M 137.6 168.6 Q 172.7 168.6 145.7 148.3" fill="none" stroke="#8e5bb5" stroke-width="9.5"/>
+<ellipse cx="145.7" cy="148.3" rx="7.4" ry="7.4" fill="#e8b98a"/>
+<path d="M 172 124 q 9.6 16 0 32" fill="none"/>
+<path d="M 192 114 q 15.6 26 0 52" fill="none"/>
+<path d="M 212 104 q 21.6 36 0 72" fill="none"/>
+</g>
+</svg>

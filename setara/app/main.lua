@@ -80,6 +80,24 @@ local function run_script(dt)
     top = app.top,
     app = app,
   }
+  -- Leave the first-run tutorial if it is showing.
+  api.skip_tutorial = function()
+    local top = app.top()
+    if top and top.step and top.happy then input.fake("start") coroutine.yield(0.5) end
+  end
+  -- Jump straight into a round: start_round("en-1", "word_stall", 1, { pair = true })
+  api.start_round = function(pack_id, game_id, index, opts)
+    local packs = require("core.packs")
+    local pack = assert(packs.list[pack_id], "no pack " .. tostring(pack_id))
+    local game
+    for _, gm in ipairs(pack.games) do if gm.id == game_id then game = gm end end
+    assert(game, "no game " .. tostring(game_id))
+    opts = opts or {}
+    app.push(require("scenes.play").new({ pack = pack, game = game, round_id = game.rounds[index or 1],
+      pair = opts.pair, review = opts.review or false }))
+    coroutine.yield(0.2)
+    return app.top()
+  end
   local ok, res = coroutine.resume(script, api)
   if not ok then
     print("SCRIPT ERROR: " .. tostring(res))

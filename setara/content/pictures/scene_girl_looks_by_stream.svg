@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<g stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect width="400" height="300" fill="#bfe3f0" stroke="none"/>
+<rect x="-4" y="176" width="408" height="130" fill="#9ccb7a"/>
+<path d="M -4 262 Q 200 236 404 250 L 404 284 Q 200 268 -4 296 Z" fill="#5da9d6"/>
+<path d="M 40 276 q 20 -5 40 0 M 230 262 q 20 -5 40 0" fill="none" stroke="#fff" stroke-width="3"/>
+<rect x="250" y="110" width="44" height="140" fill="#9a6b3f"/>
+<circle cx="226" cy="86" r="46" fill="#4e9a51"/>
+<circle cx="318" cy="86" r="46" fill="#4e9a51"/>
+<circle cx="272" cy="54" r="50" fill="#4e9a51"/>
+<circle cx="272" cy="96" r="40" fill="#4e9a51" stroke="none"/>
+<path d="M 156 210.6 L 153.2 232.9 L 165.6 234.4 L 168.4 212.1 Z" fill="#fff6dc"/>
+<path d="M 178.3 213.3 L 175.6 235.6 L 188 237.2 L 190.7 214.8 Z" fill="#fff6dc"/>
+<ellipse cx="158.1" cy="234.8" rx="10" ry="5.6" fill="#6b4a2b" transform="rotate(7 158.1 234.8)"/>
+<ellipse cx="182.9" cy="237.8" rx="10" ry="5.6" fill="#6b4a2b" transform="rotate(7 182.9 237.8)"/>
+<path d="M 165.4 123.6 Q 184.8 119.7 202.6 128.1 L 205 221.6 Q 171.8 225.1 140.5 213.7 Z" fill="#8e5bb5"/>
+<path d="M 157.3 97.4 C 161.9 60.2 221.4 67.5 216.8 104.7 C 215 119.6 212.6 129.4 216 142.4 Q 181.6 145.7 149 134.2 C 155.5 122.4 155.5 112.3 157.3 97.4 Z" fill="#3f7fbf"/>
+<ellipse cx="186.8" cy="103.5" rx="19.4" ry="20.6" fill="#e8b98a" transform="rotate(7 186.8 103.5)"/>
+<path d="M 170.5 92.7 Q 190 77.5 205.2 97" fill="none"/>
+<circle cx="181.9" cy="104.2" r="2.9" fill="#3b2f2f" stroke="none"/>
+<circle cx="196.8" cy="106" r="2.9" fill="#3b2f2f" stroke="none"/>
+<ellipse cx="188" cy="116.3" rx="3.8" ry="4" fill="#3b2f2f" transform="rotate(7 188 116.3)" stroke="none"/>
+<path d="M 162.9 133.3 L 148.8 176.9" fill="none" stroke-width="15.8"/>
+<path d="M 162.9 133.3 L 148.8 176.9" fill="none" stroke="#8e5bb5" stroke-width="8.8"/>
+<ellipse cx="148.8" cy="176.9" rx="6.9" ry="6.9" fill="#e8b98a" transform="rotate(7 148.8 176.9)"/>
+<path d="M 202.6 138.2 Q 233.6 132 210 88.7" fill="none" stroke-width="15.8"/>
+<path d="M 202.6 138.2 Q 233.6 132 210 88.7" fill="none" stroke="#8e5bb5" stroke-width="8.8"/>
+<ellipse cx="210" cy="88.7" rx="6.9" ry="6.9" fill="#e8b98a" transform="rotate(7 210 88.7)"/>
+</g>
+</svg>

@@ -268,7 +268,7 @@ def parse_sheet(pack: Pack, game: dict, rows: list[dict], sheet: str) -> dict[st
                 pack.report.error(where, "needs say_en or say_fa")
             item = {"prompt_audio": audio}
             if row.get("say_en"):
-                item["text"] = re.sub(r"\b[mf]:\s*", "", row["say_en"]).replace("//", "  ")
+                item["text"] = re.sub(r"\b[mf]:\s*", "", row["say_en"]).replace("//", "\n")
             elif row.get("say_fa"):
                 item["fa"] = pack.fa(row["say_fa"], where)
             if row.get("picture"):
@@ -408,7 +408,7 @@ def rounds_from_items(pack: Pack, game: dict, items: list[dict]) -> dict[str, di
             elif engine == "say_it":
                 item = {"prompt_audio": pack.prompt(row, w)}
                 if lang == "en":
-                    item["text"] = re.sub(r"\b[mf]:\s*", "", spoken).replace("//", "  ")
+                    item["text"] = re.sub(r"\b[mf]:\s*", "", spoken).replace("//", "\n")
                 else:
                     item["fa"] = pack.fa(spoken, w)
                 if it.get("picture"):
@@ -550,7 +550,7 @@ def build_teacher(pack: Pack) -> dict:
             pack.report.error(where, "teacher_fa is required: tell the teacher what to do")
         line = {"kind": kind, "teacher_fa": pack.fa(row.get("teacher_fa", ""), where)}
         if row.get("play_en"):
-            line["text"] = re.sub(r"\b[mf]:\s*", "", row["play_en"]).replace("//", "  ")
+            line["text"] = re.sub(r"\b[mf]:\s*", "", row["play_en"]).replace("//", "\n")
             line["audio"] = pack.say("en", row["play_en"], where, slow=True)
         elif kind in ("drill", "check", "command"):
             pack.report.error(where, f"a {kind} row needs play_en")
