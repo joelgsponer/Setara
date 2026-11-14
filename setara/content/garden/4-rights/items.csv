@@ -1,0 +1,63 @@
+unit,key,en,fa,picture,tags
+# 01 every child: who we are (ideas 1, 2, 8)
+01,children_all,all children,همه اطفال,children_all,"equal,new"
+01,child_crutch,a child who walks with a crutch,طفلی که با چوب زیربغل راه می‌رود,child_crutch,"equal,disability,new"
+01,girl,girl,دختر,girl,equal
+01,boy,boy,بچه,boy,equal
+01,baby,small child,طفل خورد,baby,"equal,family"
+01,family,family,فامیل,family,family
+01,parents,mother and father,مادر و پدر,parents,"family,trusted"
+01,mother,mother,مادر,mother,"family,trusted"
+01,father,father,پدر,father,"family,trusted"
+01,grandmother,grandmother,بی‌بی,grandmother,"family,trusted"
+01,sister,big sister,خواهر کلان,sister,family
+01,teacher,teacher,معلم,teacher,trusted
+# 02 what every child needs (ideas 3, 4, 5, 6)
+02,bread,bread,نان,bread,need
+02,dinner,a family meal,نان شب فامیل,dinner,need
+02,breakfast,good food,خوراک خوب,breakfast,need
+02,water_tap,clean water,آب پاک,water_tap,need
+02,house,home,خانه,house,need
+02,clinic,clinic,کلینیک,clinic,need
+02,school,school,مکتب,school,"need,learn"
+02,read,learning,یاد گرفتن,read,"need,learn"
+02,book,book,کتاب,book,learn
+02,notebook,notebook,کتابچه,notebook,learn
+02,pencil,pencil,پنسل,pencil,learn
+02,play,play,بازی,play,"need,play"
+02,ball,ball,توپ,ball,play
+02,sleep,rest,استراحت,sleep,"need,rest"
+02,safe_child,being safe,در امان بودن,safe_child,"need,safe,new"
+02,heavy_load,a load too heavy for a child,بار بسیار سنگین برای طفل,heavy_load,"safe,new"
+02,donkey,donkey,خر,donkey,story
+02,hen,hen,مرغ,hen,story
+02,axe,axe,تبر,axe,"story,danger"
+02,tummy,a sick child,طفل مریض,tummy,need
+02,bowl_empty,empty bowl,کاسه خالی,bowl_empty,need
+02,cup,cup,پیاله,cup,need
+# 03 nice to have, but not a need
+03,candy,sweets,شیرینی,candy,nice
+03,soda,fizzy drink,نوشابه,soda,nice
+03,radio,radio,رادیو,radio,nice
+03,bag_green,a new coloured bag,یک بکس نو رنگه,bag_green,nice
+03,shoes,new shoes,بوت نو,shoes,nice
+03,pen_red,a new red pen,یک قلم سرخ نو,pen_red,nice
+03,hat,a new cap,یک کلاه نو,hat,nice
+# 04 respect: fair and not fair (ideas 7, 9)
+04,give,sharing,شریک کردن,give,fair
+04,include,inviting someone into the game,کسی را به بازی خواستن,include,"fair,new"
+04,listen,listening,گوش کردن,listen,fair
+04,speak_up,saying what you think,گفتن فکر خود,speak_up,"fair,new"
+04,friends,friends,دوست‌ها,friends,fair
+04,please,asking politely,با ادب پرسیدن,please,fair
+04,left_out,left alone,تنها مانده,left_out,"unfair,new"
+04,tease,laughing at someone,به کسی خنده کردن,tease,"unfair,new"
+04,take_away,taking by force,به زور گرفتن,take_away,"unfair,new"
+04,stone,the stone game,سنگ‌بازی,stone,story
+04,rope,the skipping game,ریسمان‌بازی,rope,story
+# 05 telling an adult you trust (idea 10)
+05,tell_adult,telling an adult you trust,گفتن به یک کلان که به او باور داری,tell_adult,"tell,new"
+05,sad,sad,غمگین,sad,tell
+05,fa_shout_help,calling an adult,صدا کردن یک کلان,fa_shout_help,tell
+05,yes,yes,بلی,yes,
+05,no,no,نه,no,

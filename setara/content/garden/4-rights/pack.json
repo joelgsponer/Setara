@@ -1,0 +1,71 @@
+{
+ "pack": "garden-4-rights",
+ "subject": "garden",
+ "level": 4,
+ "version": 1,
+ "optional": true,
+ "title_en": "My rights, your rights",
+ "title_fa": "حق من، حق تو",
+ "games": [
+  {
+   "id": "rights_story",
+   "engine": "story",
+   "letter": "a",
+   "title_en": "Two Stories: The New Girl, and Tired Yusuf",
+   "title_fa": "دو قصه: شاگرد نو، و یوسف خسته",
+   "intro_fa": "قصه را گوش کن و کار درست را انتخاب کن.",
+   "icon": "friends",
+   "sheet": "rights_story.csv"
+  },
+  {
+   "id": "rights_tell",
+   "engine": "story",
+   "letter": "b",
+   "title_en": "Tell an Adult You Trust",
+   "title_fa": "به یک کلان بگو",
+   "intro_fa": "قصه ادریس را گوش کن و به او کمک کن که کار درست را بکند.",
+   "icon": "tell_adult",
+   "sheet": "rights_tell.csv"
+  },
+  {
+   "id": "rights_needs",
+   "engine": "sorter",
+   "letter": "c",
+   "title_en": "What Every Child Needs",
+   "title_fa": "هر طفل به چه ضرورت دارد",
+   "intro_fa": "هر تصویر را در سبد درست بینداز.",
+   "icon": "bread",
+   "sheet": "rights_needs.csv"
+  },
+  {
+   "id": "rights_pick",
+   "engine": "listen_pick",
+   "letter": "d",
+   "title_en": "Which Right Is It?",
+   "title_fa": "کدام حق است؟",
+   "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+   "icon": "children_all",
+   "sheet": "rights_pick.csv"
+  },
+  {
+   "id": "rights_talk",
+   "engine": "story",
+   "letter": "e",
+   "title_en": "Class Talk: The Rights of Every Child",
+   "title_fa": "گپ صنف: حق‌های هر طفل",
+   "intro_fa": "معلم صاحب، این درس برای تمام صنف است. اول همه یکجا گوش کنید. بعد به هر سوال یکجا جواب بدهید.",
+   "icon": "class",
+   "sheet": "rights_talk.csv"
+  },
+  {
+   "id": "rights_pairs",
+   "engine": "pairs",
+   "letter": "f",
+   "title_en": "Rights Pairs",
+   "title_fa": "جوره‌های حق",
+   "intro_fa": "جوره‌ها را پیدا کن.",
+   "icon": "family",
+   "sheet": "rights_pairs.csv"
+  }
+ ]
+}
