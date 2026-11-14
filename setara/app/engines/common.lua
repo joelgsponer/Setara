@@ -44,9 +44,33 @@ function M.deal(item, level)
   return slots
 end
 
+-- The question, then every choice that has a voice (written words), in the
+-- order up, left, right, down. The choice being read is lit by draw_slot.
+function M.prompt_clips(item, slots)
+  local clips = {}
+  for _, c in ipairs(item.prompt_audio or {}) do clips[#clips + 1] = c end
+  for _, dir in ipairs({ "up", "left", "right", "down" }) do
+    local slot = slots and slots[dir]
+    local voice = slot and type(slot.thing) == "table" and slot.thing.audio
+    for _, c in ipairs(type(voice) == "table" and voice or {}) do clips[#clips + 1] = c end
+  end
+  return clips
+end
+
+local function being_read(root, slot)
+  local voice = type(slot.thing) == "table" and slot.thing.audio
+  local playing = voice and voice[1] and require("core.audio").playing()
+  return playing ~= nil and playing == root .. voice[1]
+end
+
 -- state: nil, "right", "wrong" (crossed out), "shake"
 function M.draw_slot(root, slot, state, t)
   local x, y = slot.x, slot.y
+  if not state and being_read(root, slot) then
+    ui.card(x - 4, y - 4, slot.w + 8, slot.h + 8, { selected = true })
+    ui.thing(slot.thing, root, x + 2, y + 2, slot.w - 4, slot.h - 4)
+    return
+  end
   if state == "shake" then x = x + math.sin(t * 50) * 6 end
   local opts = {}
   if state == "right" then

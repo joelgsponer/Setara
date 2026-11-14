@@ -85,7 +85,8 @@ pictures (`map_*`, `scene_map_*`, `globe`) are generated from map data.
   نه ملیون، پنجاه و هفت کیلومتر، پنج صد سال، ساعت چهار صبح.
 - "People who wish you well" is کسانی که خیر شما را می‌خواهند.
 - Short Dari words stand on some answer cards and sorter cards (کابل، برن،
-  بازل، هندوکش، الپ، بحر ندارد، number words). Each is also spoken, but a child
+  بازل، هندوکش، الپ، بحر ندارد، the oceans, times of day). Counts are digits,
+  as in the maths packs. Each is also spoken, but a child
   who cannot read yet will need the Y button or a friend for those.
 
 ## The fact sheet

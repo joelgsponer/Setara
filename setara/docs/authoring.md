@@ -109,6 +109,10 @@ are separated with `|`.
 - `title_fa` is spoken when the child moves onto the game.
 - `source: "items"` derives the rounds from `items.csv`. Otherwise give
   `sheet`.
+- `"read_choices": true` on a listen_pick, journey or duel game whose choices
+  are written Dari words (`f:کابل`): after the question each choice is read
+  aloud and lit in turn, so that answering never depends on reading. Do not
+  use it where reading the word is the exercise.
 - `"say": "fa"` makes an items-derived game speak the Dari column (for the
   Dari subject). The default is `en`.
 - `"optional": true` at the top marks a pack shipped only where the local

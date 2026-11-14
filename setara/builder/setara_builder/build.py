@@ -278,7 +278,7 @@ class Pack:
 # -- learner packs ---------------------------------------------------------------
 
 
-def _lp_item(pack: Pack, row: dict, where: str) -> dict | None:
+def _lp_item(pack: Pack, row: dict, where: str, read: bool = False) -> dict | None:
     """A listen-and-pick style question. Shared by listen_pick, journey, duel."""
     item: dict = {"prompt_audio": pack.prompt(row, where)}
     if not item["prompt_audio"] and not row.get("show"):
@@ -296,6 +296,12 @@ def _lp_item(pack: Pack, row: dict, where: str) -> dict | None:
     if len(set(ids)) != len(ids):
         pack.report.error(where, "the same distractor is listed twice")
     item["choices"] = [answer] + [t for t in wrong if t["id"] != answer["id"]]
+    if read:
+        # Written Dari words as choices: each is read aloud after the question,
+        # so that the answer never depends on reading.
+        for t in item["choices"]:
+            if "fa" in t and t["id"].startswith("f:") and len(t["id"]) > 3:
+                t["audio"] = pack.say("fa", t["id"][2:], where)
     help_fa = row.get("help_fa", "")
     if help_fa:
         item["help_audio"] = pack.say("fa", help_fa, where)
@@ -355,7 +361,7 @@ def parse_sheet(pack: Pack, game: dict, rows: list[dict], sheet: str) -> dict[st
         item = None
 
         if engine in ("listen_pick", "journey", "duel"):
-            item = _lp_item(pack, row, where)
+            item = _lp_item(pack, row, where, read=bool(game.get("read_choices")))
 
         elif engine == "say_it":
             audio = pack.prompt(row, where)

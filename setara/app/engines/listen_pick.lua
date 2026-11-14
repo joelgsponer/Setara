@@ -40,7 +40,7 @@ function E:next()
 end
 
 function E:again(slow)
-  if self.item then self.ctx.say(self.item.prompt_audio, { slow = slow }) end
+  if self.item then self.ctx.say(common.prompt_clips(self.item, self.slots), { slow = slow }) end
 end
 
 function E:help()

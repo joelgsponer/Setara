@@ -142,6 +142,7 @@ def main():
         m.k, m.s = 1.0, 400 / 360 * 1.0   # the whole world, stretched a little in height to fill the picture
         m.xy = lambda lon, lat: (200 + lon * 400 / 360, 150 - lat * 300 / 180 * 0.98)
         m.land(unary_union(list(cont.values())), LAND, min_area=3)   # one land, no lines between continents
+        m.land(cont["Antarctica"], "#ffffff", min_area=3)            # ice
         if highlight:
             m.land(cont[highlight], ORANGE, min_area=3)
         if mark:
