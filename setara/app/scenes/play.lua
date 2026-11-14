@@ -304,6 +304,11 @@ function Play:draw()
     local e = self:active()
     if e then e:draw() end
     draw_hud(self, e)
+    -- Always in the same corner: X says it again. (In a duel X is an answer button.)
+    if e and not (e.uses and e.uses.x) then
+      ui.speaker(26, 20, 26, nil, ui.c.ink)
+      ui.badge("x", 54, 20, 11)
+    end
   end
 end
 

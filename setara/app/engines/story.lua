@@ -8,6 +8,7 @@ local ui = require("core.ui")
 local text = require("core.text")
 local sfx = require("core.sfx")
 local audio = require("core.audio")
+local Quiz = require("core.quiz")
 local g = love.graphics
 
 local E = {}
@@ -74,6 +75,12 @@ function E:show(i)
   self.i, self.page = i, page
   self.seen = math.max(self.seen, i)
   self.decision = is_decision(page)
+  -- The sheets list the right choice first more often than not: mix the cards,
+  -- once per page, so that the place of a card says nothing.
+  if self.decision and not page.mixed then
+    Quiz.shuffle(page.choices)
+    page.mixed = true
+  end
   self.asking = self.decision and not self.solved[i]
   self.lay = layout(page, self.decision)
   self.dim, self.tried = {}, false
