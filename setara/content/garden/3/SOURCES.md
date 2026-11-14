@@ -218,3 +218,150 @@ When a relative is ill: go to the clinic NOW if the person
 While waiting or on the way: keep the person warm (or cool if hot with fever), give small sips of clean water if they can swallow, never give a medicine unless a health worker has said so, and do not leave them alone.
 
 Never write: doses, names of medicines, home remedies, anything religious, anything that blames the family.
+
+## Poisoning
+
+**Not yet checked by a health professional, and the Dari has not been read by
+a Dari-speaking educator.** Added later than the rest of the pack: the game
+`poison_story` (two stories), `first_steps` round 06, `do_dont` rounds 06 and
+07, `danger_signs` round 04. Every medical statement comes from the poisoning
+fact sheet pasted in full below; nothing medical was added by the author of
+the sheets. No names or doses of medicines, no antidotes, no home remedies.
+The 18 new pictures (last 18 lines of `pictures.txt`) are not drawn yet.
+
+### Where the poisoning part simplifies, or goes a little beyond, the fact sheet
+
+Swallowed poison (poison_story 01, first_steps 06, do_dont 06, danger_signs 04)
+- The story shows only kerosene ("تیل خاک"), kept in a drink bottle beside the
+  lamp. The other poisons (pesticides, cleaning liquids, medicines) appear only
+  in the "keep it high up" round; unknown plants, berries, mushrooms and
+  spoiled food are not shown at all (see "Not covered" below).
+- The reason for not vomiting is given as in the fact sheet (fuel that comes
+  back up gets into the chest and harms breathing; some poisons burn again on
+  the way up). No other reasons are given anywhere.
+- "Do not give anything to eat or drink" and "do not make them vomit" share one
+  picture (`fa_nothing_by_mouth`: the mother holds the child and keeps a cup
+  and spoon away). Milk, oil and egg have pictures as wrong choices; salt
+  water, raw egg and "home remedy" are spoken only.
+- Rinsing the mouth: the story adds "Laila does not swallow the water". The
+  fact sheet says "rinse the mouth with clean water and spit it out". The
+  existing tooth-brushing picture `tb_spit` (a child spitting into a basin) is
+  reused for it.
+- "Say when it happened" is shown as the mother saying "an hour ago".
+- "Take the bottle, packet or plant along": the pictures show only the bottle;
+  packet and plant are spoken in the help texts.
+- Step 5 (very sleepy or not answering but breathing: recovery position; not
+  breathing normally: an adult starts chest pushes) is one spoken "remember"
+  page in the story, with the existing `fa_recovery` picture (which shows a
+  man). It is not played out; Laila stays awake. It is not in the ordering
+  game.
+- The older child himself takes the bottle out of the small child's hand
+  (fact sheet step 1), and only then calls the mother. "Stay safe yourself" is
+  spoken in danger_signs 04.
+- Story details that are not medical and not in the fact sheet: the child is
+  three and cries; the father fetches a car; the mother praises the boy; "fuel
+  looks like water and a small child does not know the difference" (from the
+  fact sheet's "looks like water") is said so that nobody is blamed.
+
+Poison on the skin or in the eye (first_steps 06, do_dont 06, danger_signs 04)
+- No story; only steps, cards and questions.
+- The ordering sequence for the eye is "tell an adult - water over the open
+  eye for fifteen minutes - clinic", with "rubbing the eye" as the extra tile
+  that does not belong (the pack's convention for a "do not" step). "Tell an
+  adult" is the fact sheet's general first rule, not a point of the eye
+  paragraph.
+- "From the nose side outward, so that it does not run into the other eye" is
+  spoken in the help texts and drawn in `fa_eye_rinse`.
+- Skin: the existing hand-washing picture `wash_hands` stands for "wash with
+  plenty of clean water and soap for 15 minutes". Taking off wet clothes
+  without touching the wet part is spoken only (danger_signs 04).
+- The fact sheet says "then go to the clinic" in the eye line; for skin the
+  pack relies on the general rule "clinic after any poisoning", which is
+  spoken in the swallowed-poison texts but not on the skin card.
+
+Smoke or gas in a closed room (poison_story 02, first_steps 06, danger_signs 04)
+- The fire is a charcoal brazier ("منقل زغال"). Wood fires, stoves and heaters
+  are covered only by the sentences "a fire in a closed room" and "a stove
+  needs a chimney pipe to the outside, and a room an opening for air".
+- "Feeling sick" is said as "دلم بد می‌شود / دل‌بدی", "dizziness" as "سرم چرخ
+  می‌زند / سرچرخی", "unwell" as "ناجور".
+- The father, not a child, opens door and window and carries the brazier out.
+  The fact sheet does not say who; the child's part is to tell an adult and go
+  out.
+- "Put the fire out or take it outside before sleeping": the story takes it
+  outside; "put it out" is spoken.
+- Grandmother is "still confused" and is taken to the clinic. The story then
+  says that the health worker "also looks at" the two children. The ordering
+  game and the questions say "clinic now if someone is confused, cannot be
+  woken or has trouble breathing". **Open question for a health professional:**
+  the fact sheet's last line says "clinic NOW after any poisoning, even if the
+  person seems well", while its smoke paragraph sends only the confused,
+  unwakeable or breathless to the clinic. The pack follows the smoke paragraph
+  in its rules and lets the whole family be seen in the story.
+- "If they do not answer, treat as collapsed" is spoken in danger_signs 04 and
+  points to the existing game "When Someone Has Collapsed".
+- "Fresh air helps" (the girl's headache gets less, the boy is awake again) is
+  the story's ending as asked for in the task; the fact sheet does not say
+  how quickly anyone recovers.
+
+Keeping poison away (do_dont 06 and 07, end of poison_story 01)
+- do_dont 07 sorts "a high place" against "within reach". The basket says
+  "high up or locked away, where small children cannot reach". Bread, drinking
+  water, ball and toys, and book are the harmless things; they are the
+  author's examples, not from the fact sheet.
+- Fuel is drawn in a metal can (`fa_fuel_can`) in that round, so that the
+  round does not show fuel in a drink bottle as something to keep.
+- Pesticides are said as "poison for insects, mice and weeds, and chemicals
+  for fields"; cleaning liquids as "washing and cleaning liquid"; medicines
+  only as "medicine".
+
+Not covered by any game (in the fact sheet, left out to keep the rounds short)
+- Unknown plants, berries and mushrooms; spoiled food.
+- "Do not take a medicine that was not given to you"; "a medicine is safe only
+  in the amount a health worker has said". (The older rounds already say
+  "never give a medicine unless a health worker has said so".)
+- Washing hands with soap after touching pesticide or fuel; washing fruit and
+  vegetables.
+- "Never put food or water in an empty poison container" is spoken once
+  (danger_signs 04), without a picture.
+
+### The poisoning fact sheet
+
+# Facts for the poisoning part of the first-aid pack (use these; add nothing medical of your own)
+
+Audience: village children about 8-14 and their teachers, far from a clinic. The first rule for a child is always: stay safe yourself, tell an adult at once, send or run for help.
+
+What can poison a person at home
+- Kerosene, petrol and diesel (lamp and stove fuel). Small children drink it because it is kept in drink bottles and looks like water.
+- Poisons for insects, mice and weeds, and chemicals for fields (pesticides); washing and cleaning liquids.
+- Medicines: too many, or someone else's. A medicine is safe only in the amount a health worker has said, for the person it was given to.
+- Smoke and gas from a fire: charcoal, wood, a stove or a heater burning in a closed room. The dangerous gas has no colour and no smell.
+- Plants, berries and mushrooms that nobody in the family knows; spoiled food.
+
+Someone has swallowed a poison
+1. Tell an adult at once. Take the poison away from the person.
+2. Do NOT make the person vomit. (Fuel that comes back up gets into the chest and harms breathing; some poisons burn again on the way up.)
+3. Do NOT give anything to eat or drink: no milk, no oil, no salt water, no raw egg, no home remedy. If the mouth is burning, the person may rinse the mouth with clean water and spit it out.
+4. Go to the clinic NOW. Take the bottle, packet or plant along, so that the health worker knows what it was. Say when it happened.
+5. If the person is very sleepy or does not answer but is breathing: lay them on their side (recovery position), stay with them and get help. If they do not breathe normally: an adult starts chest pushes.
+
+Poison on the skin or in the eye
+- Take off clothes that the poison has wet, without touching the wet part with bare hands if possible.
+- Skin: wash with plenty of clean water and soap for 15 minutes.
+- Eye: let clean water run gently over the open eye for 15 minutes, from the nose side outward, so that it does not run into the other eye. Do not rub. Then go to the clinic.
+
+Smoke or gas from a fire in a closed room
+- Signs: headache, dizziness, feeling sick, great sleepiness, several people in the same room unwell at the same time.
+- Get everyone out into fresh air at once. Open the door and window. Do not stay in the room yourself.
+- Someone who is confused, cannot be woken or has trouble breathing: clinic NOW; if they do not answer, treat as collapsed.
+- Never sleep in a closed room with burning charcoal or an open fire. Put the fire out or take it outside before sleeping; a stove needs a chimney pipe to the outside and a room needs an opening for air.
+
+Go to the clinic NOW after any poisoning, even if the person seems well: some poisons act hours later.
+
+Keeping poison away (prevention)
+- Fuel, pesticides, cleaning liquids and medicines are kept high up or locked away, where small children cannot reach.
+- Never put fuel or poison in a bottle for drinks, and never put food or water in an empty poison container.
+- Wash hands with soap after touching pesticide or fuel. Wash fruit and vegetables before eating.
+- Do not eat plants, berries or mushrooms that the family does not know. Do not take a medicine that was not given to you.
+
+Never write: names or doses of medicines, antidotes, home remedies, anything about alcohol or drugs, anything religious, anything that blames the family.
