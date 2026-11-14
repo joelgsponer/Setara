@@ -205,9 +205,29 @@ function M.load()
       p.strings = type(strings) == "table" and strings or {}
     elseif p.kind == "teacher" then
       M.teacher[#M.teacher + 1] = p
-    elseif p.subject and p.level then
-      M.subjects[p.subject] = M.subjects[p.subject] or {}
+    end
+  end
+  -- A level's own pack first, then optional packs that add games to it.
+  local learners = {}
+  for _, p in pairs(M.list) do
+    if p.kind ~= "core" and p.kind ~= "teacher" and p.subject and p.level then learners[#learners + 1] = p end
+  end
+  table.sort(learners, function(a, b)
+    if (a.optional and 1 or 0) ~= (b.optional and 1 or 0) then return not a.optional end
+    return a.pack < b.pack
+  end)
+  for _, p in ipairs(learners) do
+    for _, game in ipairs(p.games or {}) do game.pack = p end
+    M.subjects[p.subject] = M.subjects[p.subject] or {}
+    local first = M.subjects[p.subject][p.level]
+    if not first then
+      -- the place works on a copy of the list, so that added games never
+      -- change what the pack itself says it holds
+      p.all_games = {}
+      for i, game in ipairs(p.games or {}) do p.all_games[i] = game end
       M.subjects[p.subject][p.level] = p
+    else
+      for _, game in ipairs(p.games or {}) do first.all_games[#first.all_games + 1] = game end
     end
   end
   table.sort(M.teacher, function(a, b) return (a.level or 0) < (b.level or 0) end)

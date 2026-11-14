@@ -551,6 +551,10 @@ def build_learner(pack: Pack) -> dict:
     subject, level = meta.get("subject"), meta.get("level")
     if subject not in SUBJECTS or not isinstance(level, int) or not 1 <= level <= SUBJECTS.get(subject, 0):
         pack.report.error(f"{pack.where}/pack.json", f"bad subject/level {subject!r}/{level!r}")
+    elif meta.get("optional"):
+        # an optional pack sits beside a level: garden-4-rights adds games to Garden level 4
+        if not re.match(rf"^{subject}-{level}-[a-z0-9]+$", pack.id):
+            pack.report.error(f"{pack.where}/pack.json", f"an optional pack is named {subject}-{level}-<name>, got {pack.id!r}")
     elif pack.id != f"{subject}-{level}":
         pack.report.error(f"{pack.where}/pack.json", f"pack must be {subject}-{level}, got {pack.id!r}")
     items = []
@@ -798,10 +802,11 @@ def build(content: Path, out_dir: Path | None, tts: str | None = None, only: lis
             continue
         seen[pack.id] = src
         place = (pack.meta.get("subject"), pack.meta.get("level"), pack.meta.get("kind", "learner"))
-        if place[2] == "learner" and place in seen:
+        if place[2] == "learner" and place in seen and not pack.meta.get("optional"):
             report.error(f"{where}/pack.json", f"subject and level already used by {seen[place]}")
             continue
-        seen[place] = src
+        if not pack.meta.get("optional"):
+            seen[place] = src
         kind = pack.meta.get("kind", "learner")
         before = len(report.errors)
         builders = {"learner": build_learner, "teacher": build_teacher, "core": build_core}

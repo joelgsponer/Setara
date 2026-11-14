@@ -112,7 +112,10 @@ are separated with `|`.
 - `"say": "fa"` makes an items-derived game speak the Dari column (for the
   Dari subject). The default is `en`.
 - `"optional": true` at the top marks a pack shipped only where the local
-  team approves it.
+  team approves it. An optional pack is named `<subject>-<level>-<name>`
+  (for example `garden-4-rights`) and adds its games to that level of that
+  place. It is a separate zip: leave it off the card and nothing of it is
+  there.
 
 ## items.csv, the word bank
 

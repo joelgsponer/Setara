@@ -25,7 +25,7 @@ end
 function Place:load()
   self.pack = packs.subjects[self.subject][self.level]
   self.games = {}
-  for _, game in ipairs(self.pack.games or {}) do
+  for _, game in ipairs(self.pack.all_games or self.pack.games or {}) do
     if #(game.rounds or {}) > 0 then self.games[#self.games + 1] = game end
   end
   self.col = math.min(self.col, math.max(1, #self.games))
@@ -64,7 +64,7 @@ end
 function Place:speak()
   local game = self:selected_game()
   if game then
-    audio.say(packs.clips(self.pack, game.title_audio))
+    audio.say(packs.clips(game.pack or self.pack, game.title_audio))
   elseif self.row == 0 then
     local chip = self:chips()[self.chip] or {}
     if chip.kind == "level" then audio.say(packs.string("level_" .. chip.level).audio)
@@ -128,7 +128,8 @@ function Place:input(b)
     local game = self:selected_game()
     if game then
       store.progress.level[self.subject] = self.level
-      app.push(require("scenes.play").new({ pack = self.pack, game = game, round_id = next_round(game), pair = app.pair }))
+      app.push(require("scenes.play").new({ pack = game.pack or self.pack, game = game, round_id = next_round(game),
+        pair = app.pair }))
     end
     return
   end
@@ -213,7 +214,7 @@ function Place:draw()
       local tx, ty = 14 + col * (tw + 8), 110 + (row - first) * (th + 8)
       local selected = self.row == row + 1 and self.col == col + 1
       ui.card(tx, ty, tw, th, { selected = selected })
-      if game.icon then ui.thing(game.icon, self.pack.root, tx + 26, ty + 8, 95, 92) end
+      if game.icon then ui.thing(game.icon, (game.pack or self.pack).root, tx + 26, ty + 8, 95, 92) end
       ui.set(ui.c.ink)
       if game.title_fa and game.title_fa[1] then
         text.centered("fabold", game.title_fa[1], tx + 4, ty + 98, tw - 8, 44, 24)

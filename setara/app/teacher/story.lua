@@ -14,10 +14,10 @@ function Story.new()
   for _, subject in ipairs({ "fa", "en", "garden" }) do
     for _, level in ipairs(packs.levels(subject)) do
       local pack = packs.subjects[subject][level]
-      for _, game in ipairs(pack.games or {}) do
+      for _, game in ipairs(pack.all_games or pack.games or {}) do
         if game.engine == "story" then
           for i, id in ipairs(game.rounds or {}) do
-            self.list[#self.list + 1] = { pack = pack, game = game, id = id, n = i, subject = subject, level = level }
+            self.list[#self.list + 1] = { pack = game.pack or pack, game = game, id = id, n = i, subject = subject, level = level }
           end
         end
       end

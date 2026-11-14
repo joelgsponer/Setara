@@ -44,7 +44,7 @@ function Home:count()
   for _, p in ipairs(PLACES) do
     local have, max = 0, 0
     for _, pack in pairs(packs.subjects[p.subject] or {}) do
-      for _, game in ipairs(pack.games or {}) do
+      for _, game in ipairs(pack.all_games or pack.games or {}) do
         for _, id in ipairs(game.rounds or {}) do
           max = max + 3
           have = have + store.stars(id)
