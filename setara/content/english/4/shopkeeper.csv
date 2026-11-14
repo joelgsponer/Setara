@@ -1,0 +1,51 @@
+round,intro_fa,say_en,say_fa,goods,target,units,mode,help_fa
+# Level 4: the child is shopkeeper (count) and customer (pay). Round = the unit whose language it uses.
+# 04: pay round sums with 10, 20 and 50.
+04,حالا تو مشتری هستی. قیمت را گوش کن و همان قدر پول روی میز بگذار.,f: How much is the tea? // m: It is thirty afghani.,,tea,30,10|20|50,pay,چای چند است؟ سی افغانی است.
+04,,f: How much is the soap? // m: It is twenty afghani.,,soap,20,10|20|50,pay,صابون چند است؟ بیست افغانی است.
+04,,m: How much is the book? // f: It is seventy afghani.,,book,70,10|20|50,pay,کتاب چند است؟ هفتاد افغانی است.
+04,,m: How much is the bread? // f: It is ten afghani.,,bread,10,10|20|50,pay,نان چند است؟ ده افغانی است.
+04,,f: How much is the basket? // m: It is ninety afghani.,,basket,90,10|20|50,pay,سبد چند است؟ نود افغانی است.
+04,,m: How much is the milk? // f: It is forty afghani.,,milk,40,10|20|50,pay,شیر چند است؟ چهل افغانی است.
+# 05: How many ... do you want? The child counts the fruit onto the scale.
+05,تو دکاندار هستی. گوش کن که مشتری چند دانه می‌خواهد، و همان قدر روی ترازو بگذار.,"f: How many pears do you want? // m: Six pears, please.",,pear,6,1,count,چند ناک می‌خواهید؟ لطفاً شش ناک.
+05,,"m: How many lemons do you want? // f: Twelve lemons, please.",,lemon,12,1,count,چند لیمو می‌خواهید؟ لطفاً دوازده لیمو.
+05,,"f: How many bananas do you want? // m: Nine bananas, please.",,banana,9,1,count,چند کیله می‌خواهید؟ لطفاً نُه کیله.
+05,,"m: How many peaches do you want? // f: Fifteen peaches, please.",,peach,15,1,count,چند شفتالو می‌خواهید؟ لطفاً پانزده شفتالو.
+05,,"f: How many melons do you want? // m: Two melons, please.",,melon,2,1,count,چند خربوزه می‌خواهید؟ لطفاً دو خربوزه.
+05,,"m: How many pears do you want? // f: Eleven pears, please.",,pear,11,1,count,چند ناک می‌خواهید؟ لطفاً یازده ناک.
+# 07: kilos. The child puts one-kilo weights on the scale.
+07,مشتری چند کیلو می‌خواهد؟ گوش کن و همان قدر سنگ یک کیلویی روی ترازو بگذار.,"Two kilos of rice, please.",,kilo,2,1,count,لطفاً دو کیلو برنج.
+07,,"Five kilos of potatoes, please.",,kilo,5,1,count,لطفاً پنج کیلو کچالو.
+07,,"f: How much flour do you want? // m: Seven kilos, please.",,kilo,7,1,count,چقدر آرد می‌خواهید؟ لطفاً هفت کیلو.
+07,,"Three kilos of onions, please.",,kilo,3,1,count,لطفاً سه کیلو پیاز.
+07,,"m: How much sugar do you want? // f: Four kilos, please.",,kilo,4,1,count,چقدر بوره می‌خواهید؟ لطفاً چهار کیلو.
+07,,"One kilo of meat, please.",,kilo,1,1,count,لطفاً یک کیلو گوشت.
+# 09: bottles, packets, jars and tins.
+09,,"Three bottles of water, please.",,bottle,3,1,count,لطفاً سه بوتل آب.
+09,,"Five packets of tea, please.",,packet,5,1,count,لطفاً پنج پاکت چای.
+09,,"Two jars of honey, please.",,jar,2,1,count,لطفاً دو مرتبان عسل.
+09,,"Eight tins of beans, please.",,can,8,1,count,لطفاً هشت قطی لوبیا.
+09,,"Four bottles of oil, please.",,bottle,4,1,count,لطفاً چهار بوتل روغن.
+09,,"Ten packets of salt, please.",,packet,10,1,count,لطفاً ده پاکت نمک.
+# 12: pay any price up to 100.
+12,حالا تو مشتری هستی. قیمت را گوش کن و همان قدر پول روی میز بگذار.,f: How much is the cheese? // m: It is sixty-five afghani.,,cheese,65,5|10|20|50,pay,پنیر چند است؟ شصت و پنج افغانی است.
+12,,m: How much is a kilo of rice? // f: It is ninety afghani.,,rice,90,5|10|20|50,pay,یک کیلو برنج چند است؟ نود افغانی است.
+12,,f: How much are the eggs? // m: They are forty-five afghani.,,egg,45,5|10|20|50,pay,تخم مرغ چند است؟ چهل و پنج افغانی است.
+12,,m: How much is the salt? // f: It is fifteen afghani.,,salt,15,5|10|20|50,pay,نمک چند است؟ پانزده افغانی است.
+12,,f: How much is a bottle of oil? // m: It is eighty-five afghani.,,oil_can,85,5|10|20|50,pay,یک بوتل روغن چند است؟ هشتاد و پنج افغانی است.
+12,,m: How much are the lentils? // f: They are fifty-five afghani.,,lentils,55,5|10|20|50,pay,دال چند است؟ پنجاه و پنج افغانی است.
+# 18: prices above one hundred.
+18,حالا تو مشتری هستی. قیمت را گوش کن و همان قدر پول روی میز بگذار.,f: How much is the scarf? // m: It is three hundred afghani.,,scarf_red,300,10|50|100,pay,چادر چند است؟ سه‌صد افغانی است.
+18,,m: How much is the lamp? // f: It is one hundred and fifty afghani.,,lamp,150,10|50|100,pay,چراغ چند است؟ یکصد و پنجاه افغانی است.
+18,,f: How much is the shovel? // m: It is two hundred and twenty afghani.,,shovel,220,10|50|100,pay,بیل چند است؟ دوصد و بیست افغانی است.
+18,,m: How much is it all together? // f: It is one hundred and eighty afghani.,,basket,180,10|50|100,pay,جمله چند می‌شود؟ یکصد و هشتاد افغانی می‌شود.
+18,,f: Can you make it cheaper? // m: All right. Four hundred afghani.,,carpet,400,10|50|100,pay,ارزانتر کرده می‌توانید؟ خوب است. چهارصد افغانی.
+18,,m: How much is the hammer? // f: It is one hundred and ten afghani.,,hammer,110,10|50|100,pay,چکش چند است؟ یکصد و ده افغانی است.
+# 20: the whole dialogue: first serve the customer, then take the same customer's place and pay.
+20,اول تو دکاندار هستی: همان قدر که مشتری می‌خواهد روی ترازو بگذار. بعد تو مشتری هستی: پولش را بده.,"f: Do you have any eggs? // m: Yes, I have some. How many do you want? // f: Eight, please.",,egg,8,1,count,شما تخم مرغ دارید؟ بلی، دارم. چند دانه می‌خواهید؟ لطفاً هشت دانه.
+20,,f: How much is it? // m: Eight eggs are eighty afghani.,,egg,80,10|20|50,pay,چند می‌شود؟ هشت تخم مرغ هشتاد افغانی می‌شود.
+20,,"m: Can I have some lemons, please? // f: Of course. How many? // m: Five, please.",,lemon,5,1,count,لطفاً چند لیمو بدهید. البته. چند دانه؟ لطفاً پنج دانه.
+20,,m: How much are they? // f: They are twenty-five afghani.,,lemon,25,5|10|20|50,pay,چند است؟ بیست و پنج افغانی است.
+20,,"f: Three bottles of juice, please. // m: Here you are. Anything else? // f: No, thank you. That's all.",,juice,3,1,count,لطفاً سه بوتل آب میوه. بفرمایید. چیز دیگر؟ نه، تشکر. همین قدر بس است.
+20,,f: How much is it all together? // m: It is one hundred and twenty afghani.,,juice,120,10|20|50|100,pay,جمله چند می‌شود؟ یکصد و بیست افغانی می‌شود.

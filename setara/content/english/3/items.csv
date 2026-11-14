@@ -1,0 +1,243 @@
+unit,key,en,fa,picture,tags
+# English level 3 "My day". unit = classroom lesson number.
+# Rows tagged review repeat an earlier word so that the picture game has at least four pictures in the unit.
+
+# 01 Get up!
+01,get_up,get up,از خواب خیستن,wake_up,routine
+01,wash,wash,شستن,wash_face,routine
+01,brush_my_teeth,brush my teeth,دندان‌هایم را برس می‌کنم,tb_brush,routine
+01,face,face,روی,face,body
+01,towel,towel,دستمال,towel,thing
+01,teeth,teeth,دندان‌ها,,body
+01,i_get_up,I get up.,من از خواب می‌خیزم.,,phrase
+01,i_wash_my_face,I wash my face.,من رویم را می‌شویم.,,phrase
+01,i_brush_my_teeth,I brush my teeth.,من دندان‌هایم را برس می‌کنم.,,phrase
+01,get_up_dialogue,"f: Good morning! Get up! // m: Good morning, mother.",صبح بخیر! از خواب بخیز! صبح بخیر، مادر.,,dialogue
+
+# 02 Breakfast and school
+02,breakfast,breakfast,نان صبح,breakfast,food
+02,eat,eat,خوردن,eating,routine
+02,drink,drink,نوشیدن,drink,routine
+02,school,school,مکتب,school,place
+02,lunch,lunch,نان چاشت,lunch,food
+02,i_eat_breakfast,I eat breakfast.,من نان صبح می‌خورم.,,phrase
+02,i_drink_tea,I drink tea.,من چای می‌نوشم.,,phrase
+02,i_go_to_school,I go to school.,من به مکتب می‌روم.,,phrase
+02,i_eat_lunch,I eat lunch.,من نان چاشت می‌خورم.,,phrase
+02,breakfast_dialogue,f: I eat bread and I drink tea. // m: I eat an egg and I drink milk.,من نان می‌خورم و چای می‌نوشم. من تخم مرغ می‌خورم و شیر می‌نوشم.,,dialogue
+
+# 03 Morning and night
+03,morning,morning,صبح,morning,time
+03,afternoon,afternoon,بعد از چاشت,afternoon,time
+03,evening,evening,شام,evening,time
+03,night,night,شب,night,time
+03,dinner,dinner,نان شب,dinner,food
+03,play,play,بازی کردن,play,routine
+03,sleep,sleep,خوابیدن,sleep,routine
+03,in_the_morning,In the morning I go to school.,صبح من به مکتب می‌روم.,,phrase
+03,in_the_afternoon,In the afternoon I play.,بعد از چاشت من بازی می‌کنم.,,phrase
+03,at_night,At night I sleep.,شب من می‌خوابم.,,phrase
+
+# 04 Numbers 21-50 (numerals are in numbers.csv)
+04,twenty_one,twenty-one,بیست و یک,,number
+04,twenty_two,twenty-two,بیست و دو,,number
+04,thirty,thirty,سی,,number
+04,forty,forty,چهل,,number
+04,fifty,fifty,پنجاه,,number
+04,twenty_to_fifty,"Twenty, thirty, forty, fifty.",بیست، سی، چهل، پنجاه.,,phrase
+04,r04_breakfast,breakfast,نان صبح,breakfast,review
+04,r04_school,school,مکتب,school,review
+04,r04_morning,morning,صبح,morning,review
+04,r04_night,night,شب,night,review
+
+# 05 Numbers 60-100 (numerals are in numbers.csv)
+05,sixty,sixty,شصت,,number
+05,seventy,seventy,هفتاد,,number
+05,eighty,eighty,هشتاد,,number
+05,ninety,ninety,نود,,number
+05,one_hundred,one hundred,صد,,number
+05,sixty_to_hundred,"Sixty, seventy, eighty, ninety, one hundred.",شصت، هفتاد، هشتاد، نود، صد.,,phrase
+05,r05_eat,eat,خوردن,eating,review
+05,r05_drink,drink,نوشیدن,drink,review
+05,r05_lunch,lunch,نان چاشت,lunch,review
+05,r05_dinner,dinner,نان شب,dinner,review
+
+# 06 What time is it?
+06,one_oclock,one o'clock,ساعت یک,clock_1,time
+06,three_oclock,three o'clock,ساعت سه,clock_3,time
+06,six_oclock,six o'clock,ساعت شش,clock_6,time
+06,nine_oclock,nine o'clock,ساعت نُه,clock_9,time
+06,twelve_oclock,twelve o'clock,ساعت دوازده,clock_12,time
+06,time,time,وقت,,time
+06,what_time_is_it,What time is it?,ساعت چند است؟,,phrase
+06,it_is_seven_oclock,It is seven o'clock.,ساعت هفت است.,,phrase
+06,time_dialogue_1,f: What time is it? // m: It is ten o'clock.,ساعت چند است؟ ساعت ده است.,,dialogue
+06,time_dialogue_2,m: What time is it? // f: It is four o'clock.,ساعت چند است؟ ساعت چهار است.,,dialogue
+
+# 07 My day by the clock
+07,bell,bell,زنگ,bell,thing
+07,early,early,زود,,time
+07,late,late,ناوقت,,time
+07,i_get_up_at_six,I get up at six o'clock.,من ساعت شش از خواب می‌خیزم.,,phrase
+07,i_go_to_school_at_seven,I go to school at seven o'clock.,من ساعت هفت به مکتب می‌روم.,,phrase
+07,i_go_to_bed_at_nine,I go to bed at nine o'clock.,من ساعت نُه به خواب می‌روم.,,phrase
+07,late_dialogue,m: It is eight o'clock. I am late! // f: Go to school now!,ساعت هشت است. من ناوقت کرده‌ام! حالا به مکتب برو!,,dialogue
+07,r07_get_up,get up,از خواب خیستن,wake_up,review
+07,r07_school,school,مکتب,school,review
+07,r07_sleep,sleep,خوابیدن,sleep,review
+
+# 08 Days of the week 1 (the days are practised in day_journey.csv and sentence_train.csv)
+08,saturday,Saturday,شنبه,,day
+08,sunday,Sunday,یکشنبه,,day
+08,monday,Monday,دوشنبه,,day
+08,tuesday,Tuesday,سه‌شنبه,,day
+08,today,today,امروز,,day
+08,day_dialogue_1,f: What day is it today? // m: Today is Monday.,امروز کدام روز است؟ امروز دوشنبه است.,,dialogue
+08,r08_play,play,بازی کردن,play,review
+08,r08_evening,evening,شام,evening,review
+08,r08_afternoon,afternoon,بعد از چاشت,afternoon,review
+08,r08_bell,bell,زنگ,bell,review
+
+# 09 Days of the week 2
+09,wednesday,Wednesday,چهارشنبه,,day
+09,thursday,Thursday,پنجشنبه,,day
+09,friday,Friday,جمعه,,day
+09,week,week,هفته,,day
+09,tomorrow,tomorrow,فردا,,day
+09,on_friday_i_dont_go,On Friday I don't go to school.,روز جمعه من به مکتب نمی‌روم.,,phrase
+09,day_dialogue_2,m: What day is it tomorrow? // f: Tomorrow is Thursday.,فردا کدام روز است؟ فردا پنجشنبه است.,,dialogue
+09,r09_wash,wash,شستن,wash_face,review
+09,r09_lunch,lunch,نان چاشت,lunch,review
+09,r09_night,night,شب,night,review
+
+# 10 Review: my day
+10,this_is_my_day,This is my day.,این روز من است.,,phrase
+10,i_get_up_and_wash,I get up at six o'clock and I wash my face.,من ساعت شش از خواب می‌خیزم و رویم را می‌شویم.,,phrase
+10,in_the_evening_i_eat_dinner,In the evening I eat dinner.,شام من نان شب می‌خورم.,,phrase
+10,review_dialogue_1,f: What time is it? // m: It is eight o'clock.,ساعت چند است؟ ساعت هشت است.,,dialogue
+10,review_dialogue_2,m: What day is it today? // f: Today is Wednesday.,امروز کدام روز است؟ امروز چهارشنبه است.,,dialogue
+10,r10_breakfast,breakfast,نان صبح,breakfast,review
+10,r10_brush,brush my teeth,دندان‌هایم را برس می‌کنم,tb_brush,review
+10,r10_morning,morning,صبح,morning,review
+10,r10_six_oclock,six o'clock,ساعت شش,clock_6,review
+10,r10_sleep,sleep,خوابیدن,sleep,review
+
+# 11 Clothes 1
+11,clothes,clothes,کالا,clean_clothes,clothes
+11,shirt,shirt,پیراهن,shirt,clothes
+11,trousers,trousers,تنبان,trousers,clothes
+11,dress,dress,پیراهن زنانه,dress,clothes
+11,scarf,scarf,چادر,scarf,clothes
+11,shoes,shoes,بوت,shoes,clothes
+11,wear,wear,پوشیدن,,clothes
+11,i_wear_a_shirt,I wear a shirt and trousers.,من پیراهن و تنبان می‌پوشم.,,phrase
+11,i_wear_a_dress,I wear a dress and a scarf.,من پیراهن زنانه و چادر می‌پوشم.,,phrase
+11,clothes_dialogue,m: What is this? // f: This is my scarf.,این چیست؟ این چادر من است.,,dialogue
+
+# 12 Clothes 2
+12,socks,socks,جراب,socks,clothes
+12,sandals,sandals,چپلک,sandals,clothes
+12,hat,hat,کلاه,hat,clothes
+12,waistcoat,waistcoat,واسکت,waistcoat,clothes
+12,coat,coat,بالاپوش,coat,clothes
+12,pocket,pocket,جیب,pocket,clothes
+12,button,button,دکمه,button,clothes
+12,put_on_your_shoes,Put on your shoes.,بوت‌هایت را بپوش.,,phrase
+12,take_off_your_shoes,Take off your shoes.,بوت‌هایت را بکش.,,phrase
+12,colour_dialogue_3,f: What colour is your hat? // m: It is red.,کلاه تو چه رنگ است؟ سرخ است.,,dialogue
+
+# 13 She gets up early
+13,cook,cook,پختن,cook,work
+13,work,work,کار کردن,work,work
+13,carry,carry,بردن,carry,work
+13,clean,clean,پاک کردن,sweep,work
+13,help,help,کمک کردن,,work
+13,my_mother_cooks,My mother cooks.,مادرم غذا می‌پزد.,,phrase
+13,my_father_works,My father works.,پدرم کار می‌کند.,,phrase
+13,she_gets_up_at_five,She gets up at five o'clock.,او ساعت پنج از خواب می‌خیزد.,,phrase
+13,he_goes_to_school,He goes to school.,او به مکتب می‌رود.,,phrase
+13,my_sister_carries_water,My sister carries water.,خواهرم آب می‌آورد.,,phrase
+
+# 14 Do you play? Does she play?
+14,kite,kite,کاغذپران,kite,thing
+14,radio,radio,رادیو,radio,thing
+14,notebook,notebook,کتابچه,notebook,thing
+14,homework,homework,کار خانگی,,school
+14,i_do_my_homework,I do my homework every day.,من هر روز کار خانگی‌ام را می‌کنم.,,phrase
+14,he_doesnt_go,He doesn't go to school on Friday.,او روز جمعه به مکتب نمی‌رود.,,phrase
+14,do_dialogue_1,"f: Do you go to school? // m: Yes, I do.",تو به مکتب می‌روی؟ بلی، می‌روم.,,dialogue
+14,does_dialogue_1,"m: Does she play? // f: Yes, she does.",او بازی می‌کند؟ بلی، می‌کند.,,dialogue
+14,does_dialogue_2,"f: Does he cook? // m: No, he doesn't.",او غذا می‌پزد؟ نه، نمی‌پزد.,,dialogue
+14,r14_play,play,بازی کردن,play,review
+
+# 15 My home 1
+15,room,room,اطاق,room,home
+15,kitchen,kitchen,آشپزخانه,kitchen,home
+15,yard,yard,حویلی,courtyard,home
+15,roof,roof,بام,roof,home
+15,wall,wall,دیوار,wall,home
+15,where,Where?,کجا؟,,phrase
+15,this_is_the_kitchen,This is the kitchen.,این آشپزخانه است.,,phrase
+15,my_mother_is_in_the_kitchen,My mother is in the kitchen.,مادرم در آشپزخانه است.,,phrase
+15,i_am_at_home,I am at home.,من در خانه هستم.,,phrase
+15,where_dialogue_1,f: Where is your father? // m: He is in the yard.,پدرت کجاست؟ او در حویلی است.,,dialogue
+
+# 16 My home 2
+16,lamp,lamp,چراغ,lamp,home
+16,stove,stove,دیگدان,stove,home
+16,mattress,mattress,توشک,mattress,home
+16,candle,candle,شمع,candle,home
+16,mirror,mirror,آیینه,mirror,home
+16,clock,clock,ساعت,clock_10,home
+16,the_lamp_is_in_the_room,The lamp is in the room.,چراغ در اطاق است.,,phrase
+16,i_sleep_on_a_mattress,I sleep on a mattress.,من روی توشک می‌خوابم.,,phrase
+16,give_me_the_candle,"Give me the candle, please.",لطفاً شمع را به من بده.,,phrase
+16,home_dialogue_2,m: What is this? // f: This is a mirror.,این چیست؟ این آیینه است.,,dialogue
+
+# 17 Where is it?
+17,in,in,در,pos_in,place
+17,on,on,روی,pos_on,place
+17,under,under,زیر,pos_under,place
+17,next_to,next to,پهلوی,pos_next_to,place
+17,where_is_it,Where is it?,کجاست؟,,phrase
+17,the_ball_is_in_the_box,The ball is in the box.,توپ در صندوق است.,,phrase
+17,the_cat_is_under_the_table,The cat is under the table.,پشک زیر میز است.,,phrase
+17,the_lamp_is_next_to_the_bed,The lamp is next to the bed.,چراغ پهلوی تخت خواب است.,,phrase
+17,where_dialogue_2,f: Where is my shoe? // m: It is under the bed.,بوت من کجاست؟ زیر تخت خواب است.,,dialogue
+17,where_dialogue_3,m: Where is the cat? // f: It is on the roof.,پشک کجاست؟ روی بام است.,,dialogue
+
+# 18 I can read: words with a and o (reading is practised in sound_catcher, sentence_train, memory and baskets)
+18,fox,fox,روباه,fox,read
+18,r18_cat,cat,پشک,cat,read
+18,r18_hat,hat,کلاه,hat,read
+18,r18_bag,bag,بکس,bag,read
+18,r18_dog,dog,سگ,dog,read
+18,r18_pot,pot,دیگ,pot,read
+18,r18_box,box,صندوق,box,read
+18,i_can_read,I can read.,من خوانده می‌توانم.,,phrase
+18,a_cat_and_a_hat,A cat and a hat.,یک پشک و یک کلاه.,,phrase
+18,a_fox_in_a_box,A fox in a box.,یک روباه در صندوق.,,phrase
+
+# 19 I can read: words with e, i and u
+19,jug,jug,کوزه,water_jug,read
+19,r19_pen,pen,قلم,pen,read
+19,r19_hen,hen,مرغ,hen,read
+19,r19_bed,bed,تخت خواب,bed,read
+19,r19_leg,leg,لنگ,leg,read
+19,r19_sun,sun,آفتاب,sun,read
+19,r19_cup,cup,پیاله,cup,read
+19,a_red_hen,A red hen.,یک مرغ سرخ.,,phrase
+19,ten_pens,Ten pens.,ده قلم.,,phrase
+19,six_big_jugs,Six big jugs.,شش کوزهٔ کلان.,,phrase
+
+# 20 Review: my day, my week
+20,this_is_my_week,This is my week.,این هفتهٔ من است.,,phrase
+20,from_saturday_to_thursday,I go to school from Saturday to Thursday.,من از شنبه تا پنجشنبه به مکتب می‌روم.,,phrase
+20,review_dialogue_3,"f: Do you help your mother? // m: Yes, I do.",تو به مادرت کمک می‌کنی؟ بلی، می‌کنم.,,dialogue
+20,review_dialogue_4,m: What time does she get up? // f: She gets up at six o'clock.,او ساعت چند از خواب می‌خیزد؟ او ساعت شش از خواب می‌خیزد.,,dialogue
+20,review_dialogue_5,f: Where is your brother? // m: He is in the kitchen.,برادرت کجاست؟ او در آشپزخانه است.,,dialogue
+20,r20_kite,kite,کاغذپران,kite,review
+20,r20_shirt,shirt,پیراهن,shirt,review
+20,r20_lamp,lamp,چراغ,lamp,review
+20,r20_cook,cook,پختن,cook,review
+20,r20_room,room,اطاق,room,review

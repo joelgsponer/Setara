@@ -1,0 +1,113 @@
+{
+  "pack": "en-3",
+  "subject": "en",
+  "level": 3,
+  "version": 1,
+  "title_en": "English 3: My day",
+  "title_fa": "انگلیسی ۳: روز من",
+  "games": [
+    {
+      "id": "word_stall",
+      "engine": "listen_pick",
+      "letter": "a",
+      "title_en": "Word Stall",
+      "title_fa": "دکان کلمه‌ها",
+      "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+      "icon": "apple",
+      "v1": true,
+      "source": "items"
+    },
+    {
+      "id": "echo",
+      "engine": "say_it",
+      "letter": "b",
+      "title_en": "Echo",
+      "title_fa": "پژواک",
+      "intro_fa": "گوش کن. بعد خودت بلند بگو. باز گوش کن و ببین که درست گفتی یا نه.",
+      "icon": "say",
+      "v1": true,
+      "source": "items"
+    },
+    {
+      "id": "sound_catcher",
+      "engine": "catch",
+      "letter": "c",
+      "title_en": "Sound Catcher",
+      "title_fa": "صدا را بگیر",
+      "intro_fa": "گوش کن. فقط چیزی را بگیر که گفته می‌شود. چیزهای دیگر را نگیر.",
+      "icon": "listen",
+      "sheet": "sound_catcher.csv"
+    },
+    {
+      "id": "sentence_train",
+      "engine": "builder",
+      "letter": "d",
+      "title_en": "Sentence Train",
+      "title_fa": "قطار جمله",
+      "intro_fa": "جمله را گوش کن. بعد کلمه‌ها را به ترتیب درست پشت هم بگذار.",
+      "icon": "train",
+      "sheet": "sentence_train.csv"
+    },
+    {
+      "id": "shopkeeper",
+      "engine": "market",
+      "letter": "e",
+      "title_en": "Shopkeeper",
+      "title_fa": "دکاندار",
+      "intro_fa": "تو مشتری هستی. گوش کن که چند افغانی است، و همان قدر پول بده.",
+      "icon": "shop",
+      "sheet": "shopkeeper.csv"
+    },
+    {
+      "id": "radio_stories",
+      "engine": "story",
+      "letter": "f",
+      "title_en": "Radio Stories",
+      "title_fa": "قصه‌های رادیو",
+      "intro_fa": "قصه را گوش کن. وقتی سوال آمد، تصویر درست را انتخاب کن.",
+      "icon": "radio",
+      "sheet": "radio_stories.csv"
+    },
+    {
+      "id": "number_stall",
+      "engine": "listen_pick",
+      "letter": "g",
+      "title_en": "Number Stall",
+      "title_fa": "دکان عددها",
+      "intro_fa": "گوش کن و عدد درست را انتخاب کن.",
+      "icon": "count",
+      "sheet": "numbers.csv"
+    },
+    {
+      "id": "day_journey",
+      "engine": "journey",
+      "letter": "h",
+      "title_en": "Day Journey",
+      "title_fa": "سفر روز",
+      "intro_fa": "گوش کن و جواب درست را انتخاب کن. با هر جواب درست یک قدم پیش می‌روی.",
+      "icon": "clock_7",
+      "read_choices": true,
+      "sheet": "day_journey.csv"
+    },
+    {
+      "id": "memory",
+      "engine": "pairs",
+      "letter": "i",
+      "title_en": "Memory",
+      "title_fa": "جوره‌ها",
+      "intro_fa": "دو کارت را باز کن. جوره‌هایی را پیدا کن که با هم یکی هستند.",
+      "icon": "star",
+      "sheet": "memory.csv"
+    },
+    {
+      "id": "baskets",
+      "engine": "sorter",
+      "letter": "j",
+      "title_en": "Baskets",
+      "title_fa": "سبدها",
+      "intro_fa": "گوش کن و هر چیز را در سبد درست بینداز.",
+      "icon": "basket",
+      "sheet": "baskets.csv"
+    }
+  ]
+}

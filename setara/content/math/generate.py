@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generates the math packs (levels 1 to 3): every CSV sheet, pack.json and
+"""Generates the math packs (levels 1 to 5): every CSV sheet, pack.json and
 pictures.txt in this folder, and the English of every Dari text in them
 (content/i18n/math.csv, for the English mode of the app).
 
@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import csv
 import io
+from fractions import Fraction
 import itertools
 import json
 import random
@@ -41,10 +42,27 @@ DARI_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
 
 
 def fa(n: int) -> str:
-    """0..1000 in Afghan Dari words."""
-    assert isinstance(n, int) and 0 <= n <= 1000, n
+    """0..99,999,999 in Afghan Dari words."""
+    assert isinstance(n, int) and 0 <= n < 100_000_000, n
     if n == 1000:
         return "هزار"
+    if n > 1000:
+        # یک هزار و دوصد، ده هزار، صد هزار، یک میلیون (levels 4 and 5)
+        m, rest = divmod(n, 1_000_000)
+        th, low = divmod(rest, 1000)
+        groups = sum(1 for g in (m, th, low) if g)
+
+        def part(k: int) -> str:
+            return HUNDREDS[1] if k == 100 and groups > 1 else fa(k)
+
+        parts = []
+        if m:
+            parts.append(part(m) + " میلیون")
+        if th:
+            parts.append(part(th) + " هزار")
+        if low:
+            parts.append(part(low))
+        return " و ".join(parts)
     if n == 100:
         return "صد"
     parts = []
@@ -110,6 +128,15 @@ def _test_numbers() -> None:
     assert dari(0) == "۰" and dari(1000) == "۱۰۰۰" and dari(907) == "۹۰۷"
     for n in (0, 7, 20, 345, 1000):
         assert value(W(n)) == n and value(D(n)) == n
+    big = {
+        1001: "یک هزار و یک", 1100: "یک هزار و یکصد", 1500: "یک هزار و پنج\u200cصد", 2000: "دو هزار",
+        2345: "دو هزار و سه\u200cصد و چهل و پنج", 10000: "ده هزار", 12500: "دوازده هزار و پنج\u200cصد",
+        100000: "صد هزار", 100500: "یکصد هزار و پنج\u200cصد", 250000: "دوصد و پنجاه هزار",
+        1000000: "یک میلیون", 1100000: "یک میلیون و یکصد هزار", 2000001: "دو میلیون و یک",
+    }
+    for n, words in big.items():
+        assert fa(n) == words, (n, fa(n), words)
+    assert len({fa(n) for n in range(1001, 20001)}) == 19000, "two numbers share a name"
 
 
 # ---------------------------------------------------------------------------
@@ -139,7 +166,7 @@ def tr(dari_text: str, english: str) -> str:
 def used_en(row: dict) -> None:
     """Note the Dari texts of a row; each must have been made with tr()."""
     texts = [v for c, v in row.items() if c.endswith("_fa") and v]
-    for col in ("show", "answer", "distractors", "thing", "basket", "tiles", "extra"):
+    for col in ("show", "answer", "distractors", "thing", "basket", "tiles", "extra", "a", "b", "targets", "others"):
         texts += [t[2:] for t in row.get(col, "").split("|") if t.startswith("f:") and DARI_LETTER.search(t)]
     for text in texts:
         key = " ".join(text.split())
@@ -498,6 +525,8 @@ def similar_numbers(x: int, rng: random.Random, lo: int, hi: int) -> list[int]:
 
 
 def flock(level: int) -> Sheet:
+    if level >= 4:
+        return flock45(level)
     s = Sheet(LP_COLS)
     if level == 1:
         def counting(rnd, values, script, hi=20):
@@ -652,7 +681,7 @@ def calc(a: int, op: str, b: int) -> int:
     return a + b if op == "+" else a - b if op == "-" else a * b
 
 
-def hop_item(s, rnd, intro, a, op, b, rng, hi, say=None, show="", extra_prefer=()):
+def hop_item(s, rnd, intro, a, op, b, rng, hi, say=None, show="", extra_prefer=(), script="W"):
     ans = calc(a, op, b)
     assert ans >= 0 and a >= 0 and b >= 0
     if say is None:
@@ -676,7 +705,7 @@ def hop_item(s, rnd, intro, a, op, b, rng, hi, say=None, show="", extra_prefer=(
         prefer += [(a + 1) * b, a + b, a * (b - 1)]
     wrong = near(ans, rng, 0, hi, prefer)
     hop = f"{a}{op}{b}" if op in "+-" and max(a, b, ans) <= 20 else ""
-    row = lp(s, rnd, intro, say, W(ans), [W(x) for x in wrong], show=show, help_fa=help_fa, hop=hop)
+    row = lp(s, rnd, intro, say, num(ans, script), [num(x, script) for x in wrong], show=show, help_fa=help_fa, hop=hop)
     HOP_META.append((row, a, op, b))
 
 
@@ -700,6 +729,8 @@ def money_story(s, rnd, intro, a, op, b, rng, hi):
 
 
 def hop(level: int) -> Sheet:
+    if level >= 4:
+        return hop45(level)
     s = Sheet(LP_COLS)
 
     def plain(rnd, intro, triples, hi):
@@ -855,6 +886,8 @@ def pay_help(target, units) -> str:
 
 
 def market(level: int) -> Sheet:
+    if level >= 4:
+        return market45(level)
     s = Sheet(MARKET_COLS)
     if level == 1:
         ranges = [(1, 3), (2, 5), (4, 7), (5, 10), (8, 12), (10, 15)]
@@ -947,7 +980,7 @@ WEAVE_META: list[tuple[dict, list[int], list[int], str]] = []
 def seq_item(s, rnd, start, step, count, extra=(), script="W", intro=I_SEQ, table=None):
     """A run of numbers: start, start+step, ... (step may be negative)."""
     seq = [start + i * step for i in range(count)]
-    assert all(0 <= x <= 1000 for x in seq) and step != 0
+    assert all(0 <= x <= 10_000_000 for x in seq) and step != 0
     a, b, k = fa(seq[0]), fa(seq[-1]), fa(abs(step))
     if step == 1:
         say, help_fa = tr(f"از {a} تا {b} به ترتیب بشمار.", f"Count in order from {seq[0]} to {seq[-1]}."), tr("هر بار یک زیاد کن.", "Add 1 each time.")
@@ -988,6 +1021,8 @@ def _weave(s, rnd, intro, say, seq, extra, script, help_fa, kind):
 
 
 def weaver(level: int) -> Sheet:
+    if level >= 4:
+        return weaver45(level)
     s = Sheet(BUILDER_COLS)
     if level == 1:
         for a, n in [(1, 3), (1, 4), (1, 5), (2, 4), (0, 5)]:
@@ -1112,6 +1147,8 @@ SORT_META: list[tuple[dict, str, object]] = []
 
 
 def sorter(level: int) -> Sheet:
+    if level >= 4:
+        return sorter45(level)
     s = Sheet(SORTER_COLS)
 
     def shapes_round(rnd, plan):
@@ -1206,6 +1243,8 @@ MASON_META: list[tuple[dict, int]] = []
 
 
 def mason(level: int) -> Sheet:
+    if level >= 4:
+        return mason45(level)
     s = Sheet(LP_COLS)
     order = ["circle", "square", "triangle", "rectangle"]
     if level == 1:

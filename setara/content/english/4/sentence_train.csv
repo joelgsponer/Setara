@@ -1,0 +1,48 @@
+round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
+# Round = the unit whose language it uses. The child hears the sentence, builds it from the written words, and hears it again.
+# The extra tile is a word that would make the sentence wrong (is/are, many/much, some/any, can/can't).
+02,I want to buy bread.,,t:I|t:want|t:to|t:buy|t:bread,t:sell,,I want to buy bread.,,من می‌خواهم نان بخرم.
+02,He sells apples.,,t:He|t:sells|t:apples,t:sell,,He sells apples.,,او سیب می‌فروشد.
+02,What do you want?,,t:What|t:do|t:you|t:want,,,What do you want?,,شما چه می‌خواهید؟
+02,I sell bread and tea.,,t:I|t:sell|t:bread|t:and|t:tea,t:sells,,I sell bread and tea.,,من نان و چای می‌فروشم.
+02,What do you sell?,,t:What|t:do|t:you|t:sell,t:is,,What do you sell?,,شما چه می‌فروشید؟
+02,I want to buy eggs.,,t:I|t:want|t:to|t:buy|t:eggs,t:egg,,I want to buy eggs.,,من می‌خواهم تخم مرغ بخرم.
+05,How much is it?,,t:How|t:much|t:is|t:it,,,How much is it?,,قیمتش چند است؟
+05,It is ten afghani.,,t:It|t:is|t:ten|t:afghani,t:are,,It is ten afghani.,,ده افغانی است.
+05,How much is the bread?,,t:How|t:much|t:is|t:the|t:bread,t:are,,How much is the bread?,,نان چند است؟
+05,How much are the pears?,,t:How|t:much|t:are|t:the|t:pears,t:is,,How much are the pears?,,ناک‌ها چند است؟
+05,They are forty afghani.,,t:They|t:are|t:forty|t:afghani,t:is,,They are forty afghani.,,چهل افغانی است.
+05,The soap is cheap.,,t:The|t:soap|t:is|t:cheap,t:are,,The soap is cheap.,,صابون ارزان است.
+07,"A kilo of rice, please.",,t:A|t:kilo|t:of|t:rice|t:please,,,"A kilo of rice, please.",,لطفاً یک کیلو برنج.
+07,Half a kilo of meat.,,t:Half|t:a|t:kilo|t:of|t:meat,,,Half a kilo of meat.,,نیم کیلو گوشت.
+07,"Two kilos of potatoes, please.",,t:Two|t:kilos|t:of|t:potatoes|t:please,t:kilo,,"Two kilos of potatoes, please.",,لطفاً دو کیلو کچالو.
+07,The sack is heavy.,,t:The|t:sack|t:is|t:heavy,t:are,,The sack is heavy.,,بوجی سنگین است.
+07,How much is a kilo?,,t:How|t:much|t:is|t:a|t:kilo,t:many,,How much is a kilo?,,یک کیلو چند است؟
+08,How many eggs do you want?,,t:How|t:many|t:eggs|t:do|t:you|t:want,t:much,,How many eggs do you want?,,چند تخم مرغ می‌خواهید؟
+08,How much rice do you want?,,t:How|t:much|t:rice|t:do|t:you|t:want,t:many,,How much rice do you want?,,چقدر برنج می‌خواهید؟
+08,"Ten eggs, please.",,t:Ten|t:eggs|t:please,t:egg,,"Ten eggs, please.",,لطفاً ده تخم مرغ.
+08,How much sugar do you want?,,t:How|t:much|t:sugar|t:do|t:you|t:want,t:many,,How much sugar do you want?,,چقدر بوره می‌خواهید؟
+08,How many pears do you want?,,t:How|t:many|t:pears|t:do|t:you|t:want,t:much,,How many pears do you want?,,چند ناک می‌خواهید؟
+08,I want a bottle of oil.,,t:I|t:want|t:a|t:bottle|t:of|t:oil,,,I want a bottle of oil.,,من یک بوتل روغن می‌خواهم.
+12,I have some rice.,,t:I|t:have|t:some|t:rice,t:any,,I have some rice.,,من کمی برنج دارم.
+12,Do you have any eggs?,,t:Do|t:you|t:have|t:any|t:eggs,t:some,,Do you have any eggs?,,شما تخم مرغ دارید؟
+12,I don't have any.,,t:I|t:don't|t:have|t:any,t:some,,I don't have any.,,من هیچ ندارم.
+12,"Yes, I have some.",,t:Yes|t:I|t:have|t:some,t:any,,"Yes, I have some.",,بلی، کمی دارم.
+12,Do you have any cheese?,,t:Do|t:you|t:have|t:any|t:cheese,t:some,,Do you have any cheese?,,شما پنیر دارید؟
+12,The shelf is empty.,,t:The|t:shelf|t:is|t:empty,t:are,,The shelf is empty.,,رف خالی است.
+13,Can I help you?,,t:Can|t:I|t:help|t:you,,,Can I help you?,,شما را کمک کرده می‌توانم؟
+13,I can carry the basket.,,t:I|t:can|t:carry|t:the|t:basket,t:can't,,I can carry the basket.,,من سبد را برده می‌توانم.
+13,"Can you help me, please?",,t:Can|t:you|t:help|t:me|t:please,,,"Can you help me, please?",,لطفاً مرا کمک کرده می‌توانید؟
+13,"Yes, I can.",,t:Yes|t:I|t:can,t:can't,,"Yes, I can.",,بلی، می‌توانم.
+13,"No, I can't.",,t:No|t:I|t:can't,t:can,,"No, I can't.",,نه، نمی‌توانم.
+13,I can't carry the sack.,,t:I|t:can't|t:carry|t:the|t:sack,t:can,,I can't carry the sack.,,من بوجی را برده نمی‌توانم.
+17,Where is the bakery?,,t:Where|t:is|t:the|t:bakery,t:are,,Where is the bakery?,,نانوایی کجاست؟
+17,Where can I buy candles?,,t:Where|t:can|t:I|t:buy|t:candles,t:sell,,Where can I buy candles?,,شمع را از کجا خریده می‌توانم؟
+17,It is next to the tailor.,,t:It|t:is|t:next|t:to|t:the|t:tailor,,,It is next to the tailor.,,پهلوی خیاط است.
+17,Thank you very much.,,t:Thank|t:you|t:very|t:much,t:many,,Thank you very much.,,بسیار تشکر.
+17,"Can I have some bread, please?",,t:Can|t:I|t:have|t:some|t:bread|t:please,,,"Can I have some bread, please?",,لطفاً کمی نان بدهید.
+18,It is too expensive.,,t:It|t:is|t:too|t:expensive,t:are,,It is too expensive.,,بسیار گران است.
+18,Can you make it cheaper?,,t:Can|t:you|t:make|t:it|t:cheaper,t:cheap,,Can you make it cheaper?,,ارزانتر کرده می‌توانید؟
+18,How much is it all together?,,t:How|t:much|t:is|t:it|t:all|t:together,,,How much is it all together?,,جمله چند می‌شود؟
+18,Here is your change.,,t:Here|t:is|t:your|t:change,t:are,,Here is your change.,,این باقی پول شما است.
+18,The shop is closed.,,t:The|t:shop|t:is|t:closed,t:are,,The shop is closed.,,دکان بسته است.

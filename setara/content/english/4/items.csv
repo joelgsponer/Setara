@@ -1,0 +1,248 @@
+unit,key,en,fa,picture,tags
+# English level 4 "At the bazaar". unit = classroom lesson number.
+# Rows tagged review repeat an earlier word so that the picture game has at least five pictures in the unit.
+
+# 01 The bazaar
+01,bazaar,bazaar,بازار,bazaar,place
+01,shop,shop,دکان,shop,place
+01,shopkeeper,shopkeeper,دکاندار,shopkeeper,people
+01,customer,customer,مشتری,customer,people
+01,street,street,سرک,street,place
+01,cart,cart,کراچی,cart,thing
+01,this_is_the_bazaar,This is the bazaar.,این بازار است.,,phrase
+01,lets_go_to_the_bazaar,Let's go to the bazaar.,بیا که به بازار برویم.,,phrase
+01,welcome_dialogue,f: Hello! // m: Hello! Welcome to my shop.,سلام! سلام! به دکان من خوش آمدید.,,dialogue
+01,where_dialogue_1,m: Where is the shopkeeper? // f: He is in the shop.,دکاندار کجاست؟ او در دکان است.,,dialogue
+
+# 02 Buy and sell
+02,buy,buy,خریدن,,verb
+02,sell,sell,فروختن,,verb
+02,money,money,پول,money,money
+02,r02_basket,basket,سبد,basket,review
+02,r02_bread,bread,نان,bread,review
+02,r02_apple,apple,سیب,apple,review
+02,r02_egg,egg,تخم مرغ,egg,review
+02,i_want_to_buy_bread,I want to buy bread.,من می‌خواهم نان بخرم.,,phrase
+02,he_sells_apples,He sells apples.,او سیب می‌فروشد.,,phrase
+02,want_dialogue,"f: What do you want? // m: I want to buy eggs, please.",شما چه می‌خواهید؟ لطفاً، من می‌خواهم تخم مرغ بخرم.,,dialogue
+02,sell_dialogue,m: What do you sell? // f: I sell bread and tea.,شما چه می‌فروشید؟ من نان و چای می‌فروشم.,,dialogue
+
+# 03 How much is it?
+03,price,price,قیمت,price,money
+03,cheap,cheap,ارزان,cheap,money
+03,expensive,expensive,گران,expensive,money
+03,afghani,afghani,افغانی,,money
+03,r03_soap,soap,صابون,soap,review
+03,r03_carpet,carpet,قالین,carpet,review
+03,how_much_is_it,How much is it?,قیمتش چند است؟,,phrase
+03,it_is_ten_afghani,It is ten afghani.,ده افغانی است.,,phrase
+03,how_much_dialogue_1,f: How much is the bread? // m: It is ten afghani.,نان چند است؟ ده افغانی است.,,dialogue
+03,how_much_dialogue_2,m: How much is the soap? // f: It is twenty afghani. It is cheap.,صابون چند است؟ بیست افغانی است. ارزان است.,,dialogue
+03,the_carpet_is_expensive,The carpet is expensive.,قالین گران است.,,phrase
+
+# 04 Money
+04,coin,coin,سکه,coin,money
+04,note,note,نوت,note,money
+04,purse,purse,بکس پول,purse,money
+04,pay,pay,پول دادن,pay,verb
+04,change,change,باقی پول,,money
+04,r04_money,money,پول,money,review
+04,i_have_fifty_afghani,I have fifty afghani.,من پنجاه افغانی دارم.,,phrase
+04,i_pay_the_shopkeeper,I pay the shopkeeper.,من به دکاندار پول می‌دهم.,,phrase
+04,here_is_your_change,Here is your change.,این باقی پول شما است.,,phrase
+04,pay_dialogue,f: It is thirty afghani. // m: Here is fifty afghani. // f: Here is your change. Twenty afghani.,سی افغانی است. این پنجاه افغانی. این باقی پول شما است. بیست افغانی.,,dialogue
+
+# 05 At the fruit stall
+05,pear,pear,ناک,pear,food
+05,lemon,lemon,لیمو,lemon,food
+05,banana,banana,کیله,banana,food
+05,melon,melon,خربوزه,melon,food
+05,peach,peach,شفتالو,peach,food
+05,cherries,cherries,گیلاس,cherries,food
+05,how_much_are_the_pears,How much are the pears?,ناک‌ها چند است؟,,phrase
+05,they_are_forty_afghani,They are forty afghani.,چهل افغانی است.,,phrase
+05,these_peaches_are_sweet,These peaches are sweet.,این شفتالوها شیرین است.,,phrase
+05,how_much_dialogue_3,f: How much are the bananas? // m: They are sixty afghani.,کیله‌ها چند است؟ شصت افغانی است.,,dialogue
+
+# 06 At the vegetable stall
+06,pumpkin,pumpkin,کدو,pumpkin,food
+06,cucumber,cucumber,بادرنگ,cucumber,food
+06,eggplant,eggplant,بادنجان سیاه,eggplant,food
+06,garlic,garlic,سیر,garlic,food
+06,pepper,pepper,مرچ,pepper,food
+06,cabbage,cabbage,کرم,cabbage,food
+06,the_vegetables_are_fresh,The vegetables are fresh.,ترکاری تازه است.,,phrase
+06,i_want_two_cucumbers,I want two cucumbers and a pumpkin.,من دو بادرنگ و یک کدو می‌خواهم.,,phrase
+06,fresh_dialogue,"m: Are the tomatoes fresh? // f: Yes, they are.",بادنجان رومی تازه است؟ بلی، تازه است.,,dialogue
+06,how_much_dialogue_4,f: How much is the cabbage? // m: It is fifteen afghani.,کرم چند است؟ پانزده افغانی است.,,dialogue
+
+# 07 A kilo of rice
+07,kilo,kilo,کیلو,kilo,measure
+07,scales,scales,ترازو,scales,measure
+07,sack,sack,بوجی,rice_sack,thing
+07,heavy,heavy,سنگین,heavy_load,measure
+07,r07_rice,rice,برنج,rice,review
+07,r07_potato,potato,کچالو,potato,review
+07,a_kilo_of_rice,a kilo of rice,یک کیلو برنج,,phrase
+07,half_a_kilo_of_meat,half a kilo of meat,نیم کیلو گوشت,,phrase
+07,two_kilos_of_potatoes,"Two kilos of potatoes, please.",لطفاً دو کیلو کچالو.,,phrase
+07,the_sack_is_heavy,The sack is heavy.,بوجی سنگین است.,,phrase
+07,kilo_dialogue,f: How much is a kilo of rice? // m: It is ninety afghani.,یک کیلو برنج چند است؟ نود افغانی است.,,dialogue
+
+# 08 How many? How much?
+08,ten_eggs,ten eggs,ده تخم مرغ,p:egg*10,phrase
+08,six_lemons,six lemons,شش لیمو,p:lemon*6,phrase
+08,four_bananas,four bananas,چهار کیله,p:banana*4,phrase
+08,many_apples,many apples,سیب زیاد,p:apple*20,phrase
+08,a_few_apples,a few apples,چند دانه سیب,p:apple*3,phrase
+08,how_many_do_you_want,How many do you want?,چند دانه می‌خواهید؟,,phrase
+08,how_much_sugar_do_you_want,How much sugar do you want?,چقدر بوره می‌خواهید؟,,phrase
+08,how_many_dialogue_1,"f: How many eggs do you want? // m: Ten eggs, please.",چند تخم مرغ می‌خواهید؟ لطفاً ده تخم مرغ.,,dialogue
+08,how_much_dialogue_5,"m: How much rice do you want? // f: Two kilos, please.",چقدر برنج می‌خواهید؟ لطفاً دو کیلو.,,dialogue
+08,how_many_dialogue_2,"f: How many pears? // m: Four, please. // f: Here you are.",چند ناک؟ لطفاً چهار دانه. بفرمایید.,,dialogue
+
+# 09 Bottles and packets
+09,bottle,bottle,بوتل,bottle,thing
+09,tin,tin,قطی,can,thing
+09,packet,packet,پاکت,packet,thing
+09,jar,jar,مرتبان,jar,thing
+09,r09_sack,sack,بوجی,rice_sack,review
+09,a_bottle_of_oil,a bottle of oil,یک بوتل روغن,,phrase
+09,a_packet_of_tea,a packet of tea,یک پاکت چای,,phrase
+09,a_jar_of_honey,a jar of honey,یک مرتبان عسل,,phrase
+09,a_bottle_of_water_please,"A bottle of water, please.",لطفاً یک بوتل آب.,,phrase
+09,packet_dialogue,"m: A packet of tea and a jar of honey, please. // f: Here you are.",لطفاً یک پاکت چای و یک مرتبان عسل. بفرمایید.,,dialogue
+
+# 10 Review: at the fruit and vegetable stall
+10,r10_shopkeeper,shopkeeper,دکاندار,shopkeeper,review
+10,r10_money,money,پول,money,review
+10,r10_melon,melon,خربوزه,melon,review
+10,r10_cucumber,cucumber,بادرنگ,cucumber,review
+10,r10_scales,scales,ترازو,scales,review
+10,r10_jar,jar,مرتبان,jar,review
+10,review_dialogue_1,f: Hello! How much are the bananas? // m: They are sixty afghani a kilo.,سلام! کیله‌ها چند است؟ کیلوی شصت افغانی است.,,dialogue
+10,review_dialogue_2,"m: Two kilos of tomatoes, please. // f: Here you are. Eighty afghani.",لطفاً دو کیلو بادنجان رومی. بفرمایید. هشتاد افغانی.,,dialogue
+10,review_dialogue_3,"f: How many lemons do you want? // m: Five, please.",چند لیمو می‌خواهید؟ لطفاً پنج دانه.,,dialogue
+10,i_want_to_buy_a_packet_of_tea,I want to buy a packet of tea.,من می‌خواهم یک پاکت چای بخرم.,,phrase
+
+# 11 At the food shop
+11,flour,flour,آرد,flour_sack,food
+11,oil,oil,روغن,oil_can,food
+11,salt,salt,نمک,salt,food
+11,beans,beans,لوبیا,beans,food
+11,lentils,lentils,دال,lentils,food
+11,chickpeas,chickpeas,نخود,chickpeas,food
+11,cheese,cheese,پنیر,cheese,food
+11,a_kilo_of_flour,a kilo of flour,یک کیلو آرد,,phrase
+11,i_need_salt_and_oil,I need salt and oil.,من به نمک و روغن ضرورت دارم.,,phrase
+11,need_dialogue,f: What do you need? // m: I need a kilo of beans.,شما به چه ضرورت دارید؟ من به یک کیلو لوبیا ضرورت دارم.,,dialogue
+
+# 12 Some and any
+12,empty,empty,خالی,bowl_empty,word
+12,full,full,پُر,food_bowl,word
+12,shelf,shelf,رف,shelf,thing
+12,r12_egg,egg,تخم مرغ,egg,review
+12,r12_cheese,cheese,پنیر,cheese,review
+12,i_have_some_rice,I have some rice.,من کمی برنج دارم.,,phrase
+12,do_you_have_any_eggs,Do you have any eggs?,شما تخم مرغ دارید؟,,phrase
+12,the_shelf_is_empty,The shelf is empty.,رف خالی است.,,phrase
+12,some_dialogue,"f: Do you have any cheese? // m: Yes, I have some.",شما پنیر دارید؟ بلی، کمی دارم.,,dialogue
+12,any_dialogue,"m: Do you have any eggs? // f: No, I don't have any. Sorry.",شما تخم مرغ دارید؟ نه، هیچ ندارم. ببخشید.,,dialogue
+
+# 13 Can I help you?
+13,carry,carry,بردن,carry,verb
+13,help,help,کمک کردن,help,verb
+13,r13_read,read,خواندن,read,review
+13,r13_count,count,حساب کردن,count,review
+13,r13_write,write,نوشتن,write,review
+13,can_i_help_you,Can I help you?,شما را کمک کرده می‌توانم؟,,phrase
+13,i_can_carry_the_basket,I can carry the basket.,من سبد را برده می‌توانم.,,phrase
+13,i_cant_carry_the_sack,I can't carry the sack. It is heavy.,من بوجی را برده نمی‌توانم. سنگین است.,,phrase
+13,can_dialogue_1,"f: Can you help me, please? // m: Yes, I can.",لطفاً مرا کمک کرده می‌توانید؟ بلی، می‌توانم.,,dialogue
+13,can_dialogue_2,"m: Can you read the price? // f: No, I can't. // m: It is fifty afghani.",قیمت را خوانده می‌توانید؟ نه، نمی‌توانم. پنجاه افغانی است.,,dialogue
+
+# 14 At the bakery
+14,bakery,bakery,نانوایی,bakery,place
+14,biscuits,biscuits,کلچه,biscuits,food
+14,juice,juice,آب میوه,juice,food
+14,kebab,kebab,کباب,kebab,food
+14,samosa,samosa,سمبوسه,samosa,food
+14,r14_bread,bread,نان,bread,review
+14,the_bread_is_hot_and_fresh,The bread is hot and fresh.,نان گرم و تازه است.,,phrase
+14,the_baker_sells_bread,The baker sells bread.,نانوا نان می‌فروشد.,,phrase
+14,can_i_have_some_bread,"Can I have some bread, please?",لطفاً کمی نان بدهید.,,phrase
+14,can_i_have_dialogue,"f: Can I have two samosas, please? // m: Of course. Here you are.",لطفاً دو سمبوسه بدهید. البته. بفرمایید.,,dialogue
+
+# 15 At the tailor's
+15,cloth,cloth,تکه,cloth,thing
+15,tailor,tailor,خیاط,tailor,people
+15,scissors,scissors,قیچی,scissors,thing
+15,needle,needle,سوزن,needle,thing
+15,button,button,دکمه,button,thing
+15,metre,metre,متر,metre,measure
+15,three_metres_of_cloth,three metres of cloth,سه متر تکه,,phrase
+15,i_need_a_needle,I need a needle and some thread.,من به یک سوزن و کمی تار ضرورت دارم.,,phrase
+15,can_dialogue_3,"f: Can you make a dress? // m: Yes, I can.",یک پیراهن دوخته می‌توانید؟ بلی، می‌توانم.,,dialogue
+15,metre_dialogue,m: How much is a metre of cloth? // f: It is eighty afghani.,یک متر تکه چند است؟ هشتاد افغانی است.,,dialogue
+
+# 16 Things for the house
+16,lamp,lamp,چراغ,lamp,thing
+16,candle,candle,شمع,candle,thing
+16,matches,matches,گوگرد,matches,thing
+16,hammer,hammer,چکش,hammer,thing
+16,lock,lock,قفل,lock,thing
+16,shovel,shovel,بیل,shovel,thing
+16,a_box_of_matches,a box of matches,یک قطی گوگرد,,phrase
+16,i_need_a_lamp,I need a lamp and some candles.,من به یک چراغ و چند شمع ضرورت دارم.,,phrase
+16,any_dialogue_2,"f: Do you have any locks? // m: Yes, I have some. They are fifty afghani.",شما قفل دارید؟ بلی، دارم. پنجاه افغانی است.,,dialogue
+16,can_i_have_dialogue_2,"m: Can I have a hammer, please? // f: Here you are.",لطفاً یک چکش بدهید. بفرمایید.,,dialogue
+
+# 17 Excuse me!
+17,excuse_me,Excuse me.,ببخشید.,,phrase
+17,youre_welcome,You're welcome.,قابل تشکر نیست.,,phrase
+17,r17_bakery,bakery,نانوایی,bakery,review
+17,r17_tailor,tailor,خیاط,tailor,review
+17,r17_shop,shop,دکان,shop,review
+17,r17_street,street,سرک,street,review
+17,r17_candle,candle,شمع,candle,review
+17,where_dialogue_2,"f: Excuse me, where is the bakery? // m: It is next to the tailor.",ببخشید، نانوایی کجاست؟ پهلوی خیاط است.,,dialogue
+17,where_dialogue_3,"m: Excuse me, where can I buy candles? // f: At that shop, over there.",ببخشید، شمع را از کجا خریده می‌توانم؟ از آن دکان، آنجا.,,dialogue
+17,thanks_dialogue,f: Thank you very much. // m: You're welcome.,بسیار تشکر. قابل تشکر نیست.,,dialogue
+17,anything_else_dialogue,"m: Anything else? // f: No, thank you. That's all.",چیز دیگر؟ نه، تشکر. همین قدر بس است.,,dialogue
+
+# 18 Too expensive!
+18,scarf,scarf,چادر,scarf_red,thing
+18,r18_carpet,carpet,قالین,carpet,review
+18,r18_cheap,cheap,ارزان,cheap,review
+18,r18_expensive,expensive,گران,expensive,review
+18,r18_purse,purse,بکس پول,purse,review
+18,r18_note,note,نوت,note,review
+18,it_is_too_expensive,It is too expensive.,بسیار گران است.,,phrase
+18,can_you_make_it_cheaper,Can you make it cheaper?,ارزانتر کرده می‌توانید؟,,phrase
+18,how_much_is_it_all_together,How much is it all together?,جمله چند می‌شود؟,,phrase
+18,too_dialogue,f: How much is the scarf? // m: It is three hundred afghani. // f: That is too expensive.,چادر چند است؟ سه‌صد افغانی است. بسیار گران است.,,dialogue
+18,cheaper_dialogue,m: Can you make it cheaper? // f: All right. Two hundred and fifty afghani.,ارزانتر کرده می‌توانید؟ خوب است. دوصد و پنجاه افغانی.,,dialogue
+
+# 19 My stall
+19,r19_cart,cart,کراچی,cart,review
+19,r19_customer,customer,مشتری,customer,review
+19,r19_shopkeeper,shopkeeper,دکاندار,shopkeeper,review
+19,r19_coin,coin,سکه,coin,review
+19,r19_basket,basket,سبد,basket,review
+19,i_sell_eggs_at_the_bazaar,I sell eggs at the bazaar.,من در بازار تخم مرغ می‌فروشم.,,phrase
+19,the_shop_is_open,The shop is open.,دکان باز است.,,phrase
+19,the_shop_is_closed,The shop is closed.,دکان بسته است.,,phrase
+19,sell_dialogue_2,f: What do you sell? // m: I sell vegetables. They are fresh and cheap.,شما چه می‌فروشید؟ من ترکاری می‌فروشم. تازه و ارزان است.,,dialogue
+19,open_dialogue,"m: Is the bakery open? // f: No, it is closed. Come back tomorrow.",نانوایی باز است؟ نه، بسته است. فردا دوباره بیایید.,,dialogue
+
+# 20 Review: at the bazaar
+20,r20_bazaar,bazaar,بازار,bazaar,review
+20,r20_scales,scales,ترازو,scales,review
+20,r20_peach,peach,شفتالو,peach,review
+20,r20_lamp,lamp,چراغ,lamp,review
+20,r20_scissors,scissors,قیچی,scissors,review
+20,r20_juice,juice,آب میوه,juice,review
+20,i_can_speak_english_at_the_bazaar,I can speak English at the bazaar.,من در بازار انگلیسی گپ زده می‌توانم.,,phrase
+20,review_dialogue_4,"f: Good morning! Can I help you? // m: Yes, please. Do you have any rice?",صبح بخیر! شما را کمک کرده می‌توانم؟ بلی، لطفاً. شما برنج دارید؟,,dialogue
+20,review_dialogue_5,"f: How much is a kilo? // m: Ninety afghani. // f: Two kilos, please.",یک کیلو چند است؟ نود افغانی. لطفاً دو کیلو.,,dialogue
+20,review_dialogue_6,m: Here is your change. // f: Thank you. Goodbye!,این باقی پول شما است. تشکر. خداحافظ!,,dialogue
