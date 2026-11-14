@@ -1,0 +1,72 @@
+{
+ "pack": "math-3",
+ "subject": "math",
+ "level": 3,
+ "version": 1,
+ "title_en": "Math 3: Numbers to 1,000",
+ "title_fa": "ریاضی ۳: عددها تا هزار",
+ "games": [
+  {
+   "id": "count_the_flock",
+   "engine": "listen_pick",
+   "letter": "a",
+   "title_en": "Count the Flock",
+   "title_fa": "رمه را بشمار",
+   "intro_fa": "بشمار و عدد درست را انتخاب کن.",
+   "icon": "sheep",
+   "v1": true,
+   "sheet": "count_the_flock.csv"
+  },
+  {
+   "id": "number_hop",
+   "engine": "journey",
+   "letter": "b",
+   "title_en": "Number Hop",
+   "title_fa": "خیز عددها",
+   "intro_fa": "حساب کن و جواب درست را انتخاب کن.",
+   "icon": "frog",
+   "v1": true,
+   "sheet": "number_hop.csv"
+  },
+  {
+   "id": "market_scales",
+   "engine": "market",
+   "letter": "c",
+   "title_en": "Market Scales",
+   "title_fa": "ترازوی بازار",
+   "intro_fa": "حساب کن و با سکه‌ها و نوت‌ها پول بده.",
+   "icon": "scales",
+   "sheet": "market_scales.csv"
+  },
+  {
+   "id": "carpet_weaver",
+   "engine": "builder",
+   "letter": "d",
+   "title_en": "Carpet Weaver",
+   "title_fa": "قالین‌باف",
+   "intro_fa": "عددها را به ترتیب درست بگذار.",
+   "icon": "carpet",
+   "sheet": "carpet_weaver.csv"
+  },
+  {
+   "id": "share_the_bread",
+   "engine": "sorter",
+   "letter": "e",
+   "title_en": "Share the Bread",
+   "title_fa": "نان را تقسیم کن",
+   "intro_fa": "هر چیز را در سبد درست بینداز.",
+   "icon": "bread",
+   "sheet": "share_the_bread.csv"
+  },
+  {
+   "id": "shape_mason",
+   "engine": "listen_pick",
+   "letter": "f",
+   "title_en": "Shape Mason",
+   "title_fa": "گلکار شکل‌ها",
+   "intro_fa": "گوش کن و جواب درست را انتخاب کن.",
+   "icon": "brick",
+   "sheet": "shape_mason.csv"
+  }
+ ]
+}

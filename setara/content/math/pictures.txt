@@ -1,0 +1,80 @@
+apple: one whole red apple with a small leaf
+apple_half: half an apple, cut side with seeds showing
+apple_quarter: a quarter of an apple
+ball: a round ball, clearly a circle
+blanket: a folded blanket
+book: a closed rectangular book seen from the front
+box: a square box seen from the front
+bread: one whole round flat naan bread seen from above
+bread_half: half of a round naan: a half disc, clean straight cut
+bread_quarter: a quarter of a round naan: a quarter disc
+brick: one clay brick
+button: a round button with four holes
+carpet: a rectangular red Afghan carpet with a simple pattern, clearly longer than wide
+carrot: one orange carrot with green top
+clock_1: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 1 and the long hand at 12
+clock_10: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 10 and the long hand at 12
+clock_11: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 11 and the long hand at 12
+clock_12: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 12 and the long hand at 12
+clock_2: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 2 and the long hand at 12
+clock_3: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 3 and the long hand at 12
+clock_4: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 4 and the long hand at 12
+clock_5: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 5 and the long hand at 12
+clock_6: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 6 and the long hand at 12
+clock_7: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 7 and the long hand at 12
+clock_8: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 8 and the long hand at 12
+clock_9: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 9 and the long hand at 12
+coin: a round plain metal coin with no writing
+cup: one small tea bowl (piala) without handle
+door: a rectangular wooden door, taller than wide
+egg: one white egg
+fish: one fish, side view
+flour_sack: a large tied sack of flour
+flower: one red flower on a short green stem
+frog: a green frog in mid-jump (icon of Number Hop)
+goat: one goat with small horns, side view
+handkerchief: a square cloth handkerchief laid flat
+hen: one brown hen, side view
+milk: a glass of milk
+mountain: a single mountain peak drawn as a clear triangle with a snow cap
+notebook: one closed school notebook
+oil_can: a yellow can of cooking oil
+onion: one onion
+orange: a round orange fruit
+pencil: one yellow pencil
+pencil_long: a long new pencil, filling the width of the picture
+pencil_short: a short used pencil stub, a third of the width of the picture
+plate: a round plate seen from above
+pomegranate: one red pomegranate
+potato: one potato
+rice: a bowl of white rice
+rice_sack: a large tied sack of rice with a few grains shown
+rope_long: a long rope lying straight, filling the width of the picture
+rope_short: a short rope lying straight, a third of the width of the picture
+salt: a small bag of salt
+samosa: a triangular fried samosa (sambosa)
+scales: a two-pan market balance scale
+shape_circle: a plain filled circle
+shape_half_circle: half of a circle: a filled half disc, the missing half as a dotted outline
+shape_quarter_circle: a quarter of a circle: a filled quarter disc, the rest as a dotted outline
+shape_rectangle: a plain filled rectangle, twice as wide as high
+shape_square: a plain filled square
+shape_triangle: a plain filled triangle, point up
+sheep: one white woolly sheep, side view
+shoes: a pair of simple shoes
+soap: one bar of soap
+star: one yellow five-pointed star
+stick_long: a long straight wooden stick, filling the width of the picture
+stick_short: a short straight wooden stick, a third of the width of the picture
+sugar: a small bag of sugar
+sun: a round yellow sun with no rays, or only very short ones
+tea: a glass of green tea
+tent: a triangular tent seen from the front
+tree_short: a short small tree, half the height of the picture, standing on the same ground line
+tree_tall: a tall tree, filling the height of the picture
+walnut: one walnut in its shell
+watermelon: a whole round watermelon
+watermelon_half: half a watermelon, red cut side showing
+watermelon_quarter: a quarter of a watermelon
+wheel: a round cart wheel with spokes
+window: a square window with a wooden frame and four panes
