@@ -242,6 +242,14 @@ round,picture,say_en,say_fa,show_fa,choices,right,wrong_say_fa,wrong_picture
   wrong one plays `wrong_say_fa`, shows `wrong_picture`, and asks again.
 - `show_fa` or `show_en`: text shown on the page and lit while it is spoken
   (Read Along). One sentence per row.
+- **Reading pages.** A row with `show_fa` or `show_en` and no `picture` is a
+  reading page for children who can already read: the text has the whole
+  screen. Write a paragraph, not a sentence: at most 8 lines of Dari (about
+  60 words) or about 330 letters of English; with `choices` on the same row,
+  at most 4 lines. The builder refuses a page that would not fit. The page
+  is still spoken (`say_fa` or `say_en`, normally the same text). Put a
+  picture row in between now and then. Questions about the text are rows
+  with `choices`, which may be written words (`f:مرغ`, `t:a hen`).
 
 ## Teacher lessons: content/teacher/<name>/
 

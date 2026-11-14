@@ -54,6 +54,16 @@ local function layout(page, decision)
     local _, lines = f:getWrap(page.text, 580)
     cap_h = #lines * f:getHeight() + 14
   end
+  -- A page without a picture is a reading page: the text has the screen,
+  -- for children who can already read. It is still spoken and lit.
+  if not page.img and cap_h > 0 then
+    local room = BOTTOM - TOP - 40 - (decision and CARD_H + 8 or 0)
+    local l = { reader = true, pw = 0, ph = 0, px = 0, cap_h = math.max(cap_h + 16, math.min(room, 120)) }
+    l.cap_y = TOP + math.max(0, math.floor((room - l.cap_h) / 2))
+    l.py = l.cap_y
+    l.cards_y = l.cap_y + l.cap_h + 8
+    return l
+  end
   local free = BOTTOM - TOP - (cap_h > 0 and cap_h + 8 or 0) - (decision and CARD_H + 8 or 0)
   local ph = math.min(300, free)
   local pw = ph * 4 / 3
@@ -188,24 +198,36 @@ function E:draw()
   -- the picture; after a wrong choice, what that choice leads to
   local pic = page.img
   if oops and page.wrong_img then pic = page.wrong_img end
-  ui.card(l.px, l.py, l.pw, l.ph, { fill = ui.c.shade, border = oops and ui.c.bad or ui.c.ink, radius = 10 })
-  if pic then
-    ui.thing(pic, self.ctx.root, l.px + 2, l.py + 2, l.pw - 4, l.ph - 4)
-  else
-    ui.speaker(l.px + l.pw / 2 - 6, l.py + l.ph / 2, math.min(96, l.ph * 0.6), speaking and t or nil, ui.c.ink)
+  if l.reader and oops and pic then
+    -- a wrong choice on a reading page: show where it leads, over the text
+    ui.card(170, TOP + 8, 300, 225, { fill = ui.c.shade, border = ui.c.bad, radius = 10 })
+    ui.thing(pic, self.ctx.root, 172, TOP + 10, 296, 221)
+  elseif not l.reader then
+    ui.card(l.px, l.py, l.pw, l.ph, { fill = ui.c.shade, border = oops and ui.c.bad or ui.c.ink, radius = 10 })
+    if pic then
+      ui.thing(pic, self.ctx.root, l.px + 2, l.py + 2, l.pw - 4, l.ph - 4)
+    else
+      ui.speaker(l.px + l.pw / 2 - 6, l.py + l.ph / 2, math.min(96, l.ph * 0.6), speaking and t or nil, ui.c.ink)
+    end
   end
-  local side = l.px / 2
-  if side >= 40 then
+  local side = l.reader and 40 or l.px / 2
+  if side >= 40 and not l.reader then
     ui.speaker(side - 4, l.py + 36, 48, speaking and t or nil, speaking and ui.c.ink or ui.c.line)
   end
 
   -- the caption, lit while it is spoken
-  if l.cap_h > 0 then
+  if l.cap_h > 0 and not (l.reader and oops and pic) then
     local lit = speaking and not oops
     ui.card(16, l.cap_y, 608, l.cap_h, { fill = lit and ui.mix(ui.c.paper, ui.c.gold, 0.35) or ui.c.paper,
       border = lit and ui.c.gold or ui.c.line, radius = 10 })
     ui.set(ui.c.ink)
-    if has(page.fa) then
+    if l.reader then
+      if has(page.fa) then
+        text.fa(page.fa, 30, l.cap_y + 12, 580, 30, text.locale == "en" and "left" or "right", true)
+      else
+        text.print(page.text, 30, l.cap_y + 12, 580, "left", 24, true)
+      end
+    elseif has(page.fa) then
       text.fa(page.fa, 30, l.cap_y + 6, 580, 30, "center", true)
     else
       text.print(page.text, 30, l.cap_y + 5, 580, "center", 24, true)
@@ -243,7 +265,7 @@ function E:draw()
   end
 
   -- which buttons do something now
-  local by = math.min(l.py + l.ph - 20, 440)
+  local by = l.reader and 456 or math.min(l.py + l.ph - 20, 440)
   if not self.asking and self.phase == "page" then
     local ready = not speaking and t > 0.2
     local r = ready and 17 + math.sin(t * 5) * 3 or 13

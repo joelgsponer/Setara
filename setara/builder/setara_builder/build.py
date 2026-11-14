@@ -463,6 +463,13 @@ def parse_sheet(pack: Pack, game: dict, rows: list[dict], sheet: str) -> dict[st
                 item["fa"] = pack.fa(row["show_fa"], where)
             if row.get("show_en"):
                 item["text"] = row["show_en"]
+            if not row.get("picture") and (row.get("show_fa") or row.get("show_en")):
+                # a reading page: the text has the screen, and has to fit it
+                room = 4 if row.get("choices") else 8
+                if len(item.get("fa") or []) > room:
+                    pack.report.error(where, f"reading page too long: {len(item['fa'])} lines of Dari, at most {room}")
+                if len(row.get("show_en") or "") > room * 42:
+                    pack.report.error(where, f"reading page too long: at most {room * 42} letters of English")
             if row.get("choices"):
                 item["choices"] = pack.things(row["choices"], where)
                 right = pack.thing(row.get("right", ""), where)
