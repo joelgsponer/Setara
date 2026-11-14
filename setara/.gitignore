@@ -26,3 +26,4 @@ __pycache__/
 /builder/.cache/
 /dist/
 /.card/
+.test-ca.crt

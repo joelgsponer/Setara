@@ -1,0 +1,84 @@
+unit,key,en,fa,picture,tags
+# 01 burns
+01,fa_away_heat,moving away from the heat,از چیز داغ دور شدن,fa_away_heat,"burn,steps,new"
+01,fa_cool_water,cool clean water on a burn,آب سرد و پاک روی سوختگی,fa_cool_water,"burn,steps,new"
+01,fa_cover_cloth,covering loosely with a clean cloth,با تکه پاک سست پوشاندن,fa_cover_cloth,"burn,cut,steps,new"
+01,fa_blister,blister,آبله,fa_blister,"burn,new"
+01,fa_blister_break,breaking a blister,ترکاندن آبله,fa_blister_break,"burn,dont,new"
+01,fa_burn_big,a burn bigger than the palm,سوختگی کلان‌تر از کف دست,fa_burn_big,"burn,clinic,new"
+01,fa_small_burn,a small burn,سوختگی خورد,fa_small_burn,"burn,new"
+01,toothpaste,toothpaste,کریم دندان,toothpaste,"burn,dont"
+01,oil_can,oil,روغن,oil_can,"burn,dont"
+01,ice,ice,یخ,ice,"burn,dont"
+01,tea,tea,چای,tea,
+01,stove,cooking fire,دیگدان,stove,
+01,water,water,آب,water,
+# 02 cuts, bleeding, bites
+02,towel,clean cloth,تکه پاک,towel,"cut,steps"
+02,fa_press,pressing firmly on the wound,محکم فشار دادن روی زخم,fa_press,"cut,steps,new"
+02,fa_press_raise,pressing and holding the arm up,فشار دادن و دست را بالا گرفتن,fa_press_raise,"cut,steps,new"
+02,fa_cloth_on_top,another cloth on top,تکه دیگر روی تکه اول,fa_cloth_on_top,"cut,steps,new"
+02,fa_lift_look,lifting the cloth to look,برداشتن تکه برای دیدن,fa_lift_look,"cut,dont,new"
+02,fa_wash_wound,washing a wound with soap and water,شستن زخم با صابون و آب,fa_wash_wound,"cut,bite,steps,new"
+02,fa_ash,ash,خاکستر,fa_ash,"cut,dont,new"
+02,soil,earth,خاک,soil,"cut,dont"
+02,fa_rusty_nail,rusty nail,میخ زنگ‌زده,fa_rusty_nail,"cut,clinic,new"
+02,fa_stuck_thing,something stuck in a wound,چیزی که در زخم بند مانده,fa_stuck_thing,"cut,clinic,dont,new"
+02,fa_deep_cut,deep wound,زخم چقور,fa_deep_cut,"cut,clinic,new"
+02,fa_small_cut,small cut,زخم خورد,fa_small_cut,"cut,new"
+02,fa_wound_infected,"a red, hot, swollen wound",زخم سرخ، گرم و پندیده,fa_wound_infected,"cut,clinic,new"
+02,dog,dog,سگ,dog,"bite,clinic"
+02,snake,snake,مار,snake,"bite,clinic"
+# 03 nosebleed, choking, fit, fall
+03,sit_down,sit down,بنشین,sit_down,"nose,steps"
+03,fa_nose_forward,leaning forward,به پیش خم شدن,fa_nose_forward,"nose,steps,new"
+03,fa_nose_pinch,pinching the soft part of the nose,گرفتن قسمت نرم بینی,fa_nose_pinch,"nose,steps,new"
+03,fa_clock_10,ten minutes,ده دقیقه,fa_clock_10,"nose,steps,new"
+03,fa_head_back,tilting the head back,سر را به عقب بردن,fa_head_back,"nose,dont,new"
+03,fa_choke_sign,something stuck in the throat,چیزی در گلو بند مانده,fa_choke_sign,"choking,new"
+03,fa_cough,coughing,سرفه کردن,fa_cough,"choking,steps,new"
+03,fa_back_blows,hitting between the shoulder blades,میان دو شانه زدن,fa_back_blows,"choking,steps,new"
+03,fa_abdominal_thrust,an adult pushing the belly,فشار دادن شکم توسط یک کلان,fa_abdominal_thrust,"choking,steps,adult,new"
+03,fa_fit,fit,تشنج,fa_fit,"fit,clinic,new"
+03,fa_fit_hold,holding the person down,محکم گرفتن آدم,fa_fit_hold,"fit,dont,new"
+03,fa_fit_mouth,putting something in the mouth,چیزی در دهن ماندن,fa_fit_mouth,"fit,dont,new"
+03,fa_fit_clear,moving hard things away,دور کردن چیزهای سخت,fa_fit_clear,"fit,new"
+03,fa_limb_still,keeping a hurt arm still,دست افگار را بی‌حرکت نگه کردن,fa_limb_still,"fall,new"
+03,fa_move_injured,moving a person with a hurt neck or back,شور دادن کسی که گردن یا کمرش افگار است,fa_move_injured,"fall,dont,new"
+03,fa_legs_up,lying down with the legs raised,خوابیدن و پاها بالا,fa_legs_up,"faint,new"
+# 04 someone has collapsed (older pupils and teachers)
+04,fa_check_danger,looking for danger,خطر را دیدن,fa_check_danger,"bls,steps,new"
+04,fa_tap_call,tapping the shoulders and calling,به شانه‌ها زدن و صدا کردن,fa_tap_call,"bls,steps,new"
+04,fa_shout_help,calling for help,کمک خواستن,fa_shout_help,"bls,steps,new"
+04,fa_head_tilt,tilting the head back and checking the breathing,سر را به عقب بردن و نفس را دیدن,fa_head_tilt,"bls,steps,new"
+04,fa_recovery,lying on the side,به پهلو خواباندن,fa_recovery,"bls,fit,steps,new"
+04,fa_compressions,pushing on the chest,فشار دادن سینه,fa_compressions,"bls,steps,new"
+04,fa_swap_helper,another person takes over,یک نفر دیگر جای او را می‌گیرد,fa_swap_helper,"bls,new"
+# 05 danger signs and what to do on the way
+05,fa_cannot_drink,cannot drink,نوشیده نمی‌تواند,fa_cannot_drink,"danger,new"
+05,fa_hard_to_wake,hard to wake,به سختی بیدار می‌شود,fa_hard_to_wake,"danger,new"
+05,fa_breath_hard,breathing fast or with difficulty,تیز یا به سختی نفس کشیدن,fa_breath_hard,"danger,new"
+05,fa_fever_days,fever for more than two or three days,تب بیشتر از دو سه روز,fa_fever_days,"danger,new"
+05,fa_vomit,vomiting everything,استفراغ هر چیز,fa_vomit,"danger,new"
+05,fa_face_droop,a drooping face and a weak arm,روی کج و دست سست,fa_face_droop,"danger,new"
+05,tummy,strong pain in the belly,درد سخت شکم,tummy,danger
+05,fa_medicine,medicine,دوا,fa_medicine,"dont,new"
+05,fa_stay_with,staying with the ill person,پهلوی مریض ماندن,fa_stay_with,new
+05,blanket,blanket,کمپل,blanket,
+05,clinic,clinic,کلینیک,clinic,
+05,house,house,خانه,house,
+05,mother,mother,مادر,mother,
+05,baby,baby,طفل شیرخوار,baby,
+# 06 story scenes
+06,scene_tea_spill,hot tea spills on the little brother's hand,چای داغ روی دست برادر خورد می‌ریزد,scene_tea_spill,"scene,new"
+06,scene_burn_cooling,cooling the burn with water,ریختن آب سرد روی سوختگی,scene_burn_cooling,"scene,new"
+06,scene_boy_father_repair,a boy and his father repair a door,پسر و پدر دروازه را جور می‌کنند,scene_boy_father_repair,"scene,new"
+06,scene_boy_cut_hand,the boy has cut his hand,دست پسر بریده است,scene_boy_cut_hand,"scene,new"
+06,scene_health_worker,the health worker looks at the wound,کارمند صحی زخم را می‌بیند,scene_health_worker,"scene,new"
+06,scene_grandmother_ill,grandmother is ill,بی‌بی مریض است,scene_grandmother_ill,"scene,new"
+06,scene_grandmother_danger,grandmother breathes with difficulty,بی‌بی به سختی نفس می‌کشد,scene_grandmother_danger,"scene,new"
+06,scene_going_clinic,the family takes grandmother to the clinic,فامیل بی‌بی را به کلینیک می‌برد,scene_going_clinic,"scene,new"
+06,scene_dog_bite,a dog has bitten the boy's leg,سگ پای پسر را گزیده است,scene_dog_bite,"scene,new"
+06,scene_man_collapsed,a man has collapsed in the courtyard,یک مرد در حویلی افتاده است,scene_man_collapsed,"scene,new"
+06,scene_clinic,the family at the clinic,فامیل در کلینیک,scene_clinic,scene
+06,scene_family_eating,the family is eating,فامیل نان می‌خورد,scene_family_eating,scene

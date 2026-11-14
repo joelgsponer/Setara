@@ -1,0 +1,80 @@
+{
+ "pack": "garden-3",
+ "subject": "garden",
+ "level": 3,
+ "version": 1,
+ "title_en": "Health 3: First aid",
+ "title_fa": "صحت ۳: کمک‌های اولیه",
+ "games": [
+  {
+   "id": "burn_story",
+   "engine": "story",
+   "letter": "a",
+   "title_en": "Nazanin and the Hot Tea",
+   "title_fa": "نازنین و چای داغ",
+   "intro_fa": "قصه را گوش کن و به نازنین کمک کن که کار درست را بکند.",
+   "icon": "tea",
+   "sheet": "burn_story.csv"
+  },
+  {
+   "id": "cut_story",
+   "engine": "story",
+   "letter": "b",
+   "title_en": "Jawad and the Rusty Nail",
+   "title_fa": "جواد و میخ زنگ‌زده",
+   "intro_fa": "قصه را گوش کن و به جواد کمک کن که کار درست را بکند.",
+   "icon": "towel",
+   "sheet": "cut_story.csv"
+  },
+  {
+   "id": "help_story",
+   "engine": "story",
+   "letter": "c",
+   "title_en": "When Someone at Home Is Ill",
+   "title_fa": "وقتی کسی در خانه مریض است",
+   "intro_fa": "قصه را گوش کن و کمک کن که فامیل کار درست را بکند.",
+   "icon": "clinic",
+   "sheet": "help_story.csv"
+  },
+  {
+   "id": "first_steps",
+   "engine": "builder",
+   "letter": "d",
+   "title_en": "First Steps",
+   "title_fa": "قدم‌های اول",
+   "intro_fa": "تصویرها را به ترتیب درست بمان.",
+   "icon": "fa_cool_water",
+   "sheet": "first_steps.csv"
+  },
+  {
+   "id": "do_dont",
+   "engine": "sorter",
+   "letter": "e",
+   "title_en": "Do It, Don't Do It",
+   "title_fa": "بکن و نکن",
+   "intro_fa": "هر تصویر را در سبد درست بینداز.",
+   "icon": "fa_press",
+   "sheet": "do_dont.csv"
+  },
+  {
+   "id": "life_support",
+   "engine": "story",
+   "letter": "f",
+   "title_en": "When Someone Has Collapsed",
+   "title_fa": "وقتی کسی افتاده و جواب نمی‌دهد",
+   "intro_fa": "این بازی برای شاگردان کلان و معلمان است. اگر خورد هستی، کار تو این است: زود بدو و یک کلان را بیاور. قصه را گوش کن و کار درست را انتخاب کن.",
+   "icon": "fa_tap_call",
+   "sheet": "life_support.csv"
+  },
+  {
+   "id": "danger_signs",
+   "engine": "listen_pick",
+   "letter": "g",
+   "title_en": "Danger Signs",
+   "title_fa": "نشانه‌های خطر",
+   "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+   "icon": "fa_fever_days",
+   "sheet": "danger_signs.csv"
+  }
+ ]
+}
