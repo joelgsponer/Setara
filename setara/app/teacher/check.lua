@@ -29,7 +29,7 @@ function Check:update(dt) self.t = self.t + dt end
 
 function Check:input(b)
   if self.done or #self.questions == 0 then
-    if b == "a" or b == "b" then app.pop() end
+    if b == "a" or b == "b" then app.pop(self.done and "checked" or nil) end
     return
   end
   local q = self.questions[self.i]

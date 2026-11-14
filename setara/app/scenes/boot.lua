@@ -14,8 +14,8 @@ end
 function Boot:enter()
   self.co = coroutine.create(function()
     coroutine.yield()
-    local done, failed = packs.install_updates(coroutine.yield)
-    self.installed, self.failed = done, failed
+    local ok, err = pcall(packs.install_updates, coroutine.yield)
+    if not ok then store.log("install: " .. tostring(err):sub(1, 60)) end
     coroutine.yield()
     packs.load()
   end)
@@ -43,7 +43,7 @@ function Boot:update(dt)
         -- An unknown pad, or a file named "calibrate" on the card: learn the buttons first.
         local input = require("core.input")
         local asked = love.filesystem.getInfo("calibrate") or love.filesystem.getInfo("calibrate.txt")
-        if asked or (input.unknown_pad() and not input.custom) then
+        if asked or (input.unknown_pad() and not input.custom and not store.progress.calibration_seen) then
           app.push(require("scenes.calibrate").new())
         end
       end

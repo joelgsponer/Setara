@@ -7,6 +7,7 @@ local packs = require("core.packs")
 local g = love.graphics
 
 local M = {}
+local cache = {} -- lesson id -> loaded lesson
 
 M.STEPS = { "hello", "listen", "say", "do", "play", "goodbye" }
 M.MINUTES = { hello = 3, listen = 5, say = 8, ["do"] = 8, play = 8, goodbye = 3 }
@@ -19,7 +20,7 @@ function M.pack() return packs.teacher[1] end
 -- The lesson number the teacher is on. Remembered on the device.
 function M.lesson_number()
   local pack = M.pack()
-  if not pack or #(pack.lessons or {}) == 0 then return nil end
+  if not pack or type(pack.lessons) ~= "table" or #pack.lessons == 0 then return nil end
   local n = tonumber(store.progress.teacher_lesson) or 1
   return math.max(1, math.min(#pack.lessons, n))
 end
@@ -30,22 +31,34 @@ end
 
 function M.lesson_info(n)
   local pack = M.pack()
-  return pack and pack.lessons[n or M.lesson_number() or 1]
+  return pack and type(pack.lessons) == "table" and pack.lessons[n or M.lesson_number() or 1] or nil
 end
 
 -- Load a lesson file. Clip lists become full paths.
 function M.load_lesson(n)
   local pack, info = M.pack(), M.lesson_info(n)
   if not pack or not info then return nil end
-  local lesson = packs.read(pack, "lessons/" .. info.id .. ".json")
+  if cache[info.id] then return cache[info.id] end
+  local lesson = packs.read(pack, "lessons/" .. tostring(info.id) .. ".json")
   if type(lesson) ~= "table" or type(lesson.steps) ~= "table" then return nil end
+  -- Keep only steps that can be shown: a known name and at least one line.
+  local steps = {}
   for _, step in ipairs(lesson.steps) do
-    for _, line in ipairs(step.lines or {}) do
-      line.audio = packs.clips(pack, line.audio)
-      line.meaning_audio = packs.clips(pack, line.meaning_audio)
-      line.answer_audio = packs.clips(pack, line.answer_audio)
+    if type(step) == "table" and M.MINUTES[step.step] and type(step.lines) == "table" and #step.lines > 0 then
+      for _, line in ipairs(step.lines) do
+        line.kind = line.kind or "line"
+        line.teacher_fa = line.teacher_fa or {}
+        line.audio = packs.clips(pack, line.audio)
+        line.meaning_audio = packs.clips(pack, line.meaning_audio)
+        line.answer_audio = packs.clips(pack, line.answer_audio)
+      end
+      steps[#steps + 1] = step
     end
   end
+  if #steps == 0 then return nil end
+  lesson.steps = steps
+  lesson.n = lesson.n or info.n or 0
+  cache[info.id] = lesson
   return lesson
 end
 

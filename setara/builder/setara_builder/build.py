@@ -41,11 +41,41 @@ class Report:
         self.warnings.append(f"{where}: {msg}")
 
 
-def read_csv(path: Path) -> list[dict]:
-    """Rows as dicts with a _row number. Blank rows and # comments are skipped."""
+COLUMNS = {
+    "items": {"unit", "key", "en", "fa", "picture", "tags"},
+    "listen_pick": {"round", "intro_fa", "say_en", "say_fa", "show", "answer", "distractors", "help_fa", "hop", "tags"},
+    "say_it": {"round", "intro_fa", "say_en", "say_fa", "picture", "meaning_fa"},
+    "sorter": {"round", "intro_fa", "thing", "say_en", "say_fa", "basket", "basket_say_fa", "basket_say_en"},
+    "builder": {"round", "intro_fa", "say_en", "say_fa", "tiles", "extra", "rtl", "done_en", "done_fa", "help_fa"},
+    "catch": {"round", "intro_fa", "say_en", "say_fa", "targets", "others", "need", "help_fa"},
+    "pairs": {"round", "intro_fa", "a", "b", "say_en", "say_fa"},
+    "market": {"round", "intro_fa", "say_en", "say_fa", "goods", "target", "units", "mode", "help_fa"},
+    "story": {"round", "intro_fa", "picture", "say_en", "say_fa", "show_en", "show_fa", "choices", "right",
+              "wrong_say_fa", "wrong_picture"},
+    "lessons": {"lesson", "title_en", "title_fa", "step", "kind", "teacher_fa", "play_en", "meaning_fa", "answer_en"},
+    "phrases": {"page", "page_title_fa", "en", "fa"},
+    "tips": {"title_fa", "say_fa"},
+    "strings": {"key", "en", "fa", "say"},
+}
+COLUMNS["journey"] = COLUMNS["duel"] = COLUMNS["listen_pick"]
+
+
+def read_csv(path: Path, kind: str | None = None, report: "Report | None" = None) -> list[dict]:
+    """Rows as dicts with a _row number. Blank rows and # comments are skipped.
+
+    With kind and report, a column the sheet type does not have, or a row with
+    more cells than the header (an unquoted comma), is reported, not dropped.
+    """
     rows = []
     with path.open(encoding="utf-8-sig", newline="") as f:
-        for n, row in enumerate(csv.DictReader(f), start=2):
+        reader = csv.DictReader(f)
+        if kind and report is not None:
+            unknown = sorted({(h or "").strip() for h in reader.fieldnames or []} - COLUMNS[kind] - {""})
+            if unknown:
+                report.error(str(path.name), f"unknown column(s) {', '.join(unknown)}; allowed: {', '.join(sorted(COLUMNS[kind]))}")
+        for n, row in enumerate(reader, start=2):
+            if None in row and report is not None:
+                report.error(f"{path.name} row {n}", "more cells than columns: quote any cell that contains a comma")
             clean = {(k or "").strip(): (v or "").strip() for k, v in row.items() if k}
             first = next(iter(clean.values()), "")
             if not any(clean.values()) or first.startswith("#"):
@@ -116,6 +146,9 @@ class Pack:
         if spec.startswith("t:"):
             return {"id": spec, "t": spec[2:].strip()}
         if spec.startswith("f:"):
+            if not spec[2:].strip():
+                self.report.error(where, "f: needs Dari text after it")
+                return None
             return {"id": spec, "fa": self.fa(spec[2:].strip(), where, wrap=False)[0]}
         if spec.startswith("lf:"):
             try:
@@ -201,7 +234,13 @@ def _lp_item(pack: Pack, row: dict, where: str) -> dict | None:
     if not answer:
         return None
     item["answer"] = answer["id"]
-    item["choices"] = [answer] + pack.things(row.get("distractors", ""), where)
+    wrong = pack.things(row.get("distractors", ""), where)
+    ids = [t["id"] for t in wrong]
+    if answer["id"] in ids:
+        pack.report.error(where, f"a distractor is the same as the answer {answer['id']!r}")
+    if len(set(ids)) != len(ids):
+        pack.report.error(where, "the same distractor is listed twice")
+    item["choices"] = [answer] + [t for t in wrong if t["id"] != answer["id"]]
     help_fa = row.get("help_fa", "")
     if help_fa:
         item["help_audio"] = pack.say("fa", help_fa, where)
@@ -286,6 +325,8 @@ def parse_sheet(pack: Pack, game: dict, rows: list[dict], sheet: str) -> dict[st
                         basket["audio"] = pack.say("fa", row["basket_say_fa"], where)
                     if row.get("basket_say_en"):
                         basket["audio"] = basket.get("audio", []) + pack.say("en", row["basket_say_en"], where)
+                    if not basket.get("audio"):
+                        pack.report.error(where, "a basket must be spoken: fill basket_say_fa on its first row")
                     baskets.append(basket)
                 item = {"thing": thing, "basket": basket["id"], "prompt_audio": pack.prompt(row, where)}
 
@@ -337,6 +378,13 @@ def parse_sheet(pack: Pack, game: dict, rows: list[dict], sheet: str) -> dict[st
                 pack.report.error(where, f"mode must be count or pay, got {mode!r}")
             if not _reachable(target, units):
                 pack.report.error(where, f"target {target} cannot be made from units {units}")
+            # what the screen can hold: 20 goods, six kinds of coin or note, 24 pieces
+            if mode == "count" and target > 20:
+                pack.report.error(where, f"count target {target} is more than the 20 goods that fit")
+            if mode == "pay" and len(units) > 6:
+                pack.report.error(where, f"{len(units)} units given, at most six fit")
+            if mode == "pay" and _reachable(target, units) and _fewest(target, units) > 24:
+                pack.report.error(where, f"paying {target} with {units} needs more than 24 pieces")
             item = {"prompt_audio": pack.prompt(row, where), "target": target, "units": units, "mode": mode}
             if row.get("goods"):
                 item["goods"] = pack.thing(row["goods"], where)
@@ -363,6 +411,8 @@ def parse_sheet(pack: Pack, game: dict, rows: list[dict], sheet: str) -> dict[st
                 if not 2 <= len(item["choices"]) <= 4:
                     pack.report.error(where, "a story question has two to four choices")
                 item["wrong_audio"] = pack.say("fa", row.get("wrong_say_fa", ""), where)
+                if not item["wrong_audio"]:
+                    pack.report.error(where, "a decision needs wrong_say_fa: what the guide says after a wrong choice")
                 if row.get("wrong_picture"):
                     item["wrong_img"] = pack.thing(row["wrong_picture"], where)
 
@@ -371,6 +421,14 @@ def parse_sheet(pack: Pack, game: dict, rows: list[dict], sheet: str) -> dict[st
                 pack.report.error(where, "no spoken prompt")
             rnd["items"].append(item)
     return rounds
+
+
+def _fewest(target: int, units: list[int]) -> int:
+    """Fewest coins and notes that make the target."""
+    best = [0] + [10**9] * target
+    for t in range(1, target + 1):
+        best[t] = min((best[t - u] + 1 for u in units if u <= t), default=10**9)
+    return best[target]
 
 
 def _reachable(target: int, units: list[int]) -> bool:
@@ -437,12 +495,15 @@ def build_learner(pack: Pack) -> dict:
     subject, level = meta.get("subject"), meta.get("level")
     if subject not in SUBJECTS or not isinstance(level, int) or not 1 <= level <= SUBJECTS.get(subject, 0):
         pack.report.error(f"{pack.where}/pack.json", f"bad subject/level {subject!r}/{level!r}")
+    elif pack.id != f"{subject}-{level}":
+        pack.report.error(f"{pack.where}/pack.json", f"pack must be {subject}-{level}, got {pack.id!r}")
     items = []
     if (pack.src / "items.csv").exists():
-        items = read_csv(pack.src / "items.csv")
+        items = read_csv(pack.src / "items.csv", "items", pack.report)
         seen = set()
         for it in items:
             w = f"{pack.where}/items.csv row {it['_row']}"
+            it.setdefault("unit", "")
             if not it.get("unit"):
                 pack.report.error(w, "missing unit")
             if it.get("key") in seen:
@@ -454,6 +515,9 @@ def build_learner(pack: Pack) -> dict:
     for game in meta.get("games", []):
         gw = f"{pack.where}/pack.json game {game.get('id')}"
         engine = game.get("engine")
+        if not re.match(r"^[a-z0-9_]+$", str(game.get("id", ""))):
+            pack.report.error(gw, "every game needs an id of lowercase letters, digits and _")
+            continue
         if engine not in ENGINES:
             pack.report.error(gw, f"unknown engine {engine!r}")
             continue
@@ -468,7 +532,7 @@ def build_learner(pack: Pack) -> dict:
             if not (pack.src / sheet).is_file():
                 pack.report.error(gw, f"sheet not found: {sheet!r}")
                 continue
-            rounds = parse_sheet(pack, game, read_csv(pack.src / sheet), sheet)
+            rounds = parse_sheet(pack, game, read_csv(pack.src / sheet, engine, pack.report), sheet)
         if not rounds:
             pack.report.warn(gw, "no rounds")
         default_intro = pack.say("fa", game.get("intro_fa", ""), gw)
@@ -528,12 +592,13 @@ def build_teacher(pack: Pack) -> dict:
     out: dict = {"subject": meta.get("subject", "en"), "level": meta.get("level", 1)}
     lessons: dict[str, dict] = {}
     path = pack.src / "lessons.csv"
-    for row in read_csv(path) if path.exists() else []:
+    for row in read_csv(path, "lessons", pack.report) if path.exists() else []:
         where = f"{pack.where}/lessons.csv row {row['_row']}"
         n = row.get("lesson", "")
         if not n.isdigit():
             pack.report.error(where, f"lesson must be a number, got {n!r}")
             continue
+        n = str(int(n))  # "3" and "03" are the same lesson
         lesson = lessons.setdefault(n, {"n": int(n), "id": f"{pack.id}-{int(n):02d}", "steps": [{"step": s, "lines": []} for s in STEPS]})
         if row.get("title_en"):
             lesson["title_en"] = row["title_en"]
@@ -580,7 +645,7 @@ def build_teacher(pack: Pack) -> dict:
 
     pages: dict[str, dict] = {}
     path = pack.src / "phrases.csv"
-    for row in read_csv(path) if path.exists() else []:
+    for row in read_csv(path, "phrases", pack.report) if path.exists() else []:
         where = f"{pack.where}/phrases.csv row {row['_row']}"
         page = pages.setdefault(row.get("page", "1"), {"title_fa": [], "phrases": []})
         if row.get("page_title_fa"):
@@ -601,7 +666,7 @@ def build_teacher(pack: Pack) -> dict:
 
     tips = []
     path = pack.src / "tips.csv"
-    for row in read_csv(path) if path.exists() else []:
+    for row in read_csv(path, "tips", pack.report) if path.exists() else []:
         where = f"{pack.where}/tips.csv row {row['_row']}"
         tips.append({"title_fa": pack.fa(row.get("title_fa", ""), where, wrap=False),
                      "fa": pack.fa(row.get("say_fa", ""), where), "audio": pack.say("fa", row.get("say_fa", ""), where)})
@@ -616,7 +681,7 @@ def build_teacher(pack: Pack) -> dict:
 
 def build_core(pack: Pack) -> dict:
     strings = {}
-    for row in read_csv(pack.src / "strings.csv"):
+    for row in read_csv(pack.src / "strings.csv", "strings", pack.report):
         where = f"{pack.where}/strings.csv row {row['_row']}"
         key = row.get("key", "")
         if not key or key in strings:
@@ -668,12 +733,21 @@ def build(content: Path, out_dir: Path | None, tts: str | None = None, only: lis
             report.error(f"{where}/pack.json", f"pack id {pack.id!r} already used by {seen[pack.id]}")
             continue
         seen[pack.id] = src
+        place = (pack.meta.get("subject"), pack.meta.get("level"), pack.meta.get("kind", "learner"))
+        if place[2] == "learner" and place in seen:
+            report.error(f"{where}/pack.json", f"subject and level already used by {seen[place]}")
+            continue
+        seen[place] = src
         kind = pack.meta.get("kind", "learner")
         before = len(report.errors)
-        try:
-            body = {"learner": build_learner, "teacher": build_teacher, "core": build_core}[kind](pack)
-        except KeyError:
+        builders = {"learner": build_learner, "teacher": build_teacher, "core": build_core}
+        if kind not in builders:
             report.error(f"{where}/pack.json", f"unknown kind {kind!r}")
+            continue
+        try:
+            body = builders[kind](pack)
+        except Exception as exc:  # report the pack, keep building the others
+            report.error(where, f"could not build: {type(exc).__name__}: {exc}")
             continue
         pack.add_pictures(strict)
         manifest = {

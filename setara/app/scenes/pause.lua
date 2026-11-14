@@ -22,11 +22,14 @@ function Pause.new(opts)
 end
 
 function Pause:enter()
-  audio.stop()
+  audio.pause()
+  sfx.pause_loop()
 end
 
 function Pause:leave()
   store.save_progress()
+  audio.resume()
+  sfx.resume_loop()
 end
 
 function Pause:update(dt) self.t = self.t + dt end

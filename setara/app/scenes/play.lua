@@ -53,7 +53,7 @@ function Play:make_warmup()
       Quiz.shuffle(pool)
       local items, seen = {}, {}
       for _, entry in ipairs(pool) do
-        if not seen[entry.answer] and #items < 5 then
+        if entry.answer ~= nil and not seen[entry.answer] and #items < 5 then
           seen[entry.answer] = true
           items[#items + 1] = entry
         end
@@ -83,7 +83,7 @@ function Play:enter()
   self.engine = mod.new(round, self.ctx)
   self.warmup = self:make_warmup()
   self.state = "intro"
-  audio.say(packs.clips(self.pack, round.intro_audio), { on_done = function() self:begin() end, after = 0.3 })
+  audio.say(packs.clips(self.pack, round.intro_audio), { after = 0.3 })
 end
 
 function Play:leave()
@@ -101,8 +101,8 @@ function Play:begin()
   if self.state ~= "intro" then return end
   if self.warmup then
     self.state = "warmup"
-    local s = packs.string("warmup")
-    audio.say(s.audio, { on_done = function() self.warmup:start() end })
+    self.warmup_waiting = true
+    audio.say(packs.string("warmup").audio)
   else
     self.state = "main"
     self.engine:start()
@@ -148,7 +148,16 @@ function Play:update(dt)
     self.elapsed = self.elapsed + dt
     app.play_seconds = app.play_seconds + dt
   end
+  -- Steps that follow a spoken sentence wait by watching the speech, not by a
+  -- callback: speech that is cut off must never leave the round standing.
+  if self.state == "intro" and not audio.busy() then
+    self:begin()
+  elseif self.warmup_waiting and not audio.busy() then
+    self.warmup_waiting = false
+    self.warmup:start()
+  end
   local e = self:active()
+  if self.warmup_waiting then e = nil end
   if e then
     e:update(dt)
     if e.finished then

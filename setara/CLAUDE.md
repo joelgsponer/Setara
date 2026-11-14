@@ -64,9 +64,10 @@ convenience.
 - Subject codes: `en`, `fa` (Dari reading), `math`, `garden`. Round ids look
   like `en-1-03-a`: pack, round, the game's letter.
 - Audio is Ogg Vorbis, not the Opus of the spec: LÖVE 11 cannot decode Opus.
-- Speech callbacks: `audio.say(clips, { on_done = f })` never calls `f` when
-  the speech is stopped or replaced. Engines poll `audio.busy()` instead of
-  relying on it, so the pause menu cannot leave them stuck.
+- Waiting for speech: watch `audio.busy()` in `update` rather than rely on
+  `on_done`. A speech that is stopped or replaced never calls `on_done`. The
+  pause menu holds speech and lets it carry on, but X, Y and leaving a screen
+  cut it off.
 - Never call `app.pop` or `app.push` from a scene's `enter`.
 - Content sources are the CSVs. Math is the exception: edit
   `content/math/generate.py` and run it; do not hand-edit math CSVs.

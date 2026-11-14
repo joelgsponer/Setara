@@ -39,16 +39,19 @@ function Tutorial:next()
     return
   end
   self.said = 0
-  audio.say(packs.string(step.say).audio, {
-    on_done = function() if not step.want then self:next() end end,
-    after = 0.4,
-  })
+  audio.say(packs.string(step.say).audio, { after = 0.4 })
+  self.auto = not step.want
 end
 
 function Tutorial:update(dt)
   self.t = self.t + dt
   self.happy = math.max(0, self.happy - dt)
   local step = STEPS[self.step]
+  if self.auto and not audio.busy() then
+    self.auto = false
+    self:next()
+    return
+  end
   if step and step.want and not audio.busy() then
     -- nothing pressed for a while: say it again
     self.said = self.said + dt

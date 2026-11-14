@@ -59,8 +59,15 @@ function M.fa(lines, x, y, w, size, align, bold)
   local f = M.font(bold and "fabold" or "fa", size or 30)
   love.graphics.setFont(f)
   local step = math.floor(f:getHeight() * 0.86)
+  align = align or "right"
   for i, line in ipairs(lines or {}) do
-    love.graphics.printf(line, x, y + (i - 1) * step, w, align or "right")
+    -- The line is already in drawing order: wrapping it again would move its
+    -- first word below its last. A line that is too wide is narrowed instead.
+    local lw = f:getWidth(line)
+    local s = lw > w and w / lw or 1
+    local lx = x
+    if align == "right" then lx = x + w - lw * s elseif align == "center" then lx = x + (w - lw * s) / 2 end
+    love.graphics.print(line, lx, y + (i - 1) * step, 0, s, 1)
   end
   return #(lines or {}) * step
 end
@@ -74,7 +81,10 @@ end
 function M.centered(kind, str, x, y, w, h, max_size, min_size)
   local f = M.fit(kind, str, w - 8, h - 4, max_size, min_size)
   love.graphics.setFont(f)
-  love.graphics.printf(str, x, y + (h - f:getHeight()) / 2, w, "center")
+  -- one line, never wrapped: narrowed if even the smallest size is too wide
+  local lw = f:getWidth(str)
+  local s = lw > w - 4 and (w - 4) / lw or 1
+  love.graphics.print(str, x + (w - lw * s) / 2, y + (h - f:getHeight()) / 2, 0, s, 1)
 end
 
 return M

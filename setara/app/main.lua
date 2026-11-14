@@ -21,6 +21,7 @@ function app.push(scene)
 end
 
 function app.pop(result)
+  if #app.stack <= 1 then return end -- the first scene is never removed
   local old = table.remove(app.stack)
   if old and old.leave then old:leave() end
   local top = app.top()
@@ -49,12 +50,17 @@ function love.load()
   love.graphics.setDefaultFilter("linear", "linear")
   love.mouse.setVisible(false)
   canvas = love.graphics.newCanvas(ui.W, ui.H)
-  love.math.setRandomSeed(tonumber(os.getenv("SETARA_SEED")) or os.time())
   sfx.load()
   store.load()
+  -- Handhelds without a clock battery start at the same "time" every day, so
+  -- the seed also takes a start counter kept on the card.
+  store.progress.starts = (tonumber(store.progress.starts) or 0) + 1
+  love.math.setRandomSeed(tonumber(os.getenv("SETARA_SEED"))
+    or (os.time() % 2147483647 + store.progress.starts * 7919 + math.floor(os.clock() * 1e6) % 100000))
+  store.ensure_device()
   audio.set_volume(store.progress.settings.volume)
   local learned = require("core.json").decode(love.filesystem.read("data/buttons.json") or "")
-  if type(learned) == "table" and next(learned) then input.custom = learned end
+  if input.complete(learned) then input.custom = learned end
   input.listener = function(button)
     local top = app.top()
     if top and top.input then top:input(button) end
@@ -127,6 +133,7 @@ function love.draw()
   -- A scene with `overlay` draws on top of the one below it (pause menu).
   local first = #app.stack
   while first > 1 and app.stack[first].overlay do first = first - 1 end
+  first = math.max(1, first)
   for i = first, #app.stack do
     local scene = app.stack[i]
     if scene.draw then scene:draw() end

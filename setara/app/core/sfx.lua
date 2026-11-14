@@ -72,6 +72,9 @@ function M.loop(name)
   if looping then looping:play() end
 end
 
+function M.pause_loop() if looping then looping:pause() end end
+function M.resume_loop() if looping then looping:play() end end
+
 function M.stop_loop()
   if looping then looping:stop() end
   looping = nil

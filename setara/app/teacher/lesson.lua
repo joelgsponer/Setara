@@ -26,6 +26,8 @@ end
 
 function Lesson:leave() T.stop() end
 
+function Lesson:usable() return self.lesson ~= nil end
+
 function Lesson:current()
   local step = self.lesson.steps[self.step]
   return step and step.lines[self.line], step
@@ -51,10 +53,11 @@ function Lesson:finish()
   audio.say(T.S("t_lesson_done").audio)
 end
 
-function Lesson:resume()
-  -- back from the Quick Check: jump past its questions
+function Lesson:resume(result)
+  -- back from the Quick Check: jump past its questions, if it was completed
   if self.checking then
     self.checking = false
+    if result ~= "checked" then return end
     local step = self.lesson.steps[self.step]
     local line = self.line
     while step.lines[line] and step.lines[line].kind == "check" do line = line + 1 end
@@ -137,8 +140,8 @@ function Lesson:draw()
   -- the six steps
   for i, name in ipairs(T.STEPS) do
     local x = 8 + (i - 1) * 104.5
-    local on = i == self.step
-    ui.card(x, 50, 100, 40, { fill = on and ui.c.teacher or (i < self.step and ui.c.shade or ui.c.paper),
+    local on = name == step.step
+    ui.card(x, 50, 100, 40, { fill = on and ui.c.teacher or ui.c.paper,
       border = ui.c.teacher, radius = 8, width = 2 })
     ui.set(on and ui.c.white or ui.c.ink)
     local s = T.S("step_" .. name)
@@ -146,7 +149,7 @@ function Lesson:draw()
   end
   -- time in this step, and the suggested minutes
   ui.set(ui.c.soft)
-  text.print(T.timer(self.step_time) .. "  /  " .. T.MINUTES[step.step] .. ":00", 14, 96, 200, "left", 20)
+  text.print(T.timer(self.step_time) .. "  /  " .. (T.MINUTES[step.step] or 5) .. ":00", 14, 96, 200, "left", 20)
   -- which line of the step
   for i = 1, #step.lines do
     ui.set(i == self.line and ui.c.teacher or ui.c.line)

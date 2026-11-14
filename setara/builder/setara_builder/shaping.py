@@ -22,8 +22,11 @@ DARI_FONT = FONT_DIR / "NotoNaskhArabic-Medium.ttf"
 LATIN_FONT = FONT_DIR / "Andika-Regular.ttf"
 
 # Body text on the device: 30 px Dari (spec minimum), inside a 600 px column.
+# Lines are measured in the regular weight and drawn in several places, some
+# bold and some a little narrower, so the column is kept well inside the
+# screen. The app never re-wraps: a line that is still too wide is narrowed.
 BODY_SIZE = 30
-BODY_WIDTH = 590
+BODY_WIDTH = 550
 
 _reshaper = arabic_reshaper.ArabicReshaper(
     {

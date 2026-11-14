@@ -14,8 +14,9 @@ Course.__index = Course
 function Course.new()
   local self = setmetatable({ t = 0, tab = 1, sel = 1 }, Course)
   local pack = T.pack()
-  self.lessons = pack and pack.lessons or {}
-  self.tips = pack and pack.tips and packs.read(pack, pack.tips) or {}
+  self.lessons = pack and type(pack.lessons) == "table" and pack.lessons or {}
+  local tips = pack and type(pack.tips) == "string" and packs.read(pack, pack.tips)
+  self.tips = type(tips) == "table" and tips or {}
   for _, tip in ipairs(self.tips) do tip.audio = packs.clips(pack, tip.audio) end
   return self
 end

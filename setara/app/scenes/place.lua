@@ -14,7 +14,7 @@ local MAX_LEVEL = { en = 6, fa = 6, math = 6, garden = 4 }
 local COLS = 4
 
 function Place.new(subject)
-  local self = setmetatable({ subject = subject, t = 0, row = 1, col = 1, scroll = 0 }, Place)
+  local self = setmetatable({ subject = subject, t = 0, row = 1, col = 1, scroll = 0, chip = 1 }, Place)
   self.levels = packs.levels(subject)
   self.level = store.progress.level[subject]
   if not packs.subjects[subject][self.level or -1] then self.level = self.levels[1] end
@@ -66,7 +66,7 @@ function Place:speak()
   if game then
     audio.say(packs.clips(self.pack, game.title_audio))
   elseif self.row == 0 then
-    local chip = self:chips()[self.chip]
+    local chip = self:chips()[self.chip] or {}
     if chip.kind == "level" then audio.say(packs.string("level_" .. chip.level).audio)
     elseif chip.kind == "find" then audio.say(packs.string("find_level").audio)
     else audio.say(packs.string(app.pair and "two_players" or "one_player").audio) end
@@ -110,7 +110,7 @@ function Place:input(b)
       sfx.play("move")
       self:speak()
     elseif b == "a" then
-      local chip = chips[self.chip]
+      local chip = chips[self.chip] or {}
       if chip.kind == "find" then
         app.push(require("scenes.placement").new(self.subject))
       elseif chip.kind == "pair" then
@@ -140,6 +140,7 @@ function Place:input(b)
   else return end
   if row == 0 then
     self.row = 0
+    self.chip = 1
     for i, chip in ipairs(self:chips()) do
       if chip.kind == "level" and chip.level == self.level then self.chip = i end
     end

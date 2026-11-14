@@ -709,6 +709,16 @@ MARKET_META: list[tuple[dict, int]] = []
 
 def market_row(s, rnd, say, goods, target, units, mode, help_fa):
     units = sorted(units)
+    # The screen holds six kinds of coin or note: drop the small ones that
+    # this price does not need.
+    while len(units) > 6:
+        for u in units:
+            rest = [x for x in units if x != u]
+            if reachable(target, rest):
+                units = rest
+                break
+        else:
+            raise AssertionError((target, units))
     assert reachable(target, units), (target, units)
     row = s.add(round=rnd, say_fa=say, goods=goods, target=target, units="|".join(map(str, units)),
                 mode=mode, help_fa=help_fa)

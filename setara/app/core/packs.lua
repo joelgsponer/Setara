@@ -37,13 +37,43 @@ local function zips(dir)
   return out
 end
 
+-- Is this manifest one the app can use? A pack must name itself sanely and
+-- carry what its kind needs; an empty shell must never replace a good pack.
+local function usable(manifest, root)
+  if type(manifest) ~= "table" or manifest.format ~= M.FORMAT then return false, "format" end
+  local id, ver = manifest.pack, manifest.version
+  if type(id) ~= "string" or not id:match("^[a-z0-9][a-z0-9%-]*$") or #id > 40 then return false, "pack id" end
+  if type(ver) ~= "number" or ver ~= math.floor(ver) or ver < 1 or ver > 999999 then return false, "version" end
+  local function has(path) return type(path) == "string" and love.filesystem.getInfo(root .. path, "file") ~= nil end
+  if manifest.kind == "core" then
+    if not has(manifest.strings or "strings.json") then return false, "no strings" end
+  elseif manifest.kind == "teacher" then
+    if type(manifest.lessons) ~= "table" then return false, "no lessons" end
+    for _, lesson in ipairs(manifest.lessons) do
+      if type(lesson) ~= "table" or not has("lessons/" .. tostring(lesson.id) .. ".json") then return false, "lesson file" end
+    end
+  else
+    if type(manifest.subject) ~= "string" or type(manifest.level) ~= "number" then return false, "subject or level" end
+    if type(manifest.games) ~= "table" then return false, "no games" end
+    for _, game in ipairs(manifest.games) do
+      if type(game) ~= "table" or type(game.id) ~= "string" or type(game.rounds) ~= "table" then return false, "game" end
+      for _, rid in ipairs(game.rounds) do
+        if not has("levels/" .. tostring(rid) .. ".json") then return false, "level file" end
+      end
+    end
+  end
+  return true
+end
+
 -- Check every file of a mounted pack. Yields now and then so the screen can
 -- show progress. Returns the manifest or nil and a reason.
 local function verify(root, tick)
   local manifest, err = read_json(root .. "manifest.json")
   if type(manifest) ~= "table" then return nil, "manifest: " .. tostring(err) end
   if manifest.format ~= M.FORMAT then return nil, "format " .. tostring(manifest.format) end
-  if type(manifest.pack) ~= "string" or type(manifest.files) ~= "table" then return nil, "manifest fields" end
+  if type(manifest.files) ~= "table" or next(manifest.files) == nil then return nil, "no file list" end
+  local ok, why = usable(manifest, root)
+  if not ok then return nil, why end
   local n = 0
   for path, want in pairs(manifest.files) do
     local data = love.filesystem.read(root .. path)
@@ -79,35 +109,42 @@ function M.install_updates(tick)
   local done, failed = 0, 0
   for _, name in ipairs(zips("update")) do
     local src = "update/" .. name
-    local mount = "upd/"
-    local manifest, err
-    if love.filesystem.mount(src, mount) then
-      manifest, err = verify(mount, tick)
-      love.filesystem.unmount(src)
-    else
-      err = "not a zip"
-    end
-    if manifest then
-      local id, ver = manifest.pack, tonumber(manifest.version) or 1
-      local current = have[id] and have[id][1]
-      if not current or ver >= current.version then
-        local data = love.filesystem.read(src)
-        local target = string.format("packs/%s.v%d.zip", id, ver)
-        local ok = data and love.filesystem.write(target, data)
-        -- Read the copy back: a full card or a bad sector must not leave a broken pack.
-        if ok and love.filesystem.read(target) == data then
-          done = done + 1
-          have[id] = have[id] or {}
-          table.insert(have[id], 1, { version = ver, name = target:sub(7) })
-        else
-          love.filesystem.remove(target)
-          failed = failed + 1
-          store.log("update copy failed " .. name)
-        end
+    -- One bad file must not stop the others, or the start of the app.
+    local ok, why = pcall(function()
+      local manifest, err
+      if love.filesystem.mount(src, "upd/") then
+        manifest, err = verify("upd/", tick)
+        love.filesystem.unmount(src)
+      else
+        err = "not a zip"
       end
-    else
+      if not manifest then
+        failed = failed + 1
+        store.log("update rejected: " .. tostring(err))
+        return
+      end
+      local id, ver = manifest.pack, manifest.version
+      local current = have[id] and have[id][1]
+      if current and ver <= current.version then return end -- not newer: nothing to do
+      -- Always a new file name: the installed pack is never written over.
+      local data = love.filesystem.read(src)
+      local target = string.format("packs/%s.v%d.zip", id, ver)
+      local written = data and love.filesystem.write(target, data)
+      -- Read the copy back: a full card or a bad sector must not leave a broken pack.
+      if written and love.filesystem.read(target) == data then
+        done = done + 1
+        have[id] = have[id] or {}
+        table.insert(have[id], 1, { version = ver, name = target:sub(7) })
+      else
+        love.filesystem.remove(target)
+        failed = failed + 1
+        store.log("update copy failed: " .. id)
+      end
+    end)
+    if not ok then
       failed = failed + 1
-      store.log("update rejected " .. name .. ": " .. tostring(err))
+      love.filesystem.unmount(src)
+      store.log("update error: " .. tostring(why):sub(1, 60))
     end
     love.filesystem.remove(src)
     if tick then tick() end
@@ -129,16 +166,16 @@ function M.load()
         local root = "p/" .. id .. "/"
         if love.filesystem.mount(path, root) then
           local manifest = read_json(root .. "manifest.json")
-          if type(manifest) == "table" and manifest.format == M.FORMAT and manifest.pack == id then
+          if type(manifest) == "table" and manifest.pack == id and usable(manifest, root) then
             manifest.root = root
             M.list[id] = manifest
             loaded = true
           else
             love.filesystem.unmount(path)
-            store.log("pack unreadable " .. v.name)
+            store.log("pack unusable: " .. id)
           end
         else
-          store.log("pack not a zip " .. v.name)
+          store.log("pack not a zip: " .. id)
         end
       end
     end
@@ -146,7 +183,8 @@ function M.load()
   for _, p in pairs(M.list) do
     if p.kind == "core" then
       M.core = p
-      p.strings = read_json(p.root .. (p.strings or "strings.json")) or {}
+      local strings = read_json(p.root .. (type(p.strings) == "string" and p.strings or "strings.json"))
+      p.strings = type(strings) == "table" and strings or {}
     elseif p.kind == "teacher" then
       M.teacher[#M.teacher + 1] = p
     elseif p.subject and p.level then
@@ -183,7 +221,7 @@ function M.read(pack, path)
 end
 
 function M.round(pack, id)
-  local r, err = read_json(pack.root .. "levels/" .. id .. ".json")
+  local r, err = read_json(pack.root .. "levels/" .. tostring(id) .. ".json")
   if type(r) ~= "table" or type(r.items) ~= "table" then return nil, err or "bad level file" end
   r.pack = pack
   return r
@@ -191,7 +229,8 @@ end
 
 function M.review(pack)
   if pack._review == nil then
-    pack._review = read_json(pack.root .. (pack.review or "review.json")) or false
+    local review = read_json(pack.root .. (type(pack.review) == "string" and pack.review or "review.json"))
+    pack._review = type(review) == "table" and review or false
   end
   return pack._review or {}
 end

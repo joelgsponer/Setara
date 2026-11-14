@@ -24,7 +24,8 @@ function Placement.new(subject)
 end
 
 function Placement:enter()
-  audio.say(packs.string("find_level_intro").audio, { on_done = function() self:next_level() end })
+  audio.say(packs.string("find_level_intro").audio)
+  self.waiting = true
 end
 
 function Placement:leave()
@@ -45,7 +46,7 @@ function Placement:next_level()
   Quiz.shuffle(pool)
   local items, seen = {}, {}
   for _, entry in ipairs(pool) do
-    if not seen[entry.answer] and #items < PER_LEVEL then
+    if entry.answer ~= nil and not seen[entry.answer] and #items < PER_LEVEL then
       seen[entry.answer] = true
       items[#items + 1] = entry
     end
@@ -73,6 +74,10 @@ end
 
 function Placement:update(dt)
   self.t = self.t + dt
+  if self.waiting and not audio.busy() then
+    self.waiting = false
+    self:next_level()
+  end
   local e = self.engine
   if e then
     e:update(dt)

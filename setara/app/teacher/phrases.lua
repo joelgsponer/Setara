@@ -13,9 +13,16 @@ Board.__index = Board
 function Board.new()
   local self = setmetatable({ t = 0, page = 1, sel = 1 }, Board)
   local pack = T.pack()
-  self.pages = pack and pack.phrases and packs.read(pack, pack.phrases) or {}
+  local pages = pack and type(pack.phrases) == "string" and packs.read(pack, pack.phrases)
+  self.pages = {}
+  for _, page in ipairs(type(pages) == "table" and pages or {}) do
+    if type(page) == "table" and type(page.phrases) == "table" and #page.phrases > 0 then
+      self.pages[#self.pages + 1] = page
+    end
+  end
   for _, page in ipairs(self.pages) do
-    for _, p in ipairs(page.phrases or {}) do
+    for _, p in ipairs(page.phrases) do
+      p.text = p.text or ""
       p.audio = packs.clips(pack, p.audio)
       p.fa_audio = packs.clips(pack, p.fa_audio)
     end

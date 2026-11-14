@@ -130,20 +130,27 @@ end
 
 -- Stars -----------------------------------------------------------------------
 
+local star_pts, star_tris
 function M.star(cx, cy, r, filled, alpha)
-  local pts = {}
-  for i = 0, 9 do
-    local a = -math.pi / 2 + i * math.pi / 5
-    local rr = (i % 2 == 0) and r or r * 0.45
-    pts[#pts + 1] = cx + math.cos(a) * rr
-    pts[#pts + 1] = cy + math.sin(a) * rr
+  if not star_pts then
+    star_pts = {}
+    for i = 0, 9 do
+      local a = -math.pi / 2 + i * math.pi / 5
+      local rr = (i % 2 == 0) and 1 or 0.45
+      star_pts[#star_pts + 1] = math.cos(a) * rr
+      star_pts[#star_pts + 1] = math.sin(a) * rr
+    end
+    star_tris = love.math.triangulate(star_pts)
   end
-  local tris = love.math.triangulate(pts)
+  g.push()
+  g.translate(cx, cy)
+  g.scale(r, r)
   if filled then M.set(M.c.gold, alpha) else M.set(M.c.shade, alpha) end
-  for _, t in ipairs(tris) do g.polygon("fill", t) end
+  for _, t in ipairs(star_tris) do g.polygon("fill", t) end
   M.set(M.c.ink, alpha)
-  g.setLineWidth(math.max(1.5, r / 9))
-  g.polygon("line", pts)
+  g.setLineWidth(math.max(1.5, r / 9) / r)
+  g.polygon("line", star_pts)
+  g.pop()
   g.setLineWidth(1)
 end
 

@@ -47,6 +47,11 @@ function E:next()
   end
   self.item = item
   self.slots = common.deal(item, 4)
+  if not self.slots then
+    -- a question that cannot be asked is passed over, never shown
+    self.quiz:right()
+    return self:next()
+  end
   self.wrong, self.locked = {}, {}
   self.picked, self.winner = nil, nil
   self.phase, self.t, self.quiet = "ask", 0, 0

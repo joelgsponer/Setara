@@ -79,8 +79,11 @@ The launcher sets `XDG_DATA_HOME` so that LÖVE keeps everything on the card.
 3. A good pack is copied into `packs/` under its new version name and read
    back. Only then is the old version removed. If power is cut in between,
    the old pack is still there.
-4. A damaged pack is ignored and removed, and the old one stays. The rejection
-   is noted in the log inside `stats.json`.
+4. A damaged pack is ignored and removed, and the old one stays. So is an
+   empty shell, a pack that lacks what its kind needs, and a pack whose
+   version is not higher than the installed one. An installed pack is never
+   written over. A rejection is noted in the log inside `stats.json`, without
+   the file's name.
 5. `data/` is never touched by an update.
 
 If a card fails completely, write the card folder to a new card. Nothing else
@@ -108,5 +111,7 @@ size. There are no profiles.
 No names, no timestamps finer than the week. Version 1 uploads nothing: the
 team copies the file at field visits and reads it with `tools/read_stats.py`.
 
-Both files are written twice (`.json` and `.json.bak`). A damaged file falls
-back to its backup and then to empty: it resets only that file.
+Each file is written to a new file that is then swapped in, so a power cut
+leaves the old state or the new one. At every start a file that reads well
+refreshes its backup (`.json.bak`). A damaged file falls back to the backup
+and then to empty: it resets only that file.

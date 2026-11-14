@@ -21,11 +21,15 @@ local function is_answer(thing, answer)
 end
 
 -- Pick the answer plus (level - 1) wrong choices and deal them to slots.
+-- Returns nil for a question that cannot be asked (no right choice, or
+-- nothing to choose between); the engines skip such an item.
 function M.deal(item, level)
   local right, wrong = nil, {}
-  for _, c in ipairs(item.choices or {}) do
-    if is_answer(c, item.answer) and not right then right = c else wrong[#wrong + 1] = c end
+  for _, c in ipairs(type(item.choices) == "table" and item.choices or {}) do
+    if is_answer(c, item.answer) and not right then right = c
+    elseif not is_answer(c, item.answer) then wrong[#wrong + 1] = c end
   end
+  if not right or #wrong == 0 then return nil end
   Quiz.shuffle(wrong)
   local n = math.max(2, math.min(level, #wrong + 1, 4))
   local picked = { right }

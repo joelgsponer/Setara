@@ -10,23 +10,35 @@ local M = {}
 
 local DIR = "data"
 
+-- Reads the file, or its backup. A file that reads well refreshes the
+-- backup, so the backup is always an older state that was known to be good,
+-- never written in the same instant as the file itself.
 local function read(name)
-  for _, path in ipairs({ DIR .. "/" .. name, DIR .. "/" .. name .. ".bak" }) do
-    local raw = love.filesystem.read(path)
-    if raw then
-      local data = json.decode(raw)
-      if type(data) == "table" then return data end
-    end
+  local path = DIR .. "/" .. name
+  local raw = love.filesystem.read(path)
+  local data = raw and json.decode(raw)
+  if type(data) == "table" then
+    if love.filesystem.read(path .. ".bak") ~= raw then love.filesystem.write(path .. ".bak", raw) end
+    return data
   end
+  raw = love.filesystem.read(path .. ".bak")
+  data = raw and json.decode(raw)
+  if type(data) == "table" then return data end
   return nil
 end
 
+-- Writes to a new file first and then swaps it in, so a power cut leaves
+-- either the old state or the new one, not half of each.
 local function write(name, data)
   local raw = json.encode(data)
   love.filesystem.createDirectory(DIR)
-  local ok = love.filesystem.write(DIR .. "/" .. name, raw)
-  love.filesystem.write(DIR .. "/" .. name .. ".bak", raw)
-  return ok
+  local path = DIR .. "/" .. name
+  if love.filesystem.write(path .. ".tmp", raw) then
+    local real = love.filesystem.getSaveDirectory() .. "/" .. path
+    if os.rename(real .. ".tmp", real) then return true end
+    love.filesystem.remove(path .. ".tmp")
+  end
+  return love.filesystem.write(path, raw) -- where the swap is not possible
 end
 
 local function random_id()
@@ -47,12 +59,20 @@ function M.load()
 
   M.stats = read("stats.json") or {}
   local s = M.stats
-  s.device = type(s.device) == "string" and s.device or random_id()
+  s.device = type(s.device) == "string" and s.device or nil
   s.rounds = type(s.rounds) == "table" and s.rounds or {}
   s.weeks = type(s.weeks) == "table" and s.weeks or {}
   s.checks = type(s.checks) == "table" and s.checks or {}
   s.teacher = type(s.teacher) == "table" and s.teacher or {}
   s.log = type(s.log) == "table" and s.log or {}
+end
+
+-- Called once the random seed is set: gives a new device its random id.
+function M.ensure_device()
+  if not M.stats.device then
+    M.stats.device = random_id()
+    M.save_stats()
+  end
 end
 
 function M.save_progress() return write("progress.json", M.progress) end

@@ -45,9 +45,21 @@ local function release(b)
 end
 
 -- Raw code -> button name, through the learned map when there is one.
+-- A code the map does not know falls back to the built-in mapping, so a card
+-- calibrated on one device still works in another.
 local function lookup(code, fallback)
-  if M.custom then return M.custom[code] end
-  return fallback
+  return M.custom and M.custom[code] or fallback
+end
+
+-- A learned map counts only when it names all eleven buttons.
+function M.complete(map)
+  if type(map) ~= "table" then return false end
+  local have = {}
+  for _, name in pairs(map) do have[name] = true end
+  for _, name in ipairs(M.buttons) do
+    if not have[name] then return false end
+  end
+  return true
 end
 
 function M.keypressed(key) press(M.keyboard[key]) end
@@ -97,13 +109,14 @@ end
 -- An analogue stick works as a D-pad too.
 local axis_state = {}
 function M.axis(joy)
-  if M.raw then return end
   local x, y = joy:getAxis(1) or 0, joy:getAxis(2) or 0
   local now = { left = x < -0.6, right = x > 0.6, up = y < -0.6, down = y > 0.6 }
-  for b, on in pairs(now) do
-    if on and not axis_state[b] then press(b) end
-    if not on and axis_state[b] then release(b) end
-    axis_state[b] = on
+  for dir, on in pairs(now) do
+    if on and not axis_state[dir] then
+      if M.raw then M.raw("x" .. dir) else press(lookup("x" .. dir, dir)) end
+    end
+    if not on and axis_state[dir] and not M.raw then release(lookup("x" .. dir, dir)) end
+    axis_state[dir] = on
   end
 end
 

@@ -78,6 +78,9 @@ def main() -> None:
         shutil.copy(pack, save / "packs" / f"{manifest['pack']}.v{manifest['version']}.zip")
         count += 1
 
+    if not (save / "packs" / "core.v1.zip").exists() and not list((save / "packs").glob("core.v*.zip")):
+        raise SystemExit("no core pack in packs/: run the builder first (cd builder && python3 -m setara_builder.cli build)")
+
     (card / "Setara.sh").write_text(SH)
     (card / "Setara.sh").chmod(0o755)
     (card / "Setara.bat").write_text(BAT.replace("\n", "\r\n"))

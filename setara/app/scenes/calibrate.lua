@@ -15,7 +15,7 @@ Calibrate.__index = Calibrate
 local ORDER = { "up", "down", "left", "right", "a", "b", "x", "y", "l", "r", "start" }
 
 function Calibrate.new()
-  return setmetatable({ t = 0, i = 1, map = {}, used = {} }, Calibrate)
+  return setmetatable({ t = 0, i = 1, map = {}, used = {}, idle = 0 }, Calibrate)
 end
 
 function Calibrate:enter()
@@ -24,6 +24,7 @@ function Calibrate:enter()
     self.used[code] = true
     self.map[code] = ORDER[self.i]
     self.i = self.i + 1
+    self.idle = 0
     sfx.play("right")
     if self.i > #ORDER then self:finish(true) end
   end
@@ -36,6 +37,10 @@ function Calibrate:finish(save)
     love.filesystem.createDirectory("data")
     love.filesystem.write("data/buttons.json", json.encode(self.map))
   end
+  -- Do not open by itself again; a "calibrate" file still asks for it.
+  local store = require("core.store")
+  store.progress.calibration_seen = true
+  store.save_progress()
   love.filesystem.remove("calibrate")
   love.filesystem.remove("calibrate.txt")
   app.pop()
@@ -43,7 +48,15 @@ end
 
 function Calibrate:leave() input.raw = nil end
 
-function Calibrate:update(dt) self.t = self.t + dt end
+-- A pad with a dead or missing button must not hold the device on this
+-- screen: twenty seconds without a new press and it closes, saving nothing.
+local GIVE_UP = 20
+
+function Calibrate:update(dt)
+  self.t = self.t + dt
+  self.idle = self.idle + dt
+  if self.idle > GIVE_UP then self:finish(false) end
+end
 
 -- Keyboard presses arrive here as ordinary buttons: only "start" matters.
 function Calibrate:input(b)
