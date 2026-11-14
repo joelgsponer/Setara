@@ -27,7 +27,7 @@ gates of the spec's own roadmap, and they are still ahead.
 | Pack builder: validation, speech, Dari shaping, pictures, checksums | Built, unit tested |
 | Card updates, damaged-pack handling, crash restart | Built, tested |
 | Content | See the table below |
-| Pictures | 432 drawn as SVG, none reviewed locally |
+| Pictures | 450 drawn as SVG, none reviewed locally |
 | Speech | Stand-in local voices. ElevenLabs path written, never run |
 | Running on the RG35XX H and R36S | Not done. See [docs/device.md](docs/device.md) |
 | Direct updates over Wi-Fi, buzzers | Not in version 1, as the spec says |
@@ -39,6 +39,7 @@ gates of the spec's own roadmap, and they are still ahead.
 | --- | --- | --- | --- |
 | `core` app strings and tutorial | | | 1 MB |
 | `en-1` English 1: Hello | 7 | 65 | 9 MB |
+| `en-2` English 2: My world | 7 | 67 | 11 MB |
 | `fa-1` Dari 1: Sounds and first letters | 6 | 38 | 8 MB |
 | `fa-2` Dari 2: The whole alphabet | 6 | 42 | 8 MB |
 | `garden-1` Garden 1: Me | 6 | 22 | 7 MB |
@@ -47,7 +48,7 @@ gates of the spec's own roadmap, and they are still ahead.
 | `math-2` Math 2: Numbers to 100 | 6 | 42 | 12 MB |
 | `math-3` Math 3: Numbers to 1,000 | 6 | 40 | 16 MB |
 | `teacher-en-1` English 1 lessons | 20 lessons, Phrase Board, tips | | 10 MB |
-| **Total** | | **313** | |
+| **Total** | | **380** | |
 <!-- /content -->
 
 Not written yet: English 3–6, Dari 3–6, math 4–6, health 3–4, teacher lessons
