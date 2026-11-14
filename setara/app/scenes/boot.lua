@@ -40,6 +40,12 @@ function Boot:update(dt)
         if not store.progress.tutorial_done then
           app.push(require("scenes.tutorial").new())
         end
+        -- An unknown pad, or a file named "calibrate" on the card: learn the buttons first.
+        local input = require("core.input")
+        local asked = love.filesystem.getInfo("calibrate") or love.filesystem.getInfo("calibrate.txt")
+        if asked or (input.unknown_pad() and not input.custom) then
+          app.push(require("scenes.calibrate").new())
+        end
       end
     end
   end
@@ -47,7 +53,14 @@ end
 
 function Boot:draw()
   ui.background(ui.c.sky)
-  ui.guide(320, 200, 2, self.empty and "think" or "idle", self.t)
+  -- A deployment can put its own neutral start picture on the card.
+  if self.start == nil then self.start = love.filesystem.getInfo("start.png") and ui.image("start.png") or false end
+  if self.start then
+    love.graphics.setColor(1, 1, 1)
+    ui.draw_image(self.start, 0, 0, ui.W, ui.H)
+  else
+    ui.guide(320, 200, 2, self.empty and "think" or "idle", self.t)
+  end
   ui.set(ui.c.ink)
   text.print("Setara " .. app.version, 0, 440, 630, "right", 16)
   if self.empty or self.error then

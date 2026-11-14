@@ -15,7 +15,7 @@ Pause.__index = Pause
 function Pause.new(opts)
   opts = opts or {}
   local self = setmetatable({ overlay = true, sel = 1, t = 0 }, Pause)
-  self.rows = { "volume", "resume" }
+  self.rows = { "volume", "bright", "resume" }
   if opts.teacher then table.insert(self.rows, 2, "class") end
   if not opts.home then self.rows[#self.rows + 1] = "home" end
   return self
@@ -42,6 +42,9 @@ function Pause:input(b)
       set.volume = math.max(0.1, math.min(1, set.volume + step * 0.1))
       audio.set_volume(set.volume)
       sfx.play("right")
+    elseif row == "bright" then
+      set.brightness = math.max(0.4, math.min(1, (tonumber(set.brightness) or 1) + step * 0.1))
+      sfx.play("move")
     elseif row == "class" then
       set.class_size = math.max(1, math.min(80, set.class_size + step))
       sfx.play("move")
@@ -56,12 +59,12 @@ end
 function Pause:draw()
   ui.set(ui.c.ink, 0.55)
   g.rectangle("fill", 0, 0, ui.W, ui.H)
-  local h = 70 + #self.rows * 74
+  local h = 44 + #self.rows * 70
   local y0 = (ui.H - h) / 2
   ui.card(130, y0, 380, h, { radius = 20 })
   local set = store.progress.settings
   for i, row in ipairs(self.rows) do
-    local y = y0 + 34 + (i - 1) * 74
+    local y = y0 + 22 + (i - 1) * 70
     local selected = i == self.sel
     ui.card(154, y, 332, 62, { fill = selected and ui.c.shade or ui.c.paper, selected = selected })
     if row == "volume" then
@@ -70,6 +73,20 @@ function Pause:draw()
         local on = k <= math.floor(set.volume * 10 + 0.5)
         ui.set(on and ui.c.good or ui.c.line)
         g.rectangle("fill", 222 + k * 23, y + 44 - k * 3, 16, 6 + k * 3, 3, 3)
+      end
+    elseif row == "bright" then
+      ui.set(ui.c.gold)
+      g.circle("fill", 190, y + 31, 10)
+      g.setLineWidth(3)
+      for k = 0, 7 do
+        local a = k * math.pi / 4
+        g.line(190 + math.cos(a) * 14, y + 31 + math.sin(a) * 14, 190 + math.cos(a) * 19, y + 31 + math.sin(a) * 19)
+      end
+      g.setLineWidth(1)
+      local level = math.floor(((tonumber(set.brightness) or 1) - 0.3) * 10 + 0.5)
+      for k = 1, 7 do
+        ui.set(k <= level and ui.c.gold or ui.c.line)
+        g.rectangle("fill", 232 + k * 30, y + 22, 22, 18, 4, 4)
       end
     elseif row == "class" then
       for k = 0, 2 do

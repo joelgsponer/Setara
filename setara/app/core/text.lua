@@ -32,7 +32,10 @@ function M.fit(kind, str, w, h, max_size, min_size)
     local size = SIZES[i]
     if size <= (max_size or 128) then
       local f = M.font(kind, size)
-      if (f:getWidth(str) <= w and f:getHeight() <= h) or size <= (min_size or 16) then
+      -- The Naskh line box is much taller than its letters: fit Dari by the
+      -- height of the letters, or it comes out needlessly small.
+      local tall = (kind == "fa" or kind == "fabold") and size * 1.3 or f:getHeight()
+      if (f:getWidth(str) <= w and tall <= h) or size <= (min_size or 16) then
         return f, size
       end
     end

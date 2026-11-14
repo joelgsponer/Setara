@@ -53,6 +53,8 @@ function love.load()
   sfx.load()
   store.load()
   audio.set_volume(store.progress.settings.volume)
+  local learned = require("core.json").decode(love.filesystem.read("data/buttons.json") or "")
+  if type(learned) == "table" and next(learned) then input.custom = learned end
   input.listener = function(button)
     local top = app.top()
     if top and top.input then top:input(button) end
@@ -138,7 +140,9 @@ function love.draw()
   local w, h = love.graphics.getDimensions()
   local s = math.min(w / ui.W, h / ui.H)
   love.graphics.clear(0, 0, 0)
-  love.graphics.setColor(1, 1, 1)
+  -- "Brightness" dims the picture; the backlight itself belongs to the firmware.
+  local b = math.max(0.3, math.min(1, tonumber(store.progress and store.progress.settings.brightness) or 1))
+  love.graphics.setColor(b, b, b)
   love.graphics.draw(canvas, (w - ui.W * s) / 2, (h - ui.H * s) / 2, 0, s, s)
 end
 

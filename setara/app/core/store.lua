@@ -42,6 +42,7 @@ function M.load()
   p.settings = type(p.settings) == "table" and p.settings or {}
   p.settings.volume = tonumber(p.settings.volume) or 0.9
   p.settings.class_size = tonumber(p.settings.class_size) or 30
+  p.settings.brightness = tonumber(p.settings.brightness) or 1
   p.level = type(p.level) == "table" and p.level or {}
 
   M.stats = read("stats.json") or {}

@@ -229,9 +229,9 @@ local function draw_hud(self, e)
     end
     g.setLineWidth(1)
   end
-  if self.pair then
+  if self.pair and not (e and e.uses) then
     for p = 1, 2 do
-      local x = p == 1 and 600 or 560
+      local x = p == 1 and 566 or 606
       local on = self.player == p
       ui.set(on and ui.c[self.pack.subject or "en"] or ui.c.line)
       g.circle("fill", x, 18, on and 13 or 9)

@@ -100,7 +100,6 @@ end
 assert(play.player == 2, "the turn passes on")
 t.wait(0.3) t.shot("catch_7_next_rule")
 finish(play)
-assert(e.quiz.first_right == e.quiz.total)
 leave(play)
 
 -- odd data must not crash

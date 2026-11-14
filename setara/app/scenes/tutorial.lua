@@ -79,7 +79,7 @@ function Tutorial:input(b)
 end
 
 -- The handheld itself, with the wanted button lit.
-local function device(want, t)
+function Tutorial.device(want, t)
   local lit = math.floor(t * 3) % 2 == 0
   ui.card(90, 210, 460, 220, { fill = ui.c.shade, radius = 34 })
   ui.card(220, 232, 200, 150, { fill = ui.c.sky, radius = 8 })
@@ -109,7 +109,7 @@ function Tutorial:draw()
   local step = STEPS[self.step] or {}
   local mood = self.happy > 0 and "happy" or (audio.busy() and "talk" or "idle")
   ui.guide(320, 110, 2.2, mood, self.t)
-  device(step.want, self.t)
+  Tutorial.device(step.want, self.t)
   ui.progress(self.step - 1, #STEPS, 120, 20, 400)
 end
 

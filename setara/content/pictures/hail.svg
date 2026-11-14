@@ -2,8 +2,7 @@
 <g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
 <path d="M26 62c-18 0-20-24-4-28 0-18 24-24 34-10 10-14 34-8 32 10 18-2 22 26 4 28z" fill="#857b6e"/>
 <rect x="6" y="112" width="116" height="10" fill="#9ccb7a"/>
-<circle cx="28" cy="78" r="7" fill="#fff" stroke-width="3.5"/><circle cx="54" cy="86" r="7" fill="#fff" stroke-width="3.5"/><circle cx="82" cy="76" r="7" fill="#fff" stroke-width="3.5"/><circle cx="104" cy="90" r="7" fill="#fff" stroke-width="3.5"/><circle cx="40" cy="104" r="7" fill="#fff" stroke-width="3.5"/><circle cx="74" cy="106" r="7" fill="#fff" stroke-width="3.5"/>
-<path d="M80 102c3-12 10-12 14 0M34 100c-3-10-9-10-12 0" fill="none" stroke-width="3" stroke-dasharray="1 6"/>
-<path d="M28 66v-1M54 74v-1M82 64v-1" fill="none" stroke-width="3"/>
+<circle cx="26" cy="80" r="8.5" fill="#fff" stroke-width="4"/><circle cx="56" cy="86" r="8.5" fill="#fff" stroke-width="4"/><circle cx="88" cy="78" r="8.5" fill="#fff" stroke-width="4"/><circle cx="108" cy="100" r="8.5" fill="#fff" stroke-width="4"/><circle cx="38" cy="104" r="8.5" fill="#fff" stroke-width="4"/><circle cx="72" cy="104" r="8.5" fill="#fff" stroke-width="4"/>
+<path d="M26 66v-2M56 72v-2M88 64v-2" fill="none" stroke-width="4"/>
 </g>
 </svg>

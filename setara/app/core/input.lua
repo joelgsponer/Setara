@@ -25,6 +25,12 @@ M.gamepad = {
 -- the common Anbernic and R36S firmwares). Overridden by data/buttons.json.
 M.joystick = { [1] = "a", [2] = "b", [3] = "y", [4] = "x", [5] = "l", [6] = "r", [10] = "start", [8] = "start" }
 
+-- Raw events learned on the calibration screen: "j3" (joystick button 3),
+-- "gdpup" (gamepad button), "hu" (hat up) -> button name. Saved on the card
+-- as data/buttons.json, so an unknown pad needs calibrating only once.
+M.custom = nil
+M.raw = nil        -- function(code) set while calibrating; swallows the event
+
 M.down = {}        -- button -> seconds held
 M.listener = nil   -- function(button) set by main
 
@@ -38,19 +44,31 @@ local function release(b)
   if b then M.down[b] = nil end
 end
 
+-- Raw code -> button name, through the learned map when there is one.
+local function lookup(code, fallback)
+  if M.custom then return M.custom[code] end
+  return fallback
+end
+
 function M.keypressed(key) press(M.keyboard[key]) end
 function M.keyreleased(key) release(M.keyboard[key]) end
-function M.gamepadpressed(_, button) press(M.gamepad[button]) end
-function M.gamepadreleased(_, button) release(M.gamepad[button]) end
+
+function M.gamepadpressed(_, button)
+  if M.raw then return M.raw("g" .. button) end
+  press(lookup("g" .. button, M.gamepad[button]))
+end
+
+function M.gamepadreleased(_, button) release(lookup("g" .. button, M.gamepad[button])) end
 
 function M.joystickpressed(joy, button)
   if joy:isGamepad() then return end
-  press(M.joystick[button])
+  if M.raw then return M.raw("j" .. button) end
+  press(lookup("j" .. button, M.joystick[button]))
 end
 
 function M.joystickreleased(joy, button)
   if joy:isGamepad() then return end
-  release(M.joystick[button])
+  release(lookup("j" .. button, M.joystick[button]))
 end
 
 local hat_dirs = { u = "up", d = "down", l = "left", r = "right" }
@@ -58,11 +76,20 @@ local hat_state = {}
 
 function M.joystickhat(joy, _, dir)
   if joy:isGamepad() then return end
+  if M.raw then
+    if dir ~= "c" and #dir == 1 then M.raw("h" .. dir) end
+    return
+  end
   local now = {}
-  for c in dir:gmatch(".") do if hat_dirs[c] then now[hat_dirs[c]] = true end end
-  for _, b in pairs(hat_dirs) do
-    if now[b] and not hat_state[b] then press(b) end
-    if not now[b] and hat_state[b] then release(b) end
+  for c in dir:gmatch(".") do
+    local b = lookup("h" .. c, hat_dirs[c])
+    if b then now[b] = true end
+  end
+  for b in pairs(now) do
+    if not hat_state[b] then press(b) end
+  end
+  for b in pairs(hat_state) do
+    if not now[b] then release(b) end
   end
   hat_state = now
 end
@@ -70,6 +97,7 @@ end
 -- An analogue stick works as a D-pad too.
 local axis_state = {}
 function M.axis(joy)
+  if M.raw then return end
   local x, y = joy:getAxis(1) or 0, joy:getAxis(2) or 0
   local now = { left = x < -0.6, right = x > 0.6, up = y < -0.6, down = y > 0.6 }
   for b, on in pairs(now) do
@@ -91,6 +119,14 @@ function M.held(a, b)
   local ta, tb = M.down[a], M.down[b]
   if ta and tb then return math.min(ta, tb) end
   return 0
+end
+
+-- True when a pad is plugged in that SDL does not know: it needs calibrating.
+function M.unknown_pad()
+  for _, joy in ipairs(love.joystick.getJoysticks()) do
+    if not joy:isGamepad() then return true end
+  end
+  return false
 end
 
 -- Test scripts press buttons through here.
