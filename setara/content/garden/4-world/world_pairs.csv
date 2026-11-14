@@ -1,0 +1,13 @@
+round,intro_fa,a,b,say_en,say_fa
+01,نام قاره را بشنو و شکل آن را پیدا کن.,snd,map_asia,,آسیا
+01,,snd,map_africa,,افریقا
+01,,snd,map_europe,,اروپا
+01,,snd,map_north_america,,امریکای شمالی
+01,,snd,map_south_america,,امریکای جنوبی
+01,,snd,map_antarctica,,انترکتیکا
+02,چیزهای سویس. دو تصویر را که با هم جور است پیدا کن.,cow,cheese,,از شیر گاو پنیر جور می‌کنند.
+02,,train,tunnel,,قطار از تونل زیر کوه تیر می‌شود.
+02,,river,ship,,کشتی‌ها روی دریای راین مال می‌برند.
+02,,snow,sledge,,اطفال با یخمالک چوبی روی برف بازی می‌کنند.
+02,,drum,lantern,,در جشن بازل دهل می‌نوازند و فانوس‌های کلان را می‌برند.
+02,,map_switzerland,map_europe,,سویس در اروپا است.

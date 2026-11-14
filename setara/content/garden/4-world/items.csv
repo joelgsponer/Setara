@@ -1,0 +1,49 @@
+unit,key,en,fa,picture,tags
+# 01 the world
+01,globe,globe,کره,globe,"world,map"
+01,world_map,map of the world,نقشه دنیا,scene_map_world,"world,map"
+01,continent,continent,قاره,,world
+01,asia,Asia,آسیا,map_asia,"continent,map"
+01,africa,Africa,افریقا,map_africa,"continent,map"
+01,europe,Europe,اروپا,map_europe,"continent,map"
+01,north_america,North America,امریکای شمالی,map_north_america,"continent,map"
+01,south_america,South America,امریکای جنوبی,map_south_america,"continent,map"
+01,oceania,Oceania,اقیانوسیه,map_oceania,"continent,map"
+01,antarctica,Antarctica,انترکتیکا,map_antarctica,"continent,map"
+01,ocean,ocean,اقیانوس,,world
+01,sea,sea,بحر,sea,"world,new"
+01,land,land,خشکه,,world
+01,afghanistan,Afghanistan,افغانستان,map_afghanistan,"country,map"
+01,capital,capital,پایتخت,,country
+# 02 Switzerland
+02,switzerland,Switzerland,سویس,map_switzerland,"country,map"
+02,aeroplane,aeroplane,طیاره,aeroplane,"journey,new"
+02,alps,the Alps,کوه‌های الپ,scene_alps_village,"switzerland,new"
+02,lake,lake,جهیل,lake,"switzerland,new"
+02,sledge,sledge,یخمالک چوبی,sledge,"switzerland,new"
+02,four_languages,four languages,چهار زبان,four_languages,"switzerland,new"
+02,swiss_school,school in Switzerland,مکتب در سویس,scene_swiss_school,"switzerland,new"
+02,tunnel,tunnel,تونل,tunnel,"switzerland,new"
+02,train,train,قطار,train,switzerland
+02,cows_meadow,cows on the mountain meadow,گاوها در چراگاه کوه,scene_cows_meadow,"switzerland,new"
+02,cheese,cheese,پنیر,cheese,"switzerland,new"
+02,chocolate,chocolate,چاکلیت,chocolate,"switzerland,new"
+# 03 Basel
+03,basel,Basel,بازل,scene_rhine_basel,"basel,new"
+03,three_countries,where three countries meet,جایی که سه کشور به هم می‌رسند,scene_map_basel,"basel,map"
+03,rhine,the river Rhine,دریای راین,scene_rhine_basel,"basel,new"
+03,ship,ship,کشتی,ship,"basel,new"
+03,port,port,بندر,,basel
+03,rhine_swim,swimming in the Rhine,آب‌بازی در دریای راین,scene_rhine_swim,"basel,new"
+03,ferry,small wooden ferry boat,کشتی خورد چوبی,ferry,"basel,new"
+03,tram,tram,ترام,tram,"basel,new"
+03,town_hall,town hall,تعمیر شاروالی,town_hall,"basel,new"
+03,zoo,zoo,باغ وحش,,basel
+03,museum,museum,موزیم,,basel
+03,festival,festival,جشن,scene_festival,"basel,new"
+03,drum,drum,دهل,drum,"basel,new"
+03,lantern,lantern,فانوس,lantern,"basel,new"
+03,university,university,پوهنتون,scene_university,"basel,new"
+03,medicine,medicine,دوا,,basel
+03,gruezi,Grüezi (hello),گروتسی,scene_basel_hello,"basel,new"
+03,makers,the people who made these lessons,کسانی که این درس‌ها را جور کرده‌اند,scene_basel_makers,"basel,new"

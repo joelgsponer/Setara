@@ -1,0 +1,71 @@
+{
+ "pack": "garden-4-world",
+ "subject": "garden",
+ "level": 4,
+ "version": 1,
+ "optional": true,
+ "title_en": "The world, Switzerland and Basel",
+ "title_fa": "دنیا، سویس و بازل",
+ "games": [
+  {
+   "id": "world_session",
+   "engine": "story",
+   "letter": "a",
+   "title_en": "From the Whole World to Basel",
+   "title_fa": "از تمام دنیا تا بازل",
+   "intro_fa": "این درس سه قصه دارد. معلم می‌تواند آن را با تمام صنف یک جا ببیند. گوش کن، تصویرها را ببین و جواب درست را انتخاب کن.",
+   "icon": "globe",
+   "sheet": "world_session.csv"
+  },
+  {
+   "id": "world_continents",
+   "engine": "listen_pick",
+   "letter": "b",
+   "title_en": "The Seven Continents",
+   "title_fa": "هفت قاره",
+   "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+   "icon": "map_asia",
+   "sheet": "world_continents.csv"
+  },
+  {
+   "id": "world_two_countries",
+   "engine": "sorter",
+   "letter": "c",
+   "title_en": "Two Countries",
+   "title_fa": "دو کشور",
+   "intro_fa": "افغانستان، سویس، یا هر دو؟ هر تصویر را در سبد درست بینداز.",
+   "icon": "map_switzerland",
+   "sheet": "world_two_countries.csv"
+  },
+  {
+   "id": "world_journey",
+   "engine": "journey",
+   "letter": "d",
+   "title_en": "The Long Journey",
+   "title_fa": "سفر دور",
+   "intro_fa": "به هر سوال جواب درست بده و پیش برو.",
+   "icon": "aeroplane",
+   "sheet": "world_journey.csv"
+  },
+  {
+   "id": "world_order",
+   "engine": "builder",
+   "letter": "e",
+   "title_en": "Large and Small",
+   "title_fa": "کلان و خورد",
+   "intro_fa": "تصویرها را به ترتیب درست بمان.",
+   "icon": "map_afghanistan",
+   "sheet": "world_order.csv"
+  },
+  {
+   "id": "world_pairs",
+   "engine": "pairs",
+   "letter": "f",
+   "title_en": "World Pairs",
+   "title_fa": "جوره‌های دنیا",
+   "intro_fa": "دو کارت را که با هم جور است پیدا کن.",
+   "icon": "map_europe",
+   "sheet": "world_pairs.csv"
+  }
+ ]
+}

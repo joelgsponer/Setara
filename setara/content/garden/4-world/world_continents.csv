@@ -1,0 +1,25 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+01,نام قاره را بشنو و شکل آن را انتخاب کن.,,آسیا کدام است؟,,map_asia,map_africa|map_europe|map_south_america,آسیا کلان‌ترین قاره است. افغانستان در آسیا است.
+01,,,افریقا کدام است؟,,map_africa,map_south_america|map_asia|map_oceania,این افریقا است. صحرای کبیر در افریقا است.
+01,,,اروپا کدام است؟,,map_europe,map_asia|map_north_america|map_antarctica,این اروپا است. سویس در اروپا است.
+01,,,امریکای شمالی کدام است؟,,map_north_america,map_south_america|map_africa|map_europe,این امریکای شمالی است.
+01,,,امریکای جنوبی کدام است؟,,map_south_america,map_north_america|map_africa|map_oceania,این امریکای جنوبی است.
+01,,,اقیانوسیه کدام است؟ آسترالیا در این قاره است.,,map_oceania,map_antarctica|map_europe|map_south_america,این اقیانوسیه است. آسترالیا در آن است. این خوردترین قاره است.
+01,,,انترکتیکا کدام است؟,,map_antarctica,map_oceania|map_asia|map_north_america,این انترکتیکا است، در قطب جنوب. تمام آن را یخ پوشانده است.
+01,,,کدام یکی مدل خورد زمین است؟,,globe,wheel|moon|watermelon,این کره است، یک مدل خورد زمین. زمین مثل توپ گرد است.
+02,گپ را بشنو و قاره درست را انتخاب کن.,,کلان‌ترین قاره کدام است؟,,map_asia,map_europe|map_oceania|map_south_america,آسیا کلان‌ترین قاره است و بیشتر مردم دنیا در آسیا زندگی می‌کنند.
+02,,,کدام قاره را یخ پوشانده است؟,,map_antarctica,map_africa|map_oceania|map_north_america,انترکتیکا را یخ پوشانده است. سردترین قاره است و هیچ کس برای همیشه آن جا زندگی نمی‌کند.
+02,,,افغانستان در کدام قاره است؟,map_afghanistan,map_asia,map_africa|map_europe|map_north_america,افغانستان در آسیا است.
+02,,,سویس در کدام قاره است؟,map_switzerland,map_europe,map_asia|map_south_america|map_antarctica,سویس در اروپا است.
+02,,,کلان‌ترین صحرای گرم دنیا در کدام قاره است؟,,map_africa,map_antarctica|map_europe|map_oceania,کلان‌ترین صحرای گرم دنیا، صحرای کبیر، در افریقا است.
+02,,,خوردترین قاره کدام است؟,,map_oceania,map_asia|map_africa|map_north_america,خوردترین قاره اقیانوسیه است. آسترالیا در آن است.
+02,,,بلندترین کوه دنیا، کوه اورست، در کدام قاره است؟,mountain,map_asia,map_south_america|map_antarctica|map_europe,بلندترین کوه دنیا، کوه اورست، در آسیا است.
+02,,,در کدام قاره هیچ کس برای همیشه زندگی نمی‌کند؟,,map_antarctica,map_europe|map_south_america|map_asia,در انترکتیکا هیچ کس برای همیشه زندگی نمی‌کند. آن جا بسیار سرد است و همه جا یخ است.
+03,سوال را بشنو و تصویر درست را انتخاب کن.,,زمین چه شکل دارد؟,,ball,box|plate|shape_triangle,زمین گرد است، مثل یک توپ.
+03,,,بیشتر روی زمین را چه پوشانده است؟,,sea,sand|tree|snow,بیشتر روی زمین را آب پوشانده است: از هر ده حصه، تقریباً هفت حصه.
+03,,,در نقشه دنیا، بحرها چه رنگ دارد؟,scene_map_world,color_blue,color_green|color_brown|color_yellow,در نقشه، رنگ آبی آب است. پنج بحر بسیار کلان داریم که به آن‌ها اقیانوس می‌گویند.
+03,,,روی انترکتیکا را چه پوشانده است؟,map_antarctica,ice,sand|flower|tree,تمام انترکتیکا را یخ پوشانده است.
+03,,,شکل افغانستان کدام است؟,,map_afghanistan,map_switzerland|map_africa|map_oceania,این افغانستان است. افغانستان در آسیا است و پایتخت آن کابل است.
+03,,,شکل سویس کدام است؟,,map_switzerland,map_afghanistan|map_south_america|map_antarctica,این سویس است. سویس در اروپا است و پایتخت آن برن است.
+03,,,افغانستان و سویس هر دو کدام را ندارند؟,,sea,mountain|snow|river,افغانستان و سویس هر دو ساحل بحر ندارند. چهار طرف‌شان خشکه است.
+03,,,افغانستان و سویس هر دو کدام را دارند؟,,mountain,sea|camel|elephant,هر دو کشور کوه‌های بلند و پر برف دارند: هندوکش در افغانستان و الپ در سویس.
