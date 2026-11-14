@@ -189,7 +189,7 @@ function love.draw()
       local f = text.font("latin", 16)
       local _, lines = f:getWrap(caption, ui.W - 24)
       local n = math.min(3, #lines)
-      local lh = f:getHeight() - 4
+      local lh = math.min(f:getHeight() - 4, 19)   -- three lines must fit the band
       ui.set(ui.c.white)
       love.graphics.setFont(f)
       for i = 1, n do

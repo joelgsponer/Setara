@@ -82,3 +82,34 @@ unit,key,en,fa,picture,tags
 06,scene_man_collapsed,a man has collapsed in the courtyard,یک مرد در حویلی افتاده است,scene_man_collapsed,"scene,new"
 06,scene_clinic,the family at the clinic,فامیل در کلینیک,scene_clinic,scene
 06,scene_family_eating,the family is eating,فامیل نان می‌خورد,scene_family_eating,scene
+# 07 poisoning: swallowed poison, poison on the skin or in the eye, smoke in a closed room
+07,fa_fuel_bottle,fuel in a drink bottle,تیل در بوتل نوشابه,fa_fuel_bottle,"poison,dont,new"
+07,fa_fuel_can,fuel,تیل,fa_fuel_can,"poison,keep_high,new"
+07,fa_fuel_high_shelf,fuel on a high shelf,تیل در رف بلند,fa_fuel_high_shelf,"poison,new"
+07,fa_pesticide,poison for insects and mice,زهر حشرات و موش,fa_pesticide,"poison,keep_high,new"
+07,fa_cleaning_liquid,cleaning liquid,مایع پاک‌کاری,fa_cleaning_liquid,"poison,keep_high,new"
+07,fa_poison_away,taking the poison away and calling an adult,دور کردن زهر و صدا کردن یک کلان,fa_poison_away,"poison,steps,new"
+07,fa_make_vomit,making someone vomit,کاری کردن که استفراغ کند,fa_make_vomit,"poison,dont,new"
+07,fa_nothing_by_mouth,nothing to eat or drink,هیچ چیز برای خوردن و نوشیدن,fa_nothing_by_mouth,"poison,steps,new"
+07,fa_take_bottle,taking the bottle along to the clinic,بردن بوتل با خود به کلینیک,fa_take_bottle,"poison,steps,clinic,new"
+07,fa_eye_rinse,clean water running over the open eye,ریختن آب پاک روی چشم باز,fa_eye_rinse,"poison,steps,new"
+07,fa_eye_rub,rubbing the eye,مالیدن چشم,fa_eye_rub,"poison,dont,new"
+07,fa_headache_dizzy,headache and dizziness,سردرد و سرچرخی,fa_headache_dizzy,"smoke,danger,new"
+07,fa_fresh_air,everyone out into fresh air,همه به هوای تازه,fa_fresh_air,"smoke,steps,new"
+07,fa_open_door_window,opening the door and the window,باز کردن دروازه و کلکین,fa_open_door_window,"smoke,steps,new"
+07,fa_charcoal_sleep,sleeping in a closed room with burning charcoal,خواب در اتاق بسته با زغال سوزان,fa_charcoal_sleep,"smoke,dont,new"
+07,fa_charcoal_outside,taking the charcoal fire outside,بیرون بردن منقل زغال,fa_charcoal_outside,"smoke,new"
+07,tell_adult,telling an adult,گفتن به یک کلان,tell_adult,"poison,steps"
+07,milk,milk,شیر,milk,"poison,dont"
+07,egg,egg,تخم,egg,"poison,dont"
+07,soap,soap,صابون,soap,poison
+07,wash_hands,washing with soap and plenty of water,شستن با صابون و آب بسیار,wash_hands,poison
+07,tb_spit,rinsing the mouth and spitting out,شستن دهن و تف کردن آب,tb_spit,poison
+07,charcoal,charcoal,زغال,charcoal,smoke
+07,stove_chimney,stove with a chimney,دیگدان دودکش‌دار,stove_chimney,smoke
+07,sleep,sleeping,خواب,sleep,
+07,bread,bread,نان,bread,
+07,ball,ball,توپ,ball,
+07,book,book,کتاب,book,
+07,scene_fuel_drunk,the little sister has drunk fuel from a drink bottle,خواهر خورد از بوتل تیل نوشیده است,scene_fuel_drunk,"scene,new"
+07,scene_charcoal_room,a charcoal fire burns in the closed room,در اتاق بسته زغال می‌سوزد,scene_charcoal_room,"scene,new"

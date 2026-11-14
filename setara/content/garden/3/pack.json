@@ -75,6 +75,16 @@
    "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
    "icon": "fa_fever_days",
    "sheet": "danger_signs.csv"
+  },
+  {
+   "id": "poison_story",
+   "engine": "story",
+   "letter": "h",
+   "title_en": "Poison",
+   "title_fa": "زهر",
+   "intro_fa": "قصه را گوش کن و کمک کن که فامیل کار درست را بکند. اگر کسی زهر خورد، زود به یک کلان بگو.",
+   "icon": "fa_fuel_bottle",
+   "sheet": "poison_story.csv"
   }
  ]
 }
