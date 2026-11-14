@@ -27,7 +27,7 @@ gates of the spec's own roadmap, and they are still ahead.
 | Pack builder: validation, speech, Dari shaping, pictures, checksums | Built, unit tested |
 | Card updates, damaged-pack handling, crash restart | Built, tested |
 | Content | See the table below |
-| Pictures | 508 drawn as SVG, none reviewed locally |
+| Pictures | 595 drawn as SVG, none reviewed locally |
 | Speech | Stand-in local voices. ElevenLabs path written, never run |
 | English mode for testers: English text and captions | Built. Translated by Claude, not checked by a native speaker |
 | Browser version, with a Dockerfile for hosting | Built, tested in Chromium and as a Docker image |
@@ -47,12 +47,14 @@ gates of the spec's own roadmap, and they are still ahead.
 | `fa-2` Dari 2: The whole alphabet | 6 | 42 | 8 MB |
 | `garden-1` Garden 1: Me | 6 | 22 | 7 MB |
 | `garden-2` Garden 2: My Home | 7 | 20 | 9 MB |
-| `garden-3` Health 3: First aid | 7 | 19 | 15 MB |
+| `garden-3` Health 3: First aid | 8 | 25 | 22 MB |
+| `garden-4-rights` My rights, your rights | 6 | 13 | 8 MB |
+| `garden-4-world` The world, Switzerland and Basel | 6 | 16 | 10 MB |
 | `math-1` Math 1: Counting to 20 | 6 | 44 | 11 MB |
 | `math-2` Math 2: Numbers to 100 | 6 | 42 | 12 MB |
 | `math-3` Math 3: Numbers to 1,000 | 6 | 40 | 16 MB |
 | `teacher-en-1` English 1 lessons | 20 lessons, Phrase Board, tips | | 10 MB |
-| **Total** | | **399** | |
+| **Total** | | **434** | |
 <!-- /content -->
 
 Health 3 is the first-aid pack: burns, cuts, bites, nosebleed, choking, what

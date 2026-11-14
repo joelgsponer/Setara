@@ -1,0 +1,5 @@
+train_days=7
+wish_max=5
+consolidate_min=3
+stale_days=30
+train_auto=on
