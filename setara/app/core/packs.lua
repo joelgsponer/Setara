@@ -155,6 +155,9 @@ end
 -- Mount the newest readable version of every installed pack.
 function M.load()
   M.list, M.subjects, M.teacher, M.core = {}, {}, {}, nil
+  M.captions = {} -- clip path -> English caption, for English mode
+  local text = require("core.text")
+  text.dict = {}
   love.filesystem.createDirectory("packs")
   for id, versions in pairs(installed()) do
     local loaded = false
@@ -181,6 +184,11 @@ function M.load()
     end
   end
   for _, p in pairs(M.list) do
+    local en = read_json(p.root .. "en.json")
+    if type(en) == "table" then
+      for k, v in pairs(type(en.texts) == "table" and en.texts or {}) do text.dict[k] = v end
+      for k, v in pairs(type(en.clips) == "table" and en.clips or {}) do M.captions[p.root .. k] = v end
+    end
     if p.kind == "core" then
       M.core = p
       local strings = read_json(p.root .. (type(p.strings) == "string" and p.strings or "strings.json"))

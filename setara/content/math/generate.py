@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generates the math packs (levels 1 to 3): every CSV sheet, pack.json and
-pictures.txt in this folder.
+pictures.txt in this folder, and the English of every Dari text in them
+(content/i18n/math.csv, for the English mode of the app).
 
     python3 content/math/generate.py
 
@@ -112,6 +113,122 @@ def _test_numbers() -> None:
 
 
 # ---------------------------------------------------------------------------
+# English (for the English mode of the app: content/i18n/math.csv)
+# ---------------------------------------------------------------------------
+#
+# Every Dari text is built together with its English twin: tr(dari, english)
+# records the pair and gives the Dari back, so the two cannot drift apart.
+# Numbers are digits in the English. Sheet.add refuses a Dari text that has
+# no English, and main() writes the table.
+
+I18N = HERE.parent / "i18n" / "math.csv"
+EN: dict[str, str] = {}     # Dari text -> English, every pair made
+USED_EN: set[str] = set()   # the Dari texts that reached a sheet or a pack.json
+HAS_DARI = re.compile("[؀-ۿ]")
+DARI_LETTER = re.compile("[؀-ۯۺ-ۿ]")  # not the digits ۰ to ۹
+
+
+def tr(dari_text: str, english: str) -> str:
+    """Record the English of a Dari text. Returns the Dari text unchanged."""
+    key, english = " ".join(dari_text.split()), " ".join(english.split())
+    assert key and english and HAS_DARI.search(key) and not HAS_DARI.search(english), (dari_text, english)
+    assert EN.setdefault(key, english) == english, f"two English texts for {key!r}: {EN[key]!r} and {english!r}"
+    return dari_text
+
+
+def used_en(row: dict) -> None:
+    """Note the Dari texts of a row; each must have been made with tr()."""
+    texts = [v for c, v in row.items() if c.endswith("_fa") and v]
+    for col in ("show", "answer", "distractors", "thing", "basket", "tiles", "extra"):
+        texts += [t[2:] for t in row.get(col, "").split("|") if t.startswith("f:") and DARI_LETTER.search(t)]
+    for text in texts:
+        key = " ".join(text.split())
+        assert key in EN, f"Dari text without English: {key!r}"
+        USED_EN.add(key)
+
+
+def english_table() -> str:
+    buf = io.StringIO()
+    w = csv.writer(buf, lineterminator="\n")
+    w.writerow(["fa", "en"])
+    for key in sorted(USED_EN):
+        w.writerow([key, EN[key]])
+    return buf.getvalue()
+
+
+# Dari word -> English: one word when the plural only adds an s, or
+# (uncounted, one of it, several of it).
+WORD_EN = {
+    "گوسفند": ("sheep", "sheep", "sheep"), "مرغ": "hen", "سیب": "apple", "تخم": "egg",
+    "نان": ("bread", "loaf of bread", "loaves of bread"), "بز": "goat", "گل": "flower",
+    "ماهی": ("fish", "fish", "fish"), "پیاله": "cup", "ستاره": "star",
+    "کچالو": ("potato", "potato", "potatoes"), "پیاز": "onion", "انار": "pomegranate", "چهارمغز": "walnut",
+    "زردک": "carrot", "پنسل": "pencil", "صابون": ("soap", "bar of soap", "bars of soap"), "کتابچه": "notebook",
+    "چای": "tea", "شیر": "milk", "نمک": "salt", "بوره": "sugar", "برنج": "rice",
+    "بوری آرد": ("sack of flour", "sack of flour", "sacks of flour"), "روغن": "oil",
+    "بوت": ("shoes", "pair of shoes", "pairs of shoes"), "کمپل": "blanket",
+    "بوری برنج": ("sack of rice", "sack of rice", "sacks of rice"),
+    "دایره": "circle", "مربع": "square", "مثلث": "triangle", "مستطیل": "rectangle",
+    "توپ": "ball", "بشقاب": "plate", "چرخ": "wheel", "سکه": "coin", "مالته": "orange", "آفتاب": "sun",
+    "دکمه": "button", "کلکین": "window", "صندوق": ("box", "box", "boxes"), "دستمال": "handkerchief",
+    "سمبوسه": "samosa", "خیمه": "tent", "کوه": "mountain", "دروازه": "door", "کتاب": "book", "قالین": "carpet",
+    "تربوز": "watermelon", "جفت": "even", "طاق": "odd", "پوره": "whole", "نیم": "half", "چارک": "quarter",
+    "ریسمان": "rope", "درخت": "tree", "چوب": "stick", "تکه": "piece", "دیوار": "wall", "جوی": "stream",
+    "سرک": "road", "سیم": "wire", "گوشه": "corner", "ضلع": "side",
+    "درازتر": "longer", "بلندتر": "taller", "کوتاه" + Z + "تر": "shorter",
+    "متر": "metre", "سانتی" + Z + "متر": "centimetre",
+}
+PLURAL_WORDS = {"بوت"}  # "the shoes are", not "is"
+
+
+def _word(word: str) -> tuple[str, str, str]:
+    en = WORD_EN[word]
+    return (en, en, en + "s") if isinstance(en, str) else en
+
+
+def bare(word: str) -> str:
+    return _word(word)[0]
+
+
+def one(word: str) -> str:
+    return _word(word)[1]
+
+
+def many(word: str) -> str:
+    return _word(word)[2]
+
+
+def cnt(n: int, word: str) -> str:
+    """'1 apple', '3 apples'."""
+    return f"{n} {one(word) if n == 1 else many(word)}"
+
+
+def nn(n: int, english: str) -> str:
+    """'1 ten', '3 tens', '0 ones'."""
+    return f"{n} {english}" if n == 1 else f"{n} {english}s"
+
+
+def there(n: int, word: str) -> str:
+    return f"There {'is' if n == 1 else 'are'} {cnt(n, word)}"
+
+
+def was(n: int, word: str) -> str:
+    return f"There {'was' if n == 1 else 'were'} {cnt(n, word)}"
+
+
+def costs(word: str, afghani: int) -> str:
+    return f"the {bare(word)} {'are' if word in PLURAL_WORDS else 'is'} {afghani} afghani"
+
+
+def art(english: str) -> str:
+    return "an" if english[0] in "aeiou" else "a"
+
+
+def cap(text: str) -> str:
+    return text[0].upper() + text[1:]
+
+
+# ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
 
@@ -200,6 +317,7 @@ class Sheet:
     def add(self, **row) -> dict:
         assert set(row) <= set(self.columns), set(row) - set(self.columns)
         row = {c: str(row.get(c, "")) for c in self.columns}
+        used_en(row)
         self.rows.append(row)
         return row
 
@@ -235,28 +353,28 @@ def lp(sheet: Sheet, rnd: str, intro: str, say: str, answer: str, wrong: list[st
 # 1. Count the Flock (listen_pick)
 # ---------------------------------------------------------------------------
 
-I_COUNT = "بشمار و عدد درست را انتخاب کن."
-I_COUNT_D = "بشمار و عدد دری را انتخاب کن."
-I_HEAR = "گوش کن و عدد را پیدا کن."
-I_MATCH = "همین عدد را به شکل دیگر پیدا کن."
-I_MORE = "ببین کدام از همه بیشتر است."
-I_COMPARE = "خوب ببین و مقایسه کن."
-I_PLACE = "ده" + Z + "ها و یک" + Z + "ها را یکجا کن."
-I_PLACE3 = "صدها، ده" + Z + "ها و یک" + Z + "ها را یکجا کن."
-I_DIGIT = "ببین در عدد چند ده و چند یک است."
-I_NEXT = "عدد پیش و عدد بعد را پیدا کن."
-I_MIX = "حالا همه را با هم تمرین کن."
+I_COUNT = tr("بشمار و عدد درست را انتخاب کن.", "Count and choose the right number.")
+I_COUNT_D = tr("بشمار و عدد دری را انتخاب کن.", "Count and choose the Dari number.")
+I_HEAR = tr("گوش کن و عدد را پیدا کن.", "Listen and find the number.")
+I_MATCH = tr("همین عدد را به شکل دیگر پیدا کن.", "Find this same number in its other form.")
+I_MORE = tr("ببین کدام از همه بیشتر است.", "See which one is the most.")
+I_COMPARE = tr("خوب ببین و مقایسه کن.", "Look carefully and compare.")
+I_PLACE = tr("ده" + Z + "ها و یک" + Z + "ها را یکجا کن.", "Put the tens and the ones together.")
+I_PLACE3 = tr("صدها، ده" + Z + "ها و یک" + Z + "ها را یکجا کن.", "Put the hundreds, the tens and the ones together.")
+I_DIGIT = tr("ببین در عدد چند ده و چند یک است.", "See how many tens and how many ones are in the number.")
+I_NEXT = tr("عدد پیش و عدد بعد را پیدا کن.", "Find the number before and the number after.")
+I_MIX = tr("حالا همه را با هم تمرین کن.", "Now practise them all together.")
 
 
 def count_item(s, rnd, intro, n, obj, script, rng, hi=20):
     pic, noun = obj
     assert 1 <= n <= 20
     if n <= 10:
-        help_fa = "، ".join(fa(i) for i in range(1, n + 1)) + f". {fa(n)} {noun} است."
+        help_fa = tr("، ".join(fa(i) for i in range(1, n + 1)) + f". {fa(n)} {noun} است.", ", ".join(str(i) for i in range(1, n + 1)) + f". {there(n, noun)}.")
     else:
-        help_fa = f"{fa(n)} {noun} است."
+        help_fa = tr(f"{fa(n)} {noun} است.", f"{there(n, noun)}.")
     wrong = near(n, rng, 0, hi)
-    row = lp(s, rnd, intro, f"چند {noun} است؟", num(n, script), [num(x, script) for x in wrong],
+    row = lp(s, rnd, intro, tr(f"چند {noun} است؟", f"How many {many(noun)} are there?"), num(n, script), [num(x, script) for x in wrong],
              show=f"p:{pic}*{n}", help_fa=help_fa)
     m = re.match(r"p:\w+\*(\d+)$", row["show"])
     assert int(m.group(1)) == value(row["answer"]) == n
@@ -264,7 +382,7 @@ def count_item(s, rnd, intro, n, obj, script, rng, hi=20):
 
 def hear_item(s, rnd, intro, n, script, rng, lo, hi, prefer=()):
     wrong = near(n, rng, lo, hi, prefer)
-    row = lp(s, rnd, intro, f"عدد {fa(n)} کدام است؟", num(n, script), [num(x, script) for x in wrong])
+    row = lp(s, rnd, intro, tr(f"عدد {fa(n)} کدام است؟", f"Which one is the number {n}?"), num(n, script), [num(x, script) for x in wrong])
     assert value(row["answer"]) == n
 
 
@@ -272,9 +390,9 @@ def match_item(s, rnd, intro, n, to_script, rng, lo, hi, prefer=()):
     """Show the number in one digit system, pick it in the other."""
     from_script = "D" if to_script == "W" else "W"
     wrong = near(n, rng, lo, hi, prefer)
-    row = lp(s, rnd, intro, f"{fa(n)}. همین عدد را پیدا کن.", num(n, to_script),
+    row = lp(s, rnd, intro, tr(f"{fa(n)}. همین عدد را پیدا کن.", f"{n}. Find this same number."), num(n, to_script),
              [num(x, to_script) for x in wrong], show=num(n, from_script),
-             help_fa=f"این عدد {fa(n)} است.")
+             help_fa=tr(f"این عدد {fa(n)} است.", f"This number is {n}."))
     assert value(row["show"]) == value(row["answer"]) == n
     assert row["show"][0] != row["answer"][0]
 
@@ -286,8 +404,8 @@ def flock_compare_item(s, rnd, intro, obj, counts, most: bool):
     ans = max(counts) if most else min(counts)
     wrong = [c for c in counts if c != ans]
     word = "بیشتر" if most else "کمتر"
-    row = lp(s, rnd, intro, f"کدام از همه {word} است؟", f"p:{pic}*{ans}", [f"p:{pic}*{c}" for c in wrong],
-             help_fa=f"{fa(ans)} {noun} از همه {word} است.")
+    row = lp(s, rnd, intro, tr(f"کدام از همه {word} است؟", f"Which one is the {'most' if most else 'fewest'}?"), f"p:{pic}*{ans}", [f"p:{pic}*{c}" for c in wrong],
+             help_fa=tr(f"{fa(ans)} {noun} از همه {word} است.", f"{cnt(ans, noun)} is the {'most' if most else 'fewest'}."))
     got = int(row["answer"].split("*")[1])
     others = [int(x.split("*")[1]) for x in row["distractors"].split("|")]
     assert all(got > o for o in others) if most else all(got < o for o in others)
@@ -298,8 +416,8 @@ def numeral_compare_item(s, rnd, intro, numbers, biggest: bool, script="W"):
     ans = max(numbers) if biggest else min(numbers)
     wrong = [n for n in numbers if n != ans]
     word = "بزرگتر" if biggest else "کوچکتر"
-    row = lp(s, rnd, intro, f"کدام عدد از همه {word} است؟", num(ans, script), [num(n, script) for n in wrong],
-             help_fa=f"{fa(ans)} از همه {word} است.")
+    row = lp(s, rnd, intro, tr(f"کدام عدد از همه {word} است؟", f"Which number is the {'biggest' if biggest else 'smallest'}?"), num(ans, script), [num(n, script) for n in wrong],
+             help_fa=tr(f"{fa(ans)} از همه {word} است.", f"{ans} is the {'biggest' if biggest else 'smallest'}."))
     got = value(row["answer"])
     others = [value(x) for x in row["distractors"].split("|")]
     assert all(got > o for o in others) if biggest else all(got < o for o in others)
@@ -307,13 +425,13 @@ def numeral_compare_item(s, rnd, intro, numbers, biggest: bool, script="W"):
 
 def next_item(s, rnd, intro, n, after: bool, rng, lo, hi):
     if after:
-        ans, say = n + 1, f"بعد از {fa(n)} کدام عدد می{Z}آید؟"
+        ans, say = n + 1, tr(f"بعد از {fa(n)} کدام عدد می{Z}آید؟", f"Which number comes after {n}?")
         prefer = [n, n - 1, n + 2, n + 11]
-        help_fa = f"بعد از {fa(n)}، {fa(ans)} می{Z}آید."
+        help_fa = tr(f"بعد از {fa(n)}، {fa(ans)} می{Z}آید.", f"After {n} comes {ans}.")
     else:
-        ans, say = n - 1, f"پیش از {fa(n)} کدام عدد است؟"
+        ans, say = n - 1, tr(f"پیش از {fa(n)} کدام عدد است؟", f"Which number is before {n}?")
         prefer = [n, n + 1, n - 2, n - 11]
-        help_fa = f"پیش از {fa(n)}، {fa(ans)} است."
+        help_fa = tr(f"پیش از {fa(n)}، {fa(ans)} است.", f"Before {n} is {ans}.")
     wrong = near(ans, rng, lo, hi, prefer)
     row = lp(s, rnd, intro, say, W(ans), [W(x) for x in wrong], help_fa=help_fa)
     assert value(row["answer"]) == (n + 1 if after else n - 1)
@@ -324,13 +442,13 @@ def place2_item(s, rnd, intro, t, o, rng):
     assert 1 <= t <= 9 and 0 <= o <= 9
     ans = 10 * t + o
     if o:
-        say = f"{ONES[t]} ده و {ONES[o]} یک، چند می{Z}شود؟"
+        say = tr(f"{ONES[t]} ده و {ONES[o]} یک، چند می{Z}شود؟", f"{nn(t, 'ten')} and {nn(o, 'one')} make how many?")
         prefer = [10 * o + t, t + o]
     else:
-        say = f"{ONES[t]} ده، چند می{Z}شود؟"
+        say = tr(f"{ONES[t]} ده، چند می{Z}شود؟", f"{nn(t, 'ten')} {'makes' if t == 1 else 'make'} how many?")
         prefer = [t, 10 + t]
     wrong = near(ans, rng, 0, 100, prefer)
-    row = lp(s, rnd, intro, say, W(ans), [W(x) for x in wrong], help_fa=f"{ONES[t]} ده یعنی {fa(10 * t)}. جواب {fa(ans)} است.")
+    row = lp(s, rnd, intro, say, W(ans), [W(x) for x in wrong], help_fa=tr(f"{ONES[t]} ده یعنی {fa(10 * t)}. جواب {fa(ans)} است.", f"{nn(t, 'ten')} means {10 * t}. The answer is {ans}."))
     assert value(row["answer"]) == t * 10 + o
 
 
@@ -341,8 +459,8 @@ def digit_item(s, rnd, intro, n, ask_tens: bool, rng):
     ans = t if ask_tens else o
     what = "ده" if ask_tens else "یک"
     wrong = near(ans, rng, 0, 9, [o if ask_tens else t])
-    row = lp(s, rnd, intro, f"در عدد {fa(n)}، چند {what} است؟", W(ans), [W(x) for x in wrong], show=W(n),
-             help_fa=f"{fa(n)} یعنی {ONES[t]} ده و {ONES[o]} یک.")
+    row = lp(s, rnd, intro, tr(f"در عدد {fa(n)}، چند {what} است؟", f"In the number {n}, how many {'tens' if ask_tens else 'ones'} are there?"), W(ans), [W(x) for x in wrong], show=W(n),
+             help_fa=tr(f"{fa(n)} یعنی {ONES[t]} ده و {ONES[o]} یک.", f"{n} means {nn(t, 'ten')} and {nn(o, 'one')}."))
     shown = value(row["show"])
     assert value(row["answer"]) == (shown // 10 if ask_tens else shown % 10)
 
@@ -352,18 +470,21 @@ def place3_item(s, rnd, intro, h, t, o, rng):
     assert 1 <= h <= 9 and (t or o)
     ans = 100 * h + 10 * t + o
     bits = [f"{ONES[h]} صد"]
+    en_bits = [nn(h, 'hundred')]
     if t:
         bits.append(f"{ONES[t]} ده")
+        en_bits.append(nn(t, 'ten'))
     if o:
         bits.append(f"{ONES[o]} یک")
-    say = (bits[0] + " و " + bits[1] if len(bits) == 2 else f"{bits[0]}، {bits[1]} و {bits[2]}") + f"، چند می{Z}شود؟"
+        en_bits.append(nn(o, 'one'))
+    say = tr((bits[0] + " و " + bits[1] if len(bits) == 2 else f"{bits[0]}، {bits[1]} و {bits[2]}") + f"، چند می{Z}شود؟", (en_bits[0] + " and " + en_bits[1] if len(en_bits) == 2 else f"{en_bits[0]}, {en_bits[1]} and {en_bits[2]}") + " make how many?")
     prefer = digit_perms(ans)[:2]
     if not t:
         prefer = [100 * h + 10 * o, 10 * h + o] + prefer
     if not o:
         prefer = [100 * h + t, 10 * h + t] + prefer
     wrong = near(ans, rng, 0, 1000, prefer)
-    row = lp(s, rnd, intro, say, W(ans), [W(x) for x in wrong], help_fa=f"جواب {fa(ans)} است.")
+    row = lp(s, rnd, intro, say, W(ans), [W(x) for x in wrong], help_fa=tr(f"جواب {fa(ans)} است.", f"The answer is {ans}."))
     assert value(row["answer"]) == 100 * h + 10 * t + o
 
 
@@ -506,21 +627,22 @@ def flock(level: int) -> Sheet:
 # ---------------------------------------------------------------------------
 
 OP_WORD = {"+": "جمع", "-": "منفی", "*": "ضرب"}
-I_ADD = "جمع کن و جواب را انتخاب کن."
-I_SUB = "کم کن و جواب را انتخاب کن."
-I_BOTH = "خوب گوش کن: جمع است یا منفی؟"
-I_STORY = "قصه را گوش کن و حساب کن."
-I_TENS = "ده" + Z + "ها را جمع و منفی کن."
-I_MUL = "ضرب کن و جواب را انتخاب کن."
+OP_EN = {"+": "plus", "-": "minus", "*": "times"}
+I_ADD = tr("جمع کن و جواب را انتخاب کن.", "Add and choose the answer.")
+I_SUB = tr("کم کن و جواب را انتخاب کن.", "Take away and choose the answer.")
+I_BOTH = tr("خوب گوش کن: جمع است یا منفی؟", "Listen carefully: is it plus or minus?")
+I_STORY = tr("قصه را گوش کن و حساب کن.", "Listen to the story and work it out.")
+I_TENS = tr("ده" + Z + "ها را جمع و منفی کن.", "Add and subtract the tens.")
+I_MUL = tr("ضرب کن و جواب را انتخاب کن.", "Multiply and choose the answer.")
 
-# picture, noun, "... more came", "... went"
+# picture, noun, "... more came", "... went" (each with its English)
 STORY_OBJS = [
-    ("sheep", "گوسفند", "{b} تای دیگر آمد", "{b} تا رفت"),
-    ("apple", "سیب", "{b} تای دیگر آوردند", "{b} تا را خوردند"),
-    ("hen", "مرغ", "{b} تای دیگر آمد", "{b} تا رفت"),
-    ("bread", "نان", "{b} تای دیگر پختند", "{b} تا را خوردند"),
-    ("goat", "بز", "{b} تای دیگر آمد", "{b} تا رفت"),
-    ("egg", "تخم", "{b} تای دیگر آوردند", "{b} تا شکست"),
+    ("sheep", "گوسفند", ("{b} تای دیگر آمد", "{b} more came"), ("{b} تا رفت", "{b} went away")),
+    ("apple", "سیب", ("{b} تای دیگر آوردند", "they brought {b} more"), ("{b} تا را خوردند", "they ate {b}")),
+    ("hen", "مرغ", ("{b} تای دیگر آمد", "{b} more came"), ("{b} تا رفت", "{b} went away")),
+    ("bread", "نان", ("{b} تای دیگر پختند", "they baked {b} more"), ("{b} تا را خوردند", "they ate {b}")),
+    ("goat", "بز", ("{b} تای دیگر آمد", "{b} more came"), ("{b} تا رفت", "{b} went away")),
+    ("egg", "تخم", ("{b} تای دیگر آوردند", "they brought {b} more"), ("{b} تا شکست", "{b} broke")),
 ]
 
 HOP_META: list[tuple[dict, int, str, int]] = []
@@ -534,8 +656,8 @@ def hop_item(s, rnd, intro, a, op, b, rng, hi, say=None, show="", extra_prefer=(
     ans = calc(a, op, b)
     assert ans >= 0 and a >= 0 and b >= 0
     if say is None:
-        say = f"{fa(a)} {OP_WORD[op]} {fa(b)} چند می{Z}شود؟"
-    help_fa = f"{fa(a)} {OP_WORD[op]} {fa(b)} مساوی {fa(ans)}."
+        say = tr(f"{fa(a)} {OP_WORD[op]} {fa(b)} چند می{Z}شود؟", f"{a} {OP_EN[op]} {b} makes how many?")
+    help_fa = tr(f"{fa(a)} {OP_WORD[op]} {fa(b)} مساوی {fa(ans)}.", f"{a} {OP_EN[op]} {b} equals {ans}.")
     prefer = list(extra_prefer)
     if op == "+":
         if a % 10 + b % 10 >= 10 and ans > 20:
@@ -562,18 +684,18 @@ def story_item(s, rnd, intro, a, op, b, rng, hi, k, with_picture):
     assert a >= 1 and b >= 1
     pic, noun, came, went = STORY_OBJS[k % len(STORY_OBJS)]
     if op == "+":
-        say = f"{fa(a)} {noun} بود، {came.format(b=fa(b))}. چند تا شد؟"
+        say = tr(f"{fa(a)} {noun} بود، {came[0].format(b=fa(b))}. چند تا شد؟", f"{was(a, noun)}, {came[1].format(b=b)}. How many are there now?")
     else:
-        say = f"{fa(a)} {noun} بود، {went.format(b=fa(b))}. چند تا ماند؟"
+        say = tr(f"{fa(a)} {noun} بود، {went[0].format(b=fa(b))}. چند تا ماند؟", f"{was(a, noun)}, {went[1].format(b=b)}. How many are left?")
     show = f"p:{pic}*{a}" if with_picture and a <= 20 else ""
     hop_item(s, rnd, intro, a, op, b, rng, hi, say=say, show=show)
 
 
 def money_story(s, rnd, intro, a, op, b, rng, hi):
     if op == "+":
-        say = f"{fa(a)} افغانی داشتی، {fa(b)} افغانی دیگر گرفتی. چند افغانی شد؟"
+        say = tr(f"{fa(a)} افغانی داشتی، {fa(b)} افغانی دیگر گرفتی. چند افغانی شد؟", f"You had {a} afghani, you got {b} afghani more. How many afghani is it now?")
     else:
-        say = f"{fa(a)} افغانی داشتی، {fa(b)} افغانی خرج کردی. چند افغانی ماند؟"
+        say = tr(f"{fa(a)} افغانی داشتی، {fa(b)} افغانی خرج کردی. چند افغانی ماند؟", f"You had {a} afghani, you spent {b} afghani. How many afghani are left?")
     hop_item(s, rnd, intro, a, op, b, rng, hi, say=say)
 
 
@@ -728,8 +850,8 @@ def market_row(s, rnd, say, goods, target, units, mode, help_fa):
 def pay_help(target, units) -> str:
     parts = greedy(target, units)
     if len(parts) == 1:
-        return f"{fa(target)} {AFN} بده."
-    return " جمع ".join(fa(p) for p in parts) + f" مساوی {fa(target)}."
+        return tr(f"{fa(target)} {AFN} بده.", f"Give {target} afghani.")
+    return tr(" جمع ".join(fa(p) for p in parts) + f" مساوی {fa(target)}.", " plus ".join(str(p) for p in parts) + f" equals {target}.")
 
 
 def market(level: int) -> Sheet:
@@ -744,8 +866,8 @@ def market(level: int) -> Sheet:
             goods = GOODS[i:] + GOODS[:i]
             for j, n in enumerate(values):
                 pic, noun = goods[j]
-                market_row(s, rnd, f"{fa(n)} {noun} بده.", pic, n, [1], "count",
-                           f"{fa(n)} دانه {noun} روی ترازو بگذار.")
+                market_row(s, rnd, tr(f"{fa(n)} {noun} بده.", f"Give {cnt(n, noun)}."), pic, n, [1], "count",
+                           tr(f"{fa(n)} دانه {noun} روی ترازو بگذار.", f"Put {cnt(n, noun)} on the scales."))
     elif level == 2:
         plan = [((3, 10), 1, [1, 2, 5]), ((6, 15), 1, [1, 2, 5]), ((11, 25), 1, [1, 2, 5, 10]),
                 ((30, 90), 10, [10, 20, 50]), ((21, 60), 1, [1, 2, 5, 10, 20, 50]),
@@ -759,24 +881,25 @@ def market(level: int) -> Sheet:
             goods = SHOP[i:] + SHOP[:i]
             for j, p in enumerate(prices):
                 pic, noun = goods[j]
-                market_row(s, rnd, f"{noun} {fa(p)} {AFN} است. پولش را بده.", pic, p, units, "pay", pay_help(p, units))
+                market_row(s, rnd, tr(f"{noun} {fa(p)} {AFN} است. پولش را بده.", cap(f"{costs(noun, p)}. Pay for it.")), pic, p, units, "pay", pay_help(p, units))
     else:
         both = f"هر دو چند {AFN} می{Z}شود؟ پولش را بده."
+        both_en = "How many afghani do both make? Pay for it."
         # 01: a bill of two things, whole tens
         rng = rng_for(3, "market", "01")
         pairs = rng.sample([(a, b) for a in range(10, 90, 10) for b in range(10, 90, 10) if a != b and a + b <= 100], 6)
         for j, (a, b) in enumerate(pairs):
             (p1, n1), (p2, n2) = SHOP[j], SHOP[j + 3]
-            market_row(s, "01", f"{n1} {fa(a)} {AFN} و {n2} {fa(b)} {AFN} است. {both}", p1, a + b,
-                       [10, 20, 50], "pay", f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)}.")
+            market_row(s, "01", tr(f"{n1} {fa(a)} {AFN} و {n2} {fa(b)} {AFN} است. {both}", cap(f"{costs(n1, a)} and {costs(n2, b)}. {both_en}")), p1, a + b,
+                       [10, 20, 50], "pay", tr(f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)}.", f"{a} plus {b} equals {a + b}."))
         # 02: a bill of two things, with carrying
         rng = rng_for(3, "market", "02")
         pairs = rng.sample([(a, b) for a in range(12, 59) for b in range(12, 59)
                             if a % 10 + b % 10 >= 10 and a % 10 and b % 10 and a + b <= 100], 6)
         for j, (a, b) in enumerate(pairs):
             (p1, n1), (p2, n2) = SHOP[j + 2], SHOP[(j + 6) % len(SHOP)]
-            market_row(s, "02", f"{n1} {fa(a)} {AFN} و {n2} {fa(b)} {AFN} است. {both}", p1, a + b,
-                       [1, 2, 5, 10, 20, 50], "pay", f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)}.")
+            market_row(s, "02", tr(f"{n1} {fa(a)} {AFN} و {n2} {fa(b)} {AFN} است. {both}", cap(f"{costs(n1, a)} and {costs(n2, b)}. {both_en}")), p1, a + b,
+                       [1, 2, 5, 10, 20, 50], "pay", tr(f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)}.", f"{a} plus {b} equals {a + b}."))
         # 03: several of one thing: tables of 2, 5 and 10
         rng = rng_for(3, "market", "03")
         deals = []
@@ -785,21 +908,21 @@ def market(level: int) -> Sheet:
         countable = [SHOP[0], SHOP[1], SHOP[2], SHOP[3], SHOP[4], GOODS[0]]
         for j, (k, price) in enumerate(spread(deals, rng)):
             pic, noun = countable[j]
-            market_row(s, "03", f"{fa(k)} {noun} می{Z}خری. هر {noun} {fa(price)} {AFN} است. چند {AFN} می{Z}شود؟ پولش را بده.",
-                       pic, k * price, [1, 2, 5, 10, 20, 50, 100], "pay", f"{fa(k)} ضرب {fa(price)} مساوی {fa(k * price)}.")
+            market_row(s, "03", tr(f"{fa(k)} {noun} می{Z}خری. هر {noun} {fa(price)} {AFN} است. چند {AFN} می{Z}شود؟ پولش را بده.", f"You buy {cnt(k, noun)}. Each {one(noun)} is {price} afghani. How many afghani does it make? Pay for it."),
+                       pic, k * price, [1, 2, 5, 10, 20, 50, 100], "pay", tr(f"{fa(k)} ضرب {fa(price)} مساوی {fa(k * price)}.", f"{k} times {price} equals {k * price}."))
         # 04: prices in the hundreds
         rng = rng_for(3, "market", "04")
         units = [10, 20, 50, 100]
         for j, p in enumerate(rng.sample(range(110, 501, 10), 6)):
             pic, noun = BIG[j]
-            market_row(s, "04", f"{noun} {fa(p)} {AFN} است. پولش را بده.", pic, p, units, "pay", pay_help(p, units))
+            market_row(s, "04", tr(f"{noun} {fa(p)} {AFN} است. پولش را بده.", cap(f"{costs(noun, p)}. Pay for it.")), pic, p, units, "pay", pay_help(p, units))
         # 05: a bill of two things, hundreds
         rng = rng_for(3, "market", "05")
         pairs = rng.sample([(a, b) for a in range(100, 301, 10) for b in range(20, 201, 10) if a + b <= 500], 6)
         for j, (a, b) in enumerate(pairs):
             (p1, n1), (p2, n2) = BIG[j], SHOP[j + 3]
-            market_row(s, "05", f"{n1} {fa(a)} {AFN} و {n2} {fa(b)} {AFN} است. {both}", p1, a + b,
-                       units, "pay", f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)}.")
+            market_row(s, "05", tr(f"{n1} {fa(a)} {AFN} و {n2} {fa(b)} {AFN} است. {both}", cap(f"{costs(n1, a)} and {costs(n2, b)}. {both_en}")), p1, a + b,
+                       units, "pay", tr(f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)}.", f"{a} plus {b} equals {a + b}."))
         # 06: change
         rng = rng_for(3, "market", "06")
         deals = [(g, rng.choice([p for p in range(g // 2, g) if p % 10])) for g in (20, 50, 100, 50, 100, 100)]
@@ -807,8 +930,8 @@ def market(level: int) -> Sheet:
         for j, (given, price) in enumerate(deals):
             pic, noun = SHOP[(j + 1) % len(SHOP)]
             change = given - price
-            market_row(s, "06", f"{noun} {fa(price)} {AFN} است. مشتری {fa(given)} {AFN} داد. چند {AFN} باقی می{Z}ماند؟ باقی را پس بده.",
-                       pic, change, [1, 2, 5, 10, 20, 50], "pay", f"{fa(given)} منفی {fa(price)} مساوی {fa(change)}.")
+            market_row(s, "06", tr(f"{noun} {fa(price)} {AFN} است. مشتری {fa(given)} {AFN} داد. چند {AFN} باقی می{Z}ماند؟ باقی را پس بده.", cap(f"{costs(noun, price)}. The customer gave {given} afghani. How many afghani are left over? Give the change back.")),
+                       pic, change, [1, 2, 5, 10, 20, 50], "pay", tr(f"{fa(given)} منفی {fa(price)} مساوی {fa(change)}.", f"{given} minus {price} equals {change}."))
     return s
 
 
@@ -817,7 +940,7 @@ def market(level: int) -> Sheet:
 # ---------------------------------------------------------------------------
 
 BUILDER_COLS = ["round", "intro_fa", "say_en", "say_fa", "tiles", "extra", "rtl", "done_en", "done_fa", "help_fa"]
-I_SEQ = "عددها را به ترتیب درست بگذار."
+I_SEQ = tr("عددها را به ترتیب درست بگذار.", "Put the numbers in the right order.")
 WEAVE_META: list[tuple[dict, list[int], list[int], str]] = []
 
 
@@ -827,15 +950,18 @@ def seq_item(s, rnd, start, step, count, extra=(), script="W", intro=I_SEQ, tabl
     assert all(0 <= x <= 1000 for x in seq) and step != 0
     a, b, k = fa(seq[0]), fa(seq[-1]), fa(abs(step))
     if step == 1:
-        say, help_fa = f"از {a} تا {b} به ترتیب بشمار.", "هر بار یک زیاد کن."
+        say, help_fa = tr(f"از {a} تا {b} به ترتیب بشمار.", f"Count in order from {seq[0]} to {seq[-1]}."), tr("هر بار یک زیاد کن.", "Add 1 each time.")
     elif step == -1:
-        say, help_fa = f"از {a} تا {b}، یکی یکی کم کن.", "هر بار یک کم کن."
+        say, help_fa = tr(f"از {a} تا {b}، یکی یکی کم کن.", f"From {seq[0]} to {seq[-1]}, take away one at a time."), tr("هر بار یک کم کن.", "Take away 1 each time.")
     elif step > 1:
-        say, help_fa = f"{k} تا {k} تا بشمار، از {a} تا {b}.", f"هر بار {k} زیاد کن."
+        say, help_fa = f"{k} تا {k} تا بشمار، از {a} تا {b}.", tr(f"هر بار {k} زیاد کن.", f"Add {abs(step)} each time.")
+        en = f"Count in {abs(step)}s, from {seq[0]} to {seq[-1]}."
         if table:
             say = f"جدول ضرب {fa(table)}: " + say
+            en = f"The {table} times table: " + en
+        say = tr(say, en)
     else:
-        say, help_fa = f"از {a} تا {b}، {k} تا {k} تا کم کن.", f"هر بار {k} کم کن."
+        say, help_fa = tr(f"از {a} تا {b}، {k} تا {k} تا کم کن.", f"From {seq[0]} to {seq[-1]}, take away {abs(step)} at a time."), tr(f"هر بار {k} کم کن.", f"Take away {abs(step)} each time.")
     _weave(s, rnd, intro, say, seq, list(extra), script, help_fa, "seq")
 
 
@@ -843,9 +969,9 @@ def order_item(s, rnd, numbers, up=True, intro=I_SEQ):
     seq = sorted(numbers, reverse=not up)
     assert len(set(seq)) == len(seq)
     if up:
-        say, help_fa = "این عددها را از کوچک به بزرگ بچین.", "اول کوچکترین عدد را پیدا کن."
+        say, help_fa = tr("این عددها را از کوچک به بزرگ بچین.", "Arrange these numbers from small to big."), tr("اول کوچکترین عدد را پیدا کن.", "First find the smallest number.")
     else:
-        say, help_fa = "این عددها را از بزرگ به کوچک بچین.", "اول بزرگترین عدد را پیدا کن."
+        say, help_fa = tr("این عددها را از بزرگ به کوچک بچین.", "Arrange these numbers from big to small."), tr("اول بزرگترین عدد را پیدا کن.", "First find the biggest number.")
     _weave(s, rnd, intro, say, seq, [], "W", help_fa, "up" if up else "down")
 
 
@@ -857,7 +983,7 @@ def _weave(s, rnd, intro, say, seq, extra, script, help_fa, kind):
         assert seq[0] - step not in extra and seq[-1] + step not in extra, (seq, extra)
     row = s.add(round=rnd, intro_fa=intro, say_fa=say, tiles="|".join(num(x, script) for x in seq),
                 extra="|".join(num(x, script) for x in extra), rtl="yes" if script == "D" else "",
-                done_fa="، ".join(fa(x) for x in seq) + ".", help_fa=help_fa)
+                done_fa=tr("، ".join(fa(x) for x in seq) + ".", ", ".join(str(x) for x in seq) + "."), help_fa=help_fa)
     WEAVE_META.append((row, seq, extra, kind))
 
 
@@ -977,10 +1103,11 @@ FRACTIONS = {
 }
 FRACTION_NOUNS = ["نان", "سیب", "تربوز", "دایره"]  # same order as the lists above
 FRAC_BASKET = {"whole": WHOLE, "half": HALF, "quarter": QUARTER}
-I_SHAPES = "هر چیز را در سبد شکل خودش بینداز."
-I_PARITY = "عددهای جفت و طاق را جدا کن."
-I_FRACTION = "پوره، نیم یا چارک؟ هر کدام را در سبد خودش بینداز."
-I_500 = "عدد از پنج" + Z + "صد کمتر است یا بیشتر؟"
+FRACTION_EN = {"whole": "whole {x}", "half": "half {a} {x}", "quarter": "quarter of {a} {x}"}
+I_SHAPES = tr("هر چیز را در سبد شکل خودش بینداز.", "Put each thing in the basket of its own shape.")
+I_PARITY = tr("عددهای جفت و طاق را جدا کن.", "Separate the even and the odd numbers.")
+I_FRACTION = tr("پوره، نیم یا چارک؟ هر کدام را در سبد خودش بینداز.", "Whole, half or quarter? Put each one in its own basket.")
+I_500 = tr("عدد از پنج" + Z + "صد کمتر است یا بیشتر؟", "Is the number less than 500 or more?")
 SORT_META: list[tuple[dict, str, object]] = []
 
 
@@ -996,8 +1123,8 @@ def sorter(level: int) -> Sheet:
         rng.shuffle(rows)
         assert len(rows) == 8
         for (pic, name), shape in rows:
-            row = s.add(round=rnd, intro_fa=I_SHAPES, thing=pic, say_fa=name, basket=SHAPES[shape][0],
-                        basket_say_fa=SHAPES[shape][1])
+            row = s.add(round=rnd, intro_fa=I_SHAPES, thing=pic, say_fa=tr(name, bare(name)), basket=SHAPES[shape][0],
+                        basket_say_fa=tr(SHAPES[shape][1], bare(SHAPES[shape][1])))
             SORT_META.append((row, "shape", shape))
 
     def parity_round(rnd, pool):
@@ -1006,7 +1133,7 @@ def sorter(level: int) -> Sheet:
         odds = rng.sample([n for n in pool if n % 2 == 1], 4)
         for n in spread(evens + odds, rng):
             basket = EVEN if n % 2 == 0 else ODD
-            row = s.add(round=rnd, intro_fa=I_PARITY, thing=W(n), say_fa=fa(n), basket=basket[0], basket_say_fa=basket[1])
+            row = s.add(round=rnd, intro_fa=I_PARITY, thing=W(n), say_fa=tr(fa(n), str(n)), basket=basket[0], basket_say_fa=tr(basket[1], bare(basket[1])))
             SORT_META.append((row, "parity", n))
 
     def fraction_round(rnd, plan, named=True):
@@ -1018,10 +1145,12 @@ def sorter(level: int) -> Sheet:
         assert len(rows) == 8
         for (pic, name), kind in rows:
             basket = FRAC_BASKET[kind]
+            noun = FRACTION_NOUNS[FRACTIONS[kind].index((pic, name))]
+            en = FRACTION_EN[kind].format(a=art(bare(noun)), x=bare(noun)) if named else bare(noun)
             if not named:
                 name = FRACTION_NOUNS[FRACTIONS[kind].index((pic, name))]
                 assert basket[1] not in name
-            row = s.add(round=rnd, intro_fa=I_FRACTION, thing=pic, say_fa=name, basket=basket[0], basket_say_fa=basket[1])
+            row = s.add(round=rnd, intro_fa=I_FRACTION, thing=pic, say_fa=tr(name, en), basket=basket[0], basket_say_fa=tr(basket[1], bare(basket[1])))
             SORT_META.append((row, "fraction", kind))
 
     if level == 1:
@@ -1041,9 +1170,10 @@ def sorter(level: int) -> Sheet:
         above = [501, 510] + rng.sample(range(520, 1000), 2)
         for n in spread(below + above, rng):
             less = n < 500
-            row = s.add(round="02", intro_fa=I_500, thing=W(n), say_fa=fa(n),
-                        basket="f:کمتر از ۵۰۰" if less else "f:بیشتر از ۵۰۰",
-                        basket_say_fa="کمتر از پنج" + Z + "صد" if less else "بیشتر از پنج" + Z + "صد")
+            en = "less than 500" if less else "more than 500"
+            row = s.add(round="02", intro_fa=I_500, thing=W(n), say_fa=tr(fa(n), str(n)),
+                        basket="f:" + tr(("f:کمتر از ۵۰۰" if less else "f:بیشتر از ۵۰۰")[2:], en),
+                        basket_say_fa=tr("کمتر از پنج" + Z + "صد" if less else "بیشتر از پنج" + Z + "صد", en))
             SORT_META.append((row, "500", n))
         fraction_round("03", [("whole", [2, 3]), ("half", [1, 2, 3]), ("quarter", [1, 2, 3])], named=False)
         parity_round("04", range(101, 1000))
@@ -1054,14 +1184,14 @@ def sorter(level: int) -> Sheet:
 # 6. Shape Mason (listen_pick)
 # ---------------------------------------------------------------------------
 
-I_SHAPE = "شکل درست را پیدا کن."
-I_SHAPE_OBJ = "ببین هر چیز چه شکلی دارد."
-I_LONG = "ببین کدام درازتر و کدام کوتاه" + Z + "تر است."
-I_CORNER = "گوشه" + Z + "ها و ضلع" + Z + "ها را بشمار."
-I_CLOCK = "گوش کن و ساعت درست را پیدا کن."
-I_CLOCK_READ = "ساعت را ببین و بگو ساعت چند است."
-I_CLOCK_LATER = "ساعت را ببین و فکر کن."
-I_LENGTH = "متر و سانتی" + Z + "متر را حساب کن."
+I_SHAPE = tr("شکل درست را پیدا کن.", "Find the right shape.")
+I_SHAPE_OBJ = tr("ببین هر چیز چه شکلی دارد.", "See what shape each thing has.")
+I_LONG = tr("ببین کدام درازتر و کدام کوتاه" + Z + "تر است.", "See which one is longer and which one is shorter.")
+I_CORNER = tr("گوشه" + Z + "ها و ضلع" + Z + "ها را بشمار.", "Count the corners and the sides.")
+I_CLOCK = tr("گوش کن و ساعت درست را پیدا کن.", "Listen and find the right clock.")
+I_CLOCK_READ = tr("ساعت را ببین و بگو ساعت چند است.", "Look at the clock and say what time it is.")
+I_CLOCK_LATER = tr("ساعت را ببین و فکر کن.", "Look at the clock and think.")
+I_LENGTH = tr("متر و سانتی" + Z + "متر را حساب کن.", "Work out the metres and the centimetres.")
 CM = "سانتی" + Z + "متر"
 M = "متر"
 
@@ -1083,8 +1213,8 @@ def mason(level: int) -> Sheet:
         for shape in order + spread(order, rng):
             pic, name = SHAPES[shape]
             first = len([r for r in s.rows if r["answer"] == pic]) == 0
-            say = f"{name} کدام است؟" if first else f"شکل {name} را پیدا کن."
-            lp(s, "01", I_SHAPE, say, pic, [SHAPES[o][0] for o in order if o != shape], help_fa=f"این شکل {name} است.")
+            say = tr(f"{name} کدام است؟", f"Which one is the {bare(name)}?") if first else tr(f"شکل {name} را پیدا کن.", f"Find the {bare(name)} shape.")
+            lp(s, "01", I_SHAPE, say, pic, [SHAPES[o][0] for o in order if o != shape], help_fa=tr(f"این شکل {name} است.", f"This shape is a {bare(name)}."))
         rng = rng_for(1, "mason", "02")
         for k in (1, 2):
             for shape in spread(order, rng):
@@ -1093,29 +1223,29 @@ def mason(level: int) -> Sheet:
                 if shape == "rectangle":  # a square is a rectangle too: never offer one as a wrong choice
                     wrong[order.index("square")] = SHAPED["circle"][4 + k][0]
                     assert not set(wrong) & {p for p, _ in SHAPED["square"]} and len(set(wrong)) == 3
-                lp(s, "02", I_SHAPE_OBJ, f"کدام چیز شکل {SHAPES[shape][1]} دارد؟", pic, wrong,
-                   help_fa=f"{noun} شکل {SHAPES[shape][1]} دارد.")
+                lp(s, "02", I_SHAPE_OBJ, tr(f"کدام چیز شکل {SHAPES[shape][1]} دارد؟", f"Which thing has the shape of a {bare(SHAPES[shape][1])}?"), pic, wrong,
+                   help_fa=tr(f"{noun} شکل {SHAPES[shape][1]} دارد.", f"The {bare(noun)} has the shape of a {bare(SHAPES[shape][1])}."))
         for i, (noun, long_pic, short_pic, long_word, short_word) in enumerate(LENGTHS):
             other = LENGTHS[(i + 1) % len(LENGTHS)]
-            lp(s, "03", I_LONG, f"کدام {noun} {long_word} است؟", long_pic, [short_pic, other[1], other[2]],
-               help_fa=f"این {noun} {long_word} است.")
+            lp(s, "03", I_LONG, tr(f"کدام {noun} {long_word} است؟", f"Which {bare(noun)} is {bare(long_word)}?"), long_pic, [short_pic, other[1], other[2]],
+               help_fa=tr(f"این {noun} {long_word} است.", f"This {bare(noun)} is {bare(long_word)}."))
         for i, (noun, long_pic, short_pic, long_word, short_word) in enumerate(LENGTHS):
             other = LENGTHS[(i + 2) % len(LENGTHS)]
-            lp(s, "03", I_LONG, f"کدام {noun} {short_word} است؟", short_pic, [long_pic, other[1], other[2]],
-               help_fa=f"این {noun} {short_word} است.")
+            lp(s, "03", I_LONG, tr(f"کدام {noun} {short_word} است؟", f"Which {bare(noun)} is {bare(short_word)}?"), short_pic, [long_pic, other[1], other[2]],
+               help_fa=tr(f"این {noun} {short_word} است.", f"This {bare(noun)} is {bare(short_word)}."))
         corners = {"circle": 0, "square": 4, "triangle": 3, "rectangle": 4}
         rng = rng_for(1, "mason", "04")
         for shape, what in [("triangle", "گوشه"), ("square", "ضلع"), ("circle", "گوشه"), ("rectangle", "گوشه"),
                             ("triangle", "ضلع"), ("square", "گوشه")]:
             pic, name = SHAPES[shape]
             n = corners[shape]
-            row = lp(s, "04", I_CORNER, f"{name} چند {what} دارد؟", W(n), [W(x) for x in near(n, rng, 0, 8)], show=pic,
-                     help_fa=(f"{name} {fa(n)} {what} دارد." if n else f"{name} هیچ {what} ندارد."))
+            row = lp(s, "04", I_CORNER, tr(f"{name} چند {what} دارد؟", f"How many {many(what)} does a {bare(name)} have?"), W(n), [W(x) for x in near(n, rng, 0, 8)], show=pic,
+                     help_fa=(tr(f"{name} {fa(n)} {what} دارد.", f"A {bare(name)} has {cnt(n, what)}.") if n else tr(f"{name} هیچ {what} ندارد.", f"A {bare(name)} has no {many(what)}.")))
             MASON_META.append((row, n))
-        lp(s, "04", I_CORNER, "کدام شکل سه گوشه دارد؟", "shape_triangle", ["shape_circle", "shape_square", "shape_rectangle"],
-           help_fa="مثلث سه گوشه دارد.")
-        lp(s, "04", I_CORNER, "کدام شکل هیچ گوشه ندارد؟", "shape_circle", ["shape_triangle", "shape_square", "shape_rectangle"],
-           help_fa="دایره هیچ گوشه ندارد.")
+        lp(s, "04", I_CORNER, tr("کدام شکل سه گوشه دارد؟", "Which shape has 3 corners?"), "shape_triangle", ["shape_circle", "shape_square", "shape_rectangle"],
+           help_fa=tr("مثلث سه گوشه دارد.", "A triangle has 3 corners."))
+        lp(s, "04", I_CORNER, tr("کدام شکل هیچ گوشه ندارد؟", "Which shape has no corners?"), "shape_circle", ["shape_triangle", "shape_square", "shape_rectangle"],
+           help_fa=tr("دایره هیچ گوشه ندارد.", "A circle has no corners."))
     elif level == 2:
         def clock(h):
             return f"clock_{(h - 1) % 12 + 1}"
@@ -1127,8 +1257,8 @@ def mason(level: int) -> Sheet:
             rng = rng_for(2, "mason", rnd)
             for h in spread(hours, rng):
                 wrong = [clock(h - 1), clock(h + 1), clock(h + 6)]
-                row = lp(s, rnd, I_CLOCK, f"ساعت {fa(h)} است. ساعت درست را پیدا کن.", clock(h), wrong,
-                         help_fa=f"عقربه کوتاه طرف {fa(h)} است و عقربه دراز طرف دوازده.")
+                row = lp(s, rnd, I_CLOCK, tr(f"ساعت {fa(h)} است. ساعت درست را پیدا کن.", f"It is {h} o'clock. Find the right clock."), clock(h), wrong,
+                         help_fa=tr(f"عقربه کوتاه طرف {fa(h)} است و عقربه دراز طرف دوازده.", f"The short hand points to {h} and the long hand to 12."))
                 MASON_META.append((row, h))
 
         hear_clock("01", [1, 2, 3, 4, 5, 6])
@@ -1136,21 +1266,21 @@ def mason(level: int) -> Sheet:
         rng = rng_for(2, "mason", "03")
         for h in rng.sample(range(1, 13), 8):
             wrong = near(h, rng, 1, 12, [12 if h != 12 else 6, wrap(h + 1), wrap(h - 1)])
-            row = lp(s, "03", I_CLOCK_READ, "ساعت چند است؟", W(h), [W(x) for x in wrong], show=clock(h),
-                     help_fa=f"عقربه کوتاه طرف {fa(h)} است. ساعت {fa(h)} است.")
+            row = lp(s, "03", I_CLOCK_READ, tr("ساعت چند است؟", "What time is it?"), W(h), [W(x) for x in wrong], show=clock(h),
+                     help_fa=tr(f"عقربه کوتاه طرف {fa(h)} است. ساعت {fa(h)} است.", f"The short hand points to {h}. It is {h} o'clock."))
             MASON_META.append((row, h))
         rng = rng_for(2, "mason", "04")
         hours = rng.sample(range(1, 12), 7)
         for h in hours[:4]:
             wrong = near(h, rng, 1, 12, [12, wrap(h + 1), wrap(h - 1)])
-            row = lp(s, "04", I_CLOCK_LATER, "ساعت چند است؟", D(h), [D(x) for x in wrong], show=clock(h),
-                     help_fa=f"عقربه کوتاه طرف {fa(h)} است. ساعت {fa(h)} است.")
+            row = lp(s, "04", I_CLOCK_LATER, tr("ساعت چند است؟", "What time is it?"), D(h), [D(x) for x in wrong], show=clock(h),
+                     help_fa=tr(f"عقربه کوتاه طرف {fa(h)} است. ساعت {fa(h)} است.", f"The short hand points to {h}. It is {h} o'clock."))
             MASON_META.append((row, h))
         for h in hours[4:] + [12]:
             later = wrap(h + 1)
             wrong = near(later, rng, 1, 12, [h, wrap(h - 1), wrap(h + 2)])
-            row = lp(s, "04", I_CLOCK_LATER, f"حالا ساعت {fa(h)} است. یک ساعت بعد، ساعت چند می{Z}شود؟", W(later),
-                     [W(x) for x in wrong], show=clock(h), help_fa=f"یک ساعت بعد از {fa(h)}، ساعت {fa(later)} می{Z}شود.")
+            row = lp(s, "04", I_CLOCK_LATER, tr(f"حالا ساعت {fa(h)} است. یک ساعت بعد، ساعت چند می{Z}شود؟", f"Now it is {h} o'clock. One hour later, what time will it be?"), W(later),
+                     [W(x) for x in wrong], show=clock(h), help_fa=tr(f"یک ساعت بعد از {fa(h)}، ساعت {fa(later)} می{Z}شود.", f"One hour after {h}, it is {later} o'clock."))
             MASON_META.append((row, h % 12 + 1))
     else:
         def q(rnd, say, ans, prefer, help_fa, hi=2000):
@@ -1159,28 +1289,28 @@ def mason(level: int) -> Sheet:
             MASON_META.append((row, ans))
 
         for m in (1, 2, 5, 10):
-            q("01", f"{fa(m)} {M} چند {CM} است؟", m * 100, [m * 10, m * 100 + 100, m],
-              f"هر متر صد {CM} است. {fa(m)} {M}، {fa(m * 100)} {CM} می{Z}شود.")
-        q("01", f"نیم {M} چند {CM} است؟", 100 // 2, [5, 500, 20], f"یک متر صد {CM} است. نیم آن پنجاه {CM} است.")
+            q("01", tr(f"{fa(m)} {M} چند {CM} است؟", f"How many centimetres is {nn(m, 'metre')}?"), m * 100, [m * 10, m * 100 + 100, m],
+              tr(f"هر متر صد {CM} است. {fa(m)} {M}، {fa(m * 100)} {CM} می{Z}شود.", f"Each metre is 100 centimetres. {nn(m, 'metre')} makes {m * 100} centimetres."))
+        q("01", tr(f"نیم {M} چند {CM} است؟", "How many centimetres is half a metre?"), 100 // 2, [5, 500, 20], tr(f"یک متر صد {CM} است. نیم آن پنجاه {CM} است.", "One metre is 100 centimetres. Half of it is 50 centimetres."))
         for c in (300, 700, 400):
-            q("01", f"{fa(c)} {CM} چند {M} است؟", c // 100, [c // 10, c // 100 + 1, c // 100 - 1],
-              f"هر صد {CM} یک {M} است. {fa(c)} {CM}، {fa(c // 100)} {M} می{Z}شود.")
+            q("01", tr(f"{fa(c)} {CM} چند {M} است؟", f"How many metres is {c} centimetres?"), c // 100, [c // 10, c // 100 + 1, c // 100 - 1],
+              tr(f"هر صد {CM} یک {M} است. {fa(c)} {CM}، {fa(c // 100)} {M} می{Z}شود.", f"Every 100 centimetres is 1 metre. {c} centimetres makes {nn(c // 100, 'metre')}."))
         adds = [("چوب", 40, 35, CM), ("ریسمان", 28, 17, CM), ("تکه", 56, 29, CM), ("چوب", 65, 25, CM),
                 ("دیوار", 12, 8, M), ("ریسمان", 37, 26, M), ("جوی", 45, 15, M), ("سرک", 120, 60, M)]
         for noun, a, b, unit in adds:
-            q("02", f"یک {noun} {fa(a)} {unit} است و {noun} دیگر {fa(b)} {unit}. هر دو با هم چند {unit} می{Z}شود؟",
-              a + b, [a + b - 10, a - b, a + b + 10], f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)}.")
+            q("02", tr(f"یک {noun} {fa(a)} {unit} است و {noun} دیگر {fa(b)} {unit}. هر دو با هم چند {unit} می{Z}شود؟", f"One {bare(noun)} is {a} {many(unit)} and another {bare(noun)} is {b} {many(unit)}. How many {many(unit)} do both make together?"),
+              a + b, [a + b - 10, a - b, a + b + 10], tr(f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)}.", f"{a} plus {b} equals {a + b}."))
         subs = [("ریسمان", 90, 35, CM), ("تکه", 72, 48, CM), ("چوب", 50, 15, CM), ("سیم", 100, 40, CM),
                 ("ریسمان", 30, 12, M), ("تکه", 64, 27, M), ("سیم", 81, 36, M), ("ریسمان", 200, 50, M)]
         for noun, a, b, unit in subs:
-            q("03", f"یک {noun} {fa(a)} {unit} بود. {fa(b)} {unit} آن بریده شد. چند {unit} ماند؟",
-              a - b, [a - b + 10, a + b, a - b - 10], f"{fa(a)} منفی {fa(b)} مساوی {fa(a - b)}.")
+            q("03", tr(f"یک {noun} {fa(a)} {unit} بود. {fa(b)} {unit} آن بریده شد. چند {unit} ماند؟", f"A {bare(noun)} was {a} {many(unit)}. {b} {many(unit)} of it was cut off. How many {many(unit)} are left?"),
+              a - b, [a - b + 10, a + b, a - b - 10], tr(f"{fa(a)} منفی {fa(b)} مساوی {fa(a - b)}.", f"{a} minus {b} equals {a - b}."))
         for m, c in [(1, 20), (2, 50), (3, 5), (1, 75), (4, 10), (2, 8)]:
-            q("04", f"{fa(m)} {M} و {fa(c)} {CM}، چند {CM} می{Z}شود؟", m * 100 + c, [m * 10 + c, m + c, m * 100 + c * 10],
-              f"{fa(m)} {M}، {fa(m * 100)} {CM} است. {fa(m * 100)} جمع {fa(c)} مساوی {fa(m * 100 + c)}.")
+            q("04", tr(f"{fa(m)} {M} و {fa(c)} {CM}، چند {CM} می{Z}شود؟", f"{nn(m, 'metre')} and {c} centimetres make how many centimetres?"), m * 100 + c, [m * 10 + c, m + c, m * 100 + c * 10],
+              tr(f"{fa(m)} {M}، {fa(m * 100)} {CM} است. {fa(m * 100)} جمع {fa(c)} مساوی {fa(m * 100 + c)}.", f"{nn(m, 'metre')} is {m * 100} centimetres. {m * 100} plus {c} equals {m * 100 + c}."))
         for n in (150, 130):
-            q("04", f"{fa(n)} {CM}، یک {M} و چند {CM} است؟", n - 100, [n, (n - 100) // 10, n - 100 + 10],
-              f"یک {M} صد {CM} است. {fa(n)} منفی صد مساوی {fa(n - 100)}.")
+            q("04", tr(f"{fa(n)} {CM}، یک {M} و چند {CM} است؟", f"{n} centimetres is 1 metre and how many centimetres?"), n - 100, [n, (n - 100) // 10, n - 100 + 10],
+              tr(f"یک {M} صد {CM} است. {fa(n)} منفی صد مساوی {fa(n - 100)}.", f"One metre is 100 centimetres. {n} minus 100 equals {n - 100}."))
     return s
 
 
@@ -1190,19 +1320,19 @@ def mason(level: int) -> Sheet:
 
 GAMES = [
     dict(id="count_the_flock", engine="listen_pick", letter="a", title_en="Count the Flock", title_fa="رمه را بشمار",
-         intro_fa="بشمار و عدد درست را انتخاب کن.", icon="sheep", v1=True, sheet="count_the_flock.csv", make=flock),
+         intro_fa=tr("بشمار و عدد درست را انتخاب کن.", "Count and choose the right number."), icon="sheep", v1=True, sheet="count_the_flock.csv", make=flock),
     dict(id="number_hop", engine="journey", letter="b", title_en="Number Hop", title_fa="خیز عددها",
-         intro_fa="حساب کن و جواب درست را انتخاب کن.", icon="frog", v1=True, sheet="number_hop.csv", make=hop),
+         intro_fa=tr("حساب کن و جواب درست را انتخاب کن.", "Work it out and choose the right answer."), icon="frog", v1=True, sheet="number_hop.csv", make=hop),
     dict(id="market_scales", engine="market", letter="c", title_en="Market Scales", title_fa="ترازوی بازار",
-         intro_fa={1: "گوش کن و همان قدر روی ترازو بگذار.", 2: "قیمت را گوش کن و با سکه" + Z + "ها و نوت" + Z + "ها پول بده.",
-                   3: "حساب کن و با سکه" + Z + "ها و نوت" + Z + "ها پول بده."},
+         intro_fa={1: tr("گوش کن و همان قدر روی ترازو بگذار.", "Listen and put that many on the scales."), 2: tr("قیمت را گوش کن و با سکه" + Z + "ها و نوت" + Z + "ها پول بده.", "Listen to the price and pay with the coins and notes."),
+                   3: tr("حساب کن و با سکه" + Z + "ها و نوت" + Z + "ها پول بده.", "Work it out and pay with the coins and notes.")},
          icon="scales", sheet="market_scales.csv", make=market),
     dict(id="carpet_weaver", engine="builder", letter="d", title_en="Carpet Weaver", title_fa="قالین" + Z + "باف",
-         intro_fa="عددها را به ترتیب درست بگذار.", icon="carpet", sheet="carpet_weaver.csv", make=weaver),
+         intro_fa=tr("عددها را به ترتیب درست بگذار.", "Put the numbers in the right order."), icon="carpet", sheet="carpet_weaver.csv", make=weaver),
     dict(id="share_the_bread", engine="sorter", letter="e", title_en="Share the Bread", title_fa="نان را تقسیم کن",
-         intro_fa="هر چیز را در سبد درست بینداز.", icon="bread", sheet="share_the_bread.csv", make=sorter),
+         intro_fa=tr("هر چیز را در سبد درست بینداز.", "Put each thing in the right basket."), icon="bread", sheet="share_the_bread.csv", make=sorter),
     dict(id="shape_mason", engine="listen_pick", letter="f", title_en="Shape Mason", title_fa="گلکار شکل" + Z + "ها",
-         intro_fa="گوش کن و جواب درست را انتخاب کن.", icon="brick", sheet="shape_mason.csv", make=mason),
+         intro_fa=tr("گوش کن و جواب درست را انتخاب کن.", "Listen and choose the right answer."), icon="brick", sheet="shape_mason.csv", make=mason),
 ]
 TITLES = {1: ("Math 1: Counting to 20", "ریاضی ۱: شمارش تا بیست"),
           2: ("Math 2: Numbers to 100", "ریاضی ۲: عددها تا صد"),
@@ -1401,6 +1531,7 @@ def main() -> None:
             entry = {k: v for k, v in game.items() if k != "make"}
             if isinstance(entry["intro_fa"], dict):
                 entry["intro_fa"] = entry["intro_fa"][level]
+            used_en({"intro_fa": entry["intro_fa"]})
             used.add(entry["icon"])
             games.append(entry)
         assert len({g["letter"] for g in games}) == len(games)
@@ -1411,10 +1542,11 @@ def main() -> None:
     missing = used - set(PICTURES)
     assert not missing, f"pictures without a description: {sorted(missing)}"
     files[HERE / "pictures.txt"] = "".join(f"{name}: {PICTURES[name]}\n" for name in sorted(used))
+    files[I18N] = english_table()
     for path, text in files.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text, encoding="utf-8", newline="\n")
-    print(f"wrote {len(files)} files, {len(used)} pictures")
+    print(f"wrote {len(files)} files, {len(used)} pictures, {len(USED_EN)} English texts")
 
 
 if __name__ == "__main__":

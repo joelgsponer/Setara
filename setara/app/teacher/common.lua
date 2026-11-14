@@ -89,9 +89,10 @@ function M.hints(list)
   for _, h in ipairs(list) do
     local s = M.S(h[2])
     local label = s.fa and s.fa[1] or s.en or ""
-    local w = text.font("fa", 20):getWidth(label)
+    local english = text.locale == "en" and s.en
+    local w = english and text.font("latin", 16):getWidth(s.en) or text.font("fa", 20):getWidth(label)
     ui.set(ui.c.ink)
-    text.fa(label, x - w, 444, w, 20, "left")
+    if english then text.print(s.en, x - w, 452, w + 4, "left", 16) else text.fa(label, x - w, 444, w, 20, "left") end
     x = x - w - 8
     if h[1] == "arrows" then
       ui.arrow("left", x - 26, 462, 7, ui.c.ink)
@@ -110,7 +111,7 @@ end
 
 -- A Dari paragraph inside a card. Returns the card's height.
 function M.dari_card(lines, x, y, w, size, fill)
-  local h = text.fa_height(lines, size or 30) + 16
+  local h = text.fa_height(lines, size or 30, w - 24) + 16
   ui.card(x, y, w, h, { fill = fill or ui.c.paper, border = ui.c.line })
   ui.set(ui.c.ink)
   text.fa(lines, x + 12, y + 6, w - 24, size or 30)

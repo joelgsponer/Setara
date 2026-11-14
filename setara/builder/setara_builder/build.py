@@ -33,6 +33,7 @@ FORMAT = 1
 class Report:
     errors: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
+    untranslated: dict[str, str] = field(default_factory=dict)  # Dari text -> where it is used
 
     def error(self, where: str, msg: str) -> None:
         self.errors.append(f"{where}: {msg}")
@@ -58,6 +59,24 @@ COLUMNS = {
     "strings": {"key", "en", "fa", "say"},
 }
 COLUMNS["journey"] = COLUMNS["duel"] = COLUMNS["listen_pick"]
+
+
+def _plain_en(text: str) -> str:
+    """English as a caption: without the two-voice marks."""
+    text = re.sub(r"(^|//)\s*[mf]:\s*", lambda m: " / " if m.group(1) else "", text)
+    return " ".join(text.replace("//", " / ").split())
+
+
+def load_i18n(content: Path) -> dict[str, str]:
+    """content/i18n/*.csv: columns fa,en. The English of every Dari text."""
+    table: dict[str, str] = {}
+    for path in sorted((content / "i18n").glob("*.csv")):
+        with path.open(encoding="utf-8-sig", newline="") as f:
+            for row in csv.DictReader(f):
+                fa, en = " ".join((row.get("fa") or "").split()), " ".join((row.get("en") or "").split())
+                if fa and en:
+                    table[fa] = en
+    return table
 
 
 def read_csv(path: Path, kind: str | None = None, report: "Report | None" = None) -> list[dict]:
@@ -102,7 +121,36 @@ class Pack:
         self.id = self.meta["pack"]
         self.files: dict[str, bytes | Path] = {}
         self.pictures: set[str] = set()
+        # English for the English mode of the app (docs/english-mode.md)
+        self.i18n: dict[str, str] = {}      # Dari text -> English, from content/i18n/*.csv
+        self.learned: dict[str, str] = {}   # pairs found in the sheets themselves
+        self.en_texts: dict[str, str] = {}  # shaped Dari as drawn -> English
+        self.en_clips: dict[str, str] = {}  # clip path -> English caption
         self.where = str(src.relative_to(content))
+
+    # -- English mode ---------------------------------------------------------
+
+    PAIRS = (("title_fa", "title_en"), ("fa", "en"), ("meaning_fa", "play_en"), ("meaning_fa", "say_en"))
+
+    def learn(self, row: dict) -> None:
+        """Remember Dari/English pairs a row already carries (a word and its meaning)."""
+        pairs = self.PAIRS
+        if self.meta.get("subject") == "en" and not row.get("say_fa"):
+            pairs = pairs + (("help_fa", "say_en"),)
+        for fa_col, en_col in pairs:
+            fa, en = row.get(fa_col), row.get(en_col)
+            if isinstance(fa, str) and isinstance(en, str) and fa.strip() and en.strip():
+                self.learned.setdefault(" ".join(fa.split()), _plain_en(en))
+
+    def english(self, text: str, where: str) -> str | None:
+        key = " ".join(text.split())
+        en = self.i18n.get(key) or self.learned.get(key)
+        # numerals and single letters are the thing being taught: no English needed
+        if re.fullmatch(r"[\u06F0-\u06F9\u0660-\u0669\s.,،٫-]+", key):
+            return None
+        if not en and shaping.has_arabic(key):
+            self.report.untranslated.setdefault(key, where)
+        return en
 
     # -- building blocks ------------------------------------------------------
 
@@ -116,6 +164,9 @@ class Pack:
         if lang == "en" and shaping.has_arabic(text):
             self.report.error(where, f"English speech contains Dari letters: {text!r}")
         name = self.speech.name(lang, text)
+        caption = _plain_en(text) if lang == "en" else self.english(text, where)
+        if caption:
+            self.en_clips[name] = caption
         if name not in self.files:
             self.files[name] = self.speech.render(lang, text) if self.make_audio else b""
         if slow:
@@ -129,6 +180,10 @@ class Pack:
         if not text:
             return []
         lines = shaping.shape(text) if wrap else [shaping.shape_line(text)]
+        en = self.english(text, where) if len(text.strip()) > 1 else None  # single letters need no gloss
+        if en:
+            self.en_texts["\n".join(lines)] = en
+            self.en_texts.setdefault(lines[0], en)
         for line in lines:
             missing = shaping.missing_glyphs(line)
             if missing:
@@ -289,6 +344,7 @@ def parse_sheet(pack: Pack, game: dict, rows: list[dict], sheet: str) -> dict[st
     rounds: dict[str, dict] = {}
     for row in rows:
         where = f"{pack.where}/{sheet} row {row['_row']}"
+        pack.learn(row)
         key = row.get("round", "")
         if not re.match(r"^[a-z0-9.]+$", key):
             pack.report.error(where, f"bad round {key!r}: use digits and lowercase letters, for example 03")
@@ -503,6 +559,7 @@ def build_learner(pack: Pack) -> dict:
         seen = set()
         for it in items:
             w = f"{pack.where}/items.csv row {it['_row']}"
+            pack.learn(it)
             it.setdefault("unit", "")
             if not it.get("unit"):
                 pack.report.error(w, "missing unit")
@@ -514,6 +571,7 @@ def build_learner(pack: Pack) -> dict:
     letters = set()
     for game in meta.get("games", []):
         gw = f"{pack.where}/pack.json game {game.get('id')}"
+        pack.learn(game)
         engine = game.get("engine")
         if not re.match(r"^[a-z0-9_]+$", str(game.get("id", ""))):
             pack.report.error(gw, "every game needs an id of lowercase letters, digits and _")
@@ -599,6 +657,7 @@ def build_teacher(pack: Pack) -> dict:
             pack.report.error(where, f"lesson must be a number, got {n!r}")
             continue
         n = str(int(n))  # "3" and "03" are the same lesson
+        pack.learn(row)
         lesson = lessons.setdefault(n, {"n": int(n), "id": f"{pack.id}-{int(n):02d}", "steps": [{"step": s, "lines": []} for s in STEPS]})
         if row.get("title_en"):
             lesson["title_en"] = row["title_en"]
@@ -647,6 +706,7 @@ def build_teacher(pack: Pack) -> dict:
     path = pack.src / "phrases.csv"
     for row in read_csv(path, "phrases", pack.report) if path.exists() else []:
         where = f"{pack.where}/phrases.csv row {row['_row']}"
+        pack.learn(row)
         page = pages.setdefault(row.get("page", "1"), {"title_fa": [], "phrases": []})
         if row.get("page_title_fa"):
             page["title_fa"] = pack.fa(row["page_title_fa"], where, wrap=False)
@@ -683,6 +743,7 @@ def build_core(pack: Pack) -> dict:
     strings = {}
     for row in read_csv(pack.src / "strings.csv", "strings", pack.report):
         where = f"{pack.where}/strings.csv row {row['_row']}"
+        pack.learn(row)
         key = row.get("key", "")
         if not key or key in strings:
             pack.report.error(where, f"missing or duplicate key {key!r}")
@@ -719,6 +780,7 @@ def build(content: Path, out_dir: Path | None, tts: str | None = None, only: lis
     """Validate everything; write packs too when out_dir is given."""
     report = Report()
     speech = Speech(tts)
+    i18n = load_i18n(content)
     seen: dict[str, Path] = {}
     for src in find_packs(content):
         where = str(src.relative_to(content))
@@ -729,6 +791,8 @@ def build(content: Path, out_dir: Path | None, tts: str | None = None, only: lis
             continue
         if only and pack.id not in only:
             continue
+        pack.i18n = i18n
+        pack.learn(pack.meta)
         if pack.id in seen:
             report.error(f"{where}/pack.json", f"pack id {pack.id!r} already used by {seen[pack.id]}")
             continue
@@ -750,11 +814,13 @@ def build(content: Path, out_dir: Path | None, tts: str | None = None, only: lis
             report.error(where, f"could not build: {type(exc).__name__}: {exc}")
             continue
         pack.add_pictures(strict)
+        title_fa = pack.fa(pack.meta.get("title_fa", ""), f"{where}/pack.json", wrap=False)
+        pack.add_json("en.json", {"texts": pack.en_texts, "clips": pack.en_clips})
         manifest = {
             "format": FORMAT, "pack": pack.id, "kind": kind, "version": int(pack.meta.get("version", 1)),
             "optional": bool(pack.meta.get("optional", False)),
             "title_en": pack.meta.get("title_en", pack.id),
-            "title_fa": pack.fa(pack.meta.get("title_fa", ""), f"{where}/pack.json", wrap=False),
+            "title_fa": title_fa,
             **body,
         }
         if out_dir is not None and len(report.errors) == before:

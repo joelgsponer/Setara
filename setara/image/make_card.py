@@ -8,6 +8,7 @@ Result:
     setara.love         the app (a zip of app/)
     Setara.sh           launcher for the handheld firmware (and any Linux PC)
     Setara.bat          launcher for a Windows PC
+    Setara-English.*    the same, in English mode
     update/             drop new packs here; installed at the next start
     data/love/setara/   packs/, progress and counts (survives every update)
 
@@ -84,6 +85,10 @@ def main() -> None:
     (card / "Setara.sh").write_text(SH)
     (card / "Setara.sh").chmod(0o755)
     (card / "Setara.bat").write_text(BAT.replace("\n", "\r\n"))
+    # English mode for testers and partners: same app, English text and captions.
+    (card / "Setara-English.sh").write_text('#!/bin/sh\nSETARA_LOCALE=en exec "$(dirname "$0")/Setara.sh"\n')
+    (card / "Setara-English.sh").chmod(0o755)
+    (card / "Setara-English.bat").write_text('@echo off\r\nset SETARA_LOCALE=en\r\ncall "%~dp0Setara.bat"\r\n')
     version = (ROOT / "app" / "version.lua").read_text().split('"')[1]
     (card / "VERSION.txt").write_text(f"Setara {version}\n{count} packs\n")
     size = sum(f.stat().st_size for f in card.rglob("*") if f.is_file()) / 1e6

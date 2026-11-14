@@ -10,6 +10,11 @@ app = { stack = {}, time = 0, play_seconds = 0, version = require("version") }
 local canvas
 local speed = tonumber(os.getenv("SETARA_SPEED")) or 1
 local script, script_wait, shot_name
+-- Recording a film of the app (tools/film.sh): SETARA_RECORD names a folder
+-- in the save directory. Time then advances exactly 1/30 s per frame, every
+-- frame is saved, and every sound is noted with its frame number.
+local record = os.getenv("SETARA_RECORD")
+local frame = 0
 
 -- Scene stack ------------------------------------------------------------------
 
@@ -61,11 +66,28 @@ function love.load()
   audio.set_volume(store.progress.settings.volume)
   local learned = require("core.json").decode(love.filesystem.read("data/buttons.json") or "")
   if input.complete(learned) then input.custom = learned end
+  -- English mode: chosen in the pause menu, or forced by a file named
+  -- "english" on the card or by SETARA_LOCALE=en.
+  local text = require("core.text")
+  if os.getenv("SETARA_LOCALE") == "en" or love.filesystem.getInfo("english") or love.filesystem.getInfo("english.txt") then
+    store.progress.settings.locale = "en"
+  end
+  text.locale = store.progress.settings.locale
   input.listener = function(button)
     local top = app.top()
     if top and top.input then top:input(button) end
   end
   app.push(require("scenes.boot").new())
+  if record then
+    love.filesystem.createDirectory(record)
+    local log = {}
+    app.sound_log = function(kind, name)
+      if app.recording then
+        log[#log + 1] = string.format("%d\t%s\t%s", frame, kind, name)
+        love.filesystem.write(record .. "/sounds.tsv", table.concat(log, "\n") .. "\n")
+      end
+    end
+  end
 
   local path = os.getenv("SETARA_SCRIPT")
   if path then
@@ -88,6 +110,9 @@ local function run_script(dt)
     top = app.top,
     app = app,
   }
+  -- film scripts: record(true) starts saving frames, mark("name") notes a cut point
+  api.record = function(on) app.recording = on end
+  api.mark = function(name) if app.sound_log then app.sound_log("mark", name) end end
   -- Leave the first-run tutorial if it is showing.
   api.skip_tutorial = function()
     local top = app.top()
@@ -119,6 +144,10 @@ end
 
 function love.update(dt)
   dt = math.min(dt, 0.1) * speed
+  if record then
+    dt = 1 / 30
+    frame = frame + 1
+  end
   app.time = app.time + dt
   input.update(dt)
   audio.update(dt)
@@ -138,7 +167,29 @@ function love.draw()
     local scene = app.stack[i]
     if scene.draw then scene:draw() end
   end
+  -- English mode: a caption for whatever is being spoken.
+  local text = require("core.text")
+  if text.locale == "en" then
+    local clip = audio.playing()
+    local caption = clip and require("core.packs").captions and require("core.packs").captions[clip]
+    if caption then
+      local f = text.font("latin", 20)
+      local _, lines = f:getWrap(caption, ui.W - 32)
+      local n = math.min(3, #lines)
+      local h = n * f:getHeight() + 10
+      ui.set(ui.c.ink, 0.86)
+      love.graphics.rectangle("fill", 0, ui.H - h, ui.W, h)
+      ui.set(ui.c.white)
+      love.graphics.setFont(f)
+      for i = 1, n do
+        love.graphics.printf(lines[i], 16, ui.H - h + 5 + (i - 1) * f:getHeight(), ui.W - 32, "center")
+      end
+    end
+  end
   love.graphics.setCanvas()
+  if record and app.recording then
+    canvas:newImageData():encode("png", string.format("%s/f%06d.png", record, frame))
+  end
   if shot_name then
     love.filesystem.createDirectory("shots")
     canvas:newImageData():encode("png", "shots/" .. shot_name .. ".png")

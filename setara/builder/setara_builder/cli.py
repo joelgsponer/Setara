@@ -27,6 +27,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--only", action="append", help="build only this pack id (repeatable)")
     parser.add_argument("--strict", action="store_true", help="treat missing pictures as errors")
     parser.add_argument("--quiet", action="store_true", help="do not list warnings")
+    parser.add_argument("--untranslated", type=Path, help="write the Dari texts that have no English yet to this CSV")
     args = parser.parse_args(argv)
 
     out = args.out if args.command == "build" else None
@@ -36,6 +37,16 @@ def main(argv: list[str] | None = None) -> int:
             print(f"warning: {w}")
     else:
         print(f"{len(report.warnings)} warnings")
+    if report.untranslated:
+        print(f"{len(report.untranslated)} Dari texts have no English yet (English mode shows them in Dari)")
+        if args.untranslated:
+            import csv
+            with args.untranslated.open("w", encoding="utf-8", newline="") as f:
+                w = csv.writer(f)
+                w.writerow(["fa", "en", "where"])
+                for fa, where in sorted(report.untranslated.items(), key=lambda kv: kv[1]):
+                    w.writerow([fa, "", where])
+            print(f"  written to {args.untranslated}")
     for e in report.errors:
         print(f"ERROR: {e}", file=sys.stderr)
     if report.errors:

@@ -86,6 +86,9 @@ python3 image/make_card.py     # dist/card/setara/
 dist/card/setara/Setara.sh     # run
 ```
 
+To try it without Dari, start `dist/card/setara/Setara-English.sh` instead:
+every text is in English and everything spoken has an English caption.
+
 Keyboard: arrows = D-pad, Z = A, X = B, A = X, S = Y, Q/W = L/R, Enter =
 Start, Esc = quit. Hold Q and W for two seconds on the home screen for
 teacher mode.
@@ -114,6 +117,7 @@ teacher mode.
 - [Packs, the card and device data](docs/pack-format.md)
 - [Putting it on a device](docs/device.md)
 - [Speech](docs/speech.md)
+- [English mode, for testers who do not read Dari](docs/english-mode.md)
 
 ## Tests
 

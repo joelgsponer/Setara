@@ -263,7 +263,7 @@ function Play:draw()
     end
     ui.set(ui.c.ink)
     text.print(self.game.title_en or "", 170, 318, 300, "left", 24, true)
-    if self.game.title_fa and self.game.title_fa[1] then
+    if self.game.title_fa and self.game.title_fa[1] and text.locale ~= "en" then
       text.fa(self.game.title_fa, 170, 348, 430, 30, "right", true)
     end
     ui.badge("a", 600, 440, 16)

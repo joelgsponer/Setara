@@ -119,7 +119,22 @@ function M.thing(thing, root, x, y, w, h, opts)
     end
   elseif thing.fa then
     M.set(color, opts.alpha)
-    text.centered("fabold", thing.fa, x, y, w, h, opts.max_size or 96, 24)
+    -- A Dari word is the thing to be learned, so it stays; in English mode
+    -- its meaning is added underneath.
+    local gloss = text.english(thing.fa)
+    if gloss and h >= 60 then
+      local saved = text.locale
+      text.locale = "fa"
+      text.centered("fabold", thing.fa, x, y, w, h * 0.68, opts.max_size or 96, 24)
+      text.locale = saved
+      M.set(M.c.soft, opts.alpha)
+      text.centered("latin", gloss, x, y + h * 0.66, w, h * 0.34, 20, 16)
+    else
+      local saved = text.locale
+      text.locale = "fa"
+      text.centered("fabold", thing.fa, x, y, w, h, opts.max_size or 96, 24)
+      text.locale = saved
+    end
   elseif thing.t then
     M.set(color, opts.alpha)
     text.centered("bold", thing.t, x, y, w, h, opts.max_size or 72, 20)
@@ -255,7 +270,7 @@ function M.header(color, title_en, title_fa)
   g.rectangle("fill", 0, 0, M.W, 44)
   M.set(M.c.white)
   if title_en then text.print(title_en, 14, 6, 400, "left", 24, true) end
-  if title_fa then text.fa(title_fa, 240, 2, 386, 24, "right", true) end
+  if title_fa and not (title_en and text.locale == "en") then text.fa(title_fa, 240, 2, 386, 24, "right", true) end
 end
 
 return M

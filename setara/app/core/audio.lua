@@ -36,7 +36,10 @@ end
 
 -- Stopped speech never calls its on_done, not even one that ended this frame.
 function M.stop()
-  if current and current.source then current.source:stop() end
+  if current and current.source then
+    current.source:stop()
+    if app and app.sound_log then app.sound_log("stop", "") end
+  end
   current = nil
   pending = {}
   paused = false
@@ -71,6 +74,12 @@ end
 
 function M.busy() return current ~= nil end
 
+-- Path of the clip being spoken now (without the slow mark), for captions.
+function M.playing()
+  local path = current and not paused and current.list[current.i]
+  return path and (path:gsub("%.slow%.ogg$", ".ogg")) or nil
+end
+
 -- Total length in seconds of a clip list (0 when nothing can be played).
 function M.duration(clips, slow)
   local total = 0
@@ -101,6 +110,7 @@ function M.update(dt)
     if ok then
       c.source = src
       src:play()
+      if app and app.sound_log then app.sound_log("clip", path) end
       c.t = 0
       c.dur = math.max(0.1, src:getDuration()) + (c.i < #c.list and c.gap or c.after)
     else

@@ -55,6 +55,7 @@ function M.load()
   p.settings.volume = tonumber(p.settings.volume) or 0.9
   p.settings.class_size = tonumber(p.settings.class_size) or 30
   p.settings.brightness = tonumber(p.settings.brightness) or 1
+  p.settings.locale = p.settings.locale == "en" and "en" or "fa"
   p.level = type(p.level) == "table" and p.level or {}
 
   M.stats = read("stats.json") or {}

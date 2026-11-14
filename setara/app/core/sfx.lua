@@ -64,6 +64,7 @@ function M.play(name)
   if not s then return end
   s:stop()
   s:play()
+  if app and app.sound_log then app.sound_log("sfx", name) end
 end
 
 function M.loop(name)

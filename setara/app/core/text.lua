@@ -13,6 +13,22 @@ local FILES = {
 local SIZES = { 16, 20, 24, 30, 36, 44, 56, 72, 96, 128 }
 local cache = {}
 
+-- English mode, for testers and partners who do not read Dari: wherever a
+-- Dari text would be drawn, its English is drawn instead. M.dict maps a Dari
+-- text exactly as it is drawn (lines joined by "\n") to English; the builder
+-- fills it from content/i18n. A text with no English stays in Dari.
+M.locale = "fa"
+M.dict = {}
+
+local function english(lines)
+  if M.locale ~= "en" then return nil end
+  if type(lines) == "table" then lines = table.concat(lines, "\n") end
+  return M.dict[lines]
+end
+M.english = english
+
+local function english_size(size) return math.max(16, math.floor((size or 30) * 0.72 + 0.5)) end
+
 function M.font(kind, size)
   local key = kind .. size
   local f = cache[key]
@@ -55,6 +71,14 @@ end
 -- Dari text: a list of ready-to-draw lines (or one line). Right aligned by
 -- default. Returns the height used.
 function M.fa(lines, x, y, w, size, align, bold)
+  local en = english(lines)
+  if en then
+    local f = M.font(bold and "bold" or "latin", english_size(size))
+    love.graphics.setFont(f)
+    love.graphics.printf(en, x, y + 6, w, align == "center" and "center" or "left")
+    local _, wrapped = f:getWrap(en, w)
+    return #wrapped * f:getHeight() + 8
+  end
   if type(lines) == "string" then lines = { lines } end
   local f = M.font(bold and "fabold" or "fa", size or 30)
   love.graphics.setFont(f)
@@ -72,13 +96,26 @@ function M.fa(lines, x, y, w, size, align, bold)
   return #(lines or {}) * step
 end
 
-function M.fa_height(lines, size)
+function M.fa_height(lines, size, w)
+  local en = english(lines)
+  if en then
+    local f = M.font("latin", english_size(size))
+    local _, wrapped = f:getWrap(en, w or 588)
+    return #wrapped * f:getHeight() + 8
+  end
   if type(lines) == "string" then lines = { lines } end
   return #(lines or {}) * math.floor(M.font("fa", size or 30):getHeight() * 0.86)
 end
 
 -- One line centred in a box, as large as fits. kind: latin, bold, fa, fabold.
 function M.centered(kind, str, x, y, w, h, max_size, min_size)
+  if kind == "fa" or kind == "fabold" then
+    local en = english(str)
+    if en then
+      kind, str = kind == "fabold" and "bold" or "latin", en
+      max_size = math.max(16, math.floor((max_size or 96) * 0.8))
+    end
+  end
   local f = M.fit(kind, str, w - 8, h - 4, max_size, min_size)
   love.graphics.setFont(f)
   -- one line, never wrapped: narrowed if even the smallest size is too wide

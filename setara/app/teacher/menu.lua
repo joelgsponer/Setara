@@ -129,7 +129,9 @@ function Menu:draw()
     text.print(tostring(n), 50, 56, 60, "left", 36, true)
     ui.set(ui.c.ink)
     text.print(info.title_en or "", 100, 66, 250, "left", 20, true)
-    if info.title_fa and info.title_fa[1] then text.fa(info.title_fa, 340, 58, 250, 24, "right", true) end
+    if info.title_fa and info.title_fa[1] and text.locale ~= "en" then
+      text.fa(info.title_fa, 340, 58, 250, 24, "right", true)
+    end
     if (store.stats.teacher["done_" .. info.id] or 0) > 0 then
       ui.set(ui.c.good)
       g.setLineWidth(5)

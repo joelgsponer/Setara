@@ -15,7 +15,7 @@ Pause.__index = Pause
 function Pause.new(opts)
   opts = opts or {}
   local self = setmetatable({ overlay = true, sel = 1, t = 0 }, Pause)
-  self.rows = { "volume", "bright", "resume" }
+  self.rows = { "volume", "bright", "lang", "resume" }
   if opts.teacher then table.insert(self.rows, 2, "class") end
   if not opts.home then self.rows[#self.rows + 1] = "home" end
   return self
@@ -45,6 +45,10 @@ function Pause:input(b)
       set.volume = math.max(0.1, math.min(1, set.volume + step * 0.1))
       audio.set_volume(set.volume)
       sfx.play("right")
+    elseif row == "lang" then
+      set.locale = set.locale == "en" and "fa" or "en"
+      text.locale = set.locale
+      sfx.play("flip")
     elseif row == "bright" then
       set.brightness = math.max(0.4, math.min(1, (tonumber(set.brightness) or 1) + step * 0.1))
       sfx.play("move")
@@ -91,6 +95,24 @@ function Pause:draw()
         ui.set(k <= level and ui.c.gold or ui.c.line)
         g.rectangle("fill", 232 + k * 30, y + 22, 22, 18, 4, 4)
       end
+    elseif row == "lang" then
+      -- a globe, and the two languages: the one in use is filled
+      ui.set(ui.c.fa)
+      g.setLineWidth(3)
+      g.circle("line", 190, y + 31, 15)
+      g.ellipse("line", 190, y + 31, 7, 15)
+      g.line(175, y + 31, 205, y + 31)
+      g.setLineWidth(1)
+      local en = set.locale == "en"
+      ui.card(226, y + 12, 116, 38, { fill = en and ui.c.paper or ui.c.fa, border = ui.c.fa, radius = 8, width = 2 })
+      ui.card(350, y + 12, 124, 38, { fill = en and ui.c.fa or ui.c.paper, border = ui.c.fa, radius = 8, width = 2 })
+      local saved = text.locale
+      text.locale = "fa"
+      ui.set(en and ui.c.ink or ui.c.white)
+      text.centered("fabold", "\239\175\188\239\186\173\239\186\169", 226, y + 8, 116, 38, 24) -- دری
+      text.locale = saved
+      ui.set(en and ui.c.white or ui.c.ink)
+      text.centered("bold", "English", 350, y + 12, 124, 38, 24)
     elseif row == "class" then
       for k = 0, 2 do
         ui.set(ui.c.teacher)
