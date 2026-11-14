@@ -18,5 +18,6 @@ for script in "$ROOT"/tests/*.lua; do
     echo "ok   $(basename "$script")"
   fi
 done
+if "$ROOT/tests/update/run.sh" >/dev/null 2>&1; then echo "ok   update"; else echo "FAIL update"; fail=1; fi
 echo "screenshots: $SAVE/*/love/setara/shots"
 exit $fail

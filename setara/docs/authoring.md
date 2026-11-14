@@ -124,8 +124,8 @@ unit,key,en,fa,picture,tags
 
 - `unit`: groups words into rounds. Keep it the same as the classroom lesson
   number where there is one. Two digits.
-- `picture`: optional. Words without a picture are used for speaking practice
-  only.
+- `picture`: optional, and a thing: usually a picture name, but `p:book*2`
+  works too. Words without a picture are used for speaking practice only.
 - Games with `"source": "items"` use it like this:
 
 | Engine | One round per unit, made of |
@@ -190,9 +190,12 @@ round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 ### catch
 
 ```
-round,say_en,say_fa,targets,others,need
-01,,خوراکی‌های سالم را بگیر,apple|carrot|egg,candy|soda,5
+round,say_en,say_fa,targets,others,need,help_fa
+01,,خوراکی‌های سالم را بگیر,apple|carrot|egg,candy|soda,5,
 ```
+
+The row's speech is the rule. `need` is how many right things must be caught
+(1 to 10). `help_fa` is the Dari explanation on Y.
 
 ### pairs
 
@@ -212,8 +215,10 @@ round,say_en,say_fa,goods,target,units,mode
 02,,بیست و پنج افغانی,bread,25,1|2|5|10|20,pay
 ```
 
-- `count`: the child puts `target` goods on the scale.
-- `pay`: the child pays `target` with coins and notes of the given `units`.
+- `count`: the child puts `target` goods on the scale (at most 20).
+- `pay`: the child pays `target` with coins and notes of the given `units`
+  (at most six different units).
+- `help_fa` (optional column): Dari explanation on Y.
 
 ### story
 
@@ -273,7 +278,21 @@ title_fa,say_fa
 صنف بزرگ,وقتی صنف بزرگ است…
 ```
 
+## What has to be true before content ships
+
+The builder checks the form. People have to check the rest (spec section 9):
+
+- A Dari-speaking educator reads and hears every text and signs it off.
+- A fluent English speaker spot-checks every pack's audio.
+- A local reviewer approves every picture of a person.
+- Health content is checked by someone qualified.
+- It is tried with real children on two or three devices.
+
 ## Pictures
+
+`python3 tools/picture_list.py --missing` lists the pictures the sheets use
+that are not drawn yet. `python3 tools/contact_sheet.py out.png name …` shows
+pictures at about the size a child sees them.
 
 One SVG per picture in `content/pictures/`. Style: thick dark outlines, flat
 colours, no text, no gradients, readable at 3 cm on a 3.5 inch screen.

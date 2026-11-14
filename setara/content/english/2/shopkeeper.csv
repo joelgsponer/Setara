@@ -1,0 +1,22 @@
+round,say_en,say_fa,goods,target,units,mode,help_fa
+# Level 2 version: the customer asks for up to twenty things, the child counts them onto the scale.
+06,"Eleven eggs, please.",,egg,11,1,count,لطفاً یازده تخم مرغ.
+06,"Thirteen apples, please.",,apple,13,1,count,لطفاً سیزده سیب.
+06,"Twelve eggs, please.",,egg,12,1,count,لطفاً دوازده تخم مرغ.
+06,"Fifteen apples, please.",,apple,15,1,count,لطفاً پانزده سیب.
+06,"Fourteen eggs, please.",,egg,14,1,count,لطفاً چهارده تخم مرغ.
+07,"Sixteen apples, please.",,apple,16,1,count,لطفاً شانزده سیب.
+07,"Twenty eggs, please.",,egg,20,1,count,لطفاً بیست تخم مرغ.
+07,"Eighteen apples, please.",,apple,18,1,count,لطفاً هژده سیب.
+07,"Seventeen eggs, please.",,egg,17,1,count,لطفاً هفده تخم مرغ.
+07,"Nineteen apples, please.",,apple,19,1,count,لطفاً نزده سیب.
+11,"Twelve apricots, please.",,apricot,12,1,count,لطفاً دوازده زردآلو.
+11,"Six pomegranates, please.",,pomegranate,6,1,count,لطفاً شش انار.
+11,"Fifteen oranges, please.",,orange,15,1,count,لطفاً پانزده مالته.
+11,"Two watermelons, please.",,watermelon,2,1,count,لطفاً دو تربوز.
+11,"Twenty apricots, please.",,apricot,20,1,count,لطفاً بیست زردآلو.
+13,"Give me fourteen potatoes, please.",,potato,14,1,count,لطفاً چهارده کچالو به من بده.
+13,"Give me nine onions, please.",,onion,9,1,count,لطفاً نه پیاز به من بده.
+13,"Give me eleven tomatoes, please.",,tomato,11,1,count,لطفاً یازده بادنجان رومی به من بده.
+13,"Give me sixteen carrots, please.",,carrot,16,1,count,لطفاً شانزده زردک به من بده.
+13,"Give me eighteen walnuts, please.",,walnut,18,1,count,لطفاً هژده چهارمغز به من بده.

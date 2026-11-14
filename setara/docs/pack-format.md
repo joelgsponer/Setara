@@ -1,66 +1,112 @@
-# Content pack format
+# Content packs, the card and device data
 
-Status: **draft proposal**. The product spec fixes only this much: a pack is a
-zip of 5–15 MB holding level files (JSON), images (PNG) and audio (Opus), one
-pack per subject and level, checked against a checksum at start, and ready for
-a signature check when direct updates arrive later.
+## A pack
 
-## Layout inside a pack
+A pack is a zip file: one per subject and level (`en-1`, `fa-2`, `math-3`,
+`garden-1`), one per set of teacher lessons (`teacher-en-1`), and `core` with
+the app's own strings. Packs are 5 to 16 MB.
 
 ```
 en-1.zip
   manifest.json
-  levels/en-1-03-a.json
-  img/apple.png
-  en/apple.opus          English audio
-  fa/apple_help.opus     Dari audio
+  review.json              questions for the warm-up and "find my level"
+  levels/en-1-13-a.json    one file per round (see level-format.md)
+  img/apple.png            pictures, 160 px (scenes 400×300)
+  en/apple-a07ab697.ogg    English speech
+  fa/x-b6837856.ogg        Dari speech
 ```
 
-## manifest.json (proposal)
+### manifest.json
 
 ```json
 {
   "format": 1,
   "pack": "en-1",
+  "kind": "learner",
+  "version": 1,
+  "optional": false,
+  "title_en": "English 1: Hello",
+  "title_fa": ["…"],
   "subject": "en",
   "level": 1,
-  "version": 3,
-  "optional": false,
-  "files": { "levels/en-1-03-a.json": "sha256:…" }
+  "games": [
+    {"id": "word_stall", "engine": "listen_pick", "title_en": "Word Stall",
+     "title_fa": ["…"], "title_audio": ["fa/…ogg"], "icon": {"id": "apple", "img": "img/apple.png"},
+     "v1": true, "rounds": ["en-1-01-a", "en-1-02-a"]}
+  ],
+  "review": "review.json",
+  "files": {"levels/en-1-01-a.json": "sha256:…", "img/apple.png": "sha256:…"}
 }
 ```
 
-`optional: true` marks packs shipped only where the local team approves them.
+- `kind`: `learner`, `teacher` (has `lessons`, `phrases`, `tips` instead of
+  `games`) or `core` (has `strings`).
+- `files` lists every file of the pack with its SHA-256. This is what makes a
+  pack self-checking.
+- `optional: true` marks packs shipped only where the local team approves them.
+- `format` is 1. The app ignores packs with another format.
 
-## On the SD card (proposal)
+A pack is ready for a signature (for later downloads) without a format change:
+a signature over `manifest.json` covers every file through `files`.
+
+## On the SD card
+
+`image/make_card.py` writes this folder. It is the same on every device.
 
 ```
 setara/
-  app/                the LÖVE app
-  packs/              installed packs
-  update/             drop new packs here; installed at next start
-  data/progress.json  shared stars and last place visited
-  data/stats.json     anonymous counts
+  setara.love            the app
+  Setara.sh              launcher (handheld firmware, Linux PC)
+  Setara.bat             launcher (Windows PC)
+  VERSION.txt
+  update/                drop new packs here
+  data/love/setara/
+    packs/en-1.v1.zip    installed packs: <pack>.v<version>.zip
+    update/              where the launcher hands new packs to the app
+    data/progress.json   stars, last place, settings
+    data/stats.json      anonymous counts
+    data/buttons.json    learned button map, if the pad needed calibrating
 ```
 
-## Update rules (from the spec)
+The launcher sets `XDG_DATA_HOME` so that LÖVE keeps everything on the card.
 
-- At start the app checks each pack in `update/` against its checksum and
-  installs it. A damaged pack is ignored and the old one stays.
-- `data/` survives every update.
-- A corrupted data file resets only that file, never the device.
-- Version 1 uses no network. Signatures and Wi-Fi download come later; the
-  format must not need changing for them.
+## Updates in version 1
+
+1. A helper copies new pack zips into `setara/update/` from a PC, a phone with
+   a card reader, or another card.
+2. At the next start the app checks every file of each new pack against the
+   checksums in its manifest.
+3. A good pack is copied into `packs/` under its new version name and read
+   back. Only then is the old version removed. If power is cut in between,
+   the old pack is still there.
+4. A damaged pack is ignored and removed, and the old one stays. The rejection
+   is noted in the log inside `stats.json`.
+5. `data/` is never touched by an update.
+
+If a card fails completely, write the card folder to a new card. Nothing else
+needs setting up.
+
+This is covered by `tests/update/run.sh`.
 
 ## Device data
 
-- `progress.json`: one shared record per device, stars per level and the last
-  place visited. No profiles.
-- `stats.json`: anonymous counts per level and lesson (attempts, correct,
-  minutes). No names, no timestamps finer than the week.
+`progress.json`: one shared record per device. Stars per round, the level last
+chosen per subject, the teacher's current lesson, volume, brightness, class
+size. There are no profiles.
 
-## Open points
+`stats.json`: anonymous counts.
 
-- Where the checksum of the pack as a whole lives (sidecar file or a
-  manifest of manifests in the update folder).
-- Signature scheme for later direct updates.
+| Field | What |
+| --- | --- |
+| `device` | A random id. The team maps it to a classroom on paper, or not at all |
+| `weeks` | Minutes of use per ISO week and per subject or `teacher` |
+| `rounds` | Per round: plays, answers, first-try right answers, minutes, stars |
+| `checks` | Quick Check per lesson: right answers out of class size |
+| `teacher` | Lessons finished, previews run, tools opened, course lesson reached |
+| `log` | The last 30 problems: app version, a short code, the week |
+
+No names, no timestamps finer than the week. Version 1 uploads nothing: the
+team copies the file at field visits and reads it with `tools/read_stats.py`.
+
+Both files are written twice (`.json` and `.json.bak`). A damaged file falls
+back to its backup and then to empty: it resets only that file.

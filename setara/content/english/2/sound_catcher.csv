@@ -1,0 +1,19 @@
+round,say_en,say_fa,targets,others,need,help_fa
+# Phonics: first letter sounds of level 2 words. Small and capital letter are both right.
+# say_fa names a Dari word that starts with the same sound, so the hint does not depend on how a letter name is read.
+# 01: c and k make the same sound. 02 and 03: new letters. 04 to 06: letters from level 1 with new words; the wrong letters look or sound alike.
+01,"Catch the first letter of cat, cow and carrot.",حرف اول این کلمه‌ها را بگیر.,t:c|t:C,t:s|t:t|t:g|t:o,4,این حرف مثل اول کلمهٔ «کتاب» صدا می‌دهد.
+01,"Catch the first letter of key and kitten.",حرف اول این کلمه‌ها را بگیر.,t:k|t:K,t:h|t:t|t:g|t:b,4,این حرف هم مثل اول کلمهٔ «کتاب» صدا می‌دهد.
+02,"Catch the first letter of water, window and well.",حرف اول این کلمه‌ها را بگیر.,t:w|t:W,t:m|t:n|t:y|t:r,4,این حرف مثل اول کلمهٔ «ورق» صدا می‌دهد.
+02,"Catch the first letter of yes, yellow and yoghurt.",حرف اول این کلمه‌ها را بگیر.,t:y|t:Y,t:w|t:g|t:j|t:l,4,این حرف مثل اول کلمهٔ «یک» صدا می‌دهد.
+03,"Catch the first letter of apple and animal.",حرف اول این کلمه‌ها را بگیر.,t:a|t:A,t:e|t:o|t:s|t:d,4,این حرف مثل اول کلمهٔ «انار» صدا می‌دهد.
+03,"Catch the first letter of egg and eleven.",حرف اول این کلمه‌ها را بگیر.,t:e|t:E,t:a|t:o|t:c|t:t,4,این حرف مثل اول کلمهٔ «امروز» صدا می‌دهد.
+04,"Catch the first letter of mother, milk and mouth. Mmm.",حرف اول این کلمه‌ها را بگیر.,t:m|t:M,t:n|t:w|t:h|t:r,4,این حرف مثل اول کلمهٔ «مادر» صدا می‌دهد.
+04,"Catch the first letter of father, fish and foot. Fff.",حرف اول این کلمه‌ها را بگیر.,t:f|t:F,t:t|t:l|t:h|t:s,4,این حرف مثل اول کلمهٔ «فامیل» صدا می‌دهد.
+04,"Catch the first letter of rice, river and rope. Rrr.",حرف اول این کلمه‌ها را بگیر.,t:r|t:R,t:n|t:l|t:m|t:w,4,این حرف مثل اول کلمهٔ «ریسمان» صدا می‌دهد.
+05,"Catch the first letter of brother, baby and bird.",حرف اول این کلمه‌ها را بگیر.,t:b|t:B,t:d|t:p|t:h|t:g,4,این حرف مثل اول کلمهٔ «برادر» صدا می‌دهد.
+05,"Catch the first letter of dog, donkey and door.",حرف اول این کلمه‌ها را بگیر.,t:d|t:D,t:b|t:p|t:t|t:g,4,این حرف مثل اول کلمهٔ «دندان» صدا می‌دهد.
+05,"Catch the first letter of pot, pillow and potato.",حرف اول این کلمه‌ها را بگیر.,t:p|t:P,t:b|t:d|t:t|t:g,4,این حرف مثل اول کلمهٔ «پشک» صدا می‌دهد.
+06,"Catch the first letter of goat, grapes and grandmother.",حرف اول این کلمه‌ها را بگیر.,t:g|t:G,t:c|t:k|t:d|t:y,4,این حرف مثل اول کلمهٔ «گاو» صدا می‌دهد.
+06,"Catch the first letter of head, hand and horse.",حرف اول این کلمه‌ها را بگیر.,t:h|t:H,t:b|t:n|t:k|t:f,4,این حرف مثل اول کلمهٔ «هفده» صدا می‌دهد.
+06,"Catch the first letter of sister, sun and soap. Sss.",حرف اول این کلمه‌ها را بگیر.,t:s|t:S,t:c|t:z|t:t|t:f,4,این حرف مثل اول کلمهٔ «ستاره» صدا می‌دهد.

@@ -1,0 +1,82 @@
+{
+  "pack": "en-2",
+  "subject": "en",
+  "level": 2,
+  "version": 1,
+  "title_en": "English 2: My world",
+  "title_fa": "انگلیسی ۲: دنیای من",
+  "games": [
+    {
+      "id": "word_stall",
+      "engine": "listen_pick",
+      "letter": "a",
+      "title_en": "Word Stall",
+      "title_fa": "دکان کلمه‌ها",
+      "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+      "icon": "apple",
+      "v1": true,
+      "source": "items"
+    },
+    {
+      "id": "echo",
+      "engine": "say_it",
+      "letter": "b",
+      "title_en": "Echo",
+      "title_fa": "پژواک",
+      "intro_fa": "گوش کن. بعد خودت بلند بگو. باز گوش کن و ببین که درست گفتی یا نه.",
+      "icon": "say",
+      "v1": true,
+      "source": "items"
+    },
+    {
+      "id": "sound_catcher",
+      "engine": "catch",
+      "letter": "c",
+      "title_en": "Sound Catcher",
+      "title_fa": "صدا را بگیر",
+      "intro_fa": "گوش کن. حرفی را بگیر که کلمه با آن شروع می‌شود. حرف‌های دیگر را نگیر.",
+      "icon": "listen",
+      "sheet": "sound_catcher.csv"
+    },
+    {
+      "id": "sentence_train",
+      "engine": "builder",
+      "letter": "d",
+      "title_en": "Sentence Train",
+      "title_fa": "قطار جمله",
+      "intro_fa": "جمله را گوش کن. بعد کلمه‌ها را به ترتیب درست پشت هم بگذار.",
+      "icon": "train",
+      "sheet": "sentence_train.csv"
+    },
+    {
+      "id": "shopkeeper",
+      "engine": "market",
+      "letter": "e",
+      "title_en": "Shopkeeper",
+      "title_fa": "دکاندار",
+      "intro_fa": "تو دکاندار هستی. گوش کن که مشتری چند دانه می‌خواهد، و همان قدر روی ترازو بگذار.",
+      "icon": "shop",
+      "sheet": "shopkeeper.csv"
+    },
+    {
+      "id": "radio_stories",
+      "engine": "story",
+      "letter": "f",
+      "title_en": "Radio Stories",
+      "title_fa": "قصه‌های رادیو",
+      "intro_fa": "قصه را گوش کن. وقتی سوال آمد، تصویر درست را انتخاب کن.",
+      "icon": "radio",
+      "sheet": "radio_stories.csv"
+    },
+    {
+      "id": "number_stall",
+      "engine": "listen_pick",
+      "letter": "g",
+      "title_en": "Number Stall",
+      "title_fa": "دکان عددها",
+      "intro_fa": "گوش کن و عدد درست را انتخاب کن.",
+      "icon": "count",
+      "sheet": "numbers.csv"
+    }
+  ]
+}

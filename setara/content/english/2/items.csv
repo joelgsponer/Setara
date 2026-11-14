@@ -1,0 +1,243 @@
+unit,key,en,fa,picture,tags
+# English level 2 "My world". unit = classroom lesson number.
+# Rows tagged review repeat an earlier word so that the picture game has at least four pictures in the unit.
+
+# 01 My family
+01,mother,mother,مادر,mother,family
+01,father,father,پدر,father,family
+01,sister,sister,خواهر,sister,family
+01,brother,brother,برادر,brother,family
+01,family,family,فامیل,family,family
+01,this_is_my_mother,This is my mother.,این مادر من است.,,phrase
+01,this_is_my_father,This is my father.,این پدر من است.,,phrase
+01,who_is_this,Who is this?,این کیست؟,,phrase
+01,who_dialogue_1,f: Who is this? // m: This is my sister.,این کیست؟ این خواهر من است.,,dialogue
+01,who_dialogue_2,m: Who is this? // f: This is my brother.,این کیست؟ این برادر من است.,,dialogue
+
+# 02 Grandmother and grandfather
+02,grandmother,grandmother,مادرکلان,grandmother,family
+02,grandfather,grandfather,پدرکلان,grandfather,family
+02,parents,parents,پدر و مادر,parents,family
+02,baby,baby,طفل خرد,baby,family
+02,house,house,خانه,house,word
+02,this_is_my_grandmother,This is my grandmother.,این مادرکلان من است.,,phrase
+02,he_is_my_grandfather,He is my grandfather.,او پدرکلان من است.,,phrase
+02,this_is_my_house,This is my house.,این خانهٔ من است.,,phrase
+02,i_love_my_family,I love my family.,من فامیلم را دوست دارم.,,phrase
+02,who_dialogue_3,f: Who is this? // m: This is my grandfather.,این کیست؟ این پدرکلان من است.,,dialogue
+
+# 03 I have a ball
+03,ball,ball,توپ,ball,thing
+03,rope,rope,ریسمان,rope,thing
+03,box,box,صندوق,box,thing
+03,key,key,کلید,key,thing
+03,comb,comb,شانه,comb,thing
+03,i_have_a_ball,I have a ball.,من یک توپ دارم.,,phrase
+03,i_have_a_key,I have a key.,من یک کلید دارم.,,phrase
+03,i_have_a_sister,I have a sister.,من یک خواهر دارم.,,phrase
+03,i_have_two_brothers,I have two brothers.,من دو برادر دارم.,,phrase
+03,have_dialogue,f: I have a rope. // m: I have a ball.,من یک ریسمان دارم. من یک توپ دارم.,,dialogue
+
+# 04 My face
+04,head,head,سر,head,body
+04,hair,hair,موی,hair,body
+04,eye,eye,چشم,eye,body
+04,ear,ear,گوش,ear,body
+04,nose,nose,بینی,nose,body
+04,mouth,mouth,دهن,mouth,body
+04,touch,Touch,دست بزن,touch,command
+04,this_is_my_nose,This is my nose.,این بینی من است.,,phrase
+04,touch_your_nose,Touch your nose.,به بینی‌ات دست بزن.,,phrase
+04,touch_your_head,Touch your head.,به سرت دست بزن.,,phrase
+
+# 05 My body
+05,hand,hand,دست,hand,body
+05,arm,arm,بازو,arm,body
+05,leg,leg,لنگ,leg,body
+05,foot,foot,پای,foot,body
+05,finger,finger,انگشت,finger,body
+05,tooth,tooth,دندان,tooth,body
+05,i_have_two_hands,I have two hands.,من دو دست دارم.,,phrase
+05,i_have_two_eyes,I have two eyes.,من دو چشم دارم.,,phrase
+05,i_have_ten_fingers,I have ten fingers.,من ده انگشت دارم.,,phrase
+05,i_have_two_feet,I have two feet.,من دو پای دارم.,,phrase
+
+# 06 Numbers 11-15 (numerals and counting are in numbers.csv)
+06,eleven,eleven,یازده,,number
+06,twelve,twelve,دوازده,,number
+06,thirteen,thirteen,سیزده,,number
+06,fourteen,fourteen,چهارده,,number
+06,fifteen,fifteen,پانزده,,number
+06,eleven_to_fifteen,"Eleven, twelve, thirteen, fourteen, fifteen.",یازده، دوازده، سیزده، چهارده، پانزده.,,phrase
+06,r06_mother,mother,مادر,mother,review
+06,r06_father,father,پدر,father,review
+06,r06_hand,hand,دست,hand,review
+06,r06_eye,eye,چشم,eye,review
+
+# 07 Numbers 16-20 (numerals and counting are in numbers.csv)
+07,sixteen,sixteen,شانزده,,number
+07,seventeen,seventeen,هفده,,number
+07,eighteen,eighteen,هژده,,number
+07,nineteen,nineteen,نزده,,number
+07,twenty,twenty,بیست,,number
+07,sixteen_to_twenty,"Sixteen, seventeen, eighteen, nineteen, twenty.",شانزده، هفده، هژده، نزده، بیست.,,phrase
+07,r07_sister,sister,خواهر,sister,review
+07,r07_brother,brother,برادر,brother,review
+07,r07_nose,nose,بینی,nose,review
+07,r07_foot,foot,پای,foot,review
+
+# 08 How many?
+08,star,star,ستاره,star,word
+08,flower,flower,گل,flower,word
+08,tree,tree,درخت,tree,word
+08,stone,stone,سنگ,stone,word
+08,leaf,leaf,برگ,leaf,word
+08,how_many,How many?,چند دانه؟,,phrase
+08,two_trees,two trees,دو درخت,p:tree*2,phrase
+08,five_flowers,five flowers,پنج گل,p:flower*5,phrase
+08,how_many_dialogue_1,f: How many stars? // m: Twelve stars.,چند ستاره؟ دوازده ستاره.,,dialogue
+08,how_many_dialogue_2,m: How many fingers? // f: Ten fingers.,چند انگشت؟ ده انگشت.,,dialogue
+
+# 09 Food and drink
+09,food,food,غذا,,food
+09,rice,rice,برنج,rice,food
+09,milk,milk,شیر,milk,food
+09,meat,meat,گوشت,meat,food
+09,yoghurt,yoghurt,ماست,yoghurt,food
+09,sugar,sugar,بوره,sugar,food
+09,i_like_rice,I like rice.,من برنج را خوش دارم.,,phrase
+09,i_like_milk,I like milk.,من شیر را خوش دارم.,,phrase
+09,i_like_bread_and_tea,I like bread and tea.,من نان و چای را خوش دارم.,,phrase
+09,like_dialogue_1,f: I like yoghurt. // m: I like meat.,من ماست را خوش دارم. من گوشت را خوش دارم.,,dialogue
+
+# 10 Review: my family and me
+10,this_is_my_family,This is my family.,این فامیل من است.,,phrase
+10,i_have_a_mother_and_a_father,I have a mother and a father.,من مادر و پدر دارم.,,phrase
+10,i_have_a_sister_and_two_brothers,I have a sister and two brothers.,من یک خواهر و دو برادر دارم.,,phrase
+10,i_have_two_hands_and_two_feet,I have two hands and two feet.,من دو دست و دو پای دارم.,,phrase
+10,review_dialogue_1,f: Who is this? // m: This is my grandmother.,این کیست؟ این مادرکلان من است.,,dialogue
+10,review_dialogue_2,m: How many eyes? // f: Two eyes.,چند چشم؟ دو چشم.,,dialogue
+10,r10_grandmother,grandmother,مادرکلان,grandmother,review
+10,r10_baby,baby,طفل خرد,baby,review
+10,r10_ear,ear,گوش,ear,review
+10,r10_milk,milk,شیر,milk,review
+
+# 11 Fruit
+11,fruit,fruit,میوه,,food
+11,grapes,grapes,انگور,grapes,food
+11,pomegranate,pomegranate,انار,pomegranate,food
+11,watermelon,watermelon,تربوز,watermelon,food
+11,orange_fruit,orange,مالته,orange,food
+11,apricot,apricot,زردآلو,apricot,food
+11,mulberry,mulberry,توت,mulberry,food
+11,i_like_grapes,I like grapes.,من انگور را خوش دارم.,,phrase
+11,i_like_apples,I like apples.,من سیب را خوش دارم.,,phrase
+11,fruit_dialogue,f: What is this? // m: This is a pomegranate.,این چیست؟ این انار است.,,dialogue
+
+# 12 Vegetables: I don't like onions
+12,vegetables,vegetables,ترکاری,,food
+12,potato,potato,کچالو,potato,food
+12,tomato,tomato,بادنجان رومی,tomato,food
+12,onion,onion,پیاز,onion,food
+12,carrot,carrot,زردک,carrot,food
+12,spinach,spinach,پالک,spinach,food
+12,i_like_carrots,I like carrots.,من زردک را خوش دارم.,,phrase
+12,i_dont_like_onions,I don't like onions.,من پیاز را خوش ندارم.,,phrase
+12,i_like_potatoes,I like potatoes.,من کچالو را خوش دارم.,,phrase
+12,dont_like_dialogue,f: I like tomatoes. // m: I don't like tomatoes.,من بادنجان رومی را خوش دارم. من بادنجان رومی را خوش ندارم.,,dialogue
+
+# 13 Do you like honey?
+13,honey,honey,عسل,honey,food
+13,walnut,walnut,چهارمغز,walnut,food
+13,almond,almond,بادام,almond,food
+13,corn,corn,جواری,corn,food
+13,sweets,sweets,شیرینی,candy,food
+13,do_you_like_honey,Do you like honey?,تو عسل را خوش داری؟,,phrase
+13,yes_i_do,"Yes, I do.",بلی، خوش دارم.,,phrase
+13,no_i_dont,"No, I don't.",نه، خوش ندارم.,,phrase
+13,do_you_like_dialogue_1,"f: Do you like tea? // m: Yes, I do.",تو چای را خوش داری؟ بلی، خوش دارم.,,dialogue
+13,do_you_like_dialogue_2,"m: Do you like onions? // f: No, I don't.",تو پیاز را خوش داری؟ نه، خوش ندارم.,,dialogue
+
+# 14 Animals 1
+14,animal,animal,حیوان,,animal
+14,sheep,sheep,گوسفند,sheep,animal
+14,goat,goat,بز,goat,animal
+14,cow,cow,گاو,cow,animal
+14,donkey,donkey,خر,donkey,animal
+14,hen,hen,مرغ,hen,animal
+14,horse,horse,اسپ,horse,animal
+14,this_is_a_goat,This is a goat.,این بز است.,,phrase
+14,i_have_a_cow,I have a cow.,من یک گاو دارم.,,phrase
+14,animal_dialogue,f: What is this? // m: This is a donkey.,این چیست؟ این خر است.,,dialogue
+
+# 15 Animals 2
+15,dog,dog,سگ,dog,animal
+15,cat,cat,پشک,cat,animal
+15,bird,bird,پرنده,sparrow,animal
+15,fish,fish,ماهی,fish,animal
+15,mouse,mouse,موش,mouse,animal
+15,camel,camel,شتر,camel,animal
+15,i_have_a_cat,I have a cat.,من یک پشک دارم.,,phrase
+15,i_like_birds,I like birds.,من پرنده‌ها را خوش دارم.,,phrase
+15,this_is_a_fish,This is a fish.,این ماهی است.,,phrase
+15,do_you_like_dialogue_3,"m: Do you like cats? // f: Yes, I do.",تو پشک‌ها را خوش داری؟ بلی، خوش دارم.,,dialogue
+
+# 16 Two goats
+16,lamb,lamb,بره,lamb,animal
+16,calf,calf,گوساله,calf,animal
+16,chick,chick,چوچهٔ مرغ,chick,animal
+16,kitten,kitten,چوچهٔ پشک,kitten,animal
+16,two_goats,two goats,دو بز,p:goat*2,phrase
+16,three_cows,three cows,سه گاو,p:cow*3,phrase
+16,five_hens,five hens,پنج مرغ,p:hen*5,phrase
+16,four_sheep,four sheep,چهار گوسفند,p:sheep*4,phrase
+16,i_have_two_goats,I have two goats.,من دو بز دارم.,,phrase
+16,how_many_dialogue_3,f: How many hens? // m: Six hens.,چند مرغ؟ شش مرغ.,,dialogue
+
+# 17 At home 1
+17,bed,bed,تخت خواب,bed,home
+17,carpet,carpet,قالین,carpet,home
+17,cup,cup,پیاله,cup,home
+17,plate,plate,بشقاب,plate,home
+17,spoon,spoon,قاشق,spoon,home
+17,pot,pot,دیگ,pot,home
+17,this_is_my_bed,This is my bed.,این تخت خواب من است.,,phrase
+17,i_have_a_cup,I have a cup.,من یک پیاله دارم.,,phrase
+17,a_red_carpet,a red carpet,یک قالین سرخ,,phrase
+17,home_dialogue,f: What is this? // m: This is a pot.,این چیست؟ این دیگ است.,,dialogue
+
+# 18 At home 2
+18,blanket,blanket,کمپل,blanket,home
+18,pillow,pillow,بالشت,pillow,home
+18,basket,basket,سبد,basket,home
+18,bucket,bucket,سطل,bucket,home
+18,broom,broom,جاروب,broom,home
+18,soap,soap,صابون,soap,home
+18,i_have_a_pillow_and_a_blanket,I have a pillow and a blanket.,من یک بالشت و یک کمپل دارم.,,phrase
+18,give_me_the_soap,"Give me the soap, please.",لطفاً صابون را به من بده.,,phrase
+18,give_dialogue_3,"m: Give me the bucket, please. // f: Here you are. // m: Thank you.",لطفاً سطل را به من بده. بفرما، بگیر. تشکر.,,dialogue
+18,how_many_dialogue_4,f: How many spoons? // m: Four spoons.,چند قاشق؟ چهار قاشق.,,dialogue
+
+# 19 My village
+19,village,village,قریه,,place
+19,mountain,mountain,کوه,mountain,place
+19,river,river,دریا,river,place
+19,well,well,چاه,well,place
+19,field,field,کشتزار,field,place
+19,moon,moon,مهتاب,moon,place
+19,sun,sun,آفتاب,sun,place
+19,this_is_my_village,This is my village.,این قریهٔ من است.,,phrase
+19,the_mountain_is_big,The mountain is big.,کوه کلان است.,,phrase
+19,i_like_my_village,I like my village.,من قریه‌ام را خوش دارم.,,phrase
+
+# 20 Review: my world
+20,world,world,دنیا,,word
+20,this_is_my_world,This is my world.,این دنیای من است.,,phrase
+20,review_dialogue_3,"f: Do you like milk? // m: Yes, I do.",تو شیر را خوش داری؟ بلی، خوش دارم.,,dialogue
+20,review_dialogue_4,m: How many goats? // f: Twelve goats.,چند بز؟ دوازده بز.,,dialogue
+20,review_dialogue_5,f: I have a cat. // m: I have a dog.,من یک پشک دارم. من یک سگ دارم.,,dialogue
+20,r20_family,family,فامیل,family,review
+20,r20_goat,goat,بز,goat,review
+20,r20_grapes,grapes,انگور,grapes,review
+20,r20_house,house,خانه,house,review
+20,r20_tooth,tooth,دندان,tooth,review

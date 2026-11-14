@@ -1,0 +1,32 @@
+# NEW pictures needed by English level 2 (everything else reuses the shared library in content/pictures/). Format: name: what to draw.
+# Style (docs/authoring.md): thick dark outline, flat colours, no text, readable at 3 cm.
+# People: rural Afghan, modest everyday dress; girls and women with a headscarf, boys and men in perahan tunban (long shirt), with or without a cap.
+# A local reviewer approves every picture of a person.
+
+# Unit 01 (sister and brother are a pair, like big and small in level 1: same two children, the other one highlighted)
+sister: a girl of about ten and her smaller brother standing side by side holding hands; the girl in full colour with an arrow pointing at her, the boy in pale grey
+brother: the same two children; the boy in full colour with an arrow pointing at him, the girl in pale grey
+family: a family standing close together in front of their house: mother, father, a girl and a smaller boy, all smiling
+
+# Unit 02 (must look clearly older than "mother" and "father" in the library)
+grandmother: an old woman with a lined, kind face and a large white headscarf, sitting on a cushion
+grandfather: an old man with a white beard and a turban, sitting, leaning on a walking stick
+baby: a baby wrapped in a blanket lying on a small mattress, only the smiling face and one small hand showing
+
+# Unit 04
+touch: a child's hand coming in from the side, the index finger touching a large ball; two small contact marks at the fingertip (no face, so that it is not mixed up with "nose" or "head")
+
+# Story scenes (4:3, full background)
+# Story 16: Nasrin, a girl of ten with a headscarf, and her brother Karim, a boy of five
+scene_nasrin_hello: Nasrin stands in front of her mud-brick house in the morning and waves
+scene_nasrin_family: in the courtyard, standing apart from each other so that each can be pointed at: the grandmother (old, white headscarf, sitting), the mother, the father, and little Karim beside Nasrin
+scene_nasrin_animals: Nasrin in the walled courtyard with exactly two goats on one side and exactly five hens on the other, all easy to count
+scene_karim_sad: little Karim sits on a mat with a sad face; in front of him a tray with a glass of milk, a glass of tea and an onion, clearly apart; Nasrin kneels beside him
+scene_nasrin_goodbye: Karim drinks the glass of milk and smiles; Nasrin beside him smiles and waves goodbye to us
+# Story 20: Farid, a boy of eleven in perahan tunban and a cap, and his grandfather (white beard, turban)
+scene_farid_hello: Farid stands on a path above his village (flat-roofed mud houses, trees, a mountain behind) and waves
+scene_farid_donkey: Farid stands beside his brown donkey and strokes its neck; no other animal in the picture
+scene_farid_grandfather: the grandfather sits under a tree in an orchard; beside him a basket of red apples and a bunch of green grapes on a cloth; Farid arrives with the donkey
+scene_farid_gives_grapes: Farid hands the bunch of grapes to his grandfather; both smile
+scene_twelve_apples: a cloth on the ground with exactly twelve red apples in three rows of four, large and easy to count; Farid kneels behind it
+scene_farid_goodbye: Farid leads the donkey, which carries a basket of apples, towards the village; he turns and waves goodbye; the grandfather waves from under the tree

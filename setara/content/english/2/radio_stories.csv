@@ -1,0 +1,19 @@
+round,picture,say_en,say_fa,show_en,show_fa,choices,right,wrong_say_fa,wrong_picture
+# Story 16: Nasrin and her family (a girl tells it; her small brother answers in the man's voice). Language up to unit 16.
+16,scene_nasrin_hello,Hello! My name is Nasrin. I am ten. This is my house.,,Hello! My name is Nasrin. I am ten.,,,,,
+16,scene_nasrin_family,"This is my family. This is my mother, my father and my grandmother. This is my brother, Karim. He is five.",,This is my family.,,,,,
+16,scene_nasrin_family,Who is this? This is my grandmother. Point to my grandmother.,,Point to my grandmother.,,grandmother|mother|father|brother,grandmother,این مادرکلان نیست. دوباره ببین و مادرکلان را نشان بده.,
+16,scene_nasrin_animals,Look! I have two goats and five hens.,,I have two goats and five hens.,,,,,
+16,scene_nasrin_animals,How many hens? Count the hens.,,How many hens?,,p:hen*5|p:hen*2|p:hen*3,p:hen*5,دوباره حساب کن. یک، دو، سه، چهار، پنج. نسرین پنج مرغ دارد.,
+16,scene_karim_sad,"f: Karim is sad. Karim, do you like milk? // m: Yes, I do! I like milk.",,"Karim, do you like milk? Yes, I do!",,,,,
+16,scene_karim_sad,Karim is sad. Give Karim the milk.,,Give Karim the milk.,,milk|tea|onion,milk,این شیر نیست. کریم شیر را خوش دارد. دوباره انتخاب کن.,
+16,scene_nasrin_goodbye,"f: Here you are, Karim. // m: Thank you, Nasrin! // f: Karim is happy. I love my family. Goodbye!",,I love my family. Goodbye!,,,,,
+# Story 20: Farid and his grandfather (a boy tells it, man's voice; the questions are asked by the woman's voice). Language up to unit 20.
+20,scene_farid_hello,m: Hello! My name is Farid. I am eleven. This is my village.,,Hello! My name is Farid. This is my village.,,,,,
+20,scene_farid_donkey,m: I have a donkey. It is brown. I like my donkey.,,I have a donkey. I like my donkey.,,,,,
+20,scene_farid_donkey,f: Point to the donkey.,,Point to the donkey.,,donkey|horse|cow|goat,donkey,این خر نیست. دوباره ببین و خر را نشان بده.,
+20,scene_farid_grandfather,m: This is my grandfather. Look! Apples and grapes! // m: I like grapes.,,This is my grandfather. I like grapes.,,,,,
+20,scene_farid_grandfather,"f: Farid, give your grandfather the grapes.",,Give your grandfather the grapes.,,grapes|apple|pomegranate|onion,grapes,این انگور نیست. پدرکلان انگور را خوش دارد. دوباره انتخاب کن.,
+20,scene_farid_gives_grapes,"m: Here you are, grandfather. // m: Thank you, Farid!",,"Here you are, grandfather. Thank you, Farid!",,,,,
+20,scene_twelve_apples,m: I have apples. // f: How many apples? Count the apples.,,How many apples?,,t:12|t:10|t:20,t:12,دوباره حساب کن. دوازده سیب است.,
+20,scene_farid_goodbye,m: Twelve apples! I like apples. I like my village. Goodbye!,,I like my village. Goodbye!,,,,,

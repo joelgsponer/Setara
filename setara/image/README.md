@@ -1,7 +1,12 @@
-# SD card image
+# SD card
 
-Scripts that assemble the one card image written to every device: firmware,
-the app and all packs. Nothing here yet.
+`make_card.py` assembles the folder that goes onto every card: the app, every
+built pack, and the launchers. See [docs/device.md](../docs/device.md).
 
-Open until phase 0 settles it: which community firmware gives the cleanest
-boot-to-app on the Anbernic RG35XX H and on the R36S.
+```sh
+python3 image/make_card.py            # writes dist/card/setara/
+```
+
+It does not build a full firmware image. Which firmware to put under the app
+on each device is the first open point of phase 0; once that is settled, the
+image script belongs here.
