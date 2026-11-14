@@ -1,0 +1,82 @@
+{
+ "pack": "fa-3",
+ "subject": "fa",
+ "level": 3,
+ "version": 1,
+ "title_en": "Dari 3: Syllables and words",
+ "title_fa": "دری ۳: بخش‌ها و کلمه‌ها",
+ "games": [
+  {
+   "id": "alefba_garden",
+   "engine": "listen_pick",
+   "letter": "a",
+   "title_en": "Alefba Garden",
+   "title_fa": "باغ الفبا",
+   "intro_fa": "گوش کن و کلمه درست را پیدا کن. یا کلمه را بخوان و تصویر آن را پیدا کن.",
+   "icon": "flower",
+   "v1": true,
+   "sheet": "alefba_garden.csv"
+  },
+  {
+   "id": "letter_shapes",
+   "engine": "sorter",
+   "letter": "b",
+   "title_en": "Word Baskets",
+   "title_fa": "سبد کلمه‌ها",
+   "intro_fa": "هر کلمه را در سبد درست بگذار.",
+   "icon": "basket",
+   "v1": true,
+   "sheet": "letter_shapes.csv"
+  },
+  {
+   "id": "word_weaver",
+   "engine": "builder",
+   "letter": "c",
+   "title_en": "Word Weaver",
+   "title_fa": "کلمه‌باف",
+   "intro_fa": "حرف‌ها و بخش‌ها را از راست به چپ کنار هم بگذار و کلمه بساز.",
+   "icon": "rope",
+   "sheet": "word_weaver.csv"
+  },
+  {
+   "id": "syllable_catch",
+   "engine": "catch",
+   "letter": "d",
+   "title_en": "Syllable Catch",
+   "title_fa": "بگیر بگیر",
+   "intro_fa": "گوش کن و فقط بخش یا کلمه درست را بگیر.",
+   "icon": "ball",
+   "sheet": "syllable_catch.csv"
+  },
+  {
+   "id": "read_along",
+   "engine": "story",
+   "letter": "e",
+   "title_en": "Read Along",
+   "title_fa": "با هم بخوانیم",
+   "intro_fa": "به قصه گوش کن و با آن بخوان. وقتی سوال آمد، کلمه‌ها را بخوان و جواب درست را انتخاب کن.",
+   "icon": "book",
+   "sheet": "read_along.csv"
+  },
+  {
+   "id": "verse_corner",
+   "engine": "pairs",
+   "letter": "f",
+   "title_en": "Verse Corner",
+   "title_fa": "گوشه شعر",
+   "intro_fa": "کلمه را بخوان و جوره آن را پیدا کن.",
+   "icon": "moon",
+   "sheet": "verse_corner.csv"
+  },
+  {
+   "id": "word_journey",
+   "engine": "journey",
+   "letter": "g",
+   "title_en": "Word Journey",
+   "title_fa": "سفر کلمه‌ها",
+   "intro_fa": "با هر جواب درست یک قدم پیش برو. کلمه‌ها را بخوان و جواب درست را انتخاب کن.",
+   "icon": "mountain",
+   "sheet": "word_journey.csv"
+  }
+ ]
+}

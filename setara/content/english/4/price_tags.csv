@@ -1,0 +1,29 @@
+round,say_en,say_fa,show,answer,distractors,help_fa,hop
+# Hear the price, pick the number. The wrong choices are numbers that sound alike (thirty, thirteen) or have the same digits.
+# 03: tens.
+03,It is thirty afghani.,,,t:30,t:13|t:3|t:40,سی افغانی است.,
+03,It is fifty afghani.,,,t:50,t:15|t:5|t:60,پنجاه افغانی است.,
+03,f: How much is the tea? // m: It is forty afghani.,,tea,t:40,t:14|t:4|t:50,چای چند است؟ چهل افغانی است.,
+03,m: How much is the soap? // f: It is twenty afghani.,,soap,t:20,t:12|t:2|t:10,صابون چند است؟ بیست افغانی است.,
+03,It is ninety afghani.,,,t:90,t:19|t:9|t:80,نود افغانی است.,
+03,f: How much is the book? // m: It is sixty afghani.,,book,t:60,t:16|t:6|t:70,کتاب چند است؟ شصت افغانی است.,
+03,It is eighty afghani.,,,t:80,t:18|t:8|t:88,هشتاد افغانی است.,
+03,m: How much is the bag? // f: It is seventy afghani.,,bag,t:70,t:17|t:7|t:60,بکس چند است؟ هفتاد افغانی است.,
+# 10: any price up to one hundred.
+10,f: How much are the bananas? // m: They are sixty-five afghani.,,banana,t:65,t:56|t:75|t:60,کیله‌ها چند است؟ شصت و پنج افغانی است.,
+10,m: How much are the pears? // f: They are forty-eight afghani.,,pear,t:48,t:84|t:40|t:58,ناک‌ها چند است؟ چهل و هشت افغانی است.,
+10,f: How much is the melon? // m: It is seventy-two afghani.,,melon,t:72,t:27|t:62|t:70,خربوزه چند است؟ هفتاد و دو افغانی است.,
+10,m: How much is the cabbage? // f: It is fifteen afghani.,,cabbage,t:15,t:50|t:5|t:16,کرم چند است؟ پانزده افغانی است.,
+10,f: How much is a kilo of rice? // m: It is ninety-four afghani.,,rice,t:94,t:49|t:90|t:84,یک کیلو برنج چند است؟ نود و چهار افغانی است.,
+10,m: How much is a jar of honey? // f: It is one hundred afghani.,,jar,t:100,t:10|t:90|t:1,یک مرتبان عسل چند است؟ صد افغانی است.,
+10,f: How much is the garlic? // m: It is thirty-six afghani.,,garlic,t:36,t:63|t:26|t:30,سیر چند است؟ سی و شش افغانی است.,
+10,m: How much are the cherries? // f: They are eighty-three afghani.,,cherries,t:83,t:38|t:80|t:93,گیلاس چند است؟ هشتاد و سه افغانی است.,
+# 18: hundreds.
+18,It is two hundred afghani.,,,t:200,t:100|t:20|t:300,دوصد افغانی است.,
+18,It is five hundred afghani.,,,t:500,t:50|t:400|t:900,پنجصد افغانی است.,
+18,f: How much is the scarf? // m: It is three hundred afghani.,,scarf_red,t:300,t:30|t:13|t:200,چادر چند است؟ سه‌صد افغانی است.,
+18,m: How much is the lamp? // f: It is one hundred and fifty afghani.,,lamp,t:150,t:115|t:105|t:500,چراغ چند است؟ یکصد و پنجاه افغانی است.,
+18,f: How much is the carpet? // m: It is nine hundred afghani.,,carpet,t:900,t:90|t:19|t:500,قالین چند است؟ نُه‌صد افغانی است.,
+18,m: How much is the shovel? // f: It is two hundred and twenty afghani.,,shovel,t:220,t:202|t:212|t:120,بیل چند است؟ دوصد و بیست افغانی است.,
+18,f: How much is the hammer? // m: It is one hundred and ten afghani.,,hammer,t:110,t:101|t:200|t:10,چکش چند است؟ یکصد و ده افغانی است.,
+18,m: How much is it all together? // f: It is four hundred and sixty afghani.,,,t:460,t:416|t:406|t:640,جمله چند می‌شود؟ چهارصد و شصت افغانی می‌شود.,

@@ -1,0 +1,34 @@
+round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
+# 06: fruit or vegetables.
+06,هر چیز را در سبد درست بینداز: میوه یا ترکاری.,pear,pear,,t:fruit,میوه,fruit
+06,,cucumber,cucumber,,t:vegetables,ترکاری,vegetables
+06,,banana,banana,,t:fruit,,
+06,,cabbage,cabbage,,t:vegetables,,
+06,,eggplant,eggplant,,t:vegetables,,
+06,,peach,peach,,t:fruit,,
+06,,garlic,garlic,,t:vegetables,,
+06,,melon,melon,,t:fruit,,
+06,,pumpkin,pumpkin,,t:vegetables,,
+06,,cherries,cherries,,t:fruit,,
+# 08: How many (things we count) or How much (things we weigh or pour).
+08,چیزی را که دانه دانه حساب می‌کنیم در یک سبد بینداز، و چیزی را که وزن یا پیمانه می‌کنیم در سبد دیگر.,p:egg*3,eggs,,t:How many?,چند دانه؟,How many?
+08,,rice,rice,,t:How much?,چقدر؟,How much?
+08,,p:pear*3,pears,,t:How many?,,
+08,,sugar,sugar,,t:How much?,,
+08,,water,water,,t:How much?,,
+08,,p:lemon*3,lemons,,t:How many?,,
+08,,milk,milk,,t:How much?,,
+08,,p:banana*3,bananas,,t:How many?,,
+08,,salt,salt,,t:How much?,,
+08,,p:apple*3,apples,,t:How many?,,
+# 12: a, an or some.
+12,پیش از هر کلمه چه می‌گوییم؟ سه سبد است. کلمه را گوش کن و در سبد درست بینداز.,pear,pear,,t:a,یک,a
+12,,apple,apple,,t:an,یک، پیش از حرف صدادار,an
+12,,rice,rice,,t:some,کمی,some
+12,,egg,egg,,t:an,,an
+12,,lemon,lemon,,t:a,,a
+12,,flour_sack,flour,,t:some,,some
+12,,onion,onion,,t:an,,an
+12,,banana,banana,,t:a,,a
+12,,oil_can,oil,,t:some,,some
+12,,salt,salt,,t:some,,some

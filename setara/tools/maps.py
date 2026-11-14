@@ -9,9 +9,12 @@ public domain), downloaded once into builder/.cache/ne. Needs shapely.
 
 Country borders are not drawn. A map shows land and sea, and at most the one
 or two countries a lesson is about.
+
+  python3 tools/maps.py scene_map_rhine globe      writes only the pictures named
 """
 import json
 import math
+import sys
 import urllib.request
 from pathlib import Path
 
@@ -25,6 +28,7 @@ BASE = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/ge
 
 INK, SEA, LAND, MARK = "#3b2f2f", "#bfe3f0", "#e8d2a6", "#f2b705"
 ORANGE, GREEN, PURPLE, WATER, GREY = "#e07a3f", "#9ccb7a", "#b79ad6", "#5da9d6", "#b9ae9b"
+ONLY = set(sys.argv[1:])   # empty: write every picture
 
 
 def load(name):
@@ -116,7 +120,20 @@ class Map:
         self.body.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="none" stroke="{MARK}" stroke-width="5"/>')
         self.body.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r + 3.5}" fill="none" stroke="{INK}" stroke-width="2"/>')
 
+    def area(self, geom, fill, opacity=1):
+        """A flat patch without an outline: a part of the sea, a zone of the Earth."""
+        d = self.path(geom, 1)
+        if d:
+            self.body.append(f'<path d="{d}" fill="{fill}"' + (f' fill-opacity="{opacity}"' if opacity < 1 else "") + "/>")
+
+    def peak(self, lon, lat, r=11):
+        x, y = self.xy(lon, lat)
+        self.body.append(f'<path d="M{x - r:.1f} {y + r * 0.75:.1f}L{x:.1f} {y - r * 0.9:.1f}L{x + r:.1f} {y + r * 0.75:.1f}Z" fill="#ffffff" stroke="{INK}" '
+                         f'stroke-width="2.5" stroke-linejoin="round"/>')
+
     def save(self, name, sea=SEA):
+        if ONLY and name not in ONLY:
+            return
         back = f'<rect width="{self.w}" height="{self.h}" fill="{sea}"/>' if sea else ""
         (OUT / f"{name}.svg").write_text(
             f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {self.w} {self.h}">\n{back}\n' + "\n".join(self.body) + "\n</svg>\n")
@@ -137,10 +154,12 @@ def main():
     names = {"Asia": "asia", "Africa": "africa", "Europe": "europe", "North America": "north_america",
              "South America": "south_america", "Oceania": "oceania", "Antarctica": "antarctica"}
 
-    def world(highlight=None, mark=None, name="scene_map_world"):
+    def world(highlight=None, mark=None, name="scene_map_world", under=(), over=()):
         m = Map(400, 300, -180, 180, -90, 90)
         m.k, m.s = 1.0, 400 / 360 * 1.0   # the whole world, stretched a little in height to fill the picture
         m.xy = lambda lon, lat: (200 + lon * 400 / 360, 150 - lat * 300 / 180 * 0.98)
+        for geom, fill in under:
+            m.area(geom, fill)
         m.land(unary_union(list(cont.values())), LAND, min_area=3)   # one land, no lines between continents
         m.land(cont["Antarctica"], "#ffffff", min_area=3)            # ice
         if highlight:
@@ -149,6 +168,8 @@ def main():
             code, at, r = mark
             m.land(country50[code], ORANGE, width=1.5, min_area=0.5)
             m.ring(at[0], at[1], r)
+        for geom, fill, opacity in over:
+            m.area(geom, fill, opacity)
         m.save(name)
 
     world()
@@ -156,6 +177,24 @@ def main():
         world(highlight=c, name=f"scene_map_{n}")
     world(mark=("AFG", (66, 34), 16), name="scene_map_world_afghanistan")
     world(mark=("CHE", (8.2, 46.8), 12), name="scene_map_world_switzerland")
+
+    # the five oceans: the world with one ocean in a darker blue. The lines between two oceans in
+    # open water are the usual straight ones (20 and 147 degrees east, 68 west, 60 south, the polar circle).
+    atlantic = Polygon([(-102, 66), (30, 66), (30, 55), (12, 50), (0, 44), (-5.6, 38), (-5.6, 35.5), (0, 30), (10, 5), (15, -20),
+                        (20, -34.9), (20, -60), (-68, -60), (-68, -54), (-70, -30), (-65, -10), (-75, 5), (-77.5, 8), (-80, 8.8),
+                        (-83, 10), (-85, 12.5), (-88, 14.5), (-91, 15.5), (-95, 17.2), (-98, 20), (-102, 30)])
+    indian = Polygon([(20, -60), (20, -34.9), (25, -30), (30, -10), (35, 10), (33, 28), (40, 32), (48, 31), (60, 28), (70, 26),
+                      (80, 25), (92, 24), (95, 20), (98.5, 14), (98.7, 9), (95.5, 5.5), (100, 0), (104, -4.5), (106, -6.5),
+                      (110, -7.5), (114.5, -8.2), (120, -9), (125, -9.5), (130, -13), (135, -25), (147, -38), (147, -60)])
+    oceans = {
+        "pacific": unary_union([box(100, -60, 180, 66), box(-180, -60, -60, 66)]).difference(atlantic).difference(indian),
+        "atlantic": atlantic, "indian": indian, "southern": box(-180, -90, 180, -60), "arctic": box(-180, 66, 180, 90)}
+    for n, geom in oceans.items():
+        world(under=[(geom, WATER)], name=f"scene_map_ocean_{n}")
+
+    # hot and cold: a warm belt around the middle of the Earth, the two cold caps at the poles
+    world(over=[(box(-180, -23.5, 180, 23.5), "#e0483f", 0.38), (box(-180, 66.5, 180, 90), "#3f7fbf", 0.45),
+                (box(-180, -90, 180, -66.5), "#3f7fbf", 0.45)], name="scene_map_hot_cold")
 
     # each continent alone, as a square picture
     for c, n in names.items():
@@ -205,6 +244,24 @@ def main():
     m.land(country50["AFG"], ORANGE, width=3)
     m.save("scene_map_asia_afghanistan")
 
+    # Afghanistan: the Hindu Kush, the three large rivers, the dry south-west, Kabul. No other country is outlined.
+    w = (59.3, 76.2, 28.6, 39.2)
+    m = Map(400, 300, *w)
+    m.land(land50, LAND)
+    m.land(country10["AFG"], ORANGE, width=3.5)
+    all_rivers = load("ne_10m_rivers_lake_centerlines")
+    inside = country10["AFG"].buffer(0.12)
+    for f in all_rivers:
+        if (f["properties"].get("name") or "") in ("Amu  Darya", "Panj", "Helmand", "Harirud"):
+            m.line(shape(f["geometry"]).intersection(inside), WATER, 4)
+    for lon, lat in ((64.6, 30.5), (63.2, 30.9), (65.6, 31.2)):      # the sandy desert of the south-west
+        x, y = m.xy(lon, lat)
+        m.body.append(f'<path d="M{x - 12:.1f} {y + 4:.1f}q6 -10 12 0q6 -10 12 0" fill="none" stroke="{INK}" stroke-width="2.5" stroke-linecap="round"/>')
+    for lon, lat in ((72.3, 36.75), (71.0, 36.2), (70.1, 35.75), (69.0, 35.45), (67.9, 34.95), (66.7, 34.55)):   # the Hindu Kush
+        m.peak(lon, lat, 10)
+    m.dot(*KABUL, 7, MARK)
+    m.save("scene_map_afghanistan")
+
     m = Map(400, 300, -26, 46, 33, 72)
     m.land(land50, LAND)
     m.land(country50["CHE"], ORANGE, width=3, min_area=1)
@@ -241,6 +298,22 @@ def main():
     m.dot(*BASEL, 8, MARK)
     m.save("scene_map_switzerland")
 
+    # the whole way of the Rhine, from the Alps to the sea in the north
+    w = (0.5, 14.5, 45.3, 54.2)
+    m = Map(400, 300, *w)
+    m.land(unary_union([g for g in country10.values() if g.intersects(box(*[w[0] - 1, w[2] - 1, w[1] + 1, w[3] + 1]))]), LAND)
+    m.land(country10["CHE"], ORANGE, width=3)
+    m.land(lakes.intersection(box(8.8, 47.3, 9.9, 47.9)), WATER, width=1.5, min_area=2)
+    m.line(rhine, WATER, 5)
+    for f in all_rivers:                      # in the delta the main arm has another name
+        if f["properties"].get("name") == "Waal":
+            m.line(shape(f["geometry"]), WATER, 5)
+    m.line(LineString([(4.3, 51.8), (4.0, 51.98)]), WATER, 5)
+    for lon, lat in ((8.0, 46.3), (9.0, 46.45), (9.9, 46.6)):
+        m.peak(lon, lat, 10)
+    m.dot(*BASEL, 7, MARK)
+    m.save("scene_map_rhine")
+
     w = (7.22, 7.98, 47.36, 47.78)
     m = Map(400, 300, *w)
     win = box(w[0] - 0.2, w[2] - 0.2, w[1] + 0.2, w[3] + 0.2)
@@ -253,6 +326,8 @@ def main():
         m.body.append(f'<path d="M{x + dx - 8:.1f} {y + dy + 6:.1f}v-9l8-7 8 7v9z" fill="#fff6dc" stroke="{INK}" stroke-width="2.5" stroke-linejoin="round"/>')
     m.save("scene_map_basel")
 
+    if ONLY and "globe" not in ONLY:
+        return
     # a globe on a stand, turned so that Asia, Africa and Europe show
     lon0, lat0, R, cx, cy = math.radians(55), math.radians(22), 44, 64, 54
     body = [f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="{WATER}" stroke="{INK}" stroke-width="5"/>']

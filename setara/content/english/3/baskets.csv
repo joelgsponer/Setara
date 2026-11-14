@@ -1,0 +1,48 @@
+round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
+# 03: morning or night? The sentence is spoken; the picture goes into the morning or the night basket.
+03,جمله را گوش کن. این کار صبح است یا شب؟ تصویر را در سبد درست بینداز.,wake_up,I get up.,,morning,صبح,morning
+03,,sleep,I sleep.,,night,شب,night
+03,,breakfast,I eat breakfast.,,morning,,
+03,,dinner,I eat dinner.,,night,,
+03,,sun,the sun,,morning,,
+03,,moon,the moon,,night,,
+03,,school,I go to school.,,morning,,
+03,,star,a star,,night,,
+# 14: do or does? One person (he, she, my mother) takes does; you and more than one take do.
+14,سوال را گوش کن. کلمهٔ اول سوال کدام بود؟ تصویر را در سبدی بینداز که همان کلمه را می‌گوید.,you,Do you play?,,t:do,,do
+14,,he,Does he play?,,t:does,,does
+14,,she,Does she read?,,t:does,,
+14,,friends,Do your friends play?,,t:do,,
+14,,mother,Does your mother cook?,,t:does,,
+14,,parents,Do your parents work?,,t:do,,
+14,,father,Does your father work?,,t:does,,
+14,,grandmother,Does your grandmother sleep?,,t:does,,
+14,,children_all,Do the children go to school?,,t:do,,
+# 16: clothes, things in the house, food.
+16,کلمه را گوش کن. کالا است، چیز خانه است، یا خوراک؟ تصویر را در سبد درست بینداز.,shirt,shirt,,clean_clothes,کالا,clothes
+16,,lamp,lamp,,house,چیزهای خانه,home
+16,,bread,bread,,food_bowl,خوراک,food
+16,,socks,socks,,clean_clothes,,
+16,,mirror,mirror,,house,,
+16,,rice,rice,,food_bowl,,
+16,,scarf,scarf,,clean_clothes,,
+16,,mattress,mattress,,house,,
+16,,egg,egg,,food_bowl,,
+# 18 and 19: reading. Which letter is in the middle of the word?
+18,کلمه را گوش کن و ببین. حرف میانهٔ آن کدام است؟ کلمه را در سبد درست بینداز.,t:hat,hat,,t:a,,"a, as in cat"
+18,,t:dog,dog,,t:o,,"o, as in pot"
+18,,t:bag,bag,,t:a,,
+18,,t:box,box,,t:o,,
+18,,t:man,man,,t:a,,
+18,,t:fox,fox,,t:o,,
+18,,t:map,map,,t:a,,
+18,,t:hot,hot,,t:o,,
+19,کلمه را گوش کن و ببین. حرف میانهٔ آن کدام است؟ کلمه را در سبد درست بینداز.,t:pen,pen,,t:e,,"e, as in bed"
+19,,t:sun,sun,,t:u,,"u, as in cup"
+19,,t:six,six,,t:i,,"i, as in big"
+19,,t:hen,hen,,t:e,,
+19,,t:jug,jug,,t:u,,
+19,,t:pin,pin,,t:i,,
+19,,t:leg,leg,,t:e,,
+19,,t:bus,bus,,t:u,,
+19,,t:lip,lip,,t:i,,

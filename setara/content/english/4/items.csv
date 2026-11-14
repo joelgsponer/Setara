@@ -150,7 +150,7 @@ unit,key,en,fa,picture,tags
 12,any_dialogue,"m: Do you have any eggs? // f: No, I don't have any. Sorry.",شما تخم مرغ دارید؟ نه، هیچ ندارم. ببخشید.,,dialogue
 
 # 13 Can I help you?
-13,carry,carry,بردن,carry,verb
+13,carry,carry,بردن,carry,review
 13,help,help,کمک کردن,help,verb
 13,r13_read,read,خواندن,read,review
 13,r13_count,count,حساب کردن,count,review
@@ -186,7 +186,7 @@ unit,key,en,fa,picture,tags
 15,metre_dialogue,m: How much is a metre of cloth? // f: It is eighty afghani.,یک متر تکه چند است؟ هشتاد افغانی است.,,dialogue
 
 # 16 Things for the house
-16,lamp,lamp,چراغ,lamp,thing
+16,lamp,lamp,چراغ,lamp,review
 16,candle,candle,شمع,candle,thing
 16,matches,matches,گوگرد,matches,thing
 16,hammer,hammer,چکش,hammer,thing
@@ -211,7 +211,7 @@ unit,key,en,fa,picture,tags
 17,anything_else_dialogue,"m: Anything else? // f: No, thank you. That's all.",چیز دیگر؟ نه، تشکر. همین قدر بس است.,,dialogue
 
 # 18 Too expensive!
-18,scarf,scarf,چادر,scarf_red,thing
+18,scarf,scarf,چادر,scarf_red,review
 18,r18_carpet,carpet,قالین,carpet,review
 18,r18_cheap,cheap,ارزان,cheap,review
 18,r18_expensive,expensive,گران,expensive,review

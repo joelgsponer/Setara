@@ -1,0 +1,82 @@
+{
+ "pack": "fa-4",
+ "subject": "fa",
+ "level": 4,
+ "version": 1,
+ "title_en": "Dari 4: Sentences",
+ "title_fa": "دری ۴: جمله‌ها",
+ "games": [
+  {
+   "id": "action_words",
+   "engine": "listen_pick",
+   "letter": "a",
+   "title_en": "Action Words",
+   "title_fa": "کلمه‌های کار",
+   "intro_fa": "تصویر را ببین و کلمه درست را انتخاب کن.",
+   "icon": "run",
+   "v1": true,
+   "sheet": "action_words.csv"
+  },
+  {
+   "id": "read_and_choose",
+   "engine": "story",
+   "letter": "g",
+   "title_en": "Read and Choose",
+   "title_fa": "بخوان و انتخاب کن",
+   "intro_fa": "جمله را بخوان و تصویر درست را انتخاب کن.",
+   "icon": "look",
+   "v1": true,
+   "sheet": "read_and_choose.csv"
+  },
+  {
+   "id": "sentence_weaver",
+   "engine": "builder",
+   "letter": "c",
+   "title_en": "Sentence Weaver",
+   "title_fa": "جمله‌باف",
+   "intro_fa": "کلمه‌ها را از راست به چپ کنار هم بگذار و جمله بساز.",
+   "icon": "rope",
+   "sheet": "sentence_weaver.csv"
+  },
+  {
+   "id": "sentence_baskets",
+   "engine": "sorter",
+   "letter": "b",
+   "title_en": "Sentence Baskets",
+   "title_fa": "سبد جمله‌ها",
+   "intro_fa": "هر جمله را بخوان و در سبد درست بگذار.",
+   "icon": "basket",
+   "sheet": "sentence_baskets.csv"
+  },
+  {
+   "id": "who_what_where",
+   "engine": "story",
+   "letter": "h",
+   "title_en": "Who? What? Where?",
+   "title_fa": "کی؟ چه؟ کجا؟",
+   "intro_fa": "جمله را بخوان. بعد به سوال جواب بده.",
+   "icon": "point",
+   "sheet": "who_what_where.csv"
+  },
+  {
+   "id": "word_catch",
+   "engine": "catch",
+   "letter": "d",
+   "title_en": "Word Catch",
+   "title_fa": "کلمه را بگیر",
+   "intro_fa": "به سوال گوش کن و فقط کلمه درست را بگیر.",
+   "icon": "ball",
+   "sheet": "word_catch.csv"
+  },
+  {
+   "id": "read_along",
+   "engine": "story",
+   "letter": "e",
+   "title_en": "Read Along",
+   "title_fa": "با هم بخوانیم",
+   "intro_fa": "قصه را بخوان و به آن گوش کن. در میان قصه به سوال‌ها جواب بده.",
+   "icon": "book",
+   "sheet": "read_along.csv"
+  }
+ ]
+}

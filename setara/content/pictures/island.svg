@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<clipPath id="c"><rect x="6" y="6" width="116" height="116" rx="12"/></clipPath>
+<g stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><g clip-path="url(#c)">
+<rect x="0" y="0" width="128" height="128" fill="#e3f3f8" stroke="none"/>
+<rect x="-4" y="62" width="136" height="70" fill="#3f7fbf"/>
+<path d="M26 84c8-18 24-26 40-26s30 8 38 26z" fill="#f0d590"/>
+<path d="M40 74c8-10 18-14 28-14 8 0 16 4 22 10-16 6-34 8-50 4z" fill="#4e9a51"/>
+<path d="M66 64c2-14 0-24-4-34" fill="none" stroke="#9a6b3f" stroke-width="6"/>
+<path d="M62 30c-10-8-22-6-28 2 10-2 18 0 28-2zM62 30c10-10 24-8 30 0-10-2-20 0-30 0zM62 30c-2-10-10-16-20-14 8 4 14 8 20 14zM62 30c4-10 12-14 22-12-8 2-16 6-22 12z" fill="#4e9a51" stroke-width="3.5"/>
+<path d="M-4 96q11-10 22 0t22 0t22 0t22 0t22 0t22 0V132H-4z" fill="#5da9d6"/>
+<path d="M14 72h14M98 70h14M20 112h18M70 112h20" fill="none" stroke="#ffffff" stroke-width="3"/>
+</g><rect x="6" y="6" width="116" height="116" rx="12" fill="none" stroke-width="5"/></g>
+</svg>

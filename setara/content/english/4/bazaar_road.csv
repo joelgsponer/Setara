@@ -1,0 +1,23 @@
+round,say_en,say_fa,show,answer,distractors,help_fa,hop
+# Mixed review. Every question is a small listening task: the answer is not the word that was said last.
+# 10: units 1 to 9.
+10,Which one is a fruit?,,,banana,cucumber|garlic|cabbage,کدام یک میوه است؟,
+10,Which one is a vegetable?,,,eggplant,peach|pear|melon,کدام یک ترکاری است؟,
+10,"f: How many eggs do you want? // m: Six, please.",,,p:egg*6,p:egg*5|p:egg*8|p:egg*16,چند تخم مرغ می‌خواهید؟ لطفاً شش دانه.,
+10,"m: Two kilos of potatoes, please. // f: What does he want?",,,potato,tomato|onion|pumpkin,لطفاً دو کیلو کچالو. او چه می‌خواهد؟,
+10,The soap is cheap. It is five afghani.,,soap,t:5,t:15|t:50|t:500,صابون ارزان است. پنج افغانی است.,
+10,I want to weigh the rice. What do I need?,,,scales,basket|purse|bottle,می‌خواهم برنج را وزن کنم. به چه ضرورت دارم؟,
+10,The bread is ten afghani. I give twenty afghani. How much is the change?,,bread,t:10,t:20|t:30|t:2,نان ده افغانی است. من بیست افغانی می‌دهم. باقی پول چند است؟,
+10,He sells fruit and vegetables. Who is he?,,,shopkeeper,customer|teacher|grandfather,او میوه و ترکاری می‌فروشد. او کیست؟,
+10,Where is the honey? It is in a jar.,,,jar,bottle|can|packet,عسل کجاست؟ در مرتبان است.,
+# 20: the whole level.
+20,Where can I buy bread?,,,bakery,tailor|school|clinic,نان را از کجا خریده می‌توانم؟,
+20,"m: Do you have any eggs? // f: No, I don't have any. Sorry. I have some cheese. // m: What does she have?",,,cheese,egg|milk|bread,شما تخم مرغ دارید؟ نه، هیچ ندارم. ببخشید. کمی پنیر دارم. او چه دارد؟,
+20,The tea is thirty afghani. I have twenty afghani. How much more money do I need?,,tea,t:10,t:20|t:30|t:50,چای سی افغانی است. من بیست افغانی دارم. به چقدر پول دیگر ضرورت دارم؟,
+20,The pears are forty afghani. The lemons are twenty afghani. How much is it all together?,,,t:60,t:20|t:40|t:80,ناک‌ها چهل افغانی است. لیموها بیست افغانی است. جمله چند می‌شود؟,
+20,The shopkeeper gives you your change. What do you say?,,,t:Thank you,t:Excuse me|t:Sorry|t:Hello,دکاندار باقی پول را به تو می‌دهد. تو چه می‌گویی؟,
+20,You want to ask a question. What do you say first?,,,t:Excuse me,t:Goodbye|t:Thank you|t:No,می‌خواهی سوال کنی. اول چه می‌گویی؟,
+20,It is one hundred afghani. I give two hundred afghani. How much is the change?,,,t:100,t:200|t:300|t:10,صد افغانی است. من دوصد افغانی می‌دهم. باقی پول چند است؟,
+20,Which one can you drink?,,,juice,kebab|biscuits|samosa,کدام یک را نوشیده می‌توانی؟,
+20,The tailor needs it. What is it?,,,needle,hammer|shovel|lock,خیاط به آن ضرورت دارد. آن چیست؟,
+20,"f: Can you carry the sack? // m: No, I can't. It is too heavy. // f: What is too heavy?",,,rice_sack,basket|bottle|purse,بوجی را برده می‌توانید؟ نه، نمی‌توانم. بسیار سنگین است. چه چیز بسیار سنگین است؟,

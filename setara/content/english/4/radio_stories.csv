@@ -1,0 +1,31 @@
+round,picture,say_en,say_fa,show_en,show_fa,choices,right,wrong_say_fa,wrong_picture
+# The caption (show_en) is one short sentence to read along. The right choice is not always the first.
+# Story 10: Mina goes to the bazaar (a girl tells it; the shopkeeper has the man's voice). Language up to unit 10.
+10,scene_mina_mother,f: Hello! My name is Mina. My mother wants tomatoes and eggs. I have a basket and some money.,,My mother wants tomatoes and eggs.,,,,,
+10,scene_mina_bazaar,f: This is the bazaar. It is big! Look at the shops.,,This is the bazaar. It is big!,,,,,
+10,scene_mina_bazaar,f: I want to buy tomatoes. Point to the tomatoes.,,I want to buy tomatoes.,,pomegranate|tomato|apple|peach,tomato,این بادنجان رومی نیست. دوباره ببین و بادنجان رومی را نشان بده.,
+10,scene_mina_stall,f: Hello! How much are the tomatoes? // m: Hello! They are forty afghani a kilo. They are fresh.,,How much are the tomatoes?,,,,,
+10,scene_mina_stall,"f: One kilo of tomatoes, please. // m: Here you are. // f: How much is one kilo of tomatoes?",,"One kilo of tomatoes, please.",,t:14|t:4|t:40,t:40,نه. دوباره گوش کن. یک کیلو بادنجان رومی چهل افغانی است.,
+10,scene_mina_stall,"f: I want eggs. // m: How many eggs do you want? // f: Six eggs, please.",,How many eggs do you want?,,,,,
+10,scene_mina_stall,f: Count six eggs for Mina.,,"Six eggs, please.",,p:egg*5|p:egg*8|p:egg*6,p:egg*6,دوباره حساب کن. مینا شش تخم مرغ می‌خواهد.,
+10,scene_mina_pays,f: How much is it? // m: It is seventy afghani. // f: Here is one hundred afghani. // m: Here is your change. Thirty afghani.,,Here is your change.,,,,,
+10,scene_mina_home,"f: Thank you! Goodbye! // m: Goodbye, Mina! // f: Look, mother! Fresh tomatoes and six eggs. My mother is happy.",,My mother is happy.,,,,,
+# Story 15: Hamid sells eggs (a boy tells it, man's voice; his customer and the questions have the woman's voice). Language up to unit 15.
+15,scene_hamid_cart,m: Good morning! My name is Hamid. This is my cart. I sell eggs and cheese at the bazaar.,,I sell eggs and cheese at the bazaar.,,,,,
+15,scene_hamid_customer,"f: Good morning! Do you have any eggs? // m: Yes, I have some. They are fresh. How many do you want? // f: Ten eggs, please.",,Do you have any eggs?,,,,,
+15,scene_hamid_customer,f: Count ten eggs for the customer.,,"Ten eggs, please.",,p:egg*12|p:egg*10|p:egg*8,p:egg*10,دوباره حساب کن. مشتری ده تخم مرغ می‌خواهد.,
+15,scene_hamid_customer,"f: Do you have any milk? // m: No, I don't have any milk. Sorry. I have some cheese. // f: Good. Half a kilo of cheese, please.",,I don't have any milk. I have some cheese.,,,,,
+15,scene_hamid_customer,f: Hamid does not have any milk. What does he have?,,What does Hamid have?,,milk|yoghurt|cheese,cheese,نه. حمید شیر و ماست ندارد. او کمی پنیر دارد. دوباره انتخاب کن.,
+15,scene_hamid_customer,f: How much is it? // m: The eggs are one hundred afghani and the cheese is fifty afghani. It is one hundred and fifty afghani.,,It is one hundred and fifty afghani.,,t:105|t:150|t:500,t:150,نه. دوباره گوش کن. یکصد و پنجاه افغانی می‌شود.,
+15,scene_hamid_carries,"f: Here is the money. Oh! My basket is heavy. I can't carry it. Can you help me? // m: Yes, I can!",,"Can you help me? Yes, I can!",,,,,
+15,scene_hamid_carries,"f: Thank you, Hamid. You are a good boy. // m: Thank you. Goodbye!",,"Thank you, Hamid. Goodbye!",,,,,
+# Story 20: A scarf for grandmother (a girl tells it; the shopkeeper has the man's voice). Language of the whole level.
+20,scene_roya_navid,"f: Hello! I am Roya. This is my brother, Navid. We want to buy a scarf for our grandmother. We have three hundred afghani.",,We want to buy a scarf for our grandmother.,,,,,
+20,scene_scarf_shop,"f: Excuse me. Do you have any scarves? // m: Yes, I have some. Look! A red scarf and a blue scarf.",,Do you have any scarves?,,,,,
+20,scene_scarf_shop,f: How much is the blue scarf? // m: It is five hundred afghani. // f: That is too expensive! How much is the red scarf? // m: It is three hundred and fifty afghani.,,The blue scarf is too expensive!,,,,,
+20,scene_scarf_shop,f: Which scarf is cheaper?,,Which scarf is cheaper?,,scarf_blue|scarf_red,scarf_red,نه. چادر آبی پنجصد افغانی است. چادر سرخ سه‌صد و پنجاه افغانی است. کدام یک ارزانتر است؟,
+20,scene_scarf_shop,"f: We have three hundred afghani. Can you make it cheaper, please? // m: All right. Three hundred afghani.",,"Can you make it cheaper, please?",,,,,
+20,scene_scarf_shop,f: How much do Roya and Navid pay?,,How much do they pay?,,t:350|t:500|t:300,t:300,نه. دوباره گوش کن. دکاندار قیمت را ارزانتر کرد: سه‌صد افغانی.,
+20,scene_roya_pays,f: Here is three hundred afghani. // m: Here is your scarf. // f: What do Roya and Navid say now?,,Here is your scarf.,,t:Excuse me|t:Thank you|t:Sorry,t:Thank you,نه. وقتی کسی چیزی به ما می‌دهد، می‌گوییم تشکر. دوباره انتخاب کن.,
+20,scene_roya_pays,f: Thank you very much! // m: You're welcome. Goodbye!,,Thank you very much!,,,,,
+20,scene_grandmother_scarf,"f: Grandmother, this scarf is for you! Grandmother is happy. She likes the red scarf. Goodbye!",,Grandmother likes the red scarf.,,,,,

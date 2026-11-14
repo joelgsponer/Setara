@@ -190,13 +190,13 @@ unit,key,en,fa,picture,tags
 16,mirror,mirror,آیینه,mirror,home
 16,clock,clock,ساعت,clock_10,home
 16,the_lamp_is_in_the_room,The lamp is in the room.,چراغ در اطاق است.,,phrase
-16,i_sleep_on_a_mattress,I sleep on a mattress.,من روی توشک می‌خوابم.,,phrase
+16,i_sleep_on_a_mattress,I sleep on a mattress.,من بالای توشک می‌خوابم.,,phrase
 16,give_me_the_candle,"Give me the candle, please.",لطفاً شمع را به من بده.,,phrase
 16,home_dialogue_2,m: What is this? // f: This is a mirror.,این چیست؟ این آیینه است.,,dialogue
 
 # 17 Where is it?
 17,in,in,در,pos_in,place
-17,on,on,روی,pos_on,place
+17,on,on,بالای,pos_on,place
 17,under,under,زیر,pos_under,place
 17,next_to,next to,پهلوی,pos_next_to,place
 17,where_is_it,Where is it?,کجاست؟,,phrase
@@ -204,7 +204,7 @@ unit,key,en,fa,picture,tags
 17,the_cat_is_under_the_table,The cat is under the table.,پشک زیر میز است.,,phrase
 17,the_lamp_is_next_to_the_bed,The lamp is next to the bed.,چراغ پهلوی تخت خواب است.,,phrase
 17,where_dialogue_2,f: Where is my shoe? // m: It is under the bed.,بوت من کجاست؟ زیر تخت خواب است.,,dialogue
-17,where_dialogue_3,m: Where is the cat? // f: It is on the roof.,پشک کجاست؟ روی بام است.,,dialogue
+17,where_dialogue_3,m: Where is the cat? // f: It is on the roof.,پشک کجاست؟ بالای بام است.,,dialogue
 
 # 18 I can read: words with a and o (reading is practised in sound_catcher, sentence_train, memory and baskets)
 18,fox,fox,روباه,fox,read

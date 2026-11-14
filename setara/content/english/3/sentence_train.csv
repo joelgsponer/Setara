@@ -1,0 +1,68 @@
+round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
+# Round = the unit whose language it uses. The child hears the sentence, builds it, and hears it again.
+# Rounds 18 and 19 build three-letter words from letters instead (their own instruction).
+01,,I get up.,,t:I|t:get|t:up,,,I get up.,,من از خواب می‌خیزم.
+01,,I wash my face.,,t:I|t:wash|t:my|t:face,t:your,,I wash my face.,,من رویم را می‌شویم.
+01,,I brush my teeth.,,t:I|t:brush|t:my|t:teeth,t:wash,,I brush my teeth.,,من دندان‌هایم را برس می‌کنم.
+01,,I eat breakfast.,,t:I|t:eat|t:breakfast,t:am,,I eat breakfast.,,من نان صبح می‌خورم.
+01,,I go to school.,,t:I|t:go|t:to|t:school,,,I go to school.,,من به مکتب می‌روم.
+03,,At night I sleep.,,t:At|t:night|t:I|t:sleep,,,At night I sleep.,,شب من می‌خوابم.
+03,,I play in the afternoon.,,t:I|t:play|t:in|t:the|t:afternoon,,,I play in the afternoon.,,من بعد از چاشت بازی می‌کنم.
+03,,In the morning I get up.,,t:In|t:the|t:morning|t:I|t:get|t:up,,,In the morning I get up.,,صبح من از خواب می‌خیزم.
+03,,I eat lunch at home.,,t:I|t:eat|t:lunch|t:at|t:home,t:in,,I eat lunch at home.,,من نان چاشت را در خانه می‌خورم.
+03,,I eat dinner in the evening.,,t:I|t:eat|t:dinner|t:in|t:the|t:evening,,,I eat dinner in the evening.,,من شام نان شب می‌خورم.
+06,,What time is it?,,t:What|t:time|t:is|t:it,,,What time is it?,,ساعت چند است؟
+06,,It is seven o'clock.,,t:It|t:is|t:seven|t:o'clock,t:am,,It is seven o'clock.,,ساعت هفت است.
+06,,It is ten o'clock.,,t:It|t:is|t:ten|t:o'clock,t:time,,It is ten o'clock.,,ساعت ده است.
+06,,I get up at six o'clock.,,t:I|t:get|t:up|t:at|t:six|t:o'clock,,,I get up at six o'clock.,,من ساعت شش از خواب می‌خیزم.
+06,,I go to bed at nine.,,t:I|t:go|t:to|t:bed|t:at|t:nine,,,I go to bed at nine.,,من ساعت نُه به خواب می‌روم.
+09,,"Saturday, Sunday, Monday, Tuesday.",,t:Saturday|t:Sunday|t:Monday|t:Tuesday,,,"Saturday, Sunday, Monday, Tuesday.",,روزها را به ترتیب بگذار: شنبه، یکشنبه، دوشنبه، سه‌شنبه.
+09,,"Tuesday, Wednesday, Thursday, Friday.",,t:Tuesday|t:Wednesday|t:Thursday|t:Friday,,,"Tuesday, Wednesday, Thursday, Friday.",,روزها را به ترتیب بگذار: سه‌شنبه، چهارشنبه، پنجشنبه، جمعه.
+09,,Today is Monday.,,t:Today|t:is|t:Monday,t:am,,Today is Monday.,,امروز دوشنبه است.
+09,,Tomorrow is Friday.,,t:Tomorrow|t:is|t:Friday,t:Today,,Tomorrow is Friday.,,فردا جمعه است.
+09,,I play on Friday.,,t:I|t:play|t:on|t:Friday,t:in,,I play on Friday.,,من روز جمعه بازی می‌کنم.
+09,,I don't go to school.,,t:I|t:don't|t:go|t:to|t:school,,,I don't go to school.,,من به مکتب نمی‌روم.
+12,,I wear a shirt.,,t:I|t:wear|t:a|t:shirt,t:am,,I wear a shirt.,,من پیراهن می‌پوشم.
+12,,I wear a red dress.,,t:I|t:wear|t:a|t:red|t:dress,,,I wear a red dress.,,من پیراهن زنانهٔ سرخ می‌پوشم.
+12,,Put on your shoes.,,t:Put|t:on|t:your|t:shoes,t:off,,Put on your shoes.,,بوت‌هایت را بپوش.
+12,,Take off your hat.,,t:Take|t:off|t:your|t:hat,t:on,,Take off your hat.,,کلاهت را بکش.
+12,,My coat is brown.,,t:My|t:coat|t:is|t:brown,t:am,,My coat is brown.,,بالاپوش من نصواری است.
+13,,My mother cooks.,,t:My|t:mother|t:cooks,t:cook,,My mother cooks.,,مادرم غذا می‌پزد.
+13,,My father works.,,t:My|t:father|t:works,t:work,,My father works.,,پدرم کار می‌کند.
+13,,She gets up at five.,,t:She|t:gets|t:up|t:at|t:five,t:get,,She gets up at five.,,او ساعت پنج از خواب می‌خیزد.
+13,,He goes to school.,,t:He|t:goes|t:to|t:school,t:go,,He goes to school.,,او به مکتب می‌رود.
+13,,My sister carries water.,,t:My|t:sister|t:carries|t:water,t:carry,,My sister carries water.,,خواهرم آب می‌آورد.
+13,,I help my mother.,,t:I|t:help|t:my|t:mother,t:helps,,I help my mother.,,من به مادرم کمک می‌کنم.
+14,,Do you go to school?,,t:Do|t:you|t:go|t:to|t:school,t:Does,,Do you go to school?,,تو به مکتب می‌روی؟
+14,,"Yes, I do.",,t:Yes|t:I|t:do,t:does,,"Yes, I do.",,بلی، می‌روم.
+14,,Does she play?,,t:Does|t:she|t:play,t:Do,,Does she play?,,او بازی می‌کند؟
+14,,"Yes, she does.",,t:Yes|t:she|t:does,t:do,,"Yes, she does.",,بلی، می‌کند.
+14,,Does he cook?,,t:Does|t:he|t:cook,t:cooks,,Does he cook?,,او غذا می‌پزد؟
+14,,"No, he doesn't.",,t:No|t:he|t:doesn't,t:don't,,"No, he doesn't.",,نه، نمی‌پزد.
+14,,He doesn't go to school.,,t:He|t:doesn't|t:go|t:to|t:school,t:goes,,He doesn't go to school.,,او به مکتب نمی‌رود.
+17,,Where is my shoe?,,t:Where|t:is|t:my|t:shoe,t:What,,Where is my shoe?,,بوت من کجاست؟
+17,,It is under the bed.,,t:It|t:is|t:under|t:the|t:bed,,,It is under the bed.,,زیر تخت خواب است.
+17,,The ball is in the box.,,t:The|t:ball|t:is|t:in|t:the|t:box,,,The ball is in the box.,,توپ در صندوق است.
+17,,The cat is on the roof.,,t:The|t:cat|t:is|t:on|t:the|t:roof,,,The cat is on the roof.,,پشک بالای بام است.
+17,,My mother is in the kitchen.,,t:My|t:mother|t:is|t:in|t:the|t:kitchen,,,My mother is in the kitchen.,,مادرم در آشپزخانه است.
+18,کلمه را گوش کن. بعد حرف‌ها را به ترتیب درست پشت هم بگذار.,cat,,t:c|t:a|t:t,t:o,,cat,,پشک
+18,,hat,,t:h|t:a|t:t,t:e,,hat,,کلاه
+18,,bag,,t:b|t:a|t:g,t:d,,bag,,بکس
+18,,dog,,t:d|t:o|t:g,t:b,,dog,,سگ
+18,,pot,,t:p|t:o|t:t,t:a,,pot,,دیگ
+18,,box,,t:b|t:o|t:x,t:e,,box,,صندوق
+18,,fox,,t:f|t:o|t:x,t:a,,fox,,روباه
+19,کلمه را گوش کن. بعد حرف‌ها را به ترتیب درست پشت هم بگذار.,pen,,t:p|t:e|t:n,t:a,,pen,,قلم
+19,,hen,,t:h|t:e|t:n,t:m,,hen,,مرغ
+19,,bed,,t:b|t:e|t:d,t:a,,bed,,تخت خواب
+19,,leg,,t:l|t:e|t:g,t:i,,leg,,لنگ
+19,,sun,,t:s|t:u|t:n,t:a,,sun,,آفتاب
+19,,cup,,t:c|t:u|t:p,t:o,,cup,,پیاله
+19,,jug,,t:j|t:u|t:g,t:a,,jug,,کوزه
+19,,six,,t:s|t:i|t:x,t:e,,six,,شش
+20,,This is my day.,,t:This|t:is|t:my|t:day,t:am,,This is my day.,,این روز من است.
+20,,I get up at six o'clock.,,t:I|t:get|t:up|t:at|t:six|t:o'clock,,,I get up at six o'clock.,,من ساعت شش از خواب می‌خیزم.
+20,,She goes to school.,,t:She|t:goes|t:to|t:school,t:go,,She goes to school.,,او به مکتب می‌رود.
+20,,Today is Thursday.,,t:Today|t:is|t:Thursday,t:Tomorrow,,Today is Thursday.,,امروز پنجشنبه است.
+20,,Does he help?,,t:Does|t:he|t:help,t:Do,,Does he help?,,او کمک می‌کند؟
+20,,I can read.,,t:I|t:can|t:read,t:am,,I can read.,,من خوانده می‌توانم.

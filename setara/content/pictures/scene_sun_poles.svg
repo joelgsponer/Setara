@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<g stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect width="400" height="300" fill="#fff6dc" stroke="none"/>
+<circle cx="10" cy="150" r="70" fill="#f2b705"/>
+<path d="M84 136H200V164H84z" fill="#f2b705" stroke-width="3"/>
+<path d="M84 40H290V68H84z" fill="#f2b705" stroke-width="3"/>
+<path d="M84 232H290V260H84z" fill="#f2b705" stroke-width="3"/>
+<circle cx="290" cy="150" r="110" fill="#5da9d6"/>
+<clipPath id="p"><circle cx="290" cy="150" r="110"/></clipPath><g clip-path="url(#p)">
+<path d="M240 96c30-10 60-4 70 20c6 20-16 30-20 50c-4 24-30 36-40 8c-8-24-30-40-10-78z" fill="#9ccb7a" stroke-width="3"/>
+<path d="M330 150c20-4 34 10 28 30c-10 12-30 4-28-30z" fill="#9ccb7a" stroke-width="3"/>
+<path d="M170 30h240v42c-80-22-160-22-240 0zM170 270h240v-42c-80 22-160 22-240 0z" fill="#ffffff" stroke-width="3"/></g>
+<circle cx="290" cy="150" r="110" fill="none"/>
+<path d="M181 136A110 110 0 0 0 181 164" fill="none" stroke="#e0483f" stroke-width="9"/>
+<path d="M217 68A110 110 0 0 1 286 40" fill="none" stroke="#3f7fbf" stroke-width="9"/><path d="M217 232A110 110 0 0 0 286 260" fill="none" stroke="#3f7fbf" stroke-width="9"/>
+</g>
+</svg>

@@ -1,0 +1,51 @@
+{
+  "pack": "en-3-stories",
+  "subject": "en",
+  "level": 3,
+  "version": 1,
+  "optional": true,
+  "title_en": "English story book",
+  "title_fa": "کتاب قصه‌های انگلیسی",
+  "games": [
+    {
+      "id": "first_stories",
+      "engine": "story",
+      "letter": "a",
+      "title_en": "First Stories",
+      "title_fa": "قصه‌های اول",
+      "intro_fa": "قصه را خودت بخوان و گوش کن. با دکمه A ورق بزن. به سوال‌ها جواب بده.",
+      "icon": "book",
+      "sheet": "first_stories.csv"
+    },
+    {
+      "id": "animal_fables",
+      "engine": "story",
+      "letter": "b",
+      "title_en": "Animal Fables",
+      "title_fa": "قصه‌های حیوانات",
+      "intro_fa": "قصه را خودت بخوان و گوش کن. با دکمه A ورق بزن. به سوال‌ها جواب بده.",
+      "icon": "fox",
+      "sheet": "animal_fables.csv"
+    },
+    {
+      "id": "clever_tales",
+      "engine": "story",
+      "letter": "c",
+      "title_en": "Clever Tales",
+      "title_fa": "قصه‌های هوشیاری",
+      "intro_fa": "قصه را خودت بخوان و گوش کن. با دکمه A ورق بزن. به سوال‌ها جواب بده.",
+      "icon": "donkey",
+      "sheet": "clever_tales.csv"
+    },
+    {
+      "id": "yesterday_stories",
+      "engine": "story",
+      "letter": "d",
+      "title_en": "Stories from Yesterday",
+      "title_fa": "قصه‌های دیروز",
+      "intro_fa": "این قصه‌ها از گذشته گپ می‌زنند. اول دو مثال را به دری و انگلیسی بشنو. بعد قصه را بخوان و به سوال‌ها جواب بده.",
+      "icon": "goat",
+      "sheet": "yesterday_stories.csv"
+    }
+  ]
+}

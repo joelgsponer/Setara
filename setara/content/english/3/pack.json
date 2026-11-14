@@ -108,6 +108,16 @@
       "intro_fa": "گوش کن و هر چیز را در سبد درست بینداز.",
       "icon": "basket",
       "sheet": "baskets.csv"
+    },
+    {
+      "id": "yes_no",
+      "engine": "listen_pick",
+      "letter": "k",
+      "title_en": "Yes or No",
+      "title_fa": "بلی یا نه",
+      "intro_fa": "تصویر را ببین و سوال را گوش کن. اگر درست است، بلی را انتخاب کن. اگر درست نیست، نه را انتخاب کن.",
+      "icon": "yes",
+      "sheet": "yes_no.csv"
     }
   ]
 }

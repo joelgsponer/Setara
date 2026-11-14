@@ -1,0 +1,51 @@
+{
+ "pack": "fa-3-stories",
+ "subject": "fa",
+ "level": 3,
+ "version": 1,
+ "optional": true,
+ "title_en": "Dari story book",
+ "title_fa": "کتاب قصه‌های دری",
+ "games": [
+  {
+   "id": "animal_tales",
+   "engine": "story",
+   "letter": "a",
+   "title_en": "Animal Tales",
+   "title_fa": "قصه‌های حیوانات",
+   "intro_fa": "قصه را بخوان. در میان قصه چند سوال است. جواب درست را انتخاب کن.",
+   "icon": "fox",
+   "sheet": "animal_tales.csv"
+  },
+  {
+   "id": "village_tales",
+   "engine": "story",
+   "letter": "b",
+   "title_en": "Children of the Village",
+   "title_fa": "قصه‌های بچه‌های قریه",
+   "intro_fa": "قصه را بخوان. در میان قصه چند سوال است. جواب درست را انتخاب کن.",
+   "icon": "house",
+   "sheet": "village_tales.csv"
+  },
+  {
+   "id": "mulla_tales",
+   "engine": "story",
+   "letter": "c",
+   "title_en": "Mulla Nasruddin",
+   "title_fa": "قصه‌های ملا نصرالدین",
+   "intro_fa": "قصه را بخوان. در میان قصه چند سوال است. جواب درست را انتخاب کن.",
+   "icon": "donkey",
+   "sheet": "mulla_tales.csv"
+  },
+  {
+   "id": "wonder_tales",
+   "engine": "story",
+   "letter": "d",
+   "title_en": "Wonders of Earth and Sky",
+   "title_fa": "شگفتی‌های زمین و آسمان",
+   "intro_fa": "قصه را بخوان. در میان قصه چند سوال است. جواب درست را انتخاب کن.",
+   "icon": "star",
+   "sheet": "wonder_tales.csv"
+  }
+ ]
+}

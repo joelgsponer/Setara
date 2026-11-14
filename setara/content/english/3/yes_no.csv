@@ -1,0 +1,30 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa,hop
+# A picture and a question. The child answers with the yes or the no picture. The same question comes with different pictures, so she must look.
+# 06: Is it ... o'clock?
+06,,Is it seven o'clock?,,clock_7,yes,no,ساعت هفت است؟,
+06,,Is it three o'clock?,,clock_9,no,yes,ساعت سه است؟,
+06,,Is it twelve o'clock?,,clock_12,yes,no,ساعت دوازده است؟,
+06,,Is it five o'clock?,,clock_4,no,yes,ساعت پنج است؟,
+06,,Is it ten o'clock?,,clock_10,yes,no,ساعت ده است؟,
+06,,Is it two o'clock?,,clock_2,yes,no,ساعت دو است؟,
+06,,Is it eight o'clock?,,clock_6,no,yes,ساعت هشت است؟,
+06,,Is it one o'clock?,,clock_11,no,yes,ساعت یک است؟,
+# 14: Does she ...? Does he ...? The short answers are Yes, she does and No, he doesn't.
+14,,Does she cook?,,cook,yes,no,او غذا می‌پزد؟,
+14,,Does he cook?,,work,no,yes,او غذا می‌پزد؟,
+14,,Does she read?,,read,yes,no,او می‌خواند؟,
+14,,Does he write?,,write,yes,no,او می‌نویسد؟,
+14,,Does he clean?,,sweep,yes,no,او پاک می‌کند؟,
+14,,Does she cook?,,carry,no,yes,او غذا می‌پزد؟,
+14,,Does he play?,,sleep,no,yes,او بازی می‌کند؟,
+14,,Does she get up?,,wake_up,yes,no,او از خواب می‌خیزد؟,
+14,,Does she sleep?,,eating,no,yes,او می‌خوابد؟,
+# 17: Is it in, on, under, next to?
+17,,Is the ball on the table?,,pos_on,yes,no,توپ بالای میز است؟,
+17,,Is the ball on the table?,,pos_under,no,yes,توپ بالای میز است؟,
+17,,Is the ball in the box?,,pos_in,yes,no,توپ در صندوق است؟,
+17,,Is the ball in the box?,,pos_next_to,no,yes,توپ در صندوق است؟,
+17,,Is the ball under the table?,,pos_under,yes,no,توپ زیر میز است؟,
+17,,Is the ball next to the box?,,pos_next_to,yes,no,توپ پهلوی صندوق است؟,
+17,,Is the ball under the table?,,pos_on,no,yes,توپ زیر میز است؟,
+17,,Is the ball next to the box?,,pos_in,no,yes,توپ پهلوی صندوق است؟,

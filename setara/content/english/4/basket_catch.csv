@@ -1,0 +1,11 @@
+round,say_en,say_fa,targets,others,need,help_fa
+# The rule is spoken in English; Y gives it in Dari.
+06,Catch the fruit.,,pear|banana|peach|melon|cherries|lemon,cucumber|garlic|cabbage|pumpkin|eggplant,5,میوه‌ها را بگیر.
+06,Catch the vegetables.,,cucumber|garlic|cabbage|pumpkin|eggplant|pepper,pear|banana|peach|melon|cherries,5,ترکاری‌ها را بگیر.
+06,Catch the money.,,coin|note|money,button|egg|lemon|soap,5,پول را بگیر.
+11,Catch the food.,,cheese|beans|bread|rice|chickpeas|lentils,soap|coin|book|key|purse,5,خوراکی‌ها را بگیر.
+11,Catch the things you drink.,,water|milk|tea,bread|cheese|salt|flour_sack|egg,5,چیزهایی را بگیر که می‌نوشی.
+11,Catch the fruit and the vegetables.,,pear|cucumber|cabbage|banana|pumpkin|peach,bread|cheese|salt|milk|coin,5,میوه‌ها و ترکاری‌ها را بگیر.
+16,Catch the things you can eat.,,samosa|kebab|biscuits|bread|cheese|peach,candle|matches|hammer|lock|soap,5,چیزهایی را بگیر که خورده می‌توانی.
+16,Catch the things you can't eat.,,candle|matches|hammer|lock|scissors|shovel,samosa|kebab|biscuits|bread|pear,5,چیزهایی را بگیر که خورده نمی‌توانی.
+16,Catch the things a tailor needs.,,scissors|needle|cloth|button|metre,hammer|shovel|lamp|kebab|lock,5,چیزهایی را بگیر که خیاط به آن ضرورت دارد.
