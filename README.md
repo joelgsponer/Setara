@@ -51,7 +51,7 @@ More of it:
 
 ## What is in it
 
-About 450 rounds in 14 packs, 600 pictures, and 20 classroom lessons:
+434 rounds in 14 packs, about 600 pictures, and 20 classroom lessons:
 
 - English 1 and 2, with the teacher's lessons for level 1
 - Dari reading 1 and 2: sounds, letters, letter shapes, first words

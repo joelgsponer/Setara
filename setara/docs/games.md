@@ -318,8 +318,8 @@ comes back once later.
 either player the first time they came up. The points are shown during the
 round; no winner is announced at the end.
 
-**In the current code** written choices are not read aloud in a Duel, even
-where the game has `read_choices`.
+A game with `read_choices` does not become a Duel: with two players it is
+played in turns, so that the choices can be read aloud first.
 
 **Item data.** As Listen and Pick.
 

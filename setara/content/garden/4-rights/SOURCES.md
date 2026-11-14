@@ -14,7 +14,7 @@
 - `content/i18n/rights.csv` carries the faithful English of every Dari text of
   the pack, so that someone who does not read Dari can judge what is said.
   The English is not a check of the Dari.
-- The 21 pictures in `pictures.txt` are not drawn yet. A local reviewer
+- The 21 pictures in `pictures.txt` are drawn. A local reviewer
   approves every picture of a person.
 
 ## The basis

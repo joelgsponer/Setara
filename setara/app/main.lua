@@ -10,7 +10,7 @@ app = { stack = {}, time = 0, play_seconds = 0, version = require("version") }
 local canvas
 local speed = tonumber(os.getenv("SETARA_SPEED")) or 1
 local script, script_wait, shot_name
--- Recording a film of the app (tools/film.sh): SETARA_RECORD names a folder
+-- Recording a film of the app (tools/film/make.py): SETARA_RECORD names a folder
 -- in the save directory. Time then advances exactly 1/30 s per frame, every
 -- frame is saved, and every sound is noted with its frame number.
 local record = os.getenv("SETARA_RECORD")

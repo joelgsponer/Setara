@@ -8,7 +8,7 @@ the card and nothing of it is there. No other pack refers to it.
 **Not yet read or heard by a Dari speaker.** Every fact in the pack is taken
 from the project's geography fact sheet, pasted in full at the end. No other
 fact was added. `content/i18n/world.csv` carries the faithful English of every
-Dari text. The 23 pictures listed in `pictures.txt` are not drawn yet; the map
+Dari text. The 23 pictures listed in `pictures.txt` are drawn and unreviewed; the map
 pictures (`map_*`, `scene_map_*`, `globe`) are generated from map data.
 
 ## The games

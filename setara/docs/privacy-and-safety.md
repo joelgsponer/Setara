@@ -171,11 +171,11 @@ the file off the card and nothing of it is on the device: no game tile, no
 picture, no sound. No other pack refers to it. An optional pack is named
 `<subject>-<level>-<name>` and adds its games to that level of that place.
 
-`image/make_card.py` copies every zip it finds in `packs/`, optional or not.
-**To leave an optional pack off a card, remove its zip from `packs/` before
-making the card folder, or delete it from
-`setara/data/love/setara/packs/` on the card.** There is no switch for it
-yet. `VERSION.txt` in the card folder says how many packs `make_card.py` put there.
+`image/make_card.py` copies every zip it finds in `packs/`, optional or not,
+unless told otherwise. **To leave an optional pack off a card, run
+`python3 image/make_card.py --without garden-4-rights` (repeat `--without`
+for each pack), or delete its zip from `setara/data/love/setara/packs/` on
+the card.** `VERSION.txt` in the card folder says how many packs `make_card.py` put there.
 
 There are two optional packs today.
 

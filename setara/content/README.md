@@ -10,7 +10,7 @@ Authored sources for every pack, one folder per subject. Built packs go to
 | `math/` | Math, the Workshop | 6 |
 | `garden/` | Health and environment, the Garden | 4 |
 | `teacher/` | Classroom lessons, Phrase Board, Teacher's Course | |
-| `templates/` | One spreadsheet template per engine | |
+| `templates/` | Empty so far; the sheet formats are in `docs/authoring.md` | |
 
 A level is authored as rows: English text, Dari text, picture name, answer,
 distractors. Dari is written in normal logical order here; the builder shapes

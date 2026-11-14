@@ -41,7 +41,7 @@ The piper voices are **stand-ins**. Two things about them matter:
 
 This path is written but has never been run: there was no key to test it with.
 The clips are cached per provider and voice, so switching regenerates all of
-them once (about 5,000 clips for the current content).
+them once (about 6,900 clip files, slow variants included, for the current content).
 
 ## Format
 

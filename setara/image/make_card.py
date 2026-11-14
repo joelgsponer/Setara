@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Assemble the SD card folder: the app, every built pack, and launchers.
 
-  python3 image/make_card.py [--out dist/card]
+  python3 image/make_card.py [--out dist/card] [--without garden-4-rights]
 
 Result:
   setara/
@@ -56,6 +56,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", type=Path, default=ROOT / "dist" / "card")
     ap.add_argument("--packs", type=Path, default=ROOT / "packs")
+    ap.add_argument("--without", action="append", default=[], metavar="PACK",
+                    help="leave this pack off the card, e.g. --without garden-4-rights (repeatable)")
     args = ap.parse_args()
 
     card = args.out / "setara"
@@ -76,6 +78,9 @@ def main() -> None:
     for pack in sorted(args.packs.glob("*.zip")):
         with zipfile.ZipFile(pack) as z:
             manifest = json.loads(z.read("manifest.json"))
+        if manifest["pack"] in args.without:
+            print(f"left off the card: {manifest['pack']}")
+            continue
         shutil.copy(pack, save / "packs" / f"{manifest['pack']}.v{manifest['version']}.zip")
         count += 1
 

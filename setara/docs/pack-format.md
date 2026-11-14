@@ -4,7 +4,7 @@
 
 A pack is a zip file: one per subject and level (`en-1`, `fa-2`, `math-3`,
 `garden-1`), one per set of teacher lessons (`teacher-en-1`), and `core` with
-the app's own strings. Packs are 5 to 16 MB.
+the app's own strings. Learner packs are 5 to 22 MB; `core` is 1 MB.
 
 ```
 en-1.zip
@@ -104,7 +104,7 @@ size. There are no profiles.
 | `device` | A random id. The team maps it to a classroom on paper, or not at all |
 | `weeks` | Minutes of use per ISO week and per subject or `teacher` |
 | `rounds` | Per round: plays, answers, first-try right answers, minutes, stars |
-| `checks` | Quick Check per lesson: right answers out of class size |
+| `checks` | Quick Check per lesson: right answers out of class size times the number of questions |
 | `teacher` | Lessons finished, previews run, tools opened, course lesson reached |
 | `log` | The last 30 problems: app version, a short code, the week |
 

@@ -9,7 +9,7 @@ qualified must read the fact sheet and every text of the pack
 and a Dari-speaking educator must read and hear the Dari.
 
 No doses, no names of medicines, no home remedies. The pictures listed in
-`pictures.txt` are not drawn yet.
+`pictures.txt` are drawn; none has been seen by a local reviewer.
 
 ## Where the pack simplifies, or goes a little beyond, the fact sheet
 
@@ -227,7 +227,7 @@ a Dari-speaking educator.** Added later than the rest of the pack: the game
 07, `danger_signs` round 04. Every medical statement comes from the poisoning
 fact sheet pasted in full below; nothing medical was added by the author of
 the sheets. No names or doses of medicines, no antidotes, no home remedies.
-The 18 new pictures (last 18 lines of `pictures.txt`) are not drawn yet.
+The 18 new pictures (last 18 lines of `pictures.txt`) are drawn and unreviewed.
 
 ### Where the poisoning part simplifies, or goes a little beyond, the fact sheet
 

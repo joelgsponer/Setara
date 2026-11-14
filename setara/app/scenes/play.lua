@@ -71,7 +71,15 @@ function Play:enter()
   local round, err = packs.round(self.pack, self.round_id)
   -- Two children on one device: picture-picking rounds become a duel.
   local id = round and round.engine
-  if self.pair and (id == "listen_pick") then id = "duel" end
+  -- Two players race in a duel, except where the choices are read aloud first:
+  -- there they take turns, so nobody has to read to answer.
+  local read_aloud = false
+  for _, item in ipairs(round and round.items or {}) do
+    for _, choice in ipairs(item.choices or {}) do
+      if type(choice) == "table" and choice.audio then read_aloud = true end
+    end
+  end
+  if self.pair and (id == "listen_pick") and not read_aloud then id = "duel" end
   local mod = round and (engines.get(id) or engines.get(round.engine))
   if not round or not mod then
     store.log("round " .. tostring(self.round_id) .. ": " .. tostring(err or "no engine"))
