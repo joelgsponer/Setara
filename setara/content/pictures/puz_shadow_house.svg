@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<g fill="#3b2f2f"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="12" y="44" width="104" height="72" fill="#3b2f2f"/><rect x="6" y="30" width="116" height="16" rx="2" fill="#3b2f2f"/>
+<circle cx="24" cy="54" r="3" fill="#3b2f2f" stroke-width="2.5"/><circle cx="44" cy="54" r="3" fill="#3b2f2f" stroke-width="2.5"/><circle cx="64" cy="54" r="3" fill="#3b2f2f" stroke-width="2.5"/><circle cx="84" cy="54" r="3" fill="#3b2f2f" stroke-width="2.5"/><circle cx="104" cy="54" r="3" fill="#3b2f2f" stroke-width="2.5"/>
+<rect x="28" y="68" width="30" height="48" fill="#3b2f2f"/><path d="M38 68v48M48 68v48" fill="none" stroke-width="3"/><circle cx="53" cy="94" r="2.5" fill="#3b2f2f" stroke="none"/>
+<rect x="76" y="70" width="26" height="24" fill="#3b2f2f"/><path d="M89 70v24M76 82h26" fill="none" stroke-width="3"/>
+<path d="M4 116h120" fill="none"/>
+</g></g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<g fill="#3b2f2f"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" >
+<path d="M64 14V6M64 66V108C64 122 44 122 44 108" fill="none" stroke-width="6"/><path d="M8 66C8 30 34 12 64 12C94 12 120 30 120 66C112 56 100 56 92 66C84 56 72 56 64 66C56 56 44 56 36 66C28 56 16 56 8 66z" fill="#3b2f2f" /><path d="M64 12C50 28 38 46 36 66M64 12C78 28 90 46 92 66" fill="none" stroke-width="4"/>
+</g></g>
+</svg>

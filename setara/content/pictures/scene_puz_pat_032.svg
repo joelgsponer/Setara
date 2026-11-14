@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<rect width="400" height="300" fill="#fff6dc"/>
+<rect x="0" y="90.6" width="400" height="94.8" fill="#e8d2a6"/>
+<rect x="349.2" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(352.7 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M64.0 10.0L78.1 48.6L119.2 50.1L86.8 75.4L98.1 114.9L64.0 92.0L29.9 114.9L41.2 75.4L8.8 50.1L49.9 48.6z" fill="#f2b705"/>
+</g></g>
+<rect x="300.5" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(303.9 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M64.0 10.0L78.1 48.6L119.2 50.1L86.8 75.4L98.1 114.9L64.0 92.0L29.9 114.9L41.2 75.4L8.8 50.1L49.9 48.6z" fill="#f2b705"/>
+</g></g>
+<rect x="251.8" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(255.2 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M10 118l16-16" fill="none" stroke-width="10"/><path d="M10 118l16-16" fill="none" stroke="#9a6b3f" stroke-width="3"/><path d="M22 106C14 58 46 16 112 16c2 54-34 98-90 90z" fill="#4e9a51"/><path d="M24 104L90 38M44 84l-4-24M44 84l24 2M64 64l-3-24M64 64l24 2" fill="none" stroke-width="3.5"/>
+</g></g>
+<rect x="203.0" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(206.4 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M10 118l16-16" fill="none" stroke-width="10"/><path d="M10 118l16-16" fill="none" stroke="#9a6b3f" stroke-width="3"/><path d="M22 106C14 58 46 16 112 16c2 54-34 98-90 90z" fill="#4e9a51"/><path d="M24 104L90 38M44 84l-4-24M44 84l24 2M64 64l-3-24M64 64l24 2" fill="none" stroke-width="3.5"/>
+</g></g>
+<rect x="154.2" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(157.7 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M64.0 10.0L78.1 48.6L119.2 50.1L86.8 75.4L98.1 114.9L64.0 92.0L29.9 114.9L41.2 75.4L8.8 50.1L49.9 48.6z" fill="#f2b705"/>
+</g></g>
+<rect x="105.5" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(108.9 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M64.0 10.0L78.1 48.6L119.2 50.1L86.8 75.4L98.1 114.9L64.0 92.0L29.9 114.9L41.2 75.4L8.8 50.1L49.9 48.6z" fill="#f2b705"/>
+</g></g>
+<rect x="56.8" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffe9a8" stroke="#f2b705" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/><circle cx="78.1" cy="138.0" r="3.8" fill="#f2b705"/>
+<rect x="8.0" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(11.4 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M10 118l16-16" fill="none" stroke-width="10"/><path d="M10 118l16-16" fill="none" stroke="#9a6b3f" stroke-width="3"/><path d="M22 106C14 58 46 16 112 16c2 54-34 98-90 90z" fill="#4e9a51"/><path d="M24 104L90 38M44 84l-4-24M44 84l24 2M64 64l-3-24M64 64l24 2" fill="none" stroke-width="3.5"/>
+</g></g>
+<path d="M330 215.375H70M86 204.375L70 215.375L86 226.375" fill="none" stroke="#b9ae9b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

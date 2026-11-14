@@ -1,0 +1,19 @@
+round,intro_fa,a,b,say_en,say_fa
+01,دو کارت را پیدا کن که با هم جور است. فکر کن: کدام چیز به کدام چیز کار دارد؟,key,lock,,کلید و قفل
+01,,hen,egg,,مرغ و تخم
+01,,cow,milk,,گاو و شیر
+01,,bee,honey,,زنبور و عسل
+01,,foot,shoe,,پای و بوت
+01,,rain,umbrella,,باران و چتری
+02,دو کارت را پیدا کن که با هم جور است. فکر کن: کدام چیز به کدام چیز کار دارد؟,sheep,wool,,گوسفند و پشم
+02,,wheat,bread,,گندم و نان
+02,,sparrow,nest,,گنجشک و آشیانه
+02,,eye,glasses,,چشم و عینک
+02,,tooth,toothbrush,,دندان و برس دندان
+02,,pen,notebook,,قلم و کتابچه
+03,هر چیز یک سایه دارد. هر چیز را با سایه خودش جوره کن.,rooster,puz_shadow_rooster,,خروس و سایه‌اش
+03,,bell,puz_shadow_bell,,زنگ و سایه‌اش
+03,,shoe,puz_shadow_shoe,,بوت و سایه‌اش
+03,,elephant,puz_shadow_elephant,,فیل و سایه‌اش
+03,,pear,puz_shadow_pear,,ناک و سایه‌اش
+03,,house,puz_shadow_house,,خانه و سایه‌اش

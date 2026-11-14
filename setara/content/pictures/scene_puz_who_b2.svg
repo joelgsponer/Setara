@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<rect width="400" height="300" fill="#bfe3f0"/>
+<rect x="0" y="0" width="400" height="300" fill="#bfe3f0"/>
+<rect x="0" y="210" width="400" height="90" fill="#e8d2a6"/>
+<g transform="translate(214.0 60.0) scale(1.3281)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M34 122c0-26 10-40 30-40s30 14 30 40z" fill="#8e5bb5"/>
+<path d="M30 60c0-24 14-40 34-40s34 16 34 40c0 14-4 26-10 34H40c-6-8-10-20-10-34z" fill="#3f7fbf"/>
+<ellipse cx="64" cy="60" rx="22" ry="24" fill="#e8b98a"/>
+<path d="M42 54c6-12 14-16 22-16s16 4 22 16" fill="none"/>
+</g>
+<circle cx="55" cy="62" r="3.5" fill="#3b2f2f"/><circle cx="73" cy="62" r="3.5" fill="#3b2f2f"/>
+<path d="M56 73c5 5 11 5 16 0" fill="none" stroke="#3b2f2f" stroke-width="4" stroke-linecap="round"/></g>
+<rect x="34.0" y="78.0" width="150.0" height="150.0" rx="8" fill="#fff6dc" stroke="#3b2f2f" stroke-width="4"/>
+<g transform="translate(49.0 93.0) scale(0.9375)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M64 28c0-8 2-12 6-18" fill="none" stroke="#3b2f2f" stroke-width="5" /><path d="M70 14c8-8 20-8 26-2c-6 10-18 12-26 2z" fill="#4e9a51" /><path d="M64 26c-12 0-16 12-18 24c-2 12-20 20-20 40c0 20 16 32 38 32s38-12 38-32c0-20-18-28-20-40c-2-12-6-24-18-24z" fill="#c9d24f" /><path d="M40 84c2-8 6-14 12-18" fill="none" stroke="#fff" stroke-width="5" opacity=".7"/>
+</g></g>
+<g transform="translate(110.0 150.0) scale(0.7188)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M26 26L102 102M102 26L26 102" fill="none" stroke="#3b2f2f" stroke-width="30" /><path d="M26 26L102 102M102 26L26 102" fill="none" stroke="#e0483f" stroke-width="19" />
+</g></g>
+</svg>

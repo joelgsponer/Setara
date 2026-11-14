@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<rect width="400" height="300" fill="#fff6dc"/>
+<rect x="0" y="82.5" width="400" height="111.0" fill="#e8d2a6"/>
+<rect x="333.0" y="108.5" width="59.0" height="59.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="362.5" cy="138.0" r="21.4" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="268.0" y="108.5" width="59.0" height="59.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="297.5" cy="138.0" r="21.4" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="203.0" y="108.5" width="59.0" height="59.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="232.5" cy="138.0" r="21.4" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="138.0" y="108.5" width="59.0" height="59.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="167.5" cy="138.0" r="21.4" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="73.0" y="108.5" width="59.0" height="59.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="102.5" cy="138.0" r="21.4" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="8.0" y="108.5" width="59.0" height="59.0" rx="8" fill="#ffe9a8" stroke="#f2b705" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/><circle cx="37.5" cy="138.0" r="5.3" fill="#f2b705"/>
+<path d="M330 223.5H70M86 212.5L70 223.5L86 234.5" fill="none" stroke="#b9ae9b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

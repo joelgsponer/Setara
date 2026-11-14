@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<rect width="400" height="300" fill="#fff6dc"/>
+<rect x="47.0" y="-3.0" width="306.0" height="306.0" rx="12" fill="#e8d2a6"/>
+<rect x="59.0" y="9.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="92.0" cy="42.0" r="22.8" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="131.0" y="9.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="164.0" cy="42.0" r="22.8" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="203.0" y="9.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="236.0" cy="42.0" r="22.8" fill="#f2b705" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="275.0" y="9.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="308.0" cy="42.0" r="22.8" fill="#4e9a51" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="59.0" y="81.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="92.0" cy="114.0" r="22.8" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="131.0" y="81.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="164.0" cy="114.0" r="22.8" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="203.0" y="81.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="236.0" cy="114.0" r="22.8" fill="#4e9a51" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="275.0" y="81.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="308.0" cy="114.0" r="22.8" fill="#f2b705" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="59.0" y="153.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="92.0" cy="186.0" r="22.8" fill="#f2b705" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="131.0" y="153.0" width="66.0" height="66.0" rx="8" fill="#ffe9a8" stroke="#f2b705" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/><circle cx="164.0" cy="186.0" r="5.9" fill="#f2b705"/>
+<rect x="203.0" y="153.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="236.0" cy="186.0" r="22.8" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="275.0" y="153.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="308.0" cy="186.0" r="22.8" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="59.0" y="225.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="92.0" cy="258.0" r="22.8" fill="#4e9a51" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="131.0" y="225.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="164.0" cy="258.0" r="22.8" fill="#f2b705" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="203.0" y="225.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="236.0" cy="258.0" r="22.8" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="275.0" y="225.0" width="66.0" height="66.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="308.0" cy="258.0" r="22.8" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>

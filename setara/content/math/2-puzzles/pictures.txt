@@ -1,0 +1,235 @@
+# The pictures drawn for this pack, by make_puzzles.py. name: what it shows
+puz_arrow_down: A fat green arrow pointing down.
+puz_arrow_left: A fat green arrow pointing left.
+puz_arrow_up: A fat green arrow pointing up.
+puz_boat_empty: An empty wooden boat on water, nobody and nothing in it (the choice 'take nothing').
+puz_bread_equal: A flat oval bread cut into two EQUAL halves, a small gap between them.
+puz_bread_unequal: The same flat bread cut into one BIG piece and one SMALL piece. Pair with puz_bread_equal.
+puz_circle_blue: A blue circle, flat colour, dark outline, filling the square.
+puz_circle_green: A green circle, flat colour, dark outline, filling the square.
+puz_circle_red: A red circle, flat colour, dark outline, filling the square.
+puz_circle_yellow: A yellow circle, flat colour, dark outline, filling the square.
+puz_dots_2: 2 blue dots in pairs (two rows), like a domino.
+puz_dots_4: 4 blue dots in pairs (two rows), like a domino.
+puz_dots_5: 5 blue dots in pairs (two rows), like a domino.
+puz_dots_6: 6 blue dots in pairs (two rows), like a domino.
+puz_dots_7: 7 blue dots in pairs (two rows), like a domino.
+puz_dots_8: 8 blue dots in pairs (two rows), like a domino.
+puz_fig1_base: Figure 1: 4 orange squares joined edge to edge, as given. Series puz_fig1_*: only the position changes.
+puz_fig1_m: Figure 1: 4 orange squares joined edge to edge, as seen in a mirror standing beside it. Series puz_fig1_*: only the position changes.
+puz_fig1_m180: Figure 1: 4 orange squares joined edge to edge, mirrored and turned upside down. Series puz_fig1_*: only the position changes.
+puz_fig1_m90: Figure 1: 4 orange squares joined edge to edge, mirrored and then turned a quarter turn. Series puz_fig1_*: only the position changes.
+puz_fig1_mirror: Figure 1 standing left of an upright mirror (a tall pale blue bar); right of the mirror an empty yellow place for its mirror picture.
+puz_fig1_r180: Figure 1: 4 orange squares joined edge to edge, turned upside down (half a turn). Series puz_fig1_*: only the position changes.
+puz_fig1_r90: Figure 1: 4 orange squares joined edge to edge, turned a quarter turn to the right. Series puz_fig1_*: only the position changes.
+puz_fig2_base: Figure 2: 5 blue squares joined edge to edge, as given. Series puz_fig2_*: only the position changes.
+puz_fig2_m: Figure 2: 5 blue squares joined edge to edge, as seen in a mirror standing beside it. Series puz_fig2_*: only the position changes.
+puz_fig2_m180: Figure 2: 5 blue squares joined edge to edge, mirrored and turned upside down. Series puz_fig2_*: only the position changes.
+puz_fig2_m90: Figure 2: 5 blue squares joined edge to edge, mirrored and then turned a quarter turn. Series puz_fig2_*: only the position changes.
+puz_fig2_mirror: Figure 2 standing left of an upright mirror (a tall pale blue bar); right of the mirror an empty yellow place for its mirror picture.
+puz_fig2_r180: Figure 2: 5 blue squares joined edge to edge, turned upside down (half a turn). Series puz_fig2_*: only the position changes.
+puz_fig3_base: Figure 3: 5 green squares joined edge to edge, as given. Series puz_fig3_*: only the position changes.
+puz_fig3_m: Figure 3: 5 green squares joined edge to edge, as seen in a mirror standing beside it. Series puz_fig3_*: only the position changes.
+puz_fig3_m180: Figure 3: 5 green squares joined edge to edge, mirrored and turned upside down. Series puz_fig3_*: only the position changes.
+puz_fig3_m90: Figure 3: 5 green squares joined edge to edge, mirrored and then turned a quarter turn. Series puz_fig3_*: only the position changes.
+puz_fig3_mirror: Figure 3 standing left of an upright mirror (a tall pale blue bar); right of the mirror an empty yellow place for its mirror picture.
+puz_fig3_r180: Figure 3: 5 green squares joined edge to edge, turned upside down (half a turn). Series puz_fig3_*: only the position changes.
+puz_fig3_r90: Figure 3: 5 green squares joined edge to edge, turned a quarter turn to the right. Series puz_fig3_*: only the position changes.
+puz_fig4_base: Figure 4: 5 purple squares joined edge to edge, as given. Series puz_fig4_*: only the position changes.
+puz_fig4_m: Figure 4: 5 purple squares joined edge to edge, as seen in a mirror standing beside it. Series puz_fig4_*: only the position changes.
+puz_fig4_m180: Figure 4: 5 purple squares joined edge to edge, mirrored and turned upside down. Series puz_fig4_*: only the position changes.
+puz_fig4_m90: Figure 4: 5 purple squares joined edge to edge, mirrored and then turned a quarter turn. Series puz_fig4_*: only the position changes.
+puz_fig4_mirror: Figure 4 standing left of an upright mirror (a tall pale blue bar); right of the mirror an empty yellow place for its mirror picture.
+puz_fig4_r180: Figure 4: 5 purple squares joined edge to edge, turned upside down (half a turn). Series puz_fig4_*: only the position changes.
+puz_fig5_base: Figure 5: 5 red squares joined edge to edge, as given. Series puz_fig5_*: only the position changes.
+puz_fig5_m: Figure 5: 5 red squares joined edge to edge, as seen in a mirror standing beside it. Series puz_fig5_*: only the position changes.
+puz_fig5_m180: Figure 5: 5 red squares joined edge to edge, mirrored and turned upside down. Series puz_fig5_*: only the position changes.
+puz_fig5_m90: Figure 5: 5 red squares joined edge to edge, mirrored and then turned a quarter turn. Series puz_fig5_*: only the position changes.
+puz_fig5_mirror: Figure 5 standing left of an upright mirror (a tall pale blue bar); right of the mirror an empty yellow place for its mirror picture.
+puz_fig5_r180: Figure 5: 5 red squares joined edge to edge, turned upside down (half a turn). Series puz_fig5_*: only the position changes.
+puz_fig5_r90: Figure 5: 5 red squares joined edge to edge, turned a quarter turn to the right. Series puz_fig5_*: only the position changes.
+puz_fig6_base: Figure 6: 5 yellow squares joined edge to edge, as given. Series puz_fig6_*: only the position changes.
+puz_fig6_m: Figure 6: 5 yellow squares joined edge to edge, as seen in a mirror standing beside it. Series puz_fig6_*: only the position changes.
+puz_fig6_m180: Figure 6: 5 yellow squares joined edge to edge, mirrored and turned upside down. Series puz_fig6_*: only the position changes.
+puz_fig6_m90: Figure 6: 5 yellow squares joined edge to edge, mirrored and then turned a quarter turn. Series puz_fig6_*: only the position changes.
+puz_fig6_mirror: Figure 6 standing left of an upright mirror (a tall pale blue bar); right of the mirror an empty yellow place for its mirror picture.
+puz_fig6_r180: Figure 6: 5 yellow squares joined edge to edge, turned upside down (half a turn). Series puz_fig6_*: only the position changes.
+puz_house_blue: A small flat-roofed house with blue walls, a brown door and one window.
+puz_house_red: A small flat-roofed house with red walls, a brown door and one window.
+puz_house_yellow: A small flat-roofed house with yellow walls, a brown door and one window.
+puz_kid_boy_green: The library boy (head and shoulders): white cap, green shirt.
+puz_kid_boy_orange: The library boy with an orange shirt.
+puz_kid_girl_blue: The library girl (head and shoulders): blue headscarf, purple dress.
+puz_kid_girl_green: The library girl with a green headscarf and a yellow dress.
+puz_kid_girl_red: The library girl with a red headscarf and an orange dress.
+puz_shadow_bell: The shadow of the library picture 'bell': the same drawing, all in one dark colour.
+puz_shadow_butterfly: The shadow of the library picture 'butterfly': the same drawing, all in one dark colour.
+puz_shadow_camel: The shadow of the library picture 'camel': the same drawing, all in one dark colour.
+puz_shadow_cat: The shadow of the library picture 'cat': the same drawing, all in one dark colour.
+puz_shadow_chair: The shadow of the library picture 'chair': the same drawing, all in one dark colour.
+puz_shadow_cow: The shadow of the library picture 'cow': the same drawing, all in one dark colour.
+puz_shadow_dog: The shadow of the library picture 'dog': the same drawing, all in one dark colour.
+puz_shadow_donkey: The shadow of the library picture 'donkey': the same drawing, all in one dark colour.
+puz_shadow_elephant: The shadow of the library picture 'elephant': the same drawing, all in one dark colour.
+puz_shadow_fish: The shadow of the library picture 'fish': the same drawing, all in one dark colour.
+puz_shadow_goat: The shadow of the library picture 'goat': the same drawing, all in one dark colour.
+puz_shadow_horse: The shadow of the library picture 'horse': the same drawing, all in one dark colour.
+puz_shadow_house: The shadow of the library picture 'house': the same drawing, all in one dark colour.
+puz_shadow_key: The shadow of the library picture 'key': the same drawing, all in one dark colour.
+puz_shadow_pear: The shadow of the library picture 'pear': the same drawing, all in one dark colour.
+puz_shadow_rooster: The shadow of the library picture 'rooster': the same drawing, all in one dark colour.
+puz_shadow_sheep: The shadow of the library picture 'sheep': the same drawing, all in one dark colour.
+puz_shadow_shoe: The shadow of the library picture 'shoe': the same drawing, all in one dark colour.
+puz_shadow_tree: The shadow of the library picture 'tree': the same drawing, all in one dark colour.
+puz_shadow_umbrella: The shadow of the library picture 'umbrella': the same drawing, all in one dark colour.
+puz_size_1: A blue circle, size 1 of 5 (1 is the smallest, 5 fills the square).
+puz_size_2: A blue circle, size 2 of 5 (1 is the smallest, 5 fills the square).
+puz_size_3: A blue circle, size 3 of 5 (1 is the smallest, 5 fills the square).
+puz_size_4: A blue circle, size 4 of 5 (1 is the smallest, 5 fills the square).
+puz_size_5: A blue circle, size 5 of 5 (1 is the smallest, 5 fills the square).
+puz_small_circle_green: A SMALL green circle, flat colour, dark outline, about half the size of the other puz_ shapes, centred.
+puz_small_circle_red: A SMALL red circle, flat colour, dark outline, about half the size of the other puz_ shapes, centred.
+puz_small_circle_yellow: A SMALL yellow circle, flat colour, dark outline, about half the size of the other puz_ shapes, centred.
+puz_small_square_blue: A SMALL blue square, flat colour, dark outline, about half the size of the other puz_ shapes, centred.
+puz_small_star_yellow: A SMALL yellow five-pointed star, flat colour, dark outline, about half the size of the other puz_ shapes, centred.
+puz_small_triangle_blue: A SMALL blue triangle, flat colour, dark outline, about half the size of the other puz_ shapes, centred.
+puz_small_triangle_green: A SMALL green triangle, flat colour, dark outline, about half the size of the other puz_ shapes, centred.
+puz_small_triangle_red: A SMALL red triangle, flat colour, dark outline, about half the size of the other puz_ shapes, centred.
+puz_square_blue: A blue square, flat colour, dark outline, filling the square.
+puz_square_green: A green square, flat colour, dark outline, filling the square.
+puz_square_red: A red square, flat colour, dark outline, filling the square.
+puz_square_yellow: A yellow square, flat colour, dark outline, filling the square.
+puz_star_blue: A blue five-pointed star, flat colour, dark outline, filling the square.
+puz_star_red: A red five-pointed star, flat colour, dark outline, filling the square.
+puz_star_yellow: A yellow five-pointed star, flat colour, dark outline, filling the square.
+puz_tower_1: A tower of 1 orange blocks, one on top of the other, standing at the bottom.
+puz_tower_2: A tower of 2 orange blocks, one on top of the other, standing at the bottom.
+puz_tower_3: A tower of 3 orange blocks, one on top of the other, standing at the bottom.
+puz_tower_4: A tower of 4 orange blocks, one on top of the other, standing at the bottom.
+puz_tower_5: A tower of 5 orange blocks, one on top of the other, standing at the bottom.
+puz_tower_6: A tower of 6 orange blocks, one on top of the other, standing at the bottom.
+puz_triangle_blue: A blue triangle, flat colour, dark outline, filling the square.
+puz_triangle_red: A red triangle, flat colour, dark outline, filling the square.
+puz_triangle_yellow: A yellow triangle, flat colour, dark outline, filling the square.
+scene_puz_count_01: A line figure on a plain ground: a square with one diagonal. It holds exactly 2 triangles. (Drawn by make_puzzles.py.)
+scene_puz_count_02: A line figure on a plain ground: a triangle with one line from the top corner to the base. It holds exactly 3 triangles. (Drawn by make_puzzles.py.)
+scene_puz_count_03: A line figure on a plain ground: a square cut into 2 by 2 small squares. It holds exactly 5 squares. (Drawn by make_puzzles.py.)
+scene_puz_count_04: A line figure on a plain ground: two equal squares that overlap at a corner, so that the overlap is a small square. It holds exactly 3 squares. (Drawn by make_puzzles.py.)
+scene_puz_count_05: A line figure on a plain ground: a triangle with two lines from the top corner to the base. It holds exactly 6 triangles. (Drawn by make_puzzles.py.)
+scene_puz_count_06: A line figure on a plain ground: a square with both diagonals. It holds exactly 8 triangles. (Drawn by make_puzzles.py.)
+scene_puz_count_07: A line figure on a plain ground: a square cut into 3 by 3 small squares. It holds exactly 14 squares. (Drawn by make_puzzles.py.)
+scene_puz_count_08: A line figure on a plain ground: a triangle with one line from the top corner to the base and one line across, parallel to the base. It holds exactly 6 triangles. (Drawn by make_puzzles.py.)
+scene_puz_count_09: A line figure on a plain ground: a rectangle cut into 3 by 2 small squares. It holds exactly 8 squares. (Drawn by make_puzzles.py.)
+scene_puz_count_10: A line figure on a plain ground: a house: a square with both diagonals and a triangle roof on top. It holds exactly 9 triangles. (Drawn by make_puzzles.py.)
+scene_puz_count_11: A line figure on a plain ground: a triangle with three lines from the top corner to the base. It holds exactly 10 triangles. (Drawn by make_puzzles.py.)
+scene_puz_count_12: A line figure on a plain ground: a square with both diagonals and both middle lines. It holds exactly 16 triangles. (Drawn by make_puzzles.py.)
+scene_puz_grid_01: A 3 by 3 grid of cards, rows from the top: circle_red circle_blue [EMPTY] / circle_blue circle_yellow circle_red / circle_yellow circle_red circle_blue. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_02: A 3 by 3 grid of cards, rows from the top: cat dog hen / hen [EMPTY] dog / dog hen cat. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_03: A 3 by 3 grid of cards, rows from the top: square_blue circle_red triangle_yellow / circle_red triangle_yellow square_blue / [EMPTY] square_blue circle_red. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_04: A 3 by 3 grid of cards, rows from the top: orange pear apple / apple orange [EMPTY] / pear apple orange. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_05: A 3 by 3 grid of cards, rows from the top: circle_red blank blank / [EMPTY] blank blank / circle_yellow blank blank. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_06: A 3 by 3 grid of cards, rows from the top: blank blank blank / [EMPTY] cat hen / blank blank blank. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_07: A 3 by 3 grid of cards, rows from the top: blank triangle_yellow blank / blank circle_red blank / blank [EMPTY] blank. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_08: A 3 by 3 grid of cards, rows from the top: circle_red [EMPTY] blank / blank circle_blue blank / blank blank blank. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_09: A 3 by 3 grid of cards, rows from the top: blank blank apple / blank blank blank / pear blank [EMPTY]. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_10: A 3 by 3 grid of cards, rows from the top: blank blank circle_red / blank [EMPTY] blank / square_blue blank blank. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_11: A 4 by 4 grid of cards, rows from the top: circle_red circle_blue circle_yellow circle_green / circle_blue circle_red circle_green circle_yellow / circle_yellow [EMPTY] circle_red circle_blue / circle_green circle_yellow circle_blue circle_red. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_12: A 4 by 4 grid of cards, rows from the top: cat dog [EMPTY] blank / blank blank blank blank / blank blank hen blank / blank blank blank blank. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_13: A 4 by 4 grid of cards, rows from the top: blank circle_red blank blank / circle_blue [EMPTY] circle_yellow blank / blank blank blank blank / blank blank blank blank. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_grid_14: A 3 by 3 grid of cards, rows from the top: cat blank blank / blank blank dog / blank [EMPTY] blank. One yellow empty place. (Drawn by make_puzzles.py.)
+scene_puz_house_0: Three small houses in a row: red, blue, yellow. Below, in a frame: a cat, a dog, a hen.
+scene_puz_house_1: The dog beside the blue house, with a green tick: the dog lives in the blue house.
+scene_puz_house_2: The cat beside the yellow house, with a red cross: the cat does not live in the yellow house.
+scene_puz_house_3: Three frames: the cat with the red house, the dog with the blue house, the hen with the yellow house.
+scene_puz_kid_boy_blue: The library boy with a blue shirt. Large, alone, sky and grass behind.
+scene_puz_kid_boy_green: The library boy (head and shoulders): white cap, green shirt. Large, alone, sky and grass behind.
+scene_puz_kid_boy_orange: The library boy with an orange shirt. Large, alone, sky and grass behind.
+scene_puz_kid_girl_blue: The library girl (head and shoulders): blue headscarf, purple dress. Large, alone, sky and grass behind.
+scene_puz_kid_girl_green: The library girl with a green headscarf and a yellow dress. Large, alone, sky and grass behind.
+scene_puz_kid_girl_red: The library girl with a red headscarf and an orange dress. Large, alone, sky and grass behind.
+scene_puz_pat_011: A row of cards with one empty yellow place, right to left: circle_red circle_blue circle_red circle_blue circle_red [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_012: A row of cards with one empty yellow place, right to left: apple pear apple pear apple [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_013: A row of cards with one empty yellow place, right to left: square_yellow triangle_blue square_yellow triangle_blue square_yellow [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_014: A row of cards with one empty yellow place, right to left: cat dog cat dog cat [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_015: A row of cards with one empty yellow place, right to left: size_5 size_2 size_5 size_2 size_5 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_016: A row of cards with one empty yellow place, right to left: star flower star flower star [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_017: A row of cards with one empty yellow place, right to left: square_red square_blue square_red square_blue [EMPTY] square_blue. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_021: A row of cards with one empty yellow place, right to left: circle_red circle_red circle_blue circle_red circle_red circle_blue [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_022: A row of cards with one empty yellow place, right to left: hen hen chick hen hen chick [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_023: A row of cards with one empty yellow place, right to left: triangle_yellow square_blue square_blue triangle_yellow square_blue square_blue [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_024: A row of cards with one empty yellow place, right to left: circle_red circle_blue circle_yellow circle_red circle_blue circle_yellow [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_025: A row of cards with one empty yellow place, right to left: apple pear orange apple pear orange apple [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_026: A row of cards with one empty yellow place, right to left: square_green square_green circle_yellow square_green [EMPTY] circle_yellow square_green. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_027: A row of cards with one empty yellow place, right to left: cat dog goat cat dog [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_031: A row of cards with one empty yellow place, right to left: circle_red circle_red circle_blue circle_blue circle_red circle_red circle_blue [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_032: A row of cards with one empty yellow place, right to left: star star leaf leaf star star [EMPTY] leaf. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_033: A row of cards with one empty yellow place, right to left: triangle_blue circle_yellow triangle_blue square_red triangle_blue circle_yellow triangle_blue [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_034: A row of cards with one empty yellow place, right to left: apple pear pear apple pear pear apple [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_035: A row of cards with one empty yellow place, right to left: circle_yellow [EMPTY] circle_blue circle_yellow circle_yellow circle_blue circle_yellow circle_yellow. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_036: A row of cards with one empty yellow place, right to left: square_red circle_blue triangle_yellow square_red circle_blue triangle_yellow square_red [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_037: A row of cards with one empty yellow place, right to left: dog dog cat hen dog dog cat [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_041: A row of cards with one empty yellow place, right to left: tower_1 tower_2 tower_3 tower_4 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_042: A row of cards with one empty yellow place, right to left: dots_2 dots_4 dots_6 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_043: A row of cards with one empty yellow place, right to left: tower_5 tower_4 tower_3 tower_2 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_044: A row of cards with one empty yellow place, right to left: size_1 size_2 size_3 size_4 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_045: A row of cards with one empty yellow place, right to left: dots_1 dots_3 dots_5 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_046: A row of cards with one empty yellow place, right to left: tower_1 tower_1 tower_2 tower_2 tower_3 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_047: A row of cards with one empty yellow place, right to left: dots_10 dots_8 dots_6 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_048: A row of cards with one empty yellow place, right to left: size_5 size_4 size_3 [EMPTY] size_1. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_051: A row of cards with one empty yellow place, left to right: n:5 n:6 n:7 n:8 n:9 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_052: A row of cards with one empty yellow place, left to right: n:2 n:4 n:6 n:8 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_053: A row of cards with one empty yellow place, left to right: n:5 n:10 n:15 n:20 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_054: A row of cards with one empty yellow place, left to right: n:10 n:20 n:30 [EMPTY] n:50. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_055: A row of cards with one empty yellow place, left to right: n:9 n:8 n:7 n:6 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_056: A row of cards with one empty yellow place, left to right: n:3 n:6 n:9 n:12 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_057: A row of cards with one empty yellow place, left to right: n:20 n:18 n:16 n:14 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_061: A row of cards with one empty yellow place, left to right: n:1 n:2 n:4 n:8 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_062: A row of cards with one empty yellow place, left to right: n:1 n:3 n:5 n:7 n:9 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_063: A row of cards with one empty yellow place, left to right: n:30 n:25 n:20 n:15 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_064: A row of cards with one empty yellow place, left to right: n:4 n:8 [EMPTY] n:16 n:20. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_065: A row of cards with one empty yellow place, left to right: n:100 n:90 n:80 n:70 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_066: A row of cards with one empty yellow place, left to right: n:3 n:6 n:12 n:24 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_067: A row of cards with one empty yellow place, left to right: n:1 n:4 n:7 n:10 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_071: A row of cards with one empty yellow place, right to left: arrow_up arrow_right arrow_down arrow_left arrow_up arrow_right [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_072: A row of cards with one empty yellow place, right to left: circle_red square_blue triangle_red circle_blue square_red triangle_blue [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_073: A row of cards with one empty yellow place, right to left: tower_1 tower_3 tower_2 tower_4 tower_3 tower_5 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_074: A row of cards with one empty yellow place, left to right: n:1 n:2 n:4 n:7 n:11 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_075: A row of cards with one empty yellow place, right to left: arrow_up arrow_up arrow_right arrow_right arrow_down arrow_down [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_076: A row of cards with one empty yellow place, left to right: n:1 n:1 n:2 n:3 n:5 n:8 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_077: A row of cards with one empty yellow place, left to right: n:2 n:3 n:5 n:8 n:12 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_081: A row of cards with one empty yellow place, left to right: n:1 n:4 n:9 n:16 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_082: A row of cards with one empty yellow place, left to right: n:64 n:32 n:16 n:8 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_083: A row of cards with one empty yellow place, left to right: n:1 n:10 n:2 n:20 n:3 n:30 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_084: A row of cards with one empty yellow place, left to right: n:5 n:4 n:6 n:5 n:7 n:6 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_085: A row of cards with one empty yellow place, left to right: n:100 n:95 n:85 n:70 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_086: A row of cards with one empty yellow place, left to right: n:3 n:5 n:9 n:17 [EMPTY]. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_pat_087: A row of cards with one empty yellow place, left to right: n:2 n:4 [EMPTY] n:16 n:32. The arrow underneath shows the direction. (Drawn by make_puzzles.py.)
+scene_puz_race_0: Three children side by side on grass: girl in red, boy in green, girl in green.
+scene_puz_race_1: Three frames: the girl in green with the number 1, the boy in green with the number 2, the girl in red with the number 3.
+scene_puz_river_0: A river from top to bottom, green banks. On the right bank: fox, hen, sack of wheat. the farmer in his small boat, the fox, the hen and the sack of wheat: the boat lies at the right bank.
+scene_puz_river_1: The same river. Hen alone on the left bank. Fox and sack on the right bank; the farmer's boat is back at the right bank.
+scene_puz_river_2: The same river. Fox and hen on the left bank, the boat with the farmer at the left bank. The sack alone on the right bank.
+scene_puz_river_3: The same river. Fox alone on the left bank. Hen and sack on the right bank, the boat with the farmer at the right bank.
+scene_puz_river_4: The same river. Fox and sack on the left bank with the boat. The hen alone on the right bank.
+scene_puz_river_5: The same river. Fox, hen and sack all on the left bank, the boat with the farmer at the left bank. The right bank is empty.
+scene_puz_river_danger: Two panels. Left: the fox above the hen, with a red cross (they must not be left alone). Right: the hen above the sack of wheat, with a red cross.
+scene_puz_scale_0: A balance. Left pan: a watermelon, DOWN. Right pan: an apple, up.
+scene_puz_scale_1: A balance. Left pan: an egg, up. Right pan: a stone, DOWN.
+scene_puz_scale_2: A balance. Left pan: a red ball, UP. Right pan: a blue ball, down.
+scene_puz_scale_3: Two balances side by side. First: red ball DOWN against blue ball. Second: blue ball DOWN against yellow ball.
+scene_puz_scale_4: Two balances side by side. First: yellow ball up, blue ball DOWN. Second: green ball up, yellow ball DOWN.
+scene_puz_scale_5: A level balance: a red ball on the left pan, a blue ball on the right pan. A yellow ball lies beside the balance.
+scene_puz_scale_6: Two level balances. First: one watermelon against two apples. Second: one apple against two apricots.
+scene_puz_share_0: A girl in blue and a boy in orange with one flat bread between them.
+scene_puz_share_1: The girl in blue and the boy in orange, half a bread shown between them (each got an equal half).
+scene_puz_way_1: A house on the right, a school on the left, three ways of stepping stones between them: a red way over the top with 9 stones, a straight blue way with 6 stones, a yellow way round the bottom with 10 stones.
+scene_puz_way_2: A house on the right, a well on the left. A red zigzag way over the top with 11 stones, a blue wavy way through the middle with 8 stones, a yellow way round the bottom with 7 stones.
+scene_puz_who_a0: Three children in a row (girl in red, boy in blue, girl in green). Below, in a frame of their own: a hen, a goat, a cat.
+scene_puz_who_a1: The boy in blue beside a hen, with a green tick: he has the hen.
+scene_puz_who_a2: The girl in red beside a cat, with a red cross: she does not have the cat.
+scene_puz_who_a3: Three frames: the girl in red with a goat, the boy in blue with a hen, the girl in green with a cat.
+scene_puz_who_b0: Three children in a row (boy in orange, girl in blue, boy in green). Below, in a frame: a pear, a pomegranate, an apple.
+scene_puz_who_b1: The girl in blue beside an apple, with a red cross.
+scene_puz_who_b2: The girl in blue beside a pear, with a red cross.
+scene_puz_who_b3: The boy in green beside an apple, with a red cross.
+scene_puz_who_b4: Three frames: the boy in orange with an apple, the girl in blue with a pomegranate, the boy in green with a pear.

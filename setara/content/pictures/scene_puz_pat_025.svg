@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<rect width="400" height="300" fill="#fff6dc"/>
+<rect x="0" y="90.6" width="400" height="94.8" fill="#e8d2a6"/>
+<rect x="349.2" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(352.7 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M64 40c-10-9-34-6-36 20-2 24 14 48 28 48 4 0 6-2 8-2s4 2 8 2c14 0 30-24 28-48-2-26-26-29-36-20z" fill="#e0483f"/>
+<path d="M64 40c0-10 2-16 8-22" fill="none"/>
+<path d="M72 22c8-8 20-8 24-4-4 10-14 14-24 4z" fill="#4e9a51"/>
+</g>
+<path d="M40 56c2-8 8-12 14-12" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/></g>
+<rect x="300.5" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(303.9 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M64 28c0-8 2-12 6-18" fill="none" stroke="#3b2f2f" stroke-width="5" /><path d="M70 14c8-8 20-8 26-2c-6 10-18 12-26 2z" fill="#4e9a51" /><path d="M64 26c-12 0-16 12-18 24c-2 12-20 20-20 40c0 20 16 32 38 32s38-12 38-32c0-20-18-28-20-40c-2-12-6-24-18-24z" fill="#c9d24f" /><path d="M40 84c2-8 6-14 12-18" fill="none" stroke="#fff" stroke-width="5" opacity=".7"/>
+</g></g>
+<rect x="251.8" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(255.2 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="64" cy="70" r="50" fill="#f0923a" /><path d="M64 24c8-12 22-14 30-8c-6 12-18 16-30 8z" fill="#4e9a51" /><path d="M64 24v-8" fill="none" stroke="#3b2f2f" stroke-width="5" /><circle cx="52" cy="96" r="2" fill="#c9701f" stroke="none"/><circle cx="70" cy="104" r="2" fill="#c9701f" stroke="none"/><circle cx="84" cy="92" r="2" fill="#c9701f" stroke="none"/><circle cx="60" cy="84" r="2" fill="#c9701f" stroke="none"/><path d="M30 62c2-10 8-18 16-22" fill="none" stroke="#fff" stroke-width="5" opacity=".7"/>
+</g></g>
+<rect x="203.0" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(206.4 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M64 40c-10-9-34-6-36 20-2 24 14 48 28 48 4 0 6-2 8-2s4 2 8 2c14 0 30-24 28-48-2-26-26-29-36-20z" fill="#e0483f"/>
+<path d="M64 40c0-10 2-16 8-22" fill="none"/>
+<path d="M72 22c8-8 20-8 24-4-4 10-14 14-24 4z" fill="#4e9a51"/>
+</g>
+<path d="M40 56c2-8 8-12 14-12" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/></g>
+<rect x="154.2" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(157.7 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M64 28c0-8 2-12 6-18" fill="none" stroke="#3b2f2f" stroke-width="5" /><path d="M70 14c8-8 20-8 26-2c-6 10-18 12-26 2z" fill="#4e9a51" /><path d="M64 26c-12 0-16 12-18 24c-2 12-20 20-20 40c0 20 16 32 38 32s38-12 38-32c0-20-18-28-20-40c-2-12-6-24-18-24z" fill="#c9d24f" /><path d="M40 84c2-8 6-14 12-18" fill="none" stroke="#fff" stroke-width="5" opacity=".7"/>
+</g></g>
+<rect x="105.5" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(108.9 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="64" cy="70" r="50" fill="#f0923a" /><path d="M64 24c8-12 22-14 30-8c-6 12-18 16-30 8z" fill="#4e9a51" /><path d="M64 24v-8" fill="none" stroke="#3b2f2f" stroke-width="5" /><circle cx="52" cy="96" r="2" fill="#c9701f" stroke="none"/><circle cx="70" cy="104" r="2" fill="#c9701f" stroke="none"/><circle cx="84" cy="92" r="2" fill="#c9701f" stroke="none"/><circle cx="60" cy="84" r="2" fill="#c9701f" stroke="none"/><path d="M30 62c2-10 8-18 16-22" fill="none" stroke="#fff" stroke-width="5" opacity=".7"/>
+</g></g>
+<rect x="56.8" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(60.2 120.0) scale(0.2805)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M64 40c-10-9-34-6-36 20-2 24 14 48 28 48 4 0 6-2 8-2s4 2 8 2c14 0 30-24 28-48-2-26-26-29-36-20z" fill="#e0483f"/>
+<path d="M64 40c0-10 2-16 8-22" fill="none"/>
+<path d="M72 22c8-8 20-8 24-4-4 10-14 14-24 4z" fill="#4e9a51"/>
+</g>
+<path d="M40 56c2-8 8-12 14-12" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/></g>
+<rect x="8.0" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffe9a8" stroke="#f2b705" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/><circle cx="29.4" cy="138.0" r="3.8" fill="#f2b705"/>
+<path d="M330 215.375H70M86 204.375L70 215.375L86 226.375" fill="none" stroke="#b9ae9b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

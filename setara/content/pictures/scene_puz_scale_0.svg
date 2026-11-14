@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<rect width="400" height="300" fill="#fff6dc"/>
+<rect x="0" y="262" width="400" height="38" fill="#e8d2a6"/>
+<path d="M166 266H234L210 250H190z" fill="#9a6b3f" stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round"/><path d="M200 250V145.10469878298895" stroke="#3b2f2f" stroke-width="9" stroke-linecap="round"/><path d="M106.5 166.7L293.5 123.5" stroke="#3b2f2f" stroke-width="8" stroke-linecap="round"/><circle cx="200" cy="145.1" r="7" fill="#f2b705" stroke="#3b2f2f" stroke-width="4"/><path d="M106.5 166.7L65.2 250.0M106.5 166.7L147.7 250.0" fill="none" stroke="#3b2f2f" stroke-width="3" stroke-linecap="round"/><g transform="translate(73.5 187.0) scale(0.5156)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" >
+<circle cx="64" cy="66" r="54" fill="#4e9a51" /><path d="M40 18C22 44 22 88 40 114M64 12C52 44 52 88 64 120M88 18C106 44 106 88 88 114" fill="none" stroke="#2f6b35" stroke-width="6" stroke-linecap="butt"/><circle cx="64" cy="66" r="54" fill="none" /><path d="M64 66L84 16C104 24 116 42 118 62z" fill="#fff6dc" /><path d="M64 66L82 28C96 34 105 46 108 61z" fill="#e0483f" stroke-width="0"/><path d="M64 66L84 16M64 66L118 62" fill="none" />
+</g><ellipse cx="84" cy="44" rx="2.5" ry="4" fill="#3b2f2f" /><ellipse cx="94" cy="54" rx="2.5" ry="4" fill="#3b2f2f" /></g><path d="M61.2 250.0H151.7C147.7 266.0 65.2 266.0 61.2 250.0z" fill="#f2b705" stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round"/><path d="M293.5 123.5L252.3 206.8M293.5 123.5L334.8 206.8" fill="none" stroke="#3b2f2f" stroke-width="3" stroke-linecap="round"/><g transform="translate(260.5 143.8) scale(0.5156)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M64 40c-10-9-34-6-36 20-2 24 14 48 28 48 4 0 6-2 8-2s4 2 8 2c14 0 30-24 28-48-2-26-26-29-36-20z" fill="#e0483f"/>
+<path d="M64 40c0-10 2-16 8-22" fill="none"/>
+<path d="M72 22c8-8 20-8 24-4-4 10-14 14-24 4z" fill="#4e9a51"/>
+</g>
+<path d="M40 56c2-8 8-12 14-12" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/></g><path d="M248.3 206.8H338.8C334.8 222.8 252.3 222.8 248.3 206.8z" fill="#f2b705" stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round"/>
+</svg>

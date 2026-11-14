@@ -1,0 +1,102 @@
+{
+  "pack": "math-2-puzzles",
+  "subject": "math",
+  "level": 2,
+  "version": 1,
+  "optional": true,
+  "title_en": "Logic Puzzles",
+  "title_fa": "معماهای فکری",
+  "games": [
+    {
+      "id": "belong_together",
+      "engine": "pairs",
+      "letter": "a",
+      "title_en": "They Belong Together",
+      "title_fa": "با هم جور",
+      "intro_fa": "دو کارت را پیدا کن که با هم جور است.",
+      "icon": "key",
+      "sheet": "belong_together.csv"
+    },
+    {
+      "id": "odd_one_out",
+      "engine": "story",
+      "letter": "b",
+      "title_en": "Odd One Out",
+      "title_fa": "کدام جور نیست؟",
+      "intro_fa": "چهار تصویر را ببین. یکی با سه تای دیگر جور نیست. همان را انتخاب کن.",
+      "icon": "puz_star_blue",
+      "sheet": "odd_one_out.csv"
+    },
+    {
+      "id": "what_next",
+      "engine": "story",
+      "letter": "c",
+      "title_en": "What Comes Next?",
+      "title_fa": "بعد چه می‌آید؟",
+      "intro_fa": "قطار را خوب ببین و پیدا کن که در جای خالی چه می‌آید.",
+      "icon": "puz_arrow_left",
+      "sheet": "what_next.csv"
+    },
+    {
+      "id": "shadows_mirrors",
+      "engine": "listen_pick",
+      "letter": "d",
+      "title_en": "Shadows and Mirrors",
+      "title_fa": "سایه و آیینه",
+      "intro_fa": "تصویر میان را ببین و جواب درست را انتخاب کن.",
+      "icon": "puz_shadow_cat",
+      "sheet": "shadows_mirrors.csv"
+    },
+    {
+      "id": "right_order",
+      "engine": "builder",
+      "letter": "e",
+      "title_en": "In the Right Order",
+      "title_fa": "به ترتیب درست",
+      "intro_fa": "گوش کن و تصویرها را به ترتیب درست بمان.",
+      "icon": "puz_tower_3",
+      "sheet": "right_order.csv"
+    },
+    {
+      "id": "both_or_neither",
+      "engine": "sorter",
+      "letter": "f",
+      "title_en": "Both or Neither",
+      "title_fa": "هر دو یا هیچ کدام",
+      "intro_fa": "به دو چیز فکر کن و هر کدام را در سبد درست بینداز.",
+      "icon": "puz_circle_red",
+      "sheet": "both_or_neither.csv"
+    },
+    {
+      "id": "riddles",
+      "engine": "journey",
+      "letter": "g",
+      "title_en": "Riddles",
+      "title_fa": "چیستان",
+      "intro_fa": "چیستان را گوش کن، فکر کن و جواب درست را انتخاب کن.",
+      "icon": "candle",
+      "sheet": "riddles.csv",
+      "read_choices": true
+    },
+    {
+      "id": "squares_shapes",
+      "engine": "story",
+      "letter": "h",
+      "title_en": "Squares and Shapes",
+      "title_fa": "خانه‌ها و شکل‌ها",
+      "intro_fa": "شکل را خوب ببین، فکر کن و جواب درست را انتخاب کن.",
+      "icon": "puz_triangle_yellow",
+      "sheet": "squares_shapes.csv"
+    },
+    {
+      "id": "thinking_stories",
+      "engine": "story",
+      "letter": "i",
+      "title_en": "Thinking Stories",
+      "title_fa": "قصه‌های فکری",
+      "intro_fa": "قصه را گوش کن و در هر سوال فکر کن که چه باید کرد.",
+      "icon": "scales",
+      "sheet": "thinking_stories.csv"
+    }
+  ]
+}

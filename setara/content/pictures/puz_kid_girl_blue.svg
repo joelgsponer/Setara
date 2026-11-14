@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<g transform="translate(6.0 6.0) scale(0.9062)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M34 122c0-26 10-40 30-40s30 14 30 40z" fill="#8e5bb5"/>
+<path d="M30 60c0-24 14-40 34-40s34 16 34 40c0 14-4 26-10 34H40c-6-8-10-20-10-34z" fill="#3f7fbf"/>
+<ellipse cx="64" cy="60" rx="22" ry="24" fill="#e8b98a"/>
+<path d="M42 54c6-12 14-16 22-16s16 4 22 16" fill="none"/>
+</g>
+<circle cx="55" cy="62" r="3.5" fill="#3b2f2f"/><circle cx="73" cy="62" r="3.5" fill="#3b2f2f"/>
+<path d="M56 73c5 5 11 5 16 0" fill="none" stroke="#3b2f2f" stroke-width="4" stroke-linecap="round"/></g>
+</svg>

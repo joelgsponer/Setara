@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<rect width="400" height="300" fill="#fff6dc"/>
+<rect x="0" y="87.1" width="400" height="101.7" fill="#e8d2a6"/>
+<rect x="342.3" y="113.1" width="49.7" height="49.7" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<path d="M367.1 120.3L386.4 153.7H347.9z" fill="#f2b705" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="286.6" y="113.1" width="49.7" height="49.7" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<rect x="294.9" y="121.5" width="33.0" height="33.0" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="230.9" y="113.1" width="49.7" height="49.7" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<rect x="239.2" y="121.5" width="33.0" height="33.0" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="175.1" y="113.1" width="49.7" height="49.7" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<path d="M200.0 120.3L219.2 153.7H180.8z" fill="#f2b705" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="119.4" y="113.1" width="49.7" height="49.7" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<rect x="127.8" y="121.5" width="33.0" height="33.0" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="63.7" y="113.1" width="49.7" height="49.7" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<rect x="72.1" y="121.5" width="33.0" height="33.0" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="8.0" y="113.1" width="49.7" height="49.7" rx="8" fill="#ffe9a8" stroke="#f2b705" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/><circle cx="32.9" cy="138.0" r="4.5" fill="#f2b705"/>
+<path d="M330 218.85714285714286H70M86 207.85714285714286L70 218.85714285714286L86 229.85714285714286" fill="none" stroke="#b9ae9b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<rect width="400" height="300" fill="#fff6dc"/>
+<polygon points="80,70 320,70 320,230 80,230" fill="#bfe3f0"/>
+<path d="M80.0 70L80.0 230" fill="none" stroke="#3b2f2f" stroke-width="6" stroke-linecap="round"/>
+<path d="M160.0 70L160.0 230" fill="none" stroke="#3b2f2f" stroke-width="6" stroke-linecap="round"/>
+<path d="M240.0 70L240.0 230" fill="none" stroke="#3b2f2f" stroke-width="6" stroke-linecap="round"/>
+<path d="M320.0 70L320.0 230" fill="none" stroke="#3b2f2f" stroke-width="6" stroke-linecap="round"/>
+<path d="M80 70.0L320 70.0" fill="none" stroke="#3b2f2f" stroke-width="6" stroke-linecap="round"/>
+<path d="M80 150.0L320 150.0" fill="none" stroke="#3b2f2f" stroke-width="6" stroke-linecap="round"/>
+<path d="M80 230.0L320 230.0" fill="none" stroke="#3b2f2f" stroke-width="6" stroke-linecap="round"/>
+</svg>

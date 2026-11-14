@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<!-- drawn by content/math/2-puzzles/make_puzzles.py -->
+<g fill="#3b2f2f"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<g transform="rotate(-14 64 64)">
+<rect x="55" y="8" width="18" height="36" rx="7" fill="#3b2f2f"/>
+<circle cx="64" cy="108" r="9" fill="#3b2f2f"/>
+<path d="M64 38c-20 0-30 16-30 38 0 12-4 20-14 28h88c-10-8-14-16-14-28 0-22-10-38-30-38z" fill="#3b2f2f"/>
+<path d="M46 62c2-8 6-12 12-14" fill="none" stroke="#3b2f2f" stroke-width="5" />
+</g>
+<path d="M112 44c4 6 6 12 6 18M10 60c-2 6-2 12 0 18" fill="none" stroke-width="4"/>
+</g></g>
+</svg>
