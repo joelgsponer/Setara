@@ -49,8 +49,8 @@ games, and each basket is spoken.
 | Quick Quiz for Two (`future_duel`, u) | duel | 3 | revision, two players |
 
 Seven story rounds are about health and six about the environment; every one
-of the eleven story rounds has decisions (37 in all). The right choice is first
-in 13 of them and not first in 24. Nine are yes/no questions: "yes" is right
+of the eleven story rounds has decisions (39 in all). The right choice is first
+in 13 of them and not first in 26. Nine are yes/no questions: "yes" is right
 three times, "no" six times.
 
 ## Decisions taken by the author

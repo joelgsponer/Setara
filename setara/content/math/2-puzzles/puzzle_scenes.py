@@ -273,7 +273,7 @@ def _balance(cx: float, base_y: float, left: list, right: list, tilt: int, half:
     py = base_y - drop - half * math.sin(math.radians(13)) - 16
     dx, dy = half * math.cos(ang), half * math.sin(ang)
     lx, ly, rx, ry = cx - dx, py - dy, cx + dx, py + dy
-    pan_w = min(max(item * 1.25, item * max(len(left), len(right)) * 0.98 + 10), half * 1.6)
+    pan_w = min(max(item * 1.25, item * max(len(left), len(right)) * 0.98 + 10), half * 1.5)
     out = [f'<path d="M{cx - 34} {base_y}H{cx + 34}L{cx + 10} {base_y - 16}H{cx - 10}z" fill="#9a6b3f" stroke="{INK}" stroke-width="4" stroke-linejoin="round"/>',
            f'<path d="M{cx} {base_y - 16}V{py}" stroke="{INK}" stroke-width="9" stroke-linecap="round"/>',
            f'<path d="M{lx:.1f} {ly:.1f}L{rx:.1f} {ry:.1f}" stroke="{INK}" stroke-width="8" stroke-linecap="round"/>',
@@ -303,7 +303,7 @@ def scales(name: str, sets: list, brief: str, aside: list | None = None) -> str:
     else:
         out.append(f'<path d="M200 20V250" stroke="{GREY}" stroke-width="4" stroke-dasharray="4 10" stroke-linecap="round"/>')
         for k, (l, r, tilt) in enumerate(sets):
-            out.append(_balance(102 + 196 * k, 266, l, r, tilt, 56, 50))
+            out.append(_balance(100 + 200 * k, 266, l, r, tilt, 52, 50))
     return D.scene(name, "\n".join(out), brief)
 
 
