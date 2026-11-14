@@ -193,8 +193,16 @@ def main():
         world(under=[(geom, WATER)], name=f"scene_map_ocean_{n}")
 
     # hot and cold: a warm belt around the middle of the Earth, the two cold caps at the poles
-    world(over=[(box(-180, -23.5, 180, 23.5), "#e0483f", 0.38), (box(-180, 66.5, 180, 90), "#3f7fbf", 0.45),
-                (box(-180, -90, 180, -66.5), "#3f7fbf", 0.45)], name="scene_map_hot_cold")
+    belt, caps = box(-180, -23.5, 180, 23.5), unary_union([box(-180, 66.5, 180, 90), box(-180, -90, 180, -66.5)])
+    all_land = unary_union(list(cont.values()))
+    m = Map(400, 300, -180, 180, -90, 90)
+    m.xy = lambda lon, lat: (200 + lon * 400 / 360, 150 - lat * 300 / 180 * 0.98)
+    m.area(belt, "#f2a7a0")
+    m.area(caps, "#3f7fbf")
+    m.land(all_land, LAND, min_area=3)
+    m.land(all_land.intersection(belt), "#e0483f", min_area=3)
+    m.land(all_land.intersection(caps), "#dbe9f6", min_area=3)
+    m.save("scene_map_hot_cold")
 
     # each continent alone, as a square picture
     for c, n in names.items():
@@ -261,6 +269,18 @@ def main():
         m.peak(lon, lat, 10)
     m.dot(*KABUL, 7, MARK)
     m.save("scene_map_afghanistan")
+
+    # the same, alone and square: large enough to read on an answer card or beside a question
+    x0, y0, x1, y1 = country10["AFG"].bounds
+    m = Map(128, 128, x0, x1, y0, y1, pad=6)
+    m.land(country10["AFG"], ORANGE, width=4, min_area=30)
+    for f in all_rivers:
+        if (f["properties"].get("name") or "") in ("Amu  Darya", "Panj", "Helmand", "Harirud"):
+            m.line(shape(f["geometry"]).intersection(country10["AFG"].buffer(0.05)), WATER, 3.5)
+    for lon, lat in ((71.0, 36.2), (69.6, 35.6), (68.2, 35.05), (66.8, 34.55)):
+        m.peak(lon, lat, 6)
+    m.dot(*KABUL, 5, MARK)
+    m.save("map_afghanistan_land", sea=None)
 
     m = Map(400, 300, -26, 46, 33, 72)
     m.land(land50, LAND)
