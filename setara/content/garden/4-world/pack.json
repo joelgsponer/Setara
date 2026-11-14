@@ -2,7 +2,7 @@
   "pack": "garden-4-world",
   "subject": "garden",
   "level": 4,
-  "version": 1,
+  "version": 2,
   "optional": true,
   "title_en": "The world, Switzerland and Basel",
   "title_fa": "دنیا، سویس و بازل",
@@ -18,24 +18,45 @@
       "sheet": "world_session.csv"
     },
     {
+      "id": "world_why",
+      "engine": "story",
+      "letter": "g",
+      "title_en": "Why Is It So?",
+      "title_fa": "چرا چنین است؟",
+      "intro_fa": "شش قصه کوتاه که می‌گوید چرا: چرا روز و شب می‌شود، چرا قطب سرد است، نقشه چیست. اول این‌ها را ببین، بعد بازی‌ها آسان می‌شود.",
+      "icon": "sun_noon",
+      "sheet": "world_why.csv"
+    },
+    {
       "id": "world_continents",
       "engine": "listen_pick",
       "letter": "b",
-      "title_en": "The Seven Continents",
-      "title_fa": "هفت قاره",
+      "title_en": "Continents, Oceans and Lands",
+      "title_fa": "قاره‌ها، بحرها و زمین‌ها",
       "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
       "icon": "map_asia",
       "sheet": "world_continents.csv",
       "read_choices": true
     },
     {
+      "id": "world_map",
+      "engine": "listen_pick",
+      "letter": "i",
+      "title_en": "Reading the Map",
+      "title_fa": "خواندن نقشه",
+      "intro_fa": "نقشه را ببین، سوال را بشنو و جواب درست را انتخاب کن.",
+      "icon": "compass",
+      "sheet": "world_map.csv",
+      "read_choices": true
+    },
+    {
       "id": "world_two_countries",
       "engine": "sorter",
       "letter": "c",
-      "title_en": "Two Countries",
-      "title_fa": "دو کشور",
-      "intro_fa": "افغانستان، سویس، یا هر دو؟ هر تصویر را در سبد درست بینداز.",
-      "icon": "map_switzerland",
+      "title_en": "World Baskets",
+      "title_fa": "سبدهای دنیا",
+      "intro_fa": "هر تصویر را در سبد درست بینداز. هر بار سبدها فرق دارد.",
+      "icon": "island",
       "sheet": "world_two_countries.csv"
     },
     {
@@ -66,8 +87,18 @@
       "title_en": "World Pairs",
       "title_fa": "جوره‌های دنیا",
       "intro_fa": "دو کارت را که با هم جور است پیدا کن.",
-      "icon": "map_europe",
+      "icon": "kangaroo",
       "sheet": "world_pairs.csv"
+    },
+    {
+      "id": "world_catch",
+      "engine": "catch",
+      "letter": "h",
+      "title_en": "Catch the World",
+      "title_fa": "دنیا را بگیر",
+      "intro_fa": "گپ را بشنو و تنها چیزهای درست را در سبد بگیر.",
+      "icon": "whale",
+      "sheet": "world_catch.csv"
     }
   ]
 }
