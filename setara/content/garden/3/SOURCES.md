@@ -47,8 +47,8 @@ Cuts, bleeding, bites
 - Snake bite: only "go to the clinic now". The fact sheet gives no first aid.
 
 Nosebleed
-- Nothing is said about what to do between ten minutes (pinching) and twenty
-  minutes (clinic).
+- Between ten and twenty minutes: "pinch for another ten minutes" was added
+  in the first-aid review (see below).
 
 Choking
 - Abdominal thrusts are only named as "an adult pushes the belly firmly, up to
@@ -75,7 +75,8 @@ When a relative is ill
 - All eleven points of the "go to the clinic NOW" list are spoken in
   help_story. Only some have a picture and a question of their own.
 - "Confused" is shown as "she does not recognise Parwin".
-- "Keep warm (or cool if hot with fever)" is said without any method.
+- "Cool if hot with fever" is now said as "take the blanket and extra clothes
+  off; no icy water or ice" (first-aid review, see below).
 - "Stool" is said as مواد غایطه, "urine" as ادرار. A reviewer may prefer the
   local everyday words.
 - The "home" basket of do_dont round 05 is not in the fact sheet, which only
@@ -84,6 +85,80 @@ When a relative is ill
   small burn on the arm without a blister, a nosebleed that stopped after ten
   minutes. The basket says "we help at home and tell an adult". **A health
   professional should confirm this round in particular.**
+
+## Changes made in the first-aid review
+
+A review against standard lay first-aid guidance (IFRC, ERC/ILCOR, WHO) changed
+the texts below. The reviewer is not a health professional and not a native
+Dari speaker: **every added Dari sentence must be read by a Dari-speaking
+educator and the content confirmed by a health professional.** These points go
+beyond the fact sheet printed below, which was left as the author received it.
+
+Burns
+- burn_story, first_steps 01: cool only the burned place and keep the rest of
+  the body warm (a small child gets cold quickly in twenty minutes of water).
+- burn_story: do not touch someone who is still touching an electric wire;
+  call an adult.
+- do_dont 05: the "clinic" cards now say "after pouring cool water" (burn) and
+  "we have washed the wound" (dog bite), so "clinic now" does not replace the
+  first aid.
+
+Bleeding and wounds
+- cut_story, first_steps 02, danger_signs 02: when bleeding has not stopped
+  after ten minutes, keep pressing on the way to the clinic. Very heavy
+  bleeding: do not wait, press and call for help at once.
+- cut_story, danger_signs 02: something stuck in a wound: do not pull it and
+  do not press on it; press a clean cloth on both sides of it.
+- cut_story: the helper washes his own hands with soap afterwards.
+- first_steps 01 and 02: "and quickly tell an adult" added to the closing line.
+
+Bites
+- danger_signs 02: the bite or scratch of a cat, fox, jackal or any wild
+  animal is treated like a dog bite (the question had only harmless animals
+  as wrong choices).
+- danger_signs 02: snake bite: keep the person calm and still; do not cut,
+  suck or tie tightly above the wound (WHO). The fact sheet has no snake-bite
+  first aid.
+
+Nosebleed
+- first_steps 03: still bleeding after ten minutes: pinch for another ten;
+  after twenty, clinic.
+
+Choking
+- do_dont 04: the back-blows card said only "they cannot breathe"; it now says
+  "food stuck in the throat and they cannot cough".
+- first_steps 05: back blows only when the person cannot cough, leaning forward.
+- life_support 02 (new page): after belly pushes the person is shown to the
+  clinic; if the person becomes unconscious, lay them down, call for help
+  again and start chest pushes.
+
+Someone has collapsed
+- life_support 01: "not breathing normally" now includes someone who only
+  takes an occasional hard, noisy breath (gasping).
+- life_support 01 (new page): a helper who is alone and unheard first runs for
+  an adult.
+- life_support 01: "someone who helps does a good thing, even if the ill
+  person does not get better", so that a child does not carry the blame.
+
+Fever
+- help_story, danger_signs 03: "keep cool" is now "take the blanket and extra
+  clothes off; no icy water or ice".
+
+Home or clinic
+- do_dont 05: the "home" basket now adds "if it gets worse, we go to the
+  clinic".
+
+Still open for a health professional (not changed)
+- "Any burn with a blister goes to the clinic" is stricter than standard
+  guidance (which sends blistered burns to care when larger than the person's
+  hand, or on face, hands, feet, joints or genitals, or in a small child).
+  Kept because it is the safer rule; decide whether it is workable locally.
+- Chest compressions on a child casualty, and how long to continue when no
+  clinic or vehicle can come, are not addressed in the pack.
+- Burns: genitals, burns all the way round a limb, smoke or flame to the face,
+  and clothes on fire are not mentioned.
+- Diarrhoea: oral rehydration is not mentioned (only "sips of clean water").
+- Whether the local clinic actually holds tetanus and rabies vaccine.
 
 ## The fact sheet
 
