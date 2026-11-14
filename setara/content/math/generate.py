@@ -2491,6 +2491,7 @@ CHARTS = {
     "chart_bars_2": [("pencil", "پنسل", 5), ("ball", "توپ", 1), ("book", "کتاب", 3)],
     "chart_table_2": [("pomegranate", "انار", 2), ("watermelon", "تربوز", 1), ("walnut", "چهارمغز", 4)],
 }
+CHART_EXTRA = {"chart_bars_1": "carrot", "chart_table_1": "goat", "chart_bars_2": "notebook", "chart_table_2": "orange"}
 I_CHART = tr("گراف را ببین و جواب بده.", "Look at the chart and answer.")
 I_TABLE = tr("جدول را ببین و جواب بده.", "Look at the table and answer.")
 
@@ -2506,25 +2507,27 @@ def charts5(level: int) -> Sheet:
         assert len(rows) == 3 and len(set(values)) == 3 and all(1 <= v <= 5 for v in values)
         by_count = sorted(rows, key=lambda x: x[2])
 
-        def which(most):
-            pic, noun, v = by_count[-1] if most else by_count[0]
-            word, en = ("بیشتر", "most") if most else ("کمتر", "fewest")
-            # Three choices only: the things of the chart. A fourth thing, one that
-            # is not in the chart at all, could be argued to be the fewest.
-            row = s.add(round=rnd, intro_fa=intro, say_fa=tr(f"در این {kw} کدام از همه {word} است؟", f"In this {ke}, which one is the {en}?"),
-                        show=name, answer=pic, distractors="|".join(p for p, _, _ in rows if p != pic),
-                        help_fa=tr(f"{noun} از همه {word} است: {fa(v)} تا.", f"The {bare(noun)} is the {en}: {v}."))
+        def which(say, row_, help_fa):
+            # The fourth choice is a thing that is not in the chart: the builder
+            # always deals four choices, and it must not pick one by chance.
+            pic = row_[0]
+            row = lp(s, rnd, intro, say, pic, [p for p, _, _ in rows if p != pic] + [CHART_EXTRA[name]], show=name, help_fa=help_fa)
             CAL_META.append((row, pic))
 
         def number(say, ans, prefer, help_fa):
             numq(s, rnd, intro, say, ans, prefer, help_fa, rng, 20, show=name)
 
-        which(True)
+        pic, noun, v = by_count[-1]
+        which(tr(f"در این {kw} کدام از همه بیشتر است؟", f"In this {ke}, which one is the most?"), by_count[-1],
+              tr(f"{noun} از همه بیشتر است: {fa(v)} تا.", f"The {bare(noun)} is the most: {v}."))
         a, b = rows[0], rows[2]
         for pic, noun, v in (a, b):
             number(tr(f"در این {kw} چند {noun} است؟", f"In this {ke}, how many {many(noun)} are there?"), v, [x for x in values if x != v],
                    tr(f"خانه{Z}های {noun} را بشمار: {fa(v)}.", f"Count the boxes of the {bare(noun)}: {v}."))
-        which(False)
+        # "Which one is the fewest?" is not asked: the thing that is not in the chart could be meant.
+        pic, noun, v = by_count[0]
+        which(tr(f"در این {kw} از کدام چیز {fa(v)} تا است؟", f"In this {ke}, of which thing {'is' if v == 1 else 'are'} there {v}?"), by_count[0],
+              tr(f"{fa(v)} {noun} است.", f"{there(v, noun)}."))
         (_, n1, v1), (_, n2, v2) = rows[1], rows[2]
         number(tr(f"در این {kw}، {n1} و {n2} با هم چند تا است؟", f"In this {ke}, how many are the {many(n1)} and the {many(n2)} together?"), v1 + v2,
                [max(v1, v2), abs(v1 - v2), v1 + v2 + 1], tr(f"{fa(v1)} جمع {fa(v2)} مساوی {fa(v1 + v2)}.", f"{v1} plus {v2} equals {v1 + v2}."))
@@ -2538,7 +2541,9 @@ def charts5(level: int) -> Sheet:
         if row["show"] in CHARTS:  # most and fewest once more, from the chart's own numbers
             counts = {p: v for p, _, v in CHARTS[row["show"]]}
             pick = max if "بیشتر" in row["say_fa"] else min
-            assert row["answer"] == pick(counts, key=counts.get) and set(row["distractors"].split("|")) == set(counts) - {row["answer"]}, row
+            assert row["answer"] == pick(counts, key=counts.get), row
+            assert set(row["distractors"].split("|")) == (set(counts) - {row["answer"]}) | {CHART_EXTRA[row["show"]]}, row
+            assert "بیشتر" in row["say_fa"] or fa(counts[row["answer"]]) + " تا" in row["say_fa"], row
     return s
 
 
@@ -2813,8 +2818,7 @@ def check_sheet(level: int, game: dict, sheet: Sheet) -> set[str]:
                 used.update(pictures_in(r.get(col, "")))
             if game["engine"] in ("listen_pick", "journey"):
                 choices = [r["answer"]] + r["distractors"].split("|")
-                assert len(choices) == (3 if r.get("show") in CHARTS and not r["answer"].startswith("t:") else 4), (name, r)
-                assert len(set(choices)) == len(choices), (name, r)
+                assert len(choices) == 4 and len(set(choices)) == 4, (name, r)  # four, or the builder adds its own
                 kinds = {"t" if c.startswith("t:") else "f" if c.startswith("f:") else "p" for c in choices}
                 assert len(kinds) == 1, (name, "mixed kinds of choices", r)
                 values = [val(c) for c in choices]

@@ -141,6 +141,8 @@ scene_puz_house_0: Three small houses in a row: red, blue, yellow. Below, in a f
 scene_puz_house_1: The dog beside the blue house, with a green tick: the dog lives in the blue house.
 scene_puz_house_2: The cat beside the yellow house, with a red cross: the cat does not live in the yellow house.
 scene_puz_house_3: Three frames: the cat with the red house, the dog with the blue house, the hen with the yellow house.
+scene_puz_house_4: Two frames, the clues so far: the dog with the blue house and a green tick; the cat with the yellow house and a red cross.
+scene_puz_house_5: Two frames: the dog with the blue house and a green tick; the cat with the red house and a green tick.
 scene_puz_kid_boy_blue: The library boy with a blue shirt. Large, alone, sky and grass behind.
 scene_puz_kid_boy_green: The library boy (head and shoulders): white cap, green shirt. Large, alone, sky and grass behind.
 scene_puz_kid_boy_orange: The library boy with an orange shirt. Large, alone, sky and grass behind.
@@ -228,8 +230,13 @@ scene_puz_who_a0: Three children in a row (girl in red, boy in blue, girl in gre
 scene_puz_who_a1: The boy in blue beside a hen, with a green tick: he has the hen.
 scene_puz_who_a2: The girl in red beside a cat, with a red cross: she does not have the cat.
 scene_puz_who_a3: Three frames: the girl in red with a goat, the boy in blue with a hen, the girl in green with a cat.
+scene_puz_who_a4: Two frames, the clues so far: the boy in blue with a hen and a green tick; the girl in red with a cat and a red cross.
+scene_puz_who_a5: Two frames: the boy in blue with a hen and a green tick; the girl in red with a goat and a green tick.
 scene_puz_who_b0: Three children in a row (boy in orange, girl in blue, boy in green). Below, in a frame: a pear, a pomegranate, an apple.
 scene_puz_who_b1: The girl in blue beside an apple, with a red cross.
 scene_puz_who_b2: The girl in blue beside a pear, with a red cross.
 scene_puz_who_b3: The boy in green beside an apple, with a red cross.
 scene_puz_who_b4: Three frames: the boy in orange with an apple, the girl in blue with a pomegranate, the boy in green with a pear.
+scene_puz_who_b5: Two frames, the clues so far: the girl in blue with an apple and a red cross; the girl in blue with a pear and a red cross.
+scene_puz_who_b6: Two frames: the girl in blue with a pomegranate and a green tick; the boy in green with an apple and a red cross.
+scene_puz_who_b7: Two frames: the girl in blue with a pomegranate and a green tick; the boy in green with a pear and a green tick.

@@ -778,7 +778,7 @@ def game_riddles():
       "A father has three daughters. Every daughter has one brother. How many children does this father have?", "t:4", "t:6|t:3|t:5",
       "سه دختر و یک پسر. همان یک پسر برادر هر سه دختر است.", "Three daughters and one son. That one son is the brother of all three daughters.")
     q("03", i, "یک کیلو پشم سنگین‌تر است، یا یک کیلو سنگ؟",
-      "Which is heavier, one kilo of wool or one kilo of stone?", F("هر دو برابر", "both the same"), F("پشم", "wool") + "|" + F("سنگ", "stone"),
+      "Which is heavier, one kilo of wool or one kilo of stone?", F("هر دو برابر", "both the same"), F("پشم", "wool") + "|" + F("سنگ", "stone") + "|" + F("هیچ کدام", "neither"),
       "یک کیلو یک کیلو است. پشم بسیار جای می‌گیرد، ولی وزن هر دو برابر است.",
       "A kilo is a kilo. The wool takes much more room, but both weigh the same.")
     q("03", i, "مورچه از دیواری بالا می‌رود که سه متر بلند است. هر روز دو متر بالا می‌رود و هر شب یک متر پایین می‌لغزد. روز چندم به سر دیوار می‌رسد؟",
@@ -800,21 +800,21 @@ def game_riddles():
     i = T("خوب گوش کن و گپ‌ها را با هم جوره کن. جواب در خود سوال است.",
           "Listen well and put the statements together. The answer is in the question itself.")
     q("04", i, "اسپ از گاو تیزتر می‌دود. گاو از خر تیزتر می‌دود. کدام از همه آهسته‌تر است؟",
-      "The horse runs faster than the cow. The cow runs faster than the donkey. Which is the slowest of all?", "donkey", "horse|cow",
+      "The horse runs faster than the cow. The cow runs faster than the donkey. Which is the slowest of all?", "donkey", "horse|cow|hen",
       "اسپ از گاو تیزتر، و گاو از خر تیزتر است. پس خر از هر دو آهسته‌تر است.",
       "The horse is faster than the cow, and the cow faster than the donkey. So the donkey is slower than both.")
     q("04", i, "سیب از ناک سنگین‌تر است. تربوز از سیب سنگین‌تر است. کدام از همه سبک‌تر است؟",
-      "The apple is heavier than the pear. The watermelon is heavier than the apple. Which is the lightest of all?", "pear", "apple|watermelon",
+      "The apple is heavier than the pear. The watermelon is heavier than the apple. Which is the lightest of all?", "pear", "apple|watermelon|orange",
       "ناک از سیب سبک‌تر است، و سیب از تربوز. پس ناک از همه سبک‌تر است.",
       "The pear is lighter than the apple, and the apple lighter than the watermelon. So the pear is the lightest of all.")
     q("04", i, "موش از پشک می‌ترسد. پشک از سگ می‌ترسد. کدام از هیچ کدام نمی‌ترسد؟",
-      "The mouse is afraid of the cat. The cat is afraid of the dog. Which one is afraid of neither?", "dog", "cat|mouse",
+      "The mouse is afraid of the cat. The cat is afraid of the dog. Which one is afraid of neither?", "dog", "cat|mouse|hen",
       "موش از پشک می‌ترسد و پشک از سگ. سگ از این دو نمی‌ترسد.", "The mouse fears the cat and the cat fears the dog. The dog fears neither of the two.")
     q("04", i, "دیروز جمعه بود. فردا چه روز است؟", "Yesterday was Friday. What day is tomorrow?",
       F("یکشنبه", "Sunday"), F("شنبه", "Saturday") + "|" + F("دوشنبه", "Monday") + "|" + F("جمعه", "Friday"),
       "دیروز جمعه بود، پس امروز شنبه است و فردا یکشنبه.", "Yesterday was Friday, so today is Saturday and tomorrow is Sunday.")
     q("04", i, "مرغ پیش از بز به خانه رسید. گوسفند بعد از بز رسید. کدام آخر رسید؟",
-      "The hen came home before the goat. The sheep came after the goat. Which came last?", "sheep", "hen|goat",
+      "The hen came home before the goat. The sheep came after the goat. Which came last?", "sheep", "hen|goat|cow",
       "اول مرغ رسید، بعد بز، و بعد از بز گوسفند. پس گوسفند آخر رسید.", "First the hen came, then the goat, and after the goat the sheep. So the sheep came last.")
     q("04", i, "من هشت ساله استم. برادرم دو سال از من کلان‌تر است. وقتی من ده ساله شوم، برادرم چند ساله می‌شود؟",
       "I am eight years old. My brother is two years older than I am. When I am ten, how old will my brother be?", "t:12", "t:10|t:14|t:20",
@@ -1074,9 +1074,13 @@ def game_stories():
     a2 = S.who_clue("scene_puz_who_a2", "kid:" + L, "cat", False, "The girl in red beside a cat, with a red cross: she does not have the cat.")
     page(r, i, a1, "یوسف مرغ دارد.", "Yusuf has the hen.")
     page(r, i, a2, "لیلا پشک ندارد.", "Laila does not have the cat.")
-    ask(r, i, a2, "لیلا کدام حیوان را دارد؟", "Which animal does Laila have?", "goat", ["cat", "hen"],
+    a_s1 = S.who_final("scene_puz_who_a4", [("kid:" + Y, "hen", True), ("kid:" + L, "cat", False)],
+                       "Two frames, the clues so far: the boy in blue with a hen and a green tick; the girl in red with a cat and a red cross.")
+    a_s2 = S.who_final("scene_puz_who_a5", [("kid:" + Y, "hen", True), ("kid:" + L, "goat", True)],
+                       "Two frames: the boy in blue with a hen and a green tick; the girl in red with a goat and a green tick.")
+    ask(r, i, a_s1, "لیلا کدام حیوان را دارد؟", "Which animal does Laila have?", "goat", ["cat", "hen"],
         "لیلا پشک ندارد. مرغ از یوسف است. پس برای لیلا کدام می‌ماند؟", "Laila does not have the cat. The hen is Yusuf's. So which one is left for Laila?")
-    ask(r, i, a_all, "مریم کدام حیوان را دارد؟", "Which animal does Maryam have?", "cat", ["hen", "goat"],
+    ask(r, i, a_s2, "مریم کدام حیوان را دارد؟", "Which animal does Maryam have?", "cat", ["hen", "goat"],
         "مرغ از یوسف است و بز از لیلا. برای مریم کدام می‌ماند؟", "The hen is Yusuf's and the goat is Laila's. Which one is left for Maryam?")
     a_end = S.who_final("scene_puz_who_a3", [("kid:" + L, "goat"), ("kid:" + Y, "hen"), ("kid:" + M, "cat")],
                         "Three frames: the girl in red with a goat, the boy in blue with a hen, the girl in green with a cat.")
@@ -1091,12 +1095,18 @@ def game_stories():
     c3 = S.who_clue("scene_puz_who_b3", "kid:" + K, "apple", False, "The boy in green beside an apple, with a red cross.")
     page(r, i, c1, "شیرین سیب ندارد.", "Shirin does not have the apple.")
     page(r, i, c2, "شیرین ناک هم ندارد.", "Shirin does not have the pear either.")
-    ask(r, i, b_all, "شیرین کدام میوه را دارد؟", "Which fruit does Shirin have?", "pomegranate", ["apple", "pear"],
+    b_s1 = S.who_final("scene_puz_who_b5", [("kid:" + SH, "apple", False), ("kid:" + SH, "pear", False)],
+                       "Two frames, the clues so far: the girl in blue with an apple and a red cross; the girl in blue with a pear and a red cross.")
+    b_s2 = S.who_final("scene_puz_who_b6", [("kid:" + SH, "pomegranate", True), ("kid:" + K, "apple", False)],
+                       "Two frames: the girl in blue with a pomegranate and a green tick; the boy in green with an apple and a red cross.")
+    b_s3 = S.who_final("scene_puz_who_b7", [("kid:" + SH, "pomegranate", True), ("kid:" + K, "pear", True)],
+                       "Two frames: the girl in blue with a pomegranate and a green tick; the boy in green with a pear and a green tick.")
+    ask(r, i, b_s1, "شیرین کدام میوه را دارد؟", "Which fruit does Shirin have?", "pomegranate", ["apple", "pear"],
         "شیرین نه سیب دارد و نه ناک. فقط یک میوه می‌ماند.", "Shirin has neither the apple nor the pear. Only one fruit is left.")
     page(r, i, c3, "کریم سیب ندارد.", "Karim does not have the apple.")
-    ask(r, i, c3, "کریم کدام میوه را دارد؟", "Which fruit does Karim have?", "pear", ["apple", "pomegranate"],
+    ask(r, i, b_s2, "کریم کدام میوه را دارد؟", "Which fruit does Karim have?", "pear", ["apple", "pomegranate"],
         "کریم سیب ندارد، و انار از شیرین است.", "Karim does not have the apple, and the pomegranate is Shirin's.")
-    ask(r, i, b_all, "پس سیب از کیست؟", "So whose is the apple?", tok_thing("kid:" + O), [tok_thing("kid:" + SH), tok_thing("kid:" + K)],
+    ask(r, i, b_s3, "پس سیب از کیست؟", "So whose is the apple?", tok_thing("kid:" + O), [tok_thing("kid:" + SH), tok_thing("kid:" + K)],
         "شیرین انار دارد و کریم ناک. کی مانده است؟", "Shirin has the pomegranate and Karim the pear. Who is left?")
     b_end = S.who_final("scene_puz_who_b4", [("kid:" + O, "apple"), ("kid:" + SH, "pomegranate"), ("kid:" + K, "pear")],
                         "Three frames: the boy in orange with an apple, the girl in blue with a pomegranate, the boy in green with a pear.")
@@ -1129,9 +1139,13 @@ def game_stories():
     h2 = S.who_clue("scene_puz_house_2", "cat", "house_yellow", False, "The cat beside the yellow house, with a red cross: the cat does not live in the yellow house.")
     page(r, i, h1, "سگ در خانه آبی زندگی می‌کند.", "The dog lives in the blue house.")
     page(r, i, h2, "پشک در خانه زرد زندگی نمی‌کند.", "The cat does not live in the yellow house.")
-    ask(r, i, h2, "خانه پشک کدام است؟", "Which is the cat's house?", hred, [hblue, hyel],
+    h_s1 = S.who_final("scene_puz_house_4", [("dog", "house_blue", True), ("cat", "house_yellow", False)],
+                       "Two frames, the clues so far: the dog with the blue house and a green tick; the cat with the yellow house and a red cross.")
+    h_s2 = S.who_final("scene_puz_house_5", [("dog", "house_blue", True), ("cat", "house_red", True)],
+                       "Two frames: the dog with the blue house and a green tick; the cat with the red house and a green tick.")
+    ask(r, i, h_s1, "خانه پشک کدام است؟", "Which is the cat's house?", hred, [hblue, hyel],
         "خانه آبی از سگ است. پشک در خانه زرد هم نیست. کدام خانه می‌ماند؟", "The blue house is the dog's. The cat is not in the yellow house either. Which house is left?")
-    ask(r, i, h_all, "خانه مرغ کدام است؟", "Which is the hen's house?", hyel, [hred, hblue],
+    ask(r, i, h_s2, "خانه مرغ کدام است؟", "Which is the hen's house?", hyel, [hred, hblue],
         "خانه آبی از سگ است و خانه سرخ از پشک. برای مرغ کدام می‌ماند؟", "The blue house is the dog's and the red house is the cat's. Which one is left for the hen?")
     h_end = S.who_final("scene_puz_house_3", [("cat", "house_red"), ("dog", "house_blue"), ("hen", "house_yellow")],
                         "Three frames: the cat with the red house, the dog with the blue house, the hen with the yellow house.")
@@ -1152,8 +1166,8 @@ def game_stories():
     ask(r, i, w1, "کدام راه کوتاه‌ترین است؟ سنگ‌ها را بشمار.", "Which way is the shortest? Count the stones.",
         "color_blue", ["color_red", "color_yellow"], *why)
     w2 = S.ways("scene_puz_way_2", "house", "well", [
-        ("red", [(322, 124), (300, 34), (240, 90), (180, 30), (120, 90), (78, 122)], 11),
-        ("blue", [(318, 150), (250, 176), (200, 132), (150, 176), (82, 150)], 8),
+        ("red", [(326, 116), (296, 40), (236, 92), (176, 34), (116, 92), (76, 116)], 11),
+        ("blue", [(318, 150), (268, 172), (200, 142), (132, 172), (82, 150)], 8),
         ("yellow", [(322, 184), (250, 268), (140, 268), (78, 184)], 7)],
         "A house on the right, a well on the left. A red zigzag way over the top with 11 stones, a blue wavy way through the middle with 8 stones, a yellow way round the bottom with 7 stones.")
     page(r, i, w2, "حالا زهرا به چاه می‌رود. راه‌ها پیچ و خم دارد.", "Now Zahra walks to the well. The ways wind and bend.")

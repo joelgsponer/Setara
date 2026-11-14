@@ -1,35 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
 <!-- drawn by content/math/2-puzzles/make_puzzles.py -->
 <rect width="400" height="300" fill="#fff6dc"/>
-<rect x="0" y="90.4" width="400" height="95.2" fill="#e8d2a6"/>
-<rect x="350.8" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<g transform="translate(354.2 119.8) scale(0.2838)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="0" y="8.0" width="400" height="104.0" fill="#e8d2a6"/>
+<rect x="293.0" y="18.0" width="84.0" height="84.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(299.7 24.7) scale(0.5513)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
 <path d="M64.0 10.0L78.1 48.6L119.2 50.1L86.8 75.4L98.1 114.9L64.0 92.0L29.9 114.9L41.2 75.4L8.8 50.1L49.9 48.6z" fill="#f2b705"/>
 </g></g>
-<rect x="301.5" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<g transform="translate(305.0 119.8) scale(0.2838)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="203.0" y="18.0" width="84.0" height="84.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(209.7 24.7) scale(0.5513)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
 <path d="M64.0 10.0L78.1 48.6L119.2 50.1L86.8 75.4L98.1 114.9L64.0 92.0L29.9 114.9L41.2 75.4L8.8 50.1L49.9 48.6z" fill="#f2b705"/>
 </g></g>
-<rect x="252.2" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<g transform="translate(255.7 119.8) scale(0.2838)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="113.0" y="18.0" width="84.0" height="84.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(119.7 24.7) scale(0.5513)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
 <path d="M10 118l16-16" fill="none" stroke-width="10"/><path d="M10 118l16-16" fill="none" stroke="#9a6b3f" stroke-width="3"/><path d="M22 106C14 58 46 16 112 16c2 54-34 98-90 90z" fill="#4e9a51"/><path d="M24 104L90 38M44 84l-4-24M44 84l24 2M64 64l-3-24M64 64l24 2" fill="none" stroke-width="3.5"/>
 </g></g>
-<rect x="203.0" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<g transform="translate(206.5 119.8) scale(0.2838)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="23.0" y="18.0" width="84.0" height="84.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(29.7 24.7) scale(0.5513)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
 <path d="M10 118l16-16" fill="none" stroke-width="10"/><path d="M10 118l16-16" fill="none" stroke="#9a6b3f" stroke-width="3"/><path d="M22 106C14 58 46 16 112 16c2 54-34 98-90 90z" fill="#4e9a51"/><path d="M24 104L90 38M44 84l-4-24M44 84l24 2M64 64l-3-24M64 64l24 2" fill="none" stroke-width="3.5"/>
 </g></g>
-<rect x="153.8" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<g transform="translate(157.2 119.8) scale(0.2838)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M330 130.0H70M84 121.0L70 130.0L84 139.0" fill="none" stroke="#b9ae9b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="0" y="148.0" width="400" height="104.0" fill="#e8d2a6"/>
+<rect x="293.0" y="158.0" width="84.0" height="84.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(299.7 164.7) scale(0.5513)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
 <path d="M64.0 10.0L78.1 48.6L119.2 50.1L86.8 75.4L98.1 114.9L64.0 92.0L29.9 114.9L41.2 75.4L8.8 50.1L49.9 48.6z" fill="#f2b705"/>
 </g></g>
-<rect x="104.5" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<g transform="translate(108.0 119.8) scale(0.2838)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="203.0" y="158.0" width="84.0" height="84.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(209.7 164.7) scale(0.5513)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
 <path d="M64.0 10.0L78.1 48.6L119.2 50.1L86.8 75.4L98.1 114.9L64.0 92.0L29.9 114.9L41.2 75.4L8.8 50.1L49.9 48.6z" fill="#f2b705"/>
 </g></g>
-<rect x="55.2" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffe9a8" stroke="#f2b705" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/><circle cx="76.9" cy="138.0" r="3.9" fill="#f2b705"/>
-<rect x="6.0" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<g transform="translate(9.5 119.8) scale(0.2838)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="113.0" y="158.0" width="84.0" height="84.0" rx="8" fill="#ffe9a8" stroke="#f2b705" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/><circle cx="155.0" cy="200.0" r="7.6" fill="#f2b705"/>
+<rect x="23.0" y="158.0" width="84.0" height="84.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<g transform="translate(29.7 164.7) scale(0.5513)"><g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
 <path d="M10 118l16-16" fill="none" stroke-width="10"/><path d="M10 118l16-16" fill="none" stroke="#9a6b3f" stroke-width="3"/><path d="M22 106C14 58 46 16 112 16c2 54-34 98-90 90z" fill="#4e9a51"/><path d="M24 104L90 38M44 84l-4-24M44 84l24 2M64 64l-3-24M64 64l24 2" fill="none" stroke-width="3.5"/>
 </g></g>
-<path d="M330 215.625H70M86 204.625L70 215.625L86 226.625" fill="none" stroke="#b9ae9b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 270.0H70M84 261.0L70 270.0L84 279.0" fill="none" stroke="#b9ae9b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

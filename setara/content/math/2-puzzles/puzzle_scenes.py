@@ -120,26 +120,33 @@ def house(color: str, x: float, y: float, size: float) -> str:
 # -- a row with an empty place ----------------------------------------------------
 
 def pattern(name: str, toks: list, gap: int, rtl: bool, brief: str) -> str:
+    """Up to five cards stand in one line. A longer row is written like a text: it goes
+    on in a second line, which starts on the same side as the first."""
     n = len(toks)
+    first = n if n <= 5 else (n + 1) // 2
+    lines = [list(range(first))] + ([list(range(first, n))] if first < n else [])
     sp = 6
-    cw = min(90, (388 - (n - 1) * sp) / n)
-    x0 = (400 - (n * cw + (n - 1) * sp)) / 2
-    y = 138 - cw / 2
-    out = [f'<rect x="0" y="{y - 26:.1f}" width="400" height="{cw + 52:.1f}" fill="{SAND}"/>']
-    for i, t in enumerate(toks):
-        x = x0 + ((n - 1 - i) if rtl else i) * (cw + sp)
-        if i == gap:
-            out.append(D.gap_box(x, y, cw, cw))
-        else:
-            out.append(D.card(x, y, cw, cw))
-            pad = cw * 0.08
-            out.append(tok_draw(t, x + pad, y + pad, cw - 2 * pad))
-    # which way the row runs
-    ay = y + cw + 56
-    a, b = (330, 70) if rtl else (70, 330)
+    cw = min(72 if len(lines) == 1 else 84, (388 - (first - 1) * sp) / first)
+    width = first * cw + (first - 1) * sp
+    x_start = (400 + width) / 2 - cw if rtl else (400 - width) / 2
+    ys = [138 - cw / 2] if len(lines) == 1 else [18, 158]
     d = -1 if rtl else 1
-    out.append(f'<path d="M{a} {ay}H{b}M{b - d * 16} {ay - 11}L{b} {ay}L{b - d * 16} {ay + 11}" fill="none" '
-               f'stroke="{GREY}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>')
+    out = []
+    for line, y in zip(lines, ys):
+        out.append(f'<rect x="0" y="{y - 10:.1f}" width="400" height="{cw + 20:.1f}" fill="{SAND}"/>')
+        for j, i in enumerate(line):
+            x = x_start + d * j * (cw + sp)
+            if i == gap:
+                out.append(D.gap_box(x, y, cw, cw))
+            else:
+                out.append(D.card(x, y, cw, cw))
+                pad = cw * 0.08
+                out.append(tok_draw(toks[i], x + pad, y + pad, cw - 2 * pad))
+        # which way the row runs
+        ay = y + cw + (56 if len(lines) == 1 else 28)
+        a, b = (330, 70) if rtl else (70, 330)
+        out.append(f'<path d="M{a} {ay:.1f}H{b}M{b - d * 14} {ay - 9:.1f}L{b} {ay:.1f}L{b - d * 14} {ay + 9:.1f}" fill="none" '
+                   f'stroke="{GREY}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>')
     return D.scene(name, "\n".join(out), brief)
 
 
@@ -293,17 +300,19 @@ def _balance(cx: float, base_y: float, left: list, right: list, tilt: int, half:
 
 
 def scales(name: str, sets: list, brief: str, aside: list | None = None) -> str:
-    """One or two balances side by side. sets: [(left, right, tilt), ...]"""
+    """One balance, or two, one above the other. sets: [(left, right, tilt), ...]"""
     out = [f'<rect x="0" y="262" width="400" height="38" fill="{SAND}"/>']
     if len(sets) == 1:
-        cx = 200 if not aside else 150
-        out.append(_balance(cx, 266, sets[0][0], sets[0][1], sets[0][2], 96 if not aside else 84, 66 if not aside else 60))
-        for i, t in enumerate(aside or []):
-            out.append(tok_draw(t, 316, 196 - i * 70, 70))
+        if aside:
+            out.append(_balance(150, 266, sets[0][0], sets[0][1], sets[0][2], 92, 66))
+            for i, t in enumerate(aside):
+                out.append(tok_draw(t, 318, 190 - i * 76, 72))
+        else:
+            out.append(_balance(200, 266, sets[0][0], sets[0][1], sets[0][2], 112, 78))
     else:
-        out.append(f'<path d="M200 20V250" stroke="{GREY}" stroke-width="4" stroke-dasharray="4 10" stroke-linecap="round"/>')
+        out = [f'<rect x="0" y="138" width="400" height="12" fill="{SAND}"/>', f'<rect x="0" y="286" width="400" height="14" fill="{SAND}"/>']
         for k, (l, r, tilt) in enumerate(sets):
-            out.append(_balance(100 + 200 * k, 266, l, r, tilt, 52, 50))
+            out.append(_balance(200, 142 + 148 * k, l, r, tilt, 92, 58))
     return D.scene(name, "\n".join(out), brief)
 
 
@@ -335,9 +344,10 @@ def who_all(name: str, kids: list, items: list, brief: str) -> str:
            f'<rect x="0" y="150" width="400" height="150" fill="{SAND}"/>']
     for i, k in enumerate(kids):
         out.append(tok_draw(k, 30 + i * 120, 34, 104))
-    out.append(D.card(86, 178, 228, 96, fill=CREAM, sw=4))
-    for i, t in enumerate(items):
-        out.append(tok_draw(t, 98 + i * 70, 190, 68))
+    # the things lie in a heap of their own, not under the three above: no place gives an answer away
+    out.append(D.card(118, 158, 164, 136, fill=CREAM, sw=4))
+    for t, (x, y) in zip(items, ((128, 164), (212, 164), (170, 228))):
+        out.append(tok_draw(t, x, y, 60))
     return D.scene(name, "\n".join(out), brief, bg=SKY)
 
 
@@ -352,12 +362,18 @@ def who_clue(name: str, k: str, item: str, has: bool, brief: str) -> str:
 
 
 def who_final(name: str, pairs: list, brief: str) -> str:
+    """Frames side by side: who, and below it the thing. A third value True/False adds a tick or a cross."""
     out = [f'<rect x="0" y="0" width="400" height="300" fill="{SKY}"/>']
-    for i, (k, item) in enumerate(pairs):
-        x = 14 + i * 129
+    n = len(pairs)
+    x0 = (400 - n * 114 - (n - 1) * 15) / 2
+    for i, pair in enumerate(pairs):
+        k, item = pair[0], pair[1]
+        x = x0 + i * 129
         out.append(D.card(x, 26, 114, 248, fill=CREAM, sw=4))
         out.append(tok_draw(k, x + 7, 34, 100))
         out.append(tok_draw(item, x + 12, 156, 90))
+        if len(pair) > 2:
+            out.append(D.embed("yes" if pair[2] else "no", x + 56, 204, 62))
     return D.scene(name, "\n".join(out), brief, bg=SKY)
 
 

@@ -10,40 +10,71 @@ unit,key,en,fa,picture,tags
 01,south_america,South America,امریکای جنوبی,map_south_america,"continent,map"
 01,oceania,Oceania,اقیانوسیه,map_oceania,"continent,map"
 01,antarctica,Antarctica,انترکتیکا,map_antarctica,"continent,map"
-01,ocean,ocean,اقیانوس,,world
-01,sea,sea,بحر,sea,"world,new"
+01,ocean,ocean,اقیانوس,scene_map_ocean_pacific,"world,new"
+01,sea,sea,بحر,sea,world
 01,land,land,خشکه,,world
-01,afghanistan,Afghanistan,افغانستان,map_afghanistan,"country,map"
-01,capital,capital,پایتخت,,country
-# 02 Switzerland
-02,switzerland,Switzerland,سویس,map_switzerland,"country,map"
-02,aeroplane,aeroplane,طیاره,aeroplane,"journey,new"
-02,alps,the Alps,کوه‌های الپ,scene_alps_village,"switzerland,new"
-02,lake,lake,جهیل,lake,"switzerland,new"
-02,sledge,sledge,یخمالک چوبی,sledge,"switzerland,new"
-02,four_languages,four languages,چهار زبان,four_languages,"switzerland,new"
-02,swiss_school,school in Switzerland,مکتب در سویس,scene_swiss_school,"switzerland,new"
-02,tunnel,tunnel,تونل,tunnel,"switzerland,new"
-02,train,train,قطار,train,switzerland
-02,cows_meadow,cows on the mountain meadow,گاوها در چراگاه کوه,scene_cows_meadow,"switzerland,new"
-02,cheese,cheese,پنیر,cheese,"switzerland,new"
-02,chocolate,chocolate,چاکلیت,chocolate,"switzerland,new"
-# 03 Basel
-03,basel,Basel,بازل,scene_rhine_basel,"basel,new"
-03,three_countries,where three countries meet,جایی که سه کشور به هم می‌رسند,scene_map_basel,"basel,map"
-03,rhine,the river Rhine,دریای راین,scene_rhine_basel,"basel,new"
-03,ship,ship,کشتی,ship,"basel,new"
-03,port,port,بندر,,basel
-03,rhine_swim,swimming in the Rhine,آب‌بازی در دریای راین,scene_rhine_swim,"basel,new"
-03,ferry,small wooden ferry boat,کشتی خورد چوبی,ferry,"basel,new"
-03,tram,tram,ترام,tram,"basel,new"
-03,town_hall,town hall,تعمیر شاروالی,town_hall,"basel,new"
-03,zoo,zoo,باغ وحش,,basel
-03,museum,museum,موزیم,,basel
-03,festival,festival,جشن,scene_festival,"basel,new"
-03,drum,drum,دهل,drum,"basel,new"
-03,lantern,lantern,فانوس,lantern,"basel,new"
-03,university,university,پوهنتون,scene_university,"basel,new"
-03,medicine,medicine,دوا,,basel
-03,gruezi,Grüezi (hello),گروتسی,scene_basel_hello,"basel,new"
-03,makers,the people who made these lessons,کسانی که این درس‌ها را جور کرده‌اند,scene_basel_makers,"basel,new"
+01,equator,the equator,خط استوا,scene_map_hot_cold,"world,new"
+01,north_pole,the North Pole,قطب شمال,,world
+01,south_pole,the South Pole,قطب جنوب,,world
+# 02 lands and animals
+02,island,island,جزیره,island,"land,new"
+02,lake,lake,جهیل,lake,land
+02,desert,desert,صحرا,desert,"land,new"
+02,forest,forest,جنگل,forest,"land,new"
+02,iceberg,iceberg,کوه یخ,iceberg,"land,new"
+02,mountain,mountain,کوه,mountain,land
+02,river,river,دریا,river,land
+02,stream,stream,جوی,stream,land
+02,lion,lion,شیر,lion,"animal,new"
+02,giraffe,giraffe,زرافه,giraffe,"animal,new"
+02,panda,panda,پاندا,panda,"animal,new"
+02,kangaroo,kangaroo,کانگرو,kangaroo,"animal,new"
+02,penguin,penguin,پنگوین,penguin,"animal,new"
+02,polar_bear,polar bear,خرس قطبی,polar_bear,"animal,new"
+02,llama,llama,لاما,llama,"animal,new"
+02,bison,bison,بایسن,bison,"animal,new"
+02,whale,whale,نهنگ,whale,"animal,new"
+02,camel,camel,شتر,camel,animal
+# 03 directions, day and map
+03,east,east,شرق,,direction
+03,west,west,غرب,,direction
+03,north,north,شمال,,direction
+03,south,south,جنوب,,direction
+03,compass,compass,قطب‌نما,compass,"direction,new"
+03,map,map,نقشه,scene_village_map,"map,new"
+03,morning,morning,صبح,sun_morning,"day,new"
+03,midday,midday,چاشت,sun_noon,"day,new"
+03,evening,evening,شام,sun_evening,"day,new"
+03,night,night,شب,night,day
+# 04 Afghanistan and the journey
+04,afghanistan,Afghanistan,افغانستان,map_afghanistan,"country,map"
+04,capital,capital,پایتخت,,country
+04,hindu_kush,the Hindu Kush,هندوکش,scene_map_afghanistan,"afghanistan,new"
+04,aeroplane,aeroplane,طیاره,aeroplane,journey
+04,lorry,lorry,لاری,lorry,"journey,new"
+04,train,train,قطار,train,journey
+04,ship,ship,کشتی,ship,journey
+04,donkey,donkey,خر,donkey,journey
+# 05 Switzerland
+05,switzerland,Switzerland,سویس,map_switzerland,"country,map"
+05,alps,the Alps,کوه‌های الپ,scene_alps_village,switzerland
+05,sledge,sledge,یخمالک چوبی,sledge,switzerland
+05,four_languages,four languages,چهار زبان,four_languages,switzerland
+05,tunnel,tunnel,تونل,tunnel,switzerland
+05,cheese,cheese,پنیر,cheese,switzerland
+05,chocolate,chocolate,چاکلیت,chocolate,switzerland
+05,watch,watch,ساعت,watch,"switzerland,new"
+# 06 Basel
+06,basel,Basel,بازل,scene_rhine_basel,basel
+06,rhine,the river Rhine,دریای راین,scene_map_rhine,basel
+06,bridge,bridge,پل,bridge,basel
+06,port,port,بندر,,basel
+06,swim_bag,swim bag,خریطه شنا,swim_bag,"basel,new"
+06,ferry,small wooden ferry boat,کشتی خورد چوبی,ferry,basel
+06,tram,tram,ترام,tram,basel
+06,town_hall,town hall,تعمیر شاروالی,town_hall,basel
+06,festival,festival,جشن,scene_festival,basel
+06,drum,drum,دهل,drum,basel
+06,flute,flute,توله,flute,"basel,new"
+06,lantern,lantern,فانوس,lantern,basel
+06,gruezi,Grüezi (hello),گروتسی,scene_basel_hello,basel

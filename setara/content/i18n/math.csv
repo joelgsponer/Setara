@@ -269,17 +269,14 @@ fa,en
 بیشتر از ۵۰۰,more than 500
 بین همه برابر تقسیم کن.,Share equally among everyone.
 تابستان,summer
-تخم از همه کمتر است: دو تا.,The egg is the fewest: 2.
 تخم بیست افغانی و کتابچه شصت افغانی است. هر دو چند افغانی می‌شود؟ پولش را بده.,The egg is 20 afghani and the notebook is 60 afghani. How many afghani do both make? Pay for it.
 تخم سیزده افغانی است. مشتری بیست افغانی داد. چند افغانی باقی می‌ماند؟ باقی را پس بده.,The egg is 13 afghani. The customer gave 20 afghani. How many afghani are left over? Give the change back.
 تخم هشت افغانی است. پولش را بده.,The egg is 8 afghani. Pay for it.
 تخم هفت افغانی است. پولش را بده.,The egg is 7 afghani. Pay for it.
 تربوز,watermelon
-تربوز از همه کمتر است: یک تا.,The watermelon is the fewest: 1.
 تربوز پوره,whole watermelon
 تقسیم کن و جواب را انتخاب کن.,Divide and choose the answer.
 توپ,ball
-توپ از همه کمتر است: یک تا.,The ball is the fewest: 1.
 توپ شکل دایره دارد.,The ball has the shape of a circle.
 ثور,Sawr
 جدول را ببین و جواب بده.,Look at the table and answer.
@@ -376,24 +373,25 @@ fa,en
 دایره چند گوشه دارد؟,How many corners does a circle have?
 دایره چهار حصه برابر شده است.,The circle is divided into 4 equal parts.
 دایره کدام است؟,Which one is the circle?
+در این جدول از کدام چیز یک تا است؟,"In this table, of which thing is there 1?"
 در این جدول همه با هم چند تا است؟,"In this table, how many are there altogether?"
 در این جدول چند انار است؟,"In this table, how many pomegranates are there?"
 در این جدول چند چهارمغز است؟,"In this table, how many walnuts are there?"
 در این جدول چند گاو است؟,"In this table, how many cows are there?"
 در این جدول چند گوسفند است؟,"In this table, how many sheep are there?"
 در این جدول کدام از همه بیشتر است؟,"In this table, which one is the most?"
-در این جدول کدام از همه کمتر است؟,"In this table, which one is the fewest?"
 در این جدول، تربوز و چهارمغز با هم چند تا است؟,"In this table, how many are the watermelons and the walnuts together?"
 در این جدول، مرغ و گاو با هم چند تا است؟,"In this table, how many are the hens and the cows together?"
 در این جدول، مرغ چند تا بیشتر از گاو است؟,"In this table, how many more hens than cows are there?"
 در این جدول، چهارمغز چند تا بیشتر از تربوز است؟,"In this table, how many more walnuts than watermelons are there?"
+در این گراف از کدام چیز دو تا است؟,"In this chart, of which thing are there 2?"
+در این گراف از کدام چیز یک تا است؟,"In this chart, of which thing is there 1?"
 در این گراف همه با هم چند تا است؟,"In this chart, how many are there altogether?"
 در این گراف چند تخم است؟,"In this chart, how many eggs are there?"
 در این گراف چند سیب است؟,"In this chart, how many apples are there?"
 در این گراف چند پنسل است؟,"In this chart, how many pencils are there?"
 در این گراف چند کتاب است؟,"In this chart, how many books are there?"
 در این گراف کدام از همه بیشتر است؟,"In this chart, which one is the most?"
-در این گراف کدام از همه کمتر است؟,"In this chart, which one is the fewest?"
 در این گراف، توپ و کتاب با هم چند تا است؟,"In this chart, how many are the balls and the books together?"
 در این گراف، نان و تخم با هم چند تا است؟,"In this chart, how many are the loaves of bread and the eggs together?"
 در این گراف، نان چند تا بیشتر از تخم است؟,"In this chart, how many more loaves of bread than eggs are there?"
@@ -524,6 +522,7 @@ fa,en
 دو تا دو تا بشمار، از چهل و چهار تا پنجاه و چهار.,"Count in 2s, from 44 to 54."
 دو تا دو تا بشمار، از یک تا نه.,"Count in 2s, from 1 to 9."
 دو تا دو تا بشمار، از یک تا یازده.,"Count in 2s, from 1 to 11."
+دو تخم است.,There are 2 eggs.
 دو تخم بده.,Give 2 eggs.
 دو جمع ده مساوی دوازده.,2 plus 10 equals 12.
 دو جمع ده چند می‌شود؟,2 plus 10 makes how many?
@@ -2362,7 +2361,6 @@ fa,en
 کمپل یک هزار و هفت‌صد افغانی است. امروز به نیم قیمت است. پولش را بده.,The blanket is 1700 afghani. Today it is at half price. Pay for it.
 کوه,mountain
 کیلو و گرام را حساب کن.,Work out the kilos and the grams.
-گاو از همه کمتر است: یک تا.,The cow is the fewest: 1.
 گراف را ببین و جواب بده.,Look at the chart and answer.
 گوش کن و جواب درست را انتخاب کن.,Listen and choose the right answer.
 گوش کن و ساعت درست را پیدا کن.,Listen and find the right clock.
@@ -2433,6 +2431,8 @@ fa,en
 یک بر چهار یعنی یک حصه از چهار حصه برابر.,1/4 means 1 of 4 equal parts.
 یک بوری آرد سی و هشت کیلو است و یک بوری برنج چهارده کیلو. هر دو با هم چند کیلو می‌شود؟,A sack of flour is 38 kilos and a sack of rice is 14 kilos. How many kilos do both make together?
 یک بوری آرد پنجاه کیلو است و یک بوری برنج بیست و پنج کیلو. هر دو با هم چند کیلو می‌شود؟,A sack of flour is 50 kilos and a sack of rice is 25 kilos. How many kilos do both make together?
+یک تربوز است.,There is 1 watermelon.
+یک توپ است.,There is 1 ball.
 یک تکه شصت و چهار متر بود. بیست و هفت متر آن بریده شد. چند متر ماند؟,A piece was 64 metres. 27 metres of it was cut off. How many metres are left?
 یک تکه هفتاد و دو سانتی‌متر بود. چهل و هشت سانتی‌متر آن بریده شد. چند سانتی‌متر ماند؟,A piece was 72 centimetres. 48 centimetres of it was cut off. How many centimetres are left?
 یک تکه پنجاه و شش سانتی‌متر است و تکه دیگر بیست و نه سانتی‌متر. هر دو با هم چند سانتی‌متر می‌شود؟,One piece is 56 centimetres and another piece is 29 centimetres. How many centimetres do both make together?
@@ -2511,6 +2511,7 @@ fa,en
 یک کیلو چند گرام است؟,How many grams is 1 kilo?
 یک کیلو چهارمغز سی و شش افغانی است. دو و نیم کیلو چند افغانی می‌شود؟ پولش را بده.,One kilo of walnuts is 36 afghani. How many afghani do two and a half kilos make? Pay for it.
 یک کیلو کچالو سی و دو افغانی است. نیم کیلو چند افغانی می‌شود؟ پولش را بده.,One kilo of potatoes is 32 afghani. How many afghani does half a kilo make? Pay for it.
+یک گاو است.,There is 1 cow.
 یک گوسفند بود، یک تای دیگر آمد. چند تا شد؟,"There was 1 sheep, 1 more came. How many are there now?"
 یک. یک ستاره است.,1. There is 1 star.
 یک. یک ماهی است.,1. There is 1 fish.
