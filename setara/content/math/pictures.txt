@@ -14,10 +14,10 @@ brick: one clay brick
 button: a round button with four holes
 carpet: a rectangular red Afghan carpet with a simple pattern, clearly longer than wide
 carrot: one orange carrot with green top
-chart_bars_1: a block chart with four columns, a small picture under each column and one block per unit: 4 apple, 5 bread, 2 egg, 3 carrot (drawn by content/math/draw_pictures.py)
-chart_bars_2: a block chart with four columns, a small picture under each column and one block per unit: 5 pencil, 3 notebook, 4 book, 1 ball (drawn by content/math/draw_pictures.py)
-chart_table_1: a picture table with four rows read from the right: a small picture, then one dot per unit: 3 sheep, 2 goat, 5 hen, 1 cow (drawn by content/math/draw_pictures.py)
-chart_table_2: a picture table with four rows read from the right: a small picture, then one dot per unit: 3 pomegranate, 1 watermelon, 5 orange, 4 walnut (drawn by content/math/draw_pictures.py)
+chart_bars_1: a block chart with three columns, a small picture under each column and one block per unit: 4 apple, 5 bread, 2 egg (drawn by content/math/draw_pictures.py)
+chart_bars_2: a block chart with three columns, a small picture under each column and one block per unit: 5 pencil, 1 ball, 3 book (drawn by content/math/draw_pictures.py)
+chart_table_1: a picture table with three rows read from the right: a small picture, then one dot per unit: 3 sheep, 5 hen, 1 cow (drawn by content/math/draw_pictures.py)
+chart_table_2: a picture table with three rows read from the right: a small picture, then one dot per unit: 2 pomegranate, 1 watermelon, 4 walnut (drawn by content/math/draw_pictures.py)
 clock_1: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 1 and the long hand at 12
 clock_10: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 10 and the long hand at 12
 clock_11: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 11 and the long hand at 12

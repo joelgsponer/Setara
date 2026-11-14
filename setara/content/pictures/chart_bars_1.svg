@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
 <rect x="1.5" y="1.5" width="125" height="125" rx="6" fill="#fff6dc" stroke="#3b2f2f" stroke-width="3"/>
-<rect x="9" y="79" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<rect x="9" y="60.8" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<rect x="9" y="42.6" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<rect x="9" y="24.4" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<g transform="translate(6 97.5) scale(0.2031)">
+<rect x="12" y="71.1" width="24" height="13.4" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
+<rect x="12" y="54.7" width="24" height="13.4" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
+<rect x="12" y="38.3" width="24" height="13.4" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
+<rect x="12" y="21.9" width="24" height="13.4" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
+<g transform="translate(6 88) scale(0.2812)">
 <g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
 <path d="M64 40c-10-9-34-6-36 20-2 24 14 48 28 48 4 0 6-2 8-2s4 2 8 2c14 0 30-24 28-48-2-26-26-29-36-20z" fill="#e0483f"/>
 <path d="M64 40c0-10 2-16 8-22" fill="none"/>
@@ -12,13 +12,13 @@
 </g>
 <path d="M40 56c2-8 8-12 14-12" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/>
 </g>
-<path d="M34 6V122" stroke="#b9ae9b" stroke-width="1.5"/>
-<rect x="39" y="79" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<rect x="39" y="60.8" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<rect x="39" y="42.6" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<rect x="39" y="24.4" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<rect x="39" y="6.2" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<g transform="translate(36 97.5) scale(0.2031)">
+<path d="M44 5V123" stroke="#b9ae9b" stroke-width="2"/>
+<rect x="52" y="71.1" width="24" height="13.4" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
+<rect x="52" y="54.7" width="24" height="13.4" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
+<rect x="52" y="38.3" width="24" height="13.4" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
+<rect x="52" y="21.9" width="24" height="13.4" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
+<rect x="52" y="5.5" width="24" height="13.4" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
+<g transform="translate(46 88) scale(0.2812)">
 <g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
 <g transform="rotate(-32 64 64)">
 <path d="M2 64c6-22 32-28 62-28s56 6 62 28c-6 22-32 28-62 28S8 86 2 64z" fill="#e3a857"/>
@@ -27,24 +27,11 @@
 </g>
 </g>
 </g>
-<path d="M64 6V122" stroke="#b9ae9b" stroke-width="1.5"/>
-<rect x="69" y="79" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<rect x="69" y="60.8" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<g transform="translate(66 97.5) scale(0.2031)">
+<path d="M84 5V123" stroke="#b9ae9b" stroke-width="2"/>
+<rect x="92" y="71.1" width="24" height="13.4" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
+<rect x="92" y="54.7" width="24" height="13.4" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
+<g transform="translate(86 88) scale(0.2812)">
 <g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><path d="M64 10c22 0 40 36 40 62 0 28-18 46-40 46S24 100 24 72c0-26 18-62 40-62z" fill="#fffaf0"/></g><path d="M90 76c-2 16-10 26-22 30" fill="none" stroke="#d9cfbd" stroke-width="6" stroke-linecap="round"/>
 </g>
-<path d="M94 6V122" stroke="#b9ae9b" stroke-width="1.5"/>
-<rect x="99" y="79" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<rect x="99" y="60.8" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<rect x="99" y="42.6" width="20" height="15.8" rx="2" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5"/>
-<g transform="translate(96 97.5) scale(0.2031)">
-<g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
-<g transform="rotate(38 64 64)">
-<path d="M64 34c-8-10-22-14-28-10 4 10 14 14 28 10zM64 34c8-10 22-14 28-10-4 10-14 14-28 10zM64 36c-6-12-6-24 0-34 6 10 6 22 0 34z" fill="#4e9a51"/>
-<path d="M46 40c10-8 26-8 36 0 2 30-6 60-18 84-12-24-20-54-18-84z" fill="#e07a3f"/>
-<path d="M50 60h12M68 76h10M54 92h10" fill="none" stroke-width="3.5"/>
-</g>
-</g>
-</g>
-<path d="M4 96H124" stroke="#3b2f2f" stroke-width="3" stroke-linecap="round"/>
+<path d="M4 86H124" stroke="#3b2f2f" stroke-width="3" stroke-linecap="round"/>
 </svg>

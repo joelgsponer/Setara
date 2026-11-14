@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
 <!-- drawn by content/math/2-puzzles/make_puzzles.py -->
 <rect width="400" height="300" fill="#fff6dc"/>
-<rect x="0" y="76.0" width="400" height="124.0" fill="#e8d2a6"/>
-<rect x="8.0" y="102.0" width="72.0" height="72.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<path transform="translate(31.4 153.1) scale(0.02036 -0.02036)" d="M1090 0H200V235H507V1170L227 1018L192 1278L507 1460H782V235H1090Z" fill="#3b2f2f"/>
-<rect x="86.0" y="102.0" width="72.0" height="72.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<path transform="translate(109.4 153.1) scale(0.02036 -0.02036)" d="M1175 345H1015V0H750V345H80V570L715 1460H1015V570H1175ZM750 1145 325 570H750Z" fill="#3b2f2f"/>
-<rect x="164.0" y="102.0" width="72.0" height="72.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<path transform="translate(187.4 153.1) scale(0.02036 -0.02036)" d="M520 0H235Q300 212 360.5 377.0Q421 542 486.0 680.0Q551 818 627.0 946.5Q703 1075 800 1215H480Q339 1215 248.0 1211.0Q157 1207 100 1195V1460H1130V1260Q908 956 762.5 650.0Q617 344 520 0Z" fill="#3b2f2f"/>
-<rect x="242.0" y="102.0" width="72.0" height="72.0" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<path transform="translate(252.7 153.1) scale(0.02036 -0.02036)" d="M1090 0H200V235H507V1170L227 1018L192 1278L507 1460H782V235H1090Z" fill="#3b2f2f"/><path transform="translate(278.0 153.1) scale(0.02036 -0.02036)" d="M870 715Q870 993 809.5 1124.0Q749 1255 620 1255Q498 1255 434.0 1130.5Q370 1006 370 745Q370 468 432.0 336.5Q494 205 620 205Q742 205 806.0 330.0Q870 455 870 715ZM1155 740Q1155 451 1085.5 283.5Q1016 116 893.5 45.5Q771 -25 610 -25Q451 -25 333.0 45.5Q215 116 150.0 279.5Q85 443 85 720Q85 1002 155.0 1169.5Q225 1337 347.5 1411.0Q470 1485 630 1485Q800 1485 917.0 1412.5Q1034 1340 1094.5 1176.5Q1155 1013 1155 740Z" fill="#3b2f2f"/>
-<rect x="320.0" y="102.0" width="72.0" height="72.0" rx="8" fill="#ffe9a8" stroke="#f2b705" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/><circle cx="356.0" cy="138.0" r="6.5" fill="#f2b705"/>
-<path d="M70 230.0H330M314 219.0L330 230.0L314 241.0" fill="none" stroke="#b9ae9b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="0" y="75.6" width="400" height="124.8" fill="#e8d2a6"/>
+<rect x="6.0" y="101.6" width="72.8" height="72.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<path transform="translate(29.6 153.3) scale(0.02059 -0.02059)" d="M1090 0H200V235H507V1170L227 1018L192 1278L507 1460H782V235H1090Z" fill="#3b2f2f"/>
+<rect x="84.8" y="101.6" width="72.8" height="72.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<path transform="translate(108.4 153.3) scale(0.02059 -0.02059)" d="M1175 345H1015V0H750V345H80V570L715 1460H1015V570H1175ZM750 1145 325 570H750Z" fill="#3b2f2f"/>
+<rect x="163.6" y="101.6" width="72.8" height="72.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<path transform="translate(187.2 153.3) scale(0.02059 -0.02059)" d="M520 0H235Q300 212 360.5 377.0Q421 542 486.0 680.0Q551 818 627.0 946.5Q703 1075 800 1215H480Q339 1215 248.0 1211.0Q157 1207 100 1195V1460H1130V1260Q908 956 762.5 650.0Q617 344 520 0Z" fill="#3b2f2f"/>
+<rect x="242.4" y="101.6" width="72.8" height="72.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<path transform="translate(253.3 153.3) scale(0.02059 -0.02059)" d="M1090 0H200V235H507V1170L227 1018L192 1278L507 1460H782V235H1090Z" fill="#3b2f2f"/><path transform="translate(278.8 153.3) scale(0.02059 -0.02059)" d="M870 715Q870 993 809.5 1124.0Q749 1255 620 1255Q498 1255 434.0 1130.5Q370 1006 370 745Q370 468 432.0 336.5Q494 205 620 205Q742 205 806.0 330.0Q870 455 870 715ZM1155 740Q1155 451 1085.5 283.5Q1016 116 893.5 45.5Q771 -25 610 -25Q451 -25 333.0 45.5Q215 116 150.0 279.5Q85 443 85 720Q85 1002 155.0 1169.5Q225 1337 347.5 1411.0Q470 1485 630 1485Q800 1485 917.0 1412.5Q1034 1340 1094.5 1176.5Q1155 1013 1155 740Z" fill="#3b2f2f"/>
+<rect x="321.2" y="101.6" width="72.8" height="72.8" rx="8" fill="#ffe9a8" stroke="#f2b705" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/><circle cx="357.6" cy="138.0" r="6.6" fill="#f2b705"/>
+<path d="M70 230.39999999999998H330M314 219.39999999999998L330 230.39999999999998L314 241.39999999999998" fill="none" stroke="#b9ae9b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

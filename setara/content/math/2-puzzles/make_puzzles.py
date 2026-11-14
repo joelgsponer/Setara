@@ -128,7 +128,7 @@ def game_pairs():
                         ("shoe", "بوت و سایه‌اش", "the shoe and its shadow"),
                         ("elephant", "فیل و سایه‌اش", "the elephant and its shadow"),
                         ("pear", "ناک و سایه‌اش", "the pear and its shadow"),
-                        ("house", "خانه و سایه‌اش", "the house and its shadow")):
+                        ("frog", "بقه و سایه‌اش", "the frog and its shadow")):
         add("03", intro, a=pic, b=shadow(pic), say_fa=T(fa, en))
 
 

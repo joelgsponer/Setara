@@ -48,10 +48,10 @@ fa,en
 امروز دوشنبه است. فردا کدام روز است؟,Today is Monday. Which day is tomorrow?
 امروز چهارشنبه است. دیروز کدام روز بود؟,Today is Wednesday. Which day was yesterday?
 اول بزرگترین عدد را پیدا کن.,First find the biggest number.
+اول صدها را ببین.,Look at the hundreds first.
 اول عدد اول، بعد نشان تقسیم، بعد عدد دوم، بعد نشان مساوی و در آخر جواب.,"First the first number, then the division sign, then the second number, then the equals sign and last the answer."
 اول عدد اول، بعد نشان ضرب، بعد عدد دوم، بعد نشان مساوی و در آخر جواب.,"First the first number, then the times sign, then the second number, then the equals sign and last the answer."
 اول عدد پیش از نقطه را ببین، بعد رقم‌های بعد از نقطه را.,"First look at the number before the point, then at the digits after the point."
-اول هزارها را ببین.,Look at the thousands first.
 اول کسر اول، بعد نشان جمع، بعد کسر دوم، بعد نشان مساوی و در آخر جواب.,"First the first fraction, then the plus sign, then the second fraction, then the equals sign and last the answer."
 اول کوچکترین عدد را پیدا کن.,First find the smallest number.
 این دایره چند حصه برابر شده است؟,Into how many equal parts is this circle divided?
@@ -158,19 +158,19 @@ fa,en
 بهار,spring
 بوت سه‌صد و هشتاد افغانی است. پولش را بده.,The shoes are 380 afghani. Pay for it.
 بوت شش‌صد و چهل و پنج افغانی است. مشتری هزار افغانی داد. چند افغانی باقی می‌ماند؟ باقی را پس بده.,The shoes are 645 afghani. The customer gave 1000 afghani. How many afghani are left over? Give the change back.
+بوت هزار افغانی است. چهار نفر پول آن را برابر تقسیم می‌کنند. حصه یک نفر را بده.,The shoes are 1000 afghani. 4 people share the cost equally. Pay one person's share.
 بوت هفت‌صد و پنجاه افغانی است. پولش را بده.,The shoes are 750 afghani. Pay for it.
-بوت یک هزار و چهارصد و هشتاد افغانی است. چهار نفر پول آن را برابر تقسیم می‌کنند. حصه یک نفر را بده.,The shoes are 1480 afghani. 4 people share the cost equally. Pay one person's share.
 بوت یکصد و شصت افغانی و چای نود افغانی است. هر دو چند افغانی می‌شود؟ پولش را بده.,The shoes are 160 afghani and the tea is 90 afghani. How many afghani do both make? Pay for it.
 بوره نود افغانی است. پولش را بده.,The sugar is 90 afghani. Pay for it.
 بوره هفتاد افغانی است. پولش را بده.,The sugar is 70 afghani. Pay for it.
 بوره پنجاه و یک افغانی است. پولش را بده.,The sugar is 51 afghani. Pay for it.
 بوری آرد سه‌صد و چهل افغانی است. پولش را بده.,The sack of flour is 340 afghani. Pay for it.
-بوری آرد نه‌صد و بیست افغانی است. چهار نفر پول آن را برابر تقسیم می‌کنند. حصه یک نفر را بده.,The sack of flour is 920 afghani. 4 people share the cost equally. Pay one person's share.
+بوری آرد هشت‌صد افغانی است. چهار نفر پول آن را برابر تقسیم می‌کنند. حصه یک نفر را بده.,The sack of flour is 800 afghani. 4 people share the cost equally. Pay one person's share.
 بوری آرد چهار هزار و هفت‌صد افغانی است. پولش را بده.,The sack of flour is 4700 afghani. Pay for it.
 بوری آرد یکصد و بیست افغانی و صابون صد افغانی است. هر دو چند افغانی می‌شود؟ پولش را بده.,The sack of flour is 120 afghani and the soap is 100 afghani. How many afghani do both make? Pay for it.
 بوری آرد یکصد و نود افغانی است. مشتری پنج‌صد افغانی داد. چند افغانی باقی می‌ماند؟ باقی را پس بده.,The sack of flour is 190 afghani. The customer gave 500 afghani. How many afghani are left over? Give the change back.
 بوری برنج سه‌صد و نود و پنج افغانی است. مشتری هزار افغانی داد. چند افغانی باقی می‌ماند؟ باقی را پس بده.,The sack of rice is 395 afghani. The customer gave 1000 afghani. How many afghani are left over? Give the change back.
-بوری برنج هشت‌صد و شصت افغانی است. امروز به نیم قیمت است. پولش را بده.,The sack of rice is 860 afghani. Today it is at half price. Pay for it.
+بوری برنج هزار افغانی است. امروز به نیم قیمت است. پولش را بده.,The sack of rice is 1000 afghani. Today it is at half price. Pay for it.
 بوری برنج چهار هزار و شش‌صد و پنجاه افغانی است. پولش را بده.,The sack of rice is 4650 afghani. Pay for it.
 بوری برنج یکصد و چهل افغانی است. پولش را بده.,The sack of rice is 140 afghani. Pay for it.
 بوری برنج یکصد و چهل افغانی و بوره یکصد و هشتاد افغانی است. هر دو چند افغانی می‌شود؟ پولش را بده.,The sack of rice is 140 afghani and the sugar is 180 afghani. How many afghani do both make? Pay for it.
@@ -261,13 +261,12 @@ fa,en
 بیست، بیست و دو، بیست و چهار، بیست و شش، بیست و هشت، سی.,"20, 22, 24, 26, 28, 30."
 بیست، نزده، هژده، هفده، شانزده، پانزده.,"20, 19, 18, 17, 16, 15."
 بیست، هژده، شانزده، چهارده، دوازده، ده.,"20, 18, 16, 14, 12, 10."
+بیشتر,more
 بیشتر از نیم,more than half
 بیشتر از پنج هزار,more than 5000
 بیشتر از پنج‌صد,more than 500
 بیشتر از یک افغانی,more than 1 afghani
-بیشتر از ۱ افغانی,more than 1 afghani
 بیشتر از ۵۰۰,more than 500
-بیشتر از ۵۰۰۰,more than 5000
 بین همه برابر تقسیم کن.,Share equally among everyone.
 تابستان,summer
 تخم از همه کمتر است: دو تا.,The egg is the fewest: 2.
@@ -284,6 +283,7 @@ fa,en
 توپ شکل دایره دارد.,The ball has the shape of a circle.
 ثور,Sawr
 جدول را ببین و جواب بده.,Look at the table and answer.
+جدول ضرب بیست و پنج: بیست و پنج، پنجاه، هفتاد و پنج، صد، یکصد و بیست و پنج و همین طور پیش برو.,"The 25 times table: 25, 50, 75, 100, 125 and so on."
 جدول ضرب ده: ده تا ده تا بشمار، از ده تا شصت.,"The 10 times table: Count in 10s, from 10 to 60."
 جدول ضرب ده: ده تا ده تا بشمار، از ده تا هشتاد.,"The 10 times table: Count in 10s, from 10 to 80."
 جدول ضرب ده: ده تا ده تا بشمار، از سی تا صد.,"The 10 times table: Count in 10s, from 30 to 100."
@@ -294,6 +294,7 @@ fa,en
 جدول ضرب دو: دو تا دو تا بشمار، از دو تا شانزده.,"The 2 times table: Count in 2s, from 2 to 16."
 جدول ضرب دو: دو تا دو تا بشمار، از شش تا بیست.,"The 2 times table: Count in 2s, from 6 to 20."
 جدول ضرب دو: دو، چهار، شش، هشت، ده و همین طور پیش برو.,"The 2 times table: 2, 4, 6, 8, 10 and so on."
+جدول ضرب دوازده: دوازده، بیست و چهار، سی و شش، چهل و هشت، شصت و همین طور پیش برو.,"The 12 times table: 12, 24, 36, 48, 60 and so on."
 جدول ضرب سه: سه تا سه تا بشمار، از سه تا بیست و چهار.,"The 3 times table: Count in 3s, from 3 to 24."
 جدول ضرب سه: سه تا سه تا بشمار، از سه تا هژده.,"The 3 times table: Count in 3s, from 3 to 18."
 جدول ضرب سه: سه، شش، نه، دوازده، پانزده و همین طور پیش برو.,"The 3 times table: 3, 6, 9, 12, 15 and so on."
@@ -353,13 +354,13 @@ fa,en
 حساب کن و جواب درست را انتخاب کن.,Work it out and choose the right answer.
 حمل,Hamal
 حوت,Hut
-خانه‌های انار را بشمار: سه.,Count the boxes of the pomegranate: 3.
+خانه‌های انار را بشمار: دو.,Count the boxes of the pomegranate: 2.
 خانه‌های تخم را بشمار: دو.,Count the boxes of the egg: 2.
 خانه‌های سیب را بشمار: چهار.,Count the boxes of the apple: 4.
-خانه‌های مالته را بشمار: پنج.,Count the boxes of the orange: 5.
-خانه‌های مرغ را بشمار: پنج.,Count the boxes of the hen: 5.
 خانه‌های پنسل را بشمار: پنج.,Count the boxes of the pencil: 5.
-خانه‌های کتاب را بشمار: چهار.,Count the boxes of the book: 4.
+خانه‌های چهارمغز را بشمار: چهار.,Count the boxes of the walnut: 4.
+خانه‌های کتاب را بشمار: سه.,Count the boxes of the book: 3.
+خانه‌های گاو را بشمار: یک.,Count the boxes of the cow: 1.
 خانه‌های گوسفند را بشمار: سه.,Count the boxes of the sheep: 3.
 خزان,autumn
 خوب ببین و مقایسه کن.,Look carefully and compare.
@@ -377,15 +378,15 @@ fa,en
 دایره کدام است؟,Which one is the circle?
 در این جدول همه با هم چند تا است؟,"In this table, how many are there altogether?"
 در این جدول چند انار است؟,"In this table, how many pomegranates are there?"
-در این جدول چند مالته است؟,"In this table, how many oranges are there?"
-در این جدول چند مرغ است؟,"In this table, how many hens are there?"
+در این جدول چند چهارمغز است؟,"In this table, how many walnuts are there?"
+در این جدول چند گاو است؟,"In this table, how many cows are there?"
 در این جدول چند گوسفند است؟,"In this table, how many sheep are there?"
 در این جدول کدام از همه بیشتر است؟,"In this table, which one is the most?"
 در این جدول کدام از همه کمتر است؟,"In this table, which one is the fewest?"
-در این جدول، بز و گاو با هم چند تا است؟,"In this table, how many are the goats and the cows together?"
 در این جدول، تربوز و چهارمغز با هم چند تا است؟,"In this table, how many are the watermelons and the walnuts together?"
-در این جدول، مالته چند تا بیشتر از انار است؟,"In this table, how many more oranges than pomegranates are there?"
-در این جدول، مرغ چند تا بیشتر از بز است؟,"In this table, how many more hens than goats are there?"
+در این جدول، مرغ و گاو با هم چند تا است؟,"In this table, how many are the hens and the cows together?"
+در این جدول، مرغ چند تا بیشتر از گاو است؟,"In this table, how many more hens than cows are there?"
+در این جدول، چهارمغز چند تا بیشتر از تربوز است؟,"In this table, how many more walnuts than watermelons are there?"
 در این گراف همه با هم چند تا است؟,"In this chart, how many are there altogether?"
 در این گراف چند تخم است؟,"In this chart, how many eggs are there?"
 در این گراف چند سیب است؟,"In this chart, how many apples are there?"
@@ -393,10 +394,10 @@ fa,en
 در این گراف چند کتاب است؟,"In this chart, how many books are there?"
 در این گراف کدام از همه بیشتر است؟,"In this chart, which one is the most?"
 در این گراف کدام از همه کمتر است؟,"In this chart, which one is the fewest?"
-در این گراف، نان و زردک با هم چند تا است؟,"In this chart, how many are the loaves of bread and the carrots together?"
-در این گراف، نان چند تا بیشتر از زردک است؟,"In this chart, how many more loaves of bread than carrots are there?"
-در این گراف، پنسل چند تا بیشتر از کتابچه است؟,"In this chart, how many more pencils than notebooks are there?"
-در این گراف، کتابچه و توپ با هم چند تا است؟,"In this chart, how many are the notebooks and the balls together?"
+در این گراف، توپ و کتاب با هم چند تا است؟,"In this chart, how many are the balls and the books together?"
+در این گراف، نان و تخم با هم چند تا است؟,"In this chart, how many are the loaves of bread and the eggs together?"
+در این گراف، نان چند تا بیشتر از تخم است؟,"In this chart, how many more loaves of bread than eggs are there?"
+در این گراف، پنسل چند تا بیشتر از توپ است؟,"In this chart, how many more pencils than balls are there?"
 در بوری پنجاه کیلو آرد بود. هژده کیلو مصرف شد. چند کیلو ماند؟,There were 50 kilos of flour in the sack. 18 kilos were used. How many kilos are left?
 در بوری چهل و دو کیلو آرد بود. بیست و هفت کیلو مصرف شد. چند کیلو ماند؟,There were 42 kilos of flour in the sack. 27 kilos were used. How many kilos are left?
 در تانکی شصت لیتر آب بود. بیست و پنج لیتر مصرف شد. چند لیتر ماند؟,There were 60 litres of water in the tank. 25 litres were used. How many litres are left?
@@ -535,6 +536,7 @@ fa,en
 دو جمع هشت چند می‌شود؟,2 plus 8 makes how many?
 دو جمع هفت مساوی نه.,2 plus 7 equals 9.
 دو جمع هفت چند می‌شود؟,2 plus 7 makes how many?
+دو جمع یک جمع چهار مساوی هفت.,2 plus 1 plus 4 equals 7.
 دو جمع یک مساوی سه.,2 plus 1 equals 3.
 دو جمع یک چند می‌شود؟,2 plus 1 makes how many?
 دو حصه برابر است و یک حصه رنگ شده است: یک بر دو.,There are 2 equal parts and 1 is coloured: 1/2.
@@ -664,7 +666,7 @@ fa,en
 روزهای هفته را به یاد بیاور.,Remember the days of the week.
 روغن سه هزار و پنج‌صد و پنجاه افغانی است. پولش را بده.,The oil is 3550 afghani. Pay for it.
 روغن سه‌صد و شصت افغانی است. پولش را بده.,The oil is 360 afghani. Pay for it.
-روغن هفت‌صد و چهل افغانی است. امروز به نیم قیمت است. پولش را بده.,The oil is 740 afghani. Today it is at half price. Pay for it.
+روغن نه‌صد افغانی است. امروز به نیم قیمت است. پولش را بده.,The oil is 900 afghani. Today it is at half price. Pay for it.
 روغن پنج‌صد و بیست و پنج افغانی است. مشتری هزار افغانی داد. چند افغانی باقی می‌ماند؟ باقی را پس بده.,The oil is 525 afghani. The customer gave 1000 afghani. How many afghani are left over? Give the change back.
 روغن یکصد و نود افغانی و کتابچه چهل افغانی است. هر دو چند افغانی می‌شود؟ پولش را بده.,The oil is 190 afghani and the notebook is 40 afghani. How many afghani do both make? Pay for it.
 زمستان,winter
@@ -706,7 +708,6 @@ fa,en
 سه بر چهار یعنی سه حصه از چهار حصه برابر.,3/4 means 3 of 4 equal parts.
 سه بز می‌خری. هر بز هشت‌صد و پنجاه افغانی است. چند افغانی می‌شود؟ پولش را بده.,You buy 3 goats. Each goat is 850 afghani. How many afghani does it make? Pay for it.
 سه تخم بده.,Give 3 eggs.
-سه جمع دو جمع پنج جمع یک مساوی یازده.,3 plus 2 plus 5 plus 1 equals 11.
 سه جمع دو مساوی پنج.,3 plus 2 equals 5.
 سه جمع دو مساوی پنج. دو طول و دو عرض است: دو ضرب پنج مساوی ده.,3 plus 2 equals 5. There are two lengths and two widths: 2 times 5 equals 10.
 سه جمع دو چند می‌شود؟,3 plus 2 makes how many?
@@ -717,14 +718,13 @@ fa,en
 سه جمع هشت مساوی یازده.,3 plus 8 equals 11.
 سه جمع هفت مساوی ده.,3 plus 7 equals 10.
 سه جمع هفت چند می‌شود؟,3 plus 7 makes how many?
+سه جمع پنج جمع یک مساوی نه.,3 plus 5 plus 1 equals 9.
 سه جمع پنج مساوی هشت.,3 plus 5 equals 8.
 سه جمع چهار جمع پنج مساوی دوازده.,3 plus 4 plus 5 equals 12.
 سه جمع چهارده مساوی هفده.,3 plus 14 equals 17.
 سه جمع چهارده چند می‌شود؟,3 plus 14 makes how many?
 سه جمع یازده مساوی چهارده.,3 plus 11 equals 14.
 سه جمع یازده چند می‌شود؟,3 plus 11 makes how many?
-سه جمع یک جمع پنج جمع چهار مساوی سیزده.,3 plus 1 plus 5 plus 4 equals 13.
-سه جمع یک مساوی چهار.,3 plus 1 equals 4.
 سه حصه برابر است و دو حصه رنگ شده است: دو بر سه.,There are 3 equal parts and 2 are coloured: 2/3.
 سه حصه برابر است و یک حصه رنگ شده است: یک بر سه.,There are 3 equal parts and 1 is coloured: 1/3.
 سه دانه تخم روی ترازو بگذار.,Put 3 eggs on the scales.
@@ -971,6 +971,7 @@ fa,en
 شش، دوازده، هژده، بیست و چهار، سی، سی و شش، چهل و دو، چهل و هشت.,"6, 12, 18, 24, 30, 36, 42, 48."
 شش، هشت، ده، دوازده، چهارده، شانزده، هژده، بیست.,"6, 8, 10, 12, 14, 16, 18, 20."
 شش، پنج، چهار، سه، دو، یک، صفر.,"6, 5, 4, 3, 2, 1, 0."
+شش‌صد تقسیم چهار مساوی یکصد و پنجاه.,600 divided by 4 equals 150.
 شش‌صد جمع صد مساوی هفت‌صد.,600 plus 100 equals 700.
 شش‌صد جمع صد چند می‌شود؟,600 plus 100 makes how many?
 شش‌صد ضرب دو مساوی یک هزار و دوصد.,600 times 2 equals 1200.
@@ -1226,10 +1227,11 @@ fa,en
 عددهای اعشاری را مقایسه و جمع کن.,Compare and add the decimal numbers.
 عددهای اعشاری کوچکتر از یک را بگیر.,Catch the decimal numbers smaller than 1.
 عددهای بزرگ را گوش کن و پیدا کن.,Listen to the big numbers and find them.
-عددهای بزرگتر از هزار را بگیر.,Catch the numbers bigger than 1000.
-عددهای بزرگتر از پنج هزار را بگیر.,Catch the numbers bigger than 5000.
+عددهای بزرگتر از پنج‌صد را بگیر.,Catch the numbers bigger than 500.
+عددهای جدول ضرب بیست و پنج را بگیر.,Catch the numbers of the 25 times table.
 عددهای جدول ضرب ده را بگیر.,Catch the numbers of the 10 times table.
 عددهای جدول ضرب دو را بگیر.,Catch the numbers of the 2 times table.
+عددهای جدول ضرب دوازده را بگیر.,Catch the numbers of the 12 times table.
 عددهای جدول ضرب سه را بگیر.,Catch the numbers of the 3 times table.
 عددهای جدول ضرب شش را بگیر.,Catch the numbers of the 6 times table.
 عددهای جدول ضرب نه را بگیر.,Catch the numbers of the 9 times table.
@@ -1238,15 +1240,12 @@ fa,en
 عددهای جدول ضرب پنج را بگیر.,Catch the numbers of the 5 times table.
 عددهای جدول ضرب چهار را بگیر.,Catch the numbers of the 4 times table.
 عددهای جفت و طاق را جدا کن.,Separate the even and the odd numbers.
-عددهای کوچکتر از ده هزار را بگیر.,Catch the numbers smaller than 10000.
 عددهایی را بگیر که بر ده تقسیم می‌شوند.,Catch the numbers that can be divided by 10.
 عددهایی را بگیر که بر صد تقسیم می‌شوند.,Catch the numbers that can be divided by 100.
 عددهایی را بگیر که بر پنج تقسیم می‌شوند.,Catch the numbers that can be divided by 5.
 عددی بر ده تقسیم می‌شود که رقم آخر آن صفر است.,A number can be divided by 10 when its last digit is 0.
 عددی بر صد تقسیم می‌شود که دو رقم آخر آن صفر است.,A number can be divided by 100 when its last two digits are 0.
 عددی بر پنج تقسیم می‌شود که رقم آخر آن صفر یا پنج است.,A number can be divided by 5 when its last digit is 0 or 5.
-عددی که چهار رقم یا بیشتر دارد و هزار نیست، از هزار بزرگتر است.,A number with four digits or more that is not 1000 is bigger than 1000.
-عددی که کمتر از پنج رقم دارد، از ده هزار کوچکتر است.,A number with fewer than five digits is smaller than 10000.
 عقرب,Aqrab
 عقربه کوتاه طرف ده است و عقربه دراز طرف دوازده.,The short hand points to 10 and the long hand to 12.
 عقربه کوتاه طرف ده است. ساعت ده است.,The short hand points to 10. It is 10 o'clock.
@@ -1276,7 +1275,6 @@ fa,en
 قوس,Qaws
 قیمت را گوش کن و با سکه‌ها و نوت‌ها پول بده.,Listen to the price and pay with the coins and notes.
 مالته,orange
-مالته از همه بیشتر است: پنج تا.,The orange is the most: 5.
 ماه آخر سال کدام است؟,Which is the last month of the year?
 ماه اسد در فصل تابستان است.,The month of Asad is in summer.
 ماه اسد در کدام فصل است؟,In which season is the month of Asad?
@@ -1319,7 +1317,7 @@ fa,en
 مربع‌ها را بشمار و مساحت را پیدا کن.,Count the squares and find the area.
 مرغ از همه بیشتر است: پنج تا.,The hen is the most: 5.
 مرغ سه‌صد و پانزده افغانی است. مشتری پنج‌صد افغانی داد. چند افغانی باقی می‌ماند؟ باقی را پس بده.,The hen is 315 afghani. The customer gave 500 afghani. How many afghani are left over? Give the change back.
-مرغ هفت‌صد و شصت افغانی است. چهار نفر پول آن را برابر تقسیم می‌کنند. حصه یک نفر را بده.,The hen is 760 afghani. 4 people share the cost equally. Pay one person's share.
+مرغ شش‌صد افغانی است. چهار نفر پول آن را برابر تقسیم می‌کنند. حصه یک نفر را بده.,The hen is 600 afghani. 4 people share the cost equally. Pay one person's share.
 مرغ چهار هزار افغانی است. پولش را بده.,The hen is 4000 afghani. Pay for it.
 مرغ چهارصد و ده افغانی است. پولش را بده.,The hen is 410 afghani. Pay for it.
 مرغ یکصد و هشتاد افغانی و نمک یکصد و سی افغانی است. هر دو چند افغانی می‌شود؟ پولش را بده.,The hen is 180 afghani and the salt is 130 afghani. How many afghani do both make? Pay for it.
@@ -1353,6 +1351,7 @@ fa,en
 مشتری هفت کتابچه می‌خرد. هر کتابچه شش افغانی است. مشتری صد افغانی داد. چند افغانی باقی می‌ماند؟ باقی را پس بده.,The customer buys 7 notebooks. Each notebook is 6 afghani. The customer gave 100 afghani. How many afghani are left over? Give the change back.
 مشتری پنج انار می‌خرد. هر انار پنج افغانی است. مشتری صد افغانی داد. چند افغانی باقی می‌ماند؟ باقی را پس بده.,The customer buys 5 pomegranates. Each pomegranate is 5 afghani. The customer gave 100 afghani. How many afghani are left over? Give the change back.
 میزان,Mizan
+نام را گوش کن و با شکل آن جوره کن.,Listen to the name and pair it with its picture.
 نان از همه بیشتر است: پنج تا.,The bread is the most: 5.
 نان هفتاد افغانی و صابون سی افغانی است. هر دو چند افغانی می‌شود؟ پولش را بده.,The bread is 70 afghani and the soap is 30 afghani. How many afghani do both make? Pay for it.
 نان پنج افغانی است. پولش را بده.,The bread is 5 afghani. Pay for it.
@@ -1444,7 +1443,6 @@ fa,en
 نه، ده، یازده، دوازده، سیزده.,"9, 10, 11, 12, 13."
 نه، نزده، بیست و نه، نود، نود و یک.,"9, 19, 29, 90, 91."
 نه، هژده، بیست و هفت، سی و شش، چهل و پنج، پنجاه و چهار، شصت و سه، هفتاد و دو.,"9, 18, 27, 36, 45, 54, 63, 72."
-نه‌صد و بیست تقسیم چهار مساوی دوصد و سی.,920 divided by 4 equals 230.
 نه‌صد و شصت و شش از همه بزرگتر است.,966 is the biggest.
 نه‌صد و نود و نه,999
 نه‌صد و هفتاد و سه,973
@@ -1491,12 +1489,12 @@ fa,en
 نیم شصت و چهار چند می‌شود؟,Half of 64 makes how many?
 نیم متر چند سانتی‌متر است؟,How many centimetres is half a metre?
 نیم نان,half a bread
+نیم نه‌صد، چهارصد و پنجاه است.,Half of 900 is 450.
 نیم نود چند می‌شود؟,Half of 90 makes how many?
 نیم هر عدد را پیدا کن.,Find half of each number.
+نیم هزار، پنج‌صد است.,Half of 1000 is 500.
 نیم هشت زردک چند زردک است؟,How many carrots is half of 8 carrots?
 نیم هشتاد، چهل است.,Half of 80 is 40.
-نیم هشت‌صد و شصت، چهارصد و سی است.,Half of 860 is 430.
-نیم هفت‌صد و چهل، سه‌صد و هفتاد است.,Half of 740 is 370.
 نیم پنجاه و شش، بیست و هشت است. پنجاه و شش جمع بیست و هشت مساوی هشتاد و چهار.,Half of 56 is 28. 56 plus 28 equals 84.
 نیم پنجاه چند می‌شود؟,Half of 50 makes how many?
 نیم چهارده پنسل چند پنسل است؟,How many pencils is half of 14 pencils?
@@ -1513,7 +1511,7 @@ fa,en
 نیم یعنی یک حصه از دو حصه برابر. چهارده تقسیم دو مساوی هفت.,Half means one of 2 equal parts. 14 divided by 2 equals 7.
 نیم یعنی یک حصه از دو حصه برابر. چهل و هشت تقسیم دو مساوی بیست و چهار.,Half means one of 2 equal parts. 48 divided by 2 equals 24.
 نیم یعنی یک حصه از دو حصه برابر. یکصد و بیست تقسیم دو مساوی شصت.,Half means one of 2 equal parts. 120 divided by 2 equals 60.
-نیم یک هزار و سه‌صد و هشتاد، شش‌صد و نود است.,Half of 1380 is 690.
+نیم یک هزار و هفت‌صد، هشت‌صد و پنجاه است.,Half of 1700 is 850.
 نیم یکصد و بیست چند می‌شود؟,Half of 120 makes how many?
 هر بار ده زیاد کن.,Add 10 each time.
 هر بار ده کم کن.,Take away 10 each time.
@@ -1548,7 +1546,6 @@ fa,en
 هر سطل هشت لیتر آب می‌گیرد. شش سطل چند لیتر می‌شود؟,Each bucket holds 8 litres of water. How many litres do 6 buckets make?
 هر سه ضلع یک مثلث بیست سانتی‌متر است. محیط آن چند سانتی‌متر است؟,All three sides of a triangle are 20 centimetres. How many centimetres is its perimeter?
 هر سه ضلع یک مثلث شش سانتی‌متر است. محیط آن چند سانتی‌متر است؟,All three sides of a triangle are 6 centimetres. How many centimetres is its perimeter?
-هر شکل را با نام آن جوره کن.,Pair each picture with its name.
 هر شکل را با کسر آن جوره کن.,Pair each picture with its fraction.
 هر صد سانتی‌متر یک متر است. سه‌صد سانتی‌متر، سه متر می‌شود.,Every 100 centimetres is 1 metre. 300 centimetres makes 3 metres.
 هر صد سانتی‌متر یک متر است. هفت‌صد سانتی‌متر، هفت متر می‌شود.,Every 100 centimetres is 1 metre. 700 centimetres makes 7 metres.
@@ -1585,6 +1582,7 @@ fa,en
 هر کیلو هزار گرام است. یک کیلو، هزار گرام می‌شود.,Each kilo is 1000 grams. 1 kilo makes 1000 grams.
 هر گوسفند چهار پای دارد. نه گوسفند چند پای دارد؟,Each sheep has 4 legs. How many legs do 9 sheep have?
 هزار تا هزار تا بشمار، از هزار تا هشت هزار.,"Count in 1000s, from 1000 to 8000."
+هزار تقسیم چهار مساوی دوصد و پنجاه.,1000 divided by 4 equals 250.
 هزار جمع هزار جمع هزار جمع هزار جمع پنج‌صد جمع صد جمع صد مساوی چهار هزار و هفت‌صد.,1000 plus 1000 plus 1000 plus 1000 plus 500 plus 100 plus 100 equals 4700.
 هزار جمع هزار جمع هزار جمع هزار جمع پنج‌صد جمع صد جمع پنجاه مساوی چهار هزار و شش‌صد و پنجاه.,1000 plus 1000 plus 1000 plus 1000 plus 500 plus 100 plus 50 equals 4650.
 هزار جمع هزار جمع هزار جمع هزار مساوی چهار هزار.,1000 plus 1000 plus 1000 plus 1000 equals 4000.
@@ -1693,6 +1691,7 @@ fa,en
 هشتاد یعنی هشت ده و صفر یک.,80 means 8 tens and 0 ones.
 هشتاد. همین عدد را پیدا کن.,80. Find this same number.
 هشتاد، هفتاد و دو، شصت و چهار، پنجاه و شش، چهل و هشت، چهل.,"80, 72, 64, 56, 48, 40."
+هشت‌صد تقسیم چهار مساوی دوصد.,800 divided by 4 equals 200.
 هشت‌صد منفی صد مساوی هفت‌صد.,800 minus 100 equals 700.
 هشت‌صد منفی صد چند می‌شود؟,800 minus 100 makes how many?
 هشت‌صد و سی و چهار. همین عدد را پیدا کن.,834. Find this same number.
@@ -1788,7 +1787,6 @@ fa,en
 هفته با کدام روز شروع می‌شود؟,With which day does the week start?
 هفت‌صد سانتی‌متر چند متر است؟,How many metres is 700 centimetres?
 هفت‌صد و سی و پنج. همین عدد را پیدا کن.,735. Find this same number.
-هفت‌صد و شصت تقسیم چهار مساوی یکصد و نود.,760 divided by 4 equals 190.
 هفت‌صد و شصت و پنج. همین عدد را پیدا کن.,765. Find this same number.
 هفت‌صد و هفتاد. همین عدد را پیدا کن.,770. Find this same number.
 هفت‌صد و پنجاه افغانی را پنج نفر برابر تقسیم می‌کنند. به هر نفر چند افغانی می‌رسد؟,5 people share 750 afghani equally. How many afghani does each person get?
@@ -1878,7 +1876,6 @@ fa,en
 پنج جمع دو جمع دو مساوی نه.,5 plus 2 plus 2 equals 9.
 پنج جمع دو جمع یک مساوی هشت.,5 plus 2 plus 1 equals 8.
 پنج جمع دو مساوی هفت.,5 plus 2 equals 7.
-پنج جمع سه جمع چهار جمع یک مساوی سیزده.,5 plus 3 plus 4 plus 1 equals 13.
 پنج جمع سه مساوی هشت.,5 plus 3 equals 8.
 پنج جمع سه چند می‌شود؟,5 plus 3 makes how many?
 پنج جمع نه مساوی چهارده.,5 plus 9 equals 14.
@@ -1892,6 +1889,7 @@ fa,en
 پنج جمع پنج چند می‌شود؟,5 plus 5 makes how many?
 پنج جمع چهارده مساوی نزده.,5 plus 14 equals 19.
 پنج جمع چهارده چند می‌شود؟,5 plus 14 makes how many?
+پنج جمع یک جمع سه مساوی نه.,5 plus 1 plus 3 equals 9.
 پنج جمع یک مساوی شش.,5 plus 1 equals 6.
 پنج حصه برابر است و سه حصه رنگ شده است: سه بر پنج.,There are 5 equal parts and 3 are coloured: 3/5.
 پنج حصه برابر است و چهار حصه رنگ شده است: چهار بر پنج.,There are 5 equal parts and 4 are coloured: 4/5.
@@ -2140,7 +2138,7 @@ fa,en
 چهار جمع هشت مساوی دوازده.,4 plus 8 equals 12.
 چهار جمع هشت چند می‌شود؟,4 plus 8 makes how many?
 چهار جمع هفت مساوی یازده.,4 plus 7 equals 11.
-چهار جمع پنج جمع دو جمع سه مساوی چهارده.,4 plus 5 plus 2 plus 3 equals 14.
+چهار جمع پنج جمع دو مساوی یازده.,4 plus 5 plus 2 equals 11.
 چهار دانه انار روی ترازو بگذار.,Put 4 pomegranates on the scales.
 چهار دانه تخم روی ترازو بگذار.,Put 4 eggs on the scales.
 چهار دانه پیاز روی ترازو بگذار.,Put 4 onions on the scales.
@@ -2234,6 +2232,7 @@ fa,en
 چهارصد و هژده ضرب دو مساوی هشت‌صد و سی و شش.,418 times 2 equals 836.
 چهارصد و هژده ضرب دو چند می‌شود؟,418 times 2 makes how many?
 چهارصد و پنجاه، چهار هزار و پنج‌صد، پنج هزار و چهارصد، چهل و پنج هزار، پنجاه و چهار هزار.,"450, 4500, 5400, 45000, 54000."
+چهارمغز از همه بیشتر است: چهار تا.,The walnut is the most: 4.
 چهل,40
 چهل تقسیم پنج مساوی هشت.,40 divided by 5 equals 8.
 چهل تقسیم چهار مساوی ده.,40 divided by 4 equals 10.
@@ -2350,18 +2349,17 @@ fa,en
 کلکین,window
 کلکین شکل مربع دارد.,The window has the shape of a square.
 کم کن و جواب را انتخاب کن.,Take away and choose the answer.
+کمتر,less
 کمتر از نیم,less than half
 کمتر از پنج هزار,less than 5000
 کمتر از پنج‌صد,less than 500
 کمتر از یک افغانی,less than 1 afghani
-کمتر از ۱ افغانی,less than 1 afghani
 کمتر از ۵۰۰,less than 500
-کمتر از ۵۰۰۰,less than 5000
 کمپل دوصد و نود افغانی است. مشتری پنج‌صد افغانی داد. چند افغانی باقی می‌ماند؟ باقی را پس بده.,The blanket is 290 afghani. The customer gave 500 afghani. How many afghani are left over? Give the change back.
 کمپل سه هزار افغانی است. پولش را بده.,The blanket is 3000 afghani. Pay for it.
 کمپل سه‌صد افغانی است. پولش را بده.,The blanket is 300 afghani. Pay for it.
 کمپل سه‌صد افغانی و شیر هشتاد افغانی است. هر دو چند افغانی می‌شود؟ پولش را بده.,The blanket is 300 afghani and the milk is 80 afghani. How many afghani do both make? Pay for it.
-کمپل یک هزار و سه‌صد و هشتاد افغانی است. امروز به نیم قیمت است. پولش را بده.,The blanket is 1380 afghani. Today it is at half price. Pay for it.
+کمپل یک هزار و هفت‌صد افغانی است. امروز به نیم قیمت است. پولش را بده.,The blanket is 1700 afghani. Today it is at half price. Pay for it.
 کوه,mountain
 کیلو و گرام را حساب کن.,Work out the kilos and the grams.
 گاو از همه کمتر است: یک تا.,The cow is the fewest: 1.
@@ -2496,7 +2494,6 @@ fa,en
 یک میلیون، صد هزار، ده هزار، هزار، صد، ده.,"1000000, 100000, 10000, 1000, 100, 10."
 یک نان بده.,Give 1 loaf of bread.
 یک هزار و بیست، یک هزار و دوصد، دو هزار و یک، دو هزار و ده، دو هزار و یکصد.,"1020, 1200, 2001, 2010, 2100."
-یک هزار و چهارصد و هشتاد تقسیم چهار مساوی سه‌صد و هفتاد.,1480 divided by 4 equals 370.
 یک هفته هفت روز است. شش هفته چند روز می‌شود؟,One week is 7 days. How many days do 6 weeks make?
 یک هفته هفت روز دارد.,A week has 7 days.
 یک هفته چند روز دارد؟,How many days does a week have?

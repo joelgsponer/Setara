@@ -81,32 +81,34 @@ def small(name: str, x: float, y: float, size: float) -> str:
 
 
 def bars(rows) -> str:
-    """Four columns of blocks, one block per unit, the thing under its column."""
+    """Three columns of blocks, one block per unit, the thing under its column."""
+    assert len(rows) == 3
     out = HEAD + f'<rect x="1.5" y="1.5" width="125" height="125" rx="6" fill="{CREAM}" stroke="{INK}" stroke-width="3"/>\n'
     for i, (name, _, count) in enumerate(rows):
-        x = 4 + i * 30
+        x = 4 + i * 40
         if i:
-            out += f'<path d="M{x} 6V122" stroke="{GREY}" stroke-width="1.5"/>\n'
+            out += f'<path d="M{x} 5V123" stroke="{GREY}" stroke-width="2"/>\n'
         for j in range(count):
-            out += (f'<rect x="{x + 5}" y="{n2(96 - (j + 1) * 18.2 + 1.2)}" width="20" height="15.8" rx="2" '
+            out += (f'<rect x="{x + 8}" y="{n2(86 - (j + 1) * 16.4 + 1.5)}" width="24" height="13.4" rx="2" '
                     f'fill="{BLUE}" stroke="{INK}" stroke-width="2.5"/>\n')
-        out += small(name, x + 2, 97.5, 26)
-    out += f'<path d="M4 96H124" stroke="{INK}" stroke-width="3" stroke-linecap="round"/>\n</svg>\n'
+        out += small(name, x + 2, 88, 36)
+    out += f'<path d="M4 86H124" stroke="{INK}" stroke-width="3" stroke-linecap="round"/>\n</svg>\n'
     return out
 
 
 def table(rows) -> str:
-    """Four rows read from the right: the thing, then one dot per unit."""
+    """Three rows read from the right: the thing, then one dot per unit."""
+    assert len(rows) == 3
     out = HEAD + f'<rect x="1.5" y="1.5" width="125" height="125" rx="6" fill="{CREAM}" stroke="{INK}" stroke-width="3"/>\n'
     for i, (name, _, count) in enumerate(rows):
-        y = 4 + i * 30
+        y = 4 + i * 40
         if i:
-            out += f'<path d="M6 {y}H122" stroke="{GREY}" stroke-width="1.5"/>\n'
+            out += f'<path d="M5 {y}H123" stroke="{GREY}" stroke-width="2"/>\n'
         for j in range(count):
-            out += (f'<circle cx="{n2(96 - (j + 0.5) * 18.2)}" cy="{y + 15}" r="6.8" fill="{BLUE}" stroke="{INK}" '
+            out += (f'<circle cx="{n2(86 - (j + 0.5) * 16.4)}" cy="{y + 20}" r="6.6" fill="{BLUE}" stroke="{INK}" '
                     f'stroke-width="2.5"/>\n')
-        out += small(name, 98, y + 2, 26)
-    out += f'<path d="M96 4V124" stroke="{INK}" stroke-width="3" stroke-linecap="round"/>\n</svg>\n'
+        out += small(name, 88, y + 2, 36)
+    out += f'<path d="M86 4V124" stroke="{INK}" stroke-width="3" stroke-linecap="round"/>\n</svg>\n'
     return out
 
 

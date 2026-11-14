@@ -72,9 +72,9 @@ puz_shadow_dog: The shadow of the library picture 'dog': the same drawing, all i
 puz_shadow_donkey: The shadow of the library picture 'donkey': the same drawing, all in one dark colour.
 puz_shadow_elephant: The shadow of the library picture 'elephant': the same drawing, all in one dark colour.
 puz_shadow_fish: The shadow of the library picture 'fish': the same drawing, all in one dark colour.
+puz_shadow_frog: The shadow of the library picture 'frog': the same drawing, all in one dark colour.
 puz_shadow_goat: The shadow of the library picture 'goat': the same drawing, all in one dark colour.
 puz_shadow_horse: The shadow of the library picture 'horse': the same drawing, all in one dark colour.
-puz_shadow_house: The shadow of the library picture 'house': the same drawing, all in one dark colour.
 puz_shadow_key: The shadow of the library picture 'key': the same drawing, all in one dark colour.
 puz_shadow_pear: The shadow of the library picture 'pear': the same drawing, all in one dark colour.
 puz_shadow_rooster: The shadow of the library picture 'rooster': the same drawing, all in one dark colour.

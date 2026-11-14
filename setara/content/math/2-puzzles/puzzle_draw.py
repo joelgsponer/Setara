@@ -168,7 +168,7 @@ def tower(n: int, cx: float, bottom: float, bw: float, bh: float, sw: float = 5,
 def dots(n: int, cx: float, cy: float, size: float, sw: float = 4, color: str = "blue") -> str:
     """n dots in two rows (pairs stand above each other), inside a square of `size`."""
     cols = (n + 1) // 2
-    step = min(size / 5, size / max(cols, 2))
+    step = min(size * 0.3, size / max(cols, 2))
     r = step * 0.38
     x0 = cx - (cols - 1) * step / 2
     out = []

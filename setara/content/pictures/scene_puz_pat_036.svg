@@ -1,21 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
 <!-- drawn by content/math/2-puzzles/make_puzzles.py -->
 <rect width="400" height="300" fill="#fff6dc"/>
-<rect x="0" y="90.6" width="400" height="94.8" fill="#e8d2a6"/>
-<rect x="349.2" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<rect x="356.4" y="123.8" width="28.4" height="28.4" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
-<rect x="300.5" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<circle cx="321.9" cy="138.0" r="15.5" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
-<rect x="251.8" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<path d="M273.1 122.8L289.7 151.5H256.6z" fill="#f2b705" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
-<rect x="203.0" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<rect x="210.2" y="123.8" width="28.4" height="28.4" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
-<rect x="154.2" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<circle cx="175.6" cy="138.0" r="15.5" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
-<rect x="105.5" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<path d="M126.9 122.8L143.4 151.5H110.3z" fill="#f2b705" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
-<rect x="56.8" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
-<rect x="63.9" y="123.8" width="28.4" height="28.4" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
-<rect x="8.0" y="116.6" width="42.8" height="42.8" rx="8" fill="#ffe9a8" stroke="#f2b705" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/><circle cx="29.4" cy="138.0" r="3.8" fill="#f2b705"/>
-<path d="M330 215.375H70M86 204.375L70 215.375L86 226.375" fill="none" stroke="#b9ae9b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="0" y="90.4" width="400" height="95.2" fill="#e8d2a6"/>
+<rect x="350.8" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<rect x="358.0" y="123.7" width="28.7" height="28.7" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="301.5" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="323.1" cy="138.0" r="15.7" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="252.2" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<path d="M273.9 122.6L290.6 151.7H257.1z" fill="#f2b705" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="203.0" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<rect x="210.3" y="123.7" width="28.7" height="28.7" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="153.8" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<circle cx="175.4" cy="138.0" r="15.7" fill="#3f7fbf" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="104.5" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<path d="M126.1 122.6L142.9 151.7H109.4z" fill="#f2b705" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="55.2" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffffff" stroke="#3b2f2f" stroke-width="3"/>
+<rect x="62.5" y="123.7" width="28.7" height="28.7" fill="#e0483f" stroke="#3b2f2f" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="6.0" y="116.4" width="43.2" height="43.2" rx="8" fill="#ffe9a8" stroke="#f2b705" stroke-width="5" stroke-dasharray="9 7" stroke-linecap="round"/><circle cx="27.6" cy="138.0" r="3.9" fill="#f2b705"/>
+<path d="M330 215.625H70M86 204.625L70 215.625L86 226.625" fill="none" stroke="#b9ae9b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

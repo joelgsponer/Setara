@@ -122,7 +122,7 @@ def house(color: str, x: float, y: float, size: float) -> str:
 def pattern(name: str, toks: list, gap: int, rtl: bool, brief: str) -> str:
     n = len(toks)
     sp = 6
-    cw = min(74, (384 - (n - 1) * sp) / n)
+    cw = min(90, (388 - (n - 1) * sp) / n)
     x0 = (400 - (n * cw + (n - 1) * sp)) / 2
     y = 138 - cw / 2
     out = [f'<rect x="0" y="{y - 26:.1f}" width="400" height="{cw + 52:.1f}" fill="{SAND}"/>']
@@ -273,7 +273,7 @@ def _balance(cx: float, base_y: float, left: list, right: list, tilt: int, half:
     py = base_y - drop - half * math.sin(math.radians(13)) - 16
     dx, dy = half * math.cos(ang), half * math.sin(ang)
     lx, ly, rx, ry = cx - dx, py - dy, cx + dx, py + dy
-    pan_w = min(max(item * 1.25, item * max(len(left), len(right)) * 0.98 + 10), half * 1.75)
+    pan_w = min(max(item * 1.25, item * max(len(left), len(right)) * 0.98 + 10), half * 1.6)
     out = [f'<path d="M{cx - 34} {base_y}H{cx + 34}L{cx + 10} {base_y - 16}H{cx - 10}z" fill="#9a6b3f" stroke="{INK}" stroke-width="4" stroke-linejoin="round"/>',
            f'<path d="M{cx} {base_y - 16}V{py}" stroke="{INK}" stroke-width="9" stroke-linecap="round"/>',
            f'<path d="M{lx:.1f} {ly:.1f}L{rx:.1f} {ry:.1f}" stroke="{INK}" stroke-width="8" stroke-linecap="round"/>',
@@ -314,19 +314,17 @@ def _boat(cx: float, y: float, w: float = 96) -> str:
             f'stroke="{INK}" stroke-width="4" stroke-linejoin="round"/>')
 
 
-def river(name: str, near: list, far: list, boat: str, brief: str, cargo: str | None = None) -> str:
+def river(name: str, near: list, far: list, boat: str, brief: str) -> str:
     """near/far: who stands on each bank; boat: 'near' or 'far' (the farmer sits in it)."""
     out = [f'<rect x="0" y="0" width="400" height="300" fill="#9ccb7a"/>',
-           f'<path d="M132 0C120 80 150 200 128 300H268C290 200 256 90 272 0z" fill="{WATER}" stroke="{INK}" stroke-width="4"/>',
-           f'<path d="M160 40q10-8 20 0t20 0M190 120q10-8 20 0t20 0M170 270q10-8 20 0t20 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".7"/>']
-    for bank, x0 in ((near, 276), (far, 6)):
+           f'<path d="M150 0C140 80 162 200 146 300H254C270 200 240 90 250 0z" fill="{WATER}" stroke="{INK}" stroke-width="4"/>',
+           f'<path d="M176 30q8-7 16 0t16 0M186 110q8-7 16 0t16 0M178 276q8-7 16 0t16 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".7"/>']
+    for bank, x0 in ((near, 258), (far, 2)):
         for i, t in enumerate(bank):
-            out.append(D.embed(t, x0 + (i % 2) * 58, 14 + (i // 2) * 84, 62))
-    bx = 226 if boat == "near" else 172
-    out.append(D.embed("father", bx - 34, 150, 64))
-    if cargo:
-        out.append(D.embed(cargo, bx - 2, 172, 44))
-    out.append(_boat(bx, 206))
+            out.append(D.embed(t, x0 + (i % 2) * 68, 12 + (i // 2) * 84, 72))
+    bx = 214 if boat == "near" else 186
+    out.append(D.embed("father", bx - 46, 150, 92))
+    out.append(_boat(bx, 232, 104))
     return D.scene(name, "\n".join(out), brief, bg="#9ccb7a")
 
 

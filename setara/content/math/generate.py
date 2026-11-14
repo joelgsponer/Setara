@@ -1882,7 +1882,7 @@ def market45(level: int) -> Sheet:
                        tr(f"{fa(k)} ضرب {fa(p)} مساوی {fa(k * p)}. {fa(given)} منفی {fa(k * p)} مساوی {fa(change)}.",
                           f"{k} times {p} equals {k * p}. {given} minus {k * p} equals {change}."))
     else:
-        notes = [10, 20, 50, 100, 500, 1000]
+        notes = [50, 100, 500, 1000]   # few kinds, so that the 1000 note is drawn large enough to read
         # 01: prices in the thousands
         rng = rng_for(5, "market", "01")
         for j, p in enumerate(rng.sample(range(650, 5001, 50), 6)):
@@ -1912,13 +1912,13 @@ def market45(level: int) -> Sheet:
         for j in range(6):
             pic, noun = BIG[(j + 1) % len(BIG)]
             if j % 2 == 0:
-                p = rng.choice(range(240, 1801, 20))
+                p = rng.choice(range(300, 1801, 100))
                 market_row(s, "05", tr(f"{noun} {fa(p)} {AFN} است. امروز به نیم قیمت است. {PAY_IT}",
                                        cap(f"{costs(noun, p)}. Today it is at half price. Pay for it.")),
                            pic, p // 2, notes, "pay", tr(f"نیم {fa(p)}، {fa(p // 2)} است.", f"Half of {p} is {p // 2}."))
             else:
                 k = rng.choice([3, 4, 5])
-                share = rng.choice(range(60, 400, 10))
+                share = rng.choice(range(100, 400, 50))
                 p = share * k
                 market_row(s, "05", tr(f"{noun} {fa(p)} {AFN} است. {fa(k)} نفر پول آن را برابر تقسیم می{Z}کنند. حصه یک نفر را بده.",
                                        cap(f"{costs(noun, p)}. {k} people share the cost equally. Pay one person's share.")),
@@ -2076,26 +2076,28 @@ def sorter45(level: int) -> Sheet:
         rng = rng_for(level, "sorter", rnd)
         assert len(rows) == 8
         for thing, say, en, basket, b_say, b_en in spread_by(rows, rng):
-            if basket.startswith("f:") and DARI_LETTER.search(basket):
-                tr(basket[2:], b_en)
             row = s.add(round=rnd, intro_fa=intro, thing=thing, say_fa=tr(say, en), basket=basket, basket_say_fa=tr(b_say, b_en))
             SORT2_META.append((row, kind))
 
     if level == 4:
+        # 01: the baskets are pictures (a written «یک بر سه» would be too small to read)
         rng = rng_for(4, "sorter", "01")
-        rows = [(FRACTIONS[kind][i], kind) for kind in ("whole", "half", "third", "quarter") for i in (0, 3)]
+        pictures = {"whole": "shape_circle", "half": pie(1, 2), "third": pie(1, 3), "quarter": pie(1, 4)}
+        rows = [(FRACTIONS[kind][i], kind) for kind in ("whole", "half", "third", "quarter") for i in ((0, 2) if kind == "whole" else (0, 3))]
         rng.shuffle(rows)
         for (pic, name), kind in rows:
             basket = FRAC_BASKET[kind]
             noun = FRACTION_NOUNS[FRACTIONS[kind].index((pic, name))]
             en = FRACTION_EN[kind].format(a=art(bare(noun)), x=bare(noun))
-            row = s.add(round="01", intro_fa=I_FRACTION4, thing=pic, say_fa=tr(name, en), basket=basket[0], basket_say_fa=tr(basket[1], bare(basket[1])))
+            row = s.add(round="01", intro_fa=I_FRACTION4, thing=pic, say_fa=tr(name, en), basket=pictures[kind], basket_say_fa=tr(basket[1], bare(basket[1])))
             SORT_META.append((row, "fraction", kind))
         sums_round("02", "*", {12: [(3, 4), (2, 6), (4, 3)], 18: [(3, 6), (2, 9), (6, 3)], 24: [(4, 6), (3, 8)]}, I_PRODUCT)
         sums_round("03", "*", {36: [(6, 6), (4, 9), (9, 4)], 40: [(5, 8), (4, 10), (8, 5)], 48: [(6, 8), (8, 6)]}, I_PRODUCT)
         sums_round("04", "/", {3: [(12, 4), (18, 6), (27, 9)], 4: [(12, 3), (20, 5), (32, 8)], 6: [(18, 3), (42, 7)]}, I_QUOTIENT)
     else:
-        less, same, more = ("f:کمتر از نیم", "کمتر از نیم", "less than half"), ("f:مساوی نیم", "مساوی نیم", "equal to half"), ("f:بیشتر از نیم", "بیشتر از نیم", "more than half")
+        # The baskets carry one large word (کمتر، نیم، بیشتر); what they are compared with is spoken.
+        tr("کمتر", "less"), tr("بیشتر", "more")
+        less, same, more = ("f:کمتر", "کمتر از نیم", "less than half"), ("f:نیم", "مساوی نیم", "equal to half"), ("f:بیشتر", "بیشتر از نیم", "more than half")
         rows = []
         for k, n in [(1, 3), (1, 4), (2, 5), (2, 4), (3, 6), (2, 3), (3, 4), (4, 5)]:
             b = less if Fraction(k, n) < Fraction(1, 2) else same if Fraction(k, n) == Fraction(1, 2) else more
@@ -2109,12 +2111,12 @@ def sorter45(level: int) -> Sheet:
         plain_round("02", I_SAME_FRAC, rows, "same")
         rows = []
         for pul in (50, 25, 75, 90, 150, 125, 250, 105):
-            b = ("f:کمتر از ۱ " + AFN, "کمتر از یک " + AFN, "less than 1 afghani") if pul < 100 else ("f:بیشتر از ۱ " + AFN, "بیشتر از یک " + AFN, "more than 1 afghani")
+            b = ("f:کمتر", "کمتر از یک " + AFN, "less than 1 afghani") if pul < 100 else ("f:بیشتر", "بیشتر از یک " + AFN, "more than 1 afghani")
             rows.append((money(pul), money_fa(pul), money_en(pul)) + b)
         plain_round("03", I_AFGHANI, rows, "afghani")
         rows = []
         for n in (4999, 5001, 4500, 5050, 999, 10000, 4950, 50000):
-            b = ("f:کمتر از ۵۰۰۰", "کمتر از پنج هزار", "less than 5000") if n < 5000 else ("f:بیشتر از ۵۰۰۰", "بیشتر از پنج هزار", "more than 5000")
+            b = ("f:کمتر", "کمتر از پنج هزار", "less than 5000") if n < 5000 else ("f:بیشتر", "بیشتر از پنج هزار", "more than 5000")
             rows.append((W(n), fa(n), str(n)) + b)
         plain_round("04", I_5000, rows, "5000")
     return s
@@ -2260,7 +2262,7 @@ def mason45(level: int) -> Sheet:
 
 I_PAIR_MUL = tr("هر ضرب را با جواب آن جوره کن.", "Pair each multiplication with its answer.")
 I_PAIR_DIV = tr("هر تقسیم را با جواب آن جوره کن.", "Pair each division with its answer.")
-I_PAIR_PIE = tr("هر شکل را با نام آن جوره کن.", "Pair each picture with its name.")
+I_PAIR_PIE = tr("نام را گوش کن و با شکل آن جوره کن.", "Listen to the name and pair it with its picture.")
 I_PAIR_SAME = tr("کسرهای مساوی را جوره کن.", "Pair the fractions that are equal.")
 I_PAIR_FRAC = tr("هر شکل را با کسر آن جوره کن.", "Pair each picture with its fraction.")
 I_PAIR_DEC = tr("هر عدد اعشاری را با کسر مساوی آن جوره کن.", "Pair each decimal number with the fraction equal to it.")
@@ -2291,8 +2293,8 @@ def pairs45(level: int) -> Sheet:
         sums("02", I_PAIR_MUL, "*", [7, 8, 9])
         sums("03", I_PAIR_DIV, "/", [3, 4, 6, 7, 8, 9])
         for (k, n), name, en in PIES4:
-            pair("04", I_PAIR_PIE, pie(k, n), "f:" + name, tr(name, en), "name")
-        pair("04", I_PAIR_PIE, "shape_circle", WHOLE[0], tr(WHOLE[1], bare(WHOLE[1])), "name")
+            pair("04", I_PAIR_PIE, pie(k, n), "snd", tr(name, en), "name")
+        pair("04", I_PAIR_PIE, "shape_circle", "snd", tr(WHOLE[1], bare(WHOLE[1])), "name")
     else:
         for (k, n), m in [((1, 2), 2), ((1, 3), 2), ((1, 4), 2), ((2, 3), 2), ((3, 4), 2), ((1, 5), 2)]:
             pair("01", I_PAIR_SAME, fr(k, n), fr(k * m, n * m), tr(f"{fa_frac(k, n)} مساوی {fa_frac(k * m, n * m)}.", f"{k}/{n} equals {k * m}/{n * m}."), "same")
@@ -2315,6 +2317,7 @@ def catch45(level: int) -> Sheet:
 
     def rule(rnd, say, targets, others, help_fa, test):
         assert len(targets) >= 5 and len(others) >= 5 and not set(targets) & set(others)
+        assert all(len(x) - 2 <= 4 for x in targets + others), "too wide for the round card"
         assert len(set(targets)) == len(targets) and len(set(others)) == len(others)
         row = s.add(round=rnd, intro_fa=I_RAIN, say_fa=say, targets="|".join(targets), others="|".join(others), need=5, help_fa=help_fa)
         CATCH_META.append((row, test))
@@ -2338,23 +2341,26 @@ def catch45(level: int) -> Sheet:
         def nums(values, script="W"):
             return [num(v, script) for v in values]
 
-        rule("01", tr("عددهای بزرگتر از هزار را بگیر.", "Catch the numbers bigger than 1000."),
-             nums([1001, 1200, 2500, 10000, 9999, 1010]), nums([999, 100, 990, 910, 199, 500]),
-             tr("عددی که چهار رقم یا بیشتر دارد و هزار نیست، از هزار بزرگتر است.", "A number with four digits or more that is not 1000 is bigger than 1000."), lambda v: v > 1000)
-        rule("01", tr("عددهای کوچکتر از ده هزار را بگیر.", "Catch the numbers smaller than 10000."),
-             nums([9999, 9000, 999, 5500, 1001, 7070]), nums([10001, 11000, 99999, 10100, 100000, 20000]),
-             tr("عددی که کمتر از پنج رقم دارد، از ده هزار کوچکتر است.", "A number with fewer than five digits is smaller than 10000."), lambda v: v < 10000)
+        # Numbers of at most three digits: a longer one would be too small on the round card.
         rule("01", tr("عددهایی را بگیر که بر ده تقسیم می" + Z + "شوند.", "Catch the numbers that can be divided by 10."),
-             nums([120, 450, 1000, 2350, 90, 700]), nums([125, 451, 1001, 99, 705, 2355]),
+             nums([120, 450, 90, 700, 230, 860]), nums([125, 451, 99, 705, 236, 864]),
              tr("عددی بر ده تقسیم می" + Z + "شود که رقم آخر آن صفر است.", "A number can be divided by 10 when its last digit is 0."), lambda v: v % 10 == 0)
         rule("01", tr("عددهایی را بگیر که بر صد تقسیم می" + Z + "شوند.", "Catch the numbers that can be divided by 100."),
-             nums([300, 1200, 5000, 900, 10000, 2500]), nums([350, 1210, 5050, 990, 1001, 2550]),
+             nums([300, 900, 500, 200, 700, 400]), nums([350, 910, 505, 290, 710, 440]),
              tr("عددی بر صد تقسیم می" + Z + "شود که دو رقم آخر آن صفر است.", "A number can be divided by 100 when its last two digits are 0."), lambda v: v % 100 == 0)
-        rule("01", tr("عددهای بزرگتر از پنج هزار را بگیر.", "Catch the numbers bigger than 5000."),
-             nums([5001, 5500, 9000, 10000, 7250, 50000], "D"), nums([4999, 500, 4500, 999, 1000, 2750], "D"),
-             tr("اول هزارها را ببین.", "Look at the thousands first."), lambda v: v > 5000)
+        rule("01", tr("عددهای جدول ضرب دوازده را بگیر.", "Catch the numbers of the 12 times table."),
+             nums([36, 60, 84, 96, 108, 48]), nums([34, 62, 86, 94, 106, 46]),
+             tr("جدول ضرب دوازده: دوازده، بیست و چهار، سی و شش، چهل و هشت، شصت و همین طور پیش برو.", "The 12 times table: 12, 24, 36, 48, 60 and so on."),
+             lambda v: v % 12 == 0)
+        rule("01", tr("عددهای جدول ضرب بیست و پنج را بگیر.", "Catch the numbers of the 25 times table."),
+             nums([75, 125, 150, 225, 250, 175]), nums([85, 120, 155, 230, 245, 170]),
+             tr("جدول ضرب بیست و پنج: بیست و پنج، پنجاه، هفتاد و پنج، صد، یکصد و بیست و پنج و همین طور پیش برو.", "The 25 times table: 25, 50, 75, 100, 125 and so on."),
+             lambda v: v % 25 == 0)
+        rule("01", tr("عددهای بزرگتر از پنج" + Z + "صد را بگیر.", "Catch the numbers bigger than 500."),
+             nums([501, 550, 900, 750, 999, 625], "D"), nums([499, 50, 450, 99, 105, 275], "D"),
+             tr("اول صدها را ببین.", "Look at the hundreds first."), lambda v: v > 500)
         rule("01", tr("عددهایی را بگیر که بر پنج تقسیم می" + Z + "شوند.", "Catch the numbers that can be divided by 5."),
-             nums([105, 250, 1000, 435, 90, 2005], "D"), nums([102, 251, 1001, 434, 99, 2006], "D"),
+             nums([105, 250, 435, 90, 605, 770], "D"), nums([102, 251, 434, 99, 606, 772], "D"),
              tr("عددی بر پنج تقسیم می" + Z + "شود که رقم آخر آن صفر یا پنج است.", "A number can be divided by 5 when its last digit is 0 or 5."), lambda v: v % 5 == 0)
 
         def fracs(pairs):
@@ -2475,14 +2481,15 @@ def calendar4(level: int) -> Sheet:
 # Level 5: Tables and Charts (listen_pick)
 # ---------------------------------------------------------------------------
 
-# Each picture shows four things and how many there are of each (1 to 5):
+# Each picture shows three things and how many there are of each (1 to 5; three,
+# not four, so that the small pictures stay as large as counted pictures are):
 # chart_bars_* as columns of blocks, chart_table_* as rows of dots. The
 # pictures are drawn from this very list by content/math/draw_pictures.py.
 CHARTS = {
-    "chart_bars_1": [("apple", "سیب", 4), ("bread", "نان", 5), ("egg", "تخم", 2), ("carrot", "زردک", 3)],
-    "chart_table_1": [("sheep", "گوسفند", 3), ("goat", "بز", 2), ("hen", "مرغ", 5), ("cow", "گاو", 1)],
-    "chart_bars_2": [("pencil", "پنسل", 5), ("notebook", "کتابچه", 3), ("book", "کتاب", 4), ("ball", "توپ", 1)],
-    "chart_table_2": [("pomegranate", "انار", 3), ("watermelon", "تربوز", 1), ("orange", "مالته", 5), ("walnut", "چهارمغز", 4)],
+    "chart_bars_1": [("apple", "سیب", 4), ("bread", "نان", 5), ("egg", "تخم", 2)],
+    "chart_table_1": [("sheep", "گوسفند", 3), ("hen", "مرغ", 5), ("cow", "گاو", 1)],
+    "chart_bars_2": [("pencil", "پنسل", 5), ("ball", "توپ", 1), ("book", "کتاب", 3)],
+    "chart_table_2": [("pomegranate", "انار", 2), ("watermelon", "تربوز", 1), ("walnut", "چهارمغز", 4)],
 }
 I_CHART = tr("گراف را ببین و جواب بده.", "Look at the chart and answer.")
 I_TABLE = tr("جدول را ببین و جواب بده.", "Look at the table and answer.")
@@ -2496,15 +2503,17 @@ def charts5(level: int) -> Sheet:
         intro, kw, ke = (I_CHART, "گراف", "chart") if bars else (I_TABLE, "جدول", "table")
         rng = rng_for(5, "charts", rnd)
         values = [v for _, _, v in rows]
-        assert len(set(values)) == 4 and all(1 <= v <= 5 for v in values)
+        assert len(rows) == 3 and len(set(values)) == 3 and all(1 <= v <= 5 for v in values)
         by_count = sorted(rows, key=lambda x: x[2])
 
         def which(most):
             pic, noun, v = by_count[-1] if most else by_count[0]
             word, en = ("بیشتر", "most") if most else ("کمتر", "fewest")
-            row = lp(s, rnd, intro, tr(f"در این {kw} کدام از همه {word} است؟", f"In this {ke}, which one is the {en}?"), pic,
-                     [p for p, _, _ in rows if p != pic], show=name,
-                     help_fa=tr(f"{noun} از همه {word} است: {fa(v)} تا.", f"The {bare(noun)} is the {en}: {v}."))
+            # Three choices only: the things of the chart. A fourth thing, one that
+            # is not in the chart at all, could be argued to be the fewest.
+            row = s.add(round=rnd, intro_fa=intro, say_fa=tr(f"در این {kw} کدام از همه {word} است؟", f"In this {ke}, which one is the {en}?"),
+                        show=name, answer=pic, distractors="|".join(p for p, _, _ in rows if p != pic),
+                        help_fa=tr(f"{noun} از همه {word} است: {fa(v)} تا.", f"The {bare(noun)} is the {en}: {v}."))
             CAL_META.append((row, pic))
 
         def number(say, ans, prefer, help_fa):
@@ -2516,15 +2525,20 @@ def charts5(level: int) -> Sheet:
             number(tr(f"در این {kw} چند {noun} است؟", f"In this {ke}, how many {many(noun)} are there?"), v, [x for x in values if x != v],
                    tr(f"خانه{Z}های {noun} را بشمار: {fa(v)}.", f"Count the boxes of the {bare(noun)}: {v}."))
         which(False)
-        (_, n1, v1), (_, n2, v2) = rows[1], rows[3]
+        (_, n1, v1), (_, n2, v2) = rows[1], rows[2]
         number(tr(f"در این {kw}، {n1} و {n2} با هم چند تا است؟", f"In this {ke}, how many are the {many(n1)} and the {many(n2)} together?"), v1 + v2,
                [max(v1, v2), abs(v1 - v2), v1 + v2 + 1], tr(f"{fa(v1)} جمع {fa(v2)} مساوی {fa(v1 + v2)}.", f"{v1} plus {v2} equals {v1 + v2}."))
-        (_, n1, v1), (_, n2, v2) = by_count[-1], by_count[1]
+        (_, n1, v1), (_, n2, v2) = by_count[-1], by_count[rng.choice([0, 1])]
         number(tr(f"در این {kw}، {n1} چند تا بیشتر از {n2} است؟", f"In this {ke}, how many more {many(n1)} than {many(n2)} are there?"), v1 - v2,
                [v1, v1 + v2, v1 - v2 + 1], tr(f"{fa(v1)} منفی {fa(v2)} مساوی {fa(v1 - v2)}.", f"{v1} minus {v2} equals {v1 - v2}."))
         total = sum(values)
         number(tr(f"در این {kw} همه با هم چند تا است؟", f"In this {ke}, how many are there altogether?"), total, [total - 1, total + 1, max(values)],
                tr(" جمع ".join(fa(v) for v in values) + f" مساوی {fa(total)}.", " plus ".join(str(v) for v in values) + f" equals {total}."))
+    for row, what in CAL_META:
+        if row["show"] in CHARTS:  # most and fewest once more, from the chart's own numbers
+            counts = {p: v for p, _, v in CHARTS[row["show"]]}
+            pick = max if "بیشتر" in row["say_fa"] else min
+            assert row["answer"] == pick(counts, key=counts.get) and set(row["distractors"].split("|")) == set(counts) - {row["answer"]}, row
     return s
 
 
@@ -2754,9 +2768,9 @@ for _n in (2, 3, 4, 5, 6, 8):
                                        f"(from the top, going left, as shape_quarter_circle does), the others white")
 for _name, _rows in CHARTS.items():
     _what = ", ".join(f"{_v} {_p}" for _p, _, _v in _rows)
-    PICTURES[_name] = ((f"a block chart with four columns, a small picture under each column and one block per unit: {_what}"
+    PICTURES[_name] = ((f"a block chart with three columns, a small picture under each column and one block per unit: {_what}"
                         if "bars" in _name else
-                        f"a picture table with four rows read from the right: a small picture, then one dot per unit: {_what}")
+                        f"a picture table with three rows read from the right: a small picture, then one dot per unit: {_what}")
                        + " (drawn by content/math/draw_pictures.py)")
 for _h in range(1, 13):
     PICTURES[f"clock_{_h}"] = (f"a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing "
@@ -2766,7 +2780,7 @@ for _h in range(1, 13):
 def pictures_in(cell: str) -> list[str]:
     out = []
     for spec in filter(None, (c.strip() for c in cell.split("|"))):
-        if spec.startswith(("t:", "f:")):
+        if spec.startswith(("t:", "f:")) or spec == "snd":
             continue
         m = re.match(r"^p:([a-z0-9_]+)\*(\d+)$", spec)
         if m:
@@ -2799,17 +2813,18 @@ def check_sheet(level: int, game: dict, sheet: Sheet) -> set[str]:
                 used.update(pictures_in(r.get(col, "")))
             if game["engine"] in ("listen_pick", "journey"):
                 choices = [r["answer"]] + r["distractors"].split("|")
-                assert len(choices) == 4 and len(set(choices)) == 4, (name, r)
+                assert len(choices) == (3 if r.get("show") in CHARTS and not r["answer"].startswith("t:") else 4), (name, r)
+                assert len(set(choices)) == len(choices), (name, r)
                 kinds = {"t" if c.startswith("t:") else "f" if c.startswith("f:") else "p" for c in choices}
                 assert len(kinds) == 1, (name, "mixed kinds of choices", r)
                 values = [val(c) for c in choices]
                 if kinds != {"p"} and level <= 3:
                     assert len({value(c) for c in choices}) == 4, (name, r)
                 if None not in values:  # never two choices of the same value (4 and ۴, 1/2 and 2/4, 2.5 and 2.50)
-                    assert len(set(values)) == 4, (name, r)
+                    assert len(set(values)) == len(values), (name, r)
             if game["engine"] == "pairs":
                 assert 3 <= len(rows) <= 6, (name, rnd)
-                cards = [x[c] for x in rows for c in ("a", "b")]
+                cards = [x[c] for x in rows for c in ("a", "b") if x[c] != "snd"]
                 assert len(set(cards)) == len(cards), (name, rnd, "the same card twice")
             if game["engine"] == "catch":
                 assert 1 <= int(r["need"]) <= 10, (name, r)
@@ -2909,7 +2924,7 @@ def check_answers45() -> None:
         elif kind == "same":
             assert val(row["a"]) == val(row["b"]) and row["a"] != row["b"], row
         else:
-            assert row["a"].startswith(("frac_", "shape_circle")) and row["b"].startswith("f:"), row
+            assert row["a"].startswith(("frac_", "shape_circle")) and row["b"] == "snd" and row["say_fa"], row
     for row, test in CATCH_META:
         assert all(test(val(x)) for x in row["targets"].split("|")), row
         assert not any(test(val(x)) for x in row["others"].split("|")), row
@@ -2919,19 +2934,20 @@ def check_answers45() -> None:
             assert _sum_value(row["thing"][2:]) == val(row["basket"]), row
         elif kind == "half":
             v = val(row["thing"])
-            assert row["basket"] == ("f:کمتر از نیم" if v < half else "f:مساوی نیم" if v == half else "f:بیشتر از نیم"), row
+            assert row["basket"] == ("f:کمتر" if v < half else "f:نیم" if v == half else "f:بیشتر"), row
+            assert row["basket_say_fa"].endswith("نیم"), row
         elif kind == "same":
             assert val(row["thing"]) == val(row["basket"]), row
         elif kind == "afghani":
             v = val(row["thing"])
-            assert v != 1 and row["basket"] == ("f:کمتر از ۱ افغانی" if v < 1 else "f:بیشتر از ۱ افغانی"), row
+            assert v != 1 and row["basket"] == ("f:کمتر" if v < 1 else "f:بیشتر") and row["basket_say_fa"].endswith("یک افغانی"), row
         else:
             v = val(row["thing"])
-            assert v != 5000 and row["basket"] == ("f:کمتر از ۵۰۰۰" if v < 5000 else "f:بیشتر از ۵۰۰۰"), row
+            assert v != 5000 and row["basket"] == ("f:کمتر" if v < 5000 else "f:بیشتر") and row["basket_say_fa"].endswith("پنج هزار"), row
     # no pair round may hold two cards of the same value on its answer side
     rounds: dict[tuple, list] = {}
     for row, kind in PAIR_META:
-        rounds.setdefault((id(row) and row["intro_fa"], row["round"]), []).append(val(row["b"]) if kind != "name" else row["b"])
+        rounds.setdefault((row["intro_fa"], row["round"]), []).append(val(row["b"]) if kind != "name" else row["say_fa"])
     for answers in rounds.values():
         assert len(set(answers)) == len(answers), answers
 

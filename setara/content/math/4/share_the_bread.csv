@@ -1,12 +1,12 @@
 round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa
-01,پوره، نیم، یک بر سه یا چارک؟ هر کدام را در سبد خودش بینداز.,bread,,نان پوره,f:پوره,پوره
-01,,shape_third_circle,,یک بر سه دایره,f:یک بر سه,یک بر سه
-01,,shape_circle,,دایره پوره,f:پوره,پوره
-01,,bread_quarter,,چارک نان,f:چارک,چارک
-01,,shape_quarter_circle,,چارک دایره,f:چارک,چارک
-01,,bread_half,,نیم نان,f:نیم,نیم
-01,,bread_third,,یک بر سه نان,f:یک بر سه,یک بر سه
-01,,shape_half_circle,,نیم دایره,f:نیم,نیم
+01,پوره، نیم، یک بر سه یا چارک؟ هر کدام را در سبد خودش بینداز.,bread,,نان پوره,shape_circle,پوره
+01,,shape_third_circle,,یک بر سه دایره,frac_1_3,یک بر سه
+01,,watermelon,,تربوز پوره,shape_circle,پوره
+01,,bread_quarter,,چارک نان,frac_1_4,چارک
+01,,shape_quarter_circle,,چارک دایره,frac_1_4,چارک
+01,,bread_half,,نیم نان,frac_1_2,نیم
+01,,bread_third,,یک بر سه نان,frac_1_3,یک بر سه
+01,,shape_half_circle,,نیم دایره,frac_1_2,نیم
 02,هر ضرب را در سبد جواب خودش بینداز.,t:2×9,,دو ضرب نه,t:18,هژده
 02,,t:3×6,,سه ضرب شش,t:18,هژده
 02,,t:6×3,,شش ضرب سه,t:18,هژده
