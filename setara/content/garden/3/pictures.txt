@@ -1,0 +1,58 @@
+fa_away_heat: A small boy being led by the hand away from a tipped teapot with steam; an arrow-like gap shows he is moving away. Shows two children (older girl with headscarf, small boy), fully dressed.
+fa_cool_water: A child's forearm and hand with a small red mark held over a basin while clean water is poured on it from a jug. Only the forearm and hands are shown.
+fa_cover_cloth: A child's forearm lying relaxed with a clean white cloth laid loosely over it, not tied. Only the forearm and hand are shown.
+fa_blister: A child's hand and forearm with one clear raised blister (a pale bubble with a red ring) on the back of the hand. Nothing touches it.
+fa_blister_break: The same hand with a blister, and another hand bringing a needle towards the blister. Hands only.
+fa_burn_big: A forearm with a large red burn area, and an open palm drawn beside it for size: the red area is clearly bigger than the palm. Forearm and hand only.
+fa_small_burn: A forearm with one small red mark, no bigger than a coin, no blister. Forearm only.
+fa_press: One hand pressing a folded clean cloth firmly on another person's forearm; small lines show the pressure. Hands and forearm only.
+fa_press_raise: A boy sitting on the ground holding his forearm up above his chest while an adult hand presses a cloth on it. Shows a boy in village dress, sleeves rolled to the elbow only.
+fa_cloth_on_top: A forearm with a first cloth showing a small red mark, and a hand laying a second clean cloth on top of it. Hands and forearm only.
+fa_lift_look: A hand lifting the corner of the cloth from a forearm to peek under it; a small red mark under the cloth. Hands and forearm only.
+fa_ash: A small heap of grey ash with two burnt bits of wood beside it.
+fa_wash_wound: A hand or lower leg with a small red mark being washed: a bar of soap with foam and water poured from a jug. Hands only.
+fa_rusty_nail: An old wooden board with one brown-orange rusty nail sticking out, point up.
+fa_stuck_thing: An open hand with a piece of glass or a big splinter stuck in the palm, a small red mark around it. Hand only; nobody pulls at it.
+fa_deep_cut: A forearm with one long cut that stands open (a red line with two dark edges). No blood pool. Forearm only.
+fa_small_cut: A finger with a short thin red line, the hand otherwise clean. Hand only.
+fa_wound_infected: A forearm with a small wound surrounded by a wide red swollen ring and a yellow dot in the middle. Forearm only.
+fa_nose_forward: A child sitting on the ground leaning the head and upper body forward, a cloth held under the nose, one small red drop. Use a girl with headscarf.
+fa_nose_pinch: A child's face from the side, leaning forward, pinching the soft lower part of the nose with thumb and finger, mouth open to breathe. Use a boy.
+fa_clock_10: A plain round clock face without numbers, twelve tick marks, with the wedge from the top to the second tick (ten minutes) filled in a strong colour.
+fa_head_back: A child with the head tilted far back looking at the sky, a cloth at the nose. Use a boy. (The wrong way.)
+fa_choke_sign: A boy with both hands at his throat, mouth open, eyes wide, no sound lines. Head and shoulders, fully dressed.
+fa_cough: A boy leaning a little forward and coughing, with short cough lines in front of the mouth; a girl (headscarf) beside him with an encouraging hand gesture. Two children.
+fa_back_blows: A boy standing bent forward at the waist; an older girl (headscarf) beside him holds his shoulder with one hand and hits between his shoulder blades with the heel of the other hand; small impact lines. Both fully dressed.
+fa_abdominal_thrust: A grown man (father, cap, shalwar kameez) standing behind a boy with both arms around the boy's belly above the waist. Both fully dressed, side view.
+fa_fit: A man lying on his back on the ground, arms and legs drawn with shake lines around them, eyes closed. Fully dressed, shown small and calm, not frightening.
+fa_fit_hold: The same lying man with shake lines, and two hands pressing his arms down to the ground. (The wrong way.)
+fa_fit_mouth: The head of a lying person with shake lines and a hand bringing a spoon towards the mouth. Head and hand only. (The wrong way.)
+fa_fit_clear: The lying man with shake lines; a child pulls a stone and a metal pot away from near his head, leaving clear ground around him. Shows a boy helper.
+fa_limb_still: A boy sitting, his forearm resting still on a folded blanket or pillow in his lap, his other hand supporting it. Fully dressed.
+fa_move_injured: A boy lying on his back under a tree or wall he fell from; two hands begin to pull him up by the arm. (The wrong way.)
+fa_legs_up: A boy lying flat on his back on the ground, his lower legs resting raised on a pillow or folded blanket; a girl (headscarf) kneels beside him. Fully dressed.
+fa_check_danger: An older boy standing still with one hand raised in a stop gesture, looking around; in front of him a fully clothed man lies on the ground; small signs of possible danger in the corners (a small fire, a fallen wire).
+fa_tap_call: An older boy kneeling beside a fully clothed man lying on his back, both hands tapping the man's shoulders, mouth open calling. Sound lines from the boy's mouth.
+fa_shout_help: An older boy with one hand beside his mouth shouting, and a small girl (headscarf) running away towards a house to fetch an adult.
+fa_head_tilt: A fully clothed man lying on his back; a kneeling older boy has one hand on the man's forehead and two fingers under the chin, head tilted back, the boy's ear close above the man's mouth while he looks along the chest.
+fa_recovery: A fully clothed man lying on his side in the recovery position: upper knee bent forward, upper hand under the cheek, head tilted back a little, mouth towards the ground.
+fa_compressions: A fully clothed adult man lying on his back; a fully clothed older boy kneels beside him, arms straight, one hand on top of the other on the centre of the man's chest (over the clothes), a short down arrow above the hands.
+fa_swap_helper: The same lying clothed man; the tired boy moves aside while an adult man (cap, shalwar kameez) kneels down and puts his hands on the centre of the chest to take over.
+fa_cannot_drink: An ill child lying propped on a pillow turning the head away from a cup that an adult hand offers. Use a girl with headscarf, under a blanket.
+fa_hard_to_wake: An ill child lying with eyes closed while an adult hand shakes the shoulder gently; the child does not react. Use a boy, under a blanket. Different from the normal 'sleep' picture: daylight, the hand, a worried small face beside.
+fa_breath_hard: An ill child sitting up, mouth open, shoulders lifted, with several short breath lines in front of the mouth and slightly blue lips. Use a boy, fully dressed.
+fa_fever_days: An ill child lying under a blanket with a red hot face and drops of sweat; above, three small suns in a row (three days). Use a girl with headscarf.
+fa_vomit: A child bent over a basin, one hand on the tummy; only the bent child and the basin are shown, nothing unpleasant. Use a boy.
+fa_face_droop: The face of an old man: one side of the mouth and one eyelid hang down, the other side normal; one arm hangs limp. Head, shoulders and arm.
+fa_medicine: A plain small bottle and a strip of tablets, no brand, no text, no symbol.
+fa_stay_with: A girl (headscarf) sitting close beside an ill old woman who lies under a blanket, holding her hand.
+scene_tea_spill: Inside a village room: an eating cloth on the floor with a teapot tipped over and steam; a small boy of about three holds his hand up and cries (small red mark on the back of the hand); his older sister (about eleven, headscarf) reaches for him.
+scene_burn_cooling: The mother (headscarf) holds the small boy's hand over a basin while the older sister (headscarf) pours clean water from a jug over the back of his hand. The boy is calmer.
+scene_boy_father_repair: A yard: a father (cap, short beard, shalwar kameez) and a boy of about twelve repair an old wooden stable door; old boards with nails lie on the ground, a hammer beside them.
+scene_boy_cut_hand: The same yard: the boy holds his open hand with a small red mark on the palm and calls; a board with a rusty nail lies at his feet; the father turns towards him.
+scene_health_worker: Inside a small clinic room: a woman health worker (headscarf, white coat) looks at the hand of a boy of about twelve who sits on a chair; his father stands beside him. No logo, cross, crescent or text.
+scene_grandmother_ill: A village room: an old woman (white headscarf) lies on a floor mattress under a blanket, eyes half closed, cheeks red; her granddaughter (about ten, headscarf, school bag still on) kneels beside her with a glass of water.
+scene_grandmother_danger: The same room: the grandmother breathing with effort, mouth open, short breath lines; the mother (headscarf) kneels beside her and the granddaughter stands close, both attentive, not panicking.
+scene_going_clinic: Outside the house: the father leads a donkey cart (or a small car waits); the grandmother sits on it wrapped and supported by the mother, the granddaughter beside her holding her hand; the path leads towards a small building far away.
+scene_dog_bite: A village lane between mud walls: a boy of about nine holds his lower leg (trouser leg lifted to mid-calf, small red mark); his sister (about eleven, headscarf, school bag) pulls him away; a dog walks off in the background.
+scene_man_collapsed: A walled courtyard seen through an open gate: a fully clothed grown man lies on the ground beside a dropped shovel; in the gateway stand an older boy (about fourteen) and his small sister (about seven, headscarf), who have just noticed him.
