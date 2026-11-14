@@ -1,0 +1,17 @@
+[project]
+name = "setara-builder"
+version = "0.0.0"
+description = "Turns authored spreadsheets into Setara content packs"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = []
+
+[project.scripts]
+setara-build = "setara_builder.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["setara_builder"]

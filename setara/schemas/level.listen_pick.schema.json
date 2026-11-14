@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "level.listen_pick.schema.json",
+  "title": "Setara level file: Listen and Pick",
+  "type": "object",
+  "required": ["engine", "id", "prompt_audio", "choices", "answer"],
+  "additionalProperties": false,
+  "properties": {
+    "engine": { "const": "listen_pick" },
+    "id": {
+      "type": "string",
+      "pattern": "^(en|fa|math|garden)-[1-6]-[0-9]{2}-[a-z]$"
+    },
+    "prompt_audio": { "$ref": "#/$defs/audioPath" },
+    "help_audio": { "$ref": "#/$defs/audioPath" },
+    "choices": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9_]+$" }
+    },
+    "answer": {
+      "type": "string",
+      "description": "Must be one of choices (checked by the builder, not by this schema)."
+    },
+    "review_tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "audioPath": {
+      "type": "string",
+      "pattern": "^[a-z0-9_/.-]+\\.opus$"
+    }
+  }
+}
