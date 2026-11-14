@@ -208,6 +208,23 @@ end
 listen(16) t.wait(1)
 t.app.pop()
 
+t.mark("world")
+play = t.start_round("garden-4-world", "world_session", 1)
+listen(9)
+for _ = 1, 5 do
+  if play.engine.asking then break end
+  listen(16) t.press("a") t.wait(0.6)
+end
+t.app.pop()
+t.mark("basel")
+play = t.start_round("garden-4-world", "world_session", 3)
+listen(9)
+for _ = 1, 5 do
+  if play.engine.asking then break end
+  listen(16) t.press("a") t.wait(0.6)
+end
+t.app.pop()
+
 t.mark("pair")
 play = t.start_round("math-1", "count_the_flock", 2, { pair = true })
 listen(8)
