@@ -70,6 +70,10 @@ FILM = [
      ["Put the steps of handwashing", "in order.", "", "Knowledge a child can use", "at home the same day."]),
     ("clip", "story", 7, 22, GREEN, "Stories with choices",
      ["Which water is safe to drink?", "", "A wrong choice shows what", "happens, gently, and the", "story asks again."]),
+    ("clip", "firstaid", 6, 20, GREEN, "First aid",
+     ["A burn: what comes first?", "", "Away from the heat, cool water for a long time, a clean cloth, and the clinic if it is big."]),
+    ("clip", "lifesupport", 5, 20, GREEN, "When someone collapses",
+     ["For older children and teachers.", "", "A small child's job is said first: run and bring an adult."]),
     ("clip", "pair", 1, 13, PURPLE, "Two children, one device",
      ["One uses the D-pad,", "the other the four buttons.", "", "Devices are shared:", "every game works in pairs."]),
     ("clip", "grows", 0, 6.5, GOLD, "The valley grows",
@@ -93,10 +97,9 @@ FILM = [
      ["Phrase Board, class games,", "story time, a timer for", "working in groups."]),
     ("card", "list", PURPLE, "Content is data",
      ["Lessons and levels are spreadsheets", "One command builds speech, pictures and Dari text",
-      "380 rounds, 450 pictures, 20 lessons so far", "Updates travel on a memory card"],
+      "400 rounds, 500 pictures, 20 lessons so far", "Updates travel on a memory card"],
      "Games are data. Lessons and levels are written as spreadsheets, and one command turns them into packs, "
-     "with speech, pictures, and Dari text. So far there are three hundred and eighty rounds, four hundred and "
-     "fifty pictures, and twenty classroom lessons. New content travels on a memory card."),
+     "with speech, pictures, and Dari text. So far there are four hundred rounds, five hundred pictures, and twenty classroom lessons. New content travels on a memory card."),
     ("card", "list", ORANGE, "Where we are",
      ["The software runs on a computer today", "Not yet tried on the handheld", "Content is a first draft",
       "Voices are placeholders",

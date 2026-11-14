@@ -170,6 +170,44 @@ do
 end
 t.app.pop()
 
+t.mark("firstaid")
+play = t.start_round("garden-3", "first_steps", 1)
+listen(9)
+do
+  local e = play.engine
+  local first = e.item
+  for _ = 1, 900 do
+    if e.item ~= first or play.state == "result" then break end
+    if e.phase == "ask" and not e.fly then
+      if e.filled == 0 then listen(8) end
+      local want = e.item.tiles[e.filled + 1].id
+      local target
+      for i, tile in ipairs(e.tray) do if not tile.placed and tile.thing.id == want then target = i end end
+      for _ = 1, 20 do
+        if e.cursor == target then break end
+        local two = #e.tray > e.per
+        local row_c, row_i = e.cursor <= e.per, target <= e.per
+        if two and row_c ~= row_i then t.press(row_c and "down" or "up") else t.press(target > e.cursor and "right" or "left") end
+        t.wait(0.15)
+      end
+      t.wait(0.4) t.press("a") t.wait(0.9)
+    else
+      t.wait(0.1)
+    end
+  end
+  t.wait(1)
+end
+t.app.pop()
+t.mark("lifesupport")
+play = t.start_round("garden-3", "life_support", 1)
+listen(9)
+for _ = 1, 4 do
+  if play.engine.asking then break end
+  listen(16) t.press("a") t.wait(0.6)
+end
+listen(16) t.wait(1)
+t.app.pop()
+
 t.mark("pair")
 play = t.start_round("math-1", "count_the_flock", 2, { pair = true })
 listen(8)
