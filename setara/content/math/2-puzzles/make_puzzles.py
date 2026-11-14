@@ -515,7 +515,7 @@ def game_order():
     simple("02", i, first, ["seed", "sprout", "sapling", "tree"],
            T("دانه سبز می‌شود، نهال می‌شود، و نهال درخت می‌شود.", "The seed sprouts, becomes a sapling, and the sapling becomes a tree."))
     simple("02", i, first, ["egg", "chick", "hen"],
-           T("از تخم چوچه می‌براید. چوچه کلان می‌شود و مرغ می‌شود.", "A chick hatches from the egg. The chick grows and becomes a hen."))
+           T("از تخم چوچه می‌برآید. چوچه کلان می‌شود و مرغ می‌شود.", "A chick hatches from the egg. The chick grows and becomes a hen."))
     simple("02", i, first, ["wheat", "flour_sack", "bread"],
            T("گندم را آرد می‌کنیم. از آرد نان می‌پزیم.", "We grind wheat into flour. From flour we bake bread."))
     simple("02", i, first, ["sheep", "wool", "carpet"],
@@ -733,7 +733,7 @@ def game_riddles():
       "شمع می‌سوزد و روشنی می‌دهد، و آهسته آهسته کوتاه می‌شود.", "A candle burns and gives light, and slowly gets shorter.")
     q("01", i, "صبح می‌آید و شام می‌رود. همه جا را روشن و گرم می‌کند. چیست؟",
       "It comes in the morning and goes in the evening. It makes everything bright and warm. What is it?", "sun", "moon|candle|star",
-      "آفتاب صبح می‌براید و شام می‌نشیند.", "The sun rises in the morning and sets in the evening.")
+      "آفتاب صبح می‌برآید و شام می‌نشیند.", "The sun rises in the morning and sets in the evening.")
     q("01", i, "زبان ندارد، ولی گپ می‌زند و آواز می‌خواند. چیست؟",
       "It has no tongue, but it talks and sings. What is it?", "radio", "book|stone|pillow",
       "رادیو گپ می‌زند و آواز می‌خواند، ولی دهن و زبان ندارد.", "A radio talks and sings, but it has no mouth and no tongue.")
@@ -924,7 +924,7 @@ def game_grids():
 
     sq_poly = [[(SQ[0], SQ[1]), (SQ[2], SQ[1]), (SQ[2], SQ[3]), (SQ[0], SQ[3])]]
     tri_poly = [[A, B, C]]
-    i = T("در یک شکل، شکل‌های دیگر پت است. همه را پیدا کن و بشمار.", "Other shapes are hidden in a figure. Find them all and count.")
+    i = T("در یک شکل، شکل‌های دیگر پنهان است. همه را پیدا کن و بشمار.", "Other shapes are hidden in a figure. Find them all and count.")
     count("03", i, "t", box(*SQ) + [(SQ[0], SQ[1], SQ[2], SQ[3])], sq_poly, 2, "1 3 4", "a square with one diagonal")
     count("03", i, "t", fan(1), tri_poly, 3, "2 4", "a triangle with one line from the top corner to the base")
     count("03", i, "s", cells(*SQ, 2, 2), sq_poly, 5, "4 6", "a square cut into 2 by 2 small squares")

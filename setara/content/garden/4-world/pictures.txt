@@ -21,3 +21,39 @@ scene_festival: Dark early morning in a narrow old street. A line of people in l
 scene_university: A long old building with many windows and a big wooden door, a tree in front. Young women and men in ordinary modest clothes walk in and out with books under their arms; two sit on a bench reading. No tower, no cross, no writing.
 scene_basel_hello: A street in Basel with the river behind. A girl and a boy in ordinary modest European clothes (long sleeves, trousers, the girl in a long skirt) smile and wave hello to the viewer; a mother and a grandfather behind them wave too. A green tram in the background. No writing.
 scene_basel_makers: A room with a large window showing the river and the roofs of the city. A woman and a man in ordinary modest clothes sit at a table and draw pictures on paper (a sun, an apple, a goat); on the table lies a small game handheld showing a star. They look friendly and wave at the viewer. No writing, no logo, no flag.
+kangaroo: A brown kangaroo seen from the side, standing upright on its big hind legs and thick tail, long ears, a small joey looking out of the pouch.
+penguin: A penguin standing, facing us: black back and flippers, white belly, yellow beak, orange feet.
+lion: A male lion seen from the side with its head turned to us: yellow body, big brown mane, tail with a tuft.
+giraffe: A giraffe seen from the side: very long neck, yellow with brown spots, two small horns.
+llama: A cream-white llama seen from the side: long upright neck, small head with pointed ears, a red woven blanket on its back. No hump.
+polar_bear: A white polar bear seen from the side, standing on a pale blue slab of ice, black nose.
+panda: A panda sitting, facing us: white with black ears, black eye patches, black arms and legs.
+bison: A bison seen from the side: big brown hump over the shoulders, dark shaggy head held low, one short pale horn.
+whale: A blue whale seen from the side on the water, pale belly, a small fountain of water above its head.
+desert: Hot desert in a rounded frame: yellow sand dunes, a few grains, a large sun in a pale sky. No plants, no animals.
+island: A small sandy island with one palm tree and a little green, blue sea all around it, in a rounded frame.
+forest: A forest in a rounded frame: many trees standing close together, pointed firs and round leafy trees, two rows.
+iceberg: A white iceberg with pointed peaks floating in a dark blue sea, pale sky, in a rounded frame.
+arrow_up: A bold blue arrow pointing up.
+arrow_down: A bold blue arrow pointing down. Same arrow as arrow_up, turned.
+arrow_left: A bold blue arrow pointing left. Same arrow as arrow_up, turned.
+arrow_right: A bold blue arrow pointing right. Same arrow as arrow_up, turned.
+compass: A round compass seen from above: cream face, a four-pointed needle star, the north point red, the others white. No letters.
+lorry: A lorry seen from the side: blue load box with two yellow stripes, red cab, two black wheels. No writing.
+watch: A wristwatch: brown strap, round golden case, white face with four tick marks and two hands. No numerals.
+swim_bag: A swimmer's head and one arm in blue river water, the arm resting on a big round orange floating bag with a rolled, tied top.
+flute: A small dark wooden flute lying at a slant, pale finger holes, two golden rings, two small blue sound lines at the end.
+sun_morning: Series of three (morning, midday, evening), same courtyard ground, tree and grey hills, we look north. Morning: pale sky, orange sun low on the right (east), long shadow of the tree to the left.
+sun_noon: Same series. Midday: blue sky, yellow sun high in the middle with rays, a very short shadow under the tree.
+sun_evening: Same series. Evening: orange sky, red sun low on the left (west), long shadow of the tree to the right.
+map_sign_house: A cream piece of paper with one large red square on it: the map sign for a house.
+map_sign_mountain: The same paper with one large brown triangle: the map sign for a mountain.
+map_sign_tree: The same paper with one large green circle: the map sign for a tree.
+map_sign_river: The same paper with one thick wavy blue line from top to bottom: the map sign for a river.
+scene_ball_lamp: A dark room. On the left an oil lamp glows; a cone of light reaches a ball that a girl (headscarf, long dress) holds up on the right. The half of the ball facing the lamp is bright yellow, the other half dark.
+scene_earth_sun: Dark sky with a few stars. A large yellow sun at the left edge; the Earth on the right, the half facing the sun bright (blue sea, green land, white poles), the other half in dark shadow, a dotted line between day and night.
+scene_sun_poles: Pale background. The sun at the left edge sends three equal bands of light to a large Earth with white ice caps: the middle band meets the Earth straight on a short red patch; the top and bottom bands meet it at a slant on long blue patches.
+scene_village_map: Split picture. Left: a village seen from the front and above: grey mountains with snow, a blue river winding down, three flat-roofed houses, three trees on green ground. Right: a sheet of paper on a wooden table with the map of the same village: three brown triangles, a blue line, three red squares, three green circles. No writing.
+scene_morning_night: Split picture. Left (the west): dark blue night, moon and stars, three tall narrow town houses, one lit window. Right (the east): pale morning sky, the sun rising behind snowy mountains, a flat-roofed mud house and a tree.
+scene_directions: Morning. A boy (cap, long shirt) seen from behind stands on green ground with both arms stretched out. The sun is rising at the horizon on his right; mountains ahead of him. A red arrow on the ground points ahead (north), a white arrow at each hand points right and left.
+scene_river_course: A river from the mountains to the sea: snowy grey mountains top left, a thin stream running down, widening into a blue river that winds through green land past three houses and some trees, and flows into the dark blue sea bottom right, where a small red ship sails.
