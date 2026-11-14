@@ -60,6 +60,7 @@ Phrases and sentences:
 - I am a boy. = من پسر هستم.
 - f: Are you a boy? // m: Yes, I am a boy. = تو پسر هستی؟ بلی، من پسر هستم.
 - m: Are you a boy? // f: No. I am a girl. = تو پسر هستی؟ نه. من دختر هستم.
+- m: Are you a girl? // f: Yes, I am a girl. = تو دختر هستی؟ بلی، من دختر هستم.
 
 ## 05 Numbers 1-5
 
@@ -79,11 +80,11 @@ New words:
 - six = شش
 - seven = هفت
 - eight = هشت
-- nine = نه
+- nine = نُه
 - ten = ده
 
 Phrases and sentences:
-- Six, seven, eight, nine, ten. = شش، هفت، هشت، نه، ده.
+- Six, seven, eight, nine, ten. = شش، هفت، هشت، نُه، ده.
 
 ## 07 How old are you?
 
@@ -195,7 +196,7 @@ Phrases and sentences:
 - This is my friend. = این دوست من است.
 - He is my friend. = او دوست من است.
 - She is my friend. = او دوست من است.
-- This is my friend. She is nine. = این دوست من است. او نه ساله است.
+- This is my friend. She is nine. = این دوست من است. او نُه ساله است.
 - f: This is my friend, Laila. // m: Hello, Laila! = این دوست من لیلا است. سلام لیلا!
 
 Review: bag
@@ -236,16 +237,16 @@ Review: Hello, Goodbye
 
 New words:
 - big = کلان
-- small = خرد
+- small = خُرد
 
 Phrases and sentences:
 - two books = دو کتاب
 - three pens = سه قلم
 - four apples = چهار سیب
 - a big book = یک کتاب کلان
-- a small bag = یک بکس خرد
+- a small bag = یک بکس خُرد
 - The door is big. = دروازه کلان است.
-- The egg is small. = تخم مرغ خرد است.
+- The egg is small. = تخم مرغ خُرد است.
 
 ## 18 Please and thank you
 
@@ -284,7 +285,7 @@ New words:
 Phrases and sentences:
 - I can speak English. = من انگلیسی گپ زده می‌توانم.
 - f: Hello! What's your name? // m: My name is Ali. = سلام! نام تو چیست؟ نام من علی است.
-- m: How old are you? // f: I am nine. = چند ساله هستی؟ من نه ساله هستم.
+- m: How old are you? // f: I am nine. = چند ساله هستی؟ من نُه ساله هستم.
 - f: How are you? // m: I'm fine, thank you. = چطور هستی؟ خوب هستم، تشکر.
 - m: This is my friend, Ahmad. // f: Hello, Ahmad! = این دوست من احمد است. سلام احمد!
 

@@ -2,11 +2,11 @@ round,picture,say_en,say_fa,show_en,show_fa,choices,right,wrong_say_fa,wrong_pic
 # Story 18: Sara and the apple (a girl tells it). Language up to unit 18.
 18,scene_sara_hello,Hello! My name is Sara. I am eight.,,Hello! My name is Sara. I am eight.,,,,,
 18,scene_sara_bag,This is my bag. It is green.,,This is my bag. It is green.,,,,,
-18,scene_sara_bag,What colour is the bag?,,What colour is the bag?,,color_green|color_red|color_blue,color_green,این رنگ نیست. بکس سارا سبز است. دوباره انتخاب کن.,
+18,scene_sara_bag,What colour is the bag?,,What colour is the bag?,,color_green|color_red|color_blue,color_green,نه، بکس این رنگ نیست. بکس سارا سبز است. دوباره انتخاب کن.,
 18,scene_sara_apple,Look! This is an apple. It is big and red.,,Look! This is an apple. It is big and red.,,,,,
 18,scene_laila_sad,"This is my friend, Laila. She is sad.",,"This is my friend, Laila. She is sad.",,,,,
 18,scene_laila_sad,Laila is sad. Give Laila the apple.,,Give Laila the apple.,,apple|book|pen,apple,این سیب نیست. سارا می‌خواهد سیب را به لیلا بدهد. دوباره انتخاب کن.,
-18,scene_sara_gives_apple,"Here you are, Laila. Thank you, Sara!",,"Here you are, Laila. Thank you, Sara!",,,,,
+18,scene_sara_gives_apple,"f: Here you are, Laila. // f: Thank you, Sara!",,"Here you are, Laila. Thank you, Sara!",,,,,
 18,scene_girls_happy,Laila is happy. I am happy. Goodbye!,,Laila is happy. I am happy. Goodbye!,,,,,
 # Story 20: Omar and the red pen (a boy tells it, man's voice; the questions are asked by the woman's voice). Language up to unit 20.
 20,scene_omar_hello,m: Hello! My name is Omar. I am nine.,,Hello! My name is Omar. I am nine.,,,,,

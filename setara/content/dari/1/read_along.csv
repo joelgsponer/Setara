@@ -5,7 +5,7 @@ round,picture,say_en,say_fa,show_fa,choices,right,wrong_say_fa,wrong_picture
 01,scene_girl_looks_by_stream,,لیلا پشت درخت و کنار جوی را دید.,لیلا پشت درخت و کنار جوی را دید.,,,,
 01,scene_goat_eats_leaves,,بز در باغ بود و برگ می‌خورد.,بز در باغ بود و برگ می‌خورد.,,,,
 01,scene_girl_brings_goat_home,,لیلا به بز آب داد و او را به خانه آورد.,لیلا به بز آب داد و او را به خانه آورد.,,,,
-01,scene_girl_with_goat,,لیلا کدام حیوان را دارد؟,,goat|cow|donkey,goat,نه. لیلا یک بز دارد.,
+01,scene_girl_with_goat,,لیلا کدام حیوان دارد؟,,goat|cow|donkey,goat,نه. لیلا یک بز دارد.,
 01,scene_goat_eats_leaves,,بز در باغ چه می‌خورد؟,,leaf|bread|apple,leaf,نه. بز برگ می‌خورد.,
 02,scene_mother_bakes_bread,,مادر در تنور نان می‌پزد.,مادر در تنور نان می‌پزد.,,,,
 02,scene_boy_takes_bread,,فرید سه نان گرم می‌گیرد.,فرید سه نان گرم می‌گیرد.,,,,

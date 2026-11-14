@@ -41,6 +41,7 @@ unit,key,en,fa,picture,tags
 04,i_am_a_boy,I am a boy.,من پسر هستم.,,phrase
 04,boy_dialogue,"f: Are you a boy? // m: Yes, I am a boy.",تو پسر هستی؟ بلی، من پسر هستم.,,dialogue
 04,girl_dialogue,m: Are you a boy? // f: No. I am a girl.,تو پسر هستی؟ نه. من دختر هستم.,,dialogue
+04,girl_dialogue_2,"m: Are you a girl? // f: Yes, I am a girl.",تو دختر هستی؟ بلی، من دختر هستم.,,dialogue
 
 # 05 Numbers 1-5 (pictures and numerals are in numbers.csv)
 05,one,one,یک,,number
@@ -54,9 +55,9 @@ unit,key,en,fa,picture,tags
 06,six,six,شش,,number
 06,seven,seven,هفت,,number
 06,eight,eight,هشت,,number
-06,nine,nine,نه,,number
+06,nine,nine,نُه,,number
 06,ten,ten,ده,,number
-06,six_to_ten,"Six, seven, eight, nine, ten.",شش، هفت، هشت، نه، ده.,,phrase
+06,six_to_ten,"Six, seven, eight, nine, ten.",شش، هفت، هشت، نُه، ده.,,phrase
 
 # 07 How old are you?
 07,how_old_are_you,How old are you?,چند ساله هستی؟,,phrase
@@ -138,7 +139,7 @@ unit,key,en,fa,picture,tags
 14,this_is_my_friend,This is my friend.,این دوست من است.,,phrase
 14,he_is_my_friend,He is my friend.,او دوست من است.,,phrase
 14,she_is_my_friend,She is my friend.,او دوست من است.,,phrase
-14,she_is_nine,This is my friend. She is nine.,این دوست من است. او نه ساله است.,,phrase
+14,she_is_nine,This is my friend. She is nine.,این دوست من است. او نُه ساله است.,,phrase
 14,friend_dialogue,"f: This is my friend, Laila. // m: Hello, Laila!",این دوست من لیلا است. سلام لیلا!,,dialogue
 14,r14_bag,bag,بکس,bag,review
 
@@ -168,14 +169,14 @@ unit,key,en,fa,picture,tags
 
 # 17 Big and small
 17,big,big,کلان,big,word
-17,small,small,خرد,small,word
+17,small,small,خُرد,small,word
 17,two_books,two books,دو کتاب,p:book*2,phrase
 17,three_pens,three pens,سه قلم,p:pen*3,phrase
 17,four_apples,four apples,چهار سیب,p:apple*4,phrase
 17,a_big_book,a big book,یک کتاب کلان,,phrase
-17,a_small_bag,a small bag,یک بکس خرد,,phrase
+17,a_small_bag,a small bag,یک بکس خُرد,,phrase
 17,the_door_is_big,The door is big.,دروازه کلان است.,,phrase
-17,the_egg_is_small,The egg is small.,تخم مرغ خرد است.,,phrase
+17,the_egg_is_small,The egg is small.,تخم مرغ خُرد است.,,phrase
 
 # 18 Please and thank you
 18,please,please,لطفاً,please,word
@@ -202,7 +203,7 @@ unit,key,en,fa,picture,tags
 20,english,English,انگلیسی,,word
 20,i_can_speak_english,I can speak English.,من انگلیسی گپ زده می‌توانم.,,phrase
 20,review_dialogue_3,f: Hello! What's your name? // m: My name is Ali.,سلام! نام تو چیست؟ نام من علی است.,,dialogue
-20,review_dialogue_4,m: How old are you? // f: I am nine.,چند ساله هستی؟ من نه ساله هستم.,,dialogue
+20,review_dialogue_4,m: How old are you? // f: I am nine.,چند ساله هستی؟ من نُه ساله هستم.,,dialogue
 20,review_dialogue_5,"f: How are you? // m: I'm fine, thank you.",چطور هستی؟ خوب هستم، تشکر.,,dialogue
 20,review_dialogue_6,"m: This is my friend, Ahmad. // f: Hello, Ahmad!",این دوست من احمد است. سلام احمد!,,dialogue
 20,r20_teacher,teacher,معلم,teacher,review

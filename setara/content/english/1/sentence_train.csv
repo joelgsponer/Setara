@@ -16,7 +16,7 @@ round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 08,This is a book.,,t:This|t:is|t:a|t:book,,,This is a book.,,این کتاب است.
 08,This is a pen.,,t:This|t:is|t:a|t:pen,t:am,,This is a pen.,,این قلم است.
 08,This is a bag.,,t:This|t:is|t:a|t:bag,t:am,,This is a bag.,,این بکس است.
-08,This is a chair.,,t:This|t:is|t:a|t:chair,t:I,,This is a chair.,,این چوکی است.
+08,This is a pencil.,,t:This|t:is|t:a|t:pencil,t:I,,This is a pencil.,,این پنسل است.
 10,Open the door.,,t:Open|t:the|t:door,,,Open the door.,,دروازه را باز کن.
 10,Close the window.,,t:Close|t:the|t:window,,,Close the window.,,کلکین را بسته کن.
 10,Point to the board.,,t:Point|t:to|t:the|t:board,,,Point to the board.,,تخته را نشان بده.
@@ -29,7 +29,7 @@ round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 14,This is my friend.,,t:This|t:is|t:my|t:friend,,,This is my friend.,,این دوست من است.
 14,He is my friend.,,t:He|t:is|t:my|t:friend,,,He is my friend.,,او دوست من است.
 14,She is my friend.,,t:She|t:is|t:my|t:friend,t:am,,She is my friend.,,او دوست من است.
-14,She is nine.,,t:She|t:is|t:nine,t:am,,She is nine.,,او نه ساله است.
+14,She is nine.,,t:She|t:is|t:nine,t:am,,She is nine.,,او نُه ساله است.
 14,This is an apple.,,t:This|t:is|t:an|t:apple,,,This is an apple.,,این سیب است.
 16,How are you?,,t:How|t:are|t:you,,,How are you?,,چطور هستی؟
 16,"I'm fine, thank you.",,t:I'm|t:fine|t:thank|t:you,,,"I'm fine, thank you.",,خوب هستم، تشکر.

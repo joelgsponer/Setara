@@ -31,7 +31,7 @@ Z = "\u200c"  # zero-width non-joiner, as in می‌شود
 
 ONES = ["صفر", "یک", "دو", "سه", "چهار", "پنج", "شش", "هفت", "هشت", "نه"]
 TEENS = {10: "ده", 11: "یازده", 12: "دوازده", 13: "سیزده", 14: "چهارده", 15: "پانزده",
-         16: "شانزده", 17: "هفده", 18: "هجده", 19: "نزده"}
+         16: "شانزده", 17: "هفده", 18: "هژده", 19: "نزده"}
 TENS = {2: "بیست", 3: "سی", 4: "چهل", 5: "پنجاه", 6: "شصت", 7: "هفتاد", 8: "هشتاد", 9: "نود"}
 # Afghan Dari hundreds (دوصد، سه‌صد، پنج‌صد), not Iranian (دویست، سیصد، پانصد).
 HUNDREDS = {1: "یکصد", 2: "دوصد", 3: "سه" + Z + "صد", 4: "چهارصد", 5: "پنج" + Z + "صد",
@@ -93,7 +93,7 @@ def _test_numbers() -> None:
     expect = {
         0: "صفر", 1: "یک", 2: "دو", 3: "سه", 4: "چهار", 5: "پنج", 6: "شش", 7: "هفت", 8: "هشت",
         9: "نه", 10: "ده", 11: "یازده", 12: "دوازده", 13: "سیزده", 14: "چهارده", 15: "پانزده",
-        16: "شانزده", 17: "هفده", 18: "هجده", 19: "نزده", 20: "بیست", 21: "بیست و یک",
+        16: "شانزده", 17: "هفده", 18: "هژده", 19: "نزده", 20: "بیست", 21: "بیست و یک",
         25: "بیست و پنج", 30: "سی", 34: "سی و چهار", 40: "چهل", 50: "پنجاه", 60: "شصت",
         70: "هفتاد", 80: "هشتاد", 90: "نود", 99: "نود و نه", 100: "صد", 101: "یکصد و یک",
         110: "یکصد و ده", 115: "یکصد و پانزده", 120: "یکصد و بیست", 200: "دوصد",
@@ -797,7 +797,7 @@ def market(level: int) -> Sheet:
         for j, (given, price) in enumerate(deals):
             pic, noun = SHOP[(j + 1) % len(SHOP)]
             change = given - price
-            market_row(s, "06", f"{fa(price)} {AFN} {noun} خریدی و {fa(given)} {AFN} دادی. چند {AFN} باقی می{Z}ماند؟ باقی را بده.",
+            market_row(s, "06", f"{noun} {fa(price)} {AFN} است. مشتری {fa(given)} {AFN} داد. چند {AFN} باقی می{Z}ماند؟ باقی را پس بده.",
                        pic, change, [1, 2, 5, 10, 20, 50], "pay", f"{fa(given)} منفی {fa(price)} مساوی {fa(change)}.")
     return s
 
@@ -965,6 +965,7 @@ FRACTIONS = {
     "quarter": [("bread_quarter", "چارک نان"), ("apple_quarter", "چارک سیب"), ("watermelon_quarter", "چارک تربوز"),
                 ("shape_quarter_circle", "چارک دایره")],
 }
+FRACTION_NOUNS = ["نان", "سیب", "تربوز", "دایره"]  # same order as the lists above
 FRAC_BASKET = {"whole": WHOLE, "half": HALF, "quarter": QUARTER}
 I_SHAPES = "هر چیز را در سبد شکل خودش بینداز."
 I_PARITY = "عددهای جفت و طاق را جدا کن."
@@ -998,13 +999,18 @@ def sorter(level: int) -> Sheet:
             row = s.add(round=rnd, intro_fa=I_PARITY, thing=W(n), say_fa=fa(n), basket=basket[0], basket_say_fa=basket[1])
             SORT_META.append((row, "parity", n))
 
-    def fraction_round(rnd, plan):
+    def fraction_round(rnd, plan, named=True):
+        """named=False: the speech names only the thing, not its fraction, so
+        the child has to judge from the picture."""
         rng = rng_for(level, "sorter", rnd)
         rows = [(FRACTIONS[kind][i], kind) for kind, idx in plan for i in idx]
         rng.shuffle(rows)
         assert len(rows) == 8
         for (pic, name), kind in rows:
             basket = FRAC_BASKET[kind]
+            if not named:
+                name = FRACTION_NOUNS[FRACTIONS[kind].index((pic, name))]
+                assert basket[1] not in name
             row = s.add(round=rnd, intro_fa=I_FRACTION, thing=pic, say_fa=name, basket=basket[0], basket_say_fa=basket[1])
             SORT_META.append((row, "fraction", kind))
 
@@ -1029,7 +1035,7 @@ def sorter(level: int) -> Sheet:
                         basket="f:کمتر از ۵۰۰" if less else "f:بیشتر از ۵۰۰",
                         basket_say_fa="کمتر از پنج" + Z + "صد" if less else "بیشتر از پنج" + Z + "صد")
             SORT_META.append((row, "500", n))
-        fraction_round("03", [("whole", [2, 3]), ("half", [1, 2, 3]), ("quarter", [1, 2, 3])])
+        fraction_round("03", [("whole", [2, 3]), ("half", [1, 2, 3]), ("quarter", [1, 2, 3])], named=False)
         parity_round("04", range(101, 1000))
     return s
 
@@ -1074,6 +1080,9 @@ def mason(level: int) -> Sheet:
             for shape in spread(order, rng):
                 pic, noun = SHAPED[shape][k]
                 wrong = [SHAPED[o][1 + (k + j) % 3][0] for j, o in enumerate(x for x in order if x != shape)]
+                if shape == "rectangle":  # a square is a rectangle too: never offer one as a wrong choice
+                    wrong[order.index("square")] = SHAPED["circle"][4 + k][0]
+                    assert not set(wrong) & {p for p, _ in SHAPED["square"]} and len(set(wrong)) == 3
                 lp(s, "02", I_SHAPE_OBJ, f"کدام چیز شکل {SHAPES[shape][1]} دارد؟", pic, wrong,
                    help_fa=f"{noun} شکل {SHAPES[shape][1]} دارد.")
         for i, (noun, long_pic, short_pic, long_word, short_word) in enumerate(LENGTHS):
