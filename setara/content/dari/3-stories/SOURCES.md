@@ -141,10 +141,11 @@ people.
 
 **Form:**
 
-- Written answer cards hold two or three words and are drawn at 24 to 30 px
-  by the engine (one line, shrunk to the card). 13 of the 133 written cards
-  come out below 30 px, the smallest at 26 px. The project rule is Dari at
-  least 30 px; shorter answers would make the "why" questions poorer.
+- Written answer cards hold one to three words on one line. The engine draws
+  them at 30 px where they fit the card and at 24 px where they do not. 130
+  of the 133 written cards come out at 30 px or more; three are drawn at
+  24 px, below the project's 30 px rule for Dari: «کار درست را بکن»,
+  «قدرش را فهمید», «زمین می‌چرخد». Shorten them or accept them.
 - `scene_moon_phases` shows the moon's shapes right to left (the way Dari is
   read) with the waxing moon lit on its right side, as seen from Afghanistan.
 - The pictures of Mulla Nasruddin come from two hands (`scene_nasruddin_donkeys`

@@ -1,0 +1,55 @@
+# NEW pictures drawn for English level 3 (everything else reuses the shared library in content/pictures/). Format: name: what to draw.
+# Style (docs/authoring.md): thick dark outline, flat colours, no text, readable at 3 cm.
+# People: rural Afghan, modest everyday dress; girls and women with a headscarf, boys and men in perahan tunban, with or without a cap.
+# A local reviewer approves every picture of a person.
+# "lamp" (unit 16) was drawn at the same time by another pack and is reused as it is.
+
+# Unit 02
+drink: a boy drinks from a blue cup held to his mouth, eyes closed; two water drops
+lunch: like "breakfast" and "dinner": a red cloth seen from above with a plate of rice, a bread and a small bowl; above it the full sun high in the sky (noon)
+
+# Unit 03 (a series with "night": the same house in the same frame, only the sky changes)
+morning: pale yellow sky, the sun coming up behind the house with long rays, a rooster crowing on the roof
+afternoon: bright blue sky, the full sun high up with rays, one small cloud
+evening: orange sky turning purple at the top, the red sun going down, two first stars, the window of the house lit yellow
+
+# Unit 11
+shirt: a long blue shirt (perahan) with long sleeves, a cream collar and a short button line, shown alone
+trousers: wide sand-coloured trousers (tunban) with a waistband and cord, shown alone
+dress: a girl's red dress with long sleeves, a wide skirt and yellow bands at the waist, neck and hem, shown alone
+scarf: a girl's head and shoulders in pale grey; only her headscarf is in full colour (purple with yellow dots), with long fringed ends over the shoulders
+
+# Unit 12
+socks: a pair of blue socks with cream cuffs and stripes
+
+# Unit 13 (two women or girls, two men or boys)
+cook: a woman in a yellow headscarf stirs a pot on a fire with a wooden spoon; steam rises
+work: a man with a beard and cap digs the field with a shovel; a heap of earth beside him
+carry: a girl carries a full bucket of water in each hand; drops fall
+sweep: a boy sweeps the yard with a long broom; dust flies up (the word taught is "clean")
+
+# Unit 14
+kite: a red and yellow diamond kite with a tail of blue bows
+
+# Unit 15
+room: a room seen from inside: window, wooden door, a mattress with a cushion along the wall, a red carpet on the floor
+kitchen: a kitchen seen from inside: a clay stove with a pot and a small fire, a shelf with cups and a plate, a big water jar, a ladle on the wall
+
+# Unit 16
+mirror: a round hand mirror with a yellow frame and a wooden handle, light blue glass with two white shine lines
+
+# Unit 17 (two pairs: the same table, the same box; only the place of the red ball changes)
+pos_on: the red ball lies on the table
+pos_under: the red ball lies under the table
+pos_in: the red ball sits in the open box, half of it showing above the rim
+pos_next_to: the red ball lies on the floor next to the box
+
+# Story scenes (4:3, full background). Mina: a girl of nine, blue headscarf, purple dress, as in scene_girl_walks_to_school.
+# Story 10: Mina's day
+scene_mina_wakes: Mina sits up on her mattress and stretches both arms; the wall clock shows six o'clock; the sun comes up in the window
+scene_mina_washes: in the yard Mina washes her face with both hands at her cheeks, eyes closed, drops falling; a basin, a water jug and a towel on a rail
+scene_mina_sleeps: night; the moon in the window; Mina asleep on her mattress, her head on the pillow, under a blue blanket
+# Story 20: Mina's shoe
+scene_shoe_morning: Mina, dressed for school, holds one shoe up in her hand and looks surprised; one foot has a shoe, the other only a sock; the wall clock shows seven o'clock
+scene_shoe_room: the room: on the left the bed with a yellow pillow on it; in the middle an open box with the red ball in it; on the right a table with the cat sitting under it and the missing shoe next to the cat
+scene_shoe_found: Mina has both shoes on and throws her arms up, laughing; the cat sits beside her

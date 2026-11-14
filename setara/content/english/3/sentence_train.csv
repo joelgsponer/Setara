@@ -38,8 +38,8 @@ round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 14,,"Yes, I do.",,t:Yes|t:I|t:do,t:does,,"Yes, I do.",,بلی، می‌روم.
 14,,Does she play?,,t:Does|t:she|t:play,t:Do,,Does she play?,,او بازی می‌کند؟
 14,,"Yes, she does.",,t:Yes|t:she|t:does,t:do,,"Yes, she does.",,بلی، می‌کند.
-14,,Does he cook?,,t:Does|t:he|t:cook,t:cooks,,Does he cook?,,او غذا می‌پزد؟
-14,,"No, he doesn't.",,t:No|t:he|t:doesn't,t:don't,,"No, he doesn't.",,نه، نمی‌پزد.
+14,,Does he sleep?,,t:Does|t:he|t:sleep,t:sleeps,,Does he sleep?,,او می‌خوابد؟
+14,,"No, he doesn't.",,t:No|t:he|t:doesn't,t:don't,,"No, he doesn't.",,نه، نمی‌خوابد.
 14,,I always do my homework.,,t:I|t:always|t:do|t:my|t:homework,t:never,,I always do my homework.,,من همیشه کار خانگی‌ام را می‌کنم.
 14,,He doesn't go to school.,,t:He|t:doesn't|t:go|t:to|t:school,t:goes,,He doesn't go to school.,,او به مکتب نمی‌رود.
 17,,Where is my shoe?,,t:Where|t:is|t:my|t:shoe,t:What,,Where is my shoe?,,بوت من کجاست؟

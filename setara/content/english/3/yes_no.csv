@@ -11,7 +11,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa,hop
 06,,Is it one o'clock?,,clock_11,no,yes,ساعت یک است؟,
 # 14: Does she ...? Does he ...? The short answers are Yes, she does and No, he doesn't.
 14,,Does she cook?,,cook,yes,no,او غذا می‌پزد؟,
-14,,Does he cook?,,work,no,yes,او غذا می‌پزد؟,
+14,,Does he sleep?,,work,no,yes,او می‌خوابد؟,
 14,,Does she read?,,read,yes,no,او می‌خواند؟,
 14,,Does he write?,,write,yes,no,او می‌نویسد؟,
 14,,Does he clean?,,sweep,yes,no,او پاک می‌کند؟,

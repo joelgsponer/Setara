@@ -1,5 +1,5 @@
 round,say_en,say_fa,show,answer,distractors,help_fa,hop
-# Mixed review. Every question is a small listening task: the answer is not the word that was said last.
+# Mixed review. Every question is a small listening task: the child has to understand the sentence, not only catch one word.
 # 10: units 1 to 9.
 10,Which one is a fruit?,,,banana,cucumber|garlic|cabbage,کدام یک میوه است؟,
 10,Which one is a vegetable?,,,eggplant,peach|pear|melon,کدام یک ترکاری است؟,

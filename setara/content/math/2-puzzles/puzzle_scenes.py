@@ -268,12 +268,12 @@ def figure(name: str, segs: list, fill: list, brief: str) -> str:
 
 def _balance(cx: float, base_y: float, left: list, right: list, tilt: int, half: float, item: float) -> str:
     """tilt: -1 the left pan is down, 0 level, 1 the right pan is down."""
-    py = base_y - half * 1.35
     ang = math.radians(13) * tilt
+    drop = item * 1.05 + 14
+    py = base_y - drop - half * math.sin(math.radians(13)) - 16
     dx, dy = half * math.cos(ang), half * math.sin(ang)
     lx, ly, rx, ry = cx - dx, py - dy, cx + dx, py + dy
-    pan_w = max(item * 1.25, item * max(len(left), len(right)) * 0.98 + 10)
-    drop = item * 1.05 + 14
+    pan_w = min(max(item * 1.25, item * max(len(left), len(right)) * 0.98 + 10), half * 1.75)
     out = [f'<path d="M{cx - 34} {base_y}H{cx + 34}L{cx + 10} {base_y - 16}H{cx - 10}z" fill="#9a6b3f" stroke="{INK}" stroke-width="4" stroke-linejoin="round"/>',
            f'<path d="M{cx} {base_y - 16}V{py}" stroke="{INK}" stroke-width="9" stroke-linecap="round"/>',
            f'<path d="M{lx:.1f} {ly:.1f}L{rx:.1f} {ry:.1f}" stroke="{INK}" stroke-width="8" stroke-linecap="round"/>',
@@ -336,7 +336,7 @@ def who_all(name: str, kids: list, items: list, brief: str) -> str:
     out = [f'<rect x="0" y="0" width="400" height="300" fill="{SKY}"/>',
            f'<rect x="0" y="150" width="400" height="150" fill="{SAND}"/>']
     for i, k in enumerate(kids):
-        out.append(kid(k, 30 + i * 120, 34, 104))
+        out.append(tok_draw(k, 30 + i * 120, 34, 104))
     out.append(D.card(86, 178, 228, 96, fill=CREAM, sw=4))
     for i, t in enumerate(items):
         out.append(tok_draw(t, 98 + i * 70, 190, 68))
@@ -346,7 +346,7 @@ def who_all(name: str, kids: list, items: list, brief: str) -> str:
 def who_clue(name: str, k: str, item: str, has: bool, brief: str) -> str:
     out = [f'<rect x="0" y="0" width="400" height="300" fill="{SKY}"/>',
            f'<rect x="0" y="210" width="400" height="90" fill="{SAND}"/>',
-           kid(k, 214, 60, 170),
+           tok_draw(k, 214, 60, 170),
            D.card(34, 78, 150, 150, fill=CREAM, sw=4),
            tok_draw(item, 49, 93, 120)]
     out.append(D.embed("yes" if has else "no", 110, 22 if has else 150, 92))
@@ -358,7 +358,7 @@ def who_final(name: str, pairs: list, brief: str) -> str:
     for i, (k, item) in enumerate(pairs):
         x = 14 + i * 129
         out.append(D.card(x, 26, 114, 248, fill=CREAM, sw=4))
-        out.append(kid(k, x + 7, 34, 100))
+        out.append(tok_draw(k, x + 7, 34, 100))
         out.append(tok_draw(item, x + 12, 156, 90))
     return D.scene(name, "\n".join(out), brief, bg=SKY)
 

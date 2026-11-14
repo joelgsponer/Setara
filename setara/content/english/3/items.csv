@@ -167,7 +167,7 @@ unit,key,en,fa,picture,tags
 14,he_doesnt_go,He doesn't go to school on Friday.,او روز جمعه به مکتب نمی‌رود.,,phrase
 14,do_dialogue_1,"f: Do you go to school? // m: Yes, I do.",تو به مکتب می‌روی؟ بلی، می‌روم.,,dialogue
 14,does_dialogue_1,"m: Does she play? // f: Yes, she does.",او بازی می‌کند؟ بلی، می‌کند.,,dialogue
-14,does_dialogue_2,"f: Does he cook? // m: No, he doesn't. He never cooks.",او غذا می‌پزد؟ نه، نمی‌پزد. او هیچ وقت غذا نمی‌پزد.,,dialogue
+14,does_dialogue_2,"f: Does he get up late? // m: No, he doesn't. He never gets up late.",او ناوقت از خواب می‌خیزد؟ نه، نمی‌خیزد. او هیچ وقت ناوقت از خواب نمی‌خیزد.,,dialogue
 14,r14_play,play,بازی کردن,play,review
 
 # 15 My home 1
