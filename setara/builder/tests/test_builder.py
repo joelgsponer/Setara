@@ -109,3 +109,53 @@ def test_brackets_are_mirrored_in_dari():
     assert line.index("(") < line.index(")")
     # between Latin letters nothing is turned
     assert "(a cat)" in shaping.shape_line("بگویید hello (a cat) now حالا")
+
+
+def test_speech_cache_only_generates_new_or_changed_texts(tmp_path):
+    cache = tmp_path / "cache"
+    sheet = "round,say_en,answer,distractors\n01,apple,apple,bread|egg\n01,bread,bread,\n"
+    content = pack(tmp_path, sheet)
+    first = build(content, tmp_path / "out1", tts="silent", tts_cache=cache).speech
+    assert first.misses > 0 and first.hits == 0
+    with zipfile.ZipFile(tmp_path / "out1" / "en-1.zip") as z:
+        clips1 = {n: z.read(n) for n in z.namelist() if n.endswith(".ogg")}
+
+    # the same content again: everything comes from the cache, packs are identical
+    again = build(content, tmp_path / "out2", tts="silent", tts_cache=cache).speech
+    assert (again.hits, again.misses) == (first.misses, 0)
+    assert (tmp_path / "out1" / "en-1.zip").read_bytes() == (tmp_path / "out2" / "en-1.zip").read_bytes()
+
+    # one prompt changed: only it is generated, at normal speed and slow
+    write(content / "x" / "g.csv", sheet.replace("01,bread,bread,", "01,bread please,bread,"))
+    changed = build(content, tmp_path / "out3", tts="silent", tts_cache=cache).speech
+    assert changed.misses == 2 and changed.hits == first.misses - 2
+    with zipfile.ZipFile(tmp_path / "out3" / "en-1.zip") as z:
+        clips3 = {n for n in z.namelist() if n.endswith(".ogg")}
+    assert len(clips3 - set(clips1)) == 2
+
+
+def test_speech_cache_key_follows_the_sound(tmp_path, monkeypatch):
+    from setara_builder import tts
+    s = tts.Speech("silent", cache=tmp_path)
+    k = s.key("en", "Hello  there")
+    assert k == s.key("en", "Hello there")  # spacing does not change the sound
+    assert k != s.key("en", "Hello there", slow=True)
+    assert k != s.key("fa", "Hello there")
+    assert k != s.key("en", "m: Hello there")  # another voice
+    monkeypatch.setattr(tts, "RECIPE", tts.RECIPE + 1)
+    assert k != tts.Speech("silent", cache=tmp_path).key("en", "Hello there")
+
+
+def test_speech_cache_key_follows_the_voice_model(tmp_path, monkeypatch):
+    from setara_builder import tts
+    models = tmp_path / "voices"
+    models.mkdir()
+    for name in ("en_US-amy-medium", "en_US-ryan-medium", "fa_IR-amir-medium"):
+        (models / f"{name}.onnx").write_bytes(b"model")
+        (models / f"{name}.onnx.json").write_text("{}")
+    monkeypatch.setitem(tts.DEFAULT_VOICES["piper"], "dir", str(models))
+    k = tts.Speech("piper", cache=tmp_path / "c").key("en", "Hello")
+    (models / "en_US-ryan-medium.onnx").write_bytes(b"other")  # not the voice of this clip
+    assert k == tts.Speech("piper", cache=tmp_path / "c").key("en", "Hello")
+    (models / "en_US-amy-medium.onnx").write_bytes(b"retrained")
+    assert k != tts.Speech("piper", cache=tmp_path / "c").key("en", "Hello")

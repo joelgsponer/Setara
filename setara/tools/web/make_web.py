@@ -40,11 +40,12 @@ def lighter(data: bytes, cache: Path) -> bytes:
     """A speech clip at a lower rate for the browser (16 kHz, low quality): about
     a third of the size. The card keeps the full clips. Cached by content."""
     cache.mkdir(parents=True, exist_ok=True)
-    out = cache / (hashlib.sha1(data).hexdigest() + ".ogg")
+    # the settings are part of the name: the cache outlives builds (Dockerfile)
+    settings = ["-ar", "16000", "-ac", "1", "-c:a", "libvorbis", "-q:a", "0"]
+    out = cache / (hashlib.sha1(data + repr(settings).encode()).hexdigest() + ".ogg")
     if not out.exists():
         tmp = out.with_suffix(f".{os.getpid()}.{hashlib.sha1(os.urandom(8)).hexdigest()[:6]}.ogg")
-        done = subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", "pipe:0", "-ar", "16000", "-ac", "1",
-                               "-c:a", "libvorbis", "-q:a", "0", str(tmp)], input=data)
+        done = subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", "pipe:0", *settings, str(tmp)], input=data)
         if done.returncode != 0 or not tmp.exists():
             return data
         tmp.replace(out)

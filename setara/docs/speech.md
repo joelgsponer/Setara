@@ -4,6 +4,22 @@ Everything in Setara is spoken, so every text in every sheet becomes an audio
 clip. The builder generates the clips and keeps them in `builder/.cache/`, so
 a phrase is only ever generated once.
 
+## The cache
+
+Each clip is stored under a hash of everything that changes its sound: the
+text, the language, normal or slow, the provider and its version, the voice
+model files, and the synthesis and encoding settings. A rebuild after a
+content change only generates the new or changed texts; the builder prints
+how many clips came from the cache and how many it generated, also with
+`--quiet`.
+
+The cache is `builder/.cache/audio`, or the folder given with `--tts-cache`
+or `SETARA_TTS_CACHE`. The Dockerfile keeps it in a BuildKit cache mount
+(`id=setara-tts`), so it outlives image builds until the build cache is
+pruned (`docker builder prune`). After a prune the next build generates
+everything once. When code changes the sound in a way the key cannot see,
+raise `RECIPE` in `builder/setara_builder/tts.py`.
+
 ## Where the speech is made
 
 At build time, on the team's PC. The handheld cannot synthesise speech inside

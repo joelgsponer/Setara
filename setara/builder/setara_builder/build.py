@@ -34,6 +34,7 @@ class Report:
     errors: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
     untranslated: dict[str, str] = field(default_factory=dict)  # Dari text -> where it is used
+    speech: Speech | None = None  # the speech of the build: cache hits and misses
 
     def error(self, where: str, msg: str) -> None:
         self.errors.append(f"{where}: {msg}")
@@ -868,10 +869,10 @@ def find_packs(content: Path) -> list[Path]:
 
 
 def build(content: Path, out_dir: Path | None, tts: str | None = None, only: list[str] | None = None,
-          strict: bool = False) -> Report:
+          strict: bool = False, tts_cache: Path | None = None) -> Report:
     """Validate everything; write packs too when out_dir is given."""
     report = Report()
-    speech = Speech(tts)
+    speech = Speech(tts, cache=tts_cache)
     i18n = load_i18n(content)
     seen: dict[str, Path] = {}
     for src in find_packs(content):
@@ -919,6 +920,8 @@ def build(content: Path, out_dir: Path | None, tts: str | None = None, only: lis
         if out_dir is not None and len(report.errors) == before:
             path = pack.write(out_dir, manifest)
             print(f"  {path.name}: {len(pack.files)} files, {path.stat().st_size / 1e6:.1f} MB")
-    if speech.generated:
-        print(f"  speech: {speech.generated} new clips with '{speech.provider}'")
+    if out_dir is not None:
+        # printed even with --quiet: the hit count says whether the cache worked
+        print(f"  {speech.summary()}")
+    report.speech = speech
     return report

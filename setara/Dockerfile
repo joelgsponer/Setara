@@ -5,7 +5,11 @@
 #   docker run -p 8080:80 setara-web        ->  http://localhost:8080
 #
 # The first build generates all speech with the stand-in voices and takes
-# 20 to 40 minutes on a small server. Build arguments:
+# 20 to 40 minutes on a small server (hours on two cores). The clips are kept
+# in a BuildKit cache mount (id setara-tts), so a rebuild after a content
+# change only generates the new or changed texts. Needs BuildKit, the default
+# builder since Docker 23. `docker builder prune` empties the cache; the next
+# build then generates everything once. Build arguments:
 #   TTS=piper    stand-in neural voices (default; downloads about 190 MB)
 #   TTS=espeak   robotic voices, much faster to build, nothing to download
 #   TTS=silent   no speech at all: English captions only, builds in minutes
@@ -27,9 +31,14 @@ RUN if [ "$TTS" = "piper" ]; then sh builder/get_voices.sh; fi
 RUN mkdir -p tools/web && cd tools/web && npm init -y >/dev/null && npm install --no-audit --no-fund love.js@11.4.1
 COPY app app
 COPY content content
-RUN cd builder && python3 -m setara_builder.cli build --quiet --tts "$TTS"
+# The speech cache lives in a cache mount, which is not part of the image: the
+# builder copies every clip into packs/*.zip, inside the layer, before the RUN
+# ends. Same for the smaller web copies of the clips below.
+RUN --mount=type=cache,id=setara-tts,target=/cache/tts \
+    cd builder && SETARA_TTS_CACHE=/cache/tts python3 -m setara_builder.cli build --quiet --tts "$TTS"
 COPY tools/web tools/web-src
-RUN cp -r tools/web-src/make_web.py tools/web-src/index.html tools/web-src/assets tools/web/ && \
+RUN --mount=type=cache,id=setara-web-audio,target=/src/dist/web-work/audio \
+    cp -r tools/web-src/make_web.py tools/web-src/index.html tools/web-src/assets tools/web/ && \
     if [ "$START" = "dari" ]; then python3 tools/web/make_web.py --dari; else python3 tools/web/make_web.py; fi
 
 FROM nginx:1.27-alpine

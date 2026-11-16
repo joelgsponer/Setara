@@ -24,6 +24,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--content", type=Path, default=ROOT / "content", help="authoring sources")
     parser.add_argument("--out", type=Path, default=ROOT / "packs", help="where packs are written")
     parser.add_argument("--tts", choices=("piper", "espeak", "elevenlabs", "silent"), help="speech provider")
+    parser.add_argument("--tts-cache", type=Path,
+                        help="speech cache folder (default: $SETARA_TTS_CACHE, else builder/.cache/audio)")
     parser.add_argument("--only", action="append", help="build only this pack id (repeatable)")
     parser.add_argument("--strict", action="store_true", help="treat missing pictures as errors")
     parser.add_argument("--quiet", action="store_true", help="do not list warnings")
@@ -31,7 +33,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     out = args.out if args.command == "build" else None
-    report = build(args.content, out, tts=args.tts, only=args.only, strict=args.strict)
+    report = build(args.content, out, tts=args.tts, only=args.only, strict=args.strict, tts_cache=args.tts_cache)
     if not args.quiet:
         for w in report.warnings:
             print(f"warning: {w}")
