@@ -20,6 +20,26 @@ pruned (`docker builder prune`). After a prune the next build generates
 everything once. When code changes the sound in a way the key cannot see,
 raise `RECIPE` in `builder/setara_builder/tts.py`.
 
+### Seeding
+
+Clips made on another machine can fill the cache instead of being generated
+again. Give the folder as `SETARA_TTS_SEED`. Its files may have the cache's
+own names, or the flat names of the old cache (before `RECIPE` 2). The old
+names contain the piper voice folder of the machine that made them; give
+that folder as `SETARA_TTS_SEED_PIPER_DIR`. The build then reports how many
+clips came from the seed. A seeded clip is used as it is: seed only from a
+machine with the same voice models.
+
+For the Docker build, a one-off build on the same Docker host fills the
+cache mount:
+
+```sh
+docker buildx build --target build --build-context speech-seed=/path/to/clips \
+  --build-arg TTS_SEED_PIPER_DIR=/home/someone/Setara/setara/builder/voices .
+```
+
+The next normal build then finds those clips in the cache.
+
 ## Where the speech is made
 
 At build time, on the team's PC. The handheld cannot synthesise speech inside

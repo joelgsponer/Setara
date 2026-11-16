@@ -170,3 +170,36 @@ def test_eli_falls_back_to_the_fallback_voice_in_the_key(tmp_path, monkeypatch):
     fa = eli.key("fa", "سلام")
     (tmp_path / "fa_IR-amir-medium.onnx").write_bytes(b"model")
     assert fa != tts.Speech("eli", cache=tmp_path / "c").key("fa", "سلام")
+
+
+def test_speech_cache_is_seeded_from_an_old_cache(tmp_path, monkeypatch):
+    from setara_builder import tts
+    content = pack(tmp_path, "round,say_en,answer,distractors\n01,apple,apple,bread|egg\n01,bread,bread,\n")
+    # an old cache (names before RECIPE 2) made on another machine, with only some clips
+    old = tmp_path / "old"
+    old.mkdir()
+    monkeypatch.setenv("SETARA_TTS_SEED", str(old))
+    monkeypatch.setenv("SETARA_TTS_SEED_PIPER_DIR", "/elsewhere/voices")
+    s = tts.Speech("silent", cache=tmp_path / "unused")
+    (old / f"{s.legacy_key('en', 'apple')}.ogg").write_bytes(b"old apple")
+    (old / f"{s.legacy_key('en', 'apple', slow=True)}.ogg").write_bytes(b"old slow apple")
+    run = build(content, tmp_path / "out", tts="silent", tts_cache=tmp_path / "cache").speech
+    assert run.seeded == 2 and run.misses > 0 and run.hits == 0
+    with zipfile.ZipFile(tmp_path / "out" / "en-1.zip") as z:
+        assert b"old apple" in [z.read(n) for n in z.namelist()]
+    # the seeded clips are now in the cache: no seed needed the next time
+    monkeypatch.delenv("SETARA_TTS_SEED")
+    again = build(content, tmp_path / "out2", tts="silent", tts_cache=tmp_path / "cache").speech
+    assert (again.misses, again.seeded) == (0, 0)
+
+
+def test_legacy_key_is_the_old_cache_name(monkeypatch):
+    import hashlib
+    import json as js
+    from setara_builder import tts
+    monkeypatch.setenv("SETARA_TTS_SEED_PIPER_DIR", "/home/x/voices")
+    s = tts.Speech("piper")
+    cfg = js.loads(js.dumps(s.voices["piper"]))
+    cfg["dir"] = "/home/x/voices"
+    want = hashlib.sha1(f"piper|{js.dumps(cfg, sort_keys=True)}|fa|True|سلام دوست".encode()).hexdigest()
+    assert s.legacy_key("fa", "سلام  دوست", slow=True) == want

@@ -134,7 +134,16 @@ class Speech:
         self._encoder: dict | None = None
         self._clips: dict[str, bool] = {}  # cache key -> came from the cache
         self.hits = 0  # clips found in the cache
+        self.seeded = 0  # clips copied in from the seed folder
         self.misses = 0  # clips generated in this run
+        # A seed: clips made elsewhere (another machine's cache) that fill this
+        # cache instead of generating. Its files may have this cache's names, or
+        # the names of the old cache (before RECIPE 2), which held the piper
+        # voice folder of the machine that made them: give that folder as
+        # SETARA_TTS_SEED_PIPER_DIR. Read only; see docs/speech.md.
+        seed = os.environ.get("SETARA_TTS_SEED")
+        self.seed = Path(seed) if seed and Path(seed).is_dir() and any(Path(seed).iterdir()) else None
+        self.seed_piper_dir = os.environ.get("SETARA_TTS_SEED_PIPER_DIR") or None
 
     @property
     def generated(self) -> int:
@@ -188,6 +197,17 @@ class Speech:
             self.hits += 1
             return out
         out.parent.mkdir(parents=True, exist_ok=True)
+        found = self._from_seed(lang, text, slow, key)
+        if found is not None:
+            tmp = out.with_name(f"{out.stem}.{os.getpid()}.{os.urandom(4).hex()}.tmp.ogg")
+            try:
+                shutil.copyfile(found, tmp)
+                tmp.replace(out)
+            finally:
+                tmp.unlink(missing_ok=True)
+            self._clips[key] = True
+            self.seeded += 1
+            return out
         with tempfile.TemporaryDirectory() as tmp:
             wavs = []
             for i, (voice, part) in enumerate(parse_segments(text)):
@@ -200,7 +220,26 @@ class Speech:
         return out
 
     def summary(self) -> str:
-        return f"speech ({self.provider}): {len(self._clips)} clips, {self.hits} from cache, {self.misses} generated"
+        seeded = f", {self.seeded} from the seed" if self.seed else ""
+        return (f"speech ({self.provider}): {len(self._clips)} clips, {self.hits} from cache{seeded}, "
+                f"{self.misses} generated")
+
+    def legacy_key(self, lang: str, text: str, slow: bool = False) -> str:
+        """The cache name of a clip before RECIPE 2, for seeding from an old cache."""
+        cfg = json.loads(json.dumps(self.voices.get(self.provider)))
+        if self.provider == "piper" and self.seed_piper_dir and isinstance(cfg, dict):
+            cfg["dir"] = self.seed_piper_dir
+        text = " ".join(text.split())
+        return hashlib.sha1(f"{self.provider}|{json.dumps(cfg, sort_keys=True)}|{lang}|{slow}|{text}".encode()).hexdigest()
+
+    def _from_seed(self, lang: str, text: str, slow: bool, key: str) -> Path | None:
+        if self.seed is None:
+            return None
+        for cand in (self.seed / key[:2] / f"{key}.ogg", self.seed / f"{key}.ogg",
+                     self.seed / f"{self.legacy_key(lang, text, slow)}.ogg"):
+            if cand.is_file() and cand.stat().st_size > 0:
+                return cand
+        return None
 
     # -- cache key parts ------------------------------------------------------
 

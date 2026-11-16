@@ -15,6 +15,12 @@
 #   TTS=silent   no speech at all: English captions only, builds in minutes
 #   START=english | dari    the language the page starts in
 
+# Clips to fill the speech cache with, instead of generating them: empty
+# unless a one-off build passes a folder (docs/speech.md, "Seeding"):
+#   docker buildx build --target build --build-context speech-seed=<clips> \
+#     --build-arg TTS_SEED_PIPER_DIR=<voices folder of the old cache> .
+FROM scratch AS speech-seed
+
 FROM python:3.12-slim AS build
 ARG TTS=piper
 ARG START=english
@@ -34,8 +40,11 @@ COPY content content
 # The speech cache lives in a cache mount, which is not part of the image: the
 # builder copies every clip into packs/*.zip, inside the layer, before the RUN
 # ends. Same for the smaller web copies of the clips below.
+ARG TTS_SEED_PIPER_DIR=
 RUN --mount=type=cache,id=setara-tts,target=/cache/tts \
-    cd builder && SETARA_TTS_CACHE=/cache/tts python3 -m setara_builder.cli build --quiet --tts "$TTS"
+    --mount=type=bind,from=speech-seed,target=/seed \
+    cd builder && SETARA_TTS_CACHE=/cache/tts SETARA_TTS_SEED=/seed SETARA_TTS_SEED_PIPER_DIR="$TTS_SEED_PIPER_DIR" \
+    python3 -m setara_builder.cli build --quiet --tts "$TTS"
 COPY tools/web tools/web-src
 RUN --mount=type=cache,id=setara-web-audio,target=/src/dist/web-work/audio \
     cp -r tools/web-src/make_web.py tools/web-src/index.html tools/web-src/assets tools/web/ && \
