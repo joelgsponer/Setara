@@ -26,7 +26,7 @@ function E.new(round, ctx)
   local self = setmetatable({}, E)
   self.ctx = ctx
   self.uses = { a = true, b = true, x = true, y = true }
-  self.quiz = Quiz.new(round.items or {})
+  self.quiz = Quiz.new(round.items or {}, { draw = round.draw })
   self.score = { 0, 0 }
   self.locked = {}
   self.attempts = 0

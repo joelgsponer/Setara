@@ -626,7 +626,17 @@ def build_learner(pack: Pack) -> dict:
                 _fill_distractors(pack, rnd["items"], pool_things, where, rid)
             if engine == "sorter" and not 2 <= len(rnd.get("baskets", [])) <= 4:
                 pack.report.error(where, "a sorter round needs two to four baskets")
-            if engine == "pairs" and not 3 <= len(rnd["items"]) <= 6:
+            draw = game.get("draw")
+            if draw is not None:
+                # the round is a pool: each play asks only `draw` of its items
+                most = 6 if engine == "pairs" else 10
+                if engine in ("story", "say_it"):
+                    pack.report.error(gw, "draw does not apply to story and say_it games")
+                elif not isinstance(draw, int) or not 3 <= draw <= most:
+                    pack.report.error(gw, f"draw must be a whole number from 3 to {most}")
+                else:
+                    rnd["draw"] = draw
+            if engine == "pairs" and not 3 <= len(rnd["items"]) <= (24 if draw else 6):
                 pack.report.error(where, f"a pairs round needs three to six pairs, has {len(rnd['items'])}")
             if not rnd["items"]:
                 pack.report.error(where, "round has no items")

@@ -54,7 +54,7 @@ end
 function E.new(round, ctx)
   local self = setmetatable({}, E)
   self.ctx = ctx
-  self.quiz = Quiz.new(round.items or {})
+  self.quiz = Quiz.new(round.items or {}, { draw = round.draw })
   self.xs, self.stone_r = make_path(self.quiz.total)
   self.pos = 0
   self.phase = "wait"

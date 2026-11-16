@@ -114,6 +114,13 @@ are separated with `|`.
   aloud and lit in turn, so that answering never depends on reading. Do not
   use it where reading the word is the exercise. With two players such a
   game is played in turns, not as a duel.
+- `"draw": 8` turns every round of the game into a pool: write 12 to 24
+  items per round and each play asks only eight of them, a different eight
+  every time (3 to 10; for pairs 3 to 6 out of up to 24 pairs). Use it
+  wherever enough material exists: a round should not be the same twice.
+  Questions always come in a new order, with or without `draw`. Not for
+  story and say_it games. In a sorter every basket should have enough
+  things that a draw without it is unlikely.
 - `"say": "fa"` makes an items-derived game speak the Dari column (for the
   Dari subject). The default is `en`.
 - `"optional": true` at the top marks a pack shipped only where the local

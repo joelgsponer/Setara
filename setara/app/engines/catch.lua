@@ -30,7 +30,7 @@ function E.new(round, ctx)
   for _, it in ipairs(round.items or {}) do
     if has(it.targets) then items[#items + 1] = it end
   end
-  self.quiz = Quiz.new(items)
+  self.quiz = Quiz.new(items, { draw = round.draw })
   self.phase = "wait"
   self.t = 0
   self.lane, self.x = 2, LANES[2]

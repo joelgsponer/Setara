@@ -5,11 +5,20 @@
 local Q = {}
 Q.__index = Q
 
-function Q.new(items)
+-- opts.ordered keeps the sheet's order (dialogues); otherwise the questions
+-- come in a new order every time. opts.draw: the round is a pool, and each
+-- play asks only that many of it, so that a round is not the same twice.
+function Q.new(items, opts)
   local self = setmetatable({}, Q)
+  opts = opts or {}
   self.queue = {}
   for i, it in ipairs(items) do self.queue[i] = it end
-  self.total = #items
+  if not opts.ordered then Q.shuffle(self.queue) end
+  local draw = tonumber(opts.draw)
+  if draw and draw >= 1 then
+    for i = #self.queue, math.floor(draw) + 1, -1 do self.queue[i] = nil end
+  end
+  self.total = #self.queue
   self.done = 0          -- items finished at least once
   self.first_right = 0   -- items right at the first try
   self.attempts = 0

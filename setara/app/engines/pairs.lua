@@ -20,8 +20,13 @@ function E.new(round, ctx)
   self.ctx = ctx
   self.cards = {}
   self.total = 0
-  for p, item in ipairs(round.items or {}) do
-    if p <= 6 and type(item.a) == "table" and type(item.b) == "table" then
+  -- With "draw" the round is a pool: each play lays out a different set.
+  local pool = {}
+  for _, item in ipairs(round.items or {}) do pool[#pool + 1] = item end
+  if round.draw then Quiz.shuffle(pool) end
+  local most = math.min(6, tonumber(round.draw) or 6)
+  for p, item in ipairs(pool) do
+    if p <= most and type(item.a) == "table" and type(item.b) == "table" then
       self.total = self.total + 1
       self.cards[#self.cards + 1] = { pair = p, thing = item.a, audio = item.audio, flip = 1 }
       self.cards[#self.cards + 1] = { pair = p, thing = item.b, audio = item.audio, flip = 1 }

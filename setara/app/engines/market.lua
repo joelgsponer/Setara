@@ -37,7 +37,7 @@ end
 function E.new(round, ctx)
   local self = setmetatable({}, E)
   self.ctx = ctx
-  self.quiz = Quiz.new(round.items or {})
+  self.quiz = Quiz.new(round.items or {}, { draw = round.draw })
   self.phase = "wait"
   self.t, self.clock = 0, 0
   self.served = 0

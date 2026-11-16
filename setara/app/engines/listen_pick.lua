@@ -12,7 +12,7 @@ E.__index = E
 function E.new(round, ctx)
   local self = setmetatable({}, E)
   self.ctx = ctx
-  self.quiz = Quiz.new(round.items)
+  self.quiz = Quiz.new(round.items, { draw = round.draw })
   self.phase = "wait"
   self.t = 0
   return self
