@@ -46,6 +46,7 @@ SLOW = 1.45  # length scale for the "say it again, slowly" variant
 SHORT = 1.15  # length scale for one or two words at normal speed
 NORMAL = 1.05  # length scale for longer texts at normal speed
 GAP_MS = 350  # pause between two voices in a dialogue
+ELI_SLOW = 0.8  # eli has no speed control: "slow" is a time stretch (atempo)
 RATE = 22050  # output sample rate
 QUALITY = "2"  # libvorbis -q:a
 
@@ -203,20 +204,29 @@ class Speech:
 
     # -- cache key parts ------------------------------------------------------
 
-    def _voice_fingerprint(self, lang: str, voice: str) -> object:
+    def _voice_fingerprint(self, lang: str, voice: str, provider: str | None = None) -> object:
         """What identifies one voice of the provider: model files and versions."""
-        if (lang, voice) in self._fingerprints:
-            return self._fingerprints[(lang, voice)]
-        p = self.provider
+        p = provider or self.provider
+        if (p, lang, voice) in self._fingerprints:
+            return self._fingerprints[(p, lang, voice)]
         cfg = self.voices.get(p, {})
-        if p == "piper":
+        if p == "eli":
+            name = (cfg.get(lang) or {}).get(voice)
+            if name:
+                # the server's model and cloned voices are not visible from here:
+                # set "version" for eli in voices.json when they change
+                fp: object = {"voice": name, "version": cfg.get("version", ""), "slow": ELI_SLOW}
+            else:  # a language without an eli voice is spoken by the fallback
+                fallback = cfg.get("fallback", "piper")
+                fp = {"fallback": fallback, "voice": self._voice_fingerprint(lang, voice, fallback)}
+        elif p == "piper":
             model = cfg[lang][voice]
             base = Path(cfg["dir"]) / model
             try:
                 version = metadata.version("piper-tts")
             except metadata.PackageNotFoundError:
                 version = "missing"
-            fp: object = {
+            fp = {
                 "model": model,
                 "onnx": _file_hash(base.with_name(model + ".onnx")),
                 "config": _file_hash(base.with_name(model + ".onnx.json")),
@@ -230,7 +240,7 @@ class Speech:
                   "settings": [0.6, 0.8, 0.75, 1.0]}
         else:
             fp = {"provider": p}
-        self._fingerprints[(lang, voice)] = fp
+        self._fingerprints[(p, lang, voice)] = fp
         return fp
 
     def _encoder_fingerprint(self) -> dict:
@@ -286,7 +296,7 @@ class Speech:
             raw.write_bytes(resp.read())
         # The stream's WAV header has no sizes; ffmpeg rewrites it. Qwen has no speed
         # control, so "slow" is a pitch-keeping time stretch.
-        af = ["-af", "atempo=0.8"] if slow else []
+        af = ["-af", f"atempo={ELI_SLOW}"] if slow else []
         subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(raw), *af, str(wav)], check=True)
 
     def _synth_elevenlabs(self, lang, voice, text, slow, wav: Path) -> None:

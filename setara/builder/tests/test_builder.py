@@ -159,3 +159,14 @@ def test_speech_cache_key_follows_the_voice_model(tmp_path, monkeypatch):
     assert k == tts.Speech("piper", cache=tmp_path / "c").key("en", "Hello")
     (models / "en_US-amy-medium.onnx").write_bytes(b"retrained")
     assert k != tts.Speech("piper", cache=tmp_path / "c").key("en", "Hello")
+
+
+def test_eli_falls_back_to_the_fallback_voice_in_the_key(tmp_path, monkeypatch):
+    from setara_builder import tts
+    monkeypatch.setitem(tts.DEFAULT_VOICES["piper"], "dir", str(tmp_path))
+    eli = tts.Speech("eli", cache=tmp_path / "c")
+    # English has an eli voice; Persian is spoken by piper, so its key follows piper's model
+    assert eli._voice_fingerprint("en", "f")["voice"] == "maat"
+    fa = eli.key("fa", "سلام")
+    (tmp_path / "fa_IR-amir-medium.onnx").write_bytes(b"model")
+    assert fa != tts.Speech("eli", cache=tmp_path / "c").key("fa", "سلام")
