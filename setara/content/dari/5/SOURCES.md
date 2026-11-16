@@ -20,7 +20,7 @@ of Story Builder and of one more game):
 2. **Read** (story round): four or five reading pages (text only, the whole
    screen, 4 to 7 lines).
 3. **Understand** (story round): a question after each passage: who / what /
-   where first, then why (21 of 85 questions), at the end of 17 stories "what
+   where first, then why (21 of 85 questions), at the end of 18 stories "what
    would you do?".
 4. **Work with the words**: Story Builder, and one of Story Baskets, Word
    Pairs or The Missing Word.
@@ -158,9 +158,9 @@ names, not real people.
    نمی‌توانم», «می‌داشته باشم», «می‌بودم / می‌بودی» are the colloquial
    Afghan forms; the school books may want others.
 3. **"What would you do?"** has one choice that continues the story. Is the
-   hint gentle enough, and are the other two choices harmless? Three
-   stories have no such question because none fitted (05, 16 has it, 20:
-   "what did the mouse understand?").
+   hint gentle enough, and are the other two choices harmless? Two
+   stories have no such question because none fitted (05 and 20; they ask
+   what the character understood).
 4. **Changed endings** (04, 06, 07, 16, 17): the old fables end with a
    loser; here somebody learns and nobody is left hungry or mocked. Say if
    the traditional endings are wanted.
@@ -199,3 +199,30 @@ names, not real people.
   `seed` for a grain, `water_stream` for a spring, `firewood` for a bundle,
   `puz_small_star_yellow` for a riddle, `give` for generous, `yes` / `no`
   and `sleep` as baskets.
+
+## Counts (from a script over the sheets)
+
+| Game | Engine | Rounds | Items | Items per round | draw | Most frequent right answer | Answers right more than 3 times |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| animal_fables | story | 7 | 84 | 12-12 | - | f:در آب ×1 | none |
+| village_stories | story | 7 | 85 | 12-13 | - | f:از چشمه ×1 | none |
+| old_tales | story | 6 | 83 | 13-14 | - | f:جنجال ×1 | none |
+| story_builder | builder | 20 | 120 | 6-6 | 5 | f:تشنگی|f:برگ|f:جال|f:پرواز ×1 | none |
+| story_baskets | sorter | 7 | 81 | 11-12 | 8 | yes ×18 | (baskets) |
+| word_pairs | pairs | 7 | 64 | 9-10 | 5 | bone ×1 | none |
+| missing_word | listen_pick | 6 | 62 | 10-12 | 8 | f:بود ×3 | none |
+| story_review | listen_pick | 4 | 56 | 14-14 | 8 | scene_ant_dove ×2 | none |
+
+Total: 8 games, 64 rounds, 635 rows. Distinct spoken texts: 635; spoken more than twice: 0; spoken exactly twice: 0.
+
+
+In sorter games the "answer" is a basket, so a basket is right many times by
+design. In `missing_word` «بود» is the right last word three times.
+
+**Card sizes, measured and then seen.** Of 1,231 written cards, 64 are within
+a tenth of the width their card allows at 30 px. The widths were computed
+from the font tables; on the screenshots a few of these near-limit cards
+(for example two-word answers with a comma) were drawn one step smaller, at
+24 px, below the project's 30 px rule for Dari. They are readable but should
+be shortened or accepted by the reviewer.
+
