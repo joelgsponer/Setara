@@ -1,0 +1,74 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# PRACTISE. A picture and a question (unit 09 and 15: a sentence and a question); the answer is the yes or the no card.
+01,تصویر یک آدم را در کارش نشان می‌دهد. سوال را گوش کن: آیا او همین کار را دارد؟,Is he a farmer?,,farmer,yes,no,بلی. او در زمین کار می‌کند. دهقان است: farmer.
+01,,Is she a farmer?,,baker,no,yes,نه. او نان می‌پزد. نانوا است: baker.
+01,,Is she a baker?,,baker,yes,no,بلی. او نان می‌پزد: baker.
+01,,Is he a driver?,,driver,yes,no,بلی. او موتر می‌راند: driver.
+01,,Is he a driver?,,carpenter,no,yes,نه. او با چوب کار می‌کند. نجار است: carpenter.
+01,,Is he a builder?,,builder,yes,no,بلی. او دیوار می‌سازد: builder.
+01,,Is he a carpenter?,,carpenter,yes,no,بلی. او با اره و چوب کار می‌کند: carpenter.
+01,,Is he a shepherd?,,shepherd,yes,no,بلی. او با گوسفندها است: shepherd.
+01,,Is he a baker?,,shepherd,no,yes,نه. او چوپان است، نانوا نیست.
+01,,Is she a teacher?,,teacher,yes,no,بلی. او پیش تخته ایستاده است: teacher.
+01,,Is he a builder?,,farmer,no,yes,نه. او دهقان است، گلکار نیست.
+01,,Does he work with bricks?,,builder,yes,no,بلی. گلکار با خشت کار می‌کند.
+04,اول می‌شنوی که یک طفل می‌خواهد چه کاره شود. بعد یک سوال می‌آید. اگر درست است بلی، اگر نیست نه.,Sara wants to be a teacher. Does Sara want to work in a school?,,teacher,yes,no,بلی. معلم در مکتب کار می‌کند.
+04,,Ali wants to be a farmer. Does Ali want to work in a clinic?,,farmer,no,yes,نه. دهقان در زمین کار می‌کند، نه در کلینیک.
+04,,Mina wants to be a doctor. Does Mina want to help sick people?,,doctor,yes,no,بلی. داکتر به مردم مریض کمک می‌کند.
+04,,Omar wants to be a driver. Does Omar want to make bread?,,driver,no,yes,نه. دریور موتر می‌راند. نان را نانوا می‌پزد.
+04,,Roya wants to be an engineer. Does Roya want to build bridges?,,engineer,yes,no,بلی. انجنیر پل می‌سازد.
+04,,Hamid wants to be a carpenter. Does Hamid want to work with wood?,,carpenter,yes,no,بلی. نجار با چوب کار می‌کند.
+04,,Laila wants to be a weaver. Does Laila want to drive a lorry?,,weaver,no,yes,نه. قالین‌باف قالین می‌بافد.
+04,,Yusuf wants to be a mechanic. Does Yusuf want to repair cars?,,mechanic,yes,no,بلی. مستری موترها را ترمیم می‌کند.
+04,,Nargis wants to be a nurse. Does Nargis want to work in a bakery?,,nurse,no,yes,نه. نرس در کلینیک کار می‌کند.
+04,,Karim wants to be a shepherd. Does Karim like animals?,,shepherd,yes,no,بلی. چوپان با گوسفندها کار می‌کند، پس حیوان‌ها را خوش دارد.
+04,,Shirin wants to be a baker. Does Shirin want to build houses?,,baker,no,yes,نه. نانوا نان می‌پزد. خانه را گلکار می‌سازد.
+04,,Farid wants to be a builder. Does Farid want to build houses?,,builder,yes,no,بلی. گلکار خانه می‌سازد.
+06,"اول یک پلان می‌شنوی، بعد یک سوال با going to. جواب کوتاه: Yes, he is یا No, he isn't.",Ali is going to play. Is Ali going to sleep?,,play,no,yes,"نه. علی بازی می‌کند، نمی‌خوابد. No, he isn't."
+06,,Sara is going to cook. Is Sara going to cook?,,cook,yes,no,"بلی. سارا می‌پزد. Yes, she is."
+06,,We are going to go by bus. Are we going to walk?,,bus,no,yes,"نه. با بس می‌رویم. No, we aren't."
+06,,It is cloudy. It is going to rain. Do we need an umbrella?,,cloudy,yes,no,بلی. باران خواهد بارید و چتری لازم است.
+06,,Mina is going to visit her aunt. Is Mina going to visit her aunt?,,house,yes,no,"بلی. مینا به دیدن خاله‌اش می‌رود. Yes, she is."
+06,,Father is not going to work tomorrow. Is father going to work tomorrow?,,work,no,yes,"نه. پدر فردا کار نمی‌کند. No, he isn't."
+06,,I am going to read a book tonight. Am I going to read tonight?,,read,yes,no,بلی. امشب کتاب می‌خوانم.
+06,,They are going to buy a carpet. Are they going to buy shoes?,,carpet,no,yes,نه. آنها قالین می‌خرند، نه بوت.
+06,,Omar is going to carry the water. Is Omar going to help?,,carry,yes,no,بلی. عمر آب را می‌برد. این کمک است.
+06,,The shop is closed. The baker is not going to come today. Can we buy bread there today?,,bakery,no,yes,نه. نانوا امروز نمی‌آید و دکان بسته است.
+06,,She is going to sleep early. Is she going to play all night?,,sleep,no,yes,نه. او وقت می‌خوابد.
+06,,We are going to write a message. Are we going to write?,,write,yes,no,"بلی. ما یک پیام می‌نویسیم. Yes, we are."
+09,دو چیز را با هم مقایسه می‌کنیم. فکر کن: آیا درست است؟ bigger than یعنی «کلانتر از».,Is a horse bigger than a mouse?,,horse,yes,no,بلی. اسپ از موش بسیار کلانتر است.
+09,,Is a mouse bigger than a cow?,,mouse,no,yes,نه. موش از گاو خُردتر است: smaller.
+09,,Is a rabbit faster than a tortoise?,,rabbit,yes,no,بلی. خرگوش از سنگ‌پشت تیزتر است.
+09,,Is a tortoise faster than a horse?,,tortoise,no,yes,نه. سنگ‌پشت آهسته‌تر است: slower.
+09,,Is a mountain taller than a house?,,mountain,yes,no,بلی. کوه از خانه بلندتر است.
+09,,Is a baby older than a grandfather?,,baby,no,yes,نه. طفل خُردتر است. پدرکلان پیرتر است.
+09,,Is a lion stronger than a cat?,,lion,yes,no,بلی. شیر از پشک قوی‌تر است.
+09,,Is winter colder than summer?,,winter,yes,no,بلی. زمستان از تابستان سردتر است.
+09,,Is a river longer than a road in the village?,,river,yes,no,بلی. دریا بسیار دراز است.
+09,,Is a village bigger than a city?,,scene_village,no,yes,نه. قریه از شهر خُردتر است.
+09,,Is a bicycle faster than a plane?,,bicycle,no,yes,نه. طیاره بسیار تیزتر است.
+09,,Is a tree shorter than a flower?,,tree_tall,no,yes,نه. درخت از گل بلندتر است.
+15,یک جملهٔ قصه را می‌شنوی و بعد یک سوال: کی گفت، کی پرسید؟ خوب گوش کن که said است یا asked.,"""I am hungry,"" said the fox. Was the fox hungry?",,fox,yes,no,بلی. روباه گفت I am hungry: گرسنه هستم.
+15,,"""Where are you going?"" asked the crow. Did the crow ask a question?",,crow,yes,no,بلی. زاغ پرسید: asked.
+15,,"""I am going to sleep,"" said the lion. Was the lion going to eat?",,lion,no,yes,نه. شیر گفت که می‌خوابد، نه اینکه می‌خورد.
+15,,"""Help me, please,"" said the mouse. Did the mouse want help?",,mouse,yes,no,"بلی. موش کمک خواست: Help me, please."
+15,,"""No, I can't come,"" answered the rabbit. Did the rabbit say yes?",,rabbit,no,yes,نه. خرگوش جواب داد No: نه.
+15,,The children laughed. Were the children sad?,,happy,no,yes,نه. اطفال خندیدند. آنها خوش بودند.
+15,,"""Stop!"" shouted the driver. Did the driver speak quietly?",,driver,no,yes,نه. دریور چیغ زد: shouted، با آواز بلند.
+15,,"""Thank you,"" said the farmer. Was the farmer polite?",,farmer,yes,no,بلی. دهقان تشکر کرد.
+15,,"""Is it far?"" asked the girl. Did the girl know the way?",,road,no,yes,نه. دختر پرسید که دور است یا نه. او راه را نمی‌دانست.
+15,,"""I am the fastest,"" said the rabbit. Did the tortoise say that?",,tortoise,no,yes,نه. این را خرگوش گفت، نه سنگ‌پشت.
+15,,"""Come in,"" said the teacher. Did the teacher say: Go away?",,teacher,no,yes,نه. معلم گفت Come in: داخل بیا.
+15,,"""I found it!"" shouted the boy. Was the boy happy?",,happy,yes,no,بلی. پسر چیزی را پیدا کرد و خوش بود.
+19,یک طفل از آیندهٔ خود می‌گوید. بعد یک سوال می‌آید. خوب گوش کن که چه می‌کند و چرا.,Roya is going to study because she wants to be a doctor. Does Roya want to be a doctor?,,doctor,yes,no,بلی. رویا می‌خواهد داکتر شود.
+19,,Omar is going to stay in his village. Is Omar going to live in the city?,,scene_village,no,yes,نه. عمر در قریهٔ خود می‌ماند.
+19,,Mina learns English because she wants to read books. Does Mina want to read?,,read,yes,no,بلی. مینا می‌خواهد کتاب بخواند.
+19,,Ali is going to be a farmer like his father. Is his father a farmer?,,farmer,yes,no,بلی. علی مثل پدرش دهقان می‌شود، پس پدرش دهقان است.
+19,,Sara is not going to be a tailor. She is going to be a teacher. Is Sara going to be a tailor?,,teacher,no,yes,نه. سارا معلم می‌شود، نه خیاط.
+19,,We are going to build a new school. Is the school old?,,school,no,yes,نه. مکتب نو است.
+19,,Hamid wants to be an engineer because he wants to build roads. Does Hamid want to build roads?,,road,yes,no,بلی. حمید می‌خواهد سرک بسازد.
+19,,Laila is going to go to the university next year. Is she going to go this year?,,scene_university,no,yes,نه. او سال آینده می‌رود، نه امسال.
+19,,Our village needs a nurse. Is there a nurse in our village now?,,nurse,no,yes,نه. قریهٔ ما به نرس ضرورت دارد، یعنی حالا نرس ندارد.
+19,,Karim is going to help his village. Is that a good plan?,,scene_village,yes,no,بلی. کمک به قریه یک پلان خوب است.
+19,,Shirin wants to be a weaver because she likes carpets. Does Shirin like carpets?,,carpet,yes,no,بلی. شیرین قالین را خوش دارد.
+19,,Yusuf is going to study at night because he works in the day. Does Yusuf work at night?,,night,no,yes,نه. یوسف روز کار می‌کند و شب درس می‌خواند.

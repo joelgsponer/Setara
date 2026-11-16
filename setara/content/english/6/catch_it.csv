@@ -1,0 +1,26 @@
+round,intro_fa,say_en,say_fa,targets,others,need,help_fa
+# PRACTISE. The rule is spoken in English; the help button gives it in Dari. Each play has four of the rules.
+07,قاعده را گوش کن: چیزهایی که روی سرک می‌روند، روی آب، در آسمان، یا دو تایر دارند.,Catch the things that go on the road.,,bus|car|lorry|bicycle|motorbike|cart,boat|aeroplane|ship|fish|eagle,5,چیزهایی را بگیر که روی سرک می‌روند.
+07,,Catch the things that go on water.,,boat|ship|ferry,bus|car|bicycle|lorry|train,4,چیزهایی را بگیر که روی آب می‌روند.
+07,,Catch the things with two wheels.,,bicycle|motorbike|cart,bus|lorry|boat|aeroplane,4,چیزهایی را بگیر که دو تایر دارند.
+07,,Catch the things that fly.,,aeroplane|eagle|kite|butterfly|bee,bus|boat|horse|car|tortoise,5,چیزهایی را بگیر که پرواز می‌کنند.
+07,,Catch the animals that carry people.,,horse|donkey|camel,hen|cat|mouse|fish,4,حیوان‌هایی را بگیر که مردم را می‌برند.
+07,,Catch the things you need for a trip.,,ticket|bag|money|shoes|water,brick|saw|net|stone,5,چیزهایی را بگیر که برای سفر لازم است.
+10,تکرار: قاعده را گوش کن. مردم در کار، افزار کار، جای‌های دنیا و چیزهای تیز و آهسته.,Catch the people who work.,,farmer|baker|driver|builder|carpenter|weaver,tractor|saw|bus|brick|wheat,5,کسانی را بگیر که کار می‌کنند.
+10,,Catch the tools.,,saw|hammer|needle|shovel|scissors|axe,farmer|baker|bus|lake|city,5,افزار کار را بگیر.
+10,,Catch the places in the world.,,sea|desert|forest|island|lake|city,saw|ticket|baker|rabbit|hammer,5,جای‌های دنیا را بگیر.
+10,,Catch the fast things.,,rabbit|horse|aeroplane|motorbike|train,tortoise|stone|tree_tall|cow,5,چیزهای تیز را بگیر.
+10,,Catch the big things.,,lorry|bus|mountain|ship|tractor,mouse|needle|coin|button|bee,5,چیزهای کلان را بگیر.
+10,,Catch the small things.,,mouse|needle|coin|button|bee,lorry|bus|mountain|ship|tractor,5,چیزهای خُرد را بگیر.
+16,قاعده را گوش کن: حیوان‌های قصه‌ها. کدام پرواز می‌کند، کدام وحشی است، کدام در خانه و قریه زندگی می‌کند؟,Catch the birds.,,crow|pigeon|eagle|hen|sparrow|rooster,fox|wolf|mouse|rabbit|tortoise,5,پرنده‌ها را بگیر.
+16,,Catch the wild animals.,,wolf|fox|lion|eagle|snake,cow|sheep|hen|goat|donkey,5,حیوان‌های وحشی را بگیر.
+16,,Catch the farm animals.,,cow|sheep|hen|goat|donkey|horse,wolf|fox|lion|eagle|snake,5,حیوان‌های خانگی را بگیر.
+16,,Catch the animals that are smaller than a cat.,,mouse|sparrow|frog|chick|bee,horse|cow|lion|wolf|camel,5,حیوان‌هایی را بگیر که از پشک خُردتر هستند.
+16,,Catch the animals that are bigger than a dog.,,horse|cow|lion|camel|donkey,mouse|sparrow|frog|chick|bee,5,حیوان‌هایی را بگیر که از سگ کلانتر هستند.
+16,,Catch the homes of animals.,,nest|cave|pond|web,net|saw|ticket|letter,4,خانه‌های حیوان‌ها را بگیر.
+20,تکرار: در این دور باید کلمه را بخوانی. کلمه‌های مقایسه، کلمه‌های قصه، کلمه‌های پیام و کلمه‌های حال آدم.,Catch the words with er.,,t:bigger|t:faster|t:taller|t:older|t:cheaper|t:stronger,t:big|t:fast|t:tall|t:old|t:cheap,5,کلمه‌هایی را بگیر که er دارند: bigger، faster.
+20,,Catch the story words.,,t:One day|t:Then|t:Suddenly|t:Finally,t:Dear|t:From|t:Thank you|t:because,4,کلمه‌های قصه را بگیر: One day، Then، Suddenly، Finally.
+20,,Catch the message words.,,t:Dear|t:From|t:Thank you|t:See you,t:One day|t:Suddenly|t:Finally|t:bigger,4,کلمه‌های پیام را بگیر: Dear، From، Thank you.
+20,,Catch the feelings.,,t:happy|t:sad|t:angry|t:afraid|t:calm|t:worried,t:farmer|t:bus|t:city|t:letter|t:saw,5,کلمه‌های حال آدم را بگیر: happy، sad، angry.
+20,,Catch the jobs.,,t:farmer|t:baker|t:driver|t:nurse|t:weaver|t:builder,t:happy|t:bus|t:lake|t:letter|t:taller,5,نام کارها را بگیر: farmer، baker، driver.
+20,,Catch the question words.,,t:Why|t:What|t:Where|t:When|t:Who|t:How,t:because|t:than|t:from|t:dear|t:then,5,کلمه‌های سوال را بگیر: Why، What، Where.

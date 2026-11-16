@@ -1,30 +1,16 @@
 fa,en
 تصویر را ببین.,Look at the picture.
-او خوش است.,He (or she) is happy.
 او دوست من است.,He (or she) is my friend.
-تصویر را ببین و سوال را گوش کن. اگر درست است، بلی را انتخاب کن. اگر درست نیست، نه را انتخاب کن.,"Look at the picture and listen to the question. If it is true, pick yes. If it is not true, pick no."
 چند کلمه را با هم گوش کن و تصویر درست را انتخاب کن.,Listen to several words together and pick the right picture.
-گوش کن و هر چیز را در سبد درست بینداز.,Listen and drop each thing into the right basket.
 گوش کن که چه چیز را بگیری. فقط همان را بگیر. چیزهای دیگر را نگیر.,Listen what to catch. Catch only that. Do not catch the other things.
 سوال و جواب را گوش کن. اگر جواب به سوال جور است، بلی را انتخاب کن. اگر جور نیست، نه را.,"Listen to the question and the answer. If the answer fits the question, pick yes. If it does not fit, pick no."
-دو کارت را باز کن. جوره‌هایی را پیدا کن که با هم یکی هستند.,Turn two cards. Find the pairs that belong together.
 چهار تصویر است، اما فقط سه کلمه گفته می‌شود. تصویری را انتخاب کن که نامش گفته نشد.,"There are four pictures, but only three words are said. Pick the picture that was not named."
 چهار چیز را می‌شنوی. یکی از آن‌ها از گروه نیست. همان را انتخاب کن.,You hear four things. One of them is not of the group. Pick that one.
 چیستان را گوش کن. این چیست؟ تصویر درست را انتخاب کن.,Listen to the riddle. What is it? Pick the right picture.
-یک,one
-دو,two
-سه,three
-چهار,four
-پنج,five
 سیب‌ها را حساب کن.,Count the apples.
 قلم‌ها را حساب کن.,Count the pens.
 کتاب‌ها را حساب کن.,Count the books.
 تخم مرغ‌ها را حساب کن.,Count the eggs.
-شش,six
-هفت,seven
-هشت,eight
-نُه,nine
-ده,ten
 سیب‌های سرخ را حساب کن.,Count the red apples.
 تخم مرغ‌های سفید را حساب کن.,Count the white eggs.
 قلم‌های آبی را حساب کن.,Count the blue pens.
@@ -43,9 +29,7 @@ fa,en
 چند ساله هستی؟ من ده ساله هستم.,How old are you? I am ten.
 من نُه ساله هستم.,I am nine.
 چند ساله هستی؟ من پنج ساله هستم.,How old are you? I am five.
-سه قلم,three pens
 پنج سیب,five apples
-دو کتاب,two books
 هشت تخم مرغ,eight eggs
 شش پنسل,six pencils
 ده سیب,ten apples
@@ -304,7 +288,6 @@ fa,en
 این سه گفته شد: لطفاً، خوش، تشکر. تصویری را انتخاب کن که نامش گفته نشد.,"These three were said: please, happy, thank you. Pick the picture that was not named."
 این سه گفته شد: غمگین، خوش، بده. تصویری را انتخاب کن که نامش گفته نشد.,"These three were said: sad, happy, give. Pick the picture that was not named."
 این سه گفته شد: غمگین، لطفاً، ببخشید. تصویری را انتخاب کن که نامش گفته نشد.,"These three were said: sad, please, sorry. Pick the picture that was not named."
-یک کتاب سرخ,a red book
 یک کتاب آبی,a blue book
 یک کتاب سبز,a green book
 یک کتاب زرد,a yellow book
@@ -342,7 +325,6 @@ fa,en
 پنج پنسل,five pencils
 سه بکس,three bags
 چهار تخم مرغ,four eggs
-شش سیب,six apples
 یک قلم,one pen
 هفت کتاب,seven books
 هشت قلم,eight pens
@@ -380,12 +362,7 @@ fa,en
 چند بکس سرخ است؟ حساب کن.,How many red bags are there? Count.
 سوال را گوش کن: چند دانه؟ تصویرهای میانه را حساب کن و عدد درست را انتخاب کن.,Listen to the question: how many? Count the pictures in the middle and pick the right number.
 چهار سبد رنگ است: سرخ، آبی، سبز و زرد. گوش کن و هر چیز را در سبد رنگ خودش بینداز.,"There are four colour baskets: red, blue, green and yellow. Listen and drop each thing into the basket of its colour."
-سرخ,red
-سبز,green
-زرد,yellow
-آبی,blue
 دو سبد است: خوراکی و چیزهای صنف. گوش کن و هر چیز را در سبد درست بینداز.,There are two baskets: food and classroom things. Listen and drop each thing into the right basket.
-خوراکی,food
 چیزهای صنف,classroom things
 جمله را گوش کن. در بارهٔ پسر است یا دختر؟ برای پسر کلمهٔ دیگری می‌گویند و برای دختر کلمهٔ دیگر. تصویر را در سبد درست بینداز.,Listen to the sentence. Is it about a boy or a girl? English has one word for a boy and another for a girl. Drop the picture into the right basket.
 او، برای پسر یا مرد,he
@@ -611,7 +588,6 @@ fa,en
 سلام صنف!,"Hello, class!"
 سلام! صبح بخیر معلم!,"Hello! Good morning, teacher!"
 سلام و خداحافظی. جمله را گوش کن و کلمه‌ها را به ترتیب درست بگذار.,Hello and goodbye. Listen to the sentence and put the words in the right order.
-ایستاده شو و چک چک کن.,Stand up and clap.
 ببین و گوش کن.,Look and listen.
 بنشین و گوش کن.,Sit down and listen.
 ایستاده شو و ببین.,Stand up and look.
@@ -624,37 +600,28 @@ fa,en
 نام من لیلا است.,My name is Laila.
 سلام! نام من یوسف است.,Hello! My name is Yusuf.
 نام من سارا است.,My name is Sara.
-نام تو چیست؟,What's your name?
 نام من عمر است.,My name is Omar.
 صبح بخیر معلم.,"Good morning, teacher!"
 نام من. جمله را گوش کن و کلمه‌ها را به ترتیب درست پشت هم بگذار.,My name. Listen to the sentence and put the words one after the other in the right order.
 نه. من دختر هستم.,No. I am a girl.
 نه. من پسر هستم.,No. I am a boy.
-من دختر هستم.,I am a girl.
 من پسر هستم.,I am a boy.
 بلی، من دختر هستم.,"Yes, I am a girl."
 بلی، من پسر هستم.,"Yes, I am a boy."
 من پسر هستم، من دختر هستم. جمله را گوش کن و بساز.,"I am a boy, I am a girl. Listen to the sentence and build it."
 یک، دو، سه.,"One, two, three."
 سه، چهار، پنج.,"Three, four, five."
-چهار، پنج، شش.,"Four, five, six."
-شش، هفت، هشت.,"Six, seven, eight."
 هشت، نُه، ده.,"Eight, nine, ten."
-دو، سه، چهار، پنج.,"Two, three, four, five."
-پنج، شش، هفت، هشت.,"Five, six, seven, eight."
 هفت، هشت، نُه، ده.,"Seven, eight, nine, ten."
-یک، دو، سه، چهار.,"One, two, three, four."
 عددها به ترتیب. گوش کن و عددها را همان طور که شنیدی پشت هم بگذار.,Numbers in order. Listen and put the numbers one after the other as you heard them.
 من هفت ساله هستم.,I am seven.
 نام من نادیه است. من شش ساله هستم.,My name is Nadia. I am six.
-چند ساله هستی؟,How old are you?
 من ده ساله هستم.,I am ten.
 نام من زهرا است.,My name is Zahra.
 چند ساله هستی؟ جمله را گوش کن و کلمه‌ها را به ترتیب بگذار.,How old are you? Listen to the sentence and put the words in order.
 این کتاب من است.,This is my book.
 این بکس من است.,This is my bag.
 این قلم من است.,This is my pen.
-این چیست؟,What is this?
 این کتاب است.,This is a book.
 این قلم است.,This is a pen.
 این بکس است.,This is a bag.
@@ -672,7 +639,6 @@ fa,en
 دروازه را بسته کن.,Close the door.
 کلکین را باز کن.,Open the window.
 کتابت را بسته کن.,Close your book.
-دروازه را نشان بده.,Point to the door.
 لطفاً اینجا بیا.,"Come here, please."
 دروازه را باز کن.,Open the door.
 کلکین را بسته کن.,Close the window.
@@ -692,13 +658,11 @@ fa,en
 نصواری است.,It is brown.
 این یک قلم سیاه است.,This is a black pen.
 نارنجی است.,It is orange.
-این چه رنگ است؟,What colour is it?
 سرخ است.,It is red.
 سیاه است.,It is black.
 این یک قلم آبی است.,This is a blue pen.
 این یک دروازهٔ سفید است.,This is a white door.
 این چه رنگ است؟ جمله را گوش کن و بساز.,What colour is it? Listen to the sentence and build it.
-این نان است.,This is bread.
 این تخم مرغ است.,This is an egg.
 این چای است.,This is tea.
 این آب است.,This is water.
@@ -712,13 +676,10 @@ fa,en
 این دوست من لیلا است.,"This is my friend, Laila."
 این دوست من است.,This is my friend.
 او نُه ساله است.,She is nine.
-این سیب است.,This is an apple.
 دوست من. برای پسر و برای دختر دو کلمهٔ جدا است. جمله را گوش کن و بساز.,My friend. There are two different words for a boy and for a girl. Listen to the sentence and build it.
 یک سیب رسم کن.,Draw an apple.
 نامت را بنویس.,Write your name.
 کتاب را بخوان.,Read the book.
-تا ده حساب کن.,Count to ten.
-سلام بگو.,Say hello.
 یک دروازه رسم کن.,Draw a door.
 بخوان و بنویس.,Read and write.
 خداحافظ بگو.,Say goodbye.
@@ -726,12 +687,10 @@ fa,en
 فرمان‌ها: رسم کن، بنویس، بخوان، حساب کن، بگو. جمله را گوش کن و بساز.,"Commands: draw, write, read, count, say. Listen to the sentence and build it."
 من غمگین هستم.,I am sad.
 سلام! چطور هستی؟,Hello! How are you?
-چطور هستی؟,How are you?
 خوب هستم، تشکر.,"I'm fine, thank you."
 من خوش هستم.,I am happy.
 او غمگین است.,She is sad.
 چطور هستی؟ جمله را گوش کن و بساز.,How are you? Listen to the sentence and build it.
-تخم مرغ خُرد است.,The egg is small.
 این یک کتاب کلان است.,This is a big book.
 این یک بکس خُرد است.,This is a small bag.
 میز کلان است.,The table is big.
@@ -744,7 +703,6 @@ fa,en
 تشکر معلم.,"Thank you, teacher."
 ببخشید معلم.,"Sorry, teacher."
 لطفاً سیب را به من بده.,"Give me the apple, please."
-لطفاً قلم را به من بده.,"Give me the pen, please."
 بفرما، بگیر.,Here you are.
 لطفاً بکس را به من بده.,"Give me the bag, please."
 لطفاً دروازه را باز کن.,"Open the door, please."
@@ -762,22 +720,10 @@ fa,en
 اطاق صنف کلان است.,The classroom is big.
 سلام! من انگلیسی گپ زده می‌توانم.,Hello! I can speak English.
 دوست من خوش است.,My friend is happy.
-من انگلیسی گپ زده می‌توانم.,I can speak English.
 سه قلم سرخ.,Three red pens.
 دو کتاب آبی.,Two blue books.
 این صنف من است.,This is my classroom.
-دروازه کلان است.,The door is big.
 همه چیز با هم. جمله را گوش کن و بساز.,Everything together. Listen to the sentence and build it.
-یازده,eleven
-دوازده,twelve
-سیزده,thirteen
-چهارده,fourteen
-پانزده,fifteen
-شانزده,sixteen
-هفده,seventeen
-هژده,eighteen
-نزده,nineteen
-بیست,twenty
 عدد سیزده.,The number thirteen.
 عدد بیست.,The number twenty.
 عدد پانزده.,The number fifteen.
@@ -785,9 +731,6 @@ fa,en
 عدد هژده.,The number eighteen.
 عدد شانزده.,The number sixteen.
 عدد یازده.,The number eleven.
-چند ستاره؟,How many stars?
-چند گل؟,How many flowers?
-چند درخت؟,How many trees?
 چند سنگ؟,How many stones?
 چند تخم مرغ؟,How many eggs?
 چند پنسل؟,How many pencils?
@@ -1118,8 +1061,6 @@ fa,en
 چهار توپ سبز,four green balls
 سه توپ آبی,three blue balls
 دو یا سه کلمه را با هم گوش کن: چند دانه، چه رنگ و چه چیز. تصویر درست را انتخاب کن.,"Listen to two or three words together: how many, what colour and what thing. Pick the right picture."
-پنج گل,five flowers
-دو درخت,two trees
 دوازده ستاره,twelve stars
 یازده سنگ,eleven stones
 سه برگ,three leaves
@@ -1135,10 +1076,6 @@ fa,en
 دو گل آبی,two blue flowers
 چهار گل سرخ,four red flowers
 گوش کن که چند دانه است و چه چیز است. دقت کن: بعضی عددها مثل هم صدا می‌دهند. حساب کن و تصویر درست را انتخاب کن.,Listen how many there are and what thing it is. Take care: some numbers sound alike. Count and pick the right picture.
-دو بز,two goats
-سه گاو,three cows
-پنج مرغ,five hens
-چهار گوسفند,four sheep
 دو پشک,two cats
 سه سگ,three dogs
 شش چوچهٔ مرغ,six chicks
@@ -1164,7 +1101,6 @@ fa,en
 دو جاروب,two brooms
 چهار پیاله,four cups
 شش بشقاب,six plates
-یک قالین سرخ,a red carpet
 یک بشقاب سفید,a white plate
 چیزهای خانه. گوش کن که چند دانه است و چه چیز است. تصویر درست را انتخاب کن.,Things at home. Listen how many there are and what thing it is. Pick the right picture.
 توپ چه رنگ است؟ تصویر میانه را ببین.,What colour is the ball? Look at the picture in the middle.
@@ -1185,16 +1121,11 @@ fa,en
 ستاره چه رنگ است؟ تصویر میانه را ببین.,What colour is the star? Look at the picture in the middle.
 دو سبد است: فامیل و چیزها. گوش کن: آدمی از فامیل است یا یک چیز؟ تصویر را در سبد درست بینداز.,There are two baskets: family and things. Listen: is it a person of the family or a thing? Drop the picture into the right basket.
 چیزها,things
-فامیل,family
 دو سبد است: میوه و ترکاری. گوش کن و هر چیز را در سبد درست بینداز.,There are two baskets: fruit and vegetables. Listen and drop each thing into the right basket.
-ترکاری,vegetables
-میوه,fruit
 سه سبد است: حیوان‌ها، خوراکی و فامیل. گوش کن و هر تصویر را در سبد درست بینداز.,"There are three baskets: animals, food and family. Listen and drop each picture into the right basket."
 حیوان‌ها,animals
 چهار سبد است: چیزهای خانه، حیوان‌ها، میوه و ترکاری. خوب گوش کن و هر تصویر را در سبد درست بینداز.,"There are four baskets: things at home, animals, fruit and vegetables. Listen well and drop each picture into the right basket."
-چیزهای خانه,things at home
 دو سبد است: در خانه و در قریه. گوش کن: این چیز در خانه است یا بیرون در قریه؟ تصویر را در سبد درست بینداز.,There are two baskets: at home and in the village. Listen: is this thing at home or outside in the village? Drop the picture into the right basket.
-در قریه,in the village
 در خانه,at home
 سر را بگیر.,Catch the heads.
 موی را بگیر.,Catch the hair.
@@ -1222,7 +1153,6 @@ fa,en
 گوشت و تخم مرغ‌ها را بگیر.,Catch the meat and the eggs.
 ماست و بوره را بگیر.,Catch the yoghurt and the sugar.
 چیزی را بگیر که من خوش دارم: برنج و گوشت.,Catch what I like: rice and meat.
-میوه‌ها را بگیر.,Catch the fruit.
 ترکاری‌ها را بگیر.,Catch the vegetables.
 انگور را بگیر.,Catch the grapes.
 انار را بگیر.,Catch the pomegranates.
@@ -1239,7 +1169,6 @@ fa,en
 چهارمغزها و بادام‌ها را بگیر.,Catch the walnuts and the almonds.
 عسل و شیرینی را بگیر.,Catch the honey and the sweets.
 گوش کن: میوه را بگیری یا ترکاری را؟ یا فقط یک چیز را؟ فقط همان را بگیر.,Listen: are you to catch fruit or vegetables? Or only one thing? Catch only that.
-حیوان‌ها را بگیر.,Catch the animals.
 گوسفند را بگیر.,Catch the sheep.
 بز را بگیر.,Catch the goats.
 گاو را بگیر.,Catch the cows.
@@ -1397,16 +1326,11 @@ fa,en
 این برادر من است.,This is my brother.
 او خواهر من است.,She is my sister.
 او مادر من است.,She is my mother.
-این مادر من است.,This is my mother.
-این پدر من است.,This is my father.
-این کیست؟,Who is this?
 این خواهر من است.,This is my sister.
 او برادر من است.,He is my brother.
 فامیل من. جمله را گوش کن و کلمه‌ها را به ترتیب درست پشت هم بگذار.,My family. Listen to the sentence and put the words one after the other in the right order.
 این پدرکلان من است.,This is my grandfather.
-او پدرکلان من است.,He is my grandfather.
 او مادرکلان من است.,She is my grandmother.
-این خانهٔ من است.,This is my house.
 این برادر خرد من است.,This is my baby brother.
 من پدر و مادرم را دوست دارم.,I love my parents.
 من مادرکلانم را دوست دارم.,I love my grandmother.
@@ -1415,29 +1339,15 @@ fa,en
 من یک صندوق دارم.,I have a box.
 من یک شانه دارم.,I have a comb.
 من دو خواهر و یک برادر دارم.,I have two sisters and a brother.
-من یک توپ دارم.,I have a ball.
-من یک کلید دارم.,I have a key.
-من یک خواهر دارم.,I have a sister.
-من دو برادر دارم.,I have two brothers.
-این مادرکلان من است.,This is my grandmother.
 من دارم. جمله را گوش کن و بساز. دقت کن: یک دانه یا چند دانه؟,I have. Listen to the sentence and build it. Take care: one or several?
-به بینی‌ات دست بزن.,Touch your nose.
 این سر من است.,This is my head.
 این دهن من است.,This is my mouth.
-به مویت دست بزن.,Touch your hair.
 این گوش من است.,This is my ear.
 به چشمت دست بزن.,Touch your eye.
 موی من سیاه است.,My hair is black.
 به گوش و بینی‌ات دست بزن.,Touch your ear and your nose.
 روی من. جمله را گوش کن و کلمه‌ها را به ترتیب بگذار.,My face. Listen to the sentence and put the words in order.
-من دو پای دارم.,I have two feet.
-به پایت دست بزن.,Touch your foot.
 من دو بازو و دو لنگ دارم.,I have two arms and two legs.
-این بینی من است.,This is my nose.
-به سرت دست بزن.,Touch your head.
-من دو دست دارم.,I have two hands.
-من دو چشم دارم.,I have two eyes.
-من ده انگشت دارم.,I have ten fingers.
 بدن من. جمله را گوش کن و بساز.,My body. Listen to the sentence and build it.
 یازده، دوازده، سیزده.,"Eleven, twelve, thirteen."
 سیزده، چهارده، پانزده.,"Thirteen, fourteen, fifteen."
@@ -1457,15 +1367,8 @@ fa,en
 من ماست را خوش دارم.,I like yoghurt.
 من چای و بوره را خوش دارم.,I like tea and sugar.
 من برنج و ماست را خوش دارم.,I like rice and yoghurt.
-من برنج را خوش دارم.,I like rice.
-من شیر را خوش دارم.,I like milk.
-من نان و چای را خوش دارم.,I like bread and tea.
 من گوشت و برنج را خوش دارم.,I like meat and rice.
 من خوش دارم. جمله را گوش کن و بساز.,I like. Listen to the sentence and build it.
-این فامیل من است.,This is my family.
-من مادر و پدر دارم.,I have a mother and a father.
-من یک خواهر و دو برادر دارم.,I have a sister and two brothers.
-من دو دست و دو پای دارم.,I have two hands and two feet.
 من دو خواهر دارم.,I have two sisters.
 من شیر و ماست را خوش دارم.,I like milk and yoghurt.
 من پدرکلانم را دوست دارم.,I love my grandfather.
@@ -1481,25 +1384,13 @@ fa,en
 توت خُرد است.,The mulberry is small.
 میوه‌ها. جمله را گوش کن و بساز.,Fruit. Listen to the sentence and build it.
 من پالک را خوش ندارم.,I don't like spinach.
-من بادنجان رومی را خوش دارم.,I like tomatoes.
 من زردک و کچالو را خوش دارم.,I like carrots and potatoes.
-من سیب را خوش دارم.,I like apples.
-من انگور را خوش دارم.,I like grapes.
-من پیاز را خوش ندارم.,I don't like onions.
 من زردک را خوش ندارم.,I don't like carrots.
-من کچالو را خوش دارم.,I like potatoes.
 خوش دارم و خوش ندارم. جمله را گوش کن و بساز.,I like and I don't like. Listen to the sentence and build it.
-تو پیاز را خوش داری؟,Do you like onions?
-تو شیرینی را خوش داری؟,Do you like sweets?
 من عسل و نان را خوش دارم.,I like honey and bread.
 من جواری را خوش ندارم.,I don't like corn.
-تو عسل را خوش داری؟,Do you like honey?
-بلی، خوش دارم.,"Yes, I do."
-نه، خوش ندارم.,"No, I don't."
-تو چای را خوش داری؟,Do you like tea?
 من چهارمغز و بادام را خوش دارم.,I like walnuts and almonds.
 تو خوش داری؟ سوال و جواب را گوش کن و بساز.,Do you like it? Listen to the question and the answer and build them.
-من یک گاو دارم.,I have a cow.
 این خر است.,This is a donkey.
 این اسپ است.,This is a horse.
 من یک مرغ دارم.,I have a hen.
@@ -1508,9 +1399,6 @@ fa,en
 من یک خر و یک گاو دارم.,I have a donkey and a cow.
 مرغ خُرد است.,The hen is small.
 حیوان‌ها. جمله را گوش کن و بساز.,Animals. Listen to the sentence and build it.
-این ماهی است.,This is a fish.
-من پرنده‌ها را خوش دارم.,I like birds.
-تو پشک‌ها را خوش داری؟,Do you like cats?
 من یک سگ دارم.,I have a dog.
 شتر کلان است.,The camel is big.
 موش خُرد است.,The mouse is small.
@@ -1521,10 +1409,7 @@ fa,en
 من یک بره دارم.,I have a lamb.
 شش چوچهٔ مرغ و یک مرغ.,Six chicks and a hen.
 چند چوچهٔ پشک؟,How many kittens?
-این بز است.,This is a goat.
-من دو بز دارم.,I have two goats.
 من سه گاو دارم.,I have three cows.
-من یک پشک دارم.,I have a cat.
 دو سگ و پنج مرغ.,Two dogs and five hens.
 دو بز، سه گاو. وقتی چند دانه است، آخر کلمه فرق می‌کند. جمله را گوش کن و بساز.,"Two goats, three cows. When there are several, the end of the word changes. Listen to the sentence and build it."
 من یک قاشق دارم.,I have a spoon.
@@ -1536,14 +1421,10 @@ fa,en
 قاشق خُرد است.,The spoon is small.
 من دو بشقاب دارم.,I have two plates.
 در خانه. جمله را گوش کن و بساز.,At home. Listen to the sentence and build it.
-من یک بالشت و یک کمپل دارم.,I have a pillow and a blanket.
 این سطل من است.,This is my bucket.
 لطفاً جاروب را به من بده.,"Give me the broom, please."
 من یک سبد دارم.,I have a basket.
-این تخت خواب من است.,This is my bed.
-من یک پیاله دارم.,I have a cup.
 این یک قالین سرخ است.,This is a red carpet.
-لطفاً صابون را به من بده.,"Give me the soap, please."
 من چهار قاشق دارم.,I have four spoons.
 چیزهای خانه. جمله را گوش کن و بساز.,Things at home. Listen to the sentence and build it.
 این کوه است.,This is a mountain.
@@ -1559,9 +1440,4 @@ fa,en
 تو قریهٔ مرا خوش داری؟,Do you like my village?
 من خانه‌ام را خوش دارم.,I like my house.
 فامیل من کلان است.,My family is big.
-این قریهٔ من است.,This is my village.
-من قریه‌ام را خوش دارم.,I like my village.
-کوه کلان است.,The mountain is big.
-من فامیلم را دوست دارم.,I love my family.
-این دنیای من است.,This is my world.
 دنیای من. جمله را گوش کن و بساز.,My world. Listen to the sentence and build it.

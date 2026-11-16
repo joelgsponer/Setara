@@ -2,7 +2,7 @@
  "pack": "fa-3",
  "subject": "fa",
  "level": 3,
- "version": 1,
+ "version": 2,
  "title_en": "Dari 3: Syllables and words",
  "title_fa": "دری ۳: بخش‌ها و کلمه‌ها",
  "games": [
@@ -15,7 +15,8 @@
    "intro_fa": "گوش کن و کلمه درست را پیدا کن. یا کلمه را بخوان و تصویر آن را پیدا کن.",
    "icon": "flower",
    "v1": true,
-   "sheet": "alefba_garden.csv"
+   "sheet": "alefba_garden.csv",
+   "draw": 8
   },
   {
    "id": "letter_shapes",
@@ -26,7 +27,8 @@
    "intro_fa": "هر کلمه را در سبد درست بگذار.",
    "icon": "basket",
    "v1": true,
-   "sheet": "letter_shapes.csv"
+   "sheet": "letter_shapes.csv",
+   "draw": 8
   },
   {
    "id": "word_weaver",
@@ -36,7 +38,8 @@
    "title_fa": "کلمه‌باف",
    "intro_fa": "حرف‌ها و بخش‌ها را از راست به چپ کنار هم بگذار و کلمه بساز.",
    "icon": "rope",
-   "sheet": "word_weaver.csv"
+   "sheet": "word_weaver.csv",
+   "draw": 8
   },
   {
    "id": "syllable_catch",
@@ -66,7 +69,8 @@
    "title_fa": "گوشه شعر",
    "intro_fa": "کلمه را بخوان و جوره آن را پیدا کن.",
    "icon": "moon",
-   "sheet": "verse_corner.csv"
+   "sheet": "verse_corner.csv",
+   "draw": 6
   },
   {
    "id": "word_journey",
@@ -76,7 +80,41 @@
    "title_fa": "سفر کلمه‌ها",
    "intro_fa": "با هر جواب درست یک قدم پیش برو. کلمه‌ها را بخوان و جواب درست را انتخاب کن.",
    "icon": "mountain",
-   "sheet": "word_journey.csv"
+   "sheet": "word_journey.csv",
+   "draw": 8
+  },
+  {
+   "id": "riddles",
+   "engine": "listen_pick",
+   "letter": "h",
+   "title_en": "Riddles",
+   "title_fa": "چیستان",
+   "intro_fa": "به چیستان گوش کن. بعد چهار کلمه را بخوان و جواب درست را انتخاب کن.",
+   "icon": "point",
+   "draw": 8,
+   "sheet": "riddles.csv"
+  },
+  {
+   "id": "one_and_many",
+   "engine": "listen_pick",
+   "letter": "i",
+   "title_en": "One and Many",
+   "title_fa": "یک و چند",
+   "intro_fa": "تصویر را ببین: یک چیز است یا چند چیز؟ کلمه‌ها را بخوان. وقتی چند تا است، آخر کلمه «ها» دارد.",
+   "icon": "count",
+   "draw": 8,
+   "sheet": "one_and_many.csv"
+  },
+  {
+   "id": "opposites",
+   "engine": "pairs",
+   "letter": "j",
+   "title_en": "Opposites",
+   "title_fa": "ضد هم",
+   "intro_fa": "دو کارت را باز کن و بخوان. دو کلمه‌ای را جوره کن که ضد یکدیگر هستند، مثل روز و شب.",
+   "icon": "moon",
+   "draw": 6,
+   "sheet": "opposites.csv"
   }
  ]
 }

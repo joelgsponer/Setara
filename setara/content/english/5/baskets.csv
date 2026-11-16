@@ -41,14 +41,14 @@ round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
 13,,ice,ice on the river,,t:winter,,
 13,,coat,a warm coat,,t:winter,,
 13,,snowman,a snowman,,t:winter,,
-13,,stove,a hot stove,,t:winter,,
+13,,blanket,a warm blanket,,t:winter,,
 13,,sledge,a sledge,,t:winter,,
 13,,sun,hot sun,,t:summer,تابستان,summer
 13,,watermelon,a sweet watermelon,,t:summer,,
 13,,sandals,sandals,,t:summer,,
 13,,melon,a melon,,t:summer,,
 13,,grapes,grapes,,t:summer,,
-13,,hat,a sun hat,,t:summer,,
+13,,apricot,sweet apricots,,t:summer,,
 14,دو سبد است: today امروز و yesterday دیروز. جمله را گوش کن. اگر is، am یا are دارد، امروز است. اگر was یا were دارد، دیروز است.,rain,It was rainy.,,t:yesterday,دیروز,yesterday
 14,,sun,It is sunny.,,t:today,امروز,today
 14,,school,We were at school.,,t:yesterday,,

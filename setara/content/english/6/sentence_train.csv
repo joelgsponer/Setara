@@ -1,0 +1,128 @@
+round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
+# PRACTISE and, in units 17 and 18, "write a short message": the child builds the sentence, or a whole message, from tiles.
+02,با he، she و نام کار، به فعل s می‌چسبد: A baker makes bread. کلمهٔ زیاد همان فعل بدون s است. جمله را بساز.,A baker makes bread.,,t:A|t:baker|t:makes|t:bread,t:make,,A baker makes bread.,,نانوا نان می‌پزد.
+02,,A driver drives a lorry.,,t:A|t:driver|t:drives|t:a|t:lorry,t:drive,,A driver drives a lorry.,,دریور لاری را می‌راند.
+02,,A weaver makes carpets.,,t:A|t:weaver|t:makes|t:carpets,t:make,,A weaver makes carpets.,,قالین‌باف قالین می‌بافد.
+02,,A farmer grows wheat.,,t:A|t:farmer|t:grows|t:wheat,t:grow,,A farmer grows wheat.,,دهقان گندم می‌کارد.
+02,,A builder builds houses.,,t:A|t:builder|t:builds|t:houses,t:build,,A builder builds houses.,,گلکار خانه می‌سازد.
+02,,He repairs cars and lorries.,,t:He|t:repairs|t:cars|t:and|t:lorries,t:repair,,He repairs cars and lorries.,,او موترها و لاری‌ها را ترمیم می‌کند.
+02,,She is an engineer.,,t:She|t:is|t:an|t:engineer,t:a,,She is an engineer.,,او انجنیر است.
+02,,What does a mechanic do?,,t:What|t:does|t:a|t:mechanic|t:do,t:do,,What does a mechanic do?,,مستری چه کار می‌کند؟
+02,,My mother is a weaver.,,t:My|t:mother|t:is|t:a|t:weaver,t:an,,My mother is a weaver.,,مادرم قالین‌باف است.
+03,بگو که هر کس کجا و با چه کار می‌کند: in برای جای، with برای افزار. جمله را بساز.,Where does she work?,,t:Where|t:does|t:she|t:work,t:do,,Where does she work?,,او کجا کار می‌کند؟
+03,,She works in a clinic.,,t:She|t:works|t:in|t:a|t:clinic,t:work,,She works in a clinic.,,او در کلینیک کار می‌کند.
+03,,The farmer works in the field.,,t:The|t:farmer|t:works|t:in|t:the|t:field,t:with,,The farmer works in the field.,,دهقان در زمین کار می‌کند.
+03,,He works with a saw.,,t:He|t:works|t:with|t:a|t:saw,t:in,,He works with a saw.,,او با اره کار می‌کند.
+03,,He drives a tractor.,,t:He|t:drives|t:a|t:tractor,t:drive,,He drives a tractor.,,او تراکتور را می‌راند.
+03,,The builder works with bricks.,,t:The|t:builder|t:works|t:with|t:bricks,t:in,,The builder works with bricks.,,گلکار با خشت کار می‌کند.
+03,,My brother works in a workshop.,,t:My|t:brother|t:works|t:in|t:a|t:workshop,t:work,,My brother works in a workshop.,,برادرم در ورکشاپ کار می‌کند.
+03,,Where does your father work?,,t:Where|t:does|t:your|t:father|t:work,t:do,,Where does your father work?,,پدرت کجا کار می‌کند؟
+03,,The teacher works in a school.,,t:The|t:teacher|t:works|t:in|t:a|t:school,t:with,,The teacher works in a school.,,معلم در مکتب کار می‌کند.
+04,I want to be یعنی «می‌خواهم ... شوم». بعد از want کلمهٔ to می‌آید. برای کس دیگر: She wants to be. جمله را بساز.,I want to be a teacher.,,t:I|t:want|t:to|t:be|t:a|t:teacher,t:am,,I want to be a teacher.,,من می‌خواهم معلم شوم.
+04,,What do you want to be?,,t:What|t:do|t:you|t:want|t:to|t:be,t:are,,What do you want to be?,,می‌خواهی چه کاره شوی؟
+04,,She wants to be a doctor.,,t:She|t:wants|t:to|t:be|t:a|t:doctor,t:want,,She wants to be a doctor.,,او می‌خواهد داکتر شود.
+04,,He wants to be a driver.,,t:He|t:wants|t:to|t:be|t:a|t:driver,t:want,,He wants to be a driver.,,او می‌خواهد دریور شود.
+04,,I want to be an engineer.,,t:I|t:want|t:to|t:be|t:an|t:engineer,t:a,,I want to be an engineer.,,من می‌خواهم انجنیر شوم.
+04,,I must learn a lot.,,t:I|t:must|t:learn|t:a|t:lot,t:to,,I must learn a lot.,,من باید بسیار درس بخوانم.
+04,,I like to help people.,,t:I|t:like|t:to|t:help|t:people,t:helps,,I like to help people.,,من کمک کردن به مردم را خوش دارم.
+04,,We want to be farmers.,,t:We|t:want|t:to|t:be|t:farmers,t:wants,,We want to be farmers.,,ما می‌خواهیم دهقان شویم.
+04,,Does he want to be a baker?,,t:Does|t:he|t:want|t:to|t:be|t:a|t:baker,t:Do,,Does he want to be a baker?,,آیا او می‌خواهد نانوا شود؟
+05,برای پلان: I am going to، He is going to، We are going to، و بعد فعل ساده. کلمهٔ زیاد am، is یا are غلط است. جمله را بساز.,I am going to visit my aunt.,,t:I|t:am|t:going|t:to|t:visit|t:my|t:aunt,t:is,,I am going to visit my aunt.,,من به دیدن خاله‌ام می‌روم.
+05,,He is going to buy shoes.,,t:He|t:is|t:going|t:to|t:buy|t:shoes,t:are,,He is going to buy shoes.,,او بوت می‌خرد.
+05,,We are going to play.,,t:We|t:are|t:going|t:to|t:play,t:is,,We are going to play.,,ما بازی می‌کنیم.
+05,,It is going to rain.,,t:It|t:is|t:going|t:to|t:rain,t:are,,It is going to rain.,,باران خواهد بارید.
+05,,She is going to cook rice.,,t:She|t:is|t:going|t:to|t:cook|t:rice,t:am,,She is going to cook rice.,,او برنج می‌پزد.
+05,,They are going to walk.,,t:They|t:are|t:going|t:to|t:walk,t:is,,They are going to walk.,,آنها پیاده می‌روند.
+05,,I am going to read tonight.,,t:I|t:am|t:going|t:to|t:read|t:tonight,t:are,,I am going to read tonight.,,من امشب می‌خوانم.
+05,,My uncle is going to come tomorrow.,,t:My|t:uncle|t:is|t:going|t:to|t:come|t:tomorrow,t:are,,My uncle is going to come tomorrow.,,کاکایم فردا می‌آید.
+05,,We are going to help mother.,,t:We|t:are|t:going|t:to|t:help|t:mother,t:am,,We are going to help mother.,,ما به مادر کمک می‌کنیم.
+06,در سوال am، is یا are اول می‌آید: Are you going to come? برای «نه» not پیش از going می‌آید. جمله را بساز.,Are you going to come?,,t:Are|t:you|t:going|t:to|t:come,t:Is,,Are you going to come?,,آیا می‌آیی؟
+06,,"Yes, I am.",,t:Yes|t:I|t:am,t:is,,"Yes, I am.",,بلی، می‌آیم.
+06,,"No, I'm not.",,t:No|t:I'm|t:not,t:isn't,,"No, I'm not.",,نه، نمی‌آیم.
+06,,What are you going to do?,,t:What|t:are|t:you|t:going|t:to|t:do,t:is,,What are you going to do?,,چه می‌کنی؟
+06,,She is not going to cook.,,t:She|t:is|t:not|t:going|t:to|t:cook,t:no,,She is not going to cook.,,او نمی‌پزد.
+06,,Is he going to walk?,,t:Is|t:he|t:going|t:to|t:walk,t:Are,,Is he going to walk?,,آیا او پیاده می‌رود؟
+06,,I am not going to sleep.,,t:I|t:am|t:not|t:going|t:to|t:sleep,t:no,,I am not going to sleep.,,من نمی‌خوابم.
+06,,Are they going to play?,,t:Are|t:they|t:going|t:to|t:play,t:Is,,Are they going to play?,,آیا آنها بازی می‌کنند؟
+06,,When are you going to come?,,t:When|t:are|t:you|t:going|t:to|t:come,t:is,,When are you going to come?,,چه وقت می‌آیی؟
+09,برای مقایسه: صفت با er و بعد than. A horse is bigger than a goat. کلمهٔ زیاد صفت بدون er است. جمله را بساز.,A horse is bigger than a goat.,,t:A|t:horse|t:is|t:bigger|t:than|t:a|t:goat,t:big,,A horse is bigger than a goat.,,اسپ از بز کلانتر است.
+09,,My brother is taller than me.,,t:My|t:brother|t:is|t:taller|t:than|t:me,t:tall,,My brother is taller than me.,,برادرم از من قدبلندتر است.
+09,,The rabbit is faster than the tortoise.,,t:The|t:rabbit|t:is|t:faster|t:than|t:the|t:tortoise,t:fast,,The rabbit is faster than the tortoise.,,خرگوش از سنگ‌پشت تیزتر است.
+09,,She is younger than me.,,t:She|t:is|t:younger|t:than|t:me,t:young,,She is younger than me.,,او از من خُردتر است.
+09,,The city is bigger than the village.,,t:The|t:city|t:is|t:bigger|t:than|t:the|t:village,t:big,,The city is bigger than the village.,,شهر از قریه کلانتر است.
+09,,A mouse is smaller than a cat.,,t:A|t:mouse|t:is|t:smaller|t:than|t:a|t:cat,t:small,,A mouse is smaller than a cat.,,موش از پشک خُردتر است.
+09,,I am stronger than you.,,t:I|t:am|t:stronger|t:than|t:you,t:strong,,I am stronger than you.,,من از تو قوی‌تر هستم.
+09,,Winter is colder than autumn.,,t:Winter|t:is|t:colder|t:than|t:autumn,t:cold,,Winter is colder than autumn.,,زمستان از خزان سردتر است.
+09,,Who is taller?,,t:Who|t:is|t:taller,t:tall,,Who is taller?,,کی قدبلندتر است؟
+11,با صفت دراز more می‌آید و بعد than. و یاد داشته باش: better بهتر، worse بدتر. جمله را بساز.,The carpet is more expensive than the scarf.,,t:The|t:carpet|t:is|t:more|t:expensive|t:than|t:the|t:scarf,,,The carpet is more expensive than the scarf.,,قالین از چادر گرانتر است.
+11,,This dress is more beautiful.,,t:This|t:dress|t:is|t:more|t:beautiful,t:much,,This dress is more beautiful.,,این پیراهن مقبول‌تر است.
+11,,My new shoes are better.,,t:My|t:new|t:shoes|t:are|t:better,t:good,,My new shoes are better.,,بوت‌های نو من بهتر است.
+11,,The weather is worse today.,,t:The|t:weather|t:is|t:worse|t:today,t:bad,,The weather is worse today.,,امروز هوا بدتر است.
+11,,The bus is faster than the bicycle.,,t:The|t:bus|t:is|t:faster|t:than|t:the|t:bicycle,t:more,,The bus is faster than the bicycle.,,بس از بایسکل تیزتر است.
+11,,The bicycle is cheaper.,,t:The|t:bicycle|t:is|t:cheaper,t:more,,The bicycle is cheaper.,,بایسکل ارزانتر است.
+11,,English is more difficult than Dari.,,t:English|t:is|t:more|t:difficult|t:than|t:Dari,t:much,,English is more difficult than Dari.,,انگلیسی از دری مشکل‌تر است.
+11,,This book is better than that book.,,t:This|t:book|t:is|t:better|t:than|t:that|t:book,,,This book is better than that book.,,این کتاب از آن کتاب بهتر است.
+11,,Which is better?,,t:Which|t:is|t:better,t:good,,Which is better?,,کدام بهتر است؟
+12,سوال با Why شروع می‌شود و جواب با Because. با because دو جمله یکجا می‌شود. جمله را بساز.,Why are you happy?,,t:Why|t:are|t:you|t:happy,t:Because,,Why are you happy?,,چرا خوش هستی؟
+12,,Because it is Friday.,,t:Because|t:it|t:is|t:Friday,t:Why,,Because it is Friday.,,چون جمعه است.
+12,,I am afraid because it is dark.,,t:I|t:am|t:afraid|t:because|t:it|t:is|t:dark,t:why,,I am afraid because it is dark.,,من می‌ترسم چون تاریک است.
+12,,Why are you late?,,t:Why|t:are|t:you|t:late,t:Because,,Why are you late?,,چرا ناوقت آمدی؟
+12,,Because the bus was slow.,,t:Because|t:the|t:bus|t:was|t:slow,t:Why,,Because the bus was slow.,,چون بس آهسته بود.
+12,,She is sad because she is alone.,,t:She|t:is|t:sad|t:because|t:she|t:is|t:alone,t:why,,She is sad because she is alone.,,او غمگین است چون تنها است.
+12,,Why is mother worried?,,t:Why|t:is|t:mother|t:worried,t:Because,,Why is mother worried?,,چرا مادر پریشان است؟
+12,,He is angry because his kite is lost.,,t:He|t:is|t:angry|t:because|t:his|t:kite|t:is|t:lost,,,He is angry because his kite is lost.,,او قهر است چون کاغذپرانش گم شده است.
+12,,I am calm because you are here.,,t:I|t:am|t:calm|t:because|t:you|t:are|t:here,t:why,,I am calm because you are here.,,من آرام هستم چون تو اینجا هستی.
+13,جمله‌های دراز با because: اول کار یا آرزو، بعد دلیل. حصه‌های جمله روی کارت‌ها است. آنها را به ترتیب بگذار.,I want to be a doctor because I want to help sick people.,,t:I want to be|t:a doctor|t:because|t:I want to help|t:sick people,t:but,,I want to be a doctor because I want to help sick people.,,من می‌خواهم داکتر شوم چون می‌خواهم به مردم مریض کمک کنم.
+13,,I am going to take an umbrella because it is going to rain.,,t:I am going to take|t:an umbrella|t:because|t:it is going to rain,t:why,,I am going to take an umbrella because it is going to rain.,,من چتری می‌گیرم چون باران خواهد بارید.
+13,,We are going to go by bus because it is far.,,t:We are going to go|t:by bus|t:because|t:it is|t:far,t:near,,We are going to go by bus because it is far.,,ما با بس می‌رویم چون دور است.
+13,,I like spring because it is warm.,,t:I|t:like|t:spring|t:because|t:it|t:is|t:warm,t:cold,,I like spring because it is warm.,,من بهار را خوش دارم چون هوا گرم است.
+13,,I am tired because I worked.,,t:I|t:am|t:tired|t:because|t:I|t:worked,t:why,,I am tired because I worked.,,من مانده هستم چون کار کردم.
+13,,He wants to be a farmer because he likes animals.,,t:He wants to be|t:a farmer|t:because|t:he likes|t:animals,t:and,,He wants to be a farmer because he likes animals.,,او می‌خواهد دهقان شود چون حیوان‌ها را خوش دارد.
+13,,She learns English because she wants to read.,,t:She|t:learns|t:English|t:because|t:she|t:wants|t:to|t:read,,,She learns English because she wants to read.,,او انگلیسی یاد می‌گیرد چون می‌خواهد بخواند.
+13,,I am going to sleep because I am tired.,,t:I am going to sleep|t:because|t:I am|t:tired,t:hungry,,I am going to sleep because I am tired.,,من می‌خوابم چون مانده هستم.
+13,,We stay at home because it is raining.,,t:We|t:stay|t:at|t:home|t:because|t:it|t:is|t:raining,,,We stay at home because it is raining.,,ما در خانه می‌مانیم چون باران می‌بارد.
+14,دو قسم کار است. در جمله‌ها کلمه‌ها را به ترتیب بگذار. در قصه‌های کوتاه تصویرها را به ترتیب قصه بگذار: One day، Then، Suddenly، Finally.,One day a fox saw a crow.,,t:One|t:day|t:a|t:fox|t:saw|t:a|t:crow,t:Finally,,One day a fox saw a crow.,,یک روز یک روباه یک زاغ را دید.
+14,,Suddenly it started to rain.,,t:Suddenly|t:it|t:started|t:to|t:rain,t:Slowly,,Suddenly it started to rain.,,ناگهان باران شروع شد.
+14,,Finally they came home.,,t:Finally|t:they|t:came|t:home,t:One,,Finally they came home.,,بالاخره آنها به خانه آمدند.
+14,,In the end everybody was happy.,,t:In|t:the|t:end|t:everybody|t:was|t:happy,t:start,,In the end everybody was happy.,,در آخر همه خوش بودند.
+14,,Then I saw a fish.,,t:Then|t:I|t:saw|t:a|t:fish,t:see,,Then I saw a fish.,,بعد یک ماهی دیدم.
+14,,One day a girl walked to the river. Then she saw a fish. Suddenly it started to rain. Finally she ran home.,,walk|fish|rain|run,sleep,,One day a girl walked to the river. Then she saw a fish. Suddenly it started to rain. Finally she ran home.,,یک روز دختری پیاده به دریا رفت. بعد یک ماهی دید. ناگهان باران شروع شد. بالاخره به خانه دوید. تصویرها را به همین ترتیب بگذار.
+14,,One day a boy took the sheep to the hill. Suddenly a wolf came. The boy shouted. Finally the wolf ran away and the boy was happy.,,sheep|wolf|fa_shout_help|happy,sleep,,One day a boy took the sheep to the hill. Suddenly a wolf came. The boy shouted. Finally the wolf ran away and the boy was happy.,,یک روز پسری گوسفندها را به تپه برد. ناگهان یک گرگ آمد. پسر چیغ زد. بالاخره گرگ گریخت و پسر خوش شد.
+14,,One day a crow was thirsty. Then it saw a jug. It dropped stones into the jug. Finally it drank.,,crow|water_jug|stone|drink,cheese,,One day a crow was thirsty. Then it saw a jug. It dropped stones into the jug. Finally it drank.,,یک روز یک زاغ تشنه بود. بعد یک کوزه دید. در کوزه سنگ انداخت. بالاخره آب نوشید.
+14,,One day it snowed. Then the children made a snowman. Suddenly the sun came. In the end there was only water.,,snow|snowman|sun|water,rain,,One day it snowed. Then the children made a snowman. Suddenly the sun came. In the end there was only water.,,یک روز برف بارید. بعد اطفال آدم برفی ساختند. ناگهان آفتاب برآمد. در آخر فقط آب ماند.
+15,بگو که کی چه گفت. said گفت، asked پرسید، answered جواب داد. بعد از سوال asked می‌آید، نه said. جمله را بساز.,The fox said hello.,,t:The|t:fox|t:said|t:hello,t:say,,The fox said hello.,,روباه سلام گفت.
+15,,The crow asked a question.,,t:The|t:crow|t:asked|t:a|t:question,t:ask,,The crow asked a question.,,زاغ یک سوال پرسید.
+15,,The teacher answered the question.,,t:The|t:teacher|t:answered|t:the|t:question,t:answer,,The teacher answered the question.,,معلم به سوال جواب داد.
+15,,The children laughed.,,t:The|t:children|t:laughed,t:laugh,,The children laughed.,,اطفال خندیدند.
+15,,The boy shouted for help.,,t:The|t:boy|t:shouted|t:for|t:help,t:shout,,The boy shouted for help.,,پسر برای کمک چیغ زد.
+15,,What did the teacher say?,,t:What|t:did|t:the|t:teacher|t:say,t:said,,What did the teacher say?,,معلم چه گفت؟
+15,,She said thank you.,,t:She|t:said|t:thank|t:you,t:say,,She said thank you.,,او تشکر گفت.
+15,,He asked the way to the clinic.,,t:He|t:asked|t:the|t:way|t:to|t:the|t:clinic,t:ask,,He asked the way to the clinic.,,او راه کلینیک را پرسید.
+15,,I asked my mother.,,t:I|t:asked|t:my|t:mother,t:said,,I asked my mother.,,من از مادرم پرسیدم.
+17,حالا خودت یک پیام می‌نویسی، با کارت‌ها. پیام سه حصه دارد: اول Dear و نام، بعد گپ اصلی، در آخر From و نام. کارت‌ها را به ترتیب بگذار.,"Dear Sara, How are you? I am fine. From Mina.",,"t:Dear Sara,|t:How are you?|t:I am fine.|t:From Mina",t:Goodbye,,"Dear Sara, How are you? I am fine. From Mina.",,سارای عزیز، چطور هستی؟ من خوب هستم. از طرف مینا.
+17,,"Dear Omar, I am going to come on Friday. See you soon. From Ali.",,"t:Dear Omar,|t:I am going to come|t:on Friday.|t:See you soon.|t:From Ali","t:Dear Ali,",,"Dear Omar, I am going to come on Friday. See you soon. From Ali.",,عمر عزیز، من روز جمعه می‌آیم. به امید دیدار. از طرف علی.
+17,,"Dear mother, I am in Kabul. I am fine. From Farid.",,"t:Dear mother,|t:I am in Kabul.|t:I am fine.|t:From Farid",t:From mother,,"Dear mother, I am in Kabul. I am fine. From Farid.",,مادر عزیز، من در کابل هستم. من خوب هستم. از طرف فرید.
+17,,"Dear Laila, Thank you for the letter. From Roya.",,"t:Dear Laila,|t:Thank you|t:for the letter.|t:From Roya","t:Dear Roya,",,"Dear Laila, Thank you for the letter. From Roya.",,لیلای عزیز، تشکر از خط تو. از طرف رویا.
+17,,How are you?,,t:How|t:are|t:you,t:is,,How are you?,,چطور هستی؟
+17,,See you soon.,,t:See|t:you|t:soon,t:son,,See you soon.,,به امید دیدار.
+17,,I am going to write a letter.,,t:I|t:am|t:going|t:to|t:write|t:a|t:letter,t:read,,I am going to write a letter.,,من یک خط می‌نویسم.
+17,,The letter is from my uncle.,,t:The|t:letter|t:is|t:from|t:my|t:uncle,t:for,,The letter is from my uncle.,,این خط از طرف کاکایم است.
+17,,"Dear uncle, I am going to visit you next week. From Yusuf.",,"t:Dear uncle,|t:I am going to visit you|t:next week.|t:From Yusuf",t:tonight,,"Dear uncle, I am going to visit you next week. From Yusuf.",,کاکای عزیز، هفتهٔ آینده به دیدن شما می‌آیم. از طرف یوسف.
+18,سه قسم پیام را با کارت‌ها بنویس: دعوت، تشکر و معذرت. اول Dear، در آخر From. در معذرت دلیل را با because بگو.,"Dear Shirin, Please come to my house on Friday. From Nargis.",,"t:Dear Shirin,|t:Please come|t:to my house|t:on Friday.|t:From Nargis",t:Thank you,,"Dear Shirin, Please come to my house on Friday. From Nargis.",,شیرین عزیز، لطفاً روز جمعه به خانهٔ ما بیا. از طرف نرگس.
+18,,"Dear aunt, Thank you for the present. From Navid.",,"t:Dear aunt,|t:Thank you|t:for the present.|t:From Navid",t:I am sorry,,"Dear aunt, Thank you for the present. From Navid.",,خالهٔ عزیز، تشکر از تحفه. از طرف نوید.
+18,,"Dear Karim, I am sorry, I can't come because I am sick. From Hamid.",,"t:Dear Karim,|t:I am sorry,|t:I can't come|t:because|t:I am sick.|t:From Hamid",t:Please come,,"Dear Karim, I am sorry, I can't come because I am sick. From Hamid.",,کریم عزیز، ببخش، آمده نمی‌توانم چون مریض هستم. از طرف حمید.
+18,,"Dear Hamid, Get well soon! See you next week. From Karim.",,"t:Dear Hamid,|t:Get well soon!|t:See you|t:next week.|t:From Karim","t:Dear Karim,",,"Dear Hamid, Get well soon! See you next week. From Karim.",,حمید عزیز، زود جور شوی! هفتهٔ آینده می‌بینیم. از طرف کریم.
+18,,Thank you for the present.,,t:Thank|t:you|t:for|t:the|t:present,t:from,,Thank you for the present.,,تشکر از تحفه.
+18,,I am sorry I am late.,,t:I|t:am|t:sorry|t:I|t:am|t:late,t:sad,,I am sorry I am late.,,ببخش که ناوقت آمدم.
+18,,Please come to my house.,,t:Please|t:come|t:to|t:my|t:house,t:go,,Please come to my house.,,لطفاً به خانهٔ ما بیا.
+18,,I can't come because I am sick.,,t:I|t:can't|t:come|t:because|t:I|t:am|t:sick,t:why,,I can't come because I am sick.,,آمده نمی‌توانم چون مریض هستم.
+18,,"Dear teacher, I am sorry I was late. I am going to come early tomorrow. From Zarmina.",,"t:Dear teacher,|t:I am sorry|t:I was late.|t:I am going to come|t:early tomorrow.|t:From Zarmina",t:Thank you,,"Dear teacher, I am sorry I was late. I am going to come early tomorrow. From Zarmina.",,معلم عزیز، ببخشید که ناوقت آمدم. فردا وقت می‌آیم. از طرف زرمینه.
+19,جمله‌هایی از آینده: going to و because با هم. جمله را بساز.,I am going to study.,,t:I|t:am|t:going|t:to|t:study,t:studies,,I am going to study.,,من درس می‌خوانم.
+19,,I am going to help my village.,,t:I|t:am|t:going|t:to|t:help|t:my|t:village,t:helps,,I am going to help my village.,,من به قریهٔ خود کمک می‌کنم.
+19,,We are going to build a new school.,,t:We|t:are|t:going|t:to|t:build|t:a|t:new|t:school,t:old,,We are going to build a new school.,,ما یک مکتب نو می‌سازیم.
+19,,I want to be an engineer.,,t:I|t:want|t:to|t:be|t:an|t:engineer,t:a,,I want to be an engineer.,,من می‌خواهم انجنیر شوم.
+19,,Our village needs a doctor.,,t:Our|t:village|t:needs|t:a|t:doctor,t:need,,Our village needs a doctor.,,قریهٔ ما به داکتر ضرورت دارد.
+19,,I learn English because I want to read.,,t:I|t:learn|t:English|t:because|t:I|t:want|t:to|t:read,,,I learn English because I want to read.,,من انگلیسی یاد می‌گیرم چون می‌خواهم بخوانم.
+19,,She is going to be a teacher.,,t:She|t:is|t:going|t:to|t:be|t:a|t:teacher,t:are,,She is going to be a teacher.,,او معلم می‌شود.
+19,,Why do you want to study?,,t:Why|t:do|t:you|t:want|t:to|t:study,t:Because,,Why do you want to study?,,چرا می‌خواهی درس بخوانی؟
+19,,I am not afraid.,,t:I|t:am|t:not|t:afraid,t:no,,I am not afraid.,,من نمی‌ترسم.

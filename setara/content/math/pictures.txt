@@ -16,8 +16,17 @@ carpet: a rectangular red Afghan carpet with a simple pattern, clearly longer th
 carrot: one orange carrot with green top
 chart_bars_1: a block chart with three columns, a small picture under each column and one block per unit: 4 apple, 5 bread, 2 egg (drawn by content/math/draw_pictures.py)
 chart_bars_2: a block chart with three columns, a small picture under each column and one block per unit: 5 pencil, 1 ball, 3 book (drawn by content/math/draw_pictures.py)
+chart_bars_3: a block chart with three columns, a small picture under each column and one block per unit: 2 goat, 5 sheep, 3 hen (drawn by content/math/draw_pictures.py)
+chart_bars_4: a block chart with three columns, a small picture under each column and one block per unit: 3 cup, 4 plate, 1 egg (drawn by content/math/draw_pictures.py)
+chart_bars_5: a block chart with three columns, a small picture under each column and one block per unit: 1 potato, 3 onion, 5 carrot (drawn by content/math/draw_pictures.py)
+chart_bars_6: a block chart with three columns, a small picture under each column and one block per unit: 4 pomegranate, 2 orange, 1 apple (drawn by content/math/draw_pictures.py)
 chart_table_1: a picture table with three rows read from the right: a small picture, then one dot per unit: 3 sheep, 5 hen, 1 cow (drawn by content/math/draw_pictures.py)
 chart_table_2: a picture table with three rows read from the right: a small picture, then one dot per unit: 2 pomegranate, 1 watermelon, 4 walnut (drawn by content/math/draw_pictures.py)
+chart_table_3: a picture table with three rows read from the right: a small picture, then one dot per unit: 5 apple, 3 carrot, 4 onion (drawn by content/math/draw_pictures.py)
+chart_table_4: a picture table with three rows read from the right: a small picture, then one dot per unit: 4 flower, 2 star, 5 fish (drawn by content/math/draw_pictures.py)
+chart_table_5: a picture table with three rows read from the right: a small picture, then one dot per unit: 2 book, 4 notebook, 3 pencil (drawn by content/math/draw_pictures.py)
+chart_table_6: a picture table with three rows read from the right: a small picture, then one dot per unit: 1 bread, 4 egg, 2 cup (drawn by content/math/draw_pictures.py)
+chick: one yellow chick, side view
 clock_1: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 1 and the long hand at 12
 clock_10: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 10 and the long hand at 12
 clock_11: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 11 and the long hand at 12
@@ -57,18 +66,27 @@ frog: a green frog in mid-jump (icon of Number Hop)
 goat: one goat with small horns, side view
 handkerchief: a square cloth handkerchief laid flat
 hen: one brown hen, side view
+lamb: one lamb, side view
 milk: a glass of milk
 moon: a crescent moon (icon of Days and Months)
 mountain: a single mountain peak drawn as a clear triangle with a snow cap
+no: a red cross (the basket for false)
+note: one plain green banknote with no writing, a clear rectangle
 notebook: one closed school notebook
 oil_can: a yellow can of cooking oil
 onion: one onion
 orange: a round orange fruit
+orange_half: half of a round orange: a half disc with the cut side and its segments showing (drawn by content/math/draw_pictures.py)
+orange_quarter: a quarter of a round orange: a quarter disc (drawn by content/math/draw_pictures.py)
+orange_third: a third of a round orange: one of three equal wedges (drawn by content/math/draw_pictures.py)
 pencil: one yellow pencil
 pencil_long: a long new pencil, filling the width of the picture
 pencil_short: a short used pencil stub, a third of the width of the picture
 plate: a round plate seen from above
 pomegranate: one red pomegranate
+pomegranate_half: half of a round pomegranate: a half disc with red seeds showing (drawn by content/math/draw_pictures.py)
+pomegranate_quarter: a quarter of a round pomegranate: a quarter disc (drawn by content/math/draw_pictures.py)
+pomegranate_third: a third of a round pomegranate: one of three equal wedges (drawn by content/math/draw_pictures.py)
 potato: one potato
 rice: a bowl of white rice
 rice_sack: a large tied sack of rice with a few grains shown
@@ -94,6 +112,7 @@ sugar: a small bag of sugar
 sun: a round yellow sun with no rays, or only very short ones
 tea: a glass of green tea
 tent: a triangular tent seen from the front
+tomato: one red tomato
 tree_short: a short small tree, half the height of the picture, standing on the same ground line
 tree_tall: a tall tree, filling the height of the picture
 walnut: one walnut in its shell
@@ -102,3 +121,4 @@ watermelon_half: half a watermelon, red cut side showing
 watermelon_quarter: a quarter of a watermelon
 wheel: a round cart wheel with spokes
 window: a square window with a wooden frame and four panes
+yes: a green tick (the basket for true)

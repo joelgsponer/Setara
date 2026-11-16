@@ -35,7 +35,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 12,,Which one comes with a storm?,,,wind,sun|star|moon,با طوفان باد تیز می‌آید.
 12,,Which one do you see at night?,,,moon,sun|rain|cloudy,شب مهتاب را می‌بینی.
 12,,Which weather is good for a walk?,,,sun,storm|rain,هوای آفتابی برای قدم زدن خوب است، طوفان و باران نه.
-12,,The road is white and cold. What is on it?,,,snow,rain|sand|flour,سرک سفید و سرد است، پس برف روی آن است.
+12,,The road is white and cold. What is on it?,,,snow,rain|sand|sugar,سرک سفید و سرد است، پس برف روی آن است.
 17,حالا کلمه را می‌خوانی. کدام کلمه برای دیروز است؟ walk برای امروز است، walked برای دیروز. بعد از Did و didn't فعل ساده می‌آید.,Which word is for yesterday?,,,t:went,t:go|t:goes,went گذشتهٔ go است: دیروز رفتم.
 17,,Which word tells about yesterday?,,,t:ate,t:eat|t:eats,ate گذشتهٔ eat است: دیروز خوردم.
 17,,Which word says: yesterday?,,,t:saw,t:see|t:sees,saw گذشتهٔ see است: دیروز دیدم.

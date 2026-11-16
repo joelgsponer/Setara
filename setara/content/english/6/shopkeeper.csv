@@ -1,0 +1,13 @@
+round,intro_fa,say_en,say_fa,goods,target,units,mode,help_fa
+# PRACTISE where money and quantity fit: tickets for a journey. Count the tickets, then pay the fare.
+07,تو تکت می‌فروشی و می‌خری. اول گوش کن که چند تکت لازم است و همان قدر بگذار. بعد گوش کن که قیمت چند است و همان قدر پول بده.,"Three tickets to Kabul, please.",,ticket,3,1,count,لطفاً سه تکت کابل.
+07,,"Two tickets, please. One for me and one for my mother.",,ticket,2,1,count,لطفاً دو تکت. یکی برای من و یکی برای مادرم.
+07,,We are a big family. We need six tickets.,,ticket,6,1,count,ما یک فامیل کلان هستیم. شش تکت کار داریم.
+07,,"Four tickets for the bus to the city, please.",,ticket,4,1,count,لطفاً چهار تکت بس شهر.
+07,,"One ticket, please. I am going to visit my aunt.",,ticket,1,1,count,لطفاً یک تکت. من به دیدن خاله‌ام می‌روم.
+07,,The ticket is fifty afghani.,,ticket,50,10|20|50,pay,تکت پنجاه افغانی است.
+07,,A ticket to the city is eighty afghani.,,ticket,80,10|20|50,pay,تکت شهر هشتاد افغانی است.
+07,,Two tickets are one hundred and sixty afghani.,,ticket,160,10|20|50|100,pay,دو تکت یکصد و شصت افغانی است.
+07,,The ticket to Kabul is two hundred afghani.,,ticket,200,50|100,pay,تکت کابل دوصد افغانی است.
+07,,The bus is cheap. It is thirty afghani.,,bus,30,10|20,pay,بس ارزان است. سی افغانی است.
+07,,Three tickets are two hundred and forty afghani.,,ticket,240,10|20|100,pay,سه تکت دوصد و چهل افغانی است.

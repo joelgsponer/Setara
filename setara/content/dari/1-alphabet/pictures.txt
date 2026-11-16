@@ -1,0 +1,3 @@
+fruit_branch: a leafy branch with three round fruits hanging from it, orange, red and yellow (ثمر)
+magnifier: a magnifying glass with a few small specks under the lens (ذره‌بین)
+weak_plant: a thin wilting seedling in a mound of soil, leaves hanging down (ضعیف)

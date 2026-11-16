@@ -54,7 +54,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 09,,Is the ball in front of the box?,,pos_in_front,yes,no,بلی. توپ پیش روی صندوق است: in front of.
 09,,Is the ball between the boxes?,,pos_between,yes,no,بلی. توپ بین دو صندوق است: between.
 09,,Is the ball in front of the box?,,pos_in,no,yes,نه. توپ در داخل صندوق است: in.
-09,,Is the ball on the box?,,pos_on,yes,no,بلی. توپ روی صندوق است: on.
+09,,Is the ball on the table?,,pos_on,yes,no,بلی. توپ روی میز است: on.
 09,,Is the ball next to the box?,,pos_next_to,yes,no,بلی. توپ پهلوی صندوق است: next to.
 09,,Is the house near?,,near,yes,no,بلی. خانه نزدیک است: near.
 09,,Is the house near?,,far,no,yes,نه. خانه بسیار دور است: far.

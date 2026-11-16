@@ -2,7 +2,7 @@
  "pack": "fa-4",
  "subject": "fa",
  "level": 4,
- "version": 1,
+ "version": 2,
  "title_en": "Dari 4: Sentences",
  "title_fa": "دری ۴: جمله‌ها",
  "games": [
@@ -15,7 +15,8 @@
    "intro_fa": "تصویر را ببین و کلمه درست را انتخاب کن.",
    "icon": "run",
    "v1": true,
-   "sheet": "action_words.csv"
+   "sheet": "action_words.csv",
+   "draw": 8
   },
   {
    "id": "read_and_choose",
@@ -36,7 +37,8 @@
    "title_fa": "جمله‌باف",
    "intro_fa": "کلمه‌ها را از راست به چپ کنار هم بگذار و جمله بساز.",
    "icon": "rope",
-   "sheet": "sentence_weaver.csv"
+   "sheet": "sentence_weaver.csv",
+   "draw": 8
   },
   {
    "id": "sentence_baskets",
@@ -46,7 +48,8 @@
    "title_fa": "سبد جمله‌ها",
    "intro_fa": "هر جمله را بخوان و در سبد درست بگذار.",
    "icon": "basket",
-   "sheet": "sentence_baskets.csv"
+   "sheet": "sentence_baskets.csv",
+   "draw": 8
   },
   {
    "id": "who_what_where",
@@ -77,6 +80,37 @@
    "intro_fa": "قصه را بخوان و به آن گوش کن. در میان قصه به سوال‌ها جواب بده.",
    "icon": "book",
    "sheet": "read_along.csv"
+  },
+  {
+   "id": "fits_or_not",
+   "engine": "story",
+   "letter": "i",
+   "title_en": "Fits or Not?",
+   "title_fa": "جور است یا نیست؟",
+   "intro_fa": "تصویر را ببین و جمله را بخوان. اگر جمله با تصویر جور است، بلی را انتخاب کن. اگر جور نیست، نه را انتخاب کن.",
+   "icon": "yes",
+   "sheet": "fits_or_not.csv"
+  },
+  {
+   "id": "story_order",
+   "engine": "story",
+   "letter": "j",
+   "title_en": "First, Then, Last",
+   "title_fa": "اول، بعد، آخر",
+   "intro_fa": "قصه خُرد را بخوان. خوب ببین که اول چه شد، بعد چه شد و آخر چه شد. بعد به سوال جواب بده.",
+   "icon": "book",
+   "sheet": "story_order.csv"
+  },
+  {
+   "id": "complete_sentence",
+   "engine": "journey",
+   "letter": "f",
+   "title_en": "Finish the Sentence",
+   "title_fa": "جمله را کامل کن",
+   "intro_fa": "جمله را گوش کن. کلمه آخر آن گفته نمی‌شود. چهار کلمه را بخوان و کلمه‌ای را انتخاب کن که جمله را کامل می‌کند.",
+   "icon": "rope",
+   "draw": 8,
+   "sheet": "complete_sentence.csv"
   }
  ]
 }

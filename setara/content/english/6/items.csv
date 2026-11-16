@@ -1,0 +1,206 @@
+unit,key,en,fa,picture,tags
+# English level 6 "The wider world". unit = classroom lesson number.
+# Rows with a picture are the words of Word Stall; every row is said in Echo. Rows tagged review repeat an earlier word.
+# 01 What does he do?
+01,farmer,farmer,دهقان,farmer,word
+01,shepherd,shepherd,چوپان,shepherd,word
+01,baker,baker,نانوا,baker,word
+01,driver,driver,دریور,driver,word
+01,builder,builder,گلکار,builder,word
+01,carpenter,carpenter,نجار,carpenter,word
+01,job,job,کار,,word
+01,what_does,What does he do?,او چه کار می‌کند؟,,phrase
+01,he_is_farmer,He is a farmer.,او دهقان است.,,phrase
+01,d_job,f: What is your father's job? // m: He is a carpenter.,کار پدرت چیست؟ او نجار است.,,dialogue
+01,d_mother,m: What does your mother do? // f: She is a baker.,مادرت چه کار می‌کند؟ او نانوا است.,,dialogue
+# 02 A baker makes bread
+02,weaver,weaver,قالین‌باف,weaver,word
+02,mechanic,mechanic,مستری,mechanic,word
+02,engineer,engineer,انجنیر,engineer,word
+02,tailor,tailor,خیاط,tailor,review
+02,nurse,nurse,نرس,nurse,review
+02,baker_makes,A baker makes bread.,نانوا نان می‌پزد.,,phrase
+02,driver_drives,A driver drives a lorry.,دریور لاری را می‌راند.,,phrase
+02,weaver_makes,A weaver makes carpets.,قالین‌باف قالین می‌بافد.,,phrase
+02,farmer_grows,A farmer grows wheat.,دهقان گندم می‌کارد.,,phrase
+02,builder_builds,A builder builds houses.,گلکار خانه می‌سازد.,,phrase
+02,d_mechanic,f: What does a mechanic do? // m: He repairs cars and lorries.,مستری چه کار می‌کند؟ او موترها و لاری‌ها را ترمیم می‌کند.,,dialogue
+# 03 Where does she work?
+03,tractor,tractor,تراکتور,tractor,word
+03,saw,saw,اره,saw,word
+03,lorry,lorry,لاری,lorry,word
+03,hammer,hammer,چکش,hammer,review
+03,brick,brick,خشت,brick,review
+03,where_work,Where does she work?,او کجا کار می‌کند؟,,phrase
+03,works_clinic,She works in a clinic.,او در کلینیک کار می‌کند.,,phrase
+03,works_field,The farmer works in the field.,دهقان در زمین کار می‌کند.,,phrase
+03,works_with,The carpenter works with a saw and a hammer.,نجار با اره و چکش کار می‌کند.,,phrase
+03,d_workshop,m: Where does your brother work? // f: He works in a workshop. He is a mechanic.,برادرت کجا کار می‌کند؟ او در ورکشاپ کار می‌کند. او مستری است.,,dialogue
+# 04 I want to be a teacher (no pictures: the pattern is taught through sentences)
+04,want_to_be,What do you want to be?,می‌خواهی چه کاره شوی؟,,phrase
+04,be_teacher,I want to be a teacher.,من می‌خواهم معلم شوم.,,phrase
+04,grow_up,"When I grow up, I want to be an engineer.",وقتی کلان شدم، می‌خواهم انجنیر شوم.,,phrase
+04,she_wants,She wants to be a doctor.,او می‌خواهد داکتر شود.,,phrase
+04,learn_lot,I must learn a lot.,من باید بسیار درس بخوانم.,,phrase
+04,d_be,f: What do you want to be? // m: I want to be a driver. I like lorries.,می‌خواهی چه کاره شوی؟ می‌خواهم دریور شوم. من لاری‌ها را خوش دارم.,,dialogue
+04,d_be2,m: And you? // f: I want to be a nurse. I like to help people.,و تو؟ من می‌خواهم نرس شوم. من کمک کردن به مردم را خوش دارم.,,dialogue
+# 05 I am going to visit my aunt (no pictures)
+05,aunt,aunt,خاله,,word
+05,uncle,uncle,کاکا,,word
+05,tonight,tonight,امشب,,word
+05,next_week,next week,هفتهٔ آینده,,word
+05,going_visit,I am going to visit my aunt tomorrow.,فردا به دیدن خاله‌ام می‌روم.,,phrase
+05,going_buy,He is going to buy shoes.,او بوت می‌خرد.,,phrase
+05,going_play,We are going to play after school.,ما بعد از مکتب بازی می‌کنیم.,,phrase
+05,going_rain,It is going to rain.,باران خواهد بارید.,,phrase
+05,d_plan,f: What is your plan for Friday? // m: I am going to help my uncle in the field.,پلان تو برای جمعه چیست؟ من به کاکایم در زمین کمک می‌کنم.,,dialogue
+05,d_tonight,m: What are you going to do tonight? // f: I am going to read my book.,امشب چه می‌کنی؟ کتابم را می‌خوانم.,,dialogue
+# 06 Are you going to come? (no pictures)
+06,are_you_going,Are you going to come?,آیا می‌آیی؟,,phrase
+06,yes_i_am,"Yes, I am.",بلی، می‌آیم.,,phrase
+06,no_im_not,"No, I'm not.",نه، نمی‌آیم.,,phrase
+06,what_going,What are you going to do?,چه می‌کنی؟,,phrase
+06,not_going,She is not going to cook today.,او امروز نمی‌پزد.,,phrase
+06,is_he_going,Is he going to walk?,آیا او پیاده می‌رود؟,,phrase
+06,d_come,"f: Are you going to come to my house? // m: Yes, I am. I am going to bring my ball.",آیا به خانهٔ ما می‌آیی؟ بلی، می‌آیم. توپ خود را می‌آورم.,,dialogue
+06,d_not,"m: Is your sister going to come? // f: No, she isn't. She is going to stay at home.",آیا خواهرت می‌آید؟ نه، نمی‌آید. او در خانه می‌ماند.,,dialogue
+# 07 By bus, by car, on foot
+07,bus,bus,بس,bus,word
+07,car,car,موتر,car,word
+07,bicycle,bicycle,بایسکل,bicycle,word
+07,motorbike,motorbike,موترسایکل,motorbike,word
+07,boat,boat,کشتی,boat,word
+07,plane,plane,طیاره,aeroplane,word
+07,ticket,ticket,تکت,ticket,word
+07,by_bus,I am going to go by bus.,من با بس می‌روم.,,phrase
+07,on_foot,We go to school on foot.,ما پیاده به مکتب می‌رویم.,,phrase
+07,d_ticket,"f: A ticket to Kabul, please. // m: Here you are. It is two hundred afghani.",لطفاً یک تکت کابل. بفرمایید. دوصد افغانی است.,,dialogue
+07,d_how_get,m: How are you going to get to the city? // f: By bus. It is cheap.,چطور به شهر می‌روی؟ با بس. ارزان است.,,dialogue
+# 08 The wider world
+08,world,world,دنیا,globe,word
+08,country,country,کشور,map_afghanistan,word
+08,city,city,شهر,city,word
+08,sea,sea,بحر,sea,word
+08,desert,desert,دشت,desert,word
+08,island,island,جزیره,island,word
+08,forest,forest,جنگل,forest,word
+08,lake,lake,جهیل,lake,word
+08,afg_country,Afghanistan is a country.,افغانستان یک کشور است.,,phrase
+08,kabul_city,Kabul is a big city.,کابل یک شهر کلان است.,,phrase
+08,there_are,There are high mountains in my country.,در کشور من کوه‌های بلند است.,,phrase
+08,d_sea,"f: Is there a sea in Afghanistan? // m: No, there isn't. But there are rivers and lakes.",آیا در افغانستان بحر است؟ نه، نیست. اما دریاها و جهیل‌ها است.,,dialogue
+# 09 Bigger and smaller
+09,tall,tall,بلند,tree_tall,word
+09,short,short,کوتاه,tree_short,word
+09,long,long,دراز,pencil_long,word
+09,fast,fast,تیز,rabbit,word
+09,slow,slow,آهسته,tortoise,word
+09,strong,strong,قوی,strong,word
+09,weak,weak,ضعیف,weak,word
+09,bigger_than,A horse is bigger than a goat.,اسپ از بز کلانتر است.,,phrase
+09,faster_than,The rabbit is faster than the tortoise.,خرگوش از سنگ‌پشت تیزتر است.,,phrase
+09,d_taller,"f: Who is taller, you or your brother? // m: My brother is taller. But I am stronger!",کی قدبلندتر است، تو یا برادرت؟ برادرم قدبلندتر است. اما من قوی‌تر هستم!,,dialogue
+09,d_older,m: Is your sister older than you? // f: No. She is younger than me.,آیا خواهرت از تو کلانتر است؟ نه. او از من خُردتر است.,,dialogue
+# 10 Review: jobs, plans, the world (no new words; whole dialogues to say)
+10,r_job,f: What does your uncle do? // m: He is a driver. He drives a bus to the city.,کاکایت چه کار می‌کند؟ او دریور است. او بس را به شهر می‌راند.,,dialogue
+10,r_be,m: What do you want to be? // f: I want to be an engineer. I am going to build bridges.,می‌خواهی چه کاره شوی؟ می‌خواهم انجنیر شوم. من پل‌ها می‌سازم.,,dialogue
+10,r_plan,f: What are you going to do tomorrow? // m: I am going to visit my aunt. I am going to go by bus.,فردا چه می‌کنی؟ به دیدن خاله‌ام می‌روم. با بس می‌روم.,,dialogue
+10,r_city,"m: Is the city bigger than your village? // f: Yes, it is. But my village is quieter.",آیا شهر از قریهٔ تو کلانتر است؟ بلی، است. اما قریهٔ من آرام‌تر است.,,dialogue
+10,r_work,f: Where does a farmer work? // m: He works in the field. He grows wheat.,دهقان کجا کار می‌کند؟ او در زمین کار می‌کند. او گندم می‌کارد.,,dialogue
+10,r_not,"m: Are you going to walk? // f: No, I'm not. It is too far. I am going to take the bus.",آیا پیاده می‌روی؟ نه، نمی‌روم. بسیار دور است. با بس می‌روم.,,dialogue
+# 11 More expensive, better, worse
+11,new,new,نو,new_shoe,word
+11,old_thing,old,کهنه,old_shoe,word
+11,heavy,heavy,سنگین,heavy_load,word
+11,expensive,expensive,گران,expensive,review
+11,cheap,cheap,ارزان,cheap,review
+11,more_expensive,The carpet is more expensive than the scarf.,قالین از چادر گرانتر است.,,phrase
+11,more_beautiful,This dress is more beautiful than that one.,این پیراهن از آن یکی مقبول‌تر است.,,phrase
+11,better,My new shoes are better than my old shoes.,بوت‌های نو من از بوت‌های کهنه‌ام بهتر است.,,phrase
+11,worse,The weather is worse today.,امروز هوا بدتر است.,,phrase
+11,d_better,"f: Which is better, the bus or the bicycle? // m: The bus is faster, but the bicycle is cheaper.",کدام بهتر است، بس یا بایسکل؟ بس تیزتر است، اما بایسکل ارزانتر است.,,dialogue
+11,d_difficult,"m: Is English more difficult than Dari? // f: Yes, but it is not too difficult.",آیا انگلیسی از دری مشکل‌تر است؟ بلی، اما بسیار مشکل نیست.,,dialogue
+# 12 Why? Because
+12,afraid,afraid,ترسیده,feel_afraid,word
+12,angry,angry,قهر,feel_angry,word
+12,worried,worried,پریشان,feel_worried,word
+12,calm,calm,آرام,feel_calm,word
+12,happy,happy,خوش,happy,review
+12,sad,sad,غمگین,sad,review
+12,why,Why?,چرا؟,,word
+12,because,because,چون,,word
+12,afraid_dark,I am afraid because it is dark.,من می‌ترسم چون تاریک است.,,phrase
+12,d_happy,f: Why are you happy? // m: Because it is Friday.,چرا خوش هستی؟ چون جمعه است.,,dialogue
+12,d_late,m: Why are you late? // f: Because the bus was slow.,چرا ناوقت آمدی؟ چون بس آهسته بود.,,dialogue
+# 13 Because I want to help (no pictures)
+13,doctor_because,I want to be a doctor because I want to help sick people.,من می‌خواهم داکتر شوم چون می‌خواهم به مردم مریض کمک کنم.,,phrase
+13,umbrella_because,I am going to take an umbrella because it is going to rain.,من چتری می‌گیرم چون باران خواهد بارید.,,phrase
+13,bus_because,We are going to go by bus because it is far.,ما با بس می‌رویم چون دور است.,,phrase
+13,like_because,I like spring because it is warm.,من بهار را خوش دارم چون هوا گرم است.,,phrase
+13,d_farmer,f: Why do you want to be a farmer? // m: Because I like the fields and the animals.,چرا می‌خواهی دهقان شوی؟ چون من زمین‌ها و حیوان‌ها را خوش دارم.,,dialogue
+13,d_early,m: Why are you going to get up early? // f: Because I am going to go to the city.,چرا وقت بیدار می‌شوی؟ چون به شهر می‌روم.,,dialogue
+# 14 One day
+14,wolf,wolf,گرگ,wolf,word
+14,fox,fox,روباه,fox,review
+14,lion,lion,شیر,lion,word
+14,crow,crow,زاغ,crow,word
+14,eagle,eagle,عقاب,eagle,word
+14,one_day,One day a fox saw a crow.,یک روز یک روباه یک زاغ را دید.,,phrase
+14,suddenly,Suddenly it started to rain.,ناگهان باران شروع شد.,,phrase
+14,finally,Finally they came home.,بالاخره آنها به خانه آمدند.,,phrase
+14,in_the_end,In the end everybody was happy.,در آخر همه خوش بودند.,,phrase
+14,three_steps,One day I went to the river. Then I saw a fish. Suddenly it jumped!,یک روز به دریا رفتم. بعد یک ماهی دیدم. ناگهان خیز زد!,,phrase
+# 15 He said, she asked (no pictures)
+15,said,"""Come here,"" said the fox.",روباه گفت: «اینجا بیا.»,,phrase
+15,asked,"""Why?"" asked the crow.",زاغ پرسید: «چرا؟»,,phrase
+15,answered,"The fox answered: ""Because I want to hear your song.""",روباه جواب داد: «چون می‌خواهم آواز تو را بشنوم.»,,phrase
+15,laughed,The children laughed.,اطفال خندیدند.,,phrase
+15,shouted,"""Help!"" shouted the boy.",پسر چیغ زد: «کمک!»,,phrase
+15,d_said,f: What did the teacher say? // m: She said: Read the story at home.,معلم چه گفت؟ او گفت: قصه را در خانه بخوانید.,,dialogue
+15,d_asked,m: What did you ask? // f: I asked: Can I help you?,چه پرسیدی؟ پرسیدم: به تو کمک کرده می‌توانم؟,,dialogue
+# 16 An old tale
+16,net,net,جال,net,word
+16,nest,nest,آشیانه,nest,word
+16,cave,cave,مغاره,cave,word
+16,pigeon,pigeon,کبوتر,pigeon,word
+16,jug,jug,کوزه,water_jug,review
+16,clever,The crow was clever.,زاغ هوشیار بود.,,phrase
+16,greedy,The wolf was greedy. He wanted all the food.,گرگ حریص بود. او تمام خوراک را می‌خواست.,,phrase
+16,brave,The little mouse was brave.,موش خُرد دلیر بود.,,phrase
+16,together,Together they were strong.,با هم قوی بودند.,,phrase
+16,d_tale,f: Do you know the tale of the lion and the mouse? // m: Yes! The mouse helped the lion.,قصهٔ شیر و موش را می‌دانی؟ بلی! موش به شیر کمک کرد.,,dialogue
+# 17 A short message
+17,letter,letter,خط,letter,word
+17,phone,phone,تلفون,phone,word
+17,calendar,calendar,جنتری,calendar,word
+17,present,present,تحفه,present,word
+17,message,message,پیام,,word
+17,dear,Dear Sara,سارای عزیز,,phrase
+17,how_are_you,How are you? I am fine.,چطور هستی؟ من خوب هستم.,,phrase
+17,see_you,See you soon.,به امید دیدار.,,phrase
+17,from_mina,From Mina,از طرف مینا,,phrase
+17,whole_msg,"Dear Sara, I am going to come on Friday. See you soon. From Mina.",سارای عزیز، من روز جمعه می‌آیم. به امید دیدار. از طرف مینا.,,phrase
+17,d_letter,f: Who is the letter from? // m: It is from my uncle in Kabul.,این خط از طرف کیست؟ از طرف کاکایم در کابل است.,,dialogue
+# 18 Please come. Thank you. I am sorry. (no pictures)
+18,invite,Please come to my house on Friday.,لطفاً روز جمعه به خانهٔ ما بیا.,,phrase
+18,thank_present,Thank you for the present.,تشکر از تحفه.,,phrase
+18,sorry_cant,"I am sorry, I can't come because I am sick.",ببخش، آمده نمی‌توانم چون مریض هستم.,,phrase
+18,sorry_late,I am sorry I am late.,ببخش که ناوقت آمدم.,,phrase
+18,get_well,Get well soon!,زود جور شوی!,,phrase
+18,d_invite,"f: Can you come to my house on Friday? // m: Yes, thank you! I am going to bring my sister.",روز جمعه به خانهٔ ما آمده می‌توانی؟ بلی، تشکر! خواهرم را می‌آورم.,,dialogue
+18,d_sorry,"m: I am sorry, I can't come. // f: Why not? // m: Because I must help my father.",ببخش، آمده نمی‌توانم. چرا نه؟ چون باید به پدرم کمک کنم.,,dialogue
+# 19 My future (no pictures)
+19,future,In the future I want to be an engineer.,در آینده می‌خواهم انجنیر شوم.,,phrase
+19,study,I am going to study at the university.,من در پوهنتون درس می‌خوانم.,,phrase
+19,help_village,I am going to help my village.,من به قریهٔ خود کمک می‌کنم.,,phrase
+19,build_school,We are going to build a new school.,ما یک مکتب نو می‌سازیم.,,phrase
+19,learn_because,I learn English because I want to read many books.,من انگلیسی یاد می‌گیرم چون می‌خواهم کتاب‌های بسیار بخوانم.,,phrase
+19,d_future,f: What are you going to do in the future? // m: I am going to be a teacher in my village.,در آینده چه می‌کنی؟ من در قریهٔ خود معلم می‌شوم.,,dialogue
+19,d_why,m: Why do you want to study? // f: Because our village needs a doctor.,چرا می‌خواهی درس بخوانی؟ چون قریهٔ ما به داکتر ضرورت دارد.,,dialogue
+# 20 Review: my story, my message (no new words; whole dialogues to say)
+20,r_why,f: Why were you afraid? // m: Because I saw a wolf. It was bigger than a dog.,چرا ترسیدی؟ چون یک گرگ دیدم. از سگ کلانتر بود.,,dialogue
+20,r_story,m: One day I went to the city by bus. Suddenly the bus stopped.,یک روز با بس به شهر رفتم. ناگهان بس ایستاد.,,dialogue
+20,r_said,f: What did the driver say? // m: He said: Don't worry. A mechanic is going to come.,دریور چه گفت؟ او گفت: پریشان نباشید. یک مستری می‌آید.,,dialogue
+20,r_msg,"f: Dear Mina, thank you for the letter. I am going to visit you next week. From Sara.",مینای عزیز، تشکر از خط تو. هفتهٔ آینده به دیدن تو می‌آیم. از طرف سارا.,,dialogue
+20,r_better,"m: Which is better, a letter or a phone? // f: A phone is faster, but a letter is more beautiful.",کدام بهتر است، خط یا تلفون؟ تلفون تیزتر است، اما خط مقبول‌تر است.,,dialogue
+20,r_future,f: What do you want to be? // m: I want to be a doctor because I want to help my village.,می‌خواهی چه کاره شوی؟ می‌خواهم داکتر شوم چون می‌خواهم به قریهٔ خود کمک کنم.,,dialogue

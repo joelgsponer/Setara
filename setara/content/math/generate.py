@@ -461,7 +461,7 @@ def flock_compare_item(s, rnd, intro, obj, counts, most: bool):
     ans = max(counts) if most else min(counts)
     wrong = [c for c in counts if c != ans]
     word = "بیشتر" if most else "کمتر"
-    row = lp(s, rnd, intro, tr(f"کدام از همه {word} است؟", f"Which one is the {'most' if most else 'fewest'}?"), f"p:{pic}*{ans}", [f"p:{pic}*{c}" for c in wrong],
+    row = lp(s, rnd, intro, tr(f"در کدام دسته {noun} از همه {word} است؟", f"In which group are there the {'most' if most else 'fewest'} {many(noun)}?"), f"p:{pic}*{ans}", [f"p:{pic}*{c}" for c in wrong],
              help_fa=tr(f"{fa(ans)} {noun} از همه {word} است.", f"{cnt(ans, noun)} is the {'most' if most else 'fewest'}."))
     got = int(row["answer"].split("*")[1])
     others = [int(x.split("*")[1]) for x in row["distractors"].split("|")]
@@ -473,7 +473,8 @@ def numeral_compare_item(s, rnd, intro, numbers, biggest: bool, script="W"):
     ans = max(numbers) if biggest else min(numbers)
     wrong = [n for n in numbers if n != ans]
     word = "بزرگتر" if biggest else "کوچکتر"
-    row = lp(s, rnd, intro, tr(f"کدام عدد از همه {word} است؟", f"Which number is the {'biggest' if biggest else 'smallest'}?"), num(ans, script), [num(n, script) for n in wrong],
+    d, e = said_list(numbers, spoken_number)
+    row = lp(s, rnd, intro, tr(f"{d}. کدام عدد از همه {word} است؟", f"{e}. Which number is the {'biggest' if biggest else 'smallest'}?"), num(ans, script), [num(n, script) for n in wrong],
              help_fa=tr(f"{fa(ans)} از همه {word} است.", f"{ans} is the {'biggest' if biggest else 'smallest'}."))
     got = value(row["answer"])
     others = [value(x) for x in row["distractors"].split("|")]
@@ -711,10 +712,11 @@ def seq_item(s, rnd, start, step, count, extra=(), script="W", intro=I_SEQ, tabl
 def order_item(s, rnd, numbers, up=True, intro=I_SEQ):
     seq = sorted(numbers, reverse=not up)
     assert len(set(seq)) == len(seq)
+    d, e = said_list(seq, spoken_number)
     if up:
-        say, help_fa = tr("این عددها را از کوچک به بزرگ بچین.", "Arrange these numbers from small to big."), tr("اول کوچکترین عدد را پیدا کن.", "First find the smallest number.")
+        say, help_fa = tr(f"{d}. این عددها را از کوچک به بزرگ بچین.", f"{e}. Arrange these numbers from small to big."), tr(f"اول کوچکترین عدد را پیدا کن: {fa(seq[0])}.", f"First find the smallest number: {seq[0]}.")
     else:
-        say, help_fa = tr("این عددها را از بزرگ به کوچک بچین.", "Arrange these numbers from big to small."), tr("اول بزرگترین عدد را پیدا کن.", "First find the biggest number.")
+        say, help_fa = tr(f"{d}. این عددها را از بزرگ به کوچک بچین.", f"{e}. Arrange these numbers from big to small."), tr(f"اول بزرگترین عدد را پیدا کن: {fa(seq[0])}.", f"First find the biggest number: {seq[0]}.")
     _weave(s, rnd, intro, say, seq, [], "W", help_fa, "up" if up else "down")
 
 
@@ -1096,6 +1098,8 @@ def order_things(s, rnd, intro, things, up, spoken, say, help_fa):
     """Tiles that are not whole numbers (fractions, decimals), smallest first or biggest first."""
     things = sorted(things, key=val, reverse=not up)
     assert len({val(t) for t in things}) == len(things) <= 8
+    d, e = said_list(things, lambda t: spoken[t])
+    say = tr(f"{d}. {say}", f"{e}. {EN[say]}")
     row = s.add(round=rnd, intro_fa=intro, say_fa=say, tiles="|".join(things), extra="", rtl="",
                 done_fa=tr("، ".join(spoken[t][0] for t in things) + ".", ", ".join(spoken[t][1] for t in things) + "."), help_fa=help_fa)
     ORDER_META.append((row, up))
@@ -1219,12 +1223,13 @@ def pick_even(cands, n: int, rng: random.Random, key=lambda c: c, cap: int = CAP
     groups: dict = {}
     for c in sorted(set(cands), key=repr):
         groups.setdefault(key(c), []).append(c)
-    for k in sorted(groups):
+    order = sorted(groups, key=lambda k: (type(k).__name__ == "str", k))   # numbers first, then names
+    for k in order:
         rng.shuffle(groups[k])
     used: Counter = Counter()
     out = []
     while len(out) < n:
-        avail = [k for k in sorted(groups) if groups[k] and used[k] < cap]
+        avail = [k for k in order if groups[k] and used[k] < cap]
         if not avail:
             raise AssertionError(f"only {len(out)} of {n} items within the cap")
         need = n - len(out)
@@ -1232,7 +1237,7 @@ def pick_even(cands, n: int, rng: random.Random, key=lambda c: c, cap: int = CAP
             chosen = avail
         else:  # one from each of `need` equal stretches of the range
             chosen = [avail[min(len(avail) - 1, int((i + rng.random()) * len(avail) / need))] for i in range(need)]
-            chosen = sorted(set(chosen))   # two stretches may meet in one key; the loop fills up what is missing
+            chosen = uniq(chosen)   # two stretches may meet in one key; the loop fills up what is missing
         for k in chosen:
             out.append(groups[k].pop())
             used[k] += 1
@@ -1309,6 +1314,21 @@ def build(sheet: Sheet, level: int, game: str, rnd: str, gen, few: int = 0, smal
             USED_EN.clear()
             USED_EN.update(used)
     raise AssertionError((level, game, rnd, last))
+
+
+def said_list(things, spoken) -> tuple[str, str]:
+    """The things of a question read aloud in a mixed order (never the order
+    of the answer), so that a child who cannot read them still hears them and
+    no two questions of a pool sound the same. spoken(thing) -> (Dari, English)."""
+    order = list(things)
+    rng_for("said", *order).shuffle(order)
+    if order == sorted(order, key=lambda x: (val(x) if isinstance(x, str) else x)) and len(order) > 1:
+        order.append(order.pop(0))
+    return "، ".join(spoken(x)[0] for x in order), ", ".join(spoken(x)[1] for x in order)
+
+
+def spoken_number(n) -> tuple[str, str]:
+    return fa(n), str(n)
 
 
 def uniq(items, key=lambda x: x) -> list:
@@ -1412,7 +1432,8 @@ def row_item(s, rnd, intro, start, step, count, gap, rng, lo, hi, script="W"):
         help_fa = tr(f"هر بار {fa(k)} زیاد می{Z}شود. {fa(prev)} جمع {fa(k)} مساوی {fa(ans)}.", f"It goes up by {k} each time. {prev} plus {k} equals {ans}.")
     else:
         help_fa = tr(f"هر بار {fa(k)} کم می{Z}شود. {fa(prev)} منفی {fa(k)} مساوی {fa(ans)}.", f"It goes down by {k} each time. {prev} minus {k} equals {ans}.")
-    prefer = [ans + 1, ans - 1, prev + (1 if step > 0 else -1) * (k + 1 if k > 1 else 2), ans + step]
+    half = [ans + k // 2, ans - k // 2] if k >= 4 else []   # a number between two of the row
+    prefer = half + [ans + 1, ans - 1, prev + (1 if step > 0 else -1) * (k + 1 if k > 1 else 2), ans + step]
     wrong = near(ans, rng, lo, hi + 2 * k, [p for p in prefer if p not in seq])
     lp(s, rnd, intro, say, num(ans, script), [num(x, script) for x in wrong], show=shown, help_fa=help_fa,
        truth=lambda c, a=ans: val(c) == a)
@@ -1507,7 +1528,10 @@ def count_on_item(s, rnd, intro, a, k, on: bool, rng, hi, step=1):
     way = [a + i * step * (1 if on else -1) for i in range(1, k + 1)]
     unit = "" if step == 1 else f"{fa(step)} تا {fa(step)} تا، "
     unit_en = "" if step == 1 else f"in {step}s, "
-    if on:
+    if step == 1:
+        say = tr(f"از {fa(a)} شروع کن و {fa(k)} تا {'پیش' if on else 'پس'} بشمار. به کدام عدد می{Z}رسی؟",
+                 f"Start from {a} and count {'on' if on else 'back'} {k}. Which number do you reach?")
+    elif on:
         say = tr(f"از {fa(a)} شروع کن و {unit}{fa(k)} بار پیش بشمار. به کدام عدد می{Z}رسی؟", f"Start from {a} and count on {unit_en}{k} {'time' if k == 1 else 'times'}. Which number do you reach?")
     else:
         say = tr(f"از {fa(a)} شروع کن و {unit}{fa(k)} بار پس بشمار. به کدام عدد می{Z}رسی؟", f"Start from {a} and count back {unit_en}{k} {'time' if k == 1 else 'times'}. Which number do you reach?")
@@ -1705,8 +1729,31 @@ STORIES = {
 }
 
 
+# The largest two numbers each story still makes sense with (nobody drinks
+# nineteen cups of water in a morning), in the order of STORIES.
+ANY = (10 ** 9, 10 ** 9)
+STORY_MOST = {
+    "+": [(99, 99), (40, 40), (20, 20), ANY, ANY, (6, 6), (40, 40), (60, 60), (40, 40)],
+    "-": [(99, 99), (40, 40), (20, 20), ANY, ANY, (20, 20), (40, 40), (60, 60)],
+    "diff": [(60, 60), (30, 30), (99, 99), (30, 30), (9, 9)],
+    "*": [(20, 2), (10, 5), (20, 10), (20, 4), (12, 30), (30, 8), (20, 50), (30, 50), (40, 6)],
+    "/": [(120, 12), ANY, (30, 10), (10 ** 9, 50), (200, 12), (200, 20)],
+}
+assert all(len(STORY_MOST[k]) == len(STORIES[k]) for k in STORIES)
+
+
+def story_fits(kind, i, a, b) -> bool:
+    return a <= STORY_MOST[kind][i][0] and b <= STORY_MOST[kind][i][1]
+
+
 def village_item(s, rnd, intro, kind, t, a, b, rng, hi, script="W"):
-    text, pic, why = STORIES[kind][t % len(STORIES[kind])]
+    if kind == "*":
+        text, pic, why = STORIES[kind][t]
+    else:   # the stories take turns; one that does not fit these numbers is passed over
+        fits = [i for i in range(len(STORIES[kind])) if story_fits(kind, i, a, b)]
+        if not fits:
+            raise Retry("no story for these numbers")
+        text, pic, why = STORIES[kind][fits[t % len(fits)]]
     op = "-" if kind == "diff" else kind
     say = tr(*text(a, b))
     if op == "/":
@@ -1727,12 +1774,15 @@ def village_round(s, level, rnd, intro, kinds: dict, hi, n=N):
             want = share + (n - share * len(kinds) if j == 0 else 0)
             key = (lambda c: c[0] // c[1]) if kind == "/" else (lambda c: c[0] * c[1]) if kind == "*" else \
                   (lambda c: c[0] + c[1]) if kind == "+" else (lambda c: c[0] - c[1])
-            usable = cands
+            usable = [c for c in cands if min(c) >= 2] or cands
             for a, b in pick_even(usable, want, rng, key=key, cap=2):
                 if kind == "*":   # a story tied to one table (two legs, five fingers) only with that table
-                    fits = [i for i, st in enumerate(STORIES["*"]) if st[1] in (None, b)]
+                    fits = [i for i, st in enumerate(STORIES["*"]) if st[1] in (None, b) and story_fits("*", i, a, b)]
                     tied = [i for i in fits if STORIES["*"][i][1] == b]
-                    pick = rng.choice(tied) if tied and rng.random() < 0.5 else rng.choice([i for i in fits if STORIES["*"][i][1] is None])
+                    free = [i for i in fits if STORIES["*"][i][1] is None]
+                    if not fits:
+                        raise Retry("no story for these numbers")
+                    pick = rng.choice(tied) if tied and (not free or rng.random() < 0.5) else rng.choice(free)
                     village_item(s, rnd, intro, kind, pick, a, b, rng, hi)
                 else:
                     village_item(s, rnd, intro, kind, t, a, b, rng, hi)
@@ -2311,7 +2361,7 @@ def weaver(level: int) -> Sheet:
 # ---------------------------------------------------------------------------
 
 SHAPED["rectangle"].append(("note", "نوت"))
-FRACTIONS["whole"] += [("orange", "مالته پوره"), ("pomegranate", "انار پوره")]
+FRACTIONS["whole"] += [("orange", "مالته پوره"), None]   # the library's pomegranate shows a cut piece beside the fruit: not a clear whole
 FRACTIONS["half"] += [("orange_half", "نیم مالته"), ("pomegranate_half", "نیم انار")]
 FRACTIONS["quarter"] += [("orange_quarter", "چارک مالته"), ("pomegranate_quarter", "چارک انار")]
 FRACTION_NOUNS += ["مالته", "انار"]
@@ -2513,9 +2563,11 @@ def mason(level: int) -> Sheet:
         hear_clock("02", [7, 8, 9, 10, 11, 12])
 
         def read(rng):
-            for h, sc in pick_even([(h, sc) for h in range(1, 13) for sc in "WD"], N, rng, key=lambda c: c[0]):
+            asks = [tr("ساعت چند است؟", "What time is it?"), tr("این ساعت چند را نشان می" + Z + "دهد؟", "What time does this clock show?"),
+                    tr("عقربه کوتاه را ببین. ساعت چند است؟", "Look at the short hand. What time is it?")]
+            for i, (h, sc) in enumerate(pick_even([(h, sc) for h in range(1, 13) for sc in "WD"], N, rng, key=lambda c: c[0])):
                 wrong = near(h, rng, 1, 12, [12 if h != 12 else 6, wrap(h + 1), wrap(h - 1)])
-                row = lp(s, "03", I_CLOCK_READ, tr("ساعت چند است؟", "What time is it?"), num(h, sc), [num(x, sc) for x in wrong], show=clock(h),
+                row = lp(s, "03", I_CLOCK_READ, asks[i % 3], num(h, sc), [num(x, sc) for x in wrong], show=clock(h),
                          help_fa=tr(f"عقربه کوتاه طرف {fa(h)} است. ساعت {fa(h)} است.", f"The short hand points to {h}. It is {h} o'clock."))
                 MASON_META.append((row, h))
         B("03", read)
@@ -3152,8 +3204,8 @@ def weaver45(level: int) -> Sheet:
                     n = rng.choice([6, 7, 8, 9, 10, 12])
                     pairs, help_fa = [(k, n) for k in sorted(rng.sample(range(1, n), size))], same
                 else:
-                    k = 1 if i % 4 == 1 else 2
-                    pairs, help_fa = [(k, n) for n in sorted(rng.sample([d for d in range(2, 13) if d > k and (k == 1 or d % 2)], size))], unit
+                    k = 1 if i % 4 == 1 else 2 if i % 8 == 3 else 3
+                    pairs, help_fa = [(k, n) for n in sorted(rng.sample([d for d in range(2, 13) if d > k and math.gcd(d, k) == 1], size if k == 1 else 4))], unit
                 sp = fracs(pairs)
                 up = i % 3 != 2
                 order_things(s, "03", I_ORDER_FRAC, list(sp), up, sp, up_say if up else down_say, help_fa)
@@ -3416,7 +3468,8 @@ def mason45(level: int) -> Sheet:
             for cols, rows in [(2, 1), (3, 1), (2, 2), (3, 2), (3, 3), (4, 3), (4, 4), (5, 4)]:
                 n = cols * rows
                 for script in "WD":
-                    out.append((tr(f"هر مربع یک {SQM} است. مساحت این فرش چند {SQM} است؟", "Each square is 1 square metre. How many square metres is the area of this floor?"),
+                    out.append(([tr(f"هر مربع یک {SQM} است. مساحت این فرش چند {SQM} است؟", "Each square is 1 square metre. How many square metres is the area of this floor?"),
+                                 tr(f"مربع{Z}ها را بشمار. هر مربع یک {SQM} است. مساحت چند {SQM} می{Z}شود؟", "Count the squares. Each square is 1 square metre. How many square metres is the area?")][script == "D"],
                                 n, [2 * (cols + rows), n + 1, n - 1, cols + rows],
                                 tr(f"{fa(rows)} قطار است و در هر قطار {fa(cols)} مربع. {fa(rows)} ضرب {fa(cols)} مساوی {fa(n)}.",
                                    f"There {'is' if rows == 1 else 'are'} {nn(rows, 'row')} with {nn(cols, 'square')} in each. {rows} times {cols} equals {n}."),
@@ -3762,7 +3815,7 @@ def catch45(level: int) -> Sheet:
             rule("02", say, fracs(rng.sample(yes, min(6, len(yes)))), fracs(rng.sample(no, 6)), help_fa, test)
 
         def dec_rule(rng, say, help_fa, test):
-            pool = ["0.5", "0.25", "0.75", "0.9", "0.05", "0.1", "0.4", "0.45", "0.6", "0.99", "1.5", "1.25", "2.5", "1.05", "3.75", "1.1", "1.01", "9.9", "1.9", "2.05", "2.25", "0.3", "1.75"]
+            pool = ["0.5", "0.25", "0.75", "0.9", "0.05", "0.1", "0.4", "0.45", "0.6", "0.99", "1.5", "1.25", "2.5", "1.05", "3.75", "1.1", "1.01", "9.9", "1.9", "2.05", "2.25", "0.3", "1.75", "2.75", "3.5", "0.2", "0.8"]
             yes, no = [d for d in pool if test(Fraction(d))], [d for d in pool if not test(Fraction(d))]
             rule("02", say, ["t:" + d for d in rng.sample(yes, 6)], ["t:" + d for d in rng.sample(no, 6)], help_fa, test)
 
@@ -4173,10 +4226,11 @@ def riddles(level: int) -> Sheet:
                 want_even = ans % 2 == 0
                 others = [x for x in range(max(lo, ans - 12), min(hi, ans + 12) + 1) if (x % 2 == 0) != want_even]
                 wrong = rng.sample(others, 3)
+                d, e = said_list([ans] + wrong, spoken_number)
                 if want_even:
-                    say, help_fa = tr("کدام عدد جفت است؟", "Which number is even?"), tr(f"{fa(ans)} جفت است: آن را دو حصه برابر کرده می{Z}توانی.", f"{ans} is even: you can make it into 2 equal parts.")
+                    say, help_fa = tr(f"{d}. کدام عدد جفت است؟", f"{e}. Which number is even?"), tr(f"{fa(ans)} جفت است: آن را دو حصه برابر کرده می{Z}توانی.", f"{ans} is even: you can make it into 2 equal parts.")
                 else:
-                    say, help_fa = tr("کدام عدد طاق است؟", "Which number is odd?"), tr(f"{fa(ans)} طاق است: وقتی دو حصه می{Z}کنی، یکی باقی می{Z}ماند.", f"{ans} is odd: when you make 2 parts, 1 is left over.")
+                    say, help_fa = tr(f"{d}. کدام عدد طاق است؟", f"{e}. Which number is odd?"), tr(f"{fa(ans)} طاق است: وقتی دو حصه می{Z}کنی، یکی باقی می{Z}ماند.", f"{ans} is odd: when you make 2 parts, 1 is left over.")
                 lp(s, rnd, I_ODD_ONE, say, W(ans), [W(x) for x in wrong], help_fa=help_fa,
                    truth=(lambda c: val(c) % 2 == 0) if want_even else (lambda c: val(c) % 2 == 1))
         B(rnd, gen, few=0)
@@ -4233,7 +4287,7 @@ def riddles(level: int) -> Sheet:
                 (p1, n1), (p2, n2) = objs[i], objs[(i + 5) % len(objs)]
                 if i % 3 == 0:
                     wrong = rng.sample([x for x in range(1, 13) if x != v], 3)
-                    lp(s, "03", I_EQUAL, tr("در کدام تصویر همین قدر چیز است؟", "Which picture has just as many things?"),
+                    lp(s, "03", I_EQUAL, tr(f"این {n1} را ببین. در کدام تصویر همین قدر {n2} است؟", f"Look at the {many(n1)}. Which picture has just as many {many(n2)}?"),
                        f"p:{p2}*{v}", [f"p:{p2}*{x}" for x in wrong], show=f"p:{p1}*{v}",
                        help_fa=tr(f"{fa(v)} {n1} و {fa(v)} {n2}: هر دو {fa(v)} تا است.", f"{cnt(v, n1)} and {cnt(v, n2)}: both are {v}."),
                        truth=lambda c, v=v: int(c.split("*")[1]) == v)
@@ -4242,13 +4296,13 @@ def riddles(level: int) -> Sheet:
                     wrong = rng.sample(range(1, ref + 1), 3) if ref >= 3 else None
                     if wrong is None:
                         raise Retry("no room")
-                    lp(s, "03", I_EQUAL, tr("در کدام تصویر بیشتر از این است؟", "Which picture has more than this?"),
+                    lp(s, "03", I_EQUAL, tr(f"این {n1} را ببین. در کدام تصویر {n2} بیشتر از این است؟", f"Look at the {many(n1)}. In which picture are there more {many(n2)} than this?"),
                        f"p:{p2}*{v}", [f"p:{p2}*{x}" for x in wrong], show=f"p:{p1}*{ref}",
                        help_fa=tr(f"{fa(v)} از {fa(ref)} بیشتر است.", f"{v} is more than {ref}."), truth=lambda c, r=ref: int(c.split("*")[1]) > r)
                 else:
                     ref = v + rng.randint(1, 3)
                     wrong = rng.sample(range(ref, ref + 5), 3)
-                    lp(s, "03", I_EQUAL, tr("در کدام تصویر کمتر از این است؟", "Which picture has fewer than this?"),
+                    lp(s, "03", I_EQUAL, tr(f"این {n1} را ببین. در کدام تصویر {n2} کمتر از این است؟", f"Look at the {many(n1)}. In which picture are there fewer {many(n2)} than this?"),
                        f"p:{p2}*{v}", [f"p:{p2}*{x}" for x in wrong], show=f"p:{p1}*{ref}",
                        help_fa=tr(f"{fa(v)} از {fa(ref)} کمتر است.", f"{v} is fewer than {ref}."), truth=lambda c, r=ref: int(c.split("*")[1]) < r)
         B("03", groups)
@@ -4284,7 +4338,8 @@ def riddles(level: int) -> Sheet:
                        truth=lambda c, t=t: text_sum(c) == t)
                 else:            # how much is this money?
                     wrong = near(t, rng, 1, 150, [t + right[-1], t - right[-1], len(right), t + 10])
-                    lp(s, "05", I_COINS, tr(f"این پول چند {AFN} است؟", "How many afghani is this money?"), W(t), [W(x) for x in wrong], show=text(right),
+                    lp(s, "05", I_COINS, tr(" و ".join(fa(x) for x in right) + f". این پول چند {AFN} است؟", " and ".join(map(str, right)) + ". How many afghani is this money?"),
+                       W(t), [W(x) for x in wrong], show=text(right),
                        help_fa=tr(" جمع ".join(fa(x) for x in right) + f" مساوی {fa(t)}.", " plus ".join(map(str, right)) + f" equals {t}."),
                        truth=lambda c, t=t: val(c) == t)
         B("05", coins)
@@ -4771,7 +4826,7 @@ def check_answers45() -> None:
 # It reads only the finished rows, as the builder will, and knows nothing of
 # how they were made.
 
-MAX_CHARS = {"choice": 9, "show": 16, "tile": 8, "thing": 15, "card": 9, "catch": 4}   # Latin text that still reads on its card
+MAX_CHARS = {"choice": 9, "show": 23, "tile": 8, "thing": 15, "card": 9, "catch": 4}   # Latin text that still reads on its card
 
 
 def chars(thing: str) -> int:

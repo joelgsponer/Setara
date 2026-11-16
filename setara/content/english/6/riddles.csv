@@ -1,0 +1,86 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# PRACTISE. The word itself is never said: the child has to understand the sentence. Pools: each play asks eight.
+01,کسی از کار خود می‌گوید، اما نام کار را نمی‌گوید. تو بگو که او کیست: دهقان، چوپان، نانوا، دریور، گلکار یا نجار.,I work in the field. I grow wheat.,,,farmer,shepherd|baker|driver,کسی که در زمین کار می‌کند و گندم می‌کارد دهقان است: farmer.
+01,,I take the sheep to the hill.,,,shepherd,farmer|driver|builder,کسی که گوسفندها را به تپه می‌برد چوپان است: shepherd.
+01,,I get up very early. I make bread.,,,baker,farmer|carpenter|shepherd,کسی که نان می‌پزد نانوا است: baker.
+01,,I sit in a lorry all day.,,,driver,builder|baker|carpenter,کسی که تمام روز در لاری می‌نشیند دریور است: driver.
+01,,I make walls with bricks.,,,builder,carpenter|farmer|driver,کسی که با خشت دیوار می‌سازد گلکار است: builder.
+01,,I make doors and tables.,,,carpenter,builder|baker|shepherd,کسی که دروازه و میز می‌سازد نجار است: carpenter.
+01,,My dog helps me with the animals.,,,shepherd,carpenter|baker|builder,سگ به چوپان کمک می‌کند: shepherd.
+01,,People buy my bread every morning.,,,baker,driver|farmer|builder,مردم هر صبح از نانوا نان می‌خرند: baker.
+01,,I work with wood.,,,carpenter,farmer|driver|shepherd,نجار با چوب کار می‌کند: carpenter.
+01,,I have a tractor and many fields.,,,farmer,driver|builder|baker,دهقان تراکتور و زمین دارد: farmer.
+01,,I take people to the city.,,,driver,farmer|shepherd|carpenter,دریور مردم را به شهر می‌برد: driver.
+01,,You live in a house. I made it.,,,builder,baker|shepherd|driver,گلکار خانه می‌سازد: builder.
+03,چیستان‌هایی از افزار کار و جای کار. فکر کن: این چیز از کدام کار است؟,It cuts wood.,,,saw,hammer|needle|brick,اره چوب را می‌بُرد: saw.
+03,,It is big and loud. The farmer drives it in the field.,,,tractor,lorry|cart|bicycle,تراکتور کلان است و دهقان آن را در زمین می‌راند: tractor.
+03,,It carries heavy things on the road.,,,lorry,tractor|cart|donkey,لاری چیزهای سنگین را روی سرک می‌برد: lorry.
+03,,The builder makes walls with them.,,,brick,saw|needle|wheat,گلکار با خشت دیوار می‌سازد: bricks.
+03,,The carpenter hits nails with it.,,,hammer,saw|shovel|scissors,نجار با چکش به میخ می‌زند: hammer.
+03,,The tailor sews with it. It is very small.,,,needle,hammer|saw|shovel,خیاط با سوزن می‌دوزد: needle.
+03,,The farmer grows it. We make bread from it.,,,wheat,brick|wool|cloth,دهقان گندم می‌کارد و از آن نان می‌پزیم: wheat.
+03,,The nurse works here.,,,clinic,bakery|field|school,نرس در کلینیک کار می‌کند: clinic.
+03,,The baker works here.,,,bakery,clinic|school|field,نانوا در نانوایی کار می‌کند: bakery.
+03,,The teacher works here.,,,school,clinic|bakery|bazaar,معلم در مکتب کار می‌کند: school.
+03,,The farmer works here.,,,field,school|clinic|bakery,دهقان در زمین کار می‌کند: field.
+03,,The tailor cuts cloth with them.,,,scissors,needle|saw|hammer,خیاط با قیچی تکه را می‌بُرد: scissors.
+07,چیستان‌های سفر: با چه می‌رویم؟ کلمه‌های نو: bus بس، car موتر، bicycle بایسکل، motorbike موترسایکل، boat کشتی، plane طیاره، ticket تکت.,It is big. Many people sit in it. It goes to the city.,,,bus,car|bicycle|boat,بس کلان است و مردم بسیار در آن می‌نشینند: bus.
+07,,It has two wheels. You push with your feet.,,,bicycle,motorbike|car|bus,بایسکل دو تایر دارد و با پا می‌رود: bicycle.
+07,,It has two wheels and it is loud and fast.,,,motorbike,bicycle|bus|boat,موترسایکل دو تایر دارد و تیز و پرصدا است: motorbike.
+07,,It goes on the water.,,,boat,bus|car|aeroplane,کشتی روی آب می‌رود: boat.
+07,,It flies in the sky.,,,aeroplane,boat|bus|train,طیاره در آسمان پرواز می‌کند: plane.
+07,,It has four wheels. A family sits in it.,,,car,bicycle|boat|motorbike,موتر چهار تایر دارد و یک فامیل در آن می‌نشیند: car.
+07,,You buy it. Then you can get on the bus.,,,ticket,coin|book|key,اول تکت می‌خری، بعد به بس بالا می‌شوی: ticket.
+07,,It is long. It runs on two iron lines.,,,train,bus|lorry|boat,ریل دراز است و روی دو خط آهن می‌رود: train.
+07,,"It carries sacks and bricks, not people.",,,lorry,bus|car|bicycle,لاری بوجی و خشت می‌برد، نه مردم: lorry.
+07,,A donkey pulls it.,,,cart,car|lorry|bicycle,کراچی را خر کش می‌کند: cart.
+07,,You have no bus and no car. You go with your feet.,,,walk,bus|car|boat,بدون بس و موتر پیاده می‌روی: on foot.
+07,,You want to cross the sea. It is slower than a plane.,,,ship,aeroplane|bus|bicycle,کشتی کلان از بحر تیر می‌شود و از طیاره آهسته‌تر است: ship.
+08,چیستان‌هایی از دنیا: بحر، دشت، جزیره، جنگل، جهیل، شهر. نام آن گفته نمی‌شود.,There is water and water and water. Big ships go on it.,,,sea,lake|desert|forest,بحر آب بسیار است و کشتی‌های کلان روی آن می‌روند: sea.
+08,,There is only sand. It is hot and dry.,,,desert,forest|sea|lake,دشت ریگ دارد و گرم و خشک است: desert.
+08,,"There are many, many trees.",,,forest,desert|city|island,در جنگل درخت‌های بسیار است: forest.
+08,,It is land with water all around it.,,,island,lake|city|desert,جزیره خشکه است و چهار طرف آن آب است: island.
+08,,It is water with land all around it.,,,lake,island|sea|river,جهیل آب است و چهار طرف آن خشکه است: lake.
+08,,"There are many houses, shops and roads. Many people live there.",,,city,forest|desert|island,در شهر خانه‌ها، دکان‌ها و سرک‌های بسیار است: city.
+08,,It is round. All the countries are on it.,,,globe,ball|moon|sun,دنیا گرد است و همهٔ کشورها روی آن است: world.
+08,,It is very high. There is snow on top.,,,mountain,desert|lake|field,کوه بسیار بلند است و سر آن برف است: mountain.
+08,,This is our country on the map.,,,map_afghanistan,globe|island|lake,این کشور ما روی نقشه است: Afghanistan.
+08,,The water runs from the mountains to the fields.,,,river,lake|sea|well,آب دریا از کوه به زمین‌ها می‌رود: river.
+08,,It is smaller than a city. My house is there.,,,scene_village,city|forest|desert,قریه از شهر خُردتر است: village.
+08,,Camels walk here. There is no water.,,,desert,sea|forest|city,اشترها در دشت می‌روند و آب نیست: desert.
+12,کسی می‌گوید که چه شده است. تو بگو که او چه حال دارد: ترسیده، قهر، پریشان، آرام، خوش یا غمگین. جواب همیشه یک دلیل دارد.,It is dark and I hear a wolf.,,,feel_afraid,happy|feel_calm|feel_angry,در تاریکی آواز گرگ می‌آید، پس می‌ترسم: afraid.
+12,,My brother broke my kite.,,,feel_angry,happy|feel_calm|feel_afraid,برادرم کاغذپران مرا شکست، پس قهر هستم: angry.
+12,,My mother is sick and the clinic is far.,,,feel_worried,happy|feel_calm|feel_angry,مادرم مریض است و کلینیک دور است، پس پریشان هستم: worried.
+12,,I sit under a tree. The birds sing.,,,feel_calm,feel_angry|feel_afraid|sad,زیر درخت نشسته‌ام و پرنده‌ها می‌خوانند: آرام هستم، calm.
+12,,Today my aunt is going to come!,,,happy,sad|feel_angry|feel_afraid,امروز خاله‌ام می‌آید، پس خوش هستم: happy.
+12,,My friend is going to go to the city. I am going to be alone.,,,sad,happy|feel_angry|feel_calm,دوستم می‌رود و من تنها می‌مانم، پس غمگین هستم: sad.
+12,,There is a big dog on the road. It is not friendly.,,,feel_afraid,happy|feel_calm|sad,یک سگ کلان در راه است، پس می‌ترسم: afraid.
+12,,The teacher says: Very good!,,,happy,sad|feel_worried|feel_angry,معلم می‌گوید بسیار خوب، پس خوش هستم: happy.
+12,,I lost the money for the bread.,,,feel_worried,happy|feel_calm|feel_angry,پول نان را گم کردم، پس پریشان هستم: worried.
+12,,A boy took my ball and ran away.,,,feel_angry,feel_calm|happy|feel_afraid,یک پسر توپ مرا گرفت و گریخت، پس قهر هستم: angry.
+12,,My cat is lost.,,,sad,happy|feel_calm|feel_angry,پشک من گم شده است، پس غمگین هستم: sad.
+12,,The storm is over. Everything is quiet.,,,feel_calm,feel_afraid|feel_angry|sad,طوفان تمام شد و همه جا آرام است: calm.
+14,چیستان‌هایی از حیوان‌های قصه‌ها: گرگ، روباه، شیر، زاغ، عقاب، موش، خرگوش، سنگ‌پشت.,It is black. It flies and it is clever.,,,crow,eagle|pigeon|fox,زاغ سیاه و هوشیار است و پرواز می‌کند: crow.
+14,,It is orange and it has a long tail. In the tales it is clever.,,,fox,wolf|lion|rabbit,روباه نارنجی است و دُم دراز دارد: fox.
+14,,It is grey. The shepherd is afraid of it.,,,wolf,fox|dog|lion,گرگ خاکستری است و چوپان از آن می‌ترسد: wolf.
+14,,It is the king of the animals.,,,lion,wolf|fox|eagle,شیر پادشاه حیوان‌ها است: lion.
+14,,It is a big bird. It flies very high over the mountains.,,,eagle,crow|pigeon|sparrow,عقاب یک پرندهٔ کلان است و بسیار بلند پرواز می‌کند: eagle.
+14,,It is very small. The cat wants to catch it.,,,mouse,rabbit|fox|tortoise,موش بسیار خُرد است و پشک می‌خواهد آن را بگیرد: mouse.
+14,,It has long ears and it runs fast.,,,rabbit,tortoise|mouse|fox,خرگوش گوش‌های دراز دارد و تیز می‌دود: rabbit.
+14,,It carries its house on its back. It is slow.,,,tortoise,rabbit|mouse|crow,سنگ‌پشت خانهٔ خود را بر پشت دارد و آهسته است: tortoise.
+14,,It is bigger than a fox and it eats sheep.,,,wolf,lion|eagle|mouse,گرگ از روباه کلانتر است و گوسفند می‌خورد: wolf.
+14,,It is stronger than all the other animals.,,,lion,fox|wolf|mouse,شیر از همهٔ حیوان‌ها قوی‌تر است: lion.
+14,,It said to the rabbit: Let us run to the big tree.,,,tortoise,rabbit|fox|crow,سنگ‌پشت به خرگوش گفت که بیا تا درخت بدویم.
+14,,It sat in a tree with some cheese.,,,crow,fox|eagle|mouse,زاغ با پنیر روی درخت نشسته بود.
+17,چیستان‌هایی از پیام و خط: با چه می‌نویسیم، با چه می‌فرستیم، در آن چه است؟,You write it on paper and send it to a friend.,,,letter,phone|calendar|ticket,خط را روی کاغذ می‌نویسی و به دوست می‌فرستی: letter.
+17,,"You talk into it. Your friend is far, but she hears you.",,,phone,radio|letter|calendar,با تلفون گپ می‌زنی و دوست دور می‌شنود: phone.
+17,,It shows the days and the weeks.,,,calendar,clock_3|letter|book,جنتری روزها و هفته‌ها را نشان می‌دهد: calendar.
+17,,You give it to a friend. There is something nice in it.,,,present,letter|ticket|sack,تحفه را به دوست می‌دهی و در آن یک چیز خوب است: present.
+17,,You write with it.,,,pen,needle|key|spoon,با قلم می‌نویسی: pen.
+17,,You write your homework in it.,,,notebook,calendar|letter|plate,کارخانگی را در کتابچه می‌نویسی: notebook.
+17,,You listen to it. It tells the news. You cannot talk to it.,,,radio,phone|letter|calendar,رادیو خبر می‌گوید، اما با آن گپ زده نمی‌توانی: radio.
+17,,It is faster than a letter.,,,phone,cart|book|letter,تلفون از خط تیزتر است: phone.
+17,,It begins with Dear and ends with From.,,,letter,calendar|ticket|notebook,خط با Dear شروع و با From تمام می‌شود: letter.
+17,,"Friday is on it. Saturday is on it, too.",,,calendar,letter|phone|radio,جمعه و شنبه هر دو در جنتری است: calendar.
+17,,I am going to bring it for my brother from Kabul.,,,present,calendar|letter|phone,برای برادرم از کابل یک تحفه می‌آورم: present.
+17,,You need it for the bus.,,,ticket,letter|present|pen,برای بس تکت لازم است: ticket.

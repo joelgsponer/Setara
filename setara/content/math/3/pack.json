@@ -2,7 +2,7 @@
  "pack": "math-3",
  "subject": "math",
  "level": 3,
- "version": 1,
+ "version": 2,
  "title_en": "Math 3: Numbers to 1,000",
  "title_fa": "ریاضی ۳: عددها تا هزار",
  "games": [
@@ -15,7 +15,8 @@
    "intro_fa": "بشمار و عدد درست را انتخاب کن.",
    "icon": "sheep",
    "v1": true,
-   "sheet": "count_the_flock.csv"
+   "sheet": "count_the_flock.csv",
+   "draw": 8
   },
   {
    "id": "number_hop",
@@ -26,7 +27,8 @@
    "intro_fa": "حساب کن و جواب درست را انتخاب کن.",
    "icon": "frog",
    "v1": true,
-   "sheet": "number_hop.csv"
+   "sheet": "number_hop.csv",
+   "draw": 8
   },
   {
    "id": "market_scales",
@@ -36,7 +38,8 @@
    "title_fa": "ترازوی بازار",
    "intro_fa": "حساب کن و با سکه‌ها و نوت‌ها پول بده.",
    "icon": "scales",
-   "sheet": "market_scales.csv"
+   "sheet": "market_scales.csv",
+   "draw": 8
   },
   {
    "id": "carpet_weaver",
@@ -46,7 +49,8 @@
    "title_fa": "قالین‌باف",
    "intro_fa": "عددها را به ترتیب درست بگذار.",
    "icon": "carpet",
-   "sheet": "carpet_weaver.csv"
+   "sheet": "carpet_weaver.csv",
+   "draw": 8
   },
   {
    "id": "share_the_bread",
@@ -56,7 +60,8 @@
    "title_fa": "نان را تقسیم کن",
    "intro_fa": "هر چیز را در سبد درست بینداز.",
    "icon": "bread",
-   "sheet": "share_the_bread.csv"
+   "sheet": "share_the_bread.csv",
+   "draw": 8
   },
   {
    "id": "shape_mason",
@@ -66,7 +71,52 @@
    "title_fa": "گلکار شکل‌ها",
    "intro_fa": "گوش کن و جواب درست را انتخاب کن.",
    "icon": "brick",
-   "sheet": "shape_mason.csv"
+   "sheet": "shape_mason.csv",
+   "draw": 8
+  },
+  {
+   "id": "twin_tiles",
+   "engine": "pairs",
+   "letter": "g",
+   "title_en": "Twin Tiles",
+   "title_fa": "جوره‌ها",
+   "intro_fa": "دو کارت را که با هم جور است پیدا کن.",
+   "icon": "box",
+   "sheet": "twin_tiles.csv",
+   "draw": 6
+  },
+  {
+   "id": "number_rain",
+   "engine": "catch",
+   "letter": "h",
+   "title_en": "Number Rain",
+   "title_fa": "باران عددها",
+   "intro_fa": "گوش کن و فقط عددهای درست را بگیر.",
+   "icon": "basket",
+   "sheet": "number_rain.csv",
+   "draw": 8
+  },
+  {
+   "id": "number_riddles",
+   "engine": "listen_pick",
+   "letter": "l",
+   "title_en": "Number Riddles",
+   "title_fa": "چیستان عددها",
+   "intro_fa": "خوب فکر کن و جواب درست را انتخاب کن.",
+   "icon": "star",
+   "sheet": "number_riddles.csv",
+   "draw": 8
+  },
+  {
+   "id": "true_or_false",
+   "engine": "sorter",
+   "letter": "m",
+   "title_en": "True or False",
+   "title_fa": "درست یا غلط",
+   "intro_fa": "درست است یا غلط؟ در سبد خودش بینداز.",
+   "icon": "yes",
+   "sheet": "true_or_false.csv",
+   "draw": 8
   }
  ]
 }

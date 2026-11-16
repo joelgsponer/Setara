@@ -1,0 +1,86 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# PRACTISE. Odd one out, what goes together, and which written word is right. Two to four choices.
+02,سوال‌هایی از کار مردم: کدام یک با دیگران فرق دارد، و کی چه می‌کند؟ با he و she به فعل s می‌چسبد: makes، drives، grows.,Which one is not a job?,,,tractor,farmer|baker|driver,دهقان، نانوا و دریور کار است. تراکتور یک ماشین است.
+02,,Who makes carpets?,,,weaver,mechanic|engineer|farmer,قالین‌باف قالین می‌بافد.
+02,,Who repairs cars?,,,mechanic,weaver|baker|shepherd,مستری موترها را ترمیم می‌کند.
+02,,Who builds bridges?,,,engineer,tailor|baker|shepherd,انجنیر پل می‌سازد.
+02,,Who makes clothes?,,,tailor,mechanic|builder|driver,خیاط کالا می‌دوزد.
+02,,Who grows wheat?,,,farmer,driver|carpenter|weaver,دهقان گندم می‌کارد.
+02,,Which one does not work with animals?,,,mechanic,shepherd|farmer,چوپان و دهقان با حیوان‌ها کار می‌کنند. مستری با موتر کار می‌کند.
+02,,A baker ... bread. Which word is right?,,,t:makes,t:make|t:making,با a baker فعل s می‌گیرد: makes.
+02,,A driver ... a lorry. Which word is right?,,,t:drives,t:drive|t:driving,با a driver فعل s می‌گیرد: drives.
+02,,I ... carpets. Which word is right?,,,t:make,t:makes|t:making,با I فعل s نمی‌گیرد: I make.
+02,,She ... sick people. Which word is right?,,,t:helps,t:help|t:helping,با she فعل s می‌گیرد: helps.
+02,,Who works with the doctor?,,,nurse,weaver|carpenter|driver,نرس با داکتر کار می‌کند.
+06,یک چیز را می‌شنوی. فکر کن که بعد چه خواهد شد: going to. تصویر درست را انتخاب کن.,The sky is grey. What is it going to do?,,,rain,sun|star|moon,آسمان خاکستری است، پس باران خواهد بارید: It is going to rain.
+06,,She has a ticket. What is she going to do?,,,bus,sleep|cook|sweep,او تکت دارد، پس با بس سفر می‌کند.
+06,,He has a broom. What is he going to do?,,,sweep,cook|read|sleep,او جارو دارد، پس اطاق را پاک می‌کند.
+06,,She has a pot and rice. What is she going to do?,,,cook,sweep|write|play,او دیگ و برنج دارد، پس می‌پزد.
+06,,He is very tired. What is he going to do?,,,sleep,run|play|work,او بسیار مانده است، پس می‌خوابد.
+06,,She has a pen and a notebook. What is she going to do?,,,write,cook|sweep|carry,او قلم و کتابچه دارد، پس می‌نویسد.
+06,,They have a ball. What are they going to do?,,,play,sleep|cook|read,آنها توپ دارند، پس بازی می‌کنند.
+06,,He has soap and water. What is he going to do?,,,wash_hands,eating|sleep|read,او صابون و آب دارد، پس دست‌هایش را می‌شوید.
+06,,It is very cold and the sky is white. What is it going to do?,,,snow,rain|sun|wind,هوا بسیار سرد و آسمان سفید است، پس برف خواهد بارید.
+06,,She is hungry. What is she going to do?,,,eating,sleep|sweep|write,او گرسنه است، پس نان می‌خورد.
+06,,He has two empty buckets. Where is he going to go?,,,well,school|bakery|clinic,او دو سطل خالی دارد، پس به چاه می‌رود.
+06,,She has a book. What is she going to do?,,,read,cook|carry|sweep,او کتاب دارد، پس می‌خواند.
+10,تکرار درس‌های یک تا نُه: کار، سفر، دنیا و مقایسه. بعضی جواب‌ها نوشته است.,Which one is not a job?,,,bus,weaver|carpenter|shepherd,قالین‌باف، نجار و چوپان کار است. بس یک موتر کلان است.
+10,,Which one does not go on the road?,,,boat,bus|car|lorry,کشتی روی آب می‌رود. بس، موتر و لاری روی سرک می‌روند.
+10,,Which one flies?,,,aeroplane,boat|bicycle|train,طیاره پرواز می‌کند.
+10,,Which one is the fastest way to another country?,,,aeroplane,bicycle|cart|walk,طیاره از همه تیزتر است.
+10,,Which one is bigger than a village?,,,city,house|shop|well,شهر از قریه کلانتر است.
+10,,Which one has no water?,,,desert,sea|lake|river,دشت خشک است و آب ندارد.
+10,,Which one is taller?,,,tree_tall,tree_short,این درخت بلندتر است: taller.
+10,,Which one is slower?,,,tortoise,rabbit|horse,سنگ‌پشت از خرگوش و اسپ آهسته‌تر است.
+10,,I am going ... visit my aunt. Which word is right?,,,t:to,t:at|t:in,بعد از going کلمهٔ to می‌آید: going to visit.
+10,,She ... going to cook. Which word is right?,,,t:is,t:am|t:are,با she کلمهٔ is می‌آید: She is going to.
+10,,A horse is bigger ... a goat. Which word is right?,,,t:than,t:that|t:then,برای مقایسه than می‌آید: bigger than.
+10,,Who works with a saw?,,,carpenter,baker|driver|weaver,نجار با اره کار می‌کند.
+12,هر سوال با Why شروع می‌شود. دلیل درست را بخوان و انتخاب کن. جواب با because است.,Why do we wear a coat? Because it is ...,,,t:cold,t:hot|t:late,بالاپوش می‌پوشیم چون هوا سرد است: cold.
+12,,Why do we drink water? Because we are ...,,,t:thirsty,t:hungry|t:tired,آب می‌نوشیم چون تشنه هستیم: thirsty.
+12,,Why do we eat? Because we are ...,,,t:hungry,t:thirsty|t:angry,نان می‌خوریم چون گرسنه هستیم: hungry.
+12,,Why do we sleep? Because we are ...,,,t:tired,t:hungry|t:happy,می‌خوابیم چون مانده هستیم: tired.
+12,,Why do we go to the clinic? Because we are ...,,,t:sick,t:well|t:calm,به کلینیک می‌رویم چون مریض هستیم: sick.
+12,,Why do we take an umbrella? Because it is ...,,,t:raining,t:sunny|t:windy,چتری می‌گیریم چون باران می‌بارد: raining.
+12,,Why do we light the lamp? Because it is ...,,,t:dark,t:hot|t:early,چراغ را روشن می‌کنیم چون تاریک است: dark.
+12,,Why do we wash our hands? Because they are ...,,,t:dirty,t:clean|t:cold,دست‌ها را می‌شوییم چون چتل است: dirty.
+12,,Why does the baby cry? Because he is ...,,,t:hungry,t:big|t:clean,طفل گریه می‌کند چون گرسنه است.
+12,,Why do we go by bus? Because it is ...,,,t:far,t:near|t:small,با بس می‌رویم چون راه دور است: far.
+12,,Why is she happy? Because her friend is ...,,,t:here,t:sick|t:angry,او خوش است چون دوستش اینجا است.
+12,,Why do we open the window? Because it is ...,,,t:hot,t:cold|t:dark,کلکین را باز می‌کنیم چون هوا گرم است: hot.
+16,در قصه‌های قدیمی هر حیوان یک خوی دارد: clever هوشیار، greedy حریص، brave دلیر، kind مهربان. جمله را گوش کن و بگو که آن حیوان چطور بود.,The crow dropped stones into the jug and drank. The crow was ...,,,t:clever,t:greedy|t:slow,زاغ راه را پیدا کرد. او هوشیار بود: clever.
+16,,The wolf ate all the food and gave nothing to his friends. The wolf was ...,,,t:greedy,t:kind|t:brave,گرگ همه را خورد و به کسی نداد. او حریص بود: greedy.
+16,,The little mouse went to the big lion and helped him. The mouse was ...,,,t:brave,t:greedy|t:weak,موش خُرد پیش شیر کلان رفت. او دلیر بود: brave.
+16,,The girl gave her bread to the hungry cat. The girl was ...,,,t:kind,t:greedy|t:angry,دختر نان خود را به پشک گرسنه داد. او مهربان بود: kind.
+16,,The two goats pushed and fell into the water. The goats were not ...,,,t:clever,t:strong|t:old,بزها قوی بودند، اما هوشیار نبودند.
+16,,The rabbit slept in the race. The rabbit was not ...,,,t:clever,t:fast|t:young,خرگوش تیز بود، اما هوشیار نبود.
+16,,Which animal lives in a nest?,,,pigeon,fox|mouse|fish,کبوتر در آشیانه زندگی می‌کند.
+16,,Which animal sleeps in a cave?,,,wolf,pigeon|fish|hen,گرگ در مغاره می‌خوابد.
+16,,The hunter catches birds with it. What is it?,,,net,nest|cave|water_jug,شکارچی با جال پرنده می‌گیرد: net.
+16,,Which one is not an animal?,,,net,pigeon|wolf|crow,کبوتر، گرگ و زاغ حیوان است. جال یک چیز است.
+16,,The boy went into the dark cave to find his lamb. The boy was ...,,,t:brave,t:greedy|t:slow,پسر به مغارهٔ تاریک رفت. او دلیر بود: brave.
+16,,The fox wanted the cheese and the grapes and the hen. The fox was ...,,,t:greedy,t:kind|t:calm,روباه همه چیز را می‌خواست. او حریص بود: greedy.
+18,یک حالت را می‌شنوی. در پیام چه می‌نویسی: دعوت، تشکر یا معذرت؟ جواب درست را بخوان.,Your friend gave you a book. What do you write?,,,t:Thank you,t:I am sorry|t:Please come,دوستت به تو کتاب داد، پس تشکر می‌کنی: Thank you.
+18,,You are going to cook a big dinner on Friday. What do you write to your friend?,,,t:Please come,t:I am sorry|t:Goodbye,دوستت را دعوت می‌کنی: Please come.
+18,,You can't go to your friend's house. What do you write?,,,t:I am sorry,t:Thank you|t:Please come,آمده نمی‌توانی، پس معذرت می‌خواهی: I am sorry.
+18,,Your friend is sick. What do you write?,,,t:Get well soon,t:Thank you|t:Please come,دوستت مریض است، پس می‌نویسی Get well soon: زود جور شوی.
+18,,You were late for school. What do you say to the teacher?,,,t:I am sorry,t:Get well soon|t:Thank you,ناوقت آمدی، پس معذرت می‌خواهی: I am sorry.
+18,,How does a message begin?,,,t:Dear Sara,t:From Mina|t:See you,پیام با Dear و نام شروع می‌شود.
+18,,How does a message end?,,,t:From Mina,t:Dear Sara|t:How are you,پیام با From و نام خودت تمام می‌شود.
+18,,Your aunt sent you a present. What do you write?,,,t:Thank you,t:Please come|t:I am sorry,خاله‌ات تحفه فرستاد، پس تشکر می‌کنی.
+18,,You want to see your friend on Friday. What do you write?,,,t:Please come,t:Get well soon|t:I am sorry,می‌خواهی دوستت را ببینی، پس دعوت می‌کنی: Please come.
+18,,I can't come ... I am sick. Which word is right?,,,t:because,t:but|t:and,دلیل را با because می‌گوییم.
+18,,Thank you ... the present. Which word is right?,,,t:for,t:from|t:to,می‌گوییم Thank you for: تشکر از.
+18,,You are going to see your friend next week. What do you write at the end?,,,t:See you soon,t:I am sorry|t:Dear friend,در آخر می‌نویسی See you soon: به امید دیدار.
+20,تکرار درس‌های یازده تا نزده: مقایسه، دلیل، قصه و پیام. کلمهٔ درست را بخوان.,"good, better. bad, ... Which word is right?",,,t:worse,t:better|t:bigger,شکل مقایسهٔ bad کلمهٔ worse است.
+20,,This carpet is ... expensive than that one. Which word is right?,,,t:more,t:much|t:many,با صفت دراز more می‌آید: more expensive.
+20,,A story begins with ...,,,t:One day,t:Finally|t:The end,قصه با One day شروع می‌شود.
+20,,A story ends with ...,,,t:In the end,t:One day|t:Dear,قصه با In the end تمام می‌شود.
+20,,Something happens very fast. Which word do you use?,,,t:Suddenly,t:Slowly|t:Finally,برای چیزی که یکدم می‌شود Suddenly می‌گوییم.
+20,,I am happy ... it is Friday. Which word is right?,,,t:because,t:why|t:than,دلیل را با because می‌گوییم.
+20,,... are you sad? Which word is right?,,,t:Why,t:Because|t:Than,سوال دلیل با Why شروع می‌شود.
+20,,"""Who are you?"" ... the fox. Which word is right?",,,t:asked,t:answered|t:laughed,برای سوال asked می‌آید: پرسید.
+20,,Which one is new?,,,new_shoe,old_shoe,این بوت نو است.
+20,,Which one is afraid?,,,feel_afraid,happy|feel_calm|feel_angry,او ترسیده است: afraid.
+20,,Which one do you send to a friend?,,,letter,net|saw|brick,به دوست خط می‌فرستیم: letter.
+20,,Which one is heavier?,,,heavy_load,leaf,بار سنگین‌تر است. برگ سبک است.

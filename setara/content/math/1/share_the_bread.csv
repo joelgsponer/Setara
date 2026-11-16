@@ -1,33 +1,61 @@
 round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa
-01,هر چیز را در سبد شکل خودش بینداز.,wheel,,چرخ,shape_circle,دایره
-01,,ball,,توپ,shape_circle,دایره
-01,,shape_circle,,دایره,shape_circle,دایره
-01,,handkerchief,,دستمال,shape_square,مربع
+01,هر چیز را در سبد شکل خودش بینداز.,shape_circle,,دایره,shape_circle,دایره
+01,,shape_square,,مربع,shape_square,مربع
+01,,sun,,آفتاب,shape_circle,دایره
+01,,coin,,سکه,shape_circle,دایره
+01,,wheel,,چرخ,shape_circle,دایره
 01,,plate,,بشقاب,shape_circle,دایره
 01,,window,,کلکین,shape_square,مربع
 01,,box,,صندوق,shape_square,مربع
-01,,shape_square,,مربع,shape_square,مربع
-02,هر چیز را در سبد شکل خودش بینداز.,mountain,,کوه,shape_triangle,مثلث
+01,,handkerchief,,دستمال,shape_square,مربع
+01,,ball,,توپ,shape_circle,دایره
+01,,orange,,مالته,shape_circle,دایره
+01,,button,,دکمه,shape_circle,دایره
+02,هر چیز را در سبد شکل خودش بینداز.,ball,,توپ,shape_circle,دایره
+02,,samosa,,سمبوسه,shape_triangle,مثلث
+02,,mountain,,کوه,shape_triangle,مثلث
+02,,shape_triangle,,مثلث,shape_triangle,مثلث
+02,,tent,,خیمه,shape_triangle,مثلث
+02,,coin,,سکه,shape_circle,دایره
 02,,orange,,مالته,shape_circle,دایره
 02,,button,,دکمه,shape_circle,دایره
+02,,wheel,,چرخ,shape_circle,دایره
+02,,shape_circle,,دایره,shape_circle,دایره
+02,,plate,,بشقاب,shape_circle,دایره
 02,,sun,,آفتاب,shape_circle,دایره
-02,,tent,,خیمه,shape_triangle,مثلث
-02,,shape_triangle,,مثلث,shape_triangle,مثلث
-02,,coin,,سکه,shape_circle,دایره
-02,,samosa,,سمبوسه,shape_triangle,مثلث
-03,هر چیز را در سبد شکل خودش بینداز.,box,,صندوق,shape_square,مربع
-03,,window,,کلکین,shape_square,مربع
-03,,handkerchief,,دستمال,shape_square,مربع
-03,,coin,,سکه,shape_circle,دایره
+03,هر چیز را در سبد شکل خودش بینداز.,wheel,,چرخ,shape_circle,دایره
 03,,tent,,خیمه,shape_triangle,مثلث
-03,,sun,,آفتاب,shape_circle,دایره
+03,,plate,,بشقاب,shape_circle,دایره
+03,,shape_square,,مربع,shape_square,مربع
+03,,orange,,مالته,shape_circle,دایره
+03,,shape_triangle,,مثلث,shape_triangle,مثلث
 03,,samosa,,سمبوسه,shape_triangle,مثلث
+03,,button,,دکمه,shape_circle,دایره
+03,,handkerchief,,دستمال,shape_square,مربع
+03,,mountain,,کوه,shape_triangle,مثلث
 03,,ball,,توپ,shape_circle,دایره
-04,هر چیز را در سبد شکل خودش بینداز.,window,,کلکین,shape_square,مربع
+03,,window,,کلکین,shape_square,مربع
+03,,sun,,آفتاب,shape_circle,دایره
+03,,coin,,سکه,shape_circle,دایره
+03,,box,,صندوق,shape_square,مربع
+04,هر چیز را در سبد شکل خودش بینداز.,ball,,توپ,shape_circle,دایره
+04,,shape_circle,,دایره,shape_circle,دایره
+04,,sun,,آفتاب,shape_circle,دایره
+04,,handkerchief,,دستمال,shape_square,مربع
 04,,box,,صندوق,shape_square,مربع
 04,,door,,دروازه,shape_rectangle,مستطیل
-04,,book,,کتاب,shape_rectangle,مستطیل
-04,,samosa,,سمبوسه,shape_triangle,مثلث
+04,,coin,,سکه,shape_circle,دایره
+04,,shape_square,,مربع,shape_square,مربع
+04,,shape_triangle,,مثلث,shape_triangle,مثلث
 04,,wheel,,چرخ,shape_circle,دایره
+04,,window,,کلکین,shape_square,مربع
+04,,note,,نوت,shape_rectangle,مستطیل
+04,,book,,کتاب,shape_rectangle,مستطیل
 04,,plate,,بشقاب,shape_circle,دایره
+04,,carpet,,قالین,shape_rectangle,مستطیل
+04,,shape_rectangle,,مستطیل,shape_rectangle,مستطیل
+04,,mountain,,کوه,shape_triangle,مثلث
+04,,button,,دکمه,shape_circle,دایره
+04,,samosa,,سمبوسه,shape_triangle,مثلث
 04,,tent,,خیمه,shape_triangle,مثلث
+04,,orange,,مالته,shape_circle,دایره

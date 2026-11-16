@@ -1,0 +1,25 @@
+# pictures drawn for garden-2-nature and the version 2 of garden-1 and garden-2
+grass: A tuft of green grass blades growing from a ground line.
+stem: A young plant in a mound of soil; the thick green stem is drawn strongly, the two leaves pale, and a red arrow points at the stem.
+puppy: A small sand-coloured dog with a big round head and floppy brown ears, standing.
+foal: A young horse with very long thin legs and a short mane, seen from the side.
+bone: One cream-coloured bone with two knobs at each end, lying slantwise.
+beehive: A round yellow straw beehive with a dark entrance and one bee beside it.
+magnet: A red horseshoe magnet with white ends pointing up, three small blue lines below it.
+iron_nail: One grey iron nail with a flat head, lying slantwise.
+lever: A plank resting on a small triangle; a grey stone on the left end, a red arrow pressing the right end down.
+pulley: A beam with a grey wheel hanging from it, a rope over the wheel, a blue bucket on one side and a red arrow pointing down on the other.
+ramp: A sand-coloured slanted plank with a brown box being pushed up it (red arrow).
+moon_new: A dark blue night square with only a dotted ring where the moon is, and four small stars.
+moon_crescent: The same square with a thin yellow sickle on the right of the moon's disc.
+moon_half: The same square with the right half of the moon's disc yellow.
+shadow_long: A child standing on a ground line, a low orange sun at the left, a long dark shadow to the right.
+shadow_short: The same child with the yellow sun straight overhead and a small shadow at the feet.
+track_bird: Two dark bird tracks: three toes forward and one back.
+track_paw: One brown paw print: a big pad and four toes.
+track_hoof: One brown cloven hoof print: two halves side by side.
+rainbow: A rainbow arch (red, yellow, green, blue) with a small white cloud at each foot.
+lightning: A dark grey cloud with a yellow lightning bolt below it.
+wind: Three blue curling lines of wind and one small leaf blown along.
+feather: One cream-white feather with a dark quill, slantwise.
+tongue: An open mouth with red lips and a pink tongue hanging out.

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Draws the picture series of math levels 4 and 5 into content/pictures/:
-the fraction circles (frac_<k>_<n>), the third of a naan and of a circle, and
-the charts of Tables and Charts, whose numbers come from CHARTS in
-generate.py so that picture and questions cannot drift apart.
+"""Draws the picture series of the math packs into content/pictures/:
+the fraction circles (frac_<k>_<n>), the third of a naan and of a circle, the
+half, third and quarter of an orange and of a pomegranate (for sorting whole,
+half and quarter), and the charts of Tables and Charts, whose numbers come
+from CHARTS in generate.py so that picture and questions cannot drift apart.
 
     python3 content/math/draw_pictures.py            # draw what is missing
     python3 content/math/draw_pictures.py --force    # redraw this series
@@ -72,6 +73,47 @@ def third_bread() -> str:
     return out
 
 
+def polar(cx: float, cy: float, r: float, deg: float) -> tuple[float, float]:
+    a = math.radians(deg)
+    return cx + r * math.cos(a), cy - r * math.sin(a)
+
+
+def wedge(cx: float, cy: float, r: float, a0: float, a1: float, **attrs) -> str:
+    """The piece of a disc between the angles a0 and a1 (degrees, anticlockwise from the right)."""
+    (x0, y0), (x1, y1) = polar(cx, cy, r, a0), polar(cx, cy, r, a1)
+    extra = "".join(f' {k.replace("_", "-")}="{v}"' for k, v in attrs.items())
+    return f'<path d="M{n2(cx)} {n2(cy)}L{n2(x0)} {n2(y0)}A{n2(r)} {n2(r)} 0 0 0 {n2(x1)} {n2(y1)}z"{extra}/>\n'
+
+
+# Where the piece sits in the picture, as bread_half, bread_third and bread_quarter do: centre, radius, angles.
+PIECES = {"half": (64, 92, 56, 0, 180), "third": (64, 106, 64, 30, 150), "quarter": (92, 92, 56, 90, 180)}
+
+
+def fruit_piece(fruit: str, part: str) -> str:
+    """A piece of a round fruit cut through the middle: the rind along the arc, the flesh inside."""
+    cx, cy, r, a0, a1 = PIECES[part]
+    out = HEAD + GROUP
+    if fruit == "orange":
+        out += wedge(cx, cy, r, a0, a1, fill="#f0923a")
+        out += wedge(cx, cy, r - 9, a0, a1, fill="#fff1c9", stroke="none")
+        out += wedge(cx, cy, r - 14, a0, a1, fill="#ffbe55", stroke="none")
+        step = 30
+        for deg in range(int(a0) + step, int(a1), step):   # the segments
+            x, y = polar(cx, cy, r - 14, deg)
+            out += f'<path d="M{n2(cx)} {n2(cy)}L{n2(x)} {n2(y)}" fill="none" stroke="#fff1c9" stroke-width="4"/>\n'
+    else:
+        out += wedge(cx, cy, r, a0, a1, fill="#e0483f")
+        out += wedge(cx, cy, r - 10, a0, a1, fill="#fff6dc", stroke="none")
+        for ring, count in ((0.34, 2), (0.62, 4)):   # the seeds
+            n = max(1, round(count * (a1 - a0) / 180))
+            for i in range(n):
+                deg = a0 + (a1 - a0) * (i + 0.5) / n
+                x, y = polar(cx, cy, r * ring, deg)
+                out += f'<circle cx="{n2(x)}" cy="{n2(y)}" r="5" fill="#e0483f" stroke-width="2"/>\n'
+    out += wedge(cx, cy, r, a0, a1, fill="none")
+    return out + "</g>\n</svg>\n"
+
+
 def small(name: str, x: float, y: float, size: float) -> str:
     """A library picture drawn small, as plain shapes inside this picture."""
     svg = (PICTURES / f"{name}.svg").read_text("utf-8")
@@ -117,6 +159,9 @@ def main() -> None:
     todo = {f"frac_{k}_{n}": pie(k, n) for k, n in sorted({kn for kn, _, _ in PIES4} | set(PIES5))}
     todo["shape_third_circle"] = third_circle()
     todo["bread_third"] = third_bread()
+    for fruit in ("orange", "pomegranate"):
+        for part in PIECES:
+            todo[f"{fruit}_{part}"] = fruit_piece(fruit, part)
     for name, rows in CHARTS.items():
         todo[name] = bars(rows) if "bars" in name else table(rows)
     for name, svg in todo.items():

@@ -52,8 +52,8 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 09,,Where is the ball?,,pos_in_front,t:in front of,t:behind|t:between,توپ پیش روی صندوق است: in front of.
 09,,Look. Where is it?,,pos_between,t:between,t:behind|t:next to,توپ بین دو صندوق است: between.
 09,,Look. Where is it?,,pos_in,t:in,t:on|t:under,توپ در داخل صندوق است: in.
-09,,The ball is ... the box.,,pos_on,t:on,t:in|t:under,توپ روی صندوق است: on.
-09,,The ball is ... the box.,,pos_under,t:under,t:on|t:in,توپ زیر است: under.
+09,,The ball is ... the table.,,pos_on,t:on,t:in|t:under,توپ روی میز است: on.
+09,,The ball is ... the table.,,pos_under,t:under,t:on|t:in,توپ زیر میز است: under.
 09,,Read and choose the right word.,,pos_next_to,t:next to,t:between|t:behind,توپ پهلوی صندوق است: next to.
 09,,Read and choose the right word.,,near,t:near,t:far|t:behind,خانه نزدیک است: near.
 09,,Which word is right?,,far,t:far,t:near|t:in,خانه دور است: far.

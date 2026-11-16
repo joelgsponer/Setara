@@ -100,7 +100,7 @@
    "letter": "i",
    "title_en": "Odd One Out",
    "title_fa": "کدام جور نیست؟",
-   "intro_fa": "سه تصویر با هم جور است. آن یکی را که جور نیست پیدا کن.",
+   "intro_fa": "همه تصویرها غیر از یکی با هم جور است. آن یکی را که جور نیست پیدا کن.",
    "icon": "butterfly",
    "sheet": "odd_one_out.csv",
    "draw": 8

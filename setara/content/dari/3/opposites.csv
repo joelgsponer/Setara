@@ -1,0 +1,18 @@
+round,intro_fa,a,b,say_en,say_fa
+# Opposites: two written words that are the opposite of each other. The pair is spoken when a card is turned (supported reading). Each play lays out six pairs (draw 6).
+01,,f:کلان,f:خرد,,کلان، خُرد
+01,,f:روز,f:شب,,روز، شب
+01,,f:گرم,f:سرد,,گرم، سرد
+01,,f:نو,f:کهنه,,نو، کهنه
+01,,f:بالا,f:پایین,,بالا، پایین
+01,,f:سیاه,f:سفید,,سیاه، سفید
+01,,f:آمد,f:رفت,,آمد، رفت
+01,,f:خوب,f:بد,,خوب، بد
+02,,f:پاک,f:چتل,,پاک، چتل
+02,,f:دور,f:نزدیک,,دور، نزدیک
+02,,f:پر,f:خالی,,پُر، خالی
+02,,f:تر,f:خشک,,تر، خشک
+02,,f:کم,f:زیاد,,کم، زیاد
+02,,f:باز,f:بسته,,باز، بسته
+02,,f:خوش,f:غمگین,,خوش، غمگین
+02,,f:داد,f:گرفت,,داد، گرفت

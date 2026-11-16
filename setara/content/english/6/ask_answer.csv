@@ -1,0 +1,134 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# PRACTISE. Question to answer. Many answers are written words: the child reads them. Pools of twelve, eight per play.
+02,سوال‌هایی از کار مردم: کی چه می‌سازد، چه می‌راند، چه می‌کارد؟ جواب را انتخاب کن.,What does a baker make?,,,bread,carpet|shoes|brick,نانوا نان می‌پزد.
+02,,What does a weaver make?,,,carpet,bread|door|shirt,قالین‌باف قالین می‌بافد.
+02,,What does a driver drive?,,,lorry,boat|kite|cart,دریور لاری را می‌راند.
+02,,What does a farmer grow?,,,wheat,brick|wool|cloth,دهقان گندم می‌کارد.
+02,,What does a builder build?,,,house,boat|carpet|table,گلکار خانه می‌سازد.
+02,,What does a carpenter make?,,,table,bread|shirt|brick,نجار میز می‌سازد.
+02,,What does a tailor make?,,,shirt,table|bread|house,خیاط پیراهن می‌دوزد.
+02,,What does a mechanic repair?,,,car,carpet|shirt|bread,مستری موتر را ترمیم می‌کند.
+02,,What does an engineer build?,,,bridge,shirt|bread|carpet,انجنیر پل می‌سازد.
+02,,What does a shepherd look after?,,,sheep,fish|bee|mouse,چوپان از گوسفندها نگهداری می‌کند.
+02,,Who does a nurse help?,,,sick,happy|teacher|shopkeeper,نرس به مردم مریض کمک می‌کند.
+02,,What does a teacher write on?,,,board,carpet|wall|door,معلم روی تخته می‌نویسد.
+04,یک طفل می‌گوید که چه را خوش دارد. تو بگو که او می‌خواهد چه کاره شود.,I like animals and hills. What do I want to be?,,,shepherd,mechanic|baker|engineer,کسی که حیوان‌ها و تپه‌ها را خوش دارد می‌خواهد چوپان شود.
+04,,I like cars and lorries. I want to repair them. What do I want to be?,,,mechanic,shepherd|baker|weaver,کسی که می‌خواهد موترها را ترمیم کند مستری می‌شود.
+04,,I like children and books. What do I want to be?,,,teacher,driver|builder|farmer,کسی که اطفال و کتاب‌ها را خوش دارد معلم می‌شود.
+04,,I want to help sick people. What do I want to be?,,,doctor,carpenter|driver|baker,کسی که می‌خواهد به مریض‌ها کمک کند داکتر می‌شود.
+04,,I like wood. I want to make tables. What do I want to be?,,,carpenter,farmer|nurse|driver,کسی که می‌خواهد میز بسازد نجار می‌شود.
+04,,I want to build bridges. What do I want to be?,,,engineer,weaver|baker|shepherd,کسی که می‌خواهد پل بسازد انجنیر می‌شود.
+04,,I like fresh bread. I want to make it for the village. What do I want to be?,,,baker,driver|carpenter|mechanic,کسی که می‌خواهد نان بپزد نانوا می‌شود.
+04,,I like the fields. I want to grow wheat. What do I want to be?,,,farmer,tailor|driver|nurse,کسی که می‌خواهد گندم بکارد دهقان می‌شود.
+04,,I like colours. I want to make carpets. What do I want to be?,,,weaver,builder|driver|farmer,کسی که می‌خواهد قالین ببافد قالین‌باف می‌شود.
+04,,I like roads. I want to see many cities. What do I want to be?,,,driver,baker|weaver|carpenter,کسی که می‌خواهد شهرهای بسیار را ببیند دریور می‌شود.
+04,,I want to make clothes. What do I want to be?,,,tailor,farmer|mechanic|shepherd,کسی که می‌خواهد کالا بدوزد خیاط می‌شود.
+04,,I want to build houses with bricks. What do I want to be?,,,builder,tailor|nurse|baker,کسی که می‌خواهد خانه بسازد گلکار می‌شود.
+05,هر سوال یک پلان کوتاه است. خوب گوش کن: کی، چه وقت، کجا؟ going to از آینده می‌گوید.,Tomorrow I am going to visit my aunt. Who am I going to visit?,,,t:my aunt,t:my uncle|t:my friend,من به دیدن خاله‌ام می‌روم: my aunt.
+05,,On Friday we are going to go to the bazaar. Where are we going to go?,,,bazaar,clinic|school|field,روز جمعه به بازار می‌رویم.
+05,,Tonight father is going to repair the door. What is he going to repair?,,,door,window|table|chair,پدر امشب دروازه را ترمیم می‌کند.
+05,,Next week my uncle is going to buy a cow. What is he going to buy?,,,cow,horse|goat|sheep,کاکایم هفتهٔ آینده یک گاو می‌خرد.
+05,,I am going to read my book tonight. When am I going to read?,,,t:tonight,t:tomorrow|t:on Friday,امشب می‌خوانم: tonight.
+05,,We are going to play after school. When are we going to play?,,,t:after school,t:at night|t:at lunch,بعد از مکتب بازی می‌کنیم: after school.
+05,,Mother is going to cook rice and beans. What is she going to cook?,,,rice,kebab|bread|samosa,مادر برنج و لوبیا می‌پزد.
+05,,My sister is going to wash the clothes at the river. Where is she going to go?,,,river,well|bazaar|school,خواهرم به دریا می‌رود.
+05,,The children are going to fly a kite. What do they need?,,,kite,ball|rope|book,آنها کاغذپران بلند می‌کنند.
+05,,It is going to snow tonight. What are we going to see in the morning?,,,snow,rain|flower|sand,امشب برف می‌بارد، پس صبح برف می‌بینیم.
+05,,She is going to visit her uncle next week. When is she going to go?,,,t:next week,t:tonight|t:today,هفتهٔ آینده می‌رود: next week.
+05,,He is going to help his uncle in the field. Where is he going to work?,,,field,bakery|clinic|kitchen,او در زمین کار می‌کند.
+08,سوال‌هایی از کشور ما و دنیا. There is برای یک چیز، There are برای چند چیز. بعضی جواب‌ها نوشته است.,What is Afghanistan?,,,t:a country,t:a city|t:a village,افغانستان یک کشور است: a country.
+08,,What is Kabul?,,,t:a city,t:a country|t:a river,کابل یک شهر است: a city.
+08,,Where do ships go?,,,sea,desert|forest|field,کشتی‌ها روی بحر می‌روند.
+08,,Where are there many trees?,,,forest,desert|sea|city,در جنگل درخت‌های بسیار است.
+08,,"Where is it hot and dry, with a lot of sand?",,,desert,lake|forest|island,در دشت هوا گرم و خشک است و ریگ بسیار است.
+08,,Is there a sea in Afghanistan?,,,no,yes,نه. در افغانستان بحر نیست.
+08,,Are there mountains in Afghanistan?,,,yes,no,بلی. در افغانستان کوه‌های بلند است.
+08,,... a lake near the village. Which words are right?,,,t:There is,t:There are|t:They are,برای یک جهیل There is می‌آید.
+08,,... many rivers in my country. Which words are right?,,,t:There are,t:There is|t:It is,برای چند دریا There are می‌آید.
+08,,"Which one is bigger, a country or a city?",,,t:a country,t:a city,کشور از شهر کلانتر است. در یک کشور چند شهر است.
+08,,"Where do more people live, in a city or in a village?",,,city,scene_village,در شهر مردم بیشتر زندگی می‌کنند.
+08,,What shows all the countries of the world?,,,globe,calendar|letter|radio,کرهٔ زمین همهٔ کشورها را نشان می‌دهد.
+10,تکرار: کار، پلان، سفر و دنیا. هر سوال یک قصهٔ بسیار کوتاه است.,My uncle drives a bus. What is his job?,,,driver,mechanic|farmer|baker,کسی که بس را می‌راند دریور است.
+10,,She works in a clinic and helps the doctor. What is her job?,,,nurse,teacher|weaver|tailor,کسی که به داکتر کمک می‌کند نرس است.
+10,,Karim wants to be a baker. What is he going to make?,,,bread,carpet|table|shirt,نانوا نان می‌پزد.
+10,,We are going to go to Kabul by bus. What do we need?,,,ticket,saw|net|brick,برای بس تکت لازم است.
+10,,The city is far. We can't go on foot. How are we going to go?,,,bus,walk|bicycle,شهر دور است، پس با بس می‌رویم.
+10,,A horse is faster than a donkey. Which one is slower?,,,donkey,horse,اسپ تیزتر است، پس خر آهسته‌تر است.
+10,,My sister is taller than me. Who is shorter?,,,t:me,t:my sister,خواهرم بلندتر است، پس من کوتاه‌تر هستم.
+10,,There is a lake behind the village. What is behind the village?,,,lake,sea|desert|forest,پشت قریه یک جهیل است.
+10,,Tomorrow I am going to help the carpenter. What am I going to carry?,,,log,wheat|flour_sack|wool,با نجار چوب می‌برم.
+10,,The farmer has a tractor. Where does he drive it?,,,field,city|sea|forest,دهقان تراکتور را در زمین می‌راند.
+10,,I am not going to walk. I am going to take my bicycle. How am I going to go?,,,bicycle,walk|bus,با بایسکل می‌روم.
+10,,The boat is slower than the plane. Which one is faster?,,,aeroplane,boat,طیاره تیزتر است.
+11,دو چیز را مقایسه کن: کدام گرانتر، سنگین‌تر، بهتر یا بدتر است؟ با صفت دراز more می‌آید. good و bad شکل خاص دارند: better، worse.,Which is more expensive?,,,carpet,comb,قالین از شانه گرانتر است.
+11,,Which is cheaper?,,,egg,cow,تخم مرغ از گاو ارزانتر است.
+11,,Which is heavier?,,,rice_sack,leaf,بوجی برنج از برگ سنگین‌تر است.
+11,,Which is more dangerous?,,,snake,kitten,مار از پشک خطرناک‌تر است.
+11,,Which is more beautiful?,,,flower,garbage,گل از کثافت مقبول‌تر است.
+11,,Which shoes are better?,,,new_shoe,old_shoe,بوت‌های نو بهتر است: better.
+11,,Which weather is worse?,,,storm,sun,طوفان از آفتاب بدتر است: worse.
+11,,"good, ... Which word is right?",,,t:better,t:worse|t:bigger,شکل مقایسهٔ good کلمهٔ better است.
+11,,This test is ... difficult than that one. Which word is right?,,,t:more,t:very|t:much,با صفت دراز more می‌آید: more difficult.
+11,,The bus is cheap. The bicycle is ...,,,t:cheaper,t:cheap|t:more,cheap کوتاه است و er می‌گیرد: cheaper.
+11,,Which is older?,,,old_shoe,new_shoe,این بوت کهنه‌تر است.
+11,,"Which is more expensive, a car or a bicycle?",,,car,bicycle,موتر از بایسکل گرانتر است.
+13,هر سوال یک کار و یک دلیل دارد. خوب گوش کن و بگو که چه لازم است، یا چرا.,I am going to take an umbrella because it is going to rain. What is the weather going to be?,,,rain,sun|snow|wind,چتری می‌گیرم چون باران خواهد بارید.
+13,,We are going to go by bus because the city is far. Why by bus?,,,t:It is far,t:It is near|t:It is hot,با بس می‌رویم چون شهر دور است.
+13,,I am going to wear my coat because it is cold. What am I going to wear?,,,coat,sandals|shirt|hat,بالاپوش می‌پوشم چون هوا سرد است.
+13,,She wants to be a doctor because she wants to help sick people. Who does she want to help?,,,sick,happy|baker|driver,او می‌خواهد به مردم مریض کمک کند.
+13,,He is going to sleep early because he is tired. Why is he going to sleep?,,,t:He is tired,t:He is hungry|t:He is late,او وقت می‌خوابد چون مانده است.
+13,,I like summer because we eat watermelon. What do we eat in summer?,,,watermelon,snowman|walnut|ice,در تابستان تربوز می‌خوریم.
+13,,We can't play in the yard because it is raining. Where can we play?,,,room,yard|field|street,باران می‌بارد، پس در اطاق بازی می‌کنیم.
+13,,I am going to light the lamp because it is dark. What am I going to light?,,,lamp,stove|firewood|matches,چراغ را روشن می‌کنم چون تاریک است.
+13,,He wants to be a shepherd because he likes sheep. What does he like?,,,sheep,car|book|brick,او گوسفندها را خوش دارد.
+13,,She is going to buy the blue scarf because it is cheaper. Which scarf is she going to buy?,,,scarf_blue,scarf_red,او چادر آبی را می‌خرد چون ارزانتر است.
+13,,I learn English because I want to read books. What do I want to do?,,,read,cook|sweep|sleep,می‌خواهم کتاب بخوانم.
+13,,We are going to visit grandmother because she is sick. Why are we going to visit her?,,,t:She is sick,t:She is rich|t:It is Friday,به دیدن مادرکلان می‌رویم چون مریض است.
+15,یک جملهٔ قصه را می‌شنوی. بگو که کی آن را گفت یا پرسید، یا چه گفت. said گفت، asked پرسید، answered جواب داد.,"""I am the king of the animals,"" said the ...",,,lion,mouse|rabbit|pigeon,شیر پادشاه حیوان‌ها است. این را شیر گفت.
+15,,"""I am slow, but I do not stop,"" said the ...",,,tortoise,rabbit|eagle|fox,سنگ‌پشت آهسته است، اما ایستاد نمی‌شود.
+15,,"""Can I have your cheese?"" asked the fox. What did the fox want?",,,cheese,bread|grapes|egg,روباه پنیر را می‌خواست.
+15,,"""Where is my lamb?"" asked the shepherd. What did the shepherd look for?",,,lamb,calf|kitten|chick,چوپان برهٔ خود را می‌پالید.
+15,,"""It is going to rain,"" said the farmer. What did the farmer see in the sky?",,,cloudy,sun|star|moon,دهقان ابر را دید و گفت باران خواهد بارید.
+15,,"""Open the door!"" shouted the wolf. What did the wolf want to open?",,,door,window|box|book,گرگ می‌خواست دروازه را باز کند.
+15,,"""Who are you?"" The mouse answered: ""I am your friend."" Who answered?",,,mouse,lion|wolf|eagle,موش جواب داد.
+15,,"""How much is the ticket?"" asked the girl. Who did she ask?",,,driver,farmer|weaver|shepherd,او از دریور پرسید.
+15,,"""Come back tomorrow,"" said the doctor. When must he come back?",,,t:tomorrow,t:today|t:tonight,داکتر گفت فردا باز بیا: tomorrow.
+15,,"""I can't fly,"" said the tortoise. Who can fly?",,,eagle,tortoise|rabbit|mouse,عقاب پرواز کرده می‌تواند، سنگ‌پشت نه.
+15,,"""Thank you for the bread,"" said the old man. What did he get?",,,bread,water|money|coat,مرد پیر نان گرفت.
+15,,"""Why are you sad?"" asked the teacher. How was the child?",,,sad,happy|feel_angry|feel_calm,معلم پرسید که چرا غمگین هستی. طفل غمگین بود.
+16,سوال‌هایی از قصه‌های قدیمی که می‌شناسی: شیر و موش، زاغ و کوزه، خرگوش و سنگ‌پشت، دو بز.,The lion was in a net. Who helped him?,,,mouse,fox|wolf|eagle,موش جال را برید و به شیر کمک کرد.
+16,,The crow was thirsty. What did it drop into the jug?,,,stone,leaf|cheese|egg,زاغ سنگچه‌ها را در کوزه انداخت.
+16,,The rabbit slept. Who was at the tree first?,,,tortoise,rabbit|fox|crow,سنگ‌پشت اول به درخت رسید.
+16,,Two goats met on a bridge. Where did they fall?,,,river,well|net|cave,بزها در دریا افتادند.
+16,,The fox said: You are a beautiful bird. What did it want?,,,cheese,grapes|bread|egg,روباه پنیر زاغ را می‌خواست.
+16,,The pigeons were in a net. They flew up together. Were they clever?,,,yes,no,بلی. با هم پرواز کردند و جال را بردند. هوشیار بودند.
+16,,The mouse was small. Was it brave?,,,yes,no,بلی. موش خُرد بود، اما دلیر بود.
+16,,Where does a bird sleep?,,,nest,cave|net|water_jug,پرنده در آشیانه می‌خوابد.
+16,,The fox could not reach them. They were too high. What were they?,,,grapes,stone|egg|bread,انگورها بسیار بلند بود.
+16,,"Who was faster, the rabbit or the tortoise?",,,rabbit,tortoise,خرگوش تیزتر بود، اما سنگ‌پشت بُرد.
+16,,"Who was stronger, the lion or the mouse?",,,lion,mouse,شیر قوی‌تر بود.
+16,,The goats were strong. Were they clever?,,,no,yes,نه. آنها قوی بودند، اما هوشیار نبودند و در آب افتادند.
+17,یک پیام کوتاه را می‌شنوی و بعد یک سوال: کی نوشت، برای کی، چه وقت؟ جواب را بخوان.,"Dear Sara, I am going to come on Friday. From Mina. Who wrote the message?",,,t:Mina,t:Sara|t:Friday,در آخر نوشته است From Mina: مینا نوشته است.
+17,,"Dear Omar, thank you for the book. From Ali. Who is the message for?",,,t:Omar,t:Ali|t:book,پیام با Dear Omar شروع می‌شود: برای عمر است.
+17,,"Dear aunt, I am going to visit you next week. From Laila. When is Laila going to come?",,,t:next week,t:tonight|t:tomorrow,لیلا هفتهٔ آینده می‌آید: next week.
+17,,"Dear Hamid, please bring your ball tomorrow. From Karim. What must Hamid bring?",,,ball,kite|book|rope,حمید باید توپ خود را بیاورد.
+17,,"Dear mother, I am fine. Kabul is very big. From Farid. Where is Farid?",,,t:in Kabul,t:at home|t:at school,فرید در کابل است.
+17,,"Dear Roya, I am sorry, I am sick. From Shirin. How is Shirin?",,,sick,happy|feel_angry|hungry,شیرین مریض است.
+17,,"Dear uncle, the lamb is well now. From Yusuf. Which animal was sick?",,,lamb,calf|kitten|horse,بره مریض بود و حالا جور است.
+17,,"Dear Nargis, see you on Monday at school. From Zarmina. Where are they going to meet?",,,school,bazaar|clinic|bakery,آنها در مکتب یکدیگر را می‌بینند.
+17,,"Dear teacher, thank you for your help. From Navid. Who is the message for?",,,teacher,doctor|farmer|baker,پیام برای معلم است.
+17,,"Dear Jawad, I am going to come by bus. From father. How is father going to come?",,,bus,car|bicycle|walk,پدر با بس می‌آید.
+17,,What do you write first in a message?,,,t:Dear,t:From|t:Soon,اول Dear و نام را می‌نویسی.
+17,,What do you write before your own name?,,,t:From,t:Dear|t:Please,پیش از نام خودت From می‌نویسی.
+19,سوال‌هایی از آینده: چه می‌خواهی شوی، کجا درس می‌خوانی، چرا؟ خوب گوش کن.,I am going to study at the university. Where is the university?,,,city,scene_village|desert|forest,پوهنتون در شهر است.
+19,,Our village needs a clinic. Who is going to work there?,,,doctor,driver|weaver|carpenter,در کلینیک داکتر کار می‌کند.
+19,,We are going to build a new school. Who is going to teach there?,,,teacher,farmer|mechanic|shepherd,در مکتب معلم درس می‌دهد.
+19,,The village needs a bridge over the river. Who can build it?,,,engineer,baker|tailor|nurse,انجنیر پل می‌سازد.
+19,,I learn English because I want to read. What do I want to read?,,,book,carpet|plate|brick,می‌خواهم کتاب بخوانم.
+19,,She is going to come back to her village. Is she going to stay in the city?,,,no,yes,نه. او به قریهٔ خود پس می‌آید.
+19,,What do you need for a good future?,,,school,candy|kite|ball,برای آیندهٔ خوب مکتب و درس لازم است.
+19,,In the future I am going to drive a tractor on our fields. What am I going to be?,,,farmer,driver|mechanic|builder,کسی که در زمین‌های خود تراکتور می‌راند دهقان است.
+19,,I am going to be a teacher because I like children. What do I like?,,,t:children,t:cars|t:sheep,من اطفال را خوش دارم.
+19,,He is going to study at night because he works in the day. When does he study?,,,night,morning|afternoon,او شب درس می‌خواند.
+19,,I want to see the world. What do I look at?,,,globe,net|saw|needle,به کرهٔ زمین نگاه می‌کنم.
+19,,She is going to write a letter to her family from the city. What does she need?,,,pen,hammer|needle|key,برای نوشتن خط قلم لازم است.
