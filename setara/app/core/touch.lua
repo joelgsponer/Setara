@@ -80,7 +80,7 @@ local function hit(x, y)
 end
 
 function M.pressed(id, x, y)
-  if not M.on then M.on = true M.layout(g.getDimensions()) end   -- the first touch brings the buttons
+  if not M.on then return end   -- a browser page brings its own buttons
   local b = hit(x, y)
   if b then
     M.fingers[id] = b.name

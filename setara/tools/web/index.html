@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Setara</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2f6f73">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Setara">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
 <style>
   @font-face { font-family: 'Fraunces'; src: url(assets/fonts/fraunces-latin-wght-normal.woff2) format('woff2'); font-weight: 100 900; font-display: swap; }
   @font-face { font-family: 'Albert Sans'; src: url(assets/fonts/albert-sans-latin-wght-normal.woff2) format('woff2'); font-weight: 100 900; font-display: swap; }
@@ -183,6 +188,12 @@
   fetch('version.json').then(function (r) { return r.json(); }).then(function (v) {
     document.getElementById('version').textContent = v.version + ' · ' + (v.packs.length - 1) + ' content packs';
   }).catch(function () {});
+</script>
+<script>
+  // Installable ("Add to Home Screen") and usable without a connection after the first load.
+  if ('serviceWorker' in navigator && location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+    navigator.serviceWorker && navigator.serviceWorker.register('sw.js').catch(function () {});
+  }
 </script>
 <script src="game.js"></script>
 <script async src="love.js" onload="startGame()"></script>

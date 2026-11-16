@@ -50,6 +50,9 @@ convenience.
 - `content/guide/` holds the teacher's guides (kind `guide`): per subject and
   level, what to teach and how. Read on the device and printed with
   `tools/guide_book.py`.
+- `tools/mobile/` builds the phone versions (`make_apk.py`, `make_love.py`);
+  `app/core/touch.lua` draws the buttons on a touch screen. See
+  `docs/mobile.md`.
 - `image/make_card.py` assembles `dist/card/setara/`, the folder that goes on
   the SD card and also runs on a PC.
 - `app/` is the LÖVE app. `main.lua` runs a scene stack (`app.push`,
