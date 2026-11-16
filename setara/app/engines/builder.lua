@@ -221,6 +221,15 @@ function E:draw()
       end
     end
   end
+  -- what is being built, where there is room beside the row (up to three tiles)
+  if self.item.show and self.n <= 3 then
+    local left = 640
+    for _, s in ipairs(self.slots) do left = math.min(left, s.x) end
+    if left >= 112 then
+      ui.card(8, 62, 100, 100, { fill = ui.c.shade, border = ui.c.line })
+      ui.thing(self.item.show, root, 12, 66, 92, 92)
+    end
+  end
   -- which way the row is built
   local first, last = self.slots[1], self.slots[self.n]
   if first and last and self.phase == "ask" then

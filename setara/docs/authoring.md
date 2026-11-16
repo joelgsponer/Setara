@@ -197,6 +197,8 @@ round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 02,,کتاب,f:ک|f:ت|f:ا|f:ب,,yes,,کتاب,
 ```
 
+- `picture` (optional): shown beside the row while it is built, for spelling
+  a pictured word; only with up to three tiles.
 - `tiles`: the things in the correct order. `extra`: tiles that do not belong.
   At most eight in total.
 - `rtl`: `yes` when the answer is built from right to left (Dari).

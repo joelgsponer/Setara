@@ -48,7 +48,7 @@ COLUMNS = {
     "listen_pick": {"round", "intro_fa", "say_en", "say_fa", "show", "answer", "distractors", "help_fa", "hop", "tags"},
     "say_it": {"round", "intro_fa", "say_en", "say_fa", "picture", "meaning_fa"},
     "sorter": {"round", "intro_fa", "thing", "say_en", "say_fa", "basket", "basket_say_fa", "basket_say_en"},
-    "builder": {"round", "intro_fa", "say_en", "say_fa", "tiles", "extra", "rtl", "done_en", "done_fa", "help_fa"},
+    "builder": {"round", "intro_fa", "say_en", "say_fa", "picture", "tiles", "extra", "rtl", "done_en", "done_fa", "help_fa"},
     "catch": {"round", "intro_fa", "say_en", "say_fa", "targets", "others", "need", "help_fa"},
     "pairs": {"round", "intro_fa", "a", "b", "say_en", "say_fa"},
     "market": {"round", "intro_fa", "say_en", "say_fa", "goods", "target", "units", "mode", "help_fa"},
@@ -408,6 +408,11 @@ def parse_sheet(pack: Pack, game: dict, rows: list[dict], sheet: str) -> dict[st
             }
             if row.get("help_fa"):
                 item["help_audio"] = pack.say("fa", row["help_fa"], where)
+            if row.get("picture"):
+                # shown beside the row while it is built (fits with up to three tiles)
+                item["show"] = pack.thing(row["picture"], where)
+                if len(tiles) > 3:
+                    pack.report.warn(where, "a picture beside the row fits only with up to three tiles; it will not be shown")
 
         elif engine == "catch":
             targets = pack.things(row.get("targets", ""), where)

@@ -1130,7 +1130,8 @@ def spell_it() -> None:
                     other = vowels[(vowels.index(other) + 1) % 5]
                 extra = "t:" + other
             spelled = ", ".join(c.upper() for c in word)
-            row(g, r, say_fa=B(wfa, word), say_en=word, tiles="|".join("t:" + c for c in word), extra=extra,
+            row(g, r, say_fa=B(wfa, word), say_en=word,
+                picture=word if ln <= 3 and (PICTURES / f"{word}.svg").exists() else "", tiles="|".join("t:" + c for c in word), extra=extra,
                 done_en=say(f"{spelled}. {word}.", word.upper()), right=word,
                 help_fa=B(f"کلمه {COUNT_FA[len(word)]} حرف دارد:", f"The word has {COUNT_EN[len(word)]} letters:") + hint + B(".", "."))
     intro(g, "01", B("کلمه‌های سه حرفی با صدای میانی باز. اول معنای کلمه را به دری می‌شنوی، بعد کلمهٔ انگلیسی را. آن را آهسته با خود بگو و صداهایش را جدا کن. برای هر صدا یک حرف بگیر و از چپ به راست بمان.",
@@ -1151,7 +1152,7 @@ HEADERS = {
     "listen_pick": ["round", "intro_fa", "say_en", "say_fa", "show", "answer", "distractors", "help_fa"],
     "say_it": ["round", "intro_fa", "say_en", "say_fa", "picture", "meaning_fa"],
     "sorter": ["round", "intro_fa", "thing", "say_en", "say_fa", "basket", "basket_say_fa", "basket_say_en"],
-    "builder": ["round", "intro_fa", "say_en", "say_fa", "tiles", "extra", "rtl", "done_en", "done_fa", "help_fa"],
+    "builder": ["round", "intro_fa", "say_en", "say_fa", "picture", "tiles", "extra", "rtl", "done_en", "done_fa", "help_fa"],
     "catch": ["round", "intro_fa", "say_en", "say_fa", "targets", "others", "need", "help_fa"],
     "pairs": ["round", "intro_fa", "a", "b", "say_en", "say_fa"],
 }

@@ -230,6 +230,18 @@ function Place:draw()
   local tw, th = 147, 176
   local first = math.max(0, math.min(self.row - 1, math.ceil(#self.games / COLS) - 2))
   if self.row <= 1 then first = 0 end
+  -- more games above or below the two rows in view: an arrow and a count say so
+  local total = math.ceil(#self.games / COLS)
+  if total > 2 then
+    local bob = math.sin(self.t * 4) * 2
+    if first > 0 then ui.arrow("up", 626, 118 + bob, 8, ui.c.ink) end
+    if first + 2 < total then ui.arrow("down", 626, 468 + bob, 8, ui.c.ink) end
+    -- one small mark per row of games, the rows in view filled
+    for r = 1, total do
+      ui.set(ui.c.ink, (r > first and r <= first + 2) and 0.9 or 0.25)
+      g.rectangle("fill", 623, 190 + (r - 1) * 12, 6, 8, 2, 2)
+    end
+  end
   for i, game in ipairs(self.games) do
     local row, col = math.floor((i - 1) / COLS), (i - 1) % COLS
     if row >= first and row < first + 2 then
