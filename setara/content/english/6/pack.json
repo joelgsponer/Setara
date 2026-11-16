@@ -1,0 +1,151 @@
+{
+  "pack": "en-6",
+  "subject": "en",
+  "level": 6,
+  "version": 1,
+  "title_en": "English 6: The wider world",
+  "title_fa": "انگلیسی ۶: دنیای کلانتر",
+  "games": [
+    {
+      "id": "word_stall",
+      "engine": "listen_pick",
+      "letter": "a",
+      "title_en": "Word Stall",
+      "title_fa": "دکان کلمه‌ها",
+      "intro_fa": "کلمهٔ نو را گوش کن و تصویر درست را انتخاب کن. اگر معنای آن را ندانستی، دکمهٔ کمک را بزن.",
+      "icon": "apple",
+      "v1": true,
+      "source": "items"
+    },
+    {
+      "id": "echo",
+      "engine": "say_it",
+      "letter": "b",
+      "title_en": "Echo",
+      "title_fa": "پژواک",
+      "intro_fa": "گوش کن. بعد خودت بلند بگو. باز گوش کن و ببین که درست گفتی یا نه.",
+      "icon": "say",
+      "v1": true,
+      "source": "items"
+    },
+    {
+      "id": "listen_in",
+      "engine": "story",
+      "letter": "c",
+      "title_en": "Listen In",
+      "title_fa": "گفتگو را بشنو",
+      "intro_fa": "دو نفر با هم گپ می‌زنند. خوب گوش کن و وقتی سوال آمد، جواب درست را انتخاب کن.",
+      "icon": "listen",
+      "sheet": "listen_in.csv"
+    },
+    {
+      "id": "riddles",
+      "engine": "listen_pick",
+      "letter": "d",
+      "title_en": "Riddles",
+      "title_fa": "چیستان",
+      "intro_fa": "چیستان را گوش کن. نام چیز گفته نمی‌شود. فکر کن که چیست و تصویر آن را انتخاب کن.",
+      "icon": "look",
+      "draw": 8,
+      "sheet": "riddles.csv"
+    },
+    {
+      "id": "yes_no",
+      "engine": "listen_pick",
+      "letter": "e",
+      "title_en": "Yes or No?",
+      "title_fa": "بلی یا نه؟",
+      "intro_fa": "تصویر را ببین و سوال را گوش کن. اگر درست است بلی را انتخاب کن، اگر نیست نه را.",
+      "icon": "yes",
+      "draw": 8,
+      "sheet": "yes_no.csv"
+    },
+    {
+      "id": "which_one",
+      "engine": "listen_pick",
+      "letter": "f",
+      "title_en": "Which One?",
+      "title_fa": "کدام یک؟",
+      "intro_fa": "سوال را گوش کن و خوب فکر کن. فقط یک جواب درست است.",
+      "icon": "point",
+      "draw": 8,
+      "sheet": "which_one.csv"
+    },
+    {
+      "id": "ask_answer",
+      "engine": "journey",
+      "letter": "g",
+      "title_en": "Question Road",
+      "title_fa": "راه سوال‌ها",
+      "intro_fa": "سوال را گوش کن و جواب درست را انتخاب کن. با هر جواب درست یک قدم پیش می‌روی.",
+      "icon": "street",
+      "draw": 8,
+      "sheet": "ask_answer.csv"
+    },
+    {
+      "id": "baskets",
+      "engine": "sorter",
+      "letter": "h",
+      "title_en": "Baskets",
+      "title_fa": "سبدها",
+      "intro_fa": "هر چیز را در سبد درست بینداز.",
+      "icon": "basket",
+      "draw": 8,
+      "sheet": "baskets.csv"
+    },
+    {
+      "id": "sentence_train",
+      "engine": "builder",
+      "letter": "i",
+      "title_en": "Sentence Train",
+      "title_fa": "قطار جمله",
+      "intro_fa": "جمله را گوش کن. بعد کلمه‌ها را به ترتیب درست پشت هم بگذار.",
+      "icon": "train",
+      "draw": 6,
+      "sheet": "sentence_train.csv"
+    },
+    {
+      "id": "catch_it",
+      "engine": "catch",
+      "letter": "j",
+      "title_en": "Catch It",
+      "title_fa": "بگیر",
+      "intro_fa": "گوش کن که چه چیزها را باید بگیری. فقط همان چیزها را بگیر و دیگران را بگذار که بیفتند.",
+      "icon": "hand",
+      "draw": 4,
+      "sheet": "catch_it.csv"
+    },
+    {
+      "id": "shopkeeper",
+      "engine": "market",
+      "letter": "k",
+      "title_en": "Shopkeeper",
+      "title_fa": "دکاندار",
+      "intro_fa": "گوش کن که چند دانه یا چند افغانی لازم است، و همان قدر بگذار.",
+      "icon": "shop",
+      "draw": 6,
+      "sheet": "shopkeeper.csv"
+    },
+    {
+      "id": "pairs",
+      "engine": "pairs",
+      "letter": "l",
+      "title_en": "Pairs",
+      "title_fa": "جوره‌ها",
+      "intro_fa": "دو کارت را که با هم جوره است پیدا کن.",
+      "icon": "friends",
+      "draw": 5,
+      "sheet": "pairs.csv"
+    },
+    {
+      "id": "reader",
+      "engine": "story",
+      "letter": "m",
+      "title_en": "Read and Decide",
+      "title_fa": "بخوان و جواب بده",
+      "intro_fa": "متن را بخوان و گوش کن. بعد به سوال‌ها جواب بده. اگر جواب درست نبود، کمک را بشنو و دوباره فکر کن.",
+      "icon": "read",
+      "sheet": "reader.csv"
+    }
+  ]
+}

@@ -7,6 +7,13 @@ round,intro_fa,say_en,say_fa,goods,target,units,mode,help_fa
 04,,"Thirty-six afghani, please.",,rice,36,1|2|5|10|20,pay,لطفاً سی و شش افغانی.
 04,,"Fifty afghani, please.",,honey,50,1|2|5|10|20,pay,لطفاً پنجاه افغانی.
 04,,"Twenty-one afghani, please.",,soap,21,1|2|5|10|20,pay,لطفاً بیست و یک افغانی.
+# version 2: six more prices a round; each round is a pool (draw 8)
+04,,It is twenty-eight afghani.,,tea,28,1|2|5|10|20,pay,بیست و هشت افغانی است.
+04,,It is forty-five afghani.,,sugar,45,1|2|5|10|20,pay,چهل و پنج افغانی است.
+04,,It is forty-nine afghani.,,meat,49,1|2|5|10|20,pay,چهل و نُه افغانی است.
+04,,It is thirty-three afghani.,,yoghurt,33,1|2|5|10|20,pay,سی و سه افغانی است.
+04,,It is twenty-four afghani.,,apple,24,1|2|5|10|20,pay,بیست و چهار افغانی است.
+04,,It is thirty-seven afghani.,,carrot,37,1|2|5|10|20,pay,سی و هفت افغانی است.
 # 05: 60 to 100.
 05,,"Sixty afghani, please.",,rice,60,1|2|5|10|20|50,pay,لطفاً شصت افغانی.
 05,,"Seventy-five afghani, please.",,meat,75,1|2|5|10|20|50,pay,لطفاً هفتاد و پنج افغانی.
@@ -14,6 +21,12 @@ round,intro_fa,say_en,say_fa,goods,target,units,mode,help_fa
 05,,"Ninety afghani, please.",,almond,90,1|2|5|10|20|50,pay,لطفاً نود افغانی.
 05,,"One hundred afghani, please.",,carpet,100,1|2|5|10|20|50,pay,لطفاً صد افغانی.
 05,,"Sixty-eight afghani, please.",,walnut,68,1|2|5|10|20|50,pay,لطفاً شصت و هشت افغانی.
+05,,"That is sixty-four afghani, please.",,blanket,64,1|2|5|10|20|50,pay,لطفاً شصت و چهار افغانی می‌شود.
+05,,"That is seventy-one afghani, please.",,basket,71,1|2|5|10|20|50,pay,لطفاً هفتاد و یک افغانی می‌شود.
+05,,"That is eighty-six afghani, please.",,bucket,86,1|2|5|10|20|50,pay,لطفاً هشتاد و شش افغانی می‌شود.
+05,,"That is ninety-seven afghani, please.",,pot,97,1|2|5|10|20|50,pay,لطفاً نود و هفت افغانی می‌شود.
+05,,"That is seventy-nine afghani, please.",,broom,79,1|2|5|10|20|50,pay,لطفاً هفتاد و نُه افغانی می‌شود.
+05,,"That is ninety-two afghani, please.",,pillow,92,1|2|5|10|20|50,pay,لطفاً نود و دو افغانی می‌شود.
 # 12: the clothes stall. The shopkeeper names the thing and the price.
 12,تو مشتری هستی. گوش کن که هر چیز چند افغانی است، و همان قدر پول بده.,The socks are fifteen afghani.,,socks,15,1|2|5|10|20|50,pay,جراب پانزده افغانی است.
 12,,The hat is forty afghani.,,hat,40,1|2|5|10|20|50,pay,کلاه چهل افغانی است.
@@ -21,10 +34,22 @@ round,intro_fa,say_en,say_fa,goods,target,units,mode,help_fa
 12,,The scarf is fifty-two afghani.,,scarf,52,1|2|5|10|20|50,pay,چادر پنجاه و دو افغانی است.
 12,,The shirt is eighty afghani.,,shirt,80,1|2|5|10|20|50,pay,پیراهن هشتاد افغانی است.
 12,,The waistcoat is ninety-five afghani.,,waistcoat,95,1|2|5|10|20|50,pay,واسکت نود و پنج افغانی است.
+12,,The coat is ninety-nine afghani.,,coat,99,1|2|5|10|20|50,pay,بالاپوش نود و نُه افغانی است.
+12,,The trousers are seventy-four afghani.,,trousers,74,1|2|5|10|20|50,pay,تنبان هفتاد و چهار افغانی است.
+12,,The dress is eighty-eight afghani.,,dress,88,1|2|5|10|20|50,pay,پیراهن زنانه هشتاد و هشت افغانی است.
+12,,The shoes are ninety-one afghani.,,shoes,91,1|2|5|10|20|50,pay,بوت نود و یک افغانی است.
+12,,The umbrella is fifty-eight afghani.,,umbrella,58,1|2|5|10|20|50,pay,چتری پنجاه و هشت افغانی است.
+12,,The glasses are seventy-seven afghani.,,glasses,77,1|2|5|10|20|50,pay,عینک هفتاد و هفت افغانی است.
 # 16: things for the home. A dialogue: the customer asks for the thing, the shopkeeper says the price.
 16,تو مشتری هستی. گوش کن که هر چیز چند افغانی است، و همان قدر پول بده.,"f: The candle, please. // m: Twelve afghani, please.",,candle,12,1|2|5|10|20|50,pay,لطفاً شمع را بده. لطفاً دوازده افغانی.
 16,,"m: The mirror, please. // f: Forty-five afghani, please.",,mirror,45,1|2|5|10|20|50,pay,لطفاً آیینه را بده. لطفاً چهل و پنج افغانی.
 16,,"f: The lamp, please. // m: Seventy afghani, please.",,lamp,70,1|2|5|10|20|50,pay,لطفاً چراغ را بده. لطفاً هفتاد افغانی.
-16,,"m: The towel, please. // f: Thirty-eight afghani, please.",,towel,38,1|2|5|10|20|50,pay,لطفاً دستمال را بده. لطفاً سی و هشت افغانی.
+16,,"m: The towel, please. // f: Thirty-eight afghani, please.",,towel,38,1|2|5|10|20|50,pay,لطفاً روی‌پاک را بده. لطفاً سی و هشت افغانی.
 16,,"f: The kite, please. // m: Nineteen afghani, please.",,kite,19,1|2|5|10|20|50,pay,لطفاً کاغذپران را بده. لطفاً نزده افغانی.
 16,,"m: The notebook, please. // f: Twenty afghani, please.",,notebook,20,1|2|5|10|20|50,pay,لطفاً کتابچه را بده. لطفاً بیست افغانی.
+16,,"f: The knife, please. // m: Thirty-five afghani, please.",,knife,35,1|2|5|10|20|50,pay,لطفاً کارد را بده. لطفاً سی و پنج افغانی.
+16,,"m: The clock, please. // f: Eighty-five afghani, please.",,clock_10,85,1|2|5|10|20|50,pay,لطفاً ساعت را بده. لطفاً هشتاد و پنج افغانی.
+16,,"f: The bottle, please. // m: Fourteen afghani, please.",,bottle,14,1|2|5|10|20|50,pay,لطفاً بوتل را بده. لطفاً چهارده افغانی.
+16,,"m: The toothbrush, please. // f: Eighteen afghani, please.",,toothbrush,18,1|2|5|10|20|50,pay,لطفاً برس دندان را بده. لطفاً هژده افغانی.
+16,,"f: The toothpaste, please. // m: Twenty-seven afghani, please.",,toothpaste,27,1|2|5|10|20|50,pay,لطفاً کریم دندان را بده. لطفاً بیست و هفت افغانی.
+16,,"m: The wheel, please. // f: Sixty-six afghani, please.",,wheel,66,1|2|5|10|20|50,pay,لطفاً چرخ را بده. لطفاً شصت و شش افغانی.

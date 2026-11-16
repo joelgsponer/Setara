@@ -1,0 +1,32 @@
+round,intro_fa,picture,say_en,say_fa,show_en,show_fa,choices,right,wrong_say_fa,wrong_picture
+# Mini stories: five to seven pages; every page is spoken in Dari first and then in English.
+# The scenes come from the shared picture library. The right choice is first in none of the decisions.
+# Story 05: Nadia goes to school (a girl tells it). Language up to unit 05. Every page is spoken in Dari first; then in English.
+05,یک قصهٔ کوتاه. هر صفحه را اول به دری و بعد به انگلیسی می‌شنوی. وقتی سوال آمد، تصویر درست را انتخاب کن.,scene_girl_walks_to_school,Hello! My name is Nadia. I am seven.,سلام! نام من نادیه است. من هفت ساله هستم.,Hello! My name is Nadia. I am seven.,,,,,
+05,,scene_new_girl_class,"f: Good morning, class! // f: Good morning, teacher!",صبح بخیر صنف! صبح بخیر معلم!,"Good morning, class! Good morning, teacher!",,,,,
+05,,scene_new_girl_class,Look! Point to the teacher.,ببین! معلم را نشان بده.,Look! Point to the teacher.,,girl|teacher|boy,teacher,این معلم نیست. معلم کلان است و پهلوی شاگردان ایستاده است. دوباره انتخاب کن.,
+05,,scene_girl_happy_at_school,I am a girl. I am happy.,من دختر هستم. من خوش هستم.,I am a girl. I am happy.,,,,,
+05,,scene_girl_happy_at_school,"How old are you, Nadia?",نادیه، چند ساله هستی؟,"How old are you, Nadia?",,t:5|t:9|t:7,t:7,نادیه گفت: من هفت ساله هستم. عدد هفت را انتخاب کن.,
+05,,scene_girl_walking_home,"Goodbye, teacher! Goodbye, class!",خداحافظ معلم! خداحافظ صنف!,"Goodbye, teacher! Goodbye, class!",,,,,
+# Story 13: Yusuf and the apples (a boy tells it; his friend answers in the woman's voice). Language up to unit 13.
+13,یک قصهٔ کوتاه. هر صفحه را اول به دری و بعد به انگلیسی می‌شنوی. وقتی سوال آمد، تصویر درست را انتخاب کن.,scene_apple_tree,m: Hello! My name is Yusuf. Look! Apples!,سلام! نام من یوسف است. ببین! سیب‌ها!,Hello! My name is Yusuf. Look! Apples!,,,,,
+13,,scene_apple_tree,What colour is the apple?,سیب چه رنگ است؟,What colour is the apple?,,color_green|color_yellow|color_red,color_red,دوباره سیب‌های درخت را ببین. آن‌ها سرخ هستند. رنگ سرخ را انتخاب کن.,
+13,,scene_boy_shares_apples,m: I am Yusuf. I am nine. // f: I am Shirin. I am eight.,من یوسف هستم. من نُه ساله هستم. من شیرین هستم. من هشت ساله هستم.,I am Yusuf. I am nine. I am Shirin. I am eight.,,,,,
+13,,scene_boy_shares_apples,"f: Yusuf, this is an apple. What is this?",یوسف، این سیب است. این چیست؟,"Yusuf, this is an apple. What is this?",,bread|apple|egg,apple,این سیب نیست. شیرین سیب را نشان می‌دهد. سیب را انتخاب کن.,
+13,,scene_boy_shares_apples,"m: One, two, three! Three red apples.",یک، دو، سه! سه سیب سرخ.,"One, two, three! Three red apples.",,,,,
+13,,scene_boy_friends,m: Goodbye! // f: Goodbye!,خداحافظ! خداحافظ!,Goodbye! Goodbye!,,,,,
+# Story 16: Jawad and the bread (a boy tells it). Language up to unit 16; the size words of unit 17 are met in advance with Dari help.
+16,یک قصهٔ کوتاه. هر صفحه را اول به دری و بعد به انگلیسی می‌شنوی. وقتی سوال آمد، تصویر درست را انتخاب کن.,scene_boy_one_bread,m: Hello! My name is Jawad. I am ten. Look! This is bread.,سلام! نام من جواد است. من ده ساله هستم. ببین! این نان است.,Hello! My name is Jawad. I am ten. Look! This is bread.,,,,,
+16,,scene_boy_one_bread,What is this?,این چیست؟,What is this?,,egg|apple|bread|tea,bread,این نان نیست. جواد نان در دست دارد. نان را انتخاب کن.,
+16,,scene_boy_gives_bread_sister,"m: Hello, Nadia! How are you? // f: I'm fine, thank you.",سلام نادیه! چطور هستی؟ خوب هستم، تشکر.,"Hello, Nadia! How are you? I'm fine, thank you.",,,,,
+16,,scene_boy_gives_bread_sister,"m: This is bread. // f: Thank you, Jawad!",این نان است. تشکر جواد!,"This is bread. Thank you, Jawad!",,,,,
+16,,happy,Nadia is happy. Point to happy.,نادیه خوش است. خوش را نشان بده.,Nadia is happy. Point to happy.,,sad|happy,happy,این روی غمگین است. نادیه نان گرفت و خوش است. روی خوش را انتخاب کن.,
+16,,scene_family_eats_bread_tea,m: Bread and tea! I am happy. Goodbye!,نان و چای! من خوش هستم. خداحافظ!,Bread and tea! I am happy. Goodbye!,,,,,
+# Story 20: Shirin and her book (a girl tells it). Language of the whole level.
+20,یک قصهٔ کوتاه. هر صفحه را اول به دری و بعد به انگلیسی می‌شنوی. وقتی سوال آمد، تصویر درست را انتخاب کن.,scene_girl_reads_to_brother,Hello! My name is Shirin. I am nine. This is my book.,سلام! نام من شیرین است. من نُه ساله هستم. این کتاب من است.,Hello! My name is Shirin. I am nine. This is my book.,,,,,
+20,,scene_girl_reads_to_brother,What colour is my book?,کتاب من چه رنگ است؟,What colour is my book?,,color_blue|color_red|color_green,color_red,دوباره کتاب را ببین. کتاب شیرین سرخ است. رنگ سرخ را انتخاب کن.,
+20,,scene_boy_learns_happy,This is my classroom. Look! Boys and books.,این صنف من است. ببین! پسرها و کتاب‌ها.,This is my classroom. Look! Boys and books.,,,,,
+20,,scene_boy_learns_happy,Count the boys.,پسرها را حساب کن.,Count the boys.,,t:2|t:5|t:3,t:3,دوباره حساب کن. یک، دو، سه. سه پسر است.,
+20,,teacher,"This is my teacher. Good morning, teacher!",این معلم من است. صبح بخیر معلم!,"This is my teacher. Good morning, teacher!",,,,,
+20,,book,Open your book and read.,کتابت را باز کن و بخوان.,Open your book and read.,,draw|read|clap,read,این کار دیگری است. معلم گفت: بخوان. تصویر خواندن را انتخاب کن.,
+20,,scene_girl_happy_at_school,I can read. I can speak English! Goodbye!,من خوانده می‌توانم. من انگلیسی گپ زده می‌توانم! خداحافظ!,I can read. I can speak English! Goodbye!,,,,,

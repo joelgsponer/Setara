@@ -1,0 +1,99 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# PRACTISE. A picture and a question; the answer is the yes or the no card. The same question comes with different pictures, so the child must look.
+01,تصویر را ببین. سوال می‌پرسد که او چه حال دارد. اگر درست است بلی، اگر نیست نه.,Is she sick?,,sick,yes,no,بلی. او در بستر است و مریض است: sick.
+01,,Is he sick?,,happy,no,yes,نه. او خوش و جور است، مریض نیست.
+01,,Is she tired?,,feel_tired,yes,no,بلی. او فاژه می‌کشد. مانده است: tired.
+01,,Is he cold?,,hot,no,yes,نه. او عرق کرده است. گرمی می‌کند، خنک نمی‌خورد.
+01,,Is she cold?,,cold,yes,no,بلی. او می‌لرزد. خنک می‌خورد: cold.
+01,,Is he hungry?,,hungry,yes,no,بلی. کاسه‌اش خالی است و گرسنه است: hungry.
+01,,Is she hungry?,,thirsty,no,yes,نه. او آب می‌خواهد. تشنه است، گرسنه نیست.
+01,,Is she thirsty?,,thirsty,yes,no,بلی. او آب می‌خواهد. تشنه است: thirsty.
+01,,Is he hot?,,hot,yes,no,بلی. آفتاب گرم است و او گرمی می‌کند: hot.
+01,,Is she happy?,,sad,no,yes,نه. او گریه می‌کند. غمگین است.
+01,,Is he thirsty?,,hungry,no,yes,نه. او نان می‌خواهد. گرسنه است، تشنه نیست.
+01,,Does she want to sleep?,,feel_tired,yes,no,بلی. او مانده است و می‌خواهد بخوابد.
+03,تصویر یک مریضی را نشان می‌دهد. سوال را گوش کن: آیا او همین مریضی را دارد؟,Does he have a headache?,,headache,yes,no,بلی. او سر خود را گرفته است. سردرد دارد: headache.
+03,,Does she have a headache?,,toothache,no,yes,نه. او روی خود را گرفته است. دندانش درد می‌کند، نه سرش.
+03,,Does she have a toothache?,,toothache,yes,no,بلی. دندانش درد می‌کند: toothache.
+03,,Does he have a stomach ache?,,stomach_ache,yes,no,بلی. او شکم خود را گرفته است. شکم‌درد دارد: stomach ache.
+03,,Does her ear hurt?,,earache,yes,no,بلی. او گوش خود را گرفته است. گوشش درد می‌کند: earache.
+03,,Does the child have a fever?,,fa_fever_days,yes,no,بلی. طفل در بستر است و داغ است. تب دارد: fever.
+03,,Does the boy have a cough?,,fa_cough,yes,no,بلی. پسر سرفه می‌کند: cough.
+03,,Does she have a cold?,,sneeze,yes,no,بلی. او عطسه می‌زند. ریزش دارد: a cold.
+03,,Does she have a stomach ache?,,sneeze,no,yes,نه. او ریزش دارد. شکمش درد نمی‌کند.
+03,,Does his knee hurt?,,headache,no,yes,نه. سرش درد می‌کند، نه زانویش.
+03,,Does his stomach hurt?,,stomach_ache,yes,no,بلی. شکمش درد می‌کند: his stomach hurts.
+03,,Is the boy well?,,fa_cough,no,yes,نه. او سرفه می‌کند. جور نیست.
+03,,Does he have a fever?,,happy,no,yes,نه. او خوش و جور است. تب ندارد.
+05,داکتر یک فرمان می‌دهد. تصویر را ببین: آیا طفل همان کار را می‌کند؟,Open your mouth. Does he do it?,,open_mouth,yes,no,بلی. او دهان خود را باز کرده است: Open your mouth.
+05,,Open your mouth. Does she do it?,,lie_down,no,yes,نه. او دراز کشیده است. دهانش بسته است.
+05,,Lie down. Does she do it?,,lie_down,yes,no,بلی. او دراز کشیده است: Lie down.
+05,,Lie down. Does the child do it?,,sit_down,no,yes,نه. او نشسته است، دراز نکشیده است.
+05,,Breathe in. Does she do it?,,breathe_slow,yes,no,بلی. او آهسته نفس می‌کشد: Breathe in.
+05,,Wait here. Does he do it?,,wait,yes,no,بلی. او نشسته و منتظر است: Wait here.
+05,,Show me your arm. Does he do it?,,arm,yes,no,بلی. او بازوی خود را نشان می‌دهد: Show me your arm.
+05,,Sit down here. Does the child do it?,,stand_up,no,yes,نه. او ایستاده است، ننشسته است.
+05,,Sit down here. Does he do it?,,sit_down,yes,no,بلی. او نشسته است: Sit down.
+05,,Don't move. Does he do it?,,run,no,yes,نه. او می‌دود. Don't move یعنی شور نخور.
+05,,Wait here. Does the boy do it?,,run,no,yes,نه. او می‌دود و منتظر نمی‌ماند.
+05,,Show me your arm. Does the boy do it?,,open_mouth,no,yes,نه. او دهان خود را باز کرده است، بازویش را نشان نمی‌دهد.
+07,should یعنی «بهتر است که». یک حالت را می‌شنوی و یک سوال: آیا این کار خوب است؟ فکر کن و بلی یا نه بگو.,She has a fever. Should she go to school?,,fa_fever_days,no,yes,نه. کسی که تب دارد بهتر است در خانه استراحت کند.
+07,,She is tired. Should she sleep early?,,feel_tired,yes,no,بلی. کسی که مانده است بهتر است وقت بخوابد.
+07,,She is thirsty. Should she drink water?,,thirsty,yes,no,بلی. کسی که تشنه است بهتر است آب بنوشد.
+07,,His hands are dirty. Should he eat now?,,dirty_hands,no,yes,نه. او اول باید دست‌هایش را بشوید.
+07,,His hands are dirty. Should he wash them?,,dirty_hands,yes,no,بلی. دست‌های چتل را باید شست.
+07,,She has a toothache. Should she eat sweets?,,toothache,no,yes,نه. شیرینی برای دندان خوب نیست.
+07,,She has a toothache. Should she go to the clinic?,,toothache,yes,no,بلی. با دندان‌درد بهتر است که به کلینیک برود.
+07,,It is snowing. Should you wear a coat?,,snow,yes,no,بلی. در برف هوا سرد است و بالاپوش لازم است.
+07,,He has a cough. Should he rest?,,fa_cough,yes,no,بلی. کسی که سرفه دارد بهتر است استراحت کند.
+07,,His knee hurts. Should he run?,,knee,no,yes,نه. با زانوی دردناک بهتر است که ندود.
+07,,The water is dirty. Should you drink it?,,water_puddle,no,yes,نه. آب چتل را نباید نوشید.
+07,,It is late at night. Should small children play in the street?,,night,no,yes,نه. شب ناوقت اطفال خُرد بهتر است در خانه باشند.
+09,توپ کجا است؟ خانه نزدیک است یا دور؟ تصویر را ببین و سوال را گوش کن. کلمه‌های نو: behind پشت، in front of پیش روی، between بین.,Is the ball behind the box?,,pos_behind,yes,no,بلی. توپ پشت صندوق است: behind.
+09,,Is the ball behind the box?,,pos_in_front,no,yes,نه. توپ پیش روی صندوق است: in front of.
+09,,Is the ball in front of the box?,,pos_in_front,yes,no,بلی. توپ پیش روی صندوق است: in front of.
+09,,Is the ball between the boxes?,,pos_between,yes,no,بلی. توپ بین دو صندوق است: between.
+09,,Is the ball in front of the box?,,pos_in,no,yes,نه. توپ در داخل صندوق است: in.
+09,,Is the ball on the box?,,pos_on,yes,no,بلی. توپ روی صندوق است: on.
+09,,Is the ball next to the box?,,pos_next_to,yes,no,بلی. توپ پهلوی صندوق است: next to.
+09,,Is the house near?,,near,yes,no,بلی. خانه نزدیک است: near.
+09,,Is the house near?,,far,no,yes,نه. خانه بسیار دور است: far.
+09,,Is the house far?,,far,yes,no,بلی. خانه دور است و راه دراز است: far.
+09,,Is the ball in the box?,,pos_behind,no,yes,نه. توپ پشت صندوق است، نه در داخل آن.
+09,,Is the ball on the box?,,pos_between,no,yes,نه. توپ بین دو صندوق است، نه روی آن.
+11,تصویر یک راه را نشان می‌دهد. سوال را گوش کن: آیا همین را می‌گوید؟ left چپ است و right راست.,Does it say: turn left?,,turn_left,yes,no,بلی. تیر به طرف چپ دور می‌خورد: turn left.
+11,,Does it say: turn left?,,turn_right,no,yes,نه. تیر به طرف راست دور می‌خورد: turn right.
+11,,Does it say: turn right?,,turn_right,yes,no,بلی. تیر به طرف راست دور می‌خورد: turn right.
+11,,Does it say: go straight?,,arrow_up,yes,no,بلی. تیر مستقیم پیش می‌رود: go straight.
+11,,Does it say: turn right?,,arrow_up,no,yes,نه. تیر مستقیم است و دور نمی‌خورد.
+11,,Does it say: stop?,,stop,yes,no,بلی. دست بالا یعنی ایستاد شو: stop.
+11,,Does it say: go straight?,,stop,no,yes,نه. دست بالا یعنی ایستاد شو، نه برو.
+11,,Can you cross the river here?,,bridge,yes,no,بلی. از روی پل از دریا تیر شده می‌توانی.
+11,,Does she walk?,,walk,yes,no,بلی. او پیاده می‌رود: walk.
+11,,Does he walk?,,run,no,yes,نه. او می‌دود: run. پیاده رفتن آهسته است.
+11,,Is this a road?,,road,yes,no,بلی. این سرک است: road.
+11,,Is this a road?,,bridge,no,yes,نه. این پل است: bridge.
+12,تصویر هوا را نشان می‌دهد. سوال را گوش کن و بلی یا نه بگو.,Is it sunny?,,sun,yes,no,بلی. آفتاب است: sunny.
+12,,Is it sunny?,,rain,no,yes,نه. باران می‌بارد.
+12,,Is it raining?,,rain,yes,no,بلی. باران می‌بارد: It is raining.
+12,,Is it raining?,,snow,no,yes,نه. این برف است، نه باران.
+12,,Is it snowing?,,snow,yes,no,بلی. برف می‌بارد: It is snowing.
+12,,Is it cloudy?,,cloudy,yes,no,بلی. آسمان ابر دارد: cloudy.
+12,,Is it windy?,,wind,yes,no,بلی. باد درخت را خم کرده است: windy.
+12,,Is the weather good?,,storm,no,yes,نه. طوفان است. هوا خراب است.
+12,,Do you need an umbrella?,,sun,no,yes,نه. آفتاب است و باران نیست.
+12,,Do you need an umbrella?,,rain,yes,no,بلی. باران می‌بارد و چتری لازم است.
+12,,Is it hot?,,snow,no,yes,نه. برف می‌بارد و هوا سرد است.
+12,,Can you see the sun?,,cloudy,no,yes,نه. ابر پیش آفتاب را گرفته است.
+17,اول یک جمله از دیروز می‌شنوی، بعد یک سوال با Did. اگر همان کار شد بلی، اگر نشد نه. بعد از Did فعل ساده می‌آید: Did he eat?,Omar ate an apple. Did Omar eat an apple?,,apple,yes,no,"بلی. عمر یک سیب خورد. Yes, he did."
+17,,Sara went to the clinic. Did Sara go to the bazaar?,,clinic,no,yes,"نه. سارا به کلینیک رفت، نه به بازار. No, she didn't."
+17,,Father drank tea. Did father drink milk?,,tea,no,yes,"نه. پدر چای نوشید، نه شیر. No, he didn't."
+17,,The baby slept all night. Did the baby sleep?,,sleep,yes,no,"بلی. طفل تمام شب خوابید. Yes, he did."
+17,,Mina walked to school. Did Mina walk to school?,,school,yes,no,"بلی. مینا پیاده به مکتب رفت. Yes, she did."
+17,,It rained yesterday. Did it snow yesterday?,,rain,no,yes,"نه. دیروز باران بارید، نه برف. No, it didn't."
+17,,I saw the doctor. Did I see the doctor?,,doctor,yes,no,"بلی. من داکتر را دیدم. Yes, I did."
+17,,We didn't buy bread. Did we buy bread?,,bread,no,yes,"نه. ما نان نخریدیم. No, we didn't."
+17,,The children played in the yard. Did they play in the house?,,play,no,yes,نه. آنها در حویلی بازی کردند، نه در خانه.
+17,,Ali fell on the road. Did Ali fall?,,fall,yes,no,"بلی. علی روی سرک افتاد. Yes, he did."
+17,,She gave me a pen. Did she give me a book?,,pen,no,yes,نه. او به من قلم داد، نه کتاب.
+17,,I washed my hands. Did I wash my hands?,,wash_hands,yes,no,"بلی. من دست‌هایم را شستم. Yes, I did."

@@ -1,0 +1,111 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# PRACTISE. Question to answer. Many answers are written words: the child reads them. Pools of twelve, eight per play.
+02,تصویر را ببین و کلمهٔ درست را بخوان و انتخاب کن. اینجا خودت می‌خوانی: back کمر، neck گردن، knee زانو، shoulder شانه، throat گلو، stomach شکم.,What hurts?,,back,t:back,t:neck|t:knee,این کمر است: back.
+02,,What hurts?,,neck,t:neck,t:knee|t:back,این گردن است: neck.
+02,,Where does it hurt?,,knee,t:knee,t:neck|t:throat,این زانو است: knee.
+02,,Where does it hurt?,,shoulder,t:shoulder,t:stomach|t:back,این شانه است: shoulder.
+02,,Read. What is it?,,throat,t:throat,t:tooth|t:foot,این گلو است: throat. با th شروع می‌شود.
+02,,Read. What is it?,,tummy,t:stomach,t:shoulder|t:throat,این شکم است: stomach.
+02,,Which word is it?,,head,t:head,t:hand|t:hair,این سر است: head.
+02,,Which word is it?,,hand,t:hand,t:head|t:arm,این دست است: hand.
+02,,Find the word.,,arm,t:arm,t:ear|t:eye,این بازو است: arm.
+02,,Find the word.,,foot,t:foot,t:food|t:finger,این پا است: foot. food یعنی خوراک.
+02,,What does the picture show?,,ear,t:ear,t:eye|t:arm,این گوش است: ear.
+02,,What does the picture show?,,tooth,t:tooth,t:throat|t:foot,این دندان است: tooth.
+04,سوال‌هایی از کلینیک: کی، کجا، چه؟ خوب گوش کن و جواب را انتخاب کن. بعضی جواب‌ها نوشته است.,Where does the doctor work?,,,clinic,school|bakery|shop,داکتر در کلینیک کار می‌کند.
+04,,Who helps the doctor?,,,nurse,teacher|tailor|customer,نرس به داکتر کمک می‌کند.
+04,,Your friend has a fever. Where do you take him?,,,clinic,bazaar|field|river,کسی را که تب دارد به کلینیک می‌بریم.
+04,,What does a thermometer show?,,,fa_fever_days,fa_cough|toothache|sneeze,ترمامیتر تب را نشان می‌دهد.
+04,,Who do you see at the clinic?,,,doctor,shopkeeper|tailor|teacher,در کلینیک داکتر را می‌بینی.
+04,,What do you say to the doctor in the morning?,,,t:Good morning,t:Good night|t:Goodbye,صبح می‌گوییم Good morning: صبح بخیر.
+04,,The doctor helps you. What do you say?,,,t:Thank you,t:Sorry|t:Hello,وقتی کسی کمک می‌کند می‌گوییم Thank you: تشکر.
+04,,He has a cut. What does he need?,,,bandage,thermometer|comb|key,برای زخم بنداژ لازم است.
+04,,A doctor and a nurse work in our clinic. How many people is that?,,,t:2,t:1|t:3,یک داکتر و یک نرس: دو نفر.
+04,,The nurse says: Wait here. What do you do?,,,wait,run|sleep|play,منتظر می‌مانی: wait.
+04,,The clinic is closed. Can you see the doctor now?,,,no,yes,نه. کلینیک بسته است. فردا باز بیا.
+04,,Does a nurse work at the bakery?,,,no,yes,نه. نرس در کلینیک کار می‌کند، نه در نانوایی.
+07,کسی یک مشکل دارد و می‌پرسد What should I do یعنی «چه کنم بهتر است». تو مشورهٔ خوب را انتخاب کن.,I am thirsty. What should I do?,,,drink,sleep|run|wash_face,کسی که تشنه است بهتر است آب بنوشد: You should drink water.
+07,,I am tired. What should I do?,,,sleep,play|run|work,کسی که مانده است بهتر است بخوابد: You should sleep.
+07,,My hands are dirty. What should I do?,,,wash_hands,eating|read|write,دست‌های چتل را باید شست: You should wash your hands.
+07,,I have a toothache. Where should I go?,,,clinic,bakery|field|bazaar,با دندان‌درد بهتر است که به کلینیک بروی.
+07,,It is cold. What should I wear?,,,coat,sandals|dress|shirt,در هوای سرد بهتر است که بالاپوش بپوشی.
+07,,I ate my dinner. What should I do before bed?,,,tb_brush,run|play|eating,بعد از نان شب بهتر است که دندان‌هایت را برس کنی.
+07,,I am hungry. What should I do?,,,eating,sleep|play|sweep,کسی که گرسنه است بهتر است نان بخورد.
+07,,My room is dirty. What should I do?,,,sweep,sleep|eating|play,اطاق چتل را بهتر است که پاک کنی.
+07,,I am sick. What should I do?,,,rest,run|work|play,کسی که مریض است بهتر است استراحت کند: You should rest.
+07,,It is raining. What should I take?,,,umbrella,kite|ball|rope,در باران بهتر است که چتری بگیری.
+07,,My friend carries a heavy sack. What should I do?,,,help,sleep|run|read,بهتر است که به دوستت کمک کنی: You should help.
+07,,I don't know the word. Who should I ask?,,,teacher,baby|kitten|chick,بهتر است که از معلم بپرسی.
+08,در خطر و وقتی کسی افگار است چه می‌گویی و چه می‌کنی؟ جواب‌های نوشته را بخوان: Help!، Be careful!، Don't touch!، Thank you!,You are in danger. What do you shout?,,,t:Help!,t:Hello!|t:Goodbye!,در خطر صدا می‌کنی Help: کمک!
+08,,A child plays with matches. What do you say?,,,t:Don't touch!,t:Thank you!|t:Come in!,می‌گویی Don't touch: دست نزن. گوگرد خطرناک است.
+08,,Your friend runs near the well. What do you say?,,,t:Be careful!,t:Well done!|t:Sit down!,می‌گویی Be careful: احتیاط کن.
+08,,Somebody helps you. What do you say?,,,t:Thank you!,t:Sorry!|t:Stop!,به کسی که کمک کرد می‌گویی Thank you: تشکر.
+08,,Your brother is hurt. Who do you tell first?,,,father,baby|kitten|chick,اول به یک کلان می‌گویی، مثلاً به پدر.
+08,,A man is hurt. You are small. What do you do?,,,tell_adult,play|sleep|eating,تو خُرد هستی: زود به یک کلان خبر می‌دهی.
+08,,Your friend is hurt. Do you go away?,,,no,yes,نه. پیش او می‌مانی و کمک می‌خواهی.
+08,,Your friend is hurt. You wait for help. What do you do?,,,fa_stay_with,play|run|sleep,پیش دوستت می‌مانی: Stay with him.
+08,,Is fire dangerous for a baby?,,,yes,no,بلی. آتش برای طفل خُرد خطرناک است.
+08,,Is a pillow dangerous?,,,no,yes,نه. بالشت خطرناک نیست.
+08,,What is dangerous?,,,snake,ball|pillow|book,مار خطرناک است. توپ، بالشت و کتاب خطرناک نیست.
+08,,The pot is hot. The baby comes near. What do you say?,,,t:Stop!,t:Good!|t:Please!,می‌گویی Stop: ایستاد شو. دیگ داغ است.
+09,تصویر را ببین و کلمهٔ درست را بخوان: توپ کجا است؟ behind پشت، in front of پیش روی، between بین، next to پهلوی، near نزدیک، far دور.,Where is the ball?,,pos_behind,t:behind,t:between|t:in front of,توپ پشت صندوق است: behind.
+09,,Where is the ball?,,pos_in_front,t:in front of,t:behind|t:between,توپ پیش روی صندوق است: in front of.
+09,,Look. Where is it?,,pos_between,t:between,t:behind|t:next to,توپ بین دو صندوق است: between.
+09,,Look. Where is it?,,pos_in,t:in,t:on|t:under,توپ در داخل صندوق است: in.
+09,,The ball is ... the box.,,pos_on,t:on,t:in|t:under,توپ روی صندوق است: on.
+09,,The ball is ... the box.,,pos_under,t:under,t:on|t:in,توپ زیر است: under.
+09,,Read and choose the right word.,,pos_next_to,t:next to,t:between|t:behind,توپ پهلوی صندوق است: next to.
+09,,Read and choose the right word.,,near,t:near,t:far|t:behind,خانه نزدیک است: near.
+09,,Which word is right?,,far,t:far,t:near|t:in,خانه دور است: far.
+09,,Which word is right?,,pos_behind,t:behind,t:on|t:in,توپ پشت صندوق است: behind.
+09,,Where is the house?,,near,t:near,t:far|t:under,خانه نزدیک است: near.
+09,,Where is the house?,,far,t:far,t:near|t:next to,خانه دور است: far.
+13,سوال‌هایی از چهار فصل. با When می‌پرسیم «چه وقت». جواب با in شروع می‌شود: in winter، در زمستان.,When does it snow?,,,t:in winter,t:in summer|t:in spring,در زمستان برف می‌بارد: in winter.
+13,,When is it very hot?,,,t:in summer,t:in winter|t:in autumn,در تابستان هوا بسیار گرم است: in summer.
+13,,When do the leaves fall?,,,t:in autumn,t:in spring|t:in summer,در خزان برگ‌ها می‌ریزد: in autumn.
+13,,When do the trees have flowers?,,,t:in spring,t:in autumn|t:in winter,در بهار درخت‌ها گل می‌کنند: in spring.
+13,,Which season comes after winter?,,,spring,summer|autumn,بعد از زمستان بهار می‌آید.
+13,,Which season comes after summer?,,,autumn,winter|spring,بعد از تابستان خزان می‌آید.
+13,,How many seasons are there in a year?,,,t:4,t:2|t:12,سال چهار فصل دارد: بهار، تابستان، خزان، زمستان.
+13,,What do you wear in winter?,,,coat,sandals|dress|shirt,در زمستان بالاپوش می‌پوشیم.
+13,,What is on the river in winter?,,,ice,flower|leaf|fish,در زمستان روی دریا یخ است: ice.
+13,,Which fruit do we eat in summer?,,,watermelon,walnut|snowman|ice,در تابستان تربوز می‌خوریم.
+13,,What do children make from snow?,,,snowman,kite|ball|basket,اطفال از برف آدم برفی جور می‌کنند.
+13,,It is hot and dry. Which season is it?,,,summer,winter|spring|autumn,هوای گرم و خشک: تابستان است.
+14,was برای یک نفر یا یک چیز است، were برای چند نفر و برای you. در نیمی از سوال‌ها کلمهٔ درست را می‌خوانی، در نیم دیگر به یک قصهٔ بسیار کوتاه جواب می‌دهی.,Today it is sunny. Yesterday it ... rainy.,,,t:was,t:were|t:is,برای it در گذشته was می‌آید: It was rainy.
+14,,Today we are at school. Yesterday we ... at home.,,,t:were,t:was|t:are,برای we در گذشته were می‌آید: We were at home.
+14,,The children ... in the yard yesterday.,,,t:were,t:was|t:is,اطفال چند نفر هستند: The children were.
+14,,My mother ... at the bazaar yesterday.,,,t:was,t:were|t:are,مادر یک نفر است: My mother was.
+14,,Today I ... well.,,,t:am,t:was|t:were,برای امروز am می‌آید: Today I am well.
+14,,Today the sky ... blue.,,,t:is,t:was|t:were,برای امروز is می‌آید: The sky is blue.
+14,,Yesterday I was at the clinic. Today I am at school. Where was I yesterday?,,,clinic,school|bazaar|bakery,دیروز در کلینیک بودم: I was at the clinic.
+14,,It was windy yesterday. Today it is sunny. What is the weather like today?,,,sun,wind|rain|snow,امروز آفتابی است. باد دیروز بود.
+14,,Last night the children were tired. How were the children?,,,feel_tired,happy|hungry|thirsty,اطفال دیشب مانده بودند: tired.
+14,,Yesterday mother was at the bazaar. Where was mother?,,,bazaar,clinic|school|kitchen,مادر دیروز در بازار بود.
+14,,Yesterday the door was open. Today it is closed. How was the door yesterday?,,,open,close,دیروز دروازه باز بود: open. امروز بسته است.
+14,,Last week grandfather was sick. Today he is well. Is he sick today?,,,no,yes,نه. هفتهٔ پیش مریض بود. امروز جور است.
+16,فعل‌های بی‌قاعده: go، went. eat، ate. drink، drank. see، saw. sleep، slept. give، gave. come، came. have، had. جای خالی را با کلمهٔ دیروز پُر کن، یا به سوال جواب بده.,Yesterday I ... to the bazaar.,,,t:went,t:go|t:goes,دیروز: went. I went to the bazaar.
+16,,Last night she ... rice.,,,t:ate,t:eat|t:eats,دیشب: ate. She ate rice.
+16,,Yesterday he ... two cups of tea.,,,t:drank,t:drink|t:drinks,دیروز: drank. He drank tea.
+16,,Yesterday we ... the doctor.,,,t:saw,t:see|t:sees,دیروز: saw. We saw the doctor.
+16,,Last night the baby ... well.,,,t:slept,t:sleep|t:sleeps,دیشب: slept. The baby slept well.
+16,,Yesterday my friend ... me an apple.,,,t:gave,t:give|t:gives,دیروز: gave. My friend gave me an apple.
+16,,Father ... home late last night.,,,t:came,t:come|t:comes,دیشب: came. Father came home late.
+16,,Last week I ... a cold.,,,t:had,t:have|t:has,هفتهٔ پیش: had. I had a cold.
+16,,Sara went to the well. Where was Sara?,,,well,bridge|bakery|school,سارا به چاه رفت، پس پیش چاه بود.
+16,,Omar ate kebab and drank juice. What was in his cup?,,,juice,kebab|tea|milk,او آب میوه نوشید. کباب را خورد.
+16,,Grandmother gave Mina a red scarf. What has Mina now?,,,scarf_red,scarf_blue|hat|coat,مادرکلان به مینا یک چادر سرخ داد.
+16,,I saw a fox in the field. Which animal was in the field?,,,fox,wolf|dog|cat,من یک روباه دیدم: fox.
+20,تکرار بزرگ: هوا، راه، دیروز، اول و بعد. هر سوال یک قصهٔ بسیار کوتاه است. خوب گوش کن.,It snowed all night. What was on the road in the morning?,,,snow,rain|sand|leaf,تمام شب برف بارید، پس صبح روی سرک برف بود.
+20,,Laila went to the clinic. She had a cough. What did Laila have?,,,fa_cough,toothache|earache|headache,لیلا سرفه داشت: a cough.
+20,,First I ate. Then I slept. What did I do first?,,,eating,sleep|play,اول نان خوردم: First I ate.
+20,,First she cooked. Then she cleaned the room. What did she do after that?,,,sweep,cook|sleep,بعد از پختن، اطاق را پاک کرد.
+20,,It didn't rain. It was sunny all day. What was the weather like?,,,sun,rain|snow|storm,باران نبارید. تمام روز آفتابی بود.
+20,,You are at the bridge. Turn right. Which one is it?,,,turn_right,turn_left|arrow_up|stop,Turn right یعنی به دست راست دور بخور.
+20,,It is winter. What is on the river?,,,ice,flower|sand|watermelon,در زمستان روی دریا یخ است.
+20,,I visited my neighbour. I brought soup. What did I bring?,,,food_bowl,kebab|bread|candy,من شوربا آوردم: soup.
+20,,Yesterday we were at school. Where were we?,,,school,clinic|bazaar|field,دیروز در مکتب بودیم.
+20,,Hamid fell and hurt his knee. What hurt?,,,knee,neck|back|shoulder,زانوی حمید افگار شد: knee.
+20,,It was hot and dry. Which season was it?,,,summer,winter|spring|autumn,هوای گرم و خشک: تابستان بود.
+20,,The doctor said: Open your mouth. What did the boy open?,,,mouth,door|window|book,داکتر گفت دهانت را باز کن.
+20,,Wash your hands before you eat. What do you do first?,,,wash_hands,eating|sleep,اول دست‌ها را می‌شویی، بعد نان می‌خوری.

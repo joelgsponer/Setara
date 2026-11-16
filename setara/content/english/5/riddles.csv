@@ -1,0 +1,86 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# PRACTISE. The word itself is never said: the child has to understand the sentence. Pools: each play asks eight.
+01,کسی می‌گوید که چه می‌خواهد یا چه می‌کند. تو بگو که او چه حال دارد: گرسنه، تشنه، مانده، مریض، گرم یا خنک.,I want water.,,,thirsty,,کسی که آب می‌خواهد تشنه است: thirsty.
+01,,I want bread and rice.,,,hungry,,کسی که نان و برنج می‌خواهد گرسنه است: hungry.
+01,,I want to sleep.,,,feel_tired,,کسی که می‌خواهد بخوابد مانده است: tired.
+01,,I sit in the sun in summer.,,,hot,,در تابستان زیر آفتاب آدم گرمی می‌کند: hot.
+01,,It snows and I have no coat.,,,cold,,برف می‌بارد و بالاپوش ندارم، پس خنک می‌خورم: cold.
+01,,I am in bed. I am not well.,,,sick,,در بستر هستم و جور نیستم: مریض هستم، sick.
+01,,I worked all day.,,,feel_tired,,تمام روز کار کردم، پس مانده هستم: tired.
+01,,I ate nothing today.,,,hungry,,امروز هیچ چیز نخوردم، پس گرسنه هستم: hungry.
+01,,I ran and ran. Give me a cup of water!,,,thirsty,,بسیار دویدم و آب می‌خواهم: تشنه هستم، thirsty.
+01,,I cannot go to school. I go to the clinic.,,,sick,,به مکتب رفته نمی‌توانم و به کلینیک می‌روم: مریض هستم، sick.
+01,,"Open the window, please!",,,hot,,کسی که می‌گوید کلکین را باز کن، گرمی می‌کند: hot.
+01,,"Close the door and give me a blanket, please.",,,cold,,کسی که کمپل می‌خواهد خنک می‌خورد: cold.
+02,یک جای بدن را می‌شنوی، اما نامش را نه. فکر کن که کدام است. کلمه‌های نو: neck گردن، shoulder شانه، back کمر، throat گلو، stomach شکم، knee زانو.,It is between your head and your shoulders.,,,neck,back|knee|tummy,گردن بین سر و شانه‌ها است: neck.
+02,,Your food goes here.,,,tummy,back|knee|shoulder,نانی که می‌خوری به شکم می‌رود: stomach.
+02,,It is in the middle of your leg.,,,knee,neck|shoulder|foot,زانو در میان پا است: knee.
+02,,Your arm starts here.,,,shoulder,knee|foot|tummy,بازو از شانه شروع می‌شود: shoulder.
+02,,It is behind you. You cannot see it.,,,back,tummy|knee|hand,کمر پشت سر تو است و آن را دیده نمی‌توانی: back.
+02,,It is inside your neck. It hurts when you have a cold.,,,throat,knee|back|foot,گلو داخل گردن است و با ریزش درد می‌کند: throat.
+02,,You see with them.,,,eye,ear|nose|foot,با چشم‌ها می‌بینی: eyes.
+02,,You hear with them.,,,ear,eye|mouth|hand,با گوش‌ها می‌شنوی: ears.
+02,,You walk on them.,,,foot,hand|ear|shoulder,با پاها راه می‌روی: feet.
+02,,You have ten on your hands.,,,finger,tooth|eye|knee,در دست‌هایت ده انگشت داری: fingers.
+02,,It is white. It is in your mouth.,,,tooth,finger|eye|nose,دندان سفید است و در دهان است: tooth.
+02,,It is on your face between your eyes and your mouth.,,,nose,ear|neck|hair,بینی بین چشم‌ها و دهان است: nose.
+04,چیستان‌هایی از کلینیک و قریه: کی است، یا چه چیز است، یا کجا است؟ کلمه‌های نو: doctor داکتر، nurse نرس، bandage بنداژ، thermometer ترمامیتر.,She helps sick people. She says: Open your mouth.,,,doctor,teacher|shopkeeper|tailor,داکتر به مریض‌ها کمک می‌کند و می‌گوید دهانت را باز کن: doctor.
+04,,He works with the doctor. He has bandages.,,,nurse,tailor|shopkeeper|teacher,نرس با داکتر کار می‌کند و بنداژ دارد: nurse.
+04,,Sick people go to this house.,,,clinic,school|bakery|shop,مردم مریض به کلینیک می‌روند: clinic.
+04,,It is long and white. You put it on a cut.,,,bandage,thermometer|rope|towel,بنداژ دراز و سفید است و روی زخم بسته می‌شود: bandage.
+04,,It tells you: you have a fever.,,,thermometer,bandage|spoon|pencil,ترمامیتر نشان می‌دهد که تب داری یا نه: thermometer.
+04,,You wait here to see the doctor.,,,clinic,bakery|bazaar|field,برای دیدن داکتر در کلینیک منتظر می‌مانی: clinic.
+04,,She works at the school.,,,teacher,doctor|nurse|tailor,معلم در مکتب کار می‌کند: teacher.
+04,,He sells bread and tea.,,,shopkeeper,doctor|nurse|teacher,دکاندار نان و چای می‌فروشد: shopkeeper.
+04,,He makes clothes.,,,tailor,nurse|doctor|shopkeeper,خیاط کالا می‌دوزد: tailor.
+04,,Children learn here.,,,school,clinic|bakery|shop,اطفال در مکتب درس می‌خوانند: school.
+04,,You buy bread here.,,,bakery,clinic|school|well,نان را از نانوایی می‌خری: bakery.
+04,,You wash your hands with it.,,,soap,bandage|thermometer|comb,دست‌ها را با صابون می‌شویی: soap.
+08,چیستان‌هایی از کمک و خطر. خوب گوش کن: چه کاری است، یا چه چیز خطرناک است؟ dangerous یعنی خطرناک، careful یعنی با احتیاط.,Your friend is hurt. You do not go away.,,,fa_stay_with,run|play|sleep,وقتی دوستت افگار است، پیش او می‌مانی: stay with him.
+08,,A child is hurt. You run to your father and say it.,,,tell_adult,fa_stay_with|play|sleep,به یک کلان خبر می‌دهی: tell an adult.
+08,,You run fast. There is a stone. Oh no!,,,fall,walk|sit_down|sleep,تیز می‌دوی، سنگ است و می‌افتی: fall.
+08,,It is hot and red. Small children must not play with it.,,,fire,ball|flower|apple,آتش داغ و سرخ است و اطفال نباید با آن بازی کنند: fire.
+08,,It is small. It makes fire. Don't touch it!,,,matches,button|coin|key,گوگرد خُرد است و آتش روشن می‌کند: matches.
+08,,It cuts bread. Be careful!,,,knife,spoon|comb|pencil,چاقو نان را می‌بُرد. احتیاط کن: knife.
+08,,You open your mouth and say: Help!,,,fa_shout_help,listen|read|eating,با آواز بلند کمک می‌خواهی: shout for help.
+08,,Two children carry a heavy sack together.,,,help,play|run|fall,دو طفل با هم بوجی سنگین را می‌برند: این کمک است، help.
+08,,A small child is near the fire. It is ...,,,toddler_fire,safe_child|play|sleep,طفل خُرد نزدیک آتش است: این خطرناک است، dangerous.
+08,,It is deep and has water. Small children must not play near it.,,,well,table|bed|chair,چاه چقور است و آب دارد. اطفال خُرد نباید نزدیک آن بازی کنند: well.
+08,,It has fast water. Be careful near it.,,,river,road|field|yard,دریا آب تیز دارد. نزدیک آن احتیاط کن: river.
+08,,The nurse puts it on a cut.,,,bandage,thermometer|soap|spoon,نرس روی زخم بنداژ می‌بندد: bandage.
+11,چیستان‌هایی از راه و جاهای قریه. کلمه‌های نو: road سرک، bridge پل، walk پیاده رفتن، stop ایستاد شو.,You cross the river on it.,,,bridge,road|well|field,از روی پل از دریا تیر می‌شوی: bridge.
+11,,Carts and lorries go on it.,,,road,bridge|river|roof,کراچی‌ها و لاری‌ها روی سرک می‌روند: road.
+11,,You go with your feet. No donkey and no cart.,,,walk,run|sit_down|sleep,با پاهایت می‌روی، بدون خر و کراچی: پیاده می‌روی، walk.
+11,,Don't go! Stay here!,,,stop,arrow_up|turn_left|turn_right,نرو، همین جا بمان: ایستاد شو، stop.
+11,,Don't turn. Go on and on.,,,arrow_up,turn_left|turn_right|stop,دور نخور و پیش برو: مستقیم برو، go straight.
+11,,Not left. The other way.,,,turn_right,turn_left|arrow_up|stop,چپ نه، طرف دیگر: راست، turn right.
+11,,Not right. The other way.,,,turn_left,turn_right|arrow_up|stop,راست نه، طرف دیگر: چپ، turn left.
+11,,You get water here.,,,well,bridge|road|bakery,از چاه آب می‌گیری: well.
+11,,Many shops are here.,,,bazaar,clinic|school|field,در بازار دکان‌های بسیار است: bazaar.
+11,,You learn English here.,,,school,bazaar|bakery|bridge,در مکتب انگلیسی یاد می‌گیری: school.
+11,,The doctor works here.,,,clinic,school|bazaar|bakery,داکتر در کلینیک کار می‌کند: clinic.
+11,,It smells good. They make bread here.,,,bakery,clinic|well|bridge,بوی خوب دارد و در آن نان می‌پزند: نانوایی، bakery.
+12,چیستان‌های هوا. نام هوا گفته نمی‌شود: فکر کن که آفتاب است، باران، برف، باد، ابر یا طوفان.,It is white and cold. It falls from the sky.,,,snow,rain|sun|wind,برف سفید و سرد است و از آسمان می‌بارد: snow.
+12,,Water falls from the sky.,,,rain,snow|sun|wind,وقتی آب از آسمان می‌آید، باران است: rain.
+12,,It is yellow and hot. You see it in the day.,,,sun,moon|snow|cloudy,آفتاب زرد و گرم است و در روز دیده می‌شود: sun.
+12,,The sky is grey. No sun and no rain.,,,cloudy,sun|rain|snow,آسمان خاکستری است، نه آفتاب است و نه باران: هوا ابری است، cloudy.
+12,,You cannot see it. It moves the trees.,,,wind,rain|sun|snow,باد دیده نمی‌شود، اما درخت‌ها را شور می‌دهد: wind.
+12,,"Big wind, rain and a loud noise in the sky.",,,storm,sun|cloudy|snow,باد تیز، باران و آواز بلند در آسمان: طوفان، storm.
+12,,You open it in the rain.,,,umbrella,coat|hat|kite,در باران چتری را باز می‌کنی: umbrella.
+12,,You wear it in cold weather.,,,coat,sandals|umbrella|kite,در هوای سرد بالاپوش می‌پوشی: coat.
+12,,The kite flies high today. What is the weather like?,,,wind,rain|snow|cloudy,کاغذپران با باد بلند می‌رود: امروز باد است، windy.
+12,,The ground is white this morning.,,,snow,rain|wind|sun,زمین سفید است، پس برف باریده است: snow.
+12,,The children sit under a tree. It is too hot in the yard.,,,sun,snow|rain|storm,اطفال زیر درخت نشسته‌اند، چون آفتاب بسیار گرم است: sunny.
+12,,You are wet. You have no umbrella.,,,rain,sun|wind|cloudy,تر شده‌ای و چتری نداری: باران می‌بارد، rain.
+19,چیستان‌هایی از کمک در خانه و به همسایه. کلمه‌های نو: old پیر، young خُردسال، soup شوربا.,It is hot. You eat it with a spoon.,,,food_bowl,bread|apple|kebab,شوربا گرم است و با قاشق خورده می‌شود: soup.
+19,,It keeps you warm in bed.,,,blanket,pillow|mattress|carpet,کمپل تو را در بستر گرم نگاه می‌کند: blanket.
+19,,He has white hair. He walked many years.,,,grandfather,baby|boy|girl,پدرکلان موی سفید دارد. او پیر است: old.
+19,,It cannot walk. It cannot talk. It is very young.,,,baby,grandfather|grandmother|teacher,طفل شیرخور راه رفته و گپ زده نمی‌تواند. او بسیار خُردسال است: young.
+19,,You burn it in the stove.,,,firewood,blanket|stone|water_bucket,هیزم در بخاری می‌سوزد: firewood.
+19,,A small child crosses the road with you. What do you do?,,,hold_hand,run|sleep|play,وقتی با طفل خُرد از سرک تیر می‌شوی، دستش را می‌گیری: hold her hand.
+19,,She was sick. I brought it to her in a bowl.,,,food_bowl,kebab|bread|walnut,برای مریض در کاسه شوربا آوردم: soup.
+19,,Mother gives the little child food.,,,feed_child,hold_hand|sweep|carry,مادر به طفل خُرد نان می‌دهد.
+19,,She makes the dinner.,,,cook,sweep|carry|read,کسی که نان شب را تیار می‌کند، می‌پزد: cook.
+19,,The buckets are heavy. She takes them home.,,,carry,cook|sweep|sleep,سطل‌ها سنگین است و او آنها را به خانه می‌برد: carry.
+19,,The room is dirty. He helps with a broom.,,,sweep,cook|carry|read,اطاق چتل است و او با جارو پاک می‌کند: clean.
+19,,Night comes. It is cold. Grandmother wants it.,,,blanket,umbrella|hat|basket,شب سرد است و مادرکلان کمپل می‌خواهد: blanket.

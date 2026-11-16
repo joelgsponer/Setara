@@ -1,51 +1,178 @@
-round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
-# Round = the unit whose language it uses. The child hears the sentence, builds it, and hears it again.
-01,This is my mother.,,t:This|t:is|t:my|t:mother,,,This is my mother.,,این مادر من است.
-01,This is my father.,,t:This|t:is|t:my|t:father,t:am,,This is my father.,,این پدر من است.
-01,Who is this?,,t:Who|t:is|t:this,,,Who is this?,,این کیست؟
-01,This is my sister.,,t:This|t:is|t:my|t:sister,t:your,,This is my sister.,,این خواهر من است.
-01,He is my brother.,,t:He|t:is|t:my|t:brother,t:am,,He is my brother.,,او برادر من است.
-03,I have a ball.,,t:I|t:have|t:a|t:ball,,,I have a ball.,,من یک توپ دارم.
-03,I have a key.,,t:I|t:have|t:a|t:key,t:is,,I have a key.,,من یک کلید دارم.
-03,I have a sister.,,t:I|t:have|t:a|t:sister,t:am,,I have a sister.,,من یک خواهر دارم.
-03,I have two brothers.,,t:I|t:have|t:two|t:brothers,t:brother,,I have two brothers.,,من دو برادر دارم.
-03,This is my grandmother.,,t:This|t:is|t:my|t:grandmother,t:have,,This is my grandmother.,,این مادرکلان من است.
-05,This is my nose.,,t:This|t:is|t:my|t:nose,,,This is my nose.,,این بینی من است.
-05,Touch your head.,,t:Touch|t:your|t:head,,,Touch your head.,,به سرت دست بزن.
-05,I have two hands.,,t:I|t:have|t:two|t:hands,t:hand,,I have two hands.,,من دو دست دارم.
-05,I have two eyes.,,t:I|t:have|t:two|t:eyes,t:eye,,I have two eyes.,,من دو چشم دارم.
-05,I have ten fingers.,,t:I|t:have|t:ten|t:fingers,t:am,,I have ten fingers.,,من ده انگشت دارم.
-08,How many stars?,,t:How|t:many|t:stars,,,How many stars?,,چند ستاره؟
-08,How many trees?,,t:How|t:many|t:trees,t:tree,,How many trees?,,چند درخت؟
-08,I have eleven pens.,,t:I|t:have|t:eleven|t:pens,t:pen,,I have eleven pens.,,من یازده قلم دارم.
-08,I have twenty stones.,,t:I|t:have|t:twenty|t:stones,t:stone,,I have twenty stones.,,من بیست سنگ دارم.
-08,Two trees and five flowers.,,t:Two|t:trees|t:and|t:five|t:flowers,,,Two trees and five flowers.,,دو درخت و پنج گل.
-09,I like rice.,,t:I|t:like|t:rice,,,I like rice.,,من برنج را خوش دارم.
-09,I like milk.,,t:I|t:like|t:milk,t:am,,I like milk.,,من شیر را خوش دارم.
-09,I like bread and tea.,,t:I|t:like|t:bread|t:and|t:tea,,,I like bread and tea.,,من نان و چای را خوش دارم.
-09,I like meat and rice.,,t:I|t:like|t:meat|t:and|t:rice,t:is,,I like meat and rice.,,من گوشت و برنج را خوش دارم.
-12,I like apples.,,t:I|t:like|t:apples,t:apple,,I like apples.,,من سیب را خوش دارم.
-12,I like grapes.,,t:I|t:like|t:grapes,t:have,,I like grapes.,,من انگور را خوش دارم.
-12,I don't like onions.,,t:I|t:don't|t:like|t:onions,,,I don't like onions.,,من پیاز را خوش ندارم.
-12,I don't like carrots.,,t:I|t:don't|t:like|t:carrots,t:am,,I don't like carrots.,,من زردک را خوش ندارم.
-12,I like potatoes.,,t:I|t:like|t:potatoes,t:potato,,I like potatoes.,,من کچالو را خوش دارم.
-13,Do you like honey?,,t:Do|t:you|t:like|t:honey,,,Do you like honey?,,تو عسل را خوش داری؟
-13,"Yes, I do.",,t:Yes|t:I|t:do,,,"Yes, I do.",,بلی، خوش دارم.
-13,"No, I don't.",,t:No|t:I|t:don't,t:do,,"No, I don't.",,نه، خوش ندارم.
-13,Do you like tea?,,t:Do|t:you|t:like|t:tea,t:are,,Do you like tea?,,تو چای را خوش داری؟
-13,I like walnuts and almonds.,,t:I|t:like|t:walnuts|t:and|t:almonds,,,I like walnuts and almonds.,,من چهارمغز و بادام را خوش دارم.
-16,This is a goat.,,t:This|t:is|t:a|t:goat,,,This is a goat.,,این بز است.
-16,I have two goats.,,t:I|t:have|t:two|t:goats,t:goat,,I have two goats.,,من دو بز دارم.
-16,I have three cows.,,t:I|t:have|t:three|t:cows,t:cow,,I have three cows.,,من سه گاو دارم.
-16,I have a cat.,,t:I|t:have|t:a|t:cat,t:cats,,I have a cat.,,من یک پشک دارم.
-16,Two dogs and five hens.,,t:Two|t:dogs|t:and|t:five|t:hens,,,Two dogs and five hens.,,دو سگ و پنج مرغ.
-18,This is my bed.,,t:This|t:is|t:my|t:bed,,,This is my bed.,,این تخت خواب من است.
-18,I have a cup.,,t:I|t:have|t:a|t:cup,t:cups,,I have a cup.,,من یک پیاله دارم.
-18,This is a red carpet.,,t:This|t:is|t:a|t:red|t:carpet,,,This is a red carpet.,,این یک قالین سرخ است.
-18,"Give me the soap, please.",,t:Give|t:me|t:the|t:soap|t:please,,,"Give me the soap, please.",,لطفاً صابون را به من بده.
-18,I have four spoons.,,t:I|t:have|t:four|t:spoons,t:spoon,,I have four spoons.,,من چهار قاشق دارم.
-20,This is my village.,,t:This|t:is|t:my|t:village,,,This is my village.,,این قریهٔ من است.
-20,I like my village.,,t:I|t:like|t:my|t:village,t:am,,I like my village.,,من قریه‌ام را خوش دارم.
-20,The mountain is big.,,t:The|t:mountain|t:is|t:big,t:have,,The mountain is big.,,کوه کلان است.
-20,I love my family.,,t:I|t:love|t:my|t:family,,,I love my family.,,من فامیلم را دوست دارم.
-20,This is my world.,,t:This|t:is|t:my|t:world,t:like,,This is my world.,,این دنیای من است.
+round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
+# Round = the unit whose language it uses. The child hears the sentence; builds it; and hears it again.
+# Every round is a pool: six sentences are asked each time.
+# 01
+01,فامیل من. جمله را گوش کن و کلمه‌ها را به ترتیب درست پشت هم بگذار.,This is my mother.,,t:This|t:is|t:my|t:mother,,,This is my mother.,,این مادر من است.
+01,,This is my father.,,t:This|t:is|t:my|t:father,t:am,,This is my father.,,این پدر من است.
+01,,Who is this?,,t:Who|t:is|t:this,,,Who is this?,,این کیست؟
+01,,This is my sister.,,t:This|t:is|t:my|t:sister,t:your,,This is my sister.,,این خواهر من است.
+01,,He is my brother.,,t:He|t:is|t:my|t:brother,t:am,,He is my brother.,,او برادر من است.
+01,,This is my brother.,,t:This|t:is|t:my|t:brother,t:am,,This is my brother.,,این برادر من است.
+01,,She is my sister.,,t:She|t:is|t:my|t:sister,t:He,,She is my sister.,,او خواهر من است.
+01,,She is my mother.,,t:She|t:is|t:my|t:mother,t:am,,She is my mother.,,او مادر من است.
+# 02
+02,مادرکلان، پدرکلان و خانه. جمله را گوش کن و بساز.,This is my grandfather.,,t:This|t:is|t:my|t:grandfather,t:am,,This is my grandfather.,,این پدرکلان من است.
+02,,He is my grandfather.,,t:He|t:is|t:my|t:grandfather,t:She,,He is my grandfather.,,او پدرکلان من است.
+02,,She is my grandmother.,,t:She|t:is|t:my|t:grandmother,t:He,,She is my grandmother.,,او مادرکلان من است.
+02,,This is my house.,,t:This|t:is|t:my|t:house,t:have,,This is my house.,,این خانهٔ من است.
+02,,This is my baby brother.,,t:This|t:is|t:my|t:baby|t:brother,,,This is my baby brother.,,این برادر خرد من است.
+02,,I love my parents.,,t:I|t:love|t:my|t:parents,t:am,,I love my parents.,,من پدر و مادرم را دوست دارم.
+02,,I love my grandmother.,,t:I|t:love|t:my|t:grandmother,t:is,,I love my grandmother.,,من مادرکلانم را دوست دارم.
+# 03
+03,من دارم. جمله را گوش کن و بساز. دقت کن: یک دانه یا چند دانه؟,I have a ball.,,t:I|t:have|t:a|t:ball,,,I have a ball.,,من یک توپ دارم.
+03,,I have a key.,,t:I|t:have|t:a|t:key,t:is,,I have a key.,,من یک کلید دارم.
+03,,I have a sister.,,t:I|t:have|t:a|t:sister,t:am,,I have a sister.,,من یک خواهر دارم.
+03,,I have two brothers.,,t:I|t:have|t:two|t:brothers,t:brother,,I have two brothers.,,من دو برادر دارم.
+03,,This is my grandmother.,,t:This|t:is|t:my|t:grandmother,t:have,,This is my grandmother.,,این مادرکلان من است.
+03,,I have a rope.,,t:I|t:have|t:a|t:rope,t:is,,I have a rope.,,من یک ریسمان دارم.
+03,,I have a box.,,t:I|t:have|t:a|t:box,t:am,,I have a box.,,من یک صندوق دارم.
+03,,I have a comb.,,t:I|t:have|t:a|t:comb,t:combs,,I have a comb.,,من یک شانه دارم.
+03,,I have two sisters and a brother.,,t:I|t:have|t:two|t:sisters|t:and|t:a|t:brother,,,I have two sisters and a brother.,,من دو خواهر و یک برادر دارم.
+# 04
+04,روی من. جمله را گوش کن و کلمه‌ها را به ترتیب بگذار.,Touch your nose.,,t:Touch|t:your|t:nose,t:my,,Touch your nose.,,به بینی‌ات دست بزن.
+04,,This is my head.,,t:This|t:is|t:my|t:head,t:your,,This is my head.,,این سر من است.
+04,,This is my mouth.,,t:This|t:is|t:my|t:mouth,t:am,,This is my mouth.,,این دهن من است.
+04,,Touch your hair.,,t:Touch|t:your|t:hair,t:my,,Touch your hair.,,به مویت دست بزن.
+04,,This is my ear.,,t:This|t:is|t:my|t:ear,t:a,,This is my ear.,,این گوش من است.
+04,,Touch your eye.,,t:Touch|t:your|t:eye,t:is,,Touch your eye.,,به چشمت دست بزن.
+04,,My hair is black.,,t:My|t:hair|t:is|t:black,t:am,,My hair is black.,,موی من سیاه است.
+04,,Touch your ear and your nose.,,t:Touch|t:your|t:ear|t:and|t:your|t:nose,,,Touch your ear and your nose.,,به گوش و بینی‌ات دست بزن.
+# 05
+05,بدن من. جمله را گوش کن و بساز.,This is my nose.,,t:This|t:is|t:my|t:nose,,,This is my nose.,,این بینی من است.
+05,,Touch your head.,,t:Touch|t:your|t:head,,,Touch your head.,,به سرت دست بزن.
+05,,I have two hands.,,t:I|t:have|t:two|t:hands,t:hand,,I have two hands.,,من دو دست دارم.
+05,,I have two eyes.,,t:I|t:have|t:two|t:eyes,t:eye,,I have two eyes.,,من دو چشم دارم.
+05,,I have ten fingers.,,t:I|t:have|t:ten|t:fingers,t:am,,I have ten fingers.,,من ده انگشت دارم.
+05,,I have two feet.,,t:I|t:have|t:two|t:feet,t:foot,,I have two feet.,,من دو پای دارم.
+05,,Touch your foot.,,t:Touch|t:your|t:foot,t:my,,Touch your foot.,,به پایت دست بزن.
+05,,I have two arms and two legs.,,t:I|t:have|t:two|t:arms|t:and|t:two|t:legs,,,I have two arms and two legs.,,من دو بازو و دو لنگ دارم.
+# 07
+07,عددهای یازده تا بیست به ترتیب. گوش کن و عددها را همان طور که شنیدی پشت هم بگذار.,"Eleven, twelve, thirteen.",,t:Eleven|t:twelve|t:thirteen,t:fifteen,,"Eleven, twelve, thirteen.",,یازده، دوازده، سیزده.
+07,,"Thirteen, fourteen, fifteen.",,t:Thirteen|t:fourteen|t:fifteen,t:eleven,,"Thirteen, fourteen, fifteen.",,سیزده، چهارده، پانزده.
+07,,"Sixteen, seventeen, eighteen.",,t:Sixteen|t:seventeen|t:eighteen,t:twenty,,"Sixteen, seventeen, eighteen.",,شانزده، هفده، هژده.
+07,,"Eighteen, nineteen, twenty.",,t:Eighteen|t:nineteen|t:twenty,t:sixteen,,"Eighteen, nineteen, twenty.",,هژده، نزده، بیست.
+07,,"Twelve, thirteen, fourteen, fifteen.",,t:Twelve|t:thirteen|t:fourteen|t:fifteen,,,"Twelve, thirteen, fourteen, fifteen.",,دوازده، سیزده، چهارده، پانزده.
+07,,"Fifteen, sixteen, seventeen.",,t:Fifteen|t:sixteen|t:seventeen,t:seven,,"Fifteen, sixteen, seventeen.",,پانزده، شانزده، هفده.
+07,,"Seventeen, eighteen, nineteen, twenty.",,t:Seventeen|t:eighteen|t:nineteen|t:twenty,,,"Seventeen, eighteen, nineteen, twenty.",,هفده، هژده، نزده، بیست.
+07,,"Fourteen, fifteen, sixteen.",,t:Fourteen|t:fifteen|t:sixteen,t:four,,"Fourteen, fifteen, sixteen.",,چهارده، پانزده، شانزده.
+# 08
+08,چند دانه؟ جمله را گوش کن و بساز.,How many stars?,,t:How|t:many|t:stars,,,How many stars?,,چند ستاره؟
+08,,How many trees?,,t:How|t:many|t:trees,t:tree,,How many trees?,,چند درخت؟
+08,,I have eleven pens.,,t:I|t:have|t:eleven|t:pens,t:pen,,I have eleven pens.,,من یازده قلم دارم.
+08,,I have twenty stones.,,t:I|t:have|t:twenty|t:stones,t:stone,,I have twenty stones.,,من بیست سنگ دارم.
+08,,Two trees and five flowers.,,t:Two|t:trees|t:and|t:five|t:flowers,,,Two trees and five flowers.,,دو درخت و پنج گل.
+08,,How many flowers?,,t:How|t:many|t:flowers,t:flower,,How many flowers?,,چند گل؟
+08,,How many leaves?,,t:How|t:many|t:leaves,t:leaf,,How many leaves?,,چند برگ؟
+08,,I have twelve stones.,,t:I|t:have|t:twelve|t:stones,t:stone,,I have twelve stones.,,من دوازده سنگ دارم.
+08,,Fifteen stars and a moon.,,t:Fifteen|t:stars|t:and|t:a|t:moon,,,Fifteen stars and a moon.,,پانزده ستاره و یک مهتاب.
+# 09
+09,من خوش دارم. جمله را گوش کن و بساز.,I like rice.,,t:I|t:like|t:rice,,,I like rice.,,من برنج را خوش دارم.
+09,,I like milk.,,t:I|t:like|t:milk,t:am,,I like milk.,,من شیر را خوش دارم.
+09,,I like bread and tea.,,t:I|t:like|t:bread|t:and|t:tea,,,I like bread and tea.,,من نان و چای را خوش دارم.
+09,,I like meat and rice.,,t:I|t:like|t:meat|t:and|t:rice,t:is,,I like meat and rice.,,من گوشت و برنج را خوش دارم.
+09,,I like yoghurt.,,t:I|t:like|t:yoghurt,t:have,,I like yoghurt.,,من ماست را خوش دارم.
+09,,I like tea and sugar.,,t:I|t:like|t:tea|t:and|t:sugar,,,I like tea and sugar.,,من چای و بوره را خوش دارم.
+09,,I like rice and yoghurt.,,t:I|t:like|t:rice|t:and|t:yoghurt,t:am,,I like rice and yoghurt.,,من برنج و ماست را خوش دارم.
+# 10
+10,فامیل من و من. جمله‌های درازتر. خوب گوش کن و بساز.,This is my family.,,t:This|t:is|t:my|t:family,,,This is my family.,,این فامیل من است.
+10,,I have a mother and a father.,,t:I|t:have|t:a|t:mother|t:and|t:a|t:father,,,I have a mother and a father.,,من مادر و پدر دارم.
+10,,I have a sister and two brothers.,,t:I|t:have|t:a|t:sister|t:and|t:two|t:brothers,,,I have a sister and two brothers.,,من یک خواهر و دو برادر دارم.
+10,,I have two hands and two feet.,,t:I|t:have|t:two|t:hands|t:and|t:two|t:feet,,,I have two hands and two feet.,,من دو دست و دو پای دارم.
+10,,I have two sisters.,,t:I|t:have|t:two|t:sisters,t:sister,,I have two sisters.,,من دو خواهر دارم.
+10,,I like milk and yoghurt.,,t:I|t:like|t:milk|t:and|t:yoghurt,,,I like milk and yoghurt.,,من شیر و ماست را خوش دارم.
+10,,I love my grandfather.,,t:I|t:love|t:my|t:grandfather,t:have,,I love my grandfather.,,من پدرکلانم را دوست دارم.
+10,,I have a baby brother.,,t:I|t:have|t:a|t:baby|t:brother,t:am,,I have a baby brother.,,من یک برادر خرد دارم.
+# 11
+11,میوه‌ها. جمله را گوش کن و بساز.,This is a pomegranate.,,t:This|t:is|t:a|t:pomegranate,t:am,,This is a pomegranate.,,این انار است.
+11,,I like apricots.,,t:I|t:like|t:apricots,t:apricot,,I like apricots.,,من زردآلو را خوش دارم.
+11,,I like watermelon.,,t:I|t:like|t:watermelon,t:have,,I like watermelon.,,من تربوز را خوش دارم.
+11,,This is an orange.,,t:This|t:is|t:an|t:orange,t:a,,This is an orange.,,این مالته است.
+11,,I like grapes and mulberries.,,t:I|t:like|t:grapes|t:and|t:mulberries,,,I like grapes and mulberries.,,من انگور و توت را خوش دارم.
+11,,I have two pomegranates.,,t:I|t:have|t:two|t:pomegranates,t:pomegranate,,I have two pomegranates.,,من دو انار دارم.
+11,,The watermelon is big.,,t:The|t:watermelon|t:is|t:big,t:small,,The watermelon is big.,,تربوز کلان است.
+11,,The mulberry is small.,,t:The|t:mulberry|t:is|t:small,t:big,,The mulberry is small.,,توت خُرد است.
+# 12
+12,خوش دارم و خوش ندارم. جمله را گوش کن و بساز.,I like apples.,,t:I|t:like|t:apples,t:apple,,I like apples.,,من سیب را خوش دارم.
+12,,I like grapes.,,t:I|t:like|t:grapes,t:have,,I like grapes.,,من انگور را خوش دارم.
+12,,I don't like onions.,,t:I|t:don't|t:like|t:onions,,,I don't like onions.,,من پیاز را خوش ندارم.
+12,,I don't like carrots.,,t:I|t:don't|t:like|t:carrots,t:am,,I don't like carrots.,,من زردک را خوش ندارم.
+12,,I like potatoes.,,t:I|t:like|t:potatoes,t:potato,,I like potatoes.,,من کچالو را خوش دارم.
+12,,I don't like spinach.,,t:I|t:don't|t:like|t:spinach,t:am,,I don't like spinach.,,من پالک را خوش ندارم.
+12,,I like tomatoes.,,t:I|t:like|t:tomatoes,t:tomato,,I like tomatoes.,,من بادنجان رومی را خوش دارم.
+12,,I like carrots and potatoes.,,t:I|t:like|t:carrots|t:and|t:potatoes,,,I like carrots and potatoes.,,من زردک و کچالو را خوش دارم.
+# 13
+13,تو خوش داری؟ سوال و جواب را گوش کن و بساز.,Do you like honey?,,t:Do|t:you|t:like|t:honey,,,Do you like honey?,,تو عسل را خوش داری؟
+13,,"Yes, I do.",,t:Yes|t:I|t:do,,,"Yes, I do.",,بلی، خوش دارم.
+13,,"No, I don't.",,t:No|t:I|t:don't,t:do,,"No, I don't.",,نه، خوش ندارم.
+13,,Do you like tea?,,t:Do|t:you|t:like|t:tea,t:are,,Do you like tea?,,تو چای را خوش داری؟
+13,,I like walnuts and almonds.,,t:I|t:like|t:walnuts|t:and|t:almonds,,,I like walnuts and almonds.,,من چهارمغز و بادام را خوش دارم.
+13,,Do you like onions?,,t:Do|t:you|t:like|t:onions,t:onion,,Do you like onions?,,تو پیاز را خوش داری؟
+13,,Do you like sweets?,,t:Do|t:you|t:like|t:sweets,t:are,,Do you like sweets?,,تو شیرینی را خوش داری؟
+13,,I like honey and bread.,,t:I|t:like|t:honey|t:and|t:bread,,,I like honey and bread.,,من عسل و نان را خوش دارم.
+13,,I don't like corn.,,t:I|t:don't|t:like|t:corn,t:do,,I don't like corn.,,من جواری را خوش ندارم.
+# 14
+14,حیوان‌ها. جمله را گوش کن و بساز.,I have a cow.,,t:I|t:have|t:a|t:cow,t:cows,,I have a cow.,,من یک گاو دارم.
+14,,This is a donkey.,,t:This|t:is|t:a|t:donkey,t:am,,This is a donkey.,,این خر است.
+14,,This is a horse.,,t:This|t:is|t:a|t:horse,t:have,,This is a horse.,,این اسپ است.
+14,,I have a hen.,,t:I|t:have|t:a|t:hen,t:is,,I have a hen.,,من یک مرغ دارم.
+14,,The horse is big.,,t:The|t:horse|t:is|t:big,t:small,,The horse is big.,,اسپ کلان است.
+14,,I like sheep and goats.,,t:I|t:like|t:sheep|t:and|t:goats,,,I like sheep and goats.,,من گوسفندها و بزها را خوش دارم.
+14,,I have a donkey and a cow.,,t:I|t:have|t:a|t:donkey|t:and|t:a|t:cow,,,I have a donkey and a cow.,,من یک خر و یک گاو دارم.
+14,,The hen is small.,,t:The|t:hen|t:is|t:small,t:big,,The hen is small.,,مرغ خُرد است.
+# 15
+15,حیوان‌های دیگر. جمله را گوش کن و بساز.,This is a fish.,,t:This|t:is|t:a|t:fish,t:am,,This is a fish.,,این ماهی است.
+15,,I like birds.,,t:I|t:like|t:birds,t:bird,,I like birds.,,من پرنده‌ها را خوش دارم.
+15,,Do you like cats?,,t:Do|t:you|t:like|t:cats,t:cat,,Do you like cats?,,تو پشک‌ها را خوش داری؟
+15,,I have a dog.,,t:I|t:have|t:a|t:dog,t:dogs,,I have a dog.,,من یک سگ دارم.
+15,,The camel is big.,,t:The|t:camel|t:is|t:big,t:small,,The camel is big.,,شتر کلان است.
+15,,The mouse is small.,,t:The|t:mouse|t:is|t:small,t:big,,The mouse is small.,,موش خُرد است.
+15,,I like cats and dogs.,,t:I|t:like|t:cats|t:and|t:dogs,,,I like cats and dogs.,,من پشک‌ها و سگ‌ها را خوش دارم.
+15,,I have a cat and a dog.,,t:I|t:have|t:a|t:cat|t:and|t:a|t:dog,,,I have a cat and a dog.,,من یک پشک و یک سگ دارم.
+# 16
+16,دو بز، سه گاو. وقتی چند دانه است، آخر کلمه فرق می‌کند. جمله را گوش کن و بساز.,This is a goat.,,t:This|t:is|t:a|t:goat,,,This is a goat.,,این بز است.
+16,,I have two goats.,,t:I|t:have|t:two|t:goats,t:goat,,I have two goats.,,من دو بز دارم.
+16,,I have three cows.,,t:I|t:have|t:three|t:cows,t:cow,,I have three cows.,,من سه گاو دارم.
+16,,I have a cat.,,t:I|t:have|t:a|t:cat,t:cats,,I have a cat.,,من یک پشک دارم.
+16,,Two dogs and five hens.,,t:Two|t:dogs|t:and|t:five|t:hens,,,Two dogs and five hens.,,دو سگ و پنج مرغ.
+16,,I have four sheep.,,t:I|t:have|t:four|t:sheep,t:am,,I have four sheep.,,من چهار گوسفند دارم.
+16,,I have a lamb.,,t:I|t:have|t:a|t:lamb,t:lambs,,I have a lamb.,,من یک بره دارم.
+16,,Six chicks and a hen.,,t:Six|t:chicks|t:and|t:a|t:hen,,,Six chicks and a hen.,,شش چوچهٔ مرغ و یک مرغ.
+16,,How many kittens?,,t:How|t:many|t:kittens,t:kitten,,How many kittens?,,چند چوچهٔ پشک؟
+# 17
+17,در خانه. جمله را گوش کن و بساز.,I have a spoon.,,t:I|t:have|t:a|t:spoon,t:spoons,,I have a spoon.,,من یک قاشق دارم.
+17,,This is a pot.,,t:This|t:is|t:a|t:pot,t:am,,This is a pot.,,این دیگ است.
+17,,This is my plate.,,t:This|t:is|t:my|t:plate,t:a,,This is my plate.,,این بشقاب من است.
+17,,I have a cup and a plate.,,t:I|t:have|t:a|t:cup|t:and|t:a|t:plate,,,I have a cup and a plate.,,من یک پیاله و یک بشقاب دارم.
+17,,The carpet is red.,,t:The|t:carpet|t:is|t:red,t:am,,The carpet is red.,,قالین سرخ است.
+17,,The pot is big.,,t:The|t:pot|t:is|t:big,t:small,,The pot is big.,,دیگ کلان است.
+17,,The spoon is small.,,t:The|t:spoon|t:is|t:small,t:big,,The spoon is small.,,قاشق خُرد است.
+17,,I have two plates.,,t:I|t:have|t:two|t:plates,t:plate,,I have two plates.,,من دو بشقاب دارم.
+# 18
+18,چیزهای خانه. جمله را گوش کن و بساز.,This is my bed.,,t:This|t:is|t:my|t:bed,,,This is my bed.,,این تخت خواب من است.
+18,,I have a cup.,,t:I|t:have|t:a|t:cup,t:cups,,I have a cup.,,من یک پیاله دارم.
+18,,This is a red carpet.,,t:This|t:is|t:a|t:red|t:carpet,,,This is a red carpet.,,این یک قالین سرخ است.
+18,,"Give me the soap, please.",,t:Give|t:me|t:the|t:soap|t:please,,,"Give me the soap, please.",,لطفاً صابون را به من بده.
+18,,I have four spoons.,,t:I|t:have|t:four|t:spoons,t:spoon,,I have four spoons.,,من چهار قاشق دارم.
+18,,I have a pillow and a blanket.,,t:I|t:have|t:a|t:pillow|t:and|t:a|t:blanket,,,I have a pillow and a blanket.,,من یک بالشت و یک کمپل دارم.
+18,,This is my bucket.,,t:This|t:is|t:my|t:bucket,t:a,,This is my bucket.,,این سطل من است.
+18,,"Give me the broom, please.",,t:Give|t:me|t:the|t:broom|t:please,,,"Give me the broom, please.",,لطفاً جاروب را به من بده.
+18,,I have a basket.,,t:I|t:have|t:a|t:basket,t:baskets,,I have a basket.,,من یک سبد دارم.
+# 19
+19,قریهٔ من. جمله را گوش کن و بساز.,This is a mountain.,,t:This|t:is|t:a|t:mountain,t:am,,This is a mountain.,,این کوه است.
+19,,This is a river.,,t:This|t:is|t:a|t:river,t:have,,This is a river.,,این دریا است.
+19,,I like the moon.,,t:I|t:like|t:the|t:moon,t:am,,I like the moon.,,من مهتاب را خوش دارم.
+19,,The sun is big.,,t:The|t:sun|t:is|t:big,t:small,,The sun is big.,,آفتاب کلان است.
+19,,This is a well.,,t:This|t:is|t:a|t:well,t:like,,This is a well.,,این چاه است.
+19,,The field is green.,,t:The|t:field|t:is|t:green,t:am,,The field is green.,,کشتزار سبز است.
+19,,The river is big.,,t:The|t:river|t:is|t:big,t:have,,The river is big.,,دریا کلان است.
+19,,I like the sun and the moon.,,t:I|t:like|t:the|t:sun|t:and|t:the|t:moon,,,I like the sun and the moon.,,من آفتاب و مهتاب را خوش دارم.
+# 20
+20,دنیای من. جمله را گوش کن و بساز.,This is my village.,,t:This|t:is|t:my|t:village,,,This is my village.,,این قریهٔ من است.
+20,,I like my village.,,t:I|t:like|t:my|t:village,t:am,,I like my village.,,من قریه‌ام را خوش دارم.
+20,,The mountain is big.,,t:The|t:mountain|t:is|t:big,t:have,,The mountain is big.,,کوه کلان است.
+20,,I love my family.,,t:I|t:love|t:my|t:family,,,I love my family.,,من فامیلم را دوست دارم.
+20,,This is my world.,,t:This|t:is|t:my|t:world,t:like,,This is my world.,,این دنیای من است.
+20,,I have a cat and two goats.,,t:I|t:have|t:a|t:cat|t:and|t:two|t:goats,,,I have a cat and two goats.,,من یک پشک و دو بز دارم.
+20,,Do you like my village?,,t:Do|t:you|t:like|t:my|t:village,t:are,,Do you like my village?,,تو قریهٔ مرا خوش داری؟
+20,,I like my house.,,t:I|t:like|t:my|t:house,t:have,,I like my house.,,من خانه‌ام را خوش دارم.
+20,,My family is big.,,t:My|t:family|t:is|t:big,t:am,,My family is big.,,فامیل من کلان است.

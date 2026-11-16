@@ -1,0 +1,123 @@
+round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
+# PRACTISE. The child hears the sentence and builds it from word tiles. The extra tile is the typical mistake.
+01,جمله را گوش کن و بساز. I am برای خودم، He is و She is برای کس دیگر. یک کلمه زیاد است: آن را نگیر.,I feel sick.,,t:I|t:feel|t:sick,t:am,,I feel sick.,,من خود را مریض احساس می‌کنم.
+01,,I am not well.,,t:I|t:am|t:not|t:well,t:feel,,I am not well.,,من جور نیستم.
+01,,How do you feel?,,t:How|t:do|t:you|t:feel,t:are,,How do you feel?,,چه حال داری؟
+01,,She is tired.,,t:She|t:is|t:tired,t:am,,She is tired.,,او مانده است.
+01,,He is hungry.,,t:He|t:is|t:hungry,t:are,,He is hungry.,,او گرسنه است.
+01,,Are you thirsty?,,t:Are|t:you|t:thirsty,t:Is,,Are you thirsty?,,تشنه هستی؟
+01,,I am hot.,,t:I|t:am|t:hot,t:is,,I am hot.,,من گرمی می‌کنم.
+01,,We are cold.,,t:We|t:are|t:cold,t:is,,We are cold.,,ما خنک می‌خوریم.
+01,,I feel tired today.,,t:I|t:feel|t:tired|t:today,t:am,,I feel tired today.,,امروز خود را مانده احساس می‌کنم.
+01,,He is not hungry.,,t:He|t:is|t:not|t:hungry,t:no,,He is not hungry.,,او گرسنه نیست.
+03,برای مریضی: I have، You have، اما He has و She has. پیش از earache می‌گوییم an، نه a. جمله را بساز.,I have a headache.,,t:I|t:have|t:a|t:headache,t:has,,I have a headache.,,من سردرد دارم.
+03,,He has a fever.,,t:He|t:has|t:a|t:fever,t:have,,He has a fever.,,او تب دارد.
+03,,She has a cough.,,t:She|t:has|t:a|t:cough,t:have,,She has a cough.,,او سرفه دارد.
+03,,What is the matter?,,t:What|t:is|t:the|t:matter,t:are,,What is the matter?,,چه شده است؟
+03,,I have a cold.,,t:I|t:have|t:a|t:cold,t:am,,I have a cold.,,من ریزش دارم.
+03,,Do you have a fever?,,t:Do|t:you|t:have|t:a|t:fever,t:Does,,Do you have a fever?,,تب داری؟
+03,,My sister has a toothache.,,t:My|t:sister|t:has|t:a|t:toothache,t:have,,My sister has a toothache.,,خواهرم دندان‌درد دارد.
+03,,I have a stomach ache.,,t:I|t:have|t:a|t:stomach|t:ache,t:an,,I have a stomach ache.,,من شکم‌درد دارم.
+03,,Does he have a cough?,,t:Does|t:he|t:have|t:a|t:cough,t:Do,,Does he have a cough?,,او سرفه دارد؟
+03,,She has an earache.,,t:She|t:has|t:an|t:earache,t:a,,She has an earache.,,او گوش‌درد دارد.
+05,فرمان‌های داکتر را بساز. فرمان با فعل شروع می‌شود: Open، Lie، Show. برای «نکن» اول Don't می‌آید.,"Open your mouth, please.",,t:Open|t:your|t:mouth|t:please,t:my,,"Open your mouth, please.",,لطفاً دهانت را باز کن.
+05,,Lie down here.,,t:Lie|t:down|t:here,t:up,,Lie down here.,,اینجا دراز بکش.
+05,,Show me your arm.,,t:Show|t:me|t:your|t:arm,t:my,,Show me your arm.,,بازویت را به من نشان بده.
+05,,Don't move your leg.,,t:Don't|t:move|t:your|t:leg,t:Not,,Don't move your leg.,,پایت را شور نده.
+05,,Come back tomorrow.,,t:Come|t:back|t:tomorrow,t:go,,Come back tomorrow.,,فردا باز بیا.
+05,,Breathe in and breathe out.,,t:Breathe|t:in|t:and|t:breathe|t:out,t:on,,Breathe in and breathe out.,,نفس بکش و نفست را بیرون کن.
+05,,"Wait here, please.",,t:Wait|t:here|t:please,t:there,,"Wait here, please.",,لطفاً اینجا منتظر باش.
+05,,Sit down on the chair.,,t:Sit|t:down|t:on|t:the|t:chair,t:up,,Sit down on the chair.,,روی چوکی بنشین.
+05,,Does it hurt here?,,t:Does|t:it|t:hurt|t:here,t:Do,,Does it hurt here?,,اینجا درد می‌کند؟
+05,,Take the child to the clinic.,,t:Take|t:the|t:child|t:to|t:the|t:clinic,t:at,,Take the child to the clinic.,,طفل را به کلینیک ببر.
+06,بعد از must فعل ساده می‌آید: You must wash. برای نباید: must not. جمله را بساز.,You must wash your hands.,,t:You|t:must|t:wash|t:your|t:hands,t:washes,,You must wash your hands.,,تو باید دست‌هایت را بشویی.
+06,,You must drink clean water.,,t:You|t:must|t:drink|t:clean|t:water,t:dirty,,You must drink clean water.,,تو باید آب پاک بنوشی.
+06,,You must not drink dirty water.,,t:You|t:must|t:not|t:drink|t:dirty|t:water,t:clean,,You must not drink dirty water.,,تو نباید آب چتل بنوشی.
+06,,You must not play with fire.,,t:You|t:must|t:not|t:play|t:with|t:fire,t:in,,You must not play with fire.,,تو نباید با آتش بازی کنی.
+06,,Must I wash my hands?,,t:Must|t:I|t:wash|t:my|t:hands,t:Do,,Must I wash my hands?,,آیا باید دست‌هایم را بشویم؟
+06,,We must be careful.,,t:We|t:must|t:be|t:careful,t:are,,We must be careful.,,ما باید احتیاط کنیم.
+06,,Children must sleep at night.,,t:Children|t:must|t:sleep|t:at|t:night,t:sleeps,,Children must sleep at night.,,اطفال باید شب بخوابند.
+06,,You must not touch the matches.,,t:You|t:must|t:not|t:touch|t:the|t:matches,t:play,,You must not touch the matches.,,تو نباید به گوگرد دست بزنی.
+06,,We must use soap.,,t:We|t:must|t:use|t:soap,t:uses,,We must use soap.,,ما باید صابون استعمال کنیم.
+07,بعد از should هم فعل ساده می‌آید: You should rest. برای سوال should اول می‌آید: Should I ...? جمله را بساز.,You should rest.,,t:You|t:should|t:rest,t:rests,,You should rest.,,بهتر است که استراحت کنی.
+07,,You should drink water.,,t:You|t:should|t:drink|t:water,t:eat,,You should drink water.,,بهتر است که آب بنوشی.
+07,,You should not go to school.,,t:You|t:should|t:not|t:go|t:to|t:school,t:at,,You should not go to school.,,بهتر است که به مکتب نروی.
+07,,What should I do?,,t:What|t:should|t:I|t:do,t:am,,What should I do?,,من چه کنم بهتر است؟
+07,,You should sleep early.,,t:You|t:should|t:sleep|t:early,t:late,,You should sleep early.,,بهتر است که وقت بخوابی.
+07,,You should go to the clinic.,,t:You|t:should|t:go|t:to|t:the|t:clinic,t:at,,You should go to the clinic.,,بهتر است که به کلینیک بروی.
+07,,She should wear a coat.,,t:She|t:should|t:wear|t:a|t:coat,t:wears,,She should wear a coat.,,بهتر است که او بالاپوش بپوشد.
+07,,He should brush his teeth.,,t:He|t:should|t:brush|t:his|t:teeth,t:brushes,,He should brush his teeth.,,بهتر است که او دندان‌هایش را برس کند.
+07,,Should I stay at home?,,t:Should|t:I|t:stay|t:at|t:home,t:Do,,Should I stay at home?,,آیا بهتر است که در خانه بمانم؟
+09,بگو که هر جای کجا است: near نزدیک، far دور، behind پشت، between بین، in front of پیش روی. جمله را بساز.,Where is the clinic?,,t:Where|t:is|t:the|t:clinic,t:are,,Where is the clinic?,,کلینیک کجاست؟
+09,,The clinic is near the school.,,t:The|t:clinic|t:is|t:near|t:the|t:school,t:far,,The clinic is near the school.,,کلینیک نزدیک مکتب است.
+09,,The well is behind the house.,,t:The|t:well|t:is|t:behind|t:the|t:house,t:between,,The well is behind the house.,,چاه پشت خانه است.
+09,,The bazaar is far.,,t:The|t:bazaar|t:is|t:far,t:near,,The bazaar is far.,,بازار دور است.
+09,,It is in front of the bridge.,,t:It|t:is|t:in|t:front|t:of|t:the|t:bridge,t:on,,It is in front of the bridge.,,پیش روی پل است.
+09,,Is the clinic far?,,t:Is|t:the|t:clinic|t:far,t:Are,,Is the clinic far?,,کلینیک دور است؟
+09,,The shop is next to the bakery.,,t:The|t:shop|t:is|t:next|t:to|t:the|t:bakery,t:between,,The shop is next to the bakery.,,دکان پهلوی نانوایی است.
+09,,The road is between the fields.,,t:The|t:road|t:is|t:between|t:the|t:fields,t:behind,,The road is between the fields.,,سرک بین زمین‌ها است.
+09,,The school is not far.,,t:The|t:school|t:is|t:not|t:far,t:no,,The school is not far.,,مکتب دور نیست.
+11,راه را نشان بده. Turn left چپ، Turn right راست، Go straight مستقیم، Cross the bridge از پل تیر شو. جمله را بساز.,Turn left at the school.,,t:Turn|t:left|t:at|t:the|t:school,t:right,,Turn left at the school.,,پیش مکتب به دست چپ دور بخور.
+11,,"Go straight, then turn right.",,t:Go|t:straight|t:then|t:turn|t:right,t:left,,"Go straight, then turn right.",,مستقیم برو، بعد به دست راست دور بخور.
+11,,Cross the bridge.,,t:Cross|t:the|t:bridge,t:road,,Cross the bridge.,,از پل تیر شو.
+11,,It is on the right.,,t:It|t:is|t:on|t:the|t:right,t:in,,It is on the right.,,در دست راست است.
+11,,How do I get to the clinic?,,t:How|t:do|t:I|t:get|t:to|t:the|t:clinic,t:go,,How do I get to the clinic?,,چطور به کلینیک بروم؟
+11,,Stop at the well.,,t:Stop|t:at|t:the|t:well,t:Go,,Stop at the well.,,پیش چاه ایستاد شو.
+11,,Walk five minutes.,,t:Walk|t:five|t:minutes,t:Run,,Walk five minutes.,,پنج دقیقه پیاده برو.
+11,,The bakery is on the left.,,t:The|t:bakery|t:is|t:on|t:the|t:left,t:at,,The bakery is on the left.,,نانوایی در دست چپ است.
+11,,Where is the road to the bazaar?,,t:Where|t:is|t:the|t:road|t:to|t:the|t:bazaar,t:are,,Where is the road to the bazaar?,,سرک بازار کجاست؟
+14,I was، He was، She was، It was. اما We were، You were، They were. کلمهٔ زیاد was یا were غلط است. جمله را بساز.,I was at home yesterday.,,t:I|t:was|t:at|t:home|t:yesterday,t:were,,I was at home yesterday.,,من دیروز در خانه بودم.
+14,,We were at school.,,t:We|t:were|t:at|t:school,t:was,,We were at school.,,ما در مکتب بودیم.
+14,,Yesterday it was rainy.,,t:Yesterday|t:it|t:was|t:rainy,t:is,,Yesterday it was rainy.,,دیروز هوا بارانی بود.
+14,,It was not cold.,,t:It|t:was|t:not|t:cold,t:were,,It was not cold.,,هوا سرد نبود.
+14,,They were happy.,,t:They|t:were|t:happy,t:was,,They were happy.,,آنها خوش بودند.
+14,,Were you tired last night?,,t:Were|t:you|t:tired|t:last|t:night,t:Was,,Were you tired last night?,,دیشب مانده بودی؟
+14,,Where were you yesterday?,,t:Where|t:were|t:you|t:yesterday,t:was,,Where were you yesterday?,,دیروز کجا بودی؟
+14,,She was sick last week.,,t:She|t:was|t:sick|t:last|t:week,t:is,,She was sick last week.,,او هفتهٔ پیش مریض بود.
+14,,Today it is sunny.,,t:Today|t:it|t:is|t:sunny,t:was,,Today it is sunny.,,امروز هوا آفتابی است.
+15,برای دیروز فعل ed می‌گیرد: walked، cooked، played. کلمهٔ زیاد همان فعل بدون ed است. گوش کن که کدام را می‌شنوی.,Yesterday I walked to school.,,t:Yesterday|t:I|t:walked|t:to|t:school,t:walk,,Yesterday I walked to school.,,دیروز پیاده به مکتب رفتم.
+15,,She cooked rice.,,t:She|t:cooked|t:rice,t:cook,,She cooked rice.,,او برنج پخت.
+15,,We played in the yard.,,t:We|t:played|t:in|t:the|t:yard,t:play,,We played in the yard.,,ما در حویلی بازی کردیم.
+15,,He helped his father.,,t:He|t:helped|t:his|t:father,t:helps,,He helped his father.,,او به پدرش کمک کرد.
+15,,I washed the cups.,,t:I|t:washed|t:the|t:cups,t:wash,,I washed the cups.,,من پیاله‌ها را شستم.
+15,,It rained last night.,,t:It|t:rained|t:last|t:night,t:rains,,It rained last night.,,دیشب باران بارید.
+15,,They cleaned the room.,,t:They|t:cleaned|t:the|t:room,t:clean,,They cleaned the room.,,آنها اطاق را پاک کردند.
+15,,My mother carried the water.,,t:My|t:mother|t:carried|t:the|t:water,t:carry,,My mother carried the water.,,مادرم آب را برد.
+15,,Today I walk to school.,,t:Today|t:I|t:walk|t:to|t:school,t:walked,,Today I walk to school.,,امروز پیاده به مکتب می‌روم.
+16,فعل‌های بی‌قاعده را در جمله بساز: went، ate، drank، saw، came، had، slept، gave. کلمهٔ زیاد شکل امروز است.,I went to the clinic.,,t:I|t:went|t:to|t:the|t:clinic,t:go,,I went to the clinic.,,من به کلینیک رفتم.
+16,,She ate bread.,,t:She|t:ate|t:bread,t:eat,,She ate bread.,,او نان خورد.
+16,,He drank tea.,,t:He|t:drank|t:tea,t:drink,,He drank tea.,,او چای نوشید.
+16,,We saw the doctor.,,t:We|t:saw|t:the|t:doctor,t:see,,We saw the doctor.,,ما داکتر را دیدیم.
+16,,He came home late.,,t:He|t:came|t:home|t:late,t:come,,He came home late.,,او ناوقت به خانه آمد.
+16,,I had a headache.,,t:I|t:had|t:a|t:headache,t:have,,I had a headache.,,من سردرد داشتم.
+16,,The baby slept well.,,t:The|t:baby|t:slept|t:well,t:sleep,,The baby slept well.,,طفل خوب خوابید.
+16,,She gave me an apple.,,t:She|t:gave|t:me|t:an|t:apple,t:give,,She gave me an apple.,,او به من یک سیب داد.
+16,,Yesterday we went to the bazaar.,,t:Yesterday|t:we|t:went|t:to|t:the|t:bazaar,t:go,,Yesterday we went to the bazaar.,,دیروز به بازار رفتیم.
+17,سوال با Did شروع می‌شود و فعل ساده می‌ماند: Did you go؟ نه Did you went. با didn't هم فعل ساده است: I didn't sleep. جمله را بساز.,Did you go to school yesterday?,,t:Did|t:you|t:go|t:to|t:school|t:yesterday,t:went,,Did you go to school yesterday?,,آیا دیروز به مکتب رفتی؟
+17,,"Yes, I did.",,t:Yes|t:I|t:did,t:do,,"Yes, I did.",,بلی، رفتم.
+17,,"No, I didn't.",,t:No|t:I|t:didn't,t:don't,,"No, I didn't.",,نه، نرفتم.
+17,,I didn't sleep well.,,t:I|t:didn't|t:sleep|t:well,t:slept,,I didn't sleep well.,,من خوب نخوابیدم.
+17,,What did you do yesterday?,,t:What|t:did|t:you|t:do|t:yesterday,t:does,,What did you do yesterday?,,دیروز چه کردی؟
+17,,Did you see the doctor?,,t:Did|t:you|t:see|t:the|t:doctor,t:saw,,Did you see the doctor?,,داکتر را دیدی؟
+17,,I didn't eat meat.,,t:I|t:didn't|t:eat|t:meat,t:ate,,I didn't eat meat.,,من گوشت نخوردم.
+17,,She took the child to the clinic.,,t:She|t:took|t:the|t:child|t:to|t:the|t:clinic,t:take,,She took the child to the clinic.,,او طفل را به کلینیک برد.
+17,,He fell and hurt his knee.,,t:He|t:fell|t:and|t:hurt|t:his|t:knee,t:fall,,He fell and hurt his knee.,,او افتاد و زانویش افگار شد.
+18,دو قسم کار است. در جمله‌ها کلمه‌ها را به ترتیب بگذار. در قصه‌های کوتاه تصویرها را به ترتیب بگذار: اول کدام، بعد کدام، بعد از آن کدام.,First I washed my hands.,,t:First|t:I|t:washed|t:my|t:hands,t:Then,,First I washed my hands.,,اول دست‌هایم را شستم.
+18,,Then I ate breakfast.,,t:Then|t:I|t:ate|t:breakfast,t:First,,Then I ate breakfast.,,بعد نان صبح خوردم.
+18,,After that I went to school.,,t:After|t:that|t:I|t:went|t:to|t:school,t:before,,After that I went to school.,,بعد از آن به مکتب رفتم.
+18,,Wash your hands before you eat.,,t:Wash|t:your|t:hands|t:before|t:you|t:eat,t:after,,Wash your hands before you eat.,,پیش از نان خوردن دست‌هایت را بشوی.
+18,,Brush your teeth after dinner.,,t:Brush|t:your|t:teeth|t:after|t:dinner,t:before,,Brush your teeth after dinner.,,بعد از نان شب دندان‌هایت را برس کن.
+18,,I feel better today.,,t:I|t:feel|t:better|t:today,t:good,,I feel better today.,,امروز حالم بهتر است.
+18,,First she rested. Then she drank water. After that she slept.,,rest|drink|sleep,play,,First she rested. Then she drank water. After that she slept.,,اول استراحت کرد، بعد آب نوشید، بعد از آن خوابید. تصویرها را به همین ترتیب بگذار.
+18,,First he got up. Then he washed his face. After that he ate breakfast.,,wake_up|wash_face|breakfast,sleep,,First he got up. Then he washed his face. After that he ate breakfast.,,اول بیدار شد، بعد رویش را شست، بعد از آن نان صبح خورد. تصویرها را به همین ترتیب بگذار.
+18,,First we cooked. Then we ate. After that we washed the plates.,,cook|eating|plate_clean,play,,First we cooked. Then we ate. After that we washed the plates.,,اول پختیم، بعد خوردیم، بعد از آن بشقاب‌ها را شستیم. تصویرها را به همین ترتیب بگذار.
+18,,First wash your hands. Then eat. After that brush your teeth.,,wash_hands|eating|tb_brush,sleep,,First wash your hands. Then eat. After that brush your teeth.,,اول دست‌هایت را بشوی، بعد نان بخور، بعد از آن دندان‌هایت را برس کن.
+19,جمله‌هایی از کمک کردن، همه در گذشته: visited، brought، helped، carried. جمله را بساز.,My neighbour was sick.,,t:My|t:neighbour|t:was|t:sick,t:were,,My neighbour was sick.,,همسایهٔ من مریض بود.
+19,,I visited her yesterday.,,t:I|t:visited|t:her|t:yesterday,t:visit,,I visited her yesterday.,,دیروز به دیدن او رفتم.
+19,,I brought soup and bread.,,t:I|t:brought|t:soup|t:and|t:bread,t:bring,,I brought soup and bread.,,من شوربا و نان آوردم.
+19,,We should help old people.,,t:We|t:should|t:help|t:old|t:people,t:young,,We should help old people.,,بهتر است که به مردم پیر کمک کنیم.
+19,,My sister helped me.,,t:My|t:sister|t:helped|t:me,t:help,,My sister helped me.,,خواهرم به من کمک کرد.
+19,,She is very kind.,,t:She|t:is|t:very|t:kind,t:are,,She is very kind.,,او بسیار مهربان است.
+19,,Thank you for the soup.,,t:Thank|t:you|t:for|t:the|t:soup,t:from,,Thank you for the soup.,,تشکر از شوربا.
+19,,I carried water for her.,,t:I|t:carried|t:water|t:for|t:her,t:carry,,I carried water for her.,,من برای او آب بردم.
+19,,The baby is young.,,t:The|t:baby|t:is|t:young,t:old,,The baby is young.,,طفل خُردسال است.

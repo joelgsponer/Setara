@@ -78,6 +78,7 @@ function E:next()
     return self:next()
   end
   self.wrong = {}
+  self.misses, self.show_right = 0, false
   self.phase = "ask"
   self.t = 0
   self:again(false)
@@ -126,7 +127,14 @@ function E:input(b)
     self.shake, self.shake_t = b, 0.4
     sfx.play("wrong")
     self.quiz:wrong()
-    self:again(false)
+    self.misses = (self.misses or 0) + 1
+    -- as in Listen and Pick: the second miss brings the explanation and shows the way
+    if self.misses >= 2 then self.show_right = true end
+    if self.misses >= 2 and self.item.help_audio and #self.item.help_audio > 0 then
+      self.ctx.say(self.item.help_audio)
+    else
+      self:again(false)
+    end
   end
 end
 
@@ -273,6 +281,7 @@ function E:draw()
     local state
     if self.phase ~= "ask" and dir == self.picked then state = "right"
     elseif self.shake == dir then state = "shake"
+    elseif self.show_right and slot.right and self.phase == "ask" then state = "hint"
     elseif self.wrong[dir] then state = "wrong" end
     common.draw_slot(self.ctx.root, slot, state, self.phase == "hop" and 1 or self.t)
   end

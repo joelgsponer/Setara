@@ -1,0 +1,28 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa,hop
+# Odd one out: three pictures belong together, one does not. Every round is a pool (draw 8).
+# 10
+10,,Three are fruit. Which one is a vegetable?,,,cabbage,pear|peach|banana,سه تا میوه است. کدام یک ترکاری است؟,
+10,,Three are vegetables. Which one is a fruit?,,,plum,turnip|radish|eggplant,سه تا ترکاری است. کدام یک میوه است؟,
+10,,Three are money. Which one is not?,,,button,coin|note|money,سه تا پول است. کدام یک پول نیست؟,
+10,,Three are sweet. Which one is sour?,,,lemon,honey|fig|raisins,سه چیز شیرین است. کدام یک ترش است؟,
+10,,You buy three by the kilo. Which one do you count?,,,egg,rice|sugar|potato,سه چیز را به کیلو می‌خری. کدام یک را دانه دانه حساب می‌کنی؟,
+10,,Three are heavy. Which one is light?,,,feather,sack|kilo|heavy_load,سه چیز سنگین است. کدام یک سبک است؟,
+10,,Three are people. Which one is a place?,,,bazaar,shopkeeper|customer|boy,سه تا آدم است. کدام یک جای است؟,
+10,,"Water, oil or honey can be in three of them. Which one is not for that?",,,scales,bottle|jar|can,در سه تای آن آب، روغن یا عسل می‌باشد. کدام یک برای این کار نیست؟,
+10,,Three are dried or small fruit. Which one is big?,,,melon,raisins|cherries|pistachios,سه تا میوهٔ خُرد است. کدام یک کلان است؟,
+10,,Three are yellow. Which one is red?,,,radish,banana|lemon|melon,سه چیز زرد است. کدام یک سرخ است؟,
+10,,Three are long. Which one is round?,,,coin,rope_long|cucumber|banana,سه چیز دراز است. کدام یک گِرد است؟,
+10,,Three are for carrying things. Which one is not?,,,price,basket|sack|plastic_bag,سه چیز برای بردن چیزها است. کدام یک نیست؟,
+# 20
+20,,Three are tools. Which one is food?,,,samosa,hammer|saw|axe,سه تا افزار کار است. کدام یک خوراک است؟,
+20,,The tailor needs three. Which one does he not need?,,,shovel,scissors|needle|thread,خیاط به سه تای آن ضرورت دارد. به کدام یک ضرورت ندارد؟,
+20,,Three are places in the bazaar. Which one is a person?,,,customer,bakery|butcher|shop,سه تا جای در بازار است. کدام یک آدم است؟,
+20,,Three make light or fire. Which one does not?,,,lock,lamp|candle|matches,سه چیز روشنی یا آتش می‌دهد. کدام یک نمی‌دهد؟,
+20,,You can eat three. Which one can you not eat?,,,charcoal,biscuits|kebab|chocolate,سه تا را خورده می‌توانی. کدام یک را خورده نمی‌توانی؟,
+20,,You can drink two. No! You can drink only one. Which one?,,,juice,samosa|cheese|beans,فقط یکی را نوشیده می‌توانی. کدام یک؟,
+20,,Three are food from the bakery or the food stall. Which one is from the tailor?,,,cloth,biscuits|samosa|bread,سه تا خوراک است. کدام یک از دکان خیاط است؟,
+20,,Three are for the fire. Which one is not?,,,wheat,firewood|charcoal|matches,سه چیز برای آتش است. کدام یک نیست؟,
+20,,Three are for tea. Which one is not?,,,hammer,teapot|tray|sugar,سه چیز برای چای است. کدام یک نیست؟,
+20,,Three have wheels. No! Only two have wheels. Which one has no wheels?,,,sack,cart|lorry,یکی چرخ ندارد. کدام یک؟ کراچی و لاری چرخ دارد.,
+20,,Three are things for the house. Which one grows in the field?,,,wheat,lamp|lock|mirror,سه تا چیز خانه است. کدام یک در کشتزار می‌روید؟,
+20,,Three are closed or empty. Which one is full?,,,food_bowl,bowl_empty|shop_closed|lock,کدام یک پُر است؟ کاسهٔ پُر از غذا.,

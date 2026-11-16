@@ -1,0 +1,21 @@
+round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
+# First, then: what happens first and what next, in a shop (10) and on the way from the field to the shop (20). The tiles are pictures; the child puts them in the order heard.
+# 10: shopping
+10,,I go to the bazaar. I buy bread. I pay.,,bazaar|bread|pay,sack,,I go to the bazaar. I buy bread. I pay.,,من به بازار می‌روم. نان می‌خرم. پول می‌دهم.
+10,,The shopkeeper puts the rice on the scales. I pay. I carry it home.,,scales|pay|carry,lamp,,The shopkeeper puts the rice on the scales. I pay. I carry it home.,,دکاندار برنج را روی ترازو می‌گذارد. من پول می‌دهم. آن را به خانه می‌برم.
+10,,"First a coin, then a note, then the purse.",,coin|note|purse,price,,"First a coin, then a note, then the purse.",,اول سکه، بعد نوت، بعد بکس پول.
+10,,I write a list. I take my basket. I go to the shop.,,list|basket|shop,jar,,I write a list. I take my basket. I go to the shop.,,من یک لست می‌نویسم. سبدم را می‌گیرم. به دکان می‌روم.
+10,,The shop is closed. Now it is open.,,shop_closed|shop_open,,,The shop is closed. Now it is open.,,دکان بسته است. حالا باز است.
+10,,I am hungry. I pay. I eat a kebab.,,pay|kebab,scales,,I am hungry. I pay. I eat a kebab.,,من گرسنه هستم. پول می‌دهم. یک کباب می‌خورم.
+10,,"A bottle, a tin, a packet and a jar.",,bottle|can|packet|jar,,,"A bottle, a tin, a packet and a jar.",,یک بوتل، یک قطی، یک پاکت و یک مرتبان.
+10,,First the fruit: a pear and a plum. Then the vegetables: a turnip.,,pear|plum|turnip,,,First the fruit: a pear and a plum. Then the vegetables: a turnip.,,اول میوه: یک ناک و یک آلو. بعد ترکاری: یک شلغم.
+# 20: where things come from
+20,,First wheat. Then flour. Then bread.,,wheat|flour_sack|bread,rice,,First wheat. Then flour. Then bread.,,اول گندم. بعد آرد. بعد نان.
+20,,Flour goes into the oven. Hot bread comes out.,,flour_sack|oven|bread,,,Flour goes into the oven. Hot bread comes out.,,آرد به تنور می‌رود. نان گرم می‌برآید.
+20,,The tailor takes cloth. He cuts it with scissors. He makes a dress.,,cloth|scissors|dress,hammer,,The tailor takes cloth. He cuts it with scissors. He makes a dress.,,خیاط تکه را می‌گیرد. آن را با قیچی می‌بُرد. یک پیراهن می‌دوزد.
+20,,"Firewood, matches, fire.",,firewood|matches|fire,lock,,"Firewood, matches, fire.",,هیزم، گوگرد، آتش.
+20,,Grapes dry in the sun. Now they are raisins.,,grapes|sun|raisins,,,Grapes dry in the sun. Now they are raisins.,,انگور در آفتاب خشک می‌شود. حالا کشمش است.
+20,,Cheese comes from milk.,,milk|cheese,flour_sack,,Cheese comes from milk.,,پنیر از شیر می‌آید. اول شیر، بعد پنیر.
+20,,"First the sheep, then wool, then cloth.",,sheep|wool|cloth,wheat,,"First the sheep, then wool, then cloth.",,اول گوسفند، بعد پشم، بعد تکه.
+20,,The lorry brings melons. The shopkeeper sells them. I eat melon.,,lorry|shopkeeper|melon,,,The lorry brings melons. The shopkeeper sells them. I eat melon.,,لاری خربوزه می‌آورد. دکاندار آن را می‌فروشد. من خربوزه می‌خورم.
+20,,Seeds go into the field. Wheat grows.,,seed|field|wheat,sand,,Seeds go into the field. Wheat grows.,,دانه به کشتزار می‌رود. گندم می‌روید.

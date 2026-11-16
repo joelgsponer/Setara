@@ -1,0 +1,77 @@
+round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
+# PRACTISE. Sorting into two baskets. Every thing is spoken in English; the baskets are said in Dari and English.
+03,دو سبد است: sick مریض و well جور. جمله را گوش کن و بگو که این آدم مریض است یا جور.,fa_cough,He has a cough.,,t:sick,مریض,sick
+03,,fa_fever_days,The child has a fever.,,t:sick,,
+03,,headache,I have a headache.,,t:sick,,
+03,,toothache,She has a toothache.,,t:sick,,
+03,,stomach_ache,My stomach hurts.,,t:sick,,
+03,,sneeze,She has a cold.,,t:sick,,
+03,,earache,My ear hurts.,,t:sick,,
+03,,happy,I feel good.,,t:well,جور,well
+03,,play,We play in the yard.,,t:well,,
+03,,run,He runs fast.,,t:well,,
+03,,work,He works in the field.,,t:well,,
+03,,carry,She carries water.,,t:well,,
+03,,clap,The children clap.,,t:well,,
+06,must یعنی باید، must not یعنی نباید. هر کار را در سبد درست بینداز: این کار را باید کرد، یا نباید کرد؟,wash_hands,wash your hands,,t:must,باید,You must
+06,,water_covered,drink clean water,,t:must,,
+06,,tb_brush,brush your teeth,,t:must,,
+06,,hw_soap,use soap,,t:must,,
+06,,sleep,sleep at night,,t:must,,
+06,,listen,listen to the teacher,,t:must,,
+06,,water_puddle,drink dirty water,,t:must not,نباید,You must not
+06,,fire,play with fire,,t:must not,,
+06,,matches,play with matches,,t:must not,,
+06,,knife,play with a knife,,t:must not,,
+06,,dirty_hands,eat with dirty hands,,t:must not,,
+06,,water_cup_dirty,drink from a dirty cup,,t:must not,,
+08,دو سبد است: safe بی‌خطر و dangerous خطرناک. هر چیز را ببین و فکر کن: آیا یک طفل خُرد با آن بازی کرده می‌تواند؟,fire,a fire,,t:dangerous,خطرناک,dangerous
+08,,matches,a box of matches,,t:dangerous,,
+08,,knife,a knife,,t:dangerous,,
+08,,snake,a snake,,t:dangerous,,
+08,,fast_water,fast water,,t:dangerous,,
+08,,wolf,a wolf,,t:dangerous,,
+08,,ball,a ball,,t:safe,بی‌خطر,safe
+08,,pillow,a pillow,,t:safe,,
+08,,book,a book,,t:safe,,
+08,,blanket,a blanket,,t:safe,,
+08,,kitten,a kitten,,t:safe,,
+08,,flower,a flower,,t:safe,,
+13,دو سبد است: winter زمستان و summer تابستان. هر چیز از کدام فصل است؟,snow,snow on the roof,,t:winter,زمستان,winter
+13,,ice,ice on the river,,t:winter,,
+13,,coat,a warm coat,,t:winter,,
+13,,snowman,a snowman,,t:winter,,
+13,,stove,a hot stove,,t:winter,,
+13,,sledge,a sledge,,t:winter,,
+13,,sun,hot sun,,t:summer,تابستان,summer
+13,,watermelon,a sweet watermelon,,t:summer,,
+13,,sandals,sandals,,t:summer,,
+13,,melon,a melon,,t:summer,,
+13,,grapes,grapes,,t:summer,,
+13,,hat,a sun hat,,t:summer,,
+14,دو سبد است: today امروز و yesterday دیروز. جمله را گوش کن. اگر is، am یا are دارد، امروز است. اگر was یا were دارد، دیروز است.,rain,It was rainy.,,t:yesterday,دیروز,yesterday
+14,,sun,It is sunny.,,t:today,امروز,today
+14,,school,We were at school.,,t:yesterday,,
+14,,house,I am at home.,,t:today,,
+14,,sick,She was sick.,,t:yesterday,,
+14,,happy,He is happy.,,t:today,,
+14,,feel_tired,I was tired.,,t:yesterday,,
+14,,cold,She is cold.,,t:today,,
+14,,clinic,They were at the clinic.,,t:yesterday,,
+14,,bazaar,We are at the bazaar.,,t:today,,
+14,,hungry,He was hungry.,,t:yesterday,,
+14,,thirsty,She is thirsty.,,t:today,,
+15,باز دو سبد: today و yesterday. این بار کلمه را می‌خوانی. اگر در آخر ed دارد، برای دیروز است: walked. اگر ندارد، برای امروز است: walk.,t:walk,I walk.,,t:today,امروز,today
+15,,t:walked,I walked.,,t:yesterday,دیروز,yesterday
+15,,t:play,We play.,,t:today,,
+15,,t:played,We played.,,t:yesterday,,
+15,,t:cook,I cook.,,t:today,,
+15,,t:cooked,I cooked.,,t:yesterday,,
+15,,t:wash,You wash.,,t:today,,
+15,,t:washed,You washed.,,t:yesterday,,
+15,,t:clean,They clean.,,t:today,,
+15,,t:cleaned,They cleaned.,,t:yesterday,,
+15,,t:help,We help.,,t:today,,
+15,,t:helped,We helped.,,t:yesterday,,
+15,,t:carry,I carry.,,t:today,,
+15,,t:carried,I carried.,,t:yesterday,,

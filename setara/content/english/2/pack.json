@@ -2,7 +2,7 @@
   "pack": "en-2",
   "subject": "en",
   "level": 2,
-  "version": 1,
+  "version": 2,
   "title_en": "English 2: My world",
   "title_fa": "انگلیسی ۲: دنیای من",
   "games": [
@@ -46,7 +46,8 @@
       "title_fa": "قطار جمله",
       "intro_fa": "جمله را گوش کن. بعد کلمه‌ها را به ترتیب درست پشت هم بگذار.",
       "icon": "train",
-      "sheet": "sentence_train.csv"
+      "sheet": "sentence_train.csv",
+      "draw": 6
     },
     {
       "id": "shopkeeper",
@@ -77,6 +78,104 @@
       "intro_fa": "گوش کن و عدد درست را انتخاب کن.",
       "icon": "count",
       "sheet": "numbers.csv"
+    },
+    {
+      "id": "yes_no",
+      "engine": "listen_pick",
+      "letter": "h",
+      "title_en": "Yes or No",
+      "title_fa": "بلی یا نه",
+      "intro_fa": "تصویر را ببین و سوال را گوش کن. اگر درست است، بلی را انتخاب کن. اگر درست نیست، نه را انتخاب کن.",
+      "icon": "yes",
+      "draw": 8,
+      "sheet": "yes_no.csv"
+    },
+    {
+      "id": "odd_one_out",
+      "engine": "listen_pick",
+      "letter": "i",
+      "title_en": "Odd One Out",
+      "title_fa": "کدام یک جور نیست؟",
+      "intro_fa": "چهار چیز را می‌شنوی. یکی از آن‌ها از گروه نیست. همان را انتخاب کن.",
+      "icon": "no",
+      "draw": 8,
+      "sheet": "odd_one_out.csv"
+    },
+    {
+      "id": "riddles",
+      "engine": "listen_pick",
+      "letter": "j",
+      "title_en": "Riddles",
+      "title_fa": "چیستان",
+      "intro_fa": "چیستان را گوش کن. این چیست؟ تصویر درست را انتخاب کن.",
+      "icon": "moon",
+      "draw": 8,
+      "sheet": "riddles.csv"
+    },
+    {
+      "id": "listen_find",
+      "engine": "listen_pick",
+      "letter": "k",
+      "title_en": "Listen and Find",
+      "title_fa": "گوش کن و پیدا کن",
+      "intro_fa": "چند کلمه را با هم گوش کن و تصویر درست را انتخاب کن.",
+      "icon": "look",
+      "draw": 8,
+      "sheet": "listen_find.csv"
+    },
+    {
+      "id": "baskets",
+      "engine": "sorter",
+      "letter": "l",
+      "title_en": "Baskets",
+      "title_fa": "سبدها",
+      "intro_fa": "گوش کن و هر چیز را در سبد درست بینداز.",
+      "icon": "basket",
+      "draw": 8,
+      "sheet": "baskets.csv"
+    },
+    {
+      "id": "catcher",
+      "engine": "catch",
+      "letter": "m",
+      "title_en": "Catch It",
+      "title_fa": "بگیر",
+      "intro_fa": "گوش کن که چه چیز را بگیری. فقط همان را بگیر. چیزهای دیگر را نگیر.",
+      "icon": "ball",
+      "draw": 6,
+      "sheet": "catcher.csv"
+    },
+    {
+      "id": "right_answer",
+      "engine": "listen_pick",
+      "letter": "n",
+      "title_en": "Question and Answer",
+      "title_fa": "سوال و جواب",
+      "intro_fa": "سوال و جواب را گوش کن. اگر جواب به سوال جور است، بلی را انتخاب کن. اگر جور نیست، نه را.",
+      "icon": "friends",
+      "draw": 8,
+      "sheet": "right_answer.csv"
+    },
+    {
+      "id": "memory",
+      "engine": "pairs",
+      "letter": "o",
+      "title_en": "Memory",
+      "title_fa": "جوره‌ها",
+      "intro_fa": "دو کارت را باز کن. جوره‌هایی را پیدا کن که با هم یکی هستند.",
+      "icon": "star",
+      "draw": 6,
+      "sheet": "memory.csv"
+    },
+    {
+      "id": "mini_stories",
+      "engine": "story",
+      "letter": "p",
+      "title_en": "Mini Stories",
+      "title_fa": "قصه‌های کوتاه",
+      "intro_fa": "یک قصهٔ کوتاه. هر صفحه را اول به دری و بعد به انگلیسی می‌شنوی. وقتی سوال آمد، تصویر درست را انتخاب کن.",
+      "icon": "book",
+      "sheet": "mini_stories.csv"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "pack": "en-4",
   "subject": "en",
   "level": 4,
-  "version": 1,
+  "version": 2,
   "title_en": "English 4: At the bazaar",
   "title_fa": "انگلیسی ۴: در بازار",
   "games": [
@@ -46,7 +46,8 @@
       "title_fa": "قطار جمله",
       "intro_fa": "جمله را گوش کن. بعد کلمه‌ها را به ترتیب درست پشت هم بگذار.",
       "icon": "train",
-      "sheet": "sentence_train.csv"
+      "sheet": "sentence_train.csv",
+      "draw": 8
     },
     {
       "id": "shopkeeper",
@@ -56,7 +57,8 @@
       "title_fa": "دکاندار",
       "intro_fa": "تو دکاندار هستی. گوش کن که مشتری چند دانه می‌خواهد، و همان قدر روی ترازو بگذار.",
       "icon": "shop",
-      "sheet": "shopkeeper.csv"
+      "sheet": "shopkeeper.csv",
+      "draw": 8
     },
     {
       "id": "radio_stories",
@@ -76,7 +78,8 @@
       "title_fa": "قیمت چند است؟",
       "intro_fa": "قیمت را گوش کن و عدد درست را انتخاب کن.",
       "icon": "price",
-      "sheet": "price_tags.csv"
+      "sheet": "price_tags.csv",
+      "draw": 8
     },
     {
       "id": "stall_pairs",
@@ -86,7 +89,8 @@
       "title_fa": "جوره‌های بازار",
       "intro_fa": "کلمه را بخوان و تصویر آن را پیدا کن. هر کلمه با یک تصویر جوره است.",
       "icon": "pear",
-      "sheet": "stall_pairs.csv"
+      "sheet": "stall_pairs.csv",
+      "draw": 6
     },
     {
       "id": "which_basket",
@@ -96,7 +100,8 @@
       "title_fa": "کدام سبد؟",
       "intro_fa": "هر چیز را در سبد درست بینداز.",
       "icon": "scales",
-      "sheet": "which_basket.csv"
+      "sheet": "which_basket.csv",
+      "draw": 8
     },
     {
       "id": "bazaar_road",
@@ -106,7 +111,8 @@
       "title_fa": "راه بازار",
       "intro_fa": "خوب گوش کن و جواب درست را انتخاب کن. با هر جواب درست یک قدم پیش می‌روی.",
       "icon": "street",
-      "sheet": "bazaar_road.csv"
+      "sheet": "bazaar_road.csv",
+      "draw": 8
     },
     {
       "id": "read_pick",
@@ -116,7 +122,62 @@
       "title_fa": "بخوان و انتخاب کن",
       "intro_fa": "این بار کلمه را نمی‌شنوی. خودت بخوان و تصویر درست را انتخاب کن.",
       "icon": "read",
-      "sheet": "read_pick.csv"
+      "sheet": "read_pick.csv",
+      "draw": 8
+    },
+    {
+      "id": "what_do_you_say",
+      "engine": "listen_pick",
+      "letter": "l",
+      "title_en": "What Do You Say?",
+      "title_fa": "تو چه می‌گویی؟",
+      "intro_fa": "خوب گوش کن که چه شده است. بعد چهار جواب را بخوان و جوابی را انتخاب کن که با ادب و درست است.",
+      "icon": "say",
+      "draw": 8,
+      "sheet": "what_do_you_say.csv"
+    },
+    {
+      "id": "riddles",
+      "engine": "listen_pick",
+      "letter": "m",
+      "title_en": "Riddles",
+      "title_fa": "چیستان",
+      "intro_fa": "چیستان را گوش کن. فکر کن که از چه می‌گوید، و تصویر آن را انتخاب کن.",
+      "icon": "purse",
+      "draw": 8,
+      "sheet": "riddles.csv"
+    },
+    {
+      "id": "odd_one_out",
+      "engine": "listen_pick",
+      "letter": "n",
+      "title_en": "Odd One Out",
+      "title_fa": "کدام یک جور نیست؟",
+      "intro_fa": "سوال را گوش کن. سه تصویر با هم جور است و یکی جور نیست. همان یکی را انتخاب کن.",
+      "icon": "no",
+      "draw": 8,
+      "sheet": "odd_one_out.csv"
+    },
+    {
+      "id": "first_then",
+      "engine": "builder",
+      "letter": "o",
+      "title_en": "First, Then",
+      "title_fa": "اول، بعد",
+      "intro_fa": "جمله‌ها را گوش کن. بعد تصویرها را به همان ترتیبی که شنیدی پشت هم بگذار.",
+      "icon": "wheat",
+      "sheet": "first_then.csv"
+    },
+    {
+      "id": "opposites",
+      "engine": "pairs",
+      "letter": "p",
+      "title_en": "Opposites",
+      "title_fa": "ضد هم",
+      "intro_fa": "دو کارت را باز کن. دو تصویری را جوره کن که ضد یکدیگر هستند، مثل ارزان و گران.",
+      "icon": "cheap",
+      "draw": 6,
+      "sheet": "opposites.csv"
     }
   ]
 }

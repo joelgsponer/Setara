@@ -6,65 +6,143 @@ round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 01,,I brush my teeth.,,t:I|t:brush|t:my|t:teeth,t:wash,,I brush my teeth.,,من دندان‌هایم را برس می‌کنم.
 01,,I eat breakfast.,,t:I|t:eat|t:breakfast,t:am,,I eat breakfast.,,من نان صبح می‌خورم.
 01,,I go to school.,,t:I|t:go|t:to|t:school,,,I go to school.,,من به مکتب می‌روم.
+# version 2: more sentences, so that every round is a pool (draw 8)
+01,,I wash my hands.,,t:I|t:wash|t:my|t:hands,t:face,,I wash my hands.,,من دست‌هایم را می‌شویم.
+01,,I comb my hair.,,t:I|t:comb|t:my|t:hair,t:wash,,I comb my hair.,,من مویم را شانه می‌کنم.
+01,,I drink tea.,,t:I|t:drink|t:tea,t:eat,,I drink tea.,,من چای می‌نوشم.
+01,,I eat lunch.,,t:I|t:eat|t:lunch,t:drink,,I eat lunch.,,من نان چاشت می‌خورم.
+01,,I am hungry.,,t:I|t:am|t:hungry,t:is,,I am hungry.,,من گرسنه هستم.
+01,,I am thirsty.,,t:I|t:am|t:thirsty,t:are,,I am thirsty.,,من تشنه هستم.
+01,,My hands are dirty.,,t:My|t:hands|t:are|t:dirty,t:is,,My hands are dirty.,,دست‌های من چتل است.
 03,,At night I sleep.,,t:At|t:night|t:I|t:sleep,,,At night I sleep.,,شب من می‌خوابم.
-03,,I play in the afternoon.,,t:I|t:play|t:in|t:the|t:afternoon,,,I play in the afternoon.,,من بعد از چاشت بازی می‌کنم.
-03,,In the morning I get up.,,t:In|t:the|t:morning|t:I|t:get|t:up,,,In the morning I get up.,,صبح من از خواب می‌خیزم.
+03,,I play in the afternoon.,,t:I|t:play|t:in the|t:afternoon,,,I play in the afternoon.,,من بعد از چاشت بازی می‌کنم.
+03,,In the morning I get up.,,t:In the|t:morning|t:I|t:get up,,,In the morning I get up.,,صبح من از خواب می‌خیزم.
 03,,I eat lunch at home.,,t:I|t:eat|t:lunch|t:at|t:home,t:in,,I eat lunch at home.,,من نان چاشت را در خانه می‌خورم.
-03,,I eat dinner in the evening.,,t:I|t:eat|t:dinner|t:in|t:the|t:evening,,,I eat dinner in the evening.,,من شام نان شب می‌خورم.
+03,,I eat dinner in the evening.,,t:I|t:eat|t:dinner|t:in the|t:evening,,,I eat dinner in the evening.,,من شام نان شب می‌خورم.
+03,,I sleep at night.,,t:I|t:sleep|t:at|t:night,t:in,,I sleep at night.,,من شب می‌خوابم.
+03,,At night I am tired.,,t:At|t:night|t:I|t:am|t:tired,t:is,,At night I am tired.,,شب من مانده هستم.
+03,,I eat breakfast early.,,t:I|t:eat|t:breakfast|t:early,t:late,,I eat breakfast early.,,من نان صبح را زود می‌خورم.
+03,,I eat dinner at night.,,t:I|t:eat|t:dinner|t:at|t:night,t:in,,I eat dinner at night.,,من شب نان شب می‌خورم.
+03,,I play with my ball.,,t:I|t:play|t:with|t:my|t:ball,t:in,,I play with my ball.,,من با توپم بازی می‌کنم.
+03,,"Good night, mother.",,t:Good|t:night|t:mother,t:morning,,"Good night, mother.",,شب بخیر، مادر.
+03,,"Good morning, father.",,t:Good|t:morning|t:father,t:night,,"Good morning, father.",,صبح بخیر، پدر.
 06,,What time is it?,,t:What|t:time|t:is|t:it,,,What time is it?,,ساعت چند است؟
 06,,It is seven o'clock.,,t:It|t:is|t:seven|t:o'clock,t:am,,It is seven o'clock.,,ساعت هفت است.
 06,,It is ten o'clock.,,t:It|t:is|t:ten|t:o'clock,t:time,,It is ten o'clock.,,ساعت ده است.
 06,,I get up at six o'clock.,,t:I|t:get|t:up|t:at|t:six|t:o'clock,,,I get up at six o'clock.,,من ساعت شش از خواب می‌خیزم.
 06,,I go to bed at nine.,,t:I|t:go|t:to|t:bed|t:at|t:nine,,,I go to bed at nine.,,من ساعت نُه به خواب می‌روم.
-09,,"Saturday, Sunday, Monday, Tuesday.",,t:Saturday|t:Sunday|t:Monday|t:Tuesday,,,"Saturday, Sunday, Monday, Tuesday.",,روزها را به ترتیب بگذار: شنبه، یکشنبه، دوشنبه، سه‌شنبه.
-09,,"Tuesday, Wednesday, Thursday, Friday.",,t:Tuesday|t:Wednesday|t:Thursday|t:Friday,,,"Tuesday, Wednesday, Thursday, Friday.",,روزها را به ترتیب بگذار: سه‌شنبه، چهارشنبه، پنجشنبه، جمعه.
+06,,It is three o'clock.,,t:It|t:is|t:three|t:o'clock,t:are,,It is three o'clock.,,ساعت سه است.
+06,,It is twelve o'clock.,,t:It|t:is|t:twelve|t:o'clock,t:time,,It is twelve o'clock.,,ساعت دوازده است.
+06,,I eat lunch at one.,,t:I|t:eat|t:lunch|t:at|t:one,t:in,,I eat lunch at one.,,من ساعت یک نان چاشت می‌خورم.
+06,,I go to school at seven.,,t:I|t:go|t:to|t:school|t:at|t:seven,,,I go to school at seven.,,من ساعت هفت به مکتب می‌روم.
+06,,It is late.,,t:It|t:is|t:late,t:early,,It is late.,,ناوقت است.
+06,,I get up early.,,t:I|t:get|t:up|t:early,t:late,,I get up early.,,من زود از خواب می‌خیزم.
+06,,I am late for school.,,t:I|t:am|t:late|t:for|t:school,t:is,,I am late for school.,,من به مکتب ناوقت کرده‌ام.
 09,,Today is Monday.,,t:Today|t:is|t:Monday,t:am,,Today is Monday.,,امروز دوشنبه است.
-09,,Tomorrow is Friday.,,t:Tomorrow|t:is|t:Friday,t:Today,,Tomorrow is Friday.,,فردا جمعه است.
+09,,It is Friday tomorrow.,,t:It|t:is|t:Friday|t:tomorrow,t:today,,It is Friday tomorrow.,,فردا جمعه است.
 09,,I play on Friday.,,t:I|t:play|t:on|t:Friday,t:in,,I play on Friday.,,من روز جمعه بازی می‌کنم.
 09,,I don't go to school.,,t:I|t:don't|t:go|t:to|t:school,,,I don't go to school.,,من به مکتب نمی‌روم.
+09,,What day is it today?,,t:What|t:day|t:is|t:it|t:today,t:time,,What day is it today?,,امروز کدام روز است؟
+09,,Is it Thursday today?,,t:Is|t:it|t:Thursday|t:today,,,Is it Thursday today?,,امروز پنجشنبه است؟
+09,,A week has seven days.,,t:A|t:week|t:has|t:seven|t:days,t:six,,A week has seven days.,,یک هفته هفت روز دارد.
+09,,Is tomorrow Friday?,,t:Is|t:tomorrow|t:Friday,t:today,,Is tomorrow Friday?,,فردا جمعه است؟
+09,,Today I go to the clinic.,,t:Today|t:I|t:go|t:to|t:the|t:clinic,,,Today I go to the clinic.,,امروز من به کلینیک می‌روم.
+09,,No school on Friday!,,t:No|t:school|t:on|t:Friday,t:in,,No school on Friday!,,روز جمعه مکتب نیست!
+09,,We play in the street.,,t:We|t:play|t:in|t:the|t:street,t:on,,We play in the street.,,ما در کوچه بازی می‌کنیم.
+09,,The bridge is big.,,t:The|t:bridge|t:is|t:big,t:are,,The bridge is big.,,پل کلان است.
+# 09b (version 2): the days are built from their parts, so that every tile is drawn at 24 px or more. The order of the days is asked in Day Journey and What Comes Next.
+09b,نام روز را گوش کن. بعد پاره‌های آن را به ترتیب درست پشت هم بگذار.,Build the word Saturday.,,t:Sat|t:ur|t:day,t:Sun,,Saturday,,شنبه
+09b,,Build the word Sunday.,,t:Sun|t:day,t:Mon,,Sunday,,یکشنبه
+09b,,Build the word Monday.,,t:Mon|t:day,t:Sun,,Monday,,دوشنبه
+09b,,Build the word Tuesday.,,t:Tues|t:day,t:Thurs,,Tuesday,,سه‌شنبه
+09b,,Build the word Wednesday.,,t:Wed|t:nes|t:day,t:Mon,,Wednesday,,چهارشنبه
+09b,,Build the word Thursday.,,t:Thurs|t:day,t:Tues,,Thursday,,پنجشنبه
+09b,,Build the word Friday.,,t:Fri|t:day,t:Sun,,Friday,,جمعه
+09b,,Build the word today.,,t:to|t:day,t:night,,today,,امروز
 12,,I wear a shirt.,,t:I|t:wear|t:a|t:shirt,t:am,,I wear a shirt.,,من پیراهن می‌پوشم.
 12,,I wear a red dress.,,t:I|t:wear|t:a|t:red|t:dress,,,I wear a red dress.,,من پیراهن زنانهٔ سرخ می‌پوشم.
 12,,Put on your shoes.,,t:Put|t:on|t:your|t:shoes,t:off,,Put on your shoes.,,بوت‌هایت را بپوش.
 12,,Take off your hat.,,t:Take|t:off|t:your|t:hat,t:on,,Take off your hat.,,کلاهت را بکش.
 12,,My coat is warm.,,t:My|t:coat|t:is|t:warm,t:am,,My coat is warm.,,بالاپوش من گرم است.
 12,,My shoes are new.,,t:My|t:shoes|t:are|t:new,t:is,,My shoes are new.,,بوت‌های من نو است.
+12,,It is cold today.,,t:It|t:is|t:cold|t:today,t:hot,,It is cold today.,,امروز هوا سرد است.
+12,,I wear a warm coat.,,t:I|t:wear|t:a|t:warm|t:coat,,,I wear a warm coat.,,من بالاپوش گرم می‌پوشم.
+12,,My socks are old.,,t:My|t:socks|t:are|t:old,t:is,,My socks are old.,,جراب‌های من کهنه است.
+12,,Where are my sandals?,,t:Where|t:are|t:my|t:sandals,t:is,,Where are my sandals?,,چپلک‌های من کجاست؟
+12,,The button is small.,,t:The|t:button|t:is|t:small,t:are,,The button is small.,,دکمه خُرد است.
+12,,In winter it snows.,,t:In|t:winter|t:it|t:snows,t:summer,,In winter it snows.,,در زمستان برف می‌بارد.
+12,,I take my umbrella.,,t:I|t:take|t:my|t:umbrella,t:your,,I take my umbrella.,,من چتری‌ام را می‌گیرم.
 13,,My mother cooks.,,t:My|t:mother|t:cooks,t:cook,,My mother cooks.,,مادرم غذا می‌پزد.
 13,,They work in the field.,,t:They|t:work|t:in|t:the|t:field,t:works,,They work in the field.,,آن‌ها در کشتزار کار می‌کنند.
 13,,She gets up at five.,,t:She|t:gets|t:up|t:at|t:five,t:get,,She gets up at five.,,او ساعت پنج از خواب می‌خیزد.
 13,,He goes to school.,,t:He|t:goes|t:to|t:school,t:go,,He goes to school.,,او به مکتب می‌رود.
 13,,My sister carries water.,,t:My|t:sister|t:carries|t:water,t:carry,,My sister carries water.,,خواهرم آب می‌آورد.
 13,,We help our mother.,,t:We|t:help|t:our|t:mother,t:helps,,We help our mother.,,ما به مادر خود کمک می‌کنیم.
+13,,My father works.,,t:My|t:father|t:works,t:work,,My father works.,,پدرم کار می‌کند.
+13,,He cleans the yard.,,t:He|t:cleans|t:the|t:yard,t:clean,,He cleans the yard.,,او حویلی را پاک می‌کند.
+13,,She cooks dinner.,,t:She|t:cooks|t:dinner,t:cook,,She cooks dinner.,,او نان شب می‌پزد.
+13,,We go to school.,,t:We|t:go|t:to|t:school,t:goes,,We go to school.,,ما به مکتب می‌رویم.
+13,,They play in the yard.,,t:They|t:play|t:in|t:the|t:yard,t:plays,,They play in the yard.,,آن‌ها در حویلی بازی می‌کنند.
+13,,My brother helps me.,,t:My|t:brother|t:helps|t:me,t:help,,My brother helps me.,,برادرم به من کمک می‌کند.
 14,,Do you go to school?,,t:Do|t:you|t:go|t:to|t:school,t:Does,,Do you go to school?,,تو به مکتب می‌روی؟
 14,,"Yes, I do.",,t:Yes|t:I|t:do,t:does,,"Yes, I do.",,بلی، می‌روم.
 14,,Does she play?,,t:Does|t:she|t:play,t:Do,,Does she play?,,او بازی می‌کند؟
 14,,"Yes, she does.",,t:Yes|t:she|t:does,t:do,,"Yes, she does.",,بلی، می‌کند.
 14,,Does he sleep?,,t:Does|t:he|t:sleep,t:sleeps,,Does he sleep?,,او می‌خوابد؟
 14,,"No, he doesn't.",,t:No|t:he|t:doesn't,t:don't,,"No, he doesn't.",,نه، نمی‌خوابد.
-14,,I always do my homework.,,t:I|t:always|t:do|t:my|t:homework,t:never,,I always do my homework.,,من همیشه کار خانگی‌ام را می‌کنم.
+14,,I always do my homework.,,t:I always|t:do my|t:homework,t:I never,,I always do my homework.,,من همیشه کار خانگی‌ام را می‌کنم.
 14,,He doesn't go to school.,,t:He|t:doesn't|t:go|t:to|t:school,t:goes,,He doesn't go to school.,,او به مکتب نمی‌رود.
+14,,Do you run?,,t:Do|t:you|t:run,t:Does,,Do you run?,,تو می‌دوی؟
+14,,He never gets up late.,,t:He|t:never|t:gets|t:up|t:late,t:always,,He never gets up late.,,او هیچ وقت ناوقت از خواب نمی‌خیزد.
+14,,Does she go to school?,,t:Does|t:she|t:go|t:to|t:school,t:Do,,Does she go to school?,,او به مکتب می‌رود؟
+14,,I don't play at night.,,t:I|t:don't|t:play|t:at|t:night,t:doesn't,,I don't play at night.,,من شب بازی نمی‌کنم.
 17,,Where is my shoe?,,t:Where|t:is|t:my|t:shoe,t:What,,Where is my shoe?,,بوت من کجاست؟
 17,,It is under the bed.,,t:It|t:is|t:under|t:the|t:bed,,,It is under the bed.,,زیر تخت خواب است.
 17,,The ball is in the box.,,t:The|t:ball|t:is|t:in|t:the|t:box,,,The ball is in the box.,,توپ در صندوق است.
 17,,The cat is on the roof.,,t:The|t:cat|t:is|t:on|t:the|t:roof,,,The cat is on the roof.,,پشک بالای بام است.
-17,,My mother is in the kitchen.,,t:My|t:mother|t:is|t:in|t:the|t:kitchen,,,My mother is in the kitchen.,,مادرم در آشپزخانه است.
+17,,My mother is in the kitchen.,,t:My|t:mother|t:is|t:in the|t:kitchen,,,My mother is in the kitchen.,,مادرم در آشپزخانه است.
+17,,The cat is behind the box.,,t:The|t:cat|t:is|t:behind|t:the|t:box,,,The cat is behind the box.,,پشک پشت صندوق است.
+17,,The candle is on the table.,,t:The|t:candle|t:is|t:on|t:the|t:table,,,The candle is on the table.,,شمع بالای میز است.
+17,,Where is the toilet?,,t:Where|t:is|t:the|t:toilet,t:What,,Where is the toilet?,,تشناب کجاست؟
+17,,It is in the yard.,,t:It|t:is|t:in|t:the|t:yard,t:on,,It is in the yard.,,در حویلی است.
+17,,The kitchen is warm.,,t:The|t:kitchen|t:is|t:warm,t:are,,The kitchen is warm.,,آشپزخانه گرم است.
+17,,The shoe is under the table.,,t:The|t:shoe|t:is|t:under|t:the|t:table,,,The shoe is under the table.,,بوت زیر میز است.
+17,,Where is the cat?,,t:Where|t:is|t:the|t:cat,t:What,,Where is the cat?,,پشک کجاست؟
 18,کلمه را گوش کن. بعد حرف‌ها را به ترتیب درست پشت هم بگذار.,cat,,t:c|t:a|t:t,t:o,,cat,,پشک
-18,,hat,,t:h|t:a|t:t,t:e,,hat,,کلاه
 18,,bag,,t:b|t:a|t:g,t:d,,bag,,بکس
 18,,dog,,t:d|t:o|t:g,t:b,,dog,,سگ
 18,,pot,,t:p|t:o|t:t,t:a,,pot,,دیگ
 18,,box,,t:b|t:o|t:x,t:e,,box,,صندوق
-18,,fox,,t:f|t:o|t:x,t:a,,fox,,روباه
+# version 2: more three-letter words to build (known by ear, not new words of the unit)
+18,,mat,,t:m|t:a|t:t,t:e,,mat,,فرش
+18,,man,,t:m|t:a|t:n,t:e,,man,,مرد
+18,,hot,,t:h|t:o|t:t,t:a,,hot,,گرم
+18,,sad,,t:s|t:a|t:d,t:o,,sad,,غمگین
+18,,can,,t:c|t:a|t:n,t:o,,can,,توانستن
+18,,and,,t:a|t:n|t:d,t:o,,and,,و
+18,,not,,t:n|t:o|t:t,t:a,,not,,نه
 19,کلمه را گوش کن. بعد حرف‌ها را به ترتیب درست پشت هم بگذار.,pen,,t:p|t:e|t:n,t:a,,pen,,قلم
 19,,hen,,t:h|t:e|t:n,t:m,,hen,,مرغ
 19,,bed,,t:b|t:e|t:d,t:a,,bed,,تخت خواب
 19,,leg,,t:l|t:e|t:g,t:i,,leg,,لنگ
 19,,sun,,t:s|t:u|t:n,t:a,,sun,,آفتاب
 19,,cup,,t:c|t:u|t:p,t:o,,cup,,پیاله
-19,,jug,,t:j|t:u|t:g,t:a,,jug,,کوزه
 19,,six,,t:s|t:i|t:x,t:e,,six,,شش
+19,,red,,t:r|t:e|t:d,t:a,,red,,سرخ
+19,,ten,,t:t|t:e|t:n,t:i,,ten,,ده
+19,,big,,t:b|t:i|t:g,t:e,,big,,کلان
+19,,yes,,t:y|t:e|t:s,t:a,,yes,,بلی
+19,,sit,,t:s|t:i|t:t,t:e,,sit,,نشستن
 20,,This is my day.,,t:This|t:is|t:my|t:day,t:am,,This is my day.,,این روز من است.
-20,,I get up at six o'clock.,,t:I|t:get|t:up|t:at|t:six|t:o'clock,,,I get up at six o'clock.,,من ساعت شش از خواب می‌خیزم.
 20,,She goes to school.,,t:She|t:goes|t:to|t:school,t:go,,She goes to school.,,او به مکتب می‌رود.
-20,,Today is Thursday.,,t:Today|t:is|t:Thursday,t:Tomorrow,,Today is Thursday.,,امروز پنجشنبه است.
+20,,Today is Thursday.,,t:Today|t:is|t:Thursday,t:Friday,,Today is Thursday.,,امروز پنجشنبه است.
 20,,Does he help?,,t:Does|t:he|t:help,t:Do,,Does he help?,,او کمک می‌کند؟
 20,,I can read.,,t:I|t:can|t:read,t:am,,I can read.,,من خوانده می‌توانم.
+20,,Where is my kite?,,t:Where|t:is|t:my|t:kite,t:What,,Where is my kite?,,کاغذپران من کجاست؟
+20,,It is on the roof.,,t:It|t:is|t:on|t:the|t:roof,t:in,,It is on the roof.,,بالای بام است.
+20,,In winter I wear a coat.,,t:In|t:winter|t:I|t:wear|t:a|t:coat,,,In winter I wear a coat.,,در زمستان من بالاپوش می‌پوشم.
+20,,Do you help your mother?,,t:Do|t:you|t:help|t:your|t:mother,t:Does,,Do you help your mother?,,تو به مادرت کمک می‌کنی؟
+20,,My father gets up early.,,t:My|t:father|t:gets|t:up|t:early,t:get,,My father gets up early.,,پدرم زود از خواب می‌خیزد.
+20,,We eat dinner at seven.,,t:We|t:eat|t:dinner|t:at|t:seven,,,We eat dinner at seven.,,ما ساعت هفت نان شب می‌خوریم.
+20,,It is nine o'clock.,,t:It|t:is|t:nine|t:o'clock,t:are,,It is nine o'clock.,,ساعت نُه است.
+20,,School is on Saturday.,,t:School|t:is|t:on|t:Saturday,t:in,,School is on Saturday.,,روز شنبه مکتب است.

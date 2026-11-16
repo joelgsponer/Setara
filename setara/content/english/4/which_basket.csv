@@ -1,16 +1,28 @@
 round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
 # 06: fruit or vegetables.
-06,هر چیز را در سبد درست بینداز: میوه یا ترکاری.,pear,pear,,t:fruit,میوه,fruit
-06,,cucumber,cucumber,,t:vegetables,ترکاری,vegetables
-06,,banana,banana,,t:fruit,,
-06,,cabbage,cabbage,,t:vegetables,,
-06,,eggplant,eggplant,,t:vegetables,,
-06,,peach,peach,,t:fruit,,
-06,,garlic,garlic,,t:vegetables,,
-06,,melon,melon,,t:fruit,,
-06,,pumpkin,pumpkin,,t:vegetables,,
-06,,cherries,cherries,,t:fruit,,
 # 08: How many (things we count) or How much (things we weigh or pour).
+# 12: a, an or some.
+# version 2: the rounds were rewritten as pools (draw 8). 06 says the plural, and 08 and 12 use words that are not word-bank words of this level, so that no word is asked a third time.
+06,هر چیز را در سبد درست بینداز: میوه یا ترکاری.,p:pear*2,pears,,t:fruit,میوه,fruit
+06,,p:cucumber*2,cucumbers,,t:vegetables,ترکاری,vegetables
+06,,p:banana*2,bananas,,t:fruit,,
+06,,p:cabbage*2,cabbages,,t:vegetables,,
+06,,p:eggplant*2,eggplants,,t:vegetables,,
+06,,p:peach*2,peaches,,t:fruit,,
+06,,garlic,some garlic,,t:vegetables,,
+06,,p:melon*2,melons,,t:fruit,,
+06,,p:pumpkin*2,pumpkins,,t:vegetables,,
+06,,cherries,sweet cherries,,t:fruit,,
+06,,p:plum*2,plums,,t:fruit,,
+06,,p:fig*2,figs,,t:fruit,,
+06,,p:turnip*2,turnips,,t:vegetables,,
+06,,p:radish*2,radishes,,t:vegetables,,
+06,,p:lemon*2,lemons,,t:fruit,,
+06,,p:onion*2,onions,,t:vegetables,,
+06,,p:potato*2,potatoes,,t:vegetables,,
+06,,p:tomato*2,tomatoes,,t:vegetables,,
+06,,p:apple*2,apples,,t:fruit,,
+06,,p:carrot*2,carrots,,t:vegetables,,
 08,چیزی را که دانه دانه حساب می‌کنیم در یک سبد بینداز، و چیزی را که وزن یا پیمانه می‌کنیم در سبد دیگر.,p:egg*3,eggs,,t:How many?,چند دانه؟,How many?
 08,,rice,rice,,t:How much?,چقدر؟,How much?
 08,,p:pear*3,pears,,t:How many?,,
@@ -19,16 +31,28 @@ round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
 08,,p:lemon*3,lemons,,t:How many?,,
 08,,milk,milk,,t:How much?,,
 08,,p:banana*3,bananas,,t:How many?,,
-08,,salt,salt,,t:How much?,,
+08,,tea,tea,,t:How much?,,
 08,,p:apple*3,apples,,t:How many?,,
-# 12: a, an or some.
-12,پیش از هر کلمه چه می‌گوییم؟ سه سبد است. کلمه را گوش کن و در سبد درست بینداز.,pear,pear,,t:a,یک,a
+08,,corn,corn,,t:How much?,,
+08,,p:tomato*3,tomatoes,,t:How many?,,
+08,,p:onion*3,onions,,t:How many?,,
+08,,p:candle*3,candles,,t:How many?,,
+08,,p:button*3,buttons,,t:How many?,,
+08,,p:iron_nail*3,nails,,t:How many?,,
+12,پیش از هر کلمه چه می‌گوییم؟ سه سبد است. کلمه را گوش کن و در سبد درست بینداز.,tomato,tomato,,t:a,یک,a
 12,,apple,apple,,t:an,یک، پیش از حرف صدادار,an
 12,,rice,rice,,t:some,کمی,some
-12,,egg,egg,,t:an,,an
-12,,lemon,lemon,,t:a,,a
-12,,flour_sack,flour,,t:some,,some
-12,,onion,onion,,t:an,,an
-12,,banana,banana,,t:a,,a
-12,,oil_can,oil,,t:some,,some
-12,,salt,salt,,t:some,,some
+12,,egg,egg,,t:an,,
+12,,walnut,walnut,,t:a,,
+12,,sugar,sugar,,t:some,,
+12,,onion,onion,,t:an,,
+12,,book,book,,t:a,,
+12,,water,water,,t:some,,
+12,,milk,milk,,t:some,,
+12,,orange,orange,,t:an,,
+12,,ball,ball,,t:a,,
+12,,apricot,apricot,,t:an,,
+12,,tea,tea,,t:some,,
+12,,almond,almond,,t:an,,
+12,,pomegranate,pomegranate,,t:a,,
+12,,corn,corn,,t:some,,

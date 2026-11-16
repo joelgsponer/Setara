@@ -1,0 +1,87 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# Two and three words together: a blue ball; thirteen flowers; two goats; four spoons; What colour is the tree?
+# 03: the things of unit 03 with the colours and numbers of level 1: a blue ball; three keys; two blue balls.
+03,دو یا سه کلمه را با هم گوش کن: چند دانه، چه رنگ و چه چیز. تصویر درست را انتخاب کن.,a red ball,,,ball,ball_yellow|ball_blue|apple,یک توپ سرخ
+03,,a blue ball,,,ball_blue,ball_yellow|ball_green|book_blue,یک توپ آبی
+03,,a green ball,,,ball_green,ball_blue|ball_yellow|bag_green,یک توپ سبز
+03,,a yellow ball,,,ball_yellow,ball_green|ball_blue|key,یک توپ زرد
+03,,a yellow key,,,key,ball_yellow|comb|box,یک کلید زرد
+03,,a brown box,,,box,ball|key|bag_green,یک صندوق نصواری
+03,,two balls,,,p:ball*2,p:ball*3|p:key*2|p:key*3,دو توپ
+03,,three keys,,,p:key*3,p:key*2|p:comb*3|p:comb*2,سه کلید
+03,,two combs,,,p:comb*2,p:comb*4|p:box*2|p:box*4,دو شانه
+03,,four boxes,,,p:box*4,p:box*2|p:rope*4|p:rope*2,چهار صندوق
+03,,two ropes,,,p:rope*2,p:rope*3|p:ball*2|p:ball*3,دو ریسمان
+03,,five keys,,,p:key*5,p:key*3|p:ball*5|p:ball*3,پنج کلید
+03,,two blue balls,,,p:ball_blue*2,p:ball_blue*3|p:ball*2|p:key*2,دو توپ آبی
+03,,three yellow balls,,,p:ball_yellow*3,p:ball_yellow*4|p:ball_green*3|p:key*3,سه توپ زرد
+03,,four green balls,,,p:ball_green*4,p:ball_green*5|p:ball*4|p:key*4,چهار توپ سبز
+03,,three blue balls,,,p:ball_blue*3,p:ball_blue*4|p:ball*3|p:key*3,سه توپ آبی
+# 08: numbers to 20 with a thing. Thirteen and three; seventeen and seven: the wrong choice is the number that sounds alike.
+08,گوش کن که چند دانه است و چه چیز است. دقت کن: بعضی عددها مثل هم صدا می‌دهند. حساب کن و تصویر درست را انتخاب کن.,Look! Five flowers.,,,p:flower*5,p:flower*15|p:leaf*5|p:leaf*15,پنج گل
+08,,Look! Two trees.,,,p:tree*2,p:tree*12|p:stone*2|p:stone*12,دو درخت
+08,,twelve stars,,,p:star*12,p:star*2|p:stone*12|p:stone*2,دوازده ستاره
+08,,eleven stones,,,p:stone*11,p:stone*1|p:star*11|p:star*1,یازده سنگ
+08,,three leaves,,,p:leaf*3,p:leaf*13|p:flower*3|p:flower*13,سه برگ
+08,,fifteen leaves,,,p:leaf*15,p:leaf*5|p:star*15|p:star*5,پانزده برگ
+08,,twenty stars,,,p:star*20,p:star*10|p:leaf*20|p:leaf*10,بیست ستاره
+08,,thirteen flowers,,,p:flower*13,p:flower*3|p:tree*13|p:tree*3,سیزده گل
+08,,fourteen trees,,,p:tree*14,p:tree*4|p:flower*14|p:flower*4,چهارده درخت
+08,,sixteen stones,,,p:stone*16,p:stone*6|p:leaf*16|p:leaf*6,شانزده سنگ
+08,,seventeen leaves,,,p:leaf*17,p:leaf*7|p:stone*17|p:stone*7,هفده برگ
+08,,eighteen flowers,,,p:flower*18,p:flower*8|p:star*18|p:star*8,هژده گل
+08,,nineteen stars,,,p:star*19,p:star*9|p:flower*19|p:flower*9,نزده ستاره
+08,,three yellow flowers,,,p:flower_yellow*3,p:flower*3|p:flower_yellow*13|p:star*3,سه گل زرد
+08,,two blue flowers,,,p:flower_blue*2,p:flower_yellow*2|p:flower_blue*12|p:ball_blue*2,دو گل آبی
+08,,four red flowers,,,p:flower*4,p:flower_blue*4|p:flower*14|p:ball*4,چهار گل سرخ
+# 16: a number and an animal; the plural. Wrong choices: the same animal in another number; another animal.
+16,گوش کن که چند حیوان است و کدام حیوان. حساب کن و تصویر درست را انتخاب کن.,Look! Two goats.,,,p:goat*2,p:goat*3|p:sheep*2|p:sheep*3,دو بز
+16,,Look! Three cows.,,,p:cow*3,p:cow*2|p:horse*3|p:horse*2,سه گاو
+16,,Look! Five hens.,,,p:hen*5,p:hen*3|p:chick*5|p:chick*3,پنج مرغ
+16,,Look! Four sheep.,,,p:sheep*4,p:sheep*2|p:goat*4|p:goat*2,چهار گوسفند
+16,,two cats,,,p:cat*2,p:cat*4|p:dog*2|p:dog*4,دو پشک
+16,,three dogs,,,p:dog*3,p:dog*5|p:cat*3|p:cat*5,سه سگ
+16,,six chicks,,,p:chick*6,p:chick*3|p:hen*6|p:hen*3,شش چوچهٔ مرغ
+16,,two lambs,,,p:lamb*2,p:lamb*5|p:calf*2|p:calf*5,دو بره
+16,,four kittens,,,p:kitten*4,p:kitten*2|p:lamb*4|p:lamb*2,چهار چوچهٔ پشک
+16,,three calves,,,p:calf*3,p:calf*6|p:kitten*3|p:kitten*6,سه گوساله
+16,,two horses,,,p:horse*2,p:horse*4|p:donkey*2|p:donkey*4,دو اسپ
+16,,five fish,,,p:fish*5,p:fish*2|p:sparrow*5|p:sparrow*2,پنج ماهی
+16,,four donkeys,,,p:donkey*4,p:donkey*2|p:camel*4|p:camel*2,چهار خر
+16,,two camels,,,p:camel*2,p:camel*3|p:cow*2|p:cow*3,دو شتر
+16,,six birds,,,p:sparrow*6,p:sparrow*4|p:fish*6|p:fish*4,شش پرنده
+# 17: things at home with a number: four spoons; two cups.
+17,چیزهای خانه. گوش کن که چند دانه است و چه چیز است. تصویر درست را انتخاب کن.,four spoons,,,p:spoon*4,p:spoon*2|p:cup*4|p:cup*2,چهار قاشق
+17,,two cups,,,p:cup*2,p:cup*4|p:plate*2|p:plate*4,دو پیاله
+17,,three plates,,,p:plate*3,p:plate*5|p:spoon*3|p:spoon*5,سه بشقاب
+17,,two pots,,,p:pot*2,p:pot*3|p:bucket*2|p:bucket*3,دو دیگ
+17,,two beds,,,p:bed*2,p:bed*4|p:pillow*2|p:pillow*4,دو تخت خواب
+17,,three pillows,,,p:pillow*3,p:pillow*2|p:blanket*3|p:blanket*2,سه بالشت
+17,,two blankets,,,p:blanket*2,p:blanket*3|p:carpet*2|p:carpet*3,دو کمپل
+17,,five spoons,,,p:spoon*5,p:spoon*3|p:plate*5|p:plate*3,پنج قاشق
+17,,two buckets,,,p:bucket*2,p:bucket*5|p:basket*2|p:basket*5,دو سطل
+17,,three baskets,,,p:basket*3,p:basket*2|p:broom*3|p:broom*2,سه سبد
+17,,two brooms,,,p:broom*2,p:broom*4|p:bucket*2|p:bucket*4,دو جاروب
+17,,four cups,,,p:cup*4,p:cup*6|p:pot*4|p:pot*6,چهار پیاله
+17,,six plates,,,p:plate*6,p:plate*4|p:cup*6|p:cup*4,شش بشقاب
+17,,a red carpet,,,carpet,bed|basket|bucket,یک قالین سرخ
+17,,a white plate,,,plate,pot|broom|carpet,یک بشقاب سفید
+# 20: What colour is the ball? The colours of level 1 with the things of level 2. Close colours (orange; brown; red) are never offered together.
+20,تصویر میانه را ببین و سوال را گوش کن: چه رنگ است؟ رنگ درست را انتخاب کن.,What colour is the ball?,,ball_blue,color_blue,color_orange|color_red|color_green,توپ چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the ball?,,ball_green,color_green,color_black|color_orange|color_brown,توپ چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the flower?,,flower,color_red,color_green|color_white|color_yellow,گل چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the flower?,,flower_blue,color_blue,color_green|color_yellow|color_brown,گل چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the key?,,key,color_yellow,color_green|color_brown|color_blue,کلید چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the carpet?,,carpet,color_red,color_blue|color_black|color_green,قالین چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the tree?,,tree,color_green,color_white|color_black|color_yellow,درخت چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the leaf?,,leaf,color_green,color_orange|color_blue|color_yellow,برگ چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the tomato?,,tomato,color_red,color_white|color_green|color_yellow,بادنجان رومی چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the chick?,,chick,color_yellow,color_brown|color_blue|color_red,چوچهٔ مرغ چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the milk?,,milk,color_white,color_blue|color_orange|color_black,شیر چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the sheep?,,sheep,color_white,color_green|color_red|color_black,گوسفند چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the tooth?,,tooth,color_white,color_black|color_brown|color_red,دندان چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the carrot?,,carrot,color_orange,color_green|color_blue|color_white,زردک چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the cat?,,cat,color_orange,color_white|color_blue|color_green,پشک چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the horse?,,horse,color_brown,color_green|color_white|color_yellow,اسپ چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the potato?,,potato,color_brown,color_blue|color_yellow|color_green,کچالو چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the star?,,star,color_yellow,color_blue|color_black|color_red,ستاره چه رنگ است؟ تصویر میانه را ببین.

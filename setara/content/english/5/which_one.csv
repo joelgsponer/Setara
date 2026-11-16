@@ -1,0 +1,63 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# PRACTISE. Odd one out, what goes together, and which written word is right. Three or four choices.
+04,چهار تصویر می‌بینی. سوال را گوش کن: کدام یک با دیگران فرق دارد، یا کدام یک لازم است؟ از کلینیک گپ می‌زنیم.,Which one does not work at the clinic?,,,shopkeeper,doctor|nurse,داکتر و نرس در کلینیک کار می‌کنند. دکاندار در دکان کار می‌کند.
+04,,Which one is not a person?,,,bandage,doctor|nurse|teacher,داکتر، نرس و معلم آدم هستند. بنداژ یک چیز است.
+04,,Which one is not at the clinic?,,,kite,bandage|thermometer|doctor,کاغذپران در کلینیک نیست. بنداژ، ترمامیتر و داکتر در کلینیک هستند.
+04,,Who works with the doctor?,,,nurse,tailor|shopkeeper|customer,نرس با داکتر کار می‌کند.
+04,,The child has a fever. What does the nurse need?,,,thermometer,bandage|soap|comb,برای دیدن تب ترمامیتر لازم است.
+04,,He has a cut on his hand. What does the nurse need?,,,bandage,thermometer|spoon|key,برای زخم بنداژ لازم است.
+04,,Which one is not a part of the body?,,,clinic,knee|neck|shoulder,زانو، گردن و شانه جاهای بدن است. کلینیک یک جای است.
+04,,Which one is not a place?,,,nurse,clinic|school|bakery,کلینیک، مکتب و نانوایی جای است. نرس یک آدم است.
+04,,Where do you take a sick child?,,,clinic,bakery|bazaar|field,طفل مریض را به کلینیک می‌بریم.
+04,,Which one is not sick?,,,happy,fa_cough|sneeze|fa_fever_days,او می‌خندد و جور است. دیگران سرفه، ریزش و تب دارند.
+04,,Who says: Open your mouth?,,,doctor,shopkeeper|tailor|baby,داکتر می‌گوید دهانت را باز کن.
+04,,Which one is in your mouth?,,,tooth,knee|back|ear,دندان در دهان است.
+10,تکرار درس‌های یک تا نُه. بعضی سوال‌ها می‌پرسد که کدام یک با دیگران فرق دارد، و بعضی می‌پرسد که چه با چه جور می‌آید.,Which one is not a feeling?,,,road,hungry|thirsty|feel_tired,گرسنه، تشنه و مانده حال آدم است. سرک یک جای است.
+10,,Which one is not an illness?,,,bandage,fa_cough|fa_fever_days|headache,سرفه، تب و سردرد مریضی است. بنداژ یک چیز است.
+10,,What goes with thirsty?,,,water,bread|blanket|soap,کسی که تشنه است آب می‌خواهد.
+10,,What goes with hungry?,,,bread,water|bed|coat,کسی که گرسنه است نان می‌خواهد.
+10,,What goes with cold?,,,blanket,umbrella|spoon|soap,کسی که خنک می‌خورد کمپل می‌خواهد.
+10,,What goes with tired?,,,bed,ball|kite|rope,کسی که مانده است بستر می‌خواهد.
+10,,Which one must you not touch?,,,fire,ball|book|flower,به آتش نباید دست زد. خطرناک است.
+10,,Which one is clean?,,,clean_hands,dirty_hands|water_puddle|plate_dirty,این دست‌ها پاک است. دیگران چتل هستند.
+10,,Which one is dangerous for a small child?,,,knife,ball|pillow|spoon,چاقو برای طفل خُرد خطرناک است.
+10,,Which one is not on your face?,,,knee,eye|nose|mouth,چشم، بینی و دهان در روی است. زانو در پا است.
+10,,A child is hurt. Who do you tell?,,,father,baby|kitten|chick,به یک کلان می‌گویی، مثلاً به پدر.
+10,,Which one is near your head?,,,neck,knee|foot|leg,گردن نزدیک سر است. زانو و پا دور هستند.
+12,سوال‌هایی از هوا: در این هوا چه لازم است؟ کدام یک سرد است، کدام گرم؟ کدام یک هوا نیست؟,It is raining. What do you take?,,,umbrella,kite|ball|comb,در باران چتری می‌گیری.
+12,,It is snowing. What do you wear?,,,coat,sandals|dress|shirt,در برف بالاپوش می‌پوشی.
+12,,It is sunny and hot. What do you wear on your head?,,,hat,coat|socks|shoes,در آفتاب گرم کلاه به سر می‌کنی.
+12,,Which one is not weather?,,,bridge,rain|snow|wind,باران، برف و باد هوا است. پل هوا نیست.
+12,,Which one is cold?,,,snow,sun|fire|tea,برف سرد است. آفتاب، آتش و چای گرم است.
+12,,Which one is hot?,,,sun,snow|ice|rain,آفتاب گرم است. برف، یخ و باران سرد است.
+12,,It is windy. What can you fly?,,,kite,ball|stone|book,با باد کاغذپران را بلند می‌کنی.
+12,,Which one is wet?,,,rain,sun|fire|sand,باران تر است. آفتاب، آتش و ریگ خشک است.
+12,,Which one comes with a storm?,,,wind,sun|star|moon,با طوفان باد تیز می‌آید.
+12,,Which one do you see at night?,,,moon,sun|rain|cloudy,شب مهتاب را می‌بینی.
+12,,Which weather is good for a walk?,,,sun,storm|rain,هوای آفتابی برای قدم زدن خوب است، طوفان و باران نه.
+12,,The road is white and cold. What is on it?,,,snow,rain|sand|flour,سرک سفید و سرد است، پس برف روی آن است.
+17,حالا کلمه را می‌خوانی. کدام کلمه برای دیروز است؟ walk برای امروز است، walked برای دیروز. بعد از Did و didn't فعل ساده می‌آید.,Which word is for yesterday?,,,t:went,t:go|t:goes,went گذشتهٔ go است: دیروز رفتم.
+17,,Which word tells about yesterday?,,,t:ate,t:eat|t:eats,ate گذشتهٔ eat است: دیروز خوردم.
+17,,Which word says: yesterday?,,,t:saw,t:see|t:sees,saw گذشتهٔ see است: دیروز دیدم.
+17,,Which one is the past of drink?,,,t:drank,t:drink|t:drinks,drank گذشتهٔ drink است: نوشید.
+17,,Which one is the past of sleep?,,,t:slept,t:sleep|t:sleeps,slept گذشتهٔ sleep است: خوابید.
+17,,Which one is the past of give?,,,t:gave,t:give|t:gives,gave گذشتهٔ give است: داد.
+17,,Which one is the past of walk?,,,t:walked,t:walk|t:walks,walked گذشتهٔ walk است. این فعل ed می‌گیرد.
+17,,Which one is the past of have?,,,t:had,t:have|t:has,had گذشتهٔ have است: داشت.
+17,,Which one is the past of come?,,,t:came,t:come|t:comes,came گذشتهٔ come است: آمد.
+17,,Which word is not the past?,,,t:play,t:played|t:cooked|t:washed,play برای امروز است. played، cooked و washed برای دیروز است.
+17,,Which word is for today?,,,t:take,t:took|t:fell|t:went,take برای امروز است. took، fell و went برای دیروز است.
+17,,Did you ... to school? Which word is right?,,,t:go,t:went|t:goes,بعد از Did فعل ساده می‌آید: Did you go?
+17,,I didn't ... the doctor. Which word is right?,,,t:see,t:saw|t:sees,بعد از didn't فعل ساده می‌آید: I didn't see.
+20,تکرار درس‌های یازده تا نزده: فصل‌ها، راه، پیر و جوان، و کلمه‌های دیروز.,Which season is cold?,,,winter,summer|spring,زمستان سرد است.
+20,,Which season is hot?,,,summer,winter|autumn,تابستان گرم است.
+20,,In which season are the leaves yellow?,,,autumn,spring|summer|winter,در خزان برگ‌ها زرد می‌شود.
+20,,In which season do the trees have flowers?,,,spring,autumn|winter|summer,در بهار درخت‌ها گل می‌کنند.
+20,,Which one is not a season?,,,storm,spring|winter|autumn,بهار، زمستان و خزان فصل است. طوفان هوا است.
+20,,Which one tells you the way?,,,turn_left,rain|blanket|food_bowl,تیر راه را نشان می‌دهد: به دست چپ دور بخور.
+20,,Which one is old?,,,grandfather,baby|boy|girl,پدرکلان پیر است.
+20,,Which one is young?,,,baby,grandfather|grandmother|teacher,طفل شیرخور بسیار خُردسال است.
+20,,Which one is good for a sick neighbour?,,,food_bowl,kite|ball|stone,برای همسایهٔ مریض شوربا می‌بریم.
+20,,Which word tells about last night?,,,t:was,t:is|t:are,was برای گذشته است: دیشب بود.
+20,,Which one is the past of bring?,,,t:brought,t:bring|t:brings,brought گذشتهٔ bring است: آورد.
+20,,Which one comes at the start?,,,t:first,t:then|t:after that,first یعنی اول. then و after that بعد می‌آیند.

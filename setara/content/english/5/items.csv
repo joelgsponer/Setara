@@ -1,0 +1,229 @@
+unit,key,en,fa,picture,tags
+# English level 5 "Health and help". unit = classroom lesson number.
+# Rows with a picture are the words of Word Stall; every row is said in Echo. Rows tagged review repeat an earlier word.
+# Health words are language practice only: no medicines, no doses, no advice beyond the health packs.
+# 01 How do you feel?
+01,sick,sick,مریض,sick,word
+01,tired,tired,مانده,feel_tired,word
+01,hungry,hungry,گرسنه,hungry,word
+01,thirsty,thirsty,تشنه,thirsty,word
+01,hot,hot,گرم,hot,word
+01,cold,cold,خنک,cold,word
+01,how_feel,How do you feel?,چه حال داری؟,,phrase
+01,feel_sick,I feel sick.,من خود را مریض احساس می‌کنم.,,phrase
+01,not_well,I am not well.,من جور نیستم.,,phrase
+01,d_feel_hot,f: How are you today? // m: I am not well. I feel hot.,امروز چطور هستی؟ جور نیستم. گرمی می‌کنم.,,dialogue
+01,d_hungry,"m: Are you hungry? // f: No, I am thirsty.",گرسنه هستی؟ نه، تشنه هستم.,,dialogue
+# 02 What hurts?
+02,stomach,stomach,شکم,tummy,word
+02,back,back,کمر,back,word
+02,shoulder,shoulder,شانه,shoulder,word
+02,neck,neck,گردن,neck,word
+02,throat,throat,گلو,throat,word
+02,knee,knee,زانو,knee,word
+02,what_hurts,What hurts?,کجایت درد می‌کند؟,,phrase
+02,head_hurts,My head hurts.,سرم درد می‌کند.,,phrase
+02,back_hurts,My back hurts.,کمرم درد می‌کند.,,phrase
+02,d_knee,f: What hurts? // m: My knee hurts.,کجایت درد می‌کند؟ زانویم درد می‌کند.,,dialogue
+02,d_stomach,"m: Does your stomach hurt? // f: Yes, it does.",شکمت درد می‌کند؟ بلی، درد می‌کند.,,dialogue
+# 03 I have a headache
+03,headache,headache,سردرد,headache,word
+03,toothache,toothache,دندان‌درد,toothache,word
+03,stomach_ache,stomach ache,شکم‌درد,stomach_ache,word
+03,earache,earache,گوش‌درد,earache,word
+03,fever,fever,تب,fa_fever_days,word
+03,cough,cough,سرفه,fa_cough,word
+03,a_cold,a cold,ریزش,sneeze,word
+03,have_headache,I have a headache.,من سردرد دارم.,,phrase
+03,has_fever,He has a fever.,او تب دارد.,,phrase
+03,d_matter,f: What is the matter? // m: I have a toothache.,چه شده است؟ دندانم درد می‌کند.,,dialogue
+03,d_cold,"m: Do you have a fever? // f: No, I have a cold.",تب داری؟ نه، ریزش دارم.,,dialogue
+# 04 At the clinic
+04,clinic,clinic,کلینیک,clinic,word
+04,doctor,doctor,داکتر,doctor,word
+04,nurse,nurse,نرس,nurse,word
+04,bandage,bandage,بنداژ,bandage,word
+04,thermometer,thermometer,ترمامیتر,thermometer,word
+04,doctor_helps,The doctor helps sick people.,داکتر به مردم مریض کمک می‌کند.,,phrase
+04,take_child,Take the child to the clinic.,طفل را به کلینیک ببر.,,phrase
+04,nurse_bandage,The nurse has a bandage.,نرس یک بنداژ دارد.,,phrase
+04,d_where_doctor,f: Where is the doctor? // m: She is in the clinic.,داکتر کجاست؟ او در کلینیک است.,,dialogue
+04,d_come_in,"m: Good morning, doctor. // f: Good morning. Come in, please.",صبح بخیر، داکتر صاحب. صبح بخیر. لطفاً داخل بیایید.,,dialogue
+# 05 The doctor says
+05,open_mouth,Open your mouth.,دهانت را باز کن.,open_mouth,word
+05,lie_down,Lie down.,دراز بکش.,lie_down,word
+05,breathe_in,Breathe in.,نفس بکش.,breathe_slow,word
+05,show_arm,Show me your arm.,بازویت را به من نشان بده.,arm,word
+05,wait_here,Wait here.,اینجا منتظر باش.,wait,word
+05,sit_here,Sit down here.,اینجا بنشین.,sit_down,review
+05,breathe_out,Breathe out.,نفست را بیرون کن.,,phrase
+05,dont_move,Don't move.,شور نخور.,,phrase
+05,come_back,Come back tomorrow.,فردا باز بیا.,,phrase
+05,d_ah,"f: Open your mouth, please. Say ah. // m: Ah!",لطفاً دهانت را باز کن. بگو آ. آ!,,dialogue
+05,d_hurt_here,"f: Does it hurt here? // m: Yes, it does.",اینجا درد می‌کند؟ بلی، درد می‌کند.,,dialogue
+# 06 You must
+06,clean_hands,clean hands,دست‌های پاک,clean_hands,word
+06,dirty_hands,dirty hands,دست‌های چتل,dirty_hands,word
+06,clean_water,clean water,آب پاک,water_covered,word
+06,dirty_water,dirty water,آب چتل,water_puddle,word
+06,wash_hands,wash your hands,دست‌هایت را بشوی,wash_hands,word
+06,dangerous,dangerous,خطرناک,toddler_fire,word
+06,must_wash,You must wash your hands.,تو باید دست‌هایت را بشویی.,,phrase
+06,must_clean_water,You must drink clean water.,تو باید آب پاک بنوشی.,,phrase
+06,mustnt_dirty,You must not drink dirty water.,تو نباید آب چتل بنوشی.,,phrase
+06,mustnt_fire,You must not play with fire.,تو نباید با آتش بازی کنی.,,phrase
+06,d_must_i,"f: Must I wash my hands? // m: Yes, you must.",آیا باید دست‌هایم را بشویم؟ بلی، باید بشویی.,,dialogue
+# 07 You should
+07,rest,rest,استراحت کردن,rest,word
+07,drink_water,drink water,آب نوشیدن,drink,word
+07,sleep_early,sleep early,وقت خوابیدن,sleep,word
+07,wear_coat,wear a coat,بالاپوش پوشیدن,coat,word
+07,brush_teeth,brush your teeth,دندان‌هایت را برس کن,tb_brush,word
+07,should_rest,You should rest.,بهتر است که استراحت کنی.,,phrase
+07,should_water,You should drink water.,بهتر است که آب بنوشی.,,phrase
+07,shouldnt_school,You should not go to school today.,بهتر است که امروز به مکتب نروی.,,phrase
+07,what_should,What should I do?,من چه کنم بهتر است؟,,phrase
+07,d_tired,f: I am tired. // m: You should sleep early.,من مانده هستم. بهتر است که وقت بخوابی.,,dialogue
+07,d_toothache,m: I have a toothache. // f: You should go to the clinic.,دندانم درد می‌کند. بهتر است که به کلینیک بروی.,,dialogue
+# 08 Help!
+08,fall,fall,افتادن,fall,word
+08,shout,shout for help,برای کمک صدا کن,fa_shout_help,word
+08,tell_adult,tell an adult,به یک کلان بگو,tell_adult,word
+08,stay_with,stay with him,پیش او بمان,fa_stay_with,word
+08,help,help,کمک کردن,help,review
+08,help_excl,Help!,کمک!,,phrase
+08,can_you_help,"Can you help me, please?",لطفاً، به من کمک کرده می‌توانی؟,,phrase
+08,brother_hurt,My brother is hurt.,برادرم افگار شده است.,,phrase
+08,be_careful,Be careful!,احتیاط کن!,,phrase
+08,dont_touch,Don't touch it. It is dangerous.,به آن دست نزن. خطرناک است.,,phrase
+08,d_all_right,"m: Are you all right? // f: Yes, I am all right. Thank you.",خوب هستی؟ بلی، خوب هستم. تشکر.,,dialogue
+# 09 Where is it?
+09,behind,behind,پشت,pos_behind,word
+09,in_front_of,in front of,پیش روی,pos_in_front,word
+09,between,between,بین,pos_between,word
+09,near,near,نزدیک,near,word
+09,far,far,دور,far,word
+09,road,road,سرک,road,word
+09,where_clinic,Where is the clinic?,کلینیک کجاست؟,,phrase
+09,near_school,The clinic is near the school.,کلینیک نزدیک مکتب است.,,phrase
+09,between_shop,The bakery is between the shop and the school.,نانوایی بین دکان و مکتب است.,,phrase
+09,d_far,"f: Is the clinic far? // m: No, it is near.",کلینیک دور است؟ نه، نزدیک است.,,dialogue
+09,d_bazaar,"m: Excuse me, where is the bazaar? // f: It is in front of the bridge.",ببخشید، بازار کجاست؟ پیش روی پل است.,,dialogue
+# 10 Review: at the clinic (no new words; whole dialogues to say)
+10,r_feel,f: How do you feel? // m: I feel sick. My head hurts.,چه حال داری؟ خود را مریض احساس می‌کنم. سرم درد می‌کند.,,dialogue
+10,r_fever,m: What is the matter? // f: I have a fever and a cough.,چه شده است؟ تب و سرفه دارم.,,dialogue
+10,r_should,f: I have a stomach ache. // m: You should go to the clinic. It is near the school.,شکمم درد می‌کند. بهتر است که به کلینیک بروی. نزدیک مکتب است.,,dialogue
+10,r_doctor,"f: Sit down here. Open your mouth. // m: Yes, doctor.",اینجا بنشین. دهانت را باز کن. خوب است، داکتر صاحب.,,dialogue
+10,r_must,m: Must I rest? // f: Yes. You must rest and you should drink water.,آیا باید استراحت کنم؟ بلی. باید استراحت کنی و بهتر است که آب بنوشی.,,dialogue
+10,r_help,f: Help! My sister is hurt. // m: Stay with her. I tell an adult.,کمک! خواهرم افگار شده است. پیش او بمان. من به یک کلان می‌گویم.,,dialogue
+# 11 Turn left, turn right
+11,turn_left,Turn left.,به دست چپ دور بخور.,turn_left,word
+11,turn_right,Turn right.,به دست راست دور بخور.,turn_right,word
+11,go_straight,Go straight.,مستقیم برو.,arrow_up,word
+11,stop,Stop.,ایستاد شو.,stop,word
+11,cross_bridge,Cross the bridge.,از پل تیر شو.,bridge,word
+11,walk,walk,پیاده رفتن,walk,word
+11,how_get,How do I get to the clinic?,چطور به کلینیک بروم؟,,phrase
+11,straight_then_left,"Go straight, then turn left.",مستقیم برو، بعد به دست چپ دور بخور.,,phrase
+11,on_right,It is on the right.,در دست راست است.,,phrase
+11,d_school,"f: Excuse me, how do I get to the school? // m: Cross the bridge and turn right.",ببخشید، چطور به مکتب بروم؟ از پل تیر شو و به دست راست دور بخور.,,dialogue
+11,d_five_min,m: Is it far? // f: No. Walk five minutes.,دور است؟ نه. پنج دقیقه پیاده برو.,,dialogue
+# 12 The weather
+12,sunny,sunny,آفتابی,sun,word
+12,cloudy,cloudy,ابری,cloudy,word
+12,raining,It is raining.,باران می‌بارد.,rain,word
+12,snowing,It is snowing.,برف می‌بارد.,snow,word
+12,windy,windy,بادی,wind,word
+12,storm,storm,طوفان,storm,word
+12,weather_like,What is the weather like?,هوا چطور است؟,,phrase
+12,it_is_sunny,It is sunny.,هوا آفتابی است.,,phrase
+12,windy_today,It is windy today.,امروز باد می‌وزد.,,phrase
+12,d_cloudy,f: What is the weather like today? // m: It is cloudy and cold.,امروز هوا چطور است؟ ابری و سرد است.,,dialogue
+12,d_snowing,"m: Is it snowing? // f: Yes, it is. Wear your coat.",برف می‌بارد؟ بلی، می‌بارد. بالاپوشت را بپوش.,,dialogue
+# 13 The four seasons
+13,spring,spring,بهار,spring,word
+13,summer,summer,تابستان,summer,word
+13,autumn,autumn,خزان,autumn,word
+13,winter,winter,زمستان,winter,word
+13,ice,ice,یخ,ice,word
+13,umbrella,umbrella,چتری,umbrella,review
+13,winter_cold,In winter it is cold. It snows.,در زمستان هوا سرد است. برف می‌بارد.,,phrase
+13,spring_rain,In spring it rains. It is warm.,در بهار باران می‌بارد. هوا گرم است.,,phrase
+13,summer_hot,In summer it is hot and dry.,در تابستان هوا بسیار گرم و خشک است.,,phrase
+13,autumn_cool,In autumn it is cool and windy.,در خزان هوا خنک است و باد می‌وزد.,,phrase
+13,d_season,f: Which season do you like? // m: I like spring. The ground is wet and green.,کدام فصل را خوش داری؟ من بهار را خوش دارم. زمین تر و سبز است.,,dialogue
+# 14 Yesterday it was cold (was / were; no pictures: the pattern is taught through sentences)
+14,yesterday,yesterday,دیروز,,word
+14,last_night,last night,دیشب,,word
+14,today_yesterday,Today it is sunny. Yesterday it was rainy.,امروز هوا آفتابی است. دیروز بارانی بود.,,phrase
+14,i_was_home,I was at home yesterday.,من دیروز در خانه بودم.,,phrase
+14,we_were,We were at school.,ما در مکتب بودیم.,,phrase
+14,was_not,It was not cold.,هوا سرد نبود.,,phrase
+14,they_were,They were happy.,آنها خوش بودند.,,phrase
+14,d_where_were,f: Where were you yesterday? // m: I was at the clinic. I was sick.,دیروز کجا بودی؟ در کلینیک بودم. مریض بودم.,,dialogue
+14,d_were_tired,"m: Were you tired last night? // f: Yes, I was.",دیشب مانده بودی؟ بلی، بودم.,,dialogue
+# 15 Yesterday I walked (regular past)
+15,walked,walked,پیاده رفت,walk,word
+15,washed,washed,شست,wash_face,word
+15,cooked,cooked,پخت,cook,word
+15,played,played,بازی کرد,play,word
+15,cleaned,cleaned,پاک کرد,sweep,word
+15,carried,carried,برد,carry,word
+15,walk_walked,Today I walk. Yesterday I walked.,امروز پیاده می‌روم. دیروز پیاده رفتم.,,phrase
+15,i_walked,Yesterday I walked to school.,دیروز پیاده به مکتب رفتم.,,phrase
+15,she_cooked,She cooked rice.,او برنج پخت.,,phrase
+15,it_rained,It rained last night.,دیشب باران بارید.,,phrase
+15,d_cleaned,f: Yesterday I cleaned the room. // m: Good! I washed the cups.,دیروز من اطاق را پاک کردم. خوب! من پیاله‌ها را شستم.,,dialogue
+# 16 I went to the clinic (irregular past)
+16,went,went,رفت,go,word
+16,ate,ate,خورد,eating,word
+16,drank,drank,نوشید,drink,word
+16,saw,saw,دید,look,word
+16,slept,slept,خوابید,sleep,word
+16,gave,gave,داد,give,word
+16,go_went,Today I go. Yesterday I went.,امروز می‌روم. دیروز رفتم.,,phrase
+16,i_went,I went to the clinic.,من به کلینیک رفتم.,,phrase
+16,ate_drank,She ate bread and drank tea.,او نان خورد و چای نوشید.,,phrase
+16,came_late,He came home late.,او ناوقت به خانه آمد.,,phrase
+16,had_headache,I had a headache.,من سردرد داشتم.,,phrase
+16,d_saw_you,f: Yesterday I went to the bazaar. // m: I saw you there!,دیروز من به بازار رفتم. من تو را آنجا دیدم!,,dialogue
+# 17 Did you go? (questions and "didn't"; no pictures)
+17,did_you_go,Did you go to school yesterday?,آیا دیروز به مکتب رفتی؟,,phrase
+17,yes_i_did,"Yes, I did.",بلی، رفتم.,,phrase
+17,no_i_didnt,"No, I didn't.",نه، نرفتم.,,phrase
+17,didnt_sleep,I didn't sleep well.,من خوب نخوابیدم.,,phrase
+17,what_did,What did you do yesterday?,دیروز چه کردی؟,,phrase
+17,took_child,She took the child to the clinic.,او طفل را به کلینیک برد.,,phrase
+17,fell_knee,He fell and hurt his knee.,او افتاد و زانویش افگار شد.,,phrase
+17,d_see_doctor,"f: Did you see the doctor? // m: Yes, I did. She gave me a bandage.",داکتر را دیدی؟ بلی، دیدم. او به من یک بنداژ داد.,,dialogue
+17,d_what_eat,m: What did you eat? // f: I ate rice. I didn't eat meat.,چه خوردی؟ برنج خوردم. گوشت نخوردم.,,dialogue
+# 18 First, then, after that (no pictures)
+18,first,first,اول,,word
+18,then,then,بعد,,word
+18,after_that,after that,بعد از آن,,word
+18,first_then,First I washed my hands. Then I ate.,اول دست‌هایم را شستم. بعد نان خوردم.,,phrase
+18,after_that_school,After that I went to school.,بعد از آن به مکتب رفتم.,,phrase
+18,before_eat,Wash your hands before you eat.,پیش از نان خوردن دست‌هایت را بشوی.,,phrase
+18,after_dinner,Brush your teeth after dinner.,بعد از نان شب دندان‌هایت را برس کن.,,phrase
+18,feel_better,I feel better today.,امروز حالم بهتر است.,,phrase
+18,d_better,"f: How are you today? // m: I am better, thank you.",امروز چطور هستی؟ بهتر هستم، تشکر.,,dialogue
+18,three_steps,First she rested. Then she drank water. After that she slept.,اول استراحت کرد. بعد آب نوشید. بعد از آن خوابید.,,phrase
+# 19 We help
+19,old,old,پیر,grandfather,word
+19,young,young,خُردسال,baby,word
+19,soup,soup,شوربا,food_bowl,word
+19,hold_hand,hold her hand,دستش را بگیر,hold_hand,word
+19,blanket,blanket,کمپل,blanket,review
+19,neighbour_sick,My neighbour was sick.,همسایهٔ من مریض بود.,,phrase
+19,visited,I visited her yesterday.,دیروز به دیدن او رفتم.,,phrase
+19,brought_soup,I brought soup and bread.,من شوربا و نان آوردم.,,phrase
+19,help_old,We should help old people.,بهتر است که به مردم پیر کمک کنیم.,,phrase
+19,d_who_helped,f: Who helped you? // m: My sister helped me. She is kind.,کی به تو کمک کرد؟ خواهرم به من کمک کرد. او مهربان است.,,dialogue
+19,d_thanks_help,m: Thank you for your help. // f: You're welcome.,تشکر از کمک شما. قابل تشکر نیست.,,dialogue
+# 20 Review: a day to remember (no new words; whole dialogues to say)
+20,r_weather,f: What was the weather like yesterday? // m: It was cold and windy.,دیروز هوا چطور بود؟ سرد بود و باد می‌وزید.,,dialogue
+20,r_did,"m: Did you go to school? // f: No, I didn't. I was sick.",آیا به مکتب رفتی؟ نه، نرفتم. مریض بودم.,,dialogue
+20,r_way,"f: How do I get to the bakery? // m: Go straight, then turn right. It is near the well.",چطور به نانوایی بروم؟ مستقیم برو، بعد به دست راست دور بخور. نزدیک چاه است.,,dialogue
+20,r_first,m: What did you do? // f: First I rested. Then I went to the clinic.,چه کردی؟ اول استراحت کردم. بعد به کلینیک رفتم.,,dialogue
+20,r_better,f: How do you feel today? // m: I feel better. Thank you for your help.,امروز چه حال داری؟ حالم بهتر است. تشکر از کمک شما.,,dialogue
+20,r_coat,m: It is snowing. // f: You should wear your coat. You must be careful on the ice.,برف می‌بارد. بهتر است که بالاپوشت را بپوشی. روی یخ باید احتیاط کنی.,,dialogue

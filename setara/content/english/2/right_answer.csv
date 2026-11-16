@@ -1,0 +1,88 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# Question and answer in two voices. The child decides whether the answer is right: yes or no.
+# Rounds 01; 08 and 14 show a picture and the answer must fit it. Rounds 13 and 20 have no picture: the answer must fit the question.
+# 01: Who is this? with a picture. The answer names the person in the picture; or another person.
+01,تصویر را ببین. کسی می‌پرسد: این کیست؟ جواب را گوش کن. جواب با تصویر جور است؟ بلی یا نه را انتخاب کن.,f: Who is this? // m: This is my mother.,,mother,yes,no,این کیست؟ این مادر من است. جواب درست است؟
+01,,m: Who is this? // f: She is my mother.,,father,no,yes,این کیست؟ او مادر من است. جواب درست است؟
+01,,m: Who is this? // f: This is my sister.,,sister,yes,no,این کیست؟ این خواهر من است. جواب درست است؟
+01,,f: Who is this? // m: She is my sister.,,father,no,yes,این کیست؟ او خواهر من است. جواب درست است؟
+01,,f: Who is this? // m: This is my grandmother.,,grandmother,yes,no,این کیست؟ این مادرکلان من است. جواب درست است؟
+01,,m: Who is this? // f: She is my grandmother.,,grandfather,no,yes,این کیست؟ او مادرکلان من است. جواب درست است؟
+01,,m: Who is this? // f: This is my father.,,father,yes,no,این کیست؟ این پدر من است. جواب درست است؟
+01,,f: Who is this? // m: He is my father.,,grandfather,no,yes,این کیست؟ او پدر من است. جواب درست است؟
+01,,f: Who is this? // m: This is my brother.,,brother,yes,no,این کیست؟ این برادر من است. جواب درست است؟
+01,,m: Who is this? // f: He is my brother.,,sister,no,yes,این کیست؟ او برادر من است. جواب درست است؟
+01,,m: Who is this? // f: This is my grandfather.,,grandfather,yes,no,این کیست؟ این پدرکلان من است. جواب درست است؟
+01,,f: Who is this? // m: He is my grandfather.,,sister,no,yes,این کیست؟ او پدرکلان من است. جواب درست است؟
+01,,f: Who is this? // m: This is my baby brother.,,baby,yes,no,این کیست؟ این برادر خرد من است. جواب درست است؟
+01,,m: Who is this? // f: This is my family.,,family,yes,no,این کیست؟ این فامیل من است. جواب درست است؟
+01,,f: Who is this? // m: My mother and my father.,,parents,yes,no,این کیست؟ مادرم و پدرم. جواب درست است؟
+01,,m: Who is this? // f: Look! My family.,,baby,no,yes,این کیست؟ ببین! فامیل من. جواب درست است؟
+# 08: How many? with pictures to count. A wrong answer is the number that sounds alike (five and fifteen).
+08,تصویرها را حساب کن. کسی می‌پرسد: چند دانه؟ جواب را گوش کن. عدد درست است؟ بلی یا نه را انتخاب کن.,f: How many stars? // m: Twelve stars.,,p:star*12,yes,no,چند ستاره؟ دوازده ستاره. جواب درست است؟
+08,,m: How many flowers? // f: Fifteen flowers.,,p:flower*5,no,yes,چند گل؟ پانزده گل. جواب درست است؟
+08,,f: How many trees? // m: Three trees.,,p:tree*3,yes,no,چند درخت؟ سه درخت. جواب درست است؟
+08,,m: How many stones? // f: Six stones.,,p:stone*16,no,yes,چند سنگ؟ شش سنگ. جواب درست است؟
+08,,f: How many leaves? // m: Eleven leaves.,,p:leaf*11,yes,no,چند برگ؟ یازده برگ. جواب درست است؟
+08,,m: How many eggs? // f: Three eggs.,,p:egg*13,no,yes,چند تخم مرغ؟ سه تخم مرغ. جواب درست است؟
+08,,f: How many fingers? // m: Ten fingers.,,p:finger*10,yes,no,چند انگشت؟ ده انگشت. جواب درست است؟
+08,,m: How many eyes? // f: Two eyes.,,p:eye*2,yes,no,چند چشم؟ دو چشم. جواب درست است؟
+08,,f: How many hands? // m: Twelve hands.,,p:hand*2,no,yes,چند دست؟ دوازده دست. جواب درست است؟
+08,,m: How many ears? // f: Fourteen ears.,,p:ear*4,no,yes,چند گوش؟ چهارده گوش. جواب درست است؟
+08,,f: How many trees? // m: Fourteen trees.,,p:tree*14,yes,no,چند درخت؟ چهارده درخت. جواب درست است؟
+08,,m: How many stars? // f: Twenty stars.,,p:star*20,yes,no,چند ستاره؟ بیست ستاره. جواب درست است؟
+08,,f: How many flowers? // m: Seventeen flowers.,,p:flower*7,no,yes,چند گل؟ هفده گل. جواب درست است؟
+08,,m: How many stones? // f: Eighteen stones.,,p:stone*18,yes,no,چند سنگ؟ هژده سنگ. جواب درست است؟
+# 13: Do you like ...? is answered with Yes; I do or No; I don't; not with a number or a name.
+13,کسی می‌پرسد: تو این را خوش داری؟ جواب را گوش کن. آیا این جوابِ همین سوال است؟ اگر جور است، بلی را انتخاب کن. اگر نه، نه را.,"f: Do you like honey? // m: Yes, I do.",,,yes,no,تو عسل را خوش داری؟ بلی، خوش دارم. جواب درست است؟
+13,,m: Do you like honey? // f: Twelve stars.,,,no,yes,تو عسل را خوش داری؟ دوازده ستاره. جواب درست است؟
+13,,"f: Do you like rice? // m: No, I don't.",,,yes,no,تو برنج را خوش داری؟ نه، خوش ندارم. جواب درست است؟
+13,,m: Do you like rice? // f: This is my mother.,,,no,yes,تو برنج را خوش داری؟ این مادر من است. جواب درست است؟
+13,,"f: Do you like grapes? // m: Yes, I like grapes.",,,yes,no,تو انگور را خوش داری؟ بلی، من انگور را خوش دارم. جواب درست است؟
+13,,m: Do you like grapes? // f: I have two hands.,,,no,yes,تو انگور را خوش داری؟ من دو دست دارم. جواب درست است؟
+13,,"f: Do you like carrots? // m: No, I don't like carrots.",,,yes,no,تو زردک را خوش داری؟ نه، من زردک را خوش ندارم. جواب درست است؟
+13,,m: Do you like carrots? // f: This is a goat.,,,no,yes,تو زردک را خوش داری؟ این بز است. جواب درست است؟
+13,,"f: Do you like yoghurt? // m: Yes, I do.",,,yes,no,تو ماست را خوش داری؟ بلی، خوش دارم. جواب درست است؟
+13,,"m: Do you like meat? // f: No, I don't.",,,yes,no,تو گوشت را خوش داری؟ نه، خوش ندارم. جواب درست است؟
+13,,"f: Who is this? // m: Yes, I do.",,,no,yes,این کیست؟ بلی، خوش دارم. جواب درست است؟
+13,,"m: How many goats? // f: No, I don't.",,,no,yes,چند بز؟ نه، خوش ندارم. جواب درست است؟
+13,,"f: Do you like sweets? // m: Yes, I do. I like sweets.",,,yes,no,تو شیرینی را خوش داری؟ بلی، خوش دارم. من شیرینی را خوش دارم. جواب درست است؟
+13,,m: Do you like walnuts? // f: I have a sister.,,,no,yes,تو چهارمغز را خوش داری؟ من یک خواهر دارم. جواب درست است؟
+13,,"f: Do you like potatoes? // m: Yes, I like potatoes.",,,yes,no,تو کچالو را خوش داری؟ بلی، من کچالو را خوش دارم. جواب درست است؟
+13,,"m: What is this? // f: Yes, I like milk.",,,no,yes,این چیست؟ بلی، من شیر را خوش دارم. جواب درست است؟
+# 14: What is this? with the picture of an animal. The answer names this animal; or another.
+14,تصویر حیوان را ببین. کسی می‌پرسد: این چیست؟ جواب را گوش کن. نام همین حیوان گفته شد؟ بلی یا نه را انتخاب کن.,f: What is this? // m: This is a sheep.,,sheep,yes,no,این چیست؟ این گوسفند است. جواب درست است؟
+14,,f: What is this? // m: It is a goat.,,dog,no,yes,این چیست؟ بز است. جواب درست است؟
+14,,m: What is this? // f: This is a cow.,,cow,yes,no,این چیست؟ این گاو است. جواب درست است؟
+14,,m: What is this? // f: It is a donkey.,,sparrow,no,yes,این چیست؟ خر است. جواب درست است؟
+14,,f: What is this? // m: This is a hen.,,hen,yes,no,این چیست؟ این مرغ است. جواب درست است؟
+14,,f: What is this? // m: It is a horse.,,mouse,no,yes,این چیست؟ اسپ است. جواب درست است؟
+14,,m: What is this? // f: This is a dog.,,dog,yes,no,این چیست؟ این سگ است. جواب درست است؟
+14,,m: What is this? // f: It is a cat.,,lamb,no,yes,این چیست؟ پشک است. جواب درست است؟
+14,,f: What is this? // m: This is a bird.,,sparrow,yes,no,این چیست؟ این پرنده است. جواب درست است؟
+14,,f: What is this? // m: It is a fish.,,chick,no,yes,این چیست؟ ماهی است. جواب درست است؟
+14,,m: What is this? // f: This is a mouse.,,mouse,yes,no,این چیست؟ این موش است. جواب درست است؟
+14,,m: What is this? // f: It is a camel.,,sheep,no,yes,این چیست؟ شتر است. جواب درست است؟
+14,,f: What is this? // m: This is a lamb.,,lamb,yes,no,این چیست؟ این بره است. جواب درست است؟
+14,,f: What is this? // m: It is a calf.,,cow,no,yes,این چیست؟ گوساله است. جواب درست است؟
+14,,m: What is this? // f: This is a chick.,,chick,yes,no,این چیست؟ این چوچهٔ مرغ است. جواب درست است؟
+14,,m: What is this? // f: It is a kitten.,,hen,no,yes,این چیست؟ چوچهٔ پشک است. جواب درست است؟
+# 20: every kind of question of levels 1 and 2; without a picture: does the answer fit?
+20,همه سوال‌هایی که یاد گرفتی. سوال و جواب را گوش کن. جواب به سوال جور است؟ بلی یا نه را انتخاب کن.,m: Who is this? // f: This is my grandmother's house.,,,no,yes,این کیست؟ این خانهٔ مادرکلان من است. جواب درست است؟
+20,,f: Who is this? // m: He is my grandfather.,,,yes,no,این کیست؟ او پدرکلان من است. جواب درست است؟
+20,,m: How many spoons? // f: Six spoons.,,,yes,no,چند قاشق؟ شش قاشق. جواب درست است؟
+20,,f: How many spoons? // m: I like spoons.,,,no,yes,چند قاشق؟ من قاشق‌ها را خوش دارم. جواب درست است؟
+20,,"m: Do you like fish? // f: Yes, I do.",,,yes,no,تو ماهی را خوش داری؟ بلی، خوش دارم. جواب درست است؟
+20,,f: Do you like fish? // m: Fifteen fish.,,,no,yes,تو ماهی را خوش داری؟ پانزده ماهی. جواب درست است؟
+20,,m: What is this? // f: This is a well.,,,yes,no,این چیست؟ این چاه است. جواب درست است؟
+20,,"f: What is this? // m: No, I don't.",,,no,yes,این چیست؟ نه، خوش ندارم. جواب درست است؟
+20,,m: What colour is the carpet? // f: It is red.,,,yes,no,قالین چه رنگ است؟ سرخ است. جواب درست است؟
+20,,f: What colour is the carpet? // m: It is a carpet.,,,no,yes,قالین چه رنگ است؟ قالین است. جواب درست است؟
+20,,m: How many cows? // f: Eleven cows.,,,yes,no,چند گاو؟ یازده گاو. جواب درست است؟
+20,,f: How many cows? // m: This is my cow.,,,no,yes,چند گاو؟ این گاو من است. جواب درست است؟
+20,,"m: Do you like your village? // f: Yes, I do. I like my village.",,,yes,no,تو قریه‌ات را خوش داری؟ بلی، خوش دارم. من قریه‌ام را خوش دارم. جواب درست است؟
+20,,f: Do you like your village? // m: It is a mountain.,,,no,yes,تو قریه‌ات را خوش داری؟ کوه است. جواب درست است؟
+20,,m: Who is this? // f: She is my sister.,,,yes,no,این کیست؟ او خواهر من است. جواب درست است؟
+20,,f: How are you? // m: I have a pillow and a blanket.,,,no,yes,چطور هستی؟ من یک بالشت و یک کمپل دارم. جواب درست است؟
+20,,"m: How are you? // f: I'm fine, thank you.",,,yes,no,چطور هستی؟ خوب هستم، تشکر. جواب درست است؟
+20,,f: What is this? // m: Twenty stones.,,,no,yes,این چیست؟ بیست سنگ. جواب درست است؟

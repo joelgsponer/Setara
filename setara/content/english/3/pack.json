@@ -2,7 +2,7 @@
   "pack": "en-3",
   "subject": "en",
   "level": 3,
-  "version": 1,
+  "version": 2,
   "title_en": "English 3: My day",
   "title_fa": "انگلیسی ۳: روز من",
   "games": [
@@ -46,7 +46,8 @@
       "title_fa": "قطار جمله",
       "intro_fa": "جمله را گوش کن. بعد کلمه‌ها را به ترتیب درست پشت هم بگذار.",
       "icon": "train",
-      "sheet": "sentence_train.csv"
+      "sheet": "sentence_train.csv",
+      "draw": 8
     },
     {
       "id": "shopkeeper",
@@ -56,7 +57,8 @@
       "title_fa": "دکاندار",
       "intro_fa": "تو مشتری هستی. گوش کن که چند افغانی است، و همان قدر پول بده.",
       "icon": "shop",
-      "sheet": "shopkeeper.csv"
+      "sheet": "shopkeeper.csv",
+      "draw": 8
     },
     {
       "id": "radio_stories",
@@ -76,7 +78,8 @@
       "title_fa": "دکان عددها",
       "intro_fa": "گوش کن و عدد درست را انتخاب کن.",
       "icon": "count",
-      "sheet": "numbers.csv"
+      "sheet": "numbers.csv",
+      "draw": 8
     },
     {
       "id": "day_journey",
@@ -87,7 +90,8 @@
       "intro_fa": "گوش کن و جواب درست را انتخاب کن. با هر جواب درست یک قدم پیش می‌روی.",
       "icon": "clock_7",
       "read_choices": true,
-      "sheet": "day_journey.csv"
+      "sheet": "day_journey.csv",
+      "draw": 8
     },
     {
       "id": "memory",
@@ -97,7 +101,8 @@
       "title_fa": "جوره‌ها",
       "intro_fa": "دو کارت را باز کن. جوره‌هایی را پیدا کن که با هم یکی هستند.",
       "icon": "star",
-      "sheet": "memory.csv"
+      "sheet": "memory.csv",
+      "draw": 6
     },
     {
       "id": "baskets",
@@ -107,7 +112,8 @@
       "title_fa": "سبدها",
       "intro_fa": "گوش کن و هر چیز را در سبد درست بینداز.",
       "icon": "basket",
-      "sheet": "baskets.csv"
+      "sheet": "baskets.csv",
+      "draw": 8
     },
     {
       "id": "yes_no",
@@ -117,7 +123,51 @@
       "title_fa": "بلی یا نه",
       "intro_fa": "تصویر را ببین و سوال را گوش کن. اگر درست است، بلی را انتخاب کن. اگر درست نیست، نه را انتخاب کن.",
       "icon": "yes",
-      "sheet": "yes_no.csv"
+      "sheet": "yes_no.csv",
+      "draw": 8
+    },
+    {
+      "id": "riddles",
+      "engine": "listen_pick",
+      "letter": "l",
+      "title_en": "Riddles",
+      "title_fa": "چیستان",
+      "intro_fa": "چیستان را گوش کن. فکر کن که از چه می‌گوید، و تصویر آن را انتخاب کن.",
+      "icon": "fox",
+      "draw": 8,
+      "sheet": "riddles.csv"
+    },
+    {
+      "id": "day_in_order",
+      "engine": "builder",
+      "letter": "m",
+      "title_en": "First, Then",
+      "title_fa": "اول، بعد",
+      "intro_fa": "جمله‌ها را گوش کن. بعد تصویرها را به همان ترتیبی که شنیدی پشت هم بگذار.",
+      "icon": "wake_up",
+      "sheet": "day_in_order.csv"
+    },
+    {
+      "id": "odd_one_out",
+      "engine": "listen_pick",
+      "letter": "n",
+      "title_en": "Odd One Out",
+      "title_fa": "کدام یک جور نیست؟",
+      "intro_fa": "سوال را گوش کن. سه تصویر با هم جور است و یکی جور نیست. همان یکی را انتخاب کن.",
+      "icon": "no",
+      "draw": 8,
+      "sheet": "odd_one_out.csv"
+    },
+    {
+      "id": "opposites",
+      "engine": "pairs",
+      "letter": "o",
+      "title_en": "Opposites",
+      "title_fa": "ضد هم",
+      "intro_fa": "دو کارت را باز کن. دو تصویری را جوره کن که ضد یکدیگر هستند، مثل کلان و خُرد.",
+      "icon": "big",
+      "draw": 6,
+      "sheet": "opposites.csv"
     }
   ]
 }

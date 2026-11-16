@@ -1,0 +1,94 @@
+round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
+# Sorting. Every thing is spoken; the baskets are pictures and are said aloud at the start of the round and on Y.
+# 02: family or thing. This is my mother; I have a ball.
+02,دو سبد است: فامیل و چیزها. گوش کن: آدمی از فامیل است یا یک چیز؟ تصویر را در سبد درست بینداز.,ball,my ball,,box,چیزها,things
+02,,grandmother,my grandmother,,family,فامیل,family
+02,,rope,my rope,,box,,
+02,,brother,my brother,,family,,
+02,,mother,my mother,,family,,
+02,,comb,my comb,,box,,
+02,,father,my father,,family,,
+02,,baby,my baby,,family,,
+02,,key,my key,,box,,
+02,,sister,my sister,,family,,
+02,,book,my book,,box,,
+02,,box,my box,,box,,
+02,,parents,my parents,,family,,
+02,,bag,my bag,,box,,
+02,,grandfather,my grandfather,,family,,
+02,,pen,my pen,,box,,
+# 12: fruit or vegetable.
+12,دو سبد است: میوه و ترکاری. گوش کن و هر چیز را در سبد درست بینداز.,mulberry,A mulberry.,,set_fruit,میوه,fruit
+12,,pomegranate,A pomegranate.,,set_fruit,,
+12,,spinach,This is spinach.,,set_vegetables,ترکاری,vegetables
+12,,orange,An orange.,,set_fruit,,
+12,,tomato,A tomato.,,set_vegetables,,
+12,,potato,A potato.,,set_vegetables,,
+12,,onion,An onion.,,set_vegetables,,
+12,,apricot,An apricot.,,set_fruit,,
+12,,apple,An apple.,,set_fruit,,
+12,,watermelon,A watermelon.,,set_fruit,,
+12,,grapes,Look! Grapes.,,set_fruit,,
+12,,carrot,A carrot.,,set_vegetables,,
+12,,p:carrot*2,two carrots,,set_vegetables,,
+12,,p:apricot*3,three apricots,,set_fruit,,
+12,,p:tomato*2,two tomatoes,,set_vegetables,,
+12,,p:orange*4,four oranges,,set_fruit,,
+12,,p:onion*3,three onions,,set_vegetables,,
+12,,p:potato*5,five potatoes,,set_vegetables,,
+# 15: three baskets: animals; food; family.
+15,سه سبد است: حیوان‌ها، خوراکی و فامیل. گوش کن و هر تصویر را در سبد درست بینداز.,cat,A cat.,,set_animals,حیوان‌ها,animals
+15,,father,my father. I love my father.,,family,فامیل,family
+15,,rice,This is rice.,,set_food,خوراکی,food
+15,,yoghurt,This is yoghurt.,,set_food,,
+15,,horse,A horse.,,set_animals,,
+15,,baby,my baby. I love my baby.,,family,,
+15,,donkey,A donkey.,,set_animals,,
+15,,sheep,A sheep.,,set_animals,,
+15,,sugar,This is sugar.,,set_food,,
+15,,mother,my mother. I love my mother.,,family,,
+15,,milk,This is milk.,,set_food,,
+15,,hen,A hen.,,set_animals,,
+15,,grandmother,my grandmother. I love my grandmother.,,family,,
+15,,brother,my brother. I love my brother.,,family,,
+15,,meat,This is meat.,,set_food,,
+15,,cow,A cow.,,set_animals,,
+15,,honey,This is honey.,,set_food,,
+15,,goat,A goat.,,set_animals,,
+15,,dog,A dog.,,set_animals,,
+# 18: four baskets: things at home; animals; fruit; vegetables.
+18,چهار سبد است: چیزهای خانه، حیوان‌ها، میوه و ترکاری. خوب گوش کن و هر تصویر را در سبد درست بینداز.,plate,A plate.,,set_home_things,چیزهای خانه,things at home
+18,,grapes,Look! Grapes.,,set_fruit,میوه,fruit
+18,,sparrow,A bird.,,set_animals,حیوان‌ها,animals
+18,,carrot,A carrot.,,set_vegetables,ترکاری,vegetables
+18,,lamb,A lamb.,,set_animals,,
+18,,spoon,A spoon.,,set_home_things,,
+18,,onion,An onion.,,set_vegetables,,
+18,,mulberry,A mulberry.,,set_fruit,,
+18,,bed,A bed.,,set_home_things,,
+18,,potato,A potato.,,set_vegetables,,
+18,,carpet,A carpet.,,set_home_things,,
+18,,spinach,This is spinach.,,set_vegetables,,
+18,,camel,A camel.,,set_animals,,
+18,,fish,A fish.,,set_animals,,
+18,,cup,A cup.,,set_home_things,,
+18,,pot,A pot.,,set_home_things,,
+18,,mouse,A mouse.,,set_animals,,
+18,,watermelon,A watermelon.,,set_fruit,,
+18,,apricot,An apricot.,,set_fruit,,
+# 19: at home or out in the village.
+19,دو سبد است: در خانه و در قریه. گوش کن: این چیز در خانه است یا بیرون در قریه؟ تصویر را در سبد درست بینداز.,pillow,my pillow,,house,در خانه,at home
+19,,bed,my bed,,house,,
+19,,blanket,my blanket,,house,,
+19,,basket,my basket,,house,,
+19,,bucket,my bucket,,house,,
+19,,field,the field,,scene_village,در قریه,in the village
+19,,tree,the tree,,scene_village,,
+19,,river,the river,,scene_village,,
+19,,mountain,the mountain,,scene_village,,
+19,,stone,the stone,,scene_village,,
+19,,broom,my broom,,house,,
+19,,well,the well,,scene_village,,
+19,,cup,my cup,,house,,
+19,,flower,the flower,,scene_village,,
+19,,soap,my soap,,house,,

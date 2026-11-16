@@ -1,0 +1,13 @@
+round,intro_fa,say_en,say_fa,targets,others,need,help_fa
+01,زود بگیر! گپ را بشنو و تنها چیزهایی را بگیر که با آن جور است. دیگران را بمان که بیفتد.,,حیوان‌ها را بگیر.,cow|hen|cat|fish|bee,tree|stone|flower|ball,5,گاو، مرغ، پشک، ماهی و زنبور حیوان هستند. درخت و گل گیاه است.
+01,,,چیزهایی را بگیر که برای دندان خوب است.,toothbrush|toothpaste|milk|carrot|apple,candy|soda|sugar,5,برس، کریم دندان، شیر، زردک و سیب برای دندان خوب است. شیرینی، نوشابه و بوره دندان را خراب می‌کند.
+01,,,چیزهای پاک را بگیر.,soap|clean_hands|plate_clean|clean_clothes|towel,garbage|dirty_hands|plate_dirty|water_puddle,5,صابون، دست شسته، بشقاب شسته، کالای شسته و دستمال پاک است.
+01,,,قسمت‌های بدن را بگیر.,eye|ear|hand|foot|nose,ball|book|spoon|stone,5,چشم، گوش، دست، پا و بینی قسمت‌های بدن ما است.
+01,,,چیزهای شب و خواب را بگیر.,pillow|blanket|mattress|moon|star,sun|ball|school|spoon,5,شب مهتاب و ستاره می‌تابد و ما با بالشت، کمپل و توشک می‌خوابیم.
+01,,,میوه‌ها را بگیر.,apple|grape|pomegranate|watermelon|apricot,bread|egg|stone|spoon,5,سیب، انگور، انار، تربوز و زردآلو میوه است.
+02,باز هم زود بگیر! این بار حیوان‌ها، گیاه‌ها و آسمان. گپ را بشنو و تنها چیزهای درست را بگیر.,,پرنده‌ها را بگیر.,pigeon|sparrow|hen|rooster|eagle,cow|cat|fish|ant,5,کبوتر، گنجشک، مرغ، خروس و عقاب بال و پر دارند.
+02,,,گیاه‌ها را بگیر.,tree|flower|wheat|sprout|grass,sheep|stone|fish|hen,5,درخت، گل، گندم، سبزه نو و سبزه از خاک می‌رویند.
+02,,,چوچه‌ها را بگیر.,lamb|calf|chick|foal|puppy,cow|sheep|hen|horse,5,بره، گوساله، چوچه مرغ، کره اسپ و چوچه سگ خورد هستند.
+02,,,چیزهای زمستان را بگیر.,snow|coat|snowman|ice|socks,watermelon|sandals|butterfly|flower,5,برف، یخ، بالاپوش، جراب و آدمک برفی از زمستان است.
+02,,,حشره‌ها را بگیر.,bee|ant|butterfly|fly,pigeon|cat|fish|sheep,4,زنبور، مورچه، پروانه و مگس حشره هستند. حشره شش پا دارد.
+02,,,هر چه در آسمان است بگیر.,sun|moon|star|cloud|rainbow,fish|tree|stone|house,5,آفتاب، مهتاب، ستاره، ابر و کمان رستم در آسمان است.

@@ -1,0 +1,16 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa,hop
+# What do you say? A small scene is told; the child reads four short answers and picks the one that fits. A pool of 14 (draw 8). Answers are kept to two words so that they are drawn at 24 px.
+17,,m: Anything else? You want nothing more. What do you say?,,,t:That's all,t:How much?|t:Hello|t:Sorry,دکاندار می‌پرسد: چیز دیگر؟ تو چیز دیگر نمی‌خواهی. می‌گویی: همین قدر بس است.,
+17,,A man is in your way at the bazaar. What do you say?,,,t:Excuse me,t:Goodbye|t:Of course|t:How many?,در بازار یک مرد سر راه تو ایستاده است. با ادب می‌گویی: ببخشید.,
+17,,You step on a woman's foot. What do you say?,,,t:Sorry,"t:Thank you|t:Hello|t:Yes, please",پایت را بالای پای یک زن گذاشتی. می‌گویی: ببخشید.,
+17,,"f: Can I have some bread, please? // m: What does the baker say?",,,t:Of course,t:Goodbye|t:Sorry|t:How much?,مشتری با ادب نان می‌خواهد. نانوا می‌گوید: البته.,
+17,,You come into the shop. What do you say first?,,,t:Hello,t:Goodbye|t:That's all|t:Sorry,وقتی به دکان داخل می‌شوی، اول سلام می‌دهی.,
+17,,You have your bread. You go home. What do you say?,,,t:Goodbye,t:Hello|t:Excuse me|t:How many?,وقتی از دکان می‌روی، می‌گویی: خداحافظ.,
+17,,m: Do you want a plastic bag? You want one. What do you say?,,,"t:Yes, please","t:No, thanks|t:Sorry|t:Goodbye",تو خریطه می‌خواهی. با ادب می‌گویی: بلی، لطفاً.,
+17,,f: Do you want some tea? You do not want tea. What do you say?,,,"t:No, thanks","t:Yes, please|t:How much?|t:Hello",تو چای نمی‌خواهی. با ادب می‌گویی: نه، تشکر.,
+17,,You see a scarf. You want to know the price. What do you say?,,,t:How much?,t:How many?|t:Thank you|t:That's all,می‌خواهی قیمت را بدانی. می‌پرسی: چند است؟,
+17,,You want eggs. The shopkeeper wants to know: five or ten? What does he say?,,,t:How many?,t:How much?|t:Sorry|t:Of course,تخم مرغ را دانه دانه حساب می‌کنیم. دکاندار می‌پرسد: چند دانه؟,
+17,,f: Here you are. Two kilos of rice. // m: What do you say?,,,t:Thank you,t:Excuse me|t:Hello|t:How many?,وقتی کسی چیزی به ما می‌دهد، می‌گوییم: تشکر.,
+17,,f: How are you today? // m: What do you say?,,,t:I'm fine,t:Goodbye|t:How much?|t:Sorry,کسی می‌پرسد: چطور هستی؟ می‌گویی: خوب هستم.,
+17,,You want to ask the tailor a question. He is at work. What do you say first?,,,t:Excuse me,"t:That's all|t:No, thanks|t:Goodbye",پیش از سوال کردن با ادب می‌گوییم: ببخشید.,
+17,,"f: Can you help me with my basket, please? You want to help. What do you say?",,,t:Of course,"t:No, thanks|t:How many?|t:Hello",کسی کمک می‌خواهد و تو کمک می‌کنی. می‌گویی: البته.,

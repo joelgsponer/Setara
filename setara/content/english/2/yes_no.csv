@@ -1,0 +1,210 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# A picture and a question. The child answers with the yes or the no picture.
+# Every word comes once with its own picture and once with another; the wording changes between the two.
+# 02: the family of units 01 and 02.
+02,فامیل. تصویر را ببین و سوال را گوش کن. همان نفر است؟ اگر بلی، بلی را انتخاب کن. اگر نه، نه را.,Is this the mother?,,mother,yes,no,این مادر است؟ تصویر را ببین.
+02,,This is my mother. Yes or no?,,brother,no,yes,این مادر من است. بلی یا نه؟ تصویر را ببین.
+02,,This is my father. Yes or no?,,father,yes,no,این پدر من است. بلی یا نه؟ تصویر را ببین.
+02,,Look! My father. Yes or no?,,grandmother,no,yes,ببین! پدر من. بلی یا نه؟ تصویر را ببین.
+02,,Look! My sister. Yes or no?,,sister,yes,no,ببین! خواهر من. بلی یا نه؟ تصویر را ببین.
+02,,Is this the sister?,,grandfather,no,yes,این خواهر است؟ تصویر را ببین.
+02,,Is this the brother?,,brother,yes,no,این برادر است؟ تصویر را ببین.
+02,,This is my brother. Yes or no?,,parents,no,yes,این برادر من است. بلی یا نه؟ تصویر را ببین.
+02,,This is my grandmother. Yes or no?,,grandmother,yes,no,این مادرکلان من است. بلی یا نه؟ تصویر را ببین.
+02,,Look! My grandmother. Yes or no?,,baby,no,yes,ببین! مادرکلان من. بلی یا نه؟ تصویر را ببین.
+02,,Look! My grandfather. Yes or no?,,grandfather,yes,no,ببین! پدرکلان من. بلی یا نه؟ تصویر را ببین.
+02,,Is this the grandfather?,,family,no,yes,این پدرکلان است؟ تصویر را ببین.
+02,,Parents? Yes or no?,,parents,yes,no,پدر و مادر؟ بلی یا نه؟ تصویر را ببین.
+02,,Look! Parents. Yes or no?,,mother,no,yes,ببین! پدر و مادر. بلی یا نه؟ تصویر را ببین.
+02,,This is my baby. Yes or no?,,baby,yes,no,این طفل خرد من است. بلی یا نه؟ تصویر را ببین.
+02,,Look! My baby. Yes or no?,,father,no,yes,ببین! طفل خرد من. بلی یا نه؟ تصویر را ببین.
+02,,Look! My family. Yes or no?,,family,yes,no,ببین! فامیل من. بلی یا نه؟ تصویر را ببین.
+02,,Is this the family?,,sister,no,yes,این فامیل است؟ تصویر را ببین.
+# 03: I have a ball. The picture shows what the speaker has; or something else.
+03,کسی می‌گوید چه دارد. تصویر را ببین: همان چیز است؟ همان قدر است؟ بلی یا نه را انتخاب کن.,I have a ball. Yes or no?,,ball,yes,no,من یک توپ دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have a ball. Yes or no?,,box,no,yes,من یک توپ دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have a rope. Yes or no?,,rope,yes,no,من یک ریسمان دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have a rope. Yes or no?,,key,no,yes,من یک ریسمان دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have a box. Yes or no?,,box,yes,no,من یک صندوق دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have a box. Yes or no?,,comb,no,yes,من یک صندوق دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have a key. Yes or no?,,key,yes,no,من یک کلید دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have a key. Yes or no?,,house,no,yes,من یک کلید دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have a comb. Yes or no?,,comb,yes,no,من یک شانه دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have a comb. Yes or no?,,ball,no,yes,من یک شانه دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have a house. Yes or no?,,house,yes,no,من یک خانه دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have a house. Yes or no?,,rope,no,yes,من یک خانه دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have two keys. Yes or no?,,p:key*2,yes,no,من دو کلید دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have three balls. Yes or no?,,p:ball*5,no,yes,من سه توپ دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have four combs. Yes or no?,,p:comb*4,yes,no,من چهار شانه دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have two boxes. Yes or no?,,p:box*3,no,yes,من دو صندوق دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have five ropes. Yes or no?,,p:rope*5,yes,no,من پنج ریسمان دارم. بلی یا نه؟ تصویر را ببین.
+03,,I have three keys. Yes or no?,,p:key*2,no,yes,من سه کلید دارم. بلی یا نه؟ تصویر را ببین.
+# 05: face and body.
+05,روی و بدن. تصویر را ببین و گوش کن. همان عضو بدن است؟ بلی یا نه را انتخاب کن.,Is this a head?,,head,yes,no,این سر است؟ تصویر را ببین.
+05,,Is it a head?,,mouth,no,yes,سر است؟ تصویر را ببین.
+05,,Look! Hair. Yes or no?,,hair,yes,no,ببین! موی. بلی یا نه؟ تصویر را ببین.
+05,,Is it hair?,,hand,no,yes,این موی است؟ تصویر را ببین.
+05,,This is an eye. Yes or no?,,eye,yes,no,این چشم است. بلی یا نه؟ تصویر را ببین.
+05,,Is this an eye?,,arm,no,yes,این چشم است؟ تصویر را ببین.
+05,,Is this an ear?,,ear,yes,no,این گوش است؟ تصویر را ببین.
+05,,Is it an ear?,,leg,no,yes,گوش است؟ تصویر را ببین.
+05,,Is it a nose?,,nose,yes,no,بینی است؟ تصویر را ببین.
+05,,This is a nose. Yes or no?,,foot,no,yes,این بینی است. بلی یا نه؟ تصویر را ببین.
+05,,This is a mouth. Yes or no?,,mouth,yes,no,این دهن است. بلی یا نه؟ تصویر را ببین.
+05,,Is this a mouth?,,finger,no,yes,این دهن است؟ تصویر را ببین.
+05,,Is this a hand?,,hand,yes,no,این دست است؟ تصویر را ببین.
+05,,Is it a hand?,,tooth,no,yes,دست است؟ تصویر را ببین.
+05,,Is it an arm?,,arm,yes,no,بازو است؟ تصویر را ببین.
+05,,This is an arm. Yes or no?,,head,no,yes,این بازو است. بلی یا نه؟ تصویر را ببین.
+05,,This is a leg. Yes or no?,,leg,yes,no,این لنگ است. بلی یا نه؟ تصویر را ببین.
+05,,Is this a leg?,,hair,no,yes,این لنگ است؟ تصویر را ببین.
+05,,Is this a foot?,,foot,yes,no,این پای است؟ تصویر را ببین.
+05,,Is it a foot?,,eye,no,yes,پای است؟ تصویر را ببین.
+05,,Is it a finger?,,finger,yes,no,انگشت است؟ تصویر را ببین.
+05,,This is a finger. Yes or no?,,ear,no,yes,این انگشت است. بلی یا نه؟ تصویر را ببین.
+05,,This is a tooth. Yes or no?,,tooth,yes,no,این دندان است. بلی یا نه؟ تصویر را ببین.
+05,,Is this a tooth?,,nose,no,yes,این دندان است؟ تصویر را ببین.
+# 09: food and drink; five words of level 1 come back.
+09,خوردنی و نوشیدنی. تصویر را ببین و گوش کن. همان خوراکی است؟ بلی یا نه را انتخاب کن.,Look! Rice. Yes or no?,,rice,yes,no,ببین! برنج. بلی یا نه؟ تصویر را ببین.
+09,,Is it rice?,,yoghurt,no,yes,این برنج است؟ تصویر را ببین.
+09,,Is it milk?,,milk,yes,no,این شیر است؟ تصویر را ببین.
+09,,Milk? Yes or no?,,sugar,no,yes,شیر؟ بلی یا نه؟ تصویر را ببین.
+09,,Meat? Yes or no?,,meat,yes,no,گوشت؟ بلی یا نه؟ تصویر را ببین.
+09,,Look! Meat. Yes or no?,,bread,no,yes,ببین! گوشت. بلی یا نه؟ تصویر را ببین.
+09,,Look! Yoghurt. Yes or no?,,yoghurt,yes,no,ببین! ماست. بلی یا نه؟ تصویر را ببین.
+09,,Is it yoghurt?,,tea,no,yes,این ماست است؟ تصویر را ببین.
+09,,Is it sugar?,,sugar,yes,no,این بوره است؟ تصویر را ببین.
+09,,Sugar? Yes or no?,,water,no,yes,بوره؟ بلی یا نه؟ تصویر را ببین.
+09,,Bread? Yes or no?,,bread,yes,no,نان؟ بلی یا نه؟ تصویر را ببین.
+09,,Look! Bread. Yes or no?,,egg,no,yes,ببین! نان. بلی یا نه؟ تصویر را ببین.
+09,,Look! Tea. Yes or no?,,tea,yes,no,ببین! چای. بلی یا نه؟ تصویر را ببین.
+09,,Is it tea?,,apple,no,yes,این چای است؟ تصویر را ببین.
+09,,Is it water?,,water,yes,no,این آب است؟ تصویر را ببین.
+09,,Water? Yes or no?,,rice,no,yes,آب؟ بلی یا نه؟ تصویر را ببین.
+09,,Is this an egg?,,egg,yes,no,این تخم مرغ است؟ تصویر را ببین.
+09,,Is it an egg?,,milk,no,yes,تخم مرغ است؟ تصویر را ببین.
+09,,Is it an apple?,,apple,yes,no,سیب است؟ تصویر را ببین.
+09,,This is an apple. Yes or no?,,meat,no,yes,این سیب است. بلی یا نه؟ تصویر را ببین.
+# 13: fruit and vegetables; honey; walnut; almond and corn.
+13,میوه و ترکاری. تصویر را ببین و گوش کن. همان میوه یا ترکاری است؟ بلی یا نه را انتخاب کن.,Grapes? Yes or no?,,grapes,yes,no,انگور؟ بلی یا نه؟ تصویر را ببین.
+13,,Look! Grapes. Yes or no?,,apricot,no,yes,ببین! انگور. بلی یا نه؟ تصویر را ببین.
+13,,Is this a pomegranate?,,pomegranate,yes,no,این انار است؟ تصویر را ببین.
+13,,Is it a pomegranate?,,mulberry,no,yes,انار است؟ تصویر را ببین.
+13,,Is it a watermelon?,,watermelon,yes,no,تربوز است؟ تصویر را ببین.
+13,,This is a watermelon. Yes or no?,,potato,no,yes,این تربوز است. بلی یا نه؟ تصویر را ببین.
+13,,This is an orange. Yes or no?,,orange,yes,no,این مالته است. بلی یا نه؟ تصویر را ببین.
+13,,Is this an orange?,,tomato,no,yes,این مالته است؟ تصویر را ببین.
+13,,Is this an apricot?,,apricot,yes,no,این زردآلو است؟ تصویر را ببین.
+13,,Is it an apricot?,,onion,no,yes,زردآلو است؟ تصویر را ببین.
+13,,Is it a mulberry?,,mulberry,yes,no,توت است؟ تصویر را ببین.
+13,,This is a mulberry. Yes or no?,,carrot,no,yes,این توت است. بلی یا نه؟ تصویر را ببین.
+13,,This is a potato. Yes or no?,,potato,yes,no,این کچالو است. بلی یا نه؟ تصویر را ببین.
+13,,Is this a potato?,,spinach,no,yes,این کچالو است؟ تصویر را ببین.
+13,,Is this a tomato?,,tomato,yes,no,این بادنجان رومی است؟ تصویر را ببین.
+13,,Is it a tomato?,,honey,no,yes,بادنجان رومی است؟ تصویر را ببین.
+13,,Is it an onion?,,onion,yes,no,پیاز است؟ تصویر را ببین.
+13,,This is an onion. Yes or no?,,walnut,no,yes,این پیاز است. بلی یا نه؟ تصویر را ببین.
+13,,This is a carrot. Yes or no?,,carrot,yes,no,این زردک است. بلی یا نه؟ تصویر را ببین.
+13,,Is this a carrot?,,almond,no,yes,این زردک است؟ تصویر را ببین.
+13,,Spinach? Yes or no?,,spinach,yes,no,پالک؟ بلی یا نه؟ تصویر را ببین.
+13,,Look! Spinach. Yes or no?,,corn,no,yes,ببین! پالک. بلی یا نه؟ تصویر را ببین.
+13,,Look! Honey. Yes or no?,,honey,yes,no,ببین! عسل. بلی یا نه؟ تصویر را ببین.
+13,,Is it honey?,,grapes,no,yes,این عسل است؟ تصویر را ببین.
+13,,This is a walnut. Yes or no?,,walnut,yes,no,این چهارمغز است. بلی یا نه؟ تصویر را ببین.
+13,,Is this a walnut?,,pomegranate,no,yes,این چهارمغز است؟ تصویر را ببین.
+13,,Is this an almond?,,almond,yes,no,این بادام است؟ تصویر را ببین.
+13,,Is it an almond?,,watermelon,no,yes,بادام است؟ تصویر را ببین.
+13,,Look! Corn. Yes or no?,,corn,yes,no,ببین! جواری. بلی یا نه؟ تصویر را ببین.
+13,,Is it corn?,,orange,no,yes,این جواری است؟ تصویر را ببین.
+# 15: the twelve animals of units 14 and 15.
+15,حیوان‌ها. تصویر را ببین و گوش کن. همان حیوان است؟ بلی یا نه را انتخاب کن.,Is this a sheep?,,sheep,yes,no,این گوسفند است؟ تصویر را ببین.
+15,,Is it a sheep?,,horse,no,yes,گوسفند است؟ تصویر را ببین.
+15,,Is it a goat?,,goat,yes,no,بز است؟ تصویر را ببین.
+15,,This is a goat. Yes or no?,,dog,no,yes,این بز است. بلی یا نه؟ تصویر را ببین.
+15,,This is a cow. Yes or no?,,cow,yes,no,این گاو است. بلی یا نه؟ تصویر را ببین.
+15,,Is this a cow?,,cat,no,yes,این گاو است؟ تصویر را ببین.
+15,,Is this a donkey?,,donkey,yes,no,این خر است؟ تصویر را ببین.
+15,,Is it a donkey?,,sparrow,no,yes,خر است؟ تصویر را ببین.
+15,,Is it a hen?,,hen,yes,no,مرغ است؟ تصویر را ببین.
+15,,This is a hen. Yes or no?,,fish,no,yes,این مرغ است. بلی یا نه؟ تصویر را ببین.
+15,,This is a horse. Yes or no?,,horse,yes,no,این اسپ است. بلی یا نه؟ تصویر را ببین.
+15,,Is this a horse?,,mouse,no,yes,این اسپ است؟ تصویر را ببین.
+15,,Is this a dog?,,dog,yes,no,این سگ است؟ تصویر را ببین.
+15,,Is it a dog?,,camel,no,yes,سگ است؟ تصویر را ببین.
+15,,Is it a cat?,,cat,yes,no,پشک است؟ تصویر را ببین.
+15,,This is a cat. Yes or no?,,sheep,no,yes,این پشک است. بلی یا نه؟ تصویر را ببین.
+15,,This is a bird. Yes or no?,,sparrow,yes,no,این پرنده است. بلی یا نه؟ تصویر را ببین.
+15,,Is this a bird?,,goat,no,yes,این پرنده است؟ تصویر را ببین.
+15,,Is this a fish?,,fish,yes,no,این ماهی است؟ تصویر را ببین.
+15,,Is it a fish?,,cow,no,yes,ماهی است؟ تصویر را ببین.
+15,,Is it a mouse?,,mouse,yes,no,موش است؟ تصویر را ببین.
+15,,This is a mouse. Yes or no?,,donkey,no,yes,این موش است. بلی یا نه؟ تصویر را ببین.
+15,,This is a camel. Yes or no?,,camel,yes,no,این شتر است. بلی یا نه؟ تصویر را ببین.
+15,,Is this a camel?,,hen,no,yes,این شتر است؟ تصویر را ببین.
+# 16: baby animals; and two goats; three cows.
+16,چوچه‌های حیوان‌ها، و چند حیوان. تصویر را ببین، حساب کن و گوش کن. درست است؟ بلی یا نه را انتخاب کن.,Is it a lamb?,,lamb,yes,no,بره است؟ تصویر را ببین.
+16,,This is a lamb. Yes or no?,,calf,no,yes,این بره است. بلی یا نه؟ تصویر را ببین.
+16,,This is a calf. Yes or no?,,calf,yes,no,این گوساله است. بلی یا نه؟ تصویر را ببین.
+16,,Is this a calf?,,chick,no,yes,این گوساله است؟ تصویر را ببین.
+16,,Is this a chick?,,chick,yes,no,این چوچهٔ مرغ است؟ تصویر را ببین.
+16,,Is it a chick?,,kitten,no,yes,چوچهٔ مرغ است؟ تصویر را ببین.
+16,,Is it a kitten?,,kitten,yes,no,چوچهٔ پشک است؟ تصویر را ببین.
+16,,This is a kitten. Yes or no?,,lamb,no,yes,این چوچهٔ پشک است. بلی یا نه؟ تصویر را ببین.
+16,,Two goats. Yes or no?,,p:goat*2,yes,no,دو بز. بلی یا نه؟ تصویر را ببین.
+16,,Three cows. Yes or no?,,p:cow*2,no,yes,سه گاو. بلی یا نه؟ تصویر را ببین.
+16,,Five hens. Yes or no?,,p:hen*5,yes,no,پنج مرغ. بلی یا نه؟ تصویر را ببین.
+16,,Four sheep. Yes or no?,,p:sheep*6,no,yes,چهار گوسفند. بلی یا نه؟ تصویر را ببین.
+16,,Six chicks. Yes or no?,,p:chick*6,yes,no,شش چوچهٔ مرغ. بلی یا نه؟ تصویر را ببین.
+16,,Two lambs. Yes or no?,,p:lamb*4,no,yes,دو بره. بلی یا نه؟ تصویر را ببین.
+16,,Three kittens. Yes or no?,,p:kitten*3,yes,no,سه چوچهٔ پشک. بلی یا نه؟ تصویر را ببین.
+16,,Four calves. Yes or no?,,p:calf*2,no,yes,چهار گوساله. بلی یا نه؟ تصویر را ببین.
+# 18: the twelve things at home of units 17 and 18.
+18,چیزهای خانه. تصویر را ببین و گوش کن. همان چیز است؟ بلی یا نه را انتخاب کن.,Is it a bed?,,bed,yes,no,تخت خواب است؟ تصویر را ببین.
+18,,This is a bed. Yes or no?,,pot,no,yes,این تخت خواب است. بلی یا نه؟ تصویر را ببین.
+18,,This is a carpet. Yes or no?,,carpet,yes,no,این قالین است. بلی یا نه؟ تصویر را ببین.
+18,,Is this a carpet?,,blanket,no,yes,این قالین است؟ تصویر را ببین.
+18,,Is this a cup?,,cup,yes,no,این پیاله است؟ تصویر را ببین.
+18,,Is it a cup?,,pillow,no,yes,پیاله است؟ تصویر را ببین.
+18,,Is it a plate?,,plate,yes,no,بشقاب است؟ تصویر را ببین.
+18,,This is a plate. Yes or no?,,basket,no,yes,این بشقاب است. بلی یا نه؟ تصویر را ببین.
+18,,This is a spoon. Yes or no?,,spoon,yes,no,این قاشق است. بلی یا نه؟ تصویر را ببین.
+18,,Is this a spoon?,,bucket,no,yes,این قاشق است؟ تصویر را ببین.
+18,,Is this a pot?,,pot,yes,no,این دیگ است؟ تصویر را ببین.
+18,,Is it a pot?,,broom,no,yes,دیگ است؟ تصویر را ببین.
+18,,Is it a blanket?,,blanket,yes,no,کمپل است؟ تصویر را ببین.
+18,,This is a blanket. Yes or no?,,soap,no,yes,این کمپل است. بلی یا نه؟ تصویر را ببین.
+18,,This is a pillow. Yes or no?,,pillow,yes,no,این بالشت است. بلی یا نه؟ تصویر را ببین.
+18,,Is this a pillow?,,bed,no,yes,این بالشت است؟ تصویر را ببین.
+18,,Is this a basket?,,basket,yes,no,این سبد است؟ تصویر را ببین.
+18,,Is it a basket?,,carpet,no,yes,سبد است؟ تصویر را ببین.
+18,,Is it a bucket?,,bucket,yes,no,سطل است؟ تصویر را ببین.
+18,,This is a bucket. Yes or no?,,cup,no,yes,این سطل است. بلی یا نه؟ تصویر را ببین.
+18,,This is a broom. Yes or no?,,broom,yes,no,این جاروب است. بلی یا نه؟ تصویر را ببین.
+18,,Is this a broom?,,plate,no,yes,این جاروب است؟ تصویر را ببین.
+18,,Soap? Yes or no?,,soap,yes,no,صابون؟ بلی یا نه؟ تصویر را ببین.
+18,,Look! Soap. Yes or no?,,spoon,no,yes,ببین! صابون. بلی یا نه؟ تصویر را ببین.
+# 19: the village; star; flower; tree; stone; leaf from unit 08; house from unit 02.
+19,قریه و بیرون خانه. تصویر را ببین و گوش کن. همان چیز است؟ بلی یا نه را انتخاب کن.,This is a mountain. Yes or no?,,mountain,yes,no,این کوه است. بلی یا نه؟ تصویر را ببین.
+19,,Is this a mountain?,,sun,no,yes,این کوه است؟ تصویر را ببین.
+19,,Is this a river?,,river,yes,no,این دریا است؟ تصویر را ببین.
+19,,Is it a river?,,star,no,yes,دریا است؟ تصویر را ببین.
+19,,Is it a well?,,well,yes,no,چاه است؟ تصویر را ببین.
+19,,This is a well. Yes or no?,,flower,no,yes,این چاه است. بلی یا نه؟ تصویر را ببین.
+19,,This is a field. Yes or no?,,field,yes,no,این کشتزار است. بلی یا نه؟ تصویر را ببین.
+19,,Is this a field?,,tree,no,yes,این کشتزار است؟ تصویر را ببین.
+19,,The moon? Yes or no?,,moon,yes,no,مهتاب؟ بلی یا نه؟ تصویر را ببین.
+19,,Look! The moon. Yes or no?,,stone,no,yes,ببین! مهتاب. بلی یا نه؟ تصویر را ببین.
+19,,Look! The sun. Yes or no?,,sun,yes,no,ببین! آفتاب. بلی یا نه؟ تصویر را ببین.
+19,,Is it the sun?,,leaf,no,yes,این آفتاب است؟ تصویر را ببین.
+19,,This is a star. Yes or no?,,star,yes,no,این ستاره است. بلی یا نه؟ تصویر را ببین.
+19,,Is this a star?,,house,no,yes,این ستاره است؟ تصویر را ببین.
+19,,Is this a flower?,,flower,yes,no,این گل است؟ تصویر را ببین.
+19,,Is it a flower?,,mountain,no,yes,گل است؟ تصویر را ببین.
+19,,Is it a tree?,,tree,yes,no,درخت است؟ تصویر را ببین.
+19,,This is a tree. Yes or no?,,river,no,yes,این درخت است. بلی یا نه؟ تصویر را ببین.
+19,,This is a stone. Yes or no?,,stone,yes,no,این سنگ است. بلی یا نه؟ تصویر را ببین.
+19,,Is this a stone?,,well,no,yes,این سنگ است؟ تصویر را ببین.
+19,,Is this a leaf?,,leaf,yes,no,این برگ است؟ تصویر را ببین.
+19,,Is it a leaf?,,field,no,yes,برگ است؟ تصویر را ببین.
+19,,Is it a house?,,house,yes,no,خانه است؟ تصویر را ببین.
+19,,This is a house. Yes or no?,,moon,no,yes,این خانه است. بلی یا نه؟ تصویر را ببین.

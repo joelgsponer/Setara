@@ -1,0 +1,25 @@
+round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
+# First, then: the child hears two to four things in order and puts their pictures in that order. The tiles are pictures.
+# 03: my day
+03,,First I get up. Then I wash my face. Then I eat breakfast.,,wake_up|wash_face|breakfast,sleep,,First I get up. Then I wash my face. Then I eat breakfast.,,اول از خواب می‌خیزم. بعد رویم را می‌شویم. بعد نان صبح می‌خورم.
+03,,I eat breakfast. Then I go to school.,,breakfast|school,dinner,,I eat breakfast. Then I go to school.,,نان صبح می‌خورم. بعد به مکتب می‌روم.
+03,,"Morning, afternoon, evening, night.",,morning|afternoon|evening|night,,,"Morning, afternoon, evening, night.",,صبح، بعد از چاشت، شام، شب.
+03,,I eat dinner. I brush my teeth. I sleep.,,dinner|tb_brush|sleep,wake_up,,I eat dinner. I brush my teeth. I sleep.,,نان شب می‌خورم. دندان‌هایم را برس می‌کنم. می‌خوابم.
+03,,I go to school. In the afternoon I play. At night I sleep.,,school|play|sleep,breakfast,,I go to school. In the afternoon I play. At night I sleep.,,به مکتب می‌روم. بعد از چاشت بازی می‌کنم. شب می‌خوابم.
+03,,My hands are dirty. I wash my hands. Now I eat.,,dirty_hands|wash_hands|eating,sleep,,My hands are dirty. I wash my hands. Now I eat.,,دست‌های من چتل است. دست‌هایم را می‌شویم. حالا نان می‌خورم.
+03,,I put toothpaste on my toothbrush. Then I brush my teeth.,,tb_paste|tb_brush,comb,,I put toothpaste on my toothbrush. Then I brush my teeth.,,کریم دندان را روی برس می‌مانم. بعد دندان‌هایم را برس می‌کنم.
+03,,I get up. I comb my hair. I go to school.,,wake_up|comb|school,night,,I get up. I comb my hair. I go to school.,,از خواب می‌خیزم. مویم را شانه می‌کنم. به مکتب می‌روم.
+03,,It is morning. Then it is noon. Then it is night.,,morning|sun_noon|night,,,It is morning. Then it is noon. Then it is night.,,صبح است. بعد چاشت است. بعد شب است.
+03,,First I wash my face. Then I take my towel.,,wash_face|towel,soap,,First I wash my face. Then I take my towel.,,اول رویم را می‌شویم. بعد روی‌پاک را می‌گیرم.
+# 12: clothes, the clock, the weather, the seasons
+12,,"Spring, summer, autumn, winter.",,spring|summer|autumn|winter,,,"Spring, summer, autumn, winter.",,بهار، تابستان، خزان، زمستان.
+12,,"First my socks, then my shoes.",,socks|shoes,hat,,"First my socks, then my shoes.",,اول جراب، بعد بوت.
+12,,"I put on my shirt, then my waistcoat, then my coat.",,shirt|waistcoat|coat,sandals,,"I put on my shirt, then my waistcoat, then my coat.",,پیراهن را می‌پوشم، بعد واسکت را، بعد بالاپوش را.
+12,,"Six o'clock, seven o'clock, eight o'clock.",,clock_6|clock_7|clock_8,clock_10,,"Six o'clock, seven o'clock, eight o'clock.",,ساعت شش، ساعت هفت، ساعت هشت.
+12,,"Nine, ten, eleven, twelve o'clock.",,clock_9|clock_10|clock_11|clock_12,,,"Nine, ten, eleven, twelve o'clock.",,ساعت نُه، ده، یازده، دوازده.
+12,,It rains. I take my umbrella. I go to school.,,rain|umbrella|school,kite,,It rains. I take my umbrella. I go to school.,,باران می‌بارد. چتری‌ام را می‌گیرم. به مکتب می‌روم.
+12,,It snows. I put on my coat. I play.,,snow|coat|play,sandals,,It snows. I put on my coat. I play.,,برف می‌بارد. بالاپوشم را می‌پوشم. بازی می‌کنم.
+12,,I take off my shoes. Then I sleep.,,shoes|sleep,school,,I take off my shoes. Then I sleep.,,بوت‌هایم را می‌کشم. بعد می‌خوابم.
+12,,"First winter, then summer.",,winter|summer,night,,"First winter, then summer.",,اول زمستان، بعد تابستان.
+12,,"My trousers, my shirt and my hat.",,trousers|shirt|hat,dress,,"My trousers, my shirt and my hat.",,تنبان من، پیراهن من و کلاه من.
+12,,"A dress, a scarf and sandals.",,dress|scarf|sandals,trousers,,"A dress, a scarf and sandals.",,یک پیراهن زنانه، یک چادر و چپلک.

@@ -1,0 +1,152 @@
+{
+  "pack": "en-1-letters",
+  "subject": "en",
+  "level": 1,
+  "version": 1,
+  "optional": true,
+  "title_en": "English letters: the whole alphabet",
+  "title_fa": "حرف‌های انگلیسی: تمام الفبا",
+  "games": [
+    {
+      "id": "meet_letters",
+      "engine": "story",
+      "letter": "a",
+      "title_en": "Meet the Letters",
+      "title_fa": "آشنایی با حرف‌ها",
+      "intro_fa": "گوش کن و ببین. هر حرف نام، شکل و صدای خود را دارد. وقتی سوال آمد، جواب درست را انتخاب کن.",
+      "icon": "t:Aa",
+      "sheet": "meet_letters.csv"
+    },
+    {
+      "id": "letter_names",
+      "engine": "listen_pick",
+      "letter": "b",
+      "title_en": "Letter Stall",
+      "title_fa": "دکان حرف‌ها",
+      "intro_fa": "نام حرف را بشنو و حرف درست را انتخاب کن.",
+      "icon": "t:Tt",
+      "sheet": "letter_names.csv",
+      "draw": 8
+    },
+    {
+      "id": "alphabet_echo",
+      "engine": "say_it",
+      "letter": "c",
+      "title_en": "Alphabet Echo",
+      "title_fa": "پژواک الفبا",
+      "intro_fa": "گوش کن. بعد خودت بلند بگو. باز گوش کن و ببین که درست گفتی یا نه.",
+      "icon": "t:ABC",
+      "sheet": "alphabet_echo.csv"
+    },
+    {
+      "id": "big_small",
+      "engine": "pairs",
+      "letter": "d",
+      "title_en": "Big and Small Pairs",
+      "title_fa": "جوره‌های کلان و خُرد",
+      "intro_fa": "دو کارت را که با هم جور است پیدا کن.",
+      "icon": "t:Gg",
+      "sheet": "big_small.csv",
+      "draw": 6
+    },
+    {
+      "id": "first_sounds",
+      "engine": "journey",
+      "letter": "e",
+      "title_en": "Sound Road",
+      "title_fa": "راه صداها",
+      "intro_fa": "به صدای اول کلمه‌ها گوش کن، حرف درست را بگیر و پیش برو.",
+      "icon": "listen",
+      "sheet": "first_sounds.csv",
+      "draw": 8
+    },
+    {
+      "id": "first_letter",
+      "engine": "listen_pick",
+      "letter": "f",
+      "title_en": "First Letter",
+      "title_fa": "حرف اول",
+      "intro_fa": "تصویر را ببین، کلمه را بشنو و حرف اول آن را انتخاب کن.",
+      "icon": "apple",
+      "sheet": "first_letter.csv",
+      "draw": 8
+    },
+    {
+      "id": "letter_baskets",
+      "engine": "sorter",
+      "letter": "g",
+      "title_en": "Letter Baskets",
+      "title_fa": "سبدهای حرف",
+      "intro_fa": "هر چیز را در سبد حرف اولش بینداز.",
+      "icon": "basket",
+      "sheet": "letter_baskets.csv",
+      "draw": 8
+    },
+    {
+      "id": "starts_with",
+      "engine": "listen_pick",
+      "letter": "h",
+      "title_en": "Find the Word",
+      "title_fa": "کلمه را پیدا کن",
+      "intro_fa": "حرف را ببین و تصویری را انتخاب کن که نامش با آن شروع می‌شود.",
+      "icon": "key",
+      "sheet": "starts_with.csv",
+      "draw": 8
+    },
+    {
+      "id": "letter_rain",
+      "engine": "catch",
+      "letter": "i",
+      "title_en": "Letter Rain",
+      "title_fa": "باران حرف‌ها",
+      "intro_fa": "گوش کن. تنها حرفی را که گفته می‌شود در سبد بگیر.",
+      "icon": "rain",
+      "sheet": "letter_rain.csv",
+      "draw": 4
+    },
+    {
+      "id": "abc_order",
+      "engine": "builder",
+      "letter": "j",
+      "title_en": "Alphabet Train",
+      "title_fa": "قطار الفبا",
+      "intro_fa": "حرف‌ها را به ترتیب الفبا، از چپ به راست بمان.",
+      "icon": "train",
+      "sheet": "abc_order.csv",
+      "draw": 8
+    },
+    {
+      "id": "abc_next",
+      "engine": "journey",
+      "letter": "k",
+      "title_en": "What Comes Next?",
+      "title_fa": "بعد از آن چیست؟",
+      "intro_fa": "حرف بعدی الفبا را انتخاب کن و پیش برو.",
+      "icon": "t:AB?",
+      "sheet": "abc_next.csv",
+      "draw": 8
+    },
+    {
+      "id": "look_alikes",
+      "engine": "listen_pick",
+      "letter": "l",
+      "title_en": "Look-alike Letters",
+      "title_fa": "حرف‌های همشکل",
+      "intro_fa": "این حرف‌ها به هم می‌مانند. خوب ببین و حرف درست را انتخاب کن.",
+      "icon": "t:bd",
+      "sheet": "look_alikes.csv",
+      "draw": 8
+    },
+    {
+      "id": "spell_it",
+      "engine": "builder",
+      "letter": "m",
+      "title_en": "Spell It",
+      "title_fa": "کلمه بساز",
+      "intro_fa": "کلمه را بشنو و حرف‌های آن را به ترتیب، از چپ به راست بمان.",
+      "icon": "t:cat",
+      "sheet": "spell_it.csv",
+      "draw": 6
+    }
+  ]
+}

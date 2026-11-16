@@ -1,0 +1,38 @@
+round,intro_fa,picture,say_en,say_fa,show_en,show_fa,choices,right,wrong_say_fa,wrong_picture
+# Mini stories: five to seven pages; every page is spoken in Dari first and then in English.
+# The scenes come from the shared picture library. The right choice is first in none of the decisions.
+# Story 10: Bread for the family (a boy tells it). Language up to unit 10. Every page is spoken in Dari first; then in English.
+10,یک قصهٔ کوتاه. هر صفحه را اول به دری و بعد به انگلیسی می‌شنوی. وقتی سوال آمد، تصویر درست را انتخاب کن.,scene_mother_bakes_bread,m: Hello! My name is Hamid. This is my mother. Look! Bread.,سلام! نام من حمید است. این مادر من است. ببین! نان.,Hello! My name is Hamid. This is my mother. Look! Bread.,,,,,
+10,,scene_boy_one_bread,m: I have bread. I like bread.,من نان دارم. من نان را خوش دارم.,I have bread. I like bread.,,,,,
+10,,scene_boy_gives_bread_grandfather,"m: Here you are. // m: Thank you, Hamid!",بفرما، بگیر. تشکر حمید!,"Here you are. Thank you, Hamid!",,,,,
+10,,scene_boy_gives_bread_grandfather,f: Who is this?,این کیست؟,Who is this?,,father|brother|grandfather,grandfather,این پدرکلان نیست. پدرکلان ریش سفید دارد. دوباره انتخاب کن.,
+10,,scene_boy_gives_bread_sister,m: This is my sister. // f: I like bread. Thank you!,این خواهر من است. من نان را خوش دارم. تشکر!,This is my sister. I like bread. Thank you!,,,,,
+10,,scene_family_eats_bread_tea,f: The family has bread. And this? What is it?,فامیل نان دارد. و این؟ این چیست؟,The family has bread. And this? What is it?,,milk|tea|rice,tea,دوباره تصویر را ببین. فامیل نان و چای دارد. چای را انتخاب کن.,
+10,,scene_family_eats_bread_tea,m: This is my family. I love my family. Goodbye!,این فامیل من است. من فامیلم را دوست دارم. خداحافظ!,This is my family. I love my family. Goodbye!,,,,,
+# Story 14: Three eggs (a girl tells it). Language up to unit 14.
+14,یک قصهٔ کوتاه. هر صفحه را اول به دری و بعد به انگلیسی می‌شنوی. وقتی سوال آمد، تصویر درست را انتخاب کن.,scene_girl_feeds_hens,Hello! My name is Laila. I have two hens.,سلام! نام من لیلا است. من دو مرغ دارم.,Hello! My name is Laila. I have two hens.,,,,,
+14,,scene_girl_feeds_hens,What is this? Point to the hen.,این چیست؟ مرغ را نشان بده.,What is this? Point to the hen.,,goat|donkey|hen,hen,این مرغ نیست. مرغ دو لنگ دارد و تخم می‌دهد. دوباره انتخاب کن.,
+14,,scene_hen_three_eggs,Look! Eggs! I like eggs.,ببین! تخم مرغ‌ها! من تخم مرغ را خوش دارم.,Look! Eggs! I like eggs.,,,,,
+14,,scene_hen_three_eggs,How many eggs?,چند تخم مرغ؟,How many eggs?,,t:2|t:3|t:13,t:3,دوباره حساب کن. یک، دو، سه. سه تخم مرغ است.,
+14,,scene_girl_eggs_mother,"f: Mother, I have three eggs. // f: Thank you, Laila!",مادر، من سه تخم مرغ دارم. تشکر لیلا!,"Mother, I have three eggs. Thank you, Laila!",,,,,
+14,,scene_family_eating,This is my family. I like my hens. Goodbye!,این فامیل من است. من مرغ‌هایم را خوش دارم. خداحافظ!,This is my family. I like my hens. Goodbye!,,,,,
+# Story 15: The hungry cat (a girl tells it). Language up to unit 15.
+15,یک قصهٔ کوتاه. هر صفحه را اول به دری و بعد به انگلیسی می‌شنوی. وقتی سوال آمد، تصویر درست را انتخاب کن.,scene_girl_sees_cat,Hello! My name is Mariam. Look! What is this?,سلام! نام من مریم است. ببین! این چیست؟,Hello! My name is Mariam. Look! What is this?,,,,,
+15,,scene_girl_sees_cat,What is this?,این چیست؟,What is this?,,dog|mouse|cat,cat,این پشک نیست. دوباره تصویر را ببین: این حیوان نارنجی پشک است.,
+15,,scene_hungry_cat,"The cat is sad. Do you like milk, cat? Do you like bread?",پشک غمگین است. پشک، تو شیر را خوش داری؟ تو نان را خوش داری؟,"The cat is sad. Do you like milk, cat? Do you like bread?",,,,,
+15,,scene_girl_gives_cat_bread,"I have bread. Here you are, cat.",من نان دارم. بفرما پشک، بگیر.,"I have bread. Here you are, cat.",,,,,
+15,,scene_cat_eats_bread,The cat likes this. What is it?,پشک این را خوش دارد. این چیست؟,The cat likes this. What is it?,,onion|bread|stone,bread,دوباره تصویر را ببین. پشک نان می‌خورد. نان را انتخاب کن.,
+15,,scene_kitten_sleeps,The cat is happy. I have a cat! Goodbye!,پشک خوش است. من یک پشک دارم! خداحافظ!,The cat is happy. I have a cat! Goodbye!,,,,,
+# Story 16: Where is my lamb? (a boy tells it). Language up to unit 16.
+16,یک قصهٔ کوتاه. هر صفحه را اول به دری و بعد به انگلیسی می‌شنوی. وقتی سوال آمد، تصویر درست را انتخاب کن.,scene_boy_sheep_hill,m: Hello! My name is Navid. I have sheep.,سلام! نام من نوید است. من گوسفند دارم.,Hello! My name is Navid. I have sheep.,,,,,
+16,,scene_boy_sheep_hill,f: How many sheep?,چند گوسفند؟,How many sheep?,,t:5|t:3|t:12,t:3,دوباره حساب کن. یک، دو، سه. نوید سه گوسفند دارد.,
+16,,scene_boy_calls_lamb,m: I have a lamb. It is small. Lamb! Come here!,من یک بره دارم. خُرد است. بره! اینجا بیا!,I have a lamb. It is small. Lamb! Come here!,,,,,
+16,,scene_boy_carries_lamb,f: Look! What is this?,ببین! این چیست؟,Look! What is this?,,calf|kitten|chick|lamb,lamb,این بره نیست. بره چوچهٔ گوسفند است و سفید است. دوباره انتخاب کن.,
+16,,scene_boy_carries_lamb,m: I have my lamb! I am happy. Goodbye!,من برهٔ خود را دارم! من خوش هستم. خداحافظ!,I have my lamb! I am happy. Goodbye!,,,,,
+# Story 19: The goat and the tree (a girl tells it). Language up to unit 19.
+19,یک قصهٔ کوتاه. هر صفحه را اول به دری و بعد به انگلیسی می‌شنوی. وقتی سوال آمد، تصویر درست را انتخاب کن.,scene_girl_with_goat,Hello! My name is Soraya. I have a goat. It is white.,سلام! نام من ثریا است. من یک بز دارم. سفید است.,Hello! My name is Soraya. I have a goat. It is white.,,,,,
+19,,scene_goat_leaves_yard,"Look! The door is open. Goodbye, goat!",ببین! دروازه باز است. خداحافظ بز!,"Look! The door is open. Goodbye, goat!",,,,,
+19,,scene_girl_calls_goat,"This is my village. Goat! Come here, please!",این قریهٔ من است. بز! لطفاً اینجا بیا!,"This is my village. Goat! Come here, please!",,,,,
+19,,scene_goat_eats_leaves,The goat likes this. What is it?,بز این را خوش دارد. این چیست؟,The goat likes this. What is it?,,stone|soap|leaf,leaf,دوباره تصویر را ببین. بز برگ درخت را می‌خورد. برگ را انتخاب کن.,
+19,,scene_goat_eats_leaves,What is big and green?,چه چیز کلان و سبز است؟,What is big and green?,,mountain|tree|well,tree,این سبز نیست. درخت کلان و سبز است. درخت را انتخاب کن.,
+19,,scene_girl_brings_goat_home,I have my goat. I like my goat. I like my village. Goodbye!,من بز خود را دارم. من بزم را خوش دارم. من قریه‌ام را خوش دارم. خداحافظ!,I have my goat. I like my goat. I like my village. Goodbye!,,,,,

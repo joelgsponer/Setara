@@ -1,0 +1,178 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# A picture and a question. The child answers with the yes or the no picture.
+# Every question comes once with a picture that fits and once with one that does not; so she has to look and to listen.
+# 04: people. Is this a boy? Are you a girl? The same question comes with the right and with a wrong picture.
+04,تصویر را ببین و سوال را گوش کن. اگر درست است، بلی را انتخاب کن. اگر درست نیست، نه را انتخاب کن.,Is this a boy?,,boy,yes,no,این پسر است؟ تصویر را ببین.
+04,,Is it a boy?,,girl,no,yes,پسر است؟ تصویر را ببین.
+04,,Is it a girl?,,girl,yes,no,دختر است؟ تصویر را ببین.
+04,,This is a girl. Yes or no?,,class,no,yes,این دختر است. بلی یا نه؟ تصویر را ببین.
+04,,This is a teacher. Yes or no?,,teacher,yes,no,این معلم است. بلی یا نه؟ تصویر را ببین.
+04,,Is this a teacher?,,class,no,yes,این معلم است؟ تصویر را ببین.
+04,,Is this a class?,,class,yes,no,این صنف است؟ تصویر را ببین.
+04,,Is it a class?,,girl,no,yes,صنف است؟ تصویر را ببین.
+04,,Are you a boy?,,boy,yes,no,تو پسر هستی؟ تصویر را ببین.
+04,,Are you a boy?,,girl,no,yes,تو پسر هستی؟ تصویر را ببین.
+04,,Are you a girl?,,girl,yes,no,تو دختر هستی؟ تصویر را ببین.
+04,,Are you a girl?,,boy,no,yes,تو دختر هستی؟ تصویر را ببین.
+04,,Hello! Yes or no?,,wave,yes,no,سلام! بلی یا نه؟ تصویر را ببین.
+04,,Hello! Yes or no?,,goodbye,no,yes,سلام! بلی یا نه؟ تصویر را ببین.
+04,,Goodbye! Yes or no?,,goodbye,yes,no,خداحافظ! بلی یا نه؟ تصویر را ببین.
+04,,Goodbye! Yes or no?,,sun,no,yes,خداحافظ! بلی یا نه؟ تصویر را ببین.
+# 08: classroom things 1 and a number of things.
+08,این چیست؟ تصویر را ببین و گوش کن. اگر همان چیز است، بلی را انتخاب کن. اگر چیز دیگری است، نه را انتخاب کن.,Is it a book?,,book,yes,no,کتاب است؟ تصویر را ببین.
+08,,This is a book. Yes or no?,,pen,no,yes,این کتاب است. بلی یا نه؟ تصویر را ببین.
+08,,This is a pen. Yes or no?,,pen,yes,no,این قلم است. بلی یا نه؟ تصویر را ببین.
+08,,Is this a pen?,,bag,no,yes,این قلم است؟ تصویر را ببین.
+08,,Is this a pencil?,,pencil,yes,no,این پنسل است؟ تصویر را ببین.
+08,,Is it a pencil?,,bag,no,yes,پنسل است؟ تصویر را ببین.
+08,,Is it a bag?,,bag,yes,no,بکس است؟ تصویر را ببین.
+08,,This is a bag. Yes or no?,,pen,no,yes,این بکس است. بلی یا نه؟ تصویر را ببین.
+08,,Two books. Yes or no?,,p:book*2,yes,no,دو کتاب. بلی یا نه؟ تصویر را ببین.
+08,,Two pens. Yes or no?,,p:pen*4,no,yes,دو قلم. بلی یا نه؟ تصویر را ببین.
+08,,Three pencils. Yes or no?,,p:pencil*3,yes,no,سه پنسل. بلی یا نه؟ تصویر را ببین.
+08,,Three bags. Yes or no?,,p:bag*1,no,yes,سه بکس. بلی یا نه؟ تصویر را ببین.
+08,,One book. Yes or no?,,p:book*1,yes,no,یک کتاب. بلی یا نه؟ تصویر را ببین.
+08,,Four pens. Yes or no?,,p:pen*4,yes,no,چهار قلم. بلی یا نه؟ تصویر را ببین.
+08,,Five pencils. Yes or no?,,p:pencil*2,no,yes,پنج پنسل. بلی یا نه؟ تصویر را ببین.
+08,,One bag. Yes or no?,,p:bag*3,no,yes,یک بکس. بلی یا نه؟ تصویر را ببین.
+# 09: classroom things 2; the words of unit 08 come back in a short form.
+09,چیزهای صنف را ببین. گوش کن: همان چیز است؟ بلی یا نه را انتخاب کن.,This is a chair. Yes or no?,,chair,yes,no,این چوکی است. بلی یا نه؟ تصویر را ببین.
+09,,Is this a chair?,,table,no,yes,این چوکی است؟ تصویر را ببین.
+09,,Is this a table?,,table,yes,no,این میز است؟ تصویر را ببین.
+09,,Is it a table?,,window,no,yes,میز است؟ تصویر را ببین.
+09,,Is it a door?,,door,yes,no,دروازه است؟ تصویر را ببین.
+09,,This is a door. Yes or no?,,window,no,yes,این دروازه است. بلی یا نه؟ تصویر را ببین.
+09,,This is a window. Yes or no?,,window,yes,no,این کلکین است. بلی یا نه؟ تصویر را ببین.
+09,,Is this a window?,,classroom,no,yes,این کلکین است؟ تصویر را ببین.
+09,,Is this a board?,,board,yes,no,این تخته است؟ تصویر را ببین.
+09,,Is it a board?,,classroom,no,yes,تخته است؟ تصویر را ببین.
+09,,Is it a classroom?,,classroom,yes,no,اطاق صنف است؟ تصویر را ببین.
+09,,This is a classroom. Yes or no?,,table,no,yes,این اطاق صنف است. بلی یا نه؟ تصویر را ببین.
+09,,A book? Yes or no?,,book,yes,no,کتاب؟ بلی یا نه؟ تصویر را ببین.
+09,,A book? Yes or no?,,board,no,yes,کتاب؟ بلی یا نه؟ تصویر را ببین.
+09,,A pen? Yes or no?,,pen,yes,no,قلم؟ بلی یا نه؟ تصویر را ببین.
+09,,A pen? Yes or no?,,pencil,no,yes,قلم؟ بلی یا نه؟ تصویر را ببین.
+09,,A bag? Yes or no?,,bag,yes,no,بکس؟ بلی یا نه؟ تصویر را ببین.
+09,,A bag? Yes or no?,,book,no,yes,بکس؟ بلی یا نه؟ تصویر را ببین.
+09,,A pencil? Yes or no?,,pencil,yes,no,پنسل؟ بلی یا نه؟ تصویر را ببین.
+09,,A pencil? Yes or no?,,pen,no,yes,پنسل؟ بلی یا نه؟ تصویر را ببین.
+# 10: the ten commands of units 02 and 10. Does the picture show this command?
+10,فرمان را گوش کن و تصویر را ببین. تصویر همین کار را نشان می‌دهد؟ بلی یا نه را انتخاب کن.,Stand up. Yes or no?,,stand_up,yes,no,ایستاده شو. بلی یا نه؟ تصویر را ببین.
+10,,Stand up. Yes or no?,,clap,no,yes,ایستاده شو. بلی یا نه؟ تصویر را ببین.
+10,,Sit down. Yes or no?,,sit_down,yes,no,بنشین. بلی یا نه؟ تصویر را ببین.
+10,,Sit down. Yes or no?,,listen,no,yes,بنشین. بلی یا نه؟ تصویر را ببین.
+10,,Clap. Yes or no?,,clap,yes,no,چک چک کن. بلی یا نه؟ تصویر را ببین.
+10,,Clap. Yes or no?,,look,no,yes,چک چک کن. بلی یا نه؟ تصویر را ببین.
+10,,Listen. Yes or no?,,listen,yes,no,گوش کن. بلی یا نه؟ تصویر را ببین.
+10,,Listen. Yes or no?,,open,no,yes,گوش کن. بلی یا نه؟ تصویر را ببین.
+10,,Look. Yes or no?,,look,yes,no,ببین. بلی یا نه؟ تصویر را ببین.
+10,,Look. Yes or no?,,close,no,yes,ببین. بلی یا نه؟ تصویر را ببین.
+10,,Open. Yes or no?,,open,yes,no,باز کن. بلی یا نه؟ تصویر را ببین.
+10,,Open. Yes or no?,,come_here,no,yes,باز کن. بلی یا نه؟ تصویر را ببین.
+10,,Close. Yes or no?,,close,yes,no,بسته کن. بلی یا نه؟ تصویر را ببین.
+10,,Close. Yes or no?,,go,no,yes,بسته کن. بلی یا نه؟ تصویر را ببین.
+10,,Come here. Yes or no?,,come_here,yes,no,اینجا بیا. بلی یا نه؟ تصویر را ببین.
+10,,Come here. Yes or no?,,point,no,yes,اینجا بیا. بلی یا نه؟ تصویر را ببین.
+10,,Go. Yes or no?,,go,yes,no,برو. بلی یا نه؟ تصویر را ببین.
+10,,Go. Yes or no?,,stand_up,no,yes,برو. بلی یا نه؟ تصویر را ببین.
+10,,Point to. Yes or no?,,point,yes,no,نشان بده. بلی یا نه؟ تصویر را ببین.
+10,,Point to. Yes or no?,,sit_down,no,yes,نشان بده. بلی یا نه؟ تصویر را ببین.
+# 12: colours. First the colour alone; then a thing: Is the apple red?
+12,رنگ را ببین و سوال را گوش کن. همین رنگ است؟ بلی یا نه را انتخاب کن.,Is it red?,,color_red,yes,no,این سرخ است؟ تصویر را ببین.
+12,,Is it red?,,color_yellow,no,yes,این سرخ است؟ تصویر را ببین.
+12,,Is it blue?,,color_blue,yes,no,این آبی است؟ تصویر را ببین.
+12,,Is it blue?,,color_black,no,yes,این آبی است؟ تصویر را ببین.
+12,,Is it green?,,color_green,yes,no,این سبز است؟ تصویر را ببین.
+12,,Is it green?,,color_white,no,yes,این سبز است؟ تصویر را ببین.
+12,,Is it yellow?,,color_yellow,yes,no,این زرد است؟ تصویر را ببین.
+12,,Is it yellow?,,color_brown,no,yes,این زرد است؟ تصویر را ببین.
+12,,Is it black?,,color_black,yes,no,این سیاه است؟ تصویر را ببین.
+12,,Is it black?,,color_orange,no,yes,این سیاه است؟ تصویر را ببین.
+12,,Is it white?,,color_white,yes,no,این سفید است؟ تصویر را ببین.
+12,,Is it white?,,color_red,no,yes,این سفید است؟ تصویر را ببین.
+12,,Is it brown?,,color_brown,yes,no,این نصواری است؟ تصویر را ببین.
+12,,Is it brown?,,color_blue,no,yes,این نصواری است؟ تصویر را ببین.
+12,,Is it orange?,,color_orange,yes,no,این نارنجی است؟ تصویر را ببین.
+12,,Is it orange?,,color_green,no,yes,این نارنجی است؟ تصویر را ببین.
+12,,Is the apple red?,,apple,yes,no,سیب سرخ است؟ تصویر را ببین.
+12,,Is the book red?,,book_blue,no,yes,کتاب سرخ است؟ تصویر را ببین.
+12,,Is the pen blue?,,pen,yes,no,قلم آبی است؟ تصویر را ببین.
+12,,Is the bag green?,,bag,no,yes,بکس سبز است؟ تصویر را ببین.
+12,,Is the pencil yellow?,,pencil,yes,no,پنسل زرد است؟ تصویر را ببین.
+12,,Is the door brown?,,door,yes,no,دروازه نصواری است؟ تصویر را ببین.
+12,,Is the board white?,,board,no,yes,تخته سفید است؟ تصویر را ببین.
+12,,Is the egg white?,,egg,yes,no,تخم مرغ سفید است؟ تصویر را ببین.
+# 13: food; and how many.
+13,خوراکی‌ها را ببین و گوش کن. همان چیز است؟ همان قدر است؟ بلی یا نه را انتخاب کن.,Is this an apple?,,apple,yes,no,این سیب است؟ تصویر را ببین.
+13,,Is it an apple?,,bread,no,yes,سیب است؟ تصویر را ببین.
+13,,Is it bread?,,bread,yes,no,نان است؟ تصویر را ببین.
+13,,This is bread. Yes or no?,,egg,no,yes,این نان است. بلی یا نه؟ تصویر را ببین.
+13,,This is water. Yes or no?,,water,yes,no,این آب است. بلی یا نه؟ تصویر را ببین.
+13,,Is this water?,,egg,no,yes,این آب است؟ تصویر را ببین.
+13,,Is this an egg?,,egg,yes,no,این تخم مرغ است؟ تصویر را ببین.
+13,,Is it an egg?,,apple,no,yes,تخم مرغ است؟ تصویر را ببین.
+13,,Is it tea?,,tea,yes,no,چای است؟ تصویر را ببین.
+13,,This is tea. Yes or no?,,apple,no,yes,این چای است. بلی یا نه؟ تصویر را ببین.
+13,,Two eggs. Yes or no?,,p:egg*2,yes,no,دو تخم مرغ. بلی یا نه؟ تصویر را ببین.
+13,,Three apples. Yes or no?,,p:apple*5,no,yes,سه سیب. بلی یا نه؟ تصویر را ببین.
+13,,Four eggs. Yes or no?,,p:egg*4,yes,no,چهار تخم مرغ. بلی یا نه؟ تصویر را ببین.
+13,,Five apples. Yes or no?,,p:apple*3,no,yes,پنج سیب. بلی یا نه؟ تصویر را ببین.
+13,,One egg. Yes or no?,,p:egg*1,yes,no,یک تخم مرغ. بلی یا نه؟ تصویر را ببین.
+13,,Two apples. Yes or no?,,p:apple*2,yes,no,دو سیب. بلی یا نه؟ تصویر را ببین.
+# 15: the commands of unit 15 and the polite words of unit 18.
+15,گوش کن و تصویر را ببین. تصویر همین را نشان می‌دهد؟ بلی یا نه را انتخاب کن.,Draw. Yes or no?,,draw,yes,no,رسم کن. بلی یا نه؟ تصویر را ببین.
+15,,Draw. Yes or no?,,read,no,yes,رسم کن. بلی یا نه؟ تصویر را ببین.
+15,,Write. Yes or no?,,write,yes,no,بنویس. بلی یا نه؟ تصویر را ببین.
+15,,Write. Yes or no?,,count,no,yes,بنویس. بلی یا نه؟ تصویر را ببین.
+15,,Read. Yes or no?,,read,yes,no,بخوان. بلی یا نه؟ تصویر را ببین.
+15,,Read. Yes or no?,,say,no,yes,بخوان. بلی یا نه؟ تصویر را ببین.
+15,,Count. Yes or no?,,count,yes,no,حساب کن. بلی یا نه؟ تصویر را ببین.
+15,,Count. Yes or no?,,draw,no,yes,حساب کن. بلی یا نه؟ تصویر را ببین.
+15,,Say. Yes or no?,,say,yes,no,بگو. بلی یا نه؟ تصویر را ببین.
+15,,Say. Yes or no?,,write,no,yes,بگو. بلی یا نه؟ تصویر را ببین.
+15,,Please. Yes or no?,,please,yes,no,لطفاً. بلی یا نه؟ تصویر را ببین.
+15,,Please. Yes or no?,,thank_you,no,yes,لطفاً. بلی یا نه؟ تصویر را ببین.
+15,,Thank you. Yes or no?,,thank_you,yes,no,تشکر. بلی یا نه؟ تصویر را ببین.
+15,,Thank you. Yes or no?,,sorry,no,yes,تشکر. بلی یا نه؟ تصویر را ببین.
+15,,Sorry. Yes or no?,,sorry,yes,no,ببخشید. بلی یا نه؟ تصویر را ببین.
+15,,Sorry. Yes or no?,,give,no,yes,ببخشید. بلی یا نه؟ تصویر را ببین.
+15,,Give me the pen. Yes or no?,,give,yes,no,قلم را به من بده. بلی یا نه؟ تصویر را ببین.
+15,,Give me the pen. Yes or no?,,please,no,yes,قلم را به من بده. بلی یا نه؟ تصویر را ببین.
+# 17: happy and sad; big and small; six to ten things.
+17,تصویر را ببین و گوش کن. خوش است یا غمگین؟ کلان است یا خُرد؟ چند دانه است؟ اگر درست است، بلی را انتخاب کن. اگر نه، نه را.,Is he happy?,,happy,yes,no,او خوش است؟ تصویر را ببین.
+17,,Is he sad?,,happy,no,yes,او غمگین است؟ تصویر را ببین.
+17,,Is she sad?,,sad,yes,no,او غمگین است؟ تصویر را ببین.
+17,,Is she happy?,,sad,no,yes,او خوش است؟ تصویر را ببین.
+17,,Is it big?,,big,yes,no,این کلان است؟ تصویر را ببین.
+17,,Is it big?,,small,no,yes,این کلان است؟ تصویر را ببین.
+17,,Is it small?,,small,yes,no,این خُرد است؟ تصویر را ببین.
+17,,Is it small?,,big,no,yes,این خُرد است؟ تصویر را ببین.
+17,,Six pens. Yes or no?,,p:pen*6,yes,no,شش قلم. بلی یا نه؟ تصویر را ببین.
+17,,Seven books. Yes or no?,,p:book*3,no,yes,هفت کتاب. بلی یا نه؟ تصویر را ببین.
+17,,Eight eggs. Yes or no?,,p:egg*8,yes,no,هشت تخم مرغ. بلی یا نه؟ تصویر را ببین.
+17,,Nine apples. Yes or no?,,p:apple*4,no,yes,نُه سیب. بلی یا نه؟ تصویر را ببین.
+17,,Ten pencils. Yes or no?,,p:pencil*10,yes,no,ده پنسل. بلی یا نه؟ تصویر را ببین.
+17,,Six bags. Yes or no?,,p:bag*2,no,yes,شش بکس. بلی یا نه؟ تصویر را ببین.
+17,,Seven apples. Yes or no?,,p:apple*7,yes,no,هفت سیب. بلی یا نه؟ تصویر را ببین.
+17,,Ten eggs. Yes or no?,,p:egg*5,no,yes,ده تخم مرغ. بلی یا نه؟ تصویر را ببین.
+# 19: a colour and a thing together. The wrong picture is the same thing in another colour.
+19,رنگ و چیز را با هم ببین. گوش کن: هم چیز درست است و هم رنگ؟ بلی یا نه را انتخاب کن.,Is this a red pen?,,pen_red,yes,no,این یک قلم سرخ است؟ تصویر را ببین.
+19,,Is this a red pen?,,pen,no,yes,این یک قلم سرخ است؟ تصویر را ببین.
+19,,Is this a blue book?,,book_blue,yes,no,این یک کتاب آبی است؟ تصویر را ببین.
+19,,Is this a blue book?,,book,no,yes,این یک کتاب آبی است؟ تصویر را ببین.
+19,,Is this a green bag?,,bag_green,yes,no,این یک بکس سبز است؟ تصویر را ببین.
+19,,Is this a green bag?,,bag,no,yes,این یک بکس سبز است؟ تصویر را ببین.
+19,,Is this a yellow pencil?,,pencil,yes,no,این یک پنسل زرد است؟ تصویر را ببین.
+19,,Is this a yellow pencil?,,pencil_red,no,yes,این یک پنسل زرد است؟ تصویر را ببین.
+19,,Is this a red apple?,,apple,yes,no,این یک سیب سرخ است؟ تصویر را ببین.
+19,,Is this a red apple?,,apple_green,no,yes,این یک سیب سرخ است؟ تصویر را ببین.
+19,,Is this a green book?,,book_green,yes,no,این یک کتاب سبز است؟ تصویر را ببین.
+19,,Is this a green book?,,book_yellow,no,yes,این یک کتاب سبز است؟ تصویر را ببین.
+19,,Is this a blue pen?,,pen,yes,no,این یک قلم آبی است؟ تصویر را ببین.
+19,,Is this a blue pen?,,pen_green,no,yes,این یک قلم آبی است؟ تصویر را ببین.
+19,,Is this a black pen?,,pen_black,yes,no,این یک قلم سیاه است؟ تصویر را ببین.
+19,,Is this a black pen?,,pen_red,no,yes,این یک قلم سیاه است؟ تصویر را ببین.
+19,,Three red pens. Yes or no?,,p:pen_red*3,yes,no,سه قلم سرخ. بلی یا نه؟ تصویر را ببین.
+19,,Three red pens. Yes or no?,,p:pen_red*2,no,yes,سه قلم سرخ. بلی یا نه؟ تصویر را ببین.
+19,,Two blue books. Yes or no?,,p:book_blue*2,yes,no,دو کتاب آبی. بلی یا نه؟ تصویر را ببین.
+19,,Two blue books. Yes or no?,,p:book*2,no,yes,دو کتاب آبی. بلی یا نه؟ تصویر را ببین.

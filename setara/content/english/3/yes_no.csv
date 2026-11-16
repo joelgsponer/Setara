@@ -9,6 +9,13 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa,hop
 06,,Is it two o'clock?,,clock_2,yes,no,ساعت دو است؟,
 06,,Is it eight o'clock?,,clock_6,no,yes,ساعت هشت است؟,
 06,,Is it one o'clock?,,clock_11,no,yes,ساعت یک است؟,
+# version 2: more questions; every round is a pool (draw 8)
+06,,Is it nine o'clock?,,clock_9,yes,no,ساعت نُه است؟,
+06,,Is it eleven o'clock?,,clock_11,yes,no,ساعت یازده است؟,
+06,,Is it four o'clock?,,clock_8,no,yes,ساعت چهار است؟,
+06,,Is it six o'clock?,,clock_12,no,yes,ساعت شش است؟,
+06,,Is it morning?,,morning,yes,no,صبح است؟,
+06,,Is it night?,,afternoon,no,yes,شب است؟,
 # 14: Does she ...? Does he ...? The short answers are Yes, she does and No, he doesn't.
 14,,Does she cook?,,cook,yes,no,او غذا می‌پزد؟,
 14,,Does he sleep?,,work,no,yes,او می‌خوابد؟,
@@ -19,6 +26,11 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa,hop
 14,,Does he play?,,sleep,no,yes,او بازی می‌کند؟,
 14,,Does she get up?,,wake_up,yes,no,او از خواب می‌خیزد؟,
 14,,Does she sleep?,,eating,no,yes,او می‌خوابد؟,
+14,,Does he run?,,run,yes,no,او می‌دود؟,
+14,,Does she carry water?,,carry,yes,no,او آب می‌آورد؟,
+14,,Does he cook?,,sweep,no,yes,او غذا می‌پزد؟,
+14,,Does he drink?,,drink,yes,no,او می‌نوشد؟,
+14,,Does she work?,,sleep,no,yes,او کار می‌کند؟,
 # 17: Is it in, on, under, next to?
 17,,Is the ball on the table?,,pos_on,yes,no,توپ بالای میز است؟,
 17,,Is the ball on the table?,,pos_under,no,yes,توپ بالای میز است؟,
@@ -28,3 +40,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa,hop
 17,,Is the ball next to the box?,,pos_next_to,yes,no,توپ پهلوی صندوق است؟,
 17,,Is the ball under the table?,,pos_on,no,yes,توپ زیر میز است؟,
 17,,Is the ball next to the box?,,pos_in,no,yes,توپ پهلوی صندوق است؟,
+17,,Is the ball behind the box?,,pos_behind,yes,no,توپ پشت صندوق است؟,
+17,,Is the ball behind the box?,,pos_in_front,no,yes,توپ پشت صندوق است؟,
+17,,Is the ball in front of the box?,,pos_in_front,yes,no,توپ پیش روی صندوق است؟,
+17,,Is the ball in front of the box?,,pos_next_to,no,yes,توپ پیش روی صندوق است؟,

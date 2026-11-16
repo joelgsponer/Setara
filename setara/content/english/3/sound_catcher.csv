@@ -16,11 +16,20 @@ round,intro_fa,say_en,say_fa,targets,others,need,help_fa
 04,گوش کن. کلمه‌ای را بگیر که می‌شنوی. کلمه‌های دیگر را نگیر.,Catch the word cat.,این کلمه را بگیر.,t:cat,t:cot|t:cut|t:can|t:hat,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «پشک» است.
 04,,Catch the word dog.,این کلمه را بگیر.,t:dog,t:dig|t:dot|t:log|t:bag,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «سگ» است.
 04,,Catch the word pen.,این کلمه را بگیر.,t:pen,t:pan|t:pin|t:hen|t:pet,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «قلم» است.
+# version 2: the new words of units 18 and 19
+04,,Catch the word map.,این کلمه را بگیر.,t:map,t:mat|t:man|t:mop|t:cap,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «نقشه» است.
+04,,Catch the word fan.,این کلمه را بگیر.,t:fan,t:fin|t:fun|t:van|t:far,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «پکه» است.
+04,,Catch the word log.,این کلمه را بگیر.,t:log,t:leg|t:lot|t:dog|t:lag,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «کنده چوب» است.
 05,گوش کن. کلمه‌ای را بگیر که می‌شنوی. کلمه‌های دیگر را نگیر.,Catch the word sun.,این کلمه را بگیر.,t:sun,t:run|t:sat|t:bun|t:sum,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «آفتاب» است.
 05,,Catch the word bed.,این کلمه را بگیر.,t:bed,t:bad|t:red|t:bud|t:bet,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «تخت خواب» است.
 05,,Catch the word hat.,این کلمه را بگیر.,t:hat,t:hot|t:hit|t:hen|t:cat,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «کلاه» است.
 05,,Catch the word cup.,این کلمه را بگیر.,t:cup,t:cap|t:cut|t:pup|t:cop,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «پیاله» است.
+05,,Catch the word net.,این کلمه را بگیر.,t:net,t:not|t:nut|t:pet|t:ten,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «جال» است.
+05,,Catch the word pin.,این کلمه را بگیر.,t:pin,t:pan|t:pen|t:bin|t:pit,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «سنجاق» است.
+05,,Catch the word bug.,این کلمه را بگیر.,t:bug,t:bag|t:big|t:rug|t:bud,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «خزنده» است.
 # 06: word families. Words that end with the same two letters.
 06,گوش کن. کلمه‌هایی را بگیر که آخرشان مثل کلمه‌ای است که می‌شنوی.,Catch the words that end like cat.,کلمه‌هایی را بگیر که آخرشان مثل این کلمه است.,t:hat|t:bat|t:mat,t:hen|t:bag|t:pot|t:man,4,دو حرف آخر را ببین. آخر کلمه باید مثل آخر کلمه‌ای باشد که می‌شنوی.
 06,,Catch the words that end like pen.,کلمه‌هایی را بگیر که آخرشان مثل این کلمه است.,t:hen|t:ten|t:men,t:pet|t:pin|t:bed|t:hat,4,دو حرف آخر را ببین. آخر کلمه باید مثل آخر کلمه‌ای باشد که می‌شنوی.
 06,,Catch the words that end like dog.,کلمه‌هایی را بگیر که آخرشان مثل این کلمه است.,t:log|t:fog|t:jog,t:dot|t:dig|t:bag|t:hat,4,دو حرف آخر را ببین. آخر کلمه باید مثل آخر کلمه‌ای باشد که می‌شنوی.
+06,,Catch the words that end like pan.,کلمه‌هایی را بگیر که آخرشان مثل این کلمه است.,t:fan|t:man|t:can,t:pin|t:pat|t:map|t:pen,4,دو حرف آخر را ببین. آخر کلمه باید مثل آخر کلمه‌ای باشد که می‌شنوی.
+06,,Catch the words that end like bug.,کلمه‌هایی را بگیر که آخرشان مثل این کلمه است.,t:rug|t:jug|t:mug,t:bag|t:big|t:bud|t:leg,4,دو حرف آخر را ببین. آخر کلمه باید مثل آخر کلمه‌ای باشد که می‌شنوی.

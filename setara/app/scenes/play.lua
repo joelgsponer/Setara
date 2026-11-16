@@ -105,6 +105,58 @@ function Play:leave()
   end
 end
 
+-- Look and listen: before a round that was never finished, every new thing
+-- is shown once with its word and its Dari meaning. Teach, then ask.
+function Play:make_learn()
+  if not self.want_review or store.stars(self.round_id) > 0 then return nil end
+  local engine = self.round.engine
+  if engine ~= "listen_pick" and engine ~= "duel" then return nil end
+  local cards, seen = {}, {}
+  for _, item in ipairs(self.round.items or {}) do
+    local answer
+    for _, c in ipairs(type(item.choices) == "table" and item.choices or {}) do
+      if type(c) == "table" and c.id == item.answer then answer = c end
+    end
+    -- only where the answer is a picture and the question is its word
+    if answer and answer.img and not item.show and not seen[answer.id]
+      and type(item.prompt_audio) == "table" and #item.prompt_audio > 0 then
+      seen[answer.id] = true
+      local clips = {}
+      for _, c in ipairs(item.prompt_audio) do clips[#clips + 1] = c end
+      for _, c in ipairs(type(item.help_audio) == "table" and item.help_audio or {}) do clips[#clips + 1] = c end
+      cards[#cards + 1] = { thing = answer, clips = clips }
+    end
+  end
+  if #cards < 2 or #cards > 10 then return nil end
+  return cards
+end
+
+function Play:learn_show(i)
+  self.learn_i, self.learn_t = i, 0
+  self.ctx.say(self.learn[i].clips)
+end
+
+function Play:to_main()
+  self.learn = self.learn == nil and self:make_learn() or self.learn
+  if self.learn and not self.learn_done then
+    self.state = "learn"
+    self:learn_show(1)
+  else
+    self.state = "main"
+    self.engine:start()
+  end
+end
+
+function Play:learn_next()
+  audio.stop()
+  if self.learn_i < #self.learn then
+    self:learn_show(self.learn_i + 1)
+  else
+    self.learn_done = true
+    self:to_main()
+  end
+end
+
 function Play:begin()
   if self.state ~= "intro" then return end
   if self.warmup then
@@ -112,8 +164,7 @@ function Play:begin()
     self.warmup_waiting = true
     audio.say(packs.string("warmup").audio)
   else
-    self.state = "main"
-    self.engine:start()
+    self:to_main()
   end
 end
 
@@ -164,14 +215,18 @@ function Play:update(dt)
     self.warmup_waiting = false
     self.warmup:start()
   end
+  if self.state == "learn" then
+    -- goes on by itself a moment after the word was said; A goes on at once
+    if audio.busy() then self.learn_t = 0 else self.learn_t = self.learn_t + dt end
+    if self.learn_t > 1.2 then self:learn_next() end
+  end
   local e = self:active()
   if self.warmup_waiting then e = nil end
   if e then
     e:update(dt)
     if e.finished then
       if self.state == "warmup" then
-        self.state = "main"
-        self.engine:start()
+        self:to_main()
       else
         self:finish()
       end
@@ -219,6 +274,10 @@ function Play:input(b)
       audio.stop()
       self:begin()
     end
+  elseif self.state == "learn" then
+    if b == "a" or b == "right" then self:learn_next()
+    elseif b == "x" or b == "y" then self.learn_t = 0 self.ctx.say(self.learn[self.learn_i].clips, { slow = b == "x" })
+    elseif b == "left" and self.learn_i > 1 then audio.stop() self:learn_show(self.learn_i - 1) end
   elseif e then
     if b == "x" then e:again(true)
     elseif b == "y" then e:help()
@@ -300,6 +359,19 @@ function Play:draw()
     ui.arrow("right", 596, 430, 10, ui.c.ink)
     ui.badge("b", 80, 430, 18)
     ui.arrow("left", 44, 430, 10, ui.c.ink)
+  elseif self.state == "learn" then
+    local card = self.learn[self.learn_i]
+    ui.background(ui.mix(ui.c.bg, color, 0.12))
+    draw_hud(self, nil)
+    ui.progress(self.learn_i, #self.learn, 120, 18, 400)
+    local speaking = audio.busy()
+    ui.card(190, 70, 260, 260, { border = speaking and ui.c.gold or ui.c.ink, width = speaking and 6 or 4, radius = 16 })
+    ui.thing(card.thing, self.pack.root, 200, 80, 240, 240)
+    ui.speaker(320, 372, 56, speaking and self.t or nil, ui.c.ink)
+    ui.speaker(26, 20, 26, nil, ui.c.ink)
+    ui.badge("x", 54, 20, 11)
+    ui.badge("a", 560, 430, 16 + (speaking and 0 or math.sin(self.t * 5) * 2))
+    ui.arrow("right", 596, 430, 10, ui.c.ink)
   else
     local e = self:active()
     if e then e:draw() end

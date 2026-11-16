@@ -10,6 +10,13 @@ round,say_en,say_fa,show,answer,distractors,help_fa,hop
 10,The bread is ten afghani. I give twenty afghani. How much is the change?,,bread,t:10,t:20|t:30|t:2,نان ده افغانی است. من بیست افغانی می‌دهم. باقی پول چند است؟,
 10,He sells fruit and vegetables. Who is he?,,,shopkeeper,customer|teacher|grandfather,او میوه و ترکاری می‌فروشد. او کیست؟,
 10,Where is the honey? It is in a jar.,,,jar,bottle|can|packet,عسل کجاست؟ در مرتبان است.,
+# version 2: more listening questions; every round is a pool (draw 8)
+10,"I have a list: eggs, tea and salt. Which one is not on my list?",,,soap,egg|tea|salt,من یک لست دارم: تخم مرغ، چای و نمک. کدام یک در لست من نیست؟,
+10,The plums are sour. The figs are sweet. Which one is sweet?,,,fig,plum|lemon|radish,آلوها ترش است. انجیرها شیرین است. کدام یک شیرین است؟,
+10,"f: A bottle of oil and a packet of tea, please. // m: What is in the packet?",,,tea,oil_can|honey|sugar,لطفاً یک بوتل روغن و یک پاکت چای. در پاکت چه است؟,
+10,This rope is long. That rope is short. I want the long one.,,,rope_long,rope_short|sack|basket,این ریسمان دراز است. آن ریسمان کوتاه است. من دراز را می‌خواهم.,
+10,The sack is heavy. The basket is light. Which one is light?,,,basket,sack|kilo|scales,بوجی سنگین است. سبد سبک است. کدام یک سبک است؟,
+10,Half a kilo of cheese is thirty afghani. How much is one kilo?,,cheese,t:60,t:30|t:15|t:90,نیم کیلو پنیر سی افغانی است. یک کیلو چند است؟ دو تا نیم کیلو یک کیلو می‌شود.,
 # 20: the whole level.
 20,Where can I buy bread?,,,bakery,tailor|school|clinic,نان را از کجا خریده می‌توانم؟,
 20,"m: Do you have any eggs? // f: No, I don't have any. Sorry. I have some cheese. // m: What does she have?",,,cheese,egg|milk|bread,شما تخم مرغ دارید؟ نه، هیچ ندارم. ببخشید. کمی پنیر دارم. او چه دارد؟,
@@ -21,3 +28,9 @@ round,say_en,say_fa,show,answer,distractors,help_fa,hop
 20,Which one can you drink?,,,juice,kebab|biscuits|samosa,کدام یک را نوشیده می‌توانی؟,
 20,The tailor needs it. What is it?,,,needle,hammer|shovel|lock,خیاط به آن ضرورت دارد. آن چیست؟,
 20,"f: Can you carry the sack? // m: No, I can't. It is too heavy. // f: What is too heavy?",,,sack,basket|bottle|purse,بوجی را برده می‌توانید؟ نه، نمی‌توانم. بسیار سنگین است. چه چیز بسیار سنگین است؟,
+20,"f: Excuse me, where is the tailor? // m: Go straight on. He is on the left. // f: Where is the tailor?",,,arrow_left,arrow_right|arrow_up,ببخشید، خیاط کجاست؟ مستقیم بروید. به طرف چپ است. خیاط کجاست؟,
+20,It is at the bakery. The baker makes hot bread in it.,,,oven,lamp|sack|shelf,در نانوایی است. نانوا در آن نان گرم می‌پزد.,
+20,The teapot is two hundred afghani. The tray is one hundred afghani. How much is it all together?,,,t:300,t:200|t:400|t:120,چاینک دوصد افغانی است. پتنوس صد افغانی است. جمله چند می‌شود؟,
+20,"m: Anything else? // f: Yes, a box of matches, please. // m: What does she want?",,,matches,candle|lamp|lock,چیز دیگر؟ بلی، لطفاً یک قطی گوگرد. او چه می‌خواهد؟,
+20,I want to make a dress. I have cloth and a needle. What do I need?,,,thread,hammer|saw|iron_nail,می‌خواهم یک پیراهن بدوزم. تکه و سوزن دارم. به چه ضرورت دارم؟,
+20,The lorry brings firewood. The cart brings melons. What is on the cart?,,,melon,firewood|charcoal|wheat,لاری هیزم می‌آورد. کراچی خربوزه می‌آورد. در کراچی چه است؟,

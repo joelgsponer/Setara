@@ -10,6 +10,15 @@ round,picture,say_en,say_fa,show_en,show_fa,choices,right,wrong_say_fa,wrong_pic
 10,scene_girl_walking_home,In the afternoon I go home. I play.,,In the afternoon I go home.,,,,,
 10,scene_girl_walking_home,Look at the sun. Is it night?,,Is it night?,,yes|no,no,نه، شب نیست. آفتاب در آسمان است. حالا بعد از چاشت است.,
 10,scene_mina_sleeps,In the evening I eat dinner. At nine o'clock I go to bed. Good night!,,At nine o'clock I go to bed. Good night!,,,,,
+# Story 12c (version 2): Snow! (Hamid tells it, man's voice; the questions are asked by the woman's voice). Language up to unit 12c: clothes, weather, seasons.
+12c,winter,m: Good morning! It is winter. Look! Snow! Everything is white.,,It is winter. Look! Snow!,,,,,
+12c,winter,f: What season is it?,,What season is it?,,summer|winter|spring,winter,نه. همه جا برف است. حالا زمستان است.,
+12c,coat,"m: It is cold. I put on my warm coat, my hat and my shoes.",,I put on my warm coat.,,,,,
+12c,coat,f: What does Hamid put on?,,What does Hamid put on?,,sandals|dress|coat,coat,نه. هوا سرد است. حمید بالاپوش گرم می‌پوشد.,
+12c,scene_roof_snow,m: This is my father. We are on the roof. We clean the roof.,,We are on the roof.,,,,,
+12c,scene_roof_snow,f: Where are Hamid and his father?,,Where are they?,,kitchen|roof|school,roof,دوباره ببین. حمید و پدرش بالای بام هستند.,
+12c,scene_snowman,m: In the afternoon I play with my sister. We make a snowman!,,We make a snowman!,,,,,
+12c,stove_chimney,m: Now my hands are cold. I sit next to the stove and I drink hot tea. Goodbye!,,I drink hot tea. Goodbye!,,,,,
 # Story 14: Hamid's Friday (a boy of eleven tells it, man's voice; the questions are asked by the woman's voice). Language up to unit 14.
 14,scene_boy_washing,m: Hello! My name is Hamid. I am eleven. Today is Friday. On Friday I don't go to school.,,Today is Friday. I don't go to school.,,,,,
 14,scene_boy_washing,f: Today is Friday. Does Hamid go to school today?,,Does Hamid go to school today?,,yes|no,no,امروز جمعه است. حمید روز جمعه به مکتب نمی‌رود.,

@@ -1,0 +1,110 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# Question and answer. The child hears a short dialogue in two voices and decides whether the reply fits: yes or no.
+# The answers cannot be shown as pictures and the children cannot read; so the reply is spoken and judged.
+# 01: greetings. A greeting and its reply; a wrong reply is the opposite greeting or a command.
+01,دو نفر گپ می‌زنند. نفر دوم جواب می‌دهد. جواب به گپ نفر اول جور است؟ اگر جور است، بلی را انتخاب کن. اگر جور نیست، نه را.,"f: Good morning, class! // m: Good morning, teacher!",,,yes,no,صبح بخیر صنف! صبح بخیر معلم! جواب به سوال جور است؟
+01,,"m: Good morning, class! // f: Goodbye, teacher!",,,no,yes,صبح بخیر صنف! خداحافظ معلم! جواب به سوال جور است؟
+01,,"f: Goodbye, class! // m: Goodbye, teacher!",,,yes,no,خداحافظ صنف! خداحافظ معلم! جواب به سوال جور است؟
+01,,"m: Goodbye, class! // f: Good morning, teacher!",,,no,yes,خداحافظ صنف! صبح بخیر معلم! جواب به سوال جور است؟
+01,,"f: Hello, class! // m: Hello, teacher!",,,yes,no,سلام صنف! سلام معلم! جواب به سوال جور است؟
+01,,"m: Hello, class! // f: Goodbye!",,,no,yes,سلام صنف! خداحافظ! جواب به سوال جور است؟
+01,,f: Good morning! // m: Good morning!,,,yes,no,صبح بخیر! صبح بخیر! جواب به سوال جور است؟
+01,,m: Good morning! // f: Sit down.,,,no,yes,صبح بخیر! بنشین. جواب به سوال جور است؟
+01,,f: Hello! // m: Hello!,,,yes,no,سلام! سلام! جواب به سوال جور است؟
+01,,"m: Hello, teacher! // f: Goodbye, class!",,,no,yes,سلام معلم! خداحافظ صنف! جواب به سوال جور است؟
+01,,f: Goodbye! // m: Goodbye!,,,yes,no,خداحافظ! خداحافظ! جواب به سوال جور است؟
+01,,"m: Goodbye, teacher! // f: Hello, class!",,,no,yes,خداحافظ معلم! سلام صنف! جواب به سوال جور است؟
+# 03: What's your name? Are you a boy? A wrong answer answers another question.
+03,سوال را گوش کن و بعد جواب را. آیا این جوابِ همین سوال است؟ بلی یا نه را انتخاب کن.,f: What's your name? // m: My name is Ali.,,,yes,no,نام تو چیست؟ نام من علی است. جواب به سوال جور است؟
+03,,"m: What's your name? // f: Good morning, teacher!",,,no,yes,نام تو چیست؟ صبح بخیر معلم! جواب به سوال جور است؟
+03,,f: What's your name? // m: My name is Nadia.,,,yes,no,نام تو چیست؟ نام من نادیه است. جواب به سوال جور است؟
+03,,"m: What's your name? // f: Yes, I am a boy.",,,no,yes,نام تو چیست؟ بلی، من پسر هستم. جواب به سوال جور است؟
+03,,f: What's your name? // m: My name is Yusuf.,,,yes,no,نام تو چیست؟ نام من یوسف است. جواب به سوال جور است؟
+03,,m: What's your name? // f: Goodbye!,,,no,yes,نام تو چیست؟ خداحافظ! جواب به سوال جور است؟
+03,,f: Are you a boy? // m: No. I am a girl.,,,yes,no,تو پسر هستی؟ نه. من دختر هستم. جواب به سوال جور است؟
+03,,m: Are you a boy? // f: My name is Omar.,,,no,yes,تو پسر هستی؟ نام من عمر است. جواب به سوال جور است؟
+03,,"f: Are you a girl? // m: Yes, I am a girl.",,,yes,no,تو دختر هستی؟ بلی، من دختر هستم. جواب به سوال جور است؟
+03,,m: Are you a girl? // f: Good morning!,,,no,yes,تو دختر هستی؟ صبح بخیر! جواب به سوال جور است؟
+03,,f: Are you a girl? // m: No. I am a boy.,,,yes,no,تو دختر هستی؟ نه. من پسر هستم. جواب به سوال جور است؟
+03,,"m: Are you a boy? // f: Hello, class!",,,no,yes,تو پسر هستی؟ سلام صنف! جواب به سوال جور است؟
+03,,f: What's your name? // m: My name is Shirin.,,,yes,no,نام تو چیست؟ نام من شیرین است. جواب به سوال جور است؟
+03,,m: Are you a girl? // f: My name is Laila.,,,no,yes,تو دختر هستی؟ نام من لیلا است. جواب به سوال جور است؟
+# 07: How old are you? against What's your name?
+07,کسی می‌پرسد: چند ساله هستی؟ یا: نام تو چیست؟ جواب را گوش کن. جواب به سوال جور است؟,f: How old are you? // m: I am six.,,,yes,no,چند ساله هستی؟ من شش ساله هستم. جواب به سوال جور است؟
+07,,m: How old are you? // f: My name is Sara.,,,no,yes,چند ساله هستی؟ نام من سارا است. جواب به سوال جور است؟
+07,,f: How old are you? // m: I am eight.,,,yes,no,چند ساله هستی؟ من هشت ساله هستم. جواب به سوال جور است؟
+07,,"m: How old are you? // f: Yes, I am a girl.",,,no,yes,چند ساله هستی؟ بلی، من دختر هستم. جواب به سوال جور است؟
+07,,f: Hello! How old are you? // m: I am ten.,,,yes,no,سلام! چند ساله هستی؟ من ده ساله هستم. جواب به سوال جور است؟
+07,,"m: How old are you? // f: Good morning, class!",,,no,yes,چند ساله هستی؟ صبح بخیر صنف! جواب به سوال جور است؟
+07,,f: What's your name? // m: My name is Jawad.,,,yes,no,نام تو چیست؟ نام من جواد است. جواب به سوال جور است؟
+07,,m: What's your name? // f: I am seven.,,,no,yes,نام تو چیست؟ من هفت ساله هستم. جواب به سوال جور است؟
+07,,f: What's your name? // m: My name is Zahra.,,,yes,no,نام تو چیست؟ نام من زهرا است. جواب به سوال جور است؟
+07,,m: What's your name? // f: I am nine.,,,no,yes,نام تو چیست؟ من نُه ساله هستم. جواب به سوال جور است؟
+07,,f: How old are you? // m: I am five.,,,yes,no,چند ساله هستی؟ من پنج ساله هستم. جواب به سوال جور است؟
+07,,m: How old are you? // f: My name is Ahmad.,,,no,yes,چند ساله هستی؟ نام من احمد است. جواب به سوال جور است؟
+07,,f: How old are you? // m: I am nine.,,,yes,no,چند ساله هستی؟ من نُه ساله هستم. جواب به سوال جور است؟
+07,,m: Are you a boy? // f: I am ten.,,,no,yes,تو پسر هستی؟ من ده ساله هستم. جواب به سوال جور است؟
+# 12: What is this? is answered with a thing; What colour is it? with a colour.
+12,دو سوال است: این چیست؟ و: این چه رنگ است؟ جواب را گوش کن. آیا جوابِ همان سوال است؟,f: What is this? // m: This is a chair.,,,yes,no,این چیست؟ این چوکی است. جواب به سوال جور است؟
+12,,m: What is this? // f: It is red.,,,no,yes,این چیست؟ سرخ است. جواب به سوال جور است؟
+12,,f: What is this? // m: This is a door.,,,yes,no,این چیست؟ این دروازه است. جواب به سوال جور است؟
+12,,m: What is this? // f: I am eight.,,,no,yes,این چیست؟ من هشت ساله هستم. جواب به سوال جور است؟
+12,,f: What is this? // m: This is a book.,,,yes,no,این چیست؟ این کتاب است. جواب به سوال جور است؟
+12,,m: What is this? // f: It is blue.,,,no,yes,این چیست؟ آبی است. جواب به سوال جور است؟
+12,,f: What colour is it? // m: It is yellow.,,,yes,no,این چه رنگ است؟ زرد است. جواب به سوال جور است؟
+12,,m: What colour is it? // f: This is a bag.,,,no,yes,این چه رنگ است؟ این بکس است. جواب به سوال جور است؟
+12,,f: What colour is it? // m: It is orange.,,,yes,no,این چه رنگ است؟ نارنجی است. جواب به سوال جور است؟
+12,,m: What colour is it? // f: My name is Ali.,,,no,yes,این چه رنگ است؟ نام من علی است. جواب به سوال جور است؟
+12,,f: What colour is it? // m: It is black.,,,yes,no,این چه رنگ است؟ سیاه است. جواب به سوال جور است؟
+12,,m: What colour is it? // f: This is a table.,,,no,yes,این چه رنگ است؟ این میز است. جواب به سوال جور است؟
+12,,f: What is this? // m: This is an egg.,,,yes,no,این چیست؟ این تخم مرغ است. جواب به سوال جور است؟
+12,,m: What colour is it? // f: This is a pencil.,,,no,yes,این چه رنگ است؟ این پنسل است. جواب به سوال جور است؟
+12,,f: What colour is it? // m: It is brown.,,,yes,no,این چه رنگ است؟ نصواری است. جواب به سوال جور است؟
+12,,m: What is this? // f: It is green.,,,no,yes,این چیست؟ سبز است. جواب به سوال جور است؟
+# 16: How are you? against the questions of units 03; 07 and 12.
+16,کسی می‌پرسد: چطور هستی؟ جواب را گوش کن. جواب به سوال جور است؟ بلی یا نه را انتخاب کن.,"f: Hello, Sara! How are you? // m: I'm fine, thank you.",,,yes,no,سلام سارا! چطور هستی؟ خوب هستم، تشکر. جواب به سوال جور است؟
+16,,m: How are you? // f: I am nine.,,,no,yes,چطور هستی؟ من نُه ساله هستم. جواب به سوال جور است؟
+16,,f: How are you? // m: I am happy.,,,yes,no,چطور هستی؟ من خوش هستم. جواب به سوال جور است؟
+16,,m: How are you? // f: This is a book.,,,no,yes,چطور هستی؟ این کتاب است. جواب به سوال جور است؟
+16,,f: How are you? // m: I am sad.,,,yes,no,چطور هستی؟ من غمگین هستم. جواب به سوال جور است؟
+16,,m: How are you? // f: My name is Zahra.,,,no,yes,چطور هستی؟ نام من زهرا است. جواب به سوال جور است؟
+16,,"f: Hello! How are you? // m: I'm fine, thank you.",,,yes,no,سلام! چطور هستی؟ خوب هستم، تشکر. جواب به سوال جور است؟
+16,,m: Hello! How are you? // f: It is white.,,,no,yes,سلام! چطور هستی؟ سفید است. جواب به سوال جور است؟
+16,,f: How old are you? // m: I am six.,,,yes,no,چند ساله هستی؟ من شش ساله هستم. جواب به سوال جور است؟
+16,,m: How old are you? // f: I am happy.,,,no,yes,چند ساله هستی؟ من خوش هستم. جواب به سوال جور است؟
+16,,f: What's your name? // m: My name is Laila.,,,yes,no,نام تو چیست؟ نام من لیلا است. جواب به سوال جور است؟
+16,,"m: What's your name? // f: I'm fine, thank you.",,,no,yes,نام تو چیست؟ خوب هستم، تشکر. جواب به سوال جور است؟
+16,,f: Hello! How are you? // m: I am happy.,,,yes,no,سلام! چطور هستی؟ من خوش هستم. جواب به سوال جور است؟
+16,,m: What colour is it? // f: I am sad.,,,no,yes,این چه رنگ است؟ من غمگین هستم. جواب به سوال جور است؟
+# 18: Give me ...; please. Here you are. Thank you.
+18,کسی چیزی می‌خواهد یا چیزی می‌دهد. جواب را گوش کن. جواب مؤدبانه و جور است؟ بلی یا نه را انتخاب کن.,"f: Give me the pen, please. // m: Here you are.",,,yes,no,لطفاً قلم را به من بده. بفرما، بگیر. جواب به سوال جور است؟
+18,,"m: Give me the pen, please. // f: I am ten.",,,no,yes,لطفاً قلم را به من بده. من ده ساله هستم. جواب به سوال جور است؟
+18,,"f: Give me the book, please. // m: Here you are.",,,yes,no,لطفاً کتاب را به من بده. بفرما، بگیر. جواب به سوال جور است؟
+18,,"m: Give me the book, please. // f: My name is Omar.",,,no,yes,لطفاً کتاب را به من بده. نام من عمر است. جواب به سوال جور است؟
+18,,f: Here you are. // m: Thank you.,,,yes,no,بفرما، بگیر. تشکر. جواب به سوال جور است؟
+18,,"m: Here you are. // f: Good morning, class!",,,no,yes,بفرما، بگیر. صبح بخیر صنف! جواب به سوال جور است؟
+18,,"f: Give me the apple, please. // m: Here you are.",,,yes,no,لطفاً سیب را به من بده. بفرما، بگیر. جواب به سوال جور است؟
+18,,"m: Give me the apple, please. // f: It is yellow.",,,no,yes,لطفاً سیب را به من بده. زرد است. جواب به سوال جور است؟
+18,,"f: Give me the bag, please. // m: Here you are.",,,yes,no,لطفاً بکس را به من بده. بفرما، بگیر. جواب به سوال جور است؟
+18,,"m: Give me the bag, please. // f: I am six.",,,no,yes,لطفاً بکس را به من بده. من شش ساله هستم. جواب به سوال جور است؟
+18,,"f: Open the door, please. // m: My name is Sara.",,,no,yes,لطفاً دروازه را باز کن. نام من سارا است. جواب به سوال جور است؟
+18,,"m: Give me the pencil, please. // f: Here you are.",,,yes,no,لطفاً پنسل را به من بده. بفرما، بگیر. جواب به سوال جور است؟
+18,,"f: Give me the egg, please. // m: Here you are.",,,yes,no,لطفاً تخم مرغ را به من بده. بفرما، بگیر. جواب به سوال جور است؟
+18,,"m: Give me the chair, please. // f: Goodbye, teacher!",,,no,yes,لطفاً چوکی را به من بده. خداحافظ معلم! جواب به سوال جور است؟
+# 20: review of every question of the level; with new names; ages; things and colours.
+20,همه سوال‌هایی که یاد گرفتی. سوال و جواب را گوش کن. جواب به سوال جور است؟,f: What's your name? // m: My name is Ahmad.,,,yes,no,نام تو چیست؟ نام من احمد است. جواب به سوال جور است؟
+20,,m: How old are you? // f: My name is Nadia.,,,no,yes,چند ساله هستی؟ نام من نادیه است. جواب به سوال جور است؟
+20,,f: How old are you? // m: I am eight.,,,yes,no,چند ساله هستی؟ من هشت ساله هستم. جواب به سوال جور است؟
+20,,m: What's your name? // f: I am six.,,,no,yes,نام تو چیست؟ من شش ساله هستم. جواب به سوال جور است؟
+20,,f: What is this? // m: This is a window.,,,yes,no,این چیست؟ این کلکین است. جواب به سوال جور است؟
+20,,m: What colour is it? // f: This is a door.,,,no,yes,این چه رنگ است؟ این دروازه است. جواب به سوال جور است؟
+20,,f: What colour is it? // m: It is white.,,,yes,no,این چه رنگ است؟ سفید است. جواب به سوال جور است؟
+20,,m: What is this? // f: It is black.,,,no,yes,این چیست؟ سیاه است. جواب به سوال جور است؟
+20,,f: How are you? // m: I am happy.,,,yes,no,چطور هستی؟ من خوش هستم. جواب به سوال جور است؟
+20,,m: How are you? // f: This is a pen.,,,no,yes,چطور هستی؟ این قلم است. جواب به سوال جور است؟
+20,,"f: This is my friend, Shirin. // m: Hello, Shirin!",,,yes,no,این دوست من شیرین است. سلام شیرین! جواب به سوال جور است؟
+20,,"m: This is my friend, Yusuf. // f: It is green.",,,no,yes,این دوست من یوسف است. سبز است. جواب به سوال جور است؟
+20,,"f: This is my friend, Jawad. // m: Hello, Jawad!",,,yes,no,این دوست من جواد است. سلام جواد! جواب به سوال جور است؟
+20,,"m: Give me the table, please. // f: Hello!",,,no,yes,لطفاً میز را به من بده. سلام! جواب به سوال جور است؟
+20,,f: What is this? // m: This is bread.,,,yes,no,این چیست؟ این نان است. جواب به سوال جور است؟
+20,,m: Are you a girl? // f: It is orange.,,,no,yes,تو دختر هستی؟ نارنجی است. جواب به سوال جور است؟

@@ -2,7 +2,7 @@
  "pack": "garden-1",
  "subject": "garden",
  "level": 1,
- "version": 1,
+ "version": 2,
  "title_en": "Garden 1: Me",
  "title_fa": "باغ ۱: من",
  "games": [
@@ -15,7 +15,8 @@
    "intro_fa": "تصویرها را به ترتیب درست بمان.",
    "icon": "soap",
    "v1": true,
-   "sheet": "clean_hands.csv"
+   "sheet": "clean_hands.csv",
+   "draw": 4
   },
   {
    "id": "safe_water",
@@ -26,7 +27,8 @@
    "intro_fa": "هر تصویر را در سبد درست بینداز.",
    "icon": "water",
    "v1": true,
-   "sheet": "safe_water.csv"
+   "sheet": "safe_water.csv",
+   "draw": 8
   },
   {
    "id": "hygiene_story",
@@ -46,7 +48,8 @@
    "title_fa": "سبدهای باغ",
    "intro_fa": "هر تصویر را در سبد درست بینداز.",
    "icon": "sheep",
-   "sheet": "good_plate.csv"
+   "sheet": "good_plate.csv",
+   "draw": 8
   },
   {
    "id": "tree_keeper",
@@ -56,7 +59,8 @@
    "title_fa": "باغبان خورد",
    "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
    "icon": "tree",
-   "sheet": "tree_keeper.csv"
+   "sheet": "tree_keeper.csv",
+   "draw": 8
   },
   {
    "id": "my_body",
@@ -66,7 +70,73 @@
    "title_fa": "بدن من",
    "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
    "icon": "hand",
-   "sheet": "my_body.csv"
+   "sheet": "my_body.csv",
+   "draw": 8
+  },
+  {
+   "id": "why_stories",
+   "engine": "story",
+   "letter": "g",
+   "title_en": "Why Is It So?",
+   "title_fa": "چرا این طور است؟",
+   "intro_fa": "قصه را گوش کن. اول یاد می‌گیریم که چرا، و بعد جواب می‌دهیم.",
+   "icon": "germ",
+   "sheet": "why_stories.csv"
+  },
+  {
+   "id": "first_next",
+   "engine": "builder",
+   "letter": "h",
+   "title_en": "First and Next",
+   "title_fa": "اول چه، بعد چه؟",
+   "intro_fa": "تصویرها را به ترتیب درست بمان: اول چه بود و بعد چه شد.",
+   "icon": "sprout",
+   "sheet": "first_next.csv",
+   "draw": 4
+  },
+  {
+   "id": "odd_one_out",
+   "engine": "listen_pick",
+   "letter": "i",
+   "title_en": "Odd One Out",
+   "title_fa": "کدام جور نیست؟",
+   "intro_fa": "سه تصویر با هم جور است. آن یکی را که جور نیست پیدا کن.",
+   "icon": "butterfly",
+   "sheet": "odd_one_out.csv",
+   "draw": 8
+  },
+  {
+   "id": "true_or_not",
+   "engine": "sorter",
+   "letter": "j",
+   "title_en": "True or Not",
+   "title_fa": "درست یا نادرست",
+   "intro_fa": "گپ را بشنو. درست را در سبد سبز بینداز و نادرست را در سبد سرخ.",
+   "icon": "yes",
+   "sheet": "true_or_not.csv",
+   "draw": 8
+  },
+  {
+   "id": "go_together",
+   "engine": "pairs",
+   "letter": "k",
+   "title_en": "What Goes Together",
+   "title_fa": "جوره‌ها",
+   "intro_fa": "دو تصویر را که با هم جور است پیدا کن.",
+   "icon": "lamb",
+   "sheet": "go_together.csv",
+   "draw": 5
+  },
+  {
+   "id": "quick_hands",
+   "engine": "catch",
+   "letter": "l",
+   "title_en": "Quick Hands",
+   "title_fa": "زود بگیر",
+   "intro_fa": "گپ را بشنو و تنها چیزهای درست را بگیر.",
+   "icon": "basket",
+   "sheet": "quick_hands.csv",
+   "draw": 4
   }
  ]
 }

@@ -18,6 +18,7 @@ function Place.new(subject)
   self.levels = packs.levels(subject)
   self.level = store.progress.level[subject]
   if not packs.subjects[subject][self.level or -1] then self.level = self.levels[1] end
+  self.kept = self.level   -- the level in use; looking along the chips does not change it
   self:load()
   return self
 end
@@ -97,9 +98,12 @@ function Place:input(b)
       repeat i = i + step until not chips[i] or chips[i].on
       if chips[i] then
         self.chip = i
-        if chips[i].kind == "level" then
-          self.level = chips[i].level
-          store.progress.level[self.subject] = self.level
+        -- A level chip shows that level's games. It becomes the level in use
+        -- only when the child goes down into it; passing over the chips on
+        -- the way to another button changes nothing.
+        local show = chips[i].kind == "level" and chips[i].level or self.kept
+        if show ~= self.level then
+          self.level = show
           self:load()
         end
         sfx.play("move")
@@ -107,6 +111,8 @@ function Place:input(b)
       end
     elseif b == "down" and rows > 0 then
       self.row = 1
+      self.kept = self.level
+      store.progress.level[self.subject] = self.level
       sfx.play("move")
       self:speak()
     elseif b == "a" then
@@ -119,6 +125,8 @@ function Place:input(b)
         self:speak()
       elseif rows > 0 then
         self.row = 1
+        self.kept = self.level
+        store.progress.level[self.subject] = self.level
         self:speak()
       end
     end

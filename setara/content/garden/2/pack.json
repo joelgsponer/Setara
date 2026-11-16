@@ -2,7 +2,7 @@
  "pack": "garden-2",
  "subject": "garden",
  "level": 2,
- "version": 1,
+ "version": 2,
  "title_en": "Garden 2: My Home",
  "title_fa": "باغ ۲: خانه من",
  "games": [
@@ -15,7 +15,8 @@
    "intro_fa": "تصویرها را به ترتیب درست بمان.",
    "icon": "soap",
    "v1": true,
-   "sheet": "clean_hands.csv"
+   "sheet": "clean_hands.csv",
+   "draw": 3
   },
   {
    "id": "safe_water",
@@ -26,7 +27,8 @@
    "intro_fa": "هر تصویر را در سبد درست بینداز.",
    "icon": "water",
    "v1": true,
-   "sheet": "safe_water.csv"
+   "sheet": "safe_water.csv",
+   "draw": 8
   },
   {
    "id": "safe_water_story",
@@ -46,7 +48,8 @@
    "title_fa": "بشقاب خوب",
    "intro_fa": "هر خوراک را در سبد خودش بینداز.",
    "icon": "bread",
-   "sheet": "good_plate.csv"
+   "sheet": "good_plate.csv",
+   "draw": 8
   },
   {
    "id": "tree_keeper",
@@ -56,7 +59,8 @@
    "title_fa": "باغبان خورد",
    "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
    "icon": "tree",
-   "sheet": "tree_keeper.csv"
+   "sheet": "tree_keeper.csv",
+   "draw": 8
   },
   {
    "id": "my_body",
@@ -66,7 +70,8 @@
    "title_fa": "خانه سالم",
    "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
    "icon": "house",
-   "sheet": "my_body.csv"
+   "sheet": "my_body.csv",
+   "draw": 8
   },
   {
    "id": "little_nurse",
@@ -77,6 +82,71 @@
    "intro_fa": "قصه را گوش کن و به لیلا و فرید کمک کن که کار درست را بکنند.",
    "icon": "ors_packet",
    "sheet": "little_nurse.csv"
+  },
+  {
+   "id": "why_stories",
+   "engine": "story",
+   "letter": "h",
+   "title_en": "Why Is It So?",
+   "title_fa": "چرا این طور است؟",
+   "intro_fa": "قصه را گوش کن. اول یاد می‌گیریم که چرا، و بعد جواب می‌دهیم.",
+   "icon": "cloud",
+   "sheet": "why_stories.csv"
+  },
+  {
+   "id": "what_next",
+   "engine": "builder",
+   "letter": "i",
+   "title_en": "What Comes Next",
+   "title_fa": "بعد چه می‌شود؟",
+   "intro_fa": "تصویرها را به ترتیب درست بمان: اول چه می‌شود و بعد چه.",
+   "icon": "steam",
+   "sheet": "what_next.csv",
+   "draw": 4
+  },
+  {
+   "id": "odd_one_out",
+   "engine": "listen_pick",
+   "letter": "j",
+   "title_en": "Odd One Out",
+   "title_fa": "کدام جور نیست؟",
+   "intro_fa": "سه تصویر با هم جور است. آن یکی را که جور نیست پیدا کن.",
+   "icon": "fly",
+   "sheet": "odd_one_out.csv",
+   "draw": 8
+  },
+  {
+   "id": "true_or_not",
+   "engine": "sorter",
+   "letter": "k",
+   "title_en": "True or Not",
+   "title_fa": "درست یا نادرست",
+   "intro_fa": "گپ را بشنو. درست را در سبد سبز بینداز و نادرست را در سبد سرخ.",
+   "icon": "yes",
+   "sheet": "true_or_not.csv",
+   "draw": 8
+  },
+  {
+   "id": "go_together",
+   "engine": "pairs",
+   "letter": "l",
+   "title_en": "What Goes Together",
+   "title_fa": "جوره‌ها",
+   "intro_fa": "دو تصویر را که با هم جور است پیدا کن.",
+   "icon": "well",
+   "sheet": "go_together.csv",
+   "draw": 5
+  },
+  {
+   "id": "quick_hands",
+   "engine": "catch",
+   "letter": "m",
+   "title_en": "Quick Hands",
+   "title_fa": "زود بگیر",
+   "intro_fa": "گپ را بشنو و تنها چیزهای درست را بگیر.",
+   "icon": "basket",
+   "sheet": "quick_hands.csv",
+   "draw": 4
   }
  ]
 }

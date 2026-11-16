@@ -84,6 +84,10 @@ function M.draw_slot(root, slot, state, t)
     return
   end
   if state == "wrong" then opts.dim = true end
+  if state == "hint" then   -- "this one": a slow gold pulse around the right card
+    local pulse = 3 + math.sin(t * 5) * 3
+    ui.card(x - pulse, y - pulse, slot.w + pulse * 2, slot.h + pulse * 2, { border = ui.c.gold, width = 5, fill = ui.c.paper })
+  end
   ui.card(x, y, slot.w, slot.h, opts)
   ui.thing(slot.thing, root, x + 6, y + 6, slot.w - 12, slot.h - 12, { alpha = state == "wrong" and 0.35 or 1 })
 end

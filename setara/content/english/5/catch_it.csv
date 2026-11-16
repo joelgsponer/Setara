@@ -1,0 +1,19 @@
+round,intro_fa,say_en,say_fa,targets,others,need,help_fa
+# PRACTISE. The rule is spoken in English; the help button gives it in Dari. Each play has four of the rules.
+06,قاعده را گوش کن و فقط چیزهایی را بگیر که با آن جور می‌آید. clean یعنی پاک، dirty یعنی چتل.,Catch the clean things.,,clean_hands|plate_clean|clean_clothes|tooth_clean|bucket_clean,dirty_hands|plate_dirty|water_puddle|bucket_dirty|garbage,5,چیزهای پاک را بگیر.
+06,,Catch the dirty things.,,dirty_hands|plate_dirty|water_puddle|bucket_dirty|garbage,clean_hands|plate_clean|clean_clothes|tooth_clean|bucket_clean,5,چیزهای چتل را بگیر.
+06,,Catch the things you must not touch.,,fire|matches|knife|snake,ball|book|flower|pillow,4,چیزهایی را بگیر که نباید به آن دست بزنی.
+06,,Catch the things you can drink.,,water_covered|milk|tea|juice|water_boiled,water_puddle|water_cup_dirty|soap|stone|sand,5,چیزهایی را بگیر که نوشیده می‌توانی.
+06,,Catch the things for washing your hands.,,soap|water_tap|towel|bucket_clean,kite|ball|bread|knife,4,چیزهایی را بگیر که برای شستن دست لازم است.
+10,تکرار: قاعده را گوش کن. جاهای بدن، مریض‌ها، مردم کلینیک، جای‌ها و چیزهای خطرناک.,Catch the parts of the body.,,knee|neck|shoulder|back|throat|tummy,bandage|soap|road|thermometer|blanket,5,جاهای بدن را بگیر.
+10,,Catch the sick people.,,fa_cough|sneeze|headache|toothache|stomach_ache|earache,happy|play|run|clap,5,مردم مریض را بگیر.
+10,,Catch the people who work at the clinic.,,doctor|nurse,shopkeeper|tailor|teacher|customer,4,کسانی را بگیر که در کلینیک کار می‌کنند.
+10,,Catch the things from the clinic.,,bandage|thermometer,kite|ball|hammer|rope,4,چیزهای کلینیک را بگیر.
+10,,Catch the places.,,clinic|school|bakery|bazaar|bridge|road,doctor|nurse|bandage|hungry,5,جای‌ها را بگیر.
+10,,Catch the dangerous things.,,fire|matches|knife|snake,pillow|ball|book|spoon,4,چیزهای خطرناک را بگیر.
+20,تکرار: هوا، فصل‌ها، راه و کلمه‌های دیروز و امروز. در دو قاعده باید کلمه را بخوانی.,Catch the weather.,,rain|snow|wind|storm|sun|cloudy,bridge|road|bandage|blanket|food_bowl,5,هوا را بگیر: باران، برف، باد، طوفان، آفتاب، ابر.
+20,,Catch the seasons.,,spring|summer|autumn|winter,rain|ice|umbrella|coat,4,چهار فصل را بگیر.
+20,,Catch the things for cold weather.,,coat|blanket|socks|stove|firewood,sandals|watermelon|kite|fish,5,چیزهایی را بگیر که برای هوای سرد است.
+20,,Catch the words for yesterday.,,t:went|t:ate|t:saw|t:was|t:walked|t:slept,t:go|t:eat|t:see|t:is|t:walk,5,کلمه‌های دیروز را بگیر: went، ate، saw.
+20,,Catch the words for today.,,t:go|t:eat|t:see|t:is|t:walk,t:went|t:ate|t:saw|t:was|t:walked|t:slept,5,کلمه‌های امروز را بگیر: go، eat، see.
+20,,Catch the things that show the way.,,turn_left|turn_right|arrow_up|stop,rain|bandage|spring|baby,4,چیزهایی را بگیر که راه را نشان می‌دهد.

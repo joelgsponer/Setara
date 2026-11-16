@@ -1,0 +1,70 @@
+round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
+# Sorting. Every thing is spoken; the baskets are pictures and are said aloud at the start of the round and on Y.
+# 12: four colour baskets. The thing is named with its colour; the child sorts by the colour she hears and sees.
+12,چهار سبد رنگ است: سرخ، آبی، سبز و زرد. گوش کن و هر چیز را در سبد رنگ خودش بینداز.,book,This is a red book.,,color_red,سرخ,red
+12,,pencil_green,a green pencil,,color_green,سبز,green
+12,,apple_yellow,a yellow apple,,color_yellow,زرد,yellow
+12,,pen_red,This is a red pen.,,color_red,,
+12,,pencil_red,a red pencil,,color_red,,
+12,,bag_red,a red bag,,color_red,,
+12,,apple,This is a red apple.,,color_red,,
+12,,bag_blue,a blue bag,,color_blue,آبی,blue
+12,,pencil,a yellow pencil,,color_yellow,,
+12,,book_yellow,a yellow book,,color_yellow,,
+12,,pen,This is a blue pen.,,color_blue,,
+12,,pen_green,a green pen,,color_green,,
+12,,bag_green,This is a green bag.,,color_green,,
+12,,pencil_blue,a blue pencil,,color_blue,,
+12,,apple_green,a green apple,,color_green,,
+12,,book_blue,This is a blue book.,,color_blue,,
+12,,book_green,a green book,,color_green,,
+# 13: food or classroom thing.
+13,دو سبد است: خوراکی و چیزهای صنف. گوش کن و هر چیز را در سبد درست بینداز.,apple,an apple. It is red.,,set_food,خوراکی,food
+13,,book,a book. Open your book.,,set_school_things,چیزهای صنف,classroom things
+13,,bread,bread. I am happy!,,set_food,,
+13,,pen,a pen. Write!,,set_school_things,,
+13,,egg,an egg. It is white.,,set_food,,
+13,,pencil,a pencil. Draw!,,set_school_things,,
+13,,tea,"tea, please",,set_food,,
+13,,bag,my bag,,set_school_things,,
+13,,water,"water, please",,set_food,,
+13,,chair,a chair. Sit down!,,set_school_things,,
+13,,apple_green,"a green apple, please",,set_food,,
+13,,board,the board. Look!,,set_school_things,,
+13,,table,a big table,,set_school_things,,
+13,,apple_yellow,a small yellow apple,,set_food,,
+13,,p:egg*3,"three eggs, please",,set_food,,
+13,,p:book_blue*2,two blue books. Read!,,set_school_things,,
+# 14: he or she. The sentence is spoken; the picture goes to the boy (he) or to the girl (she).
+14,جمله را گوش کن. در بارهٔ پسر است یا دختر؟ برای پسر کلمهٔ دیگری می‌گویند و برای دختر کلمهٔ دیگر. تصویر را در سبد درست بینداز.,boy,He is a boy.,,he,او، برای پسر یا مرد,he
+14,,girl,She is a girl.,,she,او، برای دختر یا زن,she
+14,,teacher,She is my teacher.,,she,,
+14,,happy,He is happy.,,he,,
+14,,sad,She is sad.,,she,,
+14,,wave,She is my friend. Hello!,,she,,
+14,,goodbye,He is my friend. Goodbye!,,he,,
+14,,sit_down,He is ten.,,he,,
+14,,stand_up,She is eight.,,she,,
+14,,listen,Look! He is my friend.,,he,,
+14,,clap,Look! She is happy.,,she,,
+14,,sorry,He is sad. Sorry!,,he,,
+14,,thank_you,She is seven.,,she,,
+14,,please,He is six.,,he,,
+# 19: three baskets: food; classroom things; people. Words of the whole level.
+19,سه سبد است: خوراکی، چیزهای صنف و آدم‌ها. گوش کن و هر تصویر را در سبد درست بینداز.,tea,This is tea.,,set_food,خوراکی,food
+19,,door,the door of my classroom,,set_school_things,چیزهای صنف,classroom things
+19,,teacher,my teacher,,set_people,آدم‌ها,people
+19,,bread,bread and tea,,set_food,,
+19,,window,a big window,,set_school_things,,
+19,,boy,a boy. He is nine.,,set_people,,
+19,,egg,a small egg,,set_food,,
+19,,pen_black,This is a black pen.,,set_school_things,,
+19,,girl,a girl. She is ten.,,set_people,,
+19,,water,This is water.,,set_food,,
+19,,book_green,This is a green book.,,set_school_things,,
+19,,friends,my friend,,set_people,,
+19,,apple_yellow,This is a yellow apple.,,set_food,,
+19,,table,the table,,set_school_things,,
+19,,class,the class,,set_people,,
+19,,chair,a small chair,,set_school_things,,
+19,,p:apple*2,two red apples,,set_food,,

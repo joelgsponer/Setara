@@ -1,0 +1,70 @@
+round,intro_fa,say_en,say_fa,targets,others,need,help_fa
+# Catch what the rule says. The rule is spoken in English; Y gives it in Dari.
+# 06: numerals 1 to 10.
+06,گوش کن که کدام عدد را بگیری. سبد را زیر همان عدد ببر. عددهای دیگر را نگیر.,Catch one.,,t:1,t:6|t:3|t:7|t:9,3,عدد یک را بگیر.
+06,,Catch the number two.,,t:2,t:7|t:1|t:3|t:6,3,عدد دو را بگیر.
+06,,Catch three.,,t:3,t:8|t:7|t:6|t:4,3,عدد سه را بگیر.
+06,,Catch the number four.,,t:4,t:7|t:10|t:9|t:2,3,عدد چهار را بگیر.
+06,,Catch five.,,t:5,t:8|t:4|t:9|t:1,3,عدد پنج را بگیر.
+06,,Catch the number six.,,t:6,t:1|t:5|t:3|t:2,3,عدد شش را بگیر.
+06,,Catch seven.,,t:7,t:4|t:6|t:8|t:2,3,عدد هفت را بگیر.
+06,,Catch the number eight.,,t:8,t:2|t:5|t:1|t:3,3,عدد هشت را بگیر.
+06,,Catch nine.,,t:9,t:10|t:5|t:2|t:3,3,عدد نُه را بگیر.
+06,,Catch the number ten.,,t:10,t:1|t:4|t:2|t:6,3,عدد ده را بگیر.
+06,,Catch two and five.,,t:2|t:5,t:1|t:7|t:10|t:4,4,عددهای دو و پنج را بگیر.
+06,,Catch three and eight.,,t:3|t:8,t:9|t:1|t:5|t:4,4,عددهای سه و هشت را بگیر.
+06,,Catch six and nine.,,t:6|t:9,t:2|t:4|t:8|t:7,4,عددهای شش و نُه را بگیر.
+06,,Catch four and ten.,,t:4|t:10,t:7|t:9|t:5|t:1,4,عددهای چهار و ده را بگیر.
+# 08: classroom things. The same thing falls in several colours.
+08,گوش کن که کدام چیز صنف را بگیری. فقط همان را بگیر. چیزهای دیگر را بگذار که بیفتد.,Catch the books.,,book|book_blue|book_green|book_yellow,window|pen_red|pencil|door|table,4,کتابها را بگیر.
+08,,Catch the pens.,,pen|pen_red|pen_green|pen_black,table|book_blue|chair|bag_green|window,4,قلمها را بگیر.
+08,,Catch the bags.,,bag|bag_green|bag_red|bag_blue,book|pen_red|table|pen|board,4,بکسها را بگیر.
+08,,Catch the pencils.,,pencil|pencil_red|pencil_blue|pencil_green,book_blue|door|pen|bag|board,4,پنسلها را بگیر.
+08,,Catch the chair.,,chair,board|pencil|pencil_red|book_blue|pen,3,چوکی را بگیر.
+08,,Catch the table.,,table,bag|bag_green|pen|book_blue|pen_red,3,میز را بگیر.
+08,,Catch the door.,,door,window|board|table|bag|book,3,دروازه را بگیر.
+08,,Catch the window.,,window,board|pen|bag_green|book|pencil,3,کلکین را بگیر.
+08,,Catch the board.,,board,book|door|pen|pencil|window,3,تخته را بگیر.
+08,,Catch the book and the pen.,,book|book_blue|pen|pen_red,board|pencil_red|bag_green|door|window,4,کتاب و قلم را بگیر.
+08,,Catch the door and the window.,,door|window,book_blue|pencil|pen|table|board,4,دروازه و کلکین را بگیر.
+08,,Catch the chair and the table.,,chair|table,pencil|door|bag_green|book_blue|board,4,چوکی و میز را بگیر.
+08,,Catch the bag and the pencil.,,bag|bag_green|pencil|pencil_red,book_blue|book|pen_red|board|chair,4,بکس و پنسل را بگیر.
+# 12: colours. Colour blots and things of that colour are both right.
+12,گوش کن که کدام رنگ را بگیری. هر چیزی را که همان رنگ است بگیر. رنگ‌های دیگر را نگیر.,Catch red.,,color_red|book|pen_red|bag_red|pencil_red,color_brown|pen_black|color_orange|color_green|color_yellow,4,رنگ سرخ را بگیر.
+12,,Catch the colour blue.,,color_blue|book_blue|pen|bag_blue|pencil_blue,color_white|egg|color_orange|pen_black|book,4,رنگ آبی را بگیر.
+12,,Catch green.,,color_green|book_green|pen_green|bag_green|pencil_green,color_blue|book|color_brown|pen_black|color_orange,4,رنگ سبز را بگیر.
+12,,Catch the colour yellow.,,color_yellow|book_yellow|pencil|apple_yellow,book_blue|bag|color_orange|color_red|color_white,4,رنگ زرد را بگیر.
+12,,Catch black.,,color_black|pen_black|board,color_orange|bag|color_brown|egg|color_red,4,رنگ سیاه را بگیر.
+12,,Catch the colour white.,,color_white|egg,color_blue|color_green|book_blue|book_green|color_brown,3,رنگ سفید را بگیر.
+12,,Catch brown.,,color_brown|bag|door|chair|table,book_yellow|book|egg|color_red|book_blue,4,رنگ نصواری را بگیر.
+12,,Catch the colour orange.,,color_orange,pen_black|color_brown|color_white|book_blue|book_yellow,3,رنگ نارنجی را بگیر.
+12,,Catch red and blue.,,color_red|book|pen_red|color_blue|book_blue|pen,color_brown|egg|book_green|pen_black|color_white,4,رنگ‌های سرخ و آبی را بگیر.
+12,,Catch green and yellow.,,color_green|book_green|pen_green|color_yellow|book_yellow|pencil,book|book_blue|pen_black|color_black|color_orange,4,رنگ‌های سبز و زرد را بگیر.
+12,,Catch black and white.,,color_black|pen_black|board|color_white|egg,color_red|bag|book_yellow|color_blue|color_brown,4,رنگ‌های سیاه و سفید را بگیر.
+12,,Catch brown and orange.,,color_brown|bag|door|color_orange,pen_black|book|color_red|egg|color_white,4,رنگ‌های نصواری و نارنجی را بگیر.
+# 13: food.
+13,گوش کن که کدام خوراکی را بگیری. فقط همان را بگیر. چیزهای دیگر را نگیر.,Catch the apples.,,apple|apple_green|apple_yellow,bread|egg|tea|book|color_red,4,سیب‌ها را بگیر.
+13,,Catch the bread.,,bread,egg|apple|tea|table|bag,3,نان را بگیر.
+13,,Catch the eggs.,,egg,apple|bread|water|color_white|tea,3,تخم مرغ‌ها را بگیر.
+13,,Catch the tea.,,tea,water|bread|egg|apple|pen,3,چای را بگیر.
+13,,Catch the water.,,water,tea|egg|bread|apple_green|window,3,آب را بگیر.
+13,,Catch the food.,,apple|bread|egg|tea|water|apple_green|apple_yellow,book|pen|pencil|bag|chair|board,5,خوراکی‌ها را بگیر.
+13,,Catch the red apples.,,apple,apple_green|apple_yellow|color_red|egg,3,سیب‌های سرخ را بگیر.
+13,,Catch the green apples.,,apple_green,apple|apple_yellow|bag_green|bread,3,سیب‌های سبز را بگیر.
+13,,Catch the yellow apples.,,apple_yellow,apple|apple_green|pencil|egg,3,سیب‌های زرد را بگیر.
+13,,Catch the bread and the tea.,,bread|tea,water|egg|apple|book,4,نان و چای را بگیر.
+13,,Catch the eggs and the apples.,,egg|apple|apple_green,bread|tea|water|pen,4,تخم مرغ‌ها و سیب‌ها را بگیر.
+13,,Catch the water and the tea.,,water|tea,bread|egg|apple_yellow|bag,4,آب و چای را بگیر.
+# 19: the whole level: a colour and a thing; people; yes and no; happy and sad; big and small.
+19,همه چیز را با هم تمرین می‌کنیم. خوب گوش کن که چه چیز را بگیری، و فقط همان را بگیر.,Catch the red pens.,,pen_red,pen|pen_green|pencil_red|book,3,قلم‌های سرخ را بگیر.
+19,,Catch the blue books.,,book_blue,book|book_green|pen|bag_blue,3,کتاب‌های آبی را بگیر.
+19,,Catch the green bags.,,bag_green,bag|bag_red|book_green|apple_green,3,بکس‌های سبز را بگیر.
+19,,Catch the yellow pencils.,,pencil,pencil_red|pencil_blue|book_yellow|pen,3,پنسل‌های زرد را بگیر.
+19,,Catch the teacher.,,teacher,boy|girl|class|friends,3,معلم را بگیر.
+19,,Catch the boys and the girls.,,boy|girl,teacher|table|chair|door,4,پسرها و دخترها را بگیر.
+19,,Catch yes.,,yes,no|color_green|color_red,3,بلی را بگیر.
+19,,Catch no.,,no,yes|color_red|color_green,3,نه را بگیر.
+19,,Catch happy.,,happy,sad|sorry|boy,3,خوش را بگیر.
+19,,Catch sad.,,sad,happy|girl|thank_you,3,غمگین را بگیر.
+19,,Catch big.,,big,small|color_red|apple,3,کلان را بگیر.
+19,,Catch small.,,small,big|color_red|egg,3,خُرد را بگیر.

@@ -1,0 +1,13 @@
+round,intro_fa,say_en,say_fa,targets,others,need,help_fa
+01,زود بگیر! گپ را بشنو و تنها خوراک‌ها و چیزهایی را بگیر که با آن جور است. دیگران را بمان که بیفتد.,,خوراک‌های قوت را بگیر.,bread|rice|potato|corn,egg|apple|milk|carrot,4,نان، برنج، کچالو و جواری برای دویدن، بازی و کار به ما قوت می‌دهد.
+01,,,خوراک‌های نمو را بگیر.,egg|milk|yoghurt|beans|meat,bread|apple|rice|carrot,5,تخم مرغ، شیر، ماست، لوبیا و گوشت بدن را کلان و استخوان را قوی می‌سازد.
+01,,,خوراک‌های محافظت را بگیر: میوه و ترکاری.,apple|carrot|tomato|spinach|grape,bread|egg|rice|meat,5,میوه و ترکاری بدن را از مریضی نگه می‌کند.
+01,,,تنها آب پاک را بگیر.,water_boiled|water_covered|water,water_puddle|water_stream|water_pond|water_cloudy,4,آب جوش‌داده و سرپوشیده پاک است. آب ایستاده، آب جوی، آب حوض و آب گل‌آلود ناپاک است.
+01,,,شیرینی‌ها را بمان که بیفتد. خوراک‌های هر روز را بگیر.,bread|egg|apple|beans|spinach,candy|soda|sugar,5,نان، تخم مرغ، سیب، لوبیا و پالک هر روز خوب است. شیرینی، نوشابه و بوره را تنها کم‌کم و گاهی می‌خوریم.
+01,,,چیزهایی را بگیر که خانه را پاک نگه می‌کند.,broom|soap|latrine_cover|waste_pit|food_covered,fly|garbage|yard_dirty|latrine_dirty,5,جاروب، صابون، سرپوش تشناب، چقوری کثافات و سرپوش خوراک خانه را پاک نگه می‌کند.
+02,باز هم زود بگیر! این بار آب، کثافات و درخت. گپ را بشنو و تنها چیزهای درست را بگیر.,,هر چه از آب جور شده است بگیر.,snow|ice|rain|steam|hail,stone|sand|fire|leaf,5,برف، یخ، باران، بخار و ژاله همه آب است.
+02,,,چیزهایی را بگیر که در خاک می‌پوسد.,peel|leaf|bread|apple|leaf_yellow,bottle|can|plastic_bag,5,پوست میوه، برگ، نان و سیب می‌پوسد و خاک می‌شود. بوتل، قطی و پلاستیک نمی‌پوسد.
+02,,,چیزهایی را بگیر که نمی‌پوسد.,bottle|can|plastic_bag,peel|leaf|apple|bread,4,بوتل، قطی و پلاستیک سال‌های سال نمی‌پوسد. آنها را در زمین و آب نمی‌اندازیم.
+02,,,هر چه درخت به ما می‌دهد بگیر.,apple|apricot|walnut|wood_dry,stone|bottle|can|fish,4,درخت به ما میوه و چوب می‌دهد: سیب، زردآلو، چارمغز و هیزم.
+02,,,جاهای آب را بگیر.,river|well|pond|stream|lake,desert|stone|house|fire,5,دریا، چاه، حوض، جوی و جهیل آب دارد.
+02,,,کارهای خوب برای قریه پاک را بگیر.,waste_pit|bottle_reuse|yard_clean|sapling,garbage_street|garbage_water|plastic_fire,4,کثافات در چقوری، بوتل دوباره، حویلی پاک و نهال نو قریه را پاک و سبز نگه می‌کند.

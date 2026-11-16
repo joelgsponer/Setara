@@ -1,18 +1,30 @@
 unit,key,en,fa,picture,tags
 # English level 3 "My day". unit = classroom lesson number.
-# Rows tagged review repeat an earlier word so that the picture game has at least four pictures in the unit.
+# Review rows exist only in the review units 10 and 20, and there the word comes inside a new sentence.
+# Units with a letter (01b, 12b, 12c, 16b) were added in version 2: more words on the same theme.
 
 # 01 Get up!
 01,get_up,get up,از خواب خیستن,wake_up,routine
 01,wash,wash,شستن,wash_face,routine
 01,brush_my_teeth,brush my teeth,دندان‌هایم را برس می‌کنم,tb_brush,routine
 01,face,face,روی,face,body
-01,towel,towel,دستمال,towel,thing
+01,towel,towel,روی‌پاک,towel,thing
 01,teeth,teeth,دندان‌ها,,body
 01,i_get_up,I get up.,من از خواب می‌خیزم.,,phrase
 01,i_wash_my_face,I wash my face.,من رویم را می‌شویم.,,phrase
 01,i_brush_my_teeth,I brush my teeth.,من دندان‌هایم را برس می‌کنم.,,phrase
 01,get_up_dialogue,"f: Good morning! Get up! // m: Good morning, mother.",صبح بخیر! از خواب بخیز! صبح بخیر، مادر.,,dialogue
+
+# 01b Clean and ready (version 2)
+01b,toothbrush,toothbrush,برس دندان,toothbrush,thing
+01b,toothpaste,toothpaste,کریم دندان,toothpaste,thing
+01b,dirty,dirty,چتل,dirty_hands,thing
+01b,wash_my_hands,wash my hands,دست‌هایم را می‌شویم,wash_hands,routine
+01b,comb_my_hair,comb my hair,مویم را شانه می‌کنم,comb,routine
+01b,my_hands_are_dirty,My hands are dirty. I wash my hands.,دست‌های من چتل است. من دست‌هایم را می‌شویم.,,phrase
+01b,i_comb_my_hair,I comb my hair.,من مویم را شانه می‌کنم.,,phrase
+01b,toothpaste_on,I put toothpaste on my toothbrush.,من کریم دندان را روی برس دندان می‌مانم.,,phrase
+01b,clean_dialogue,"f: Are your hands clean? // m: No, they are dirty. // f: Wash your hands, please.",دست‌هایت پاک است؟ نه، چتل است. لطفاً دست‌هایت را بشوی.,,dialogue
 
 # 02 Breakfast and school
 02,breakfast,breakfast,نان صبح,breakfast,food
@@ -48,7 +60,7 @@ unit,key,en,fa,picture,tags
 04,coin,coin,سکه,coin,thing
 04,brick,brick,خشت,brick,thing
 04,bottle,bottle,بوتل,bottle,thing
-04,r04_school,school,مکتب,school,review
+04,wheel,wheel,چرخ,wheel,thing
 
 # 05 Numbers 60-100 (numerals are in numbers.csv)
 05,sixty,sixty,شصت,,number
@@ -60,7 +72,7 @@ unit,key,en,fa,picture,tags
 05,umbrella,umbrella,چتری,umbrella,thing
 05,glasses,glasses,عینک,glasses,thing
 05,lock,lock,قفل,lock,thing
-05,r05_lunch,lunch,نان چاشت,lunch,review
+05,knife,knife,کارد,knife,thing
 
 # 06 What time is it?
 06,one_oclock,one o'clock,ساعت یک,clock_1,time
@@ -82,8 +94,8 @@ unit,key,en,fa,picture,tags
 07,i_go_to_school_at_seven,I go to school at seven o'clock.,من ساعت هفت به مکتب می‌روم.,,phrase
 07,i_go_to_bed_at_nine,I go to bed at nine o'clock.,من ساعت نُه به خواب می‌روم.,,phrase
 07,late_dialogue,m: It is eight o'clock. I am late! // f: Go to school now!,ساعت هشت است. من ناوقت کرده‌ام! حالا به مکتب برو!,,dialogue
-07,r07_get_up,get up,از خواب خیستن,wake_up,review
-07,r07_school,school,مکتب,school,review
+07,noon,noon,چاشت,sun_noon,time
+07,watch,watch,ساعت دستی,watch,thing
 07,rooster,rooster,خروس,rooster,animal
 
 # 08 Days of the week 1 (the days are practised in day_journey.csv and sentence_train.csv)
@@ -93,7 +105,7 @@ unit,key,en,fa,picture,tags
 08,tuesday,Tuesday,سه‌شنبه,,day
 08,today,today,امروز,,day
 08,day_dialogue_1,f: What day is it today? // m: Today is Monday.,امروز کدام روز است؟ امروز دوشنبه است.,,dialogue
-08,r08_play,play,بازی کردن,play,review
+08,clinic,clinic,کلینیک,clinic,place
 08,shop,shop,دکان,shop,place
 08,street,street,کوچه,street,place
 08,bridge,bridge,پل,bridge,place
@@ -116,11 +128,11 @@ unit,key,en,fa,picture,tags
 10,in_the_evening_i_eat_dinner,In the evening I eat dinner.,شام من نان شب می‌خورم.,,phrase
 10,review_dialogue_1,f: What time is it? // m: It is eight o'clock.,ساعت چند است؟ ساعت هشت است.,,dialogue
 10,review_dialogue_2,m: What day is it today? // f: Today is Wednesday.,امروز کدام روز است؟ امروز چهارشنبه است.,,dialogue
-10,r10_breakfast,breakfast,نان صبح,breakfast,review
-10,r10_brush,brush my teeth,دندان‌هایم را برس می‌کنم,tb_brush,review
-10,r10_morning,morning,صبح,morning,review
-10,r10_six_oclock,six o'clock,ساعت شش,clock_6,review
-10,r10_sleep,sleep,خوابیدن,sleep,review
+10,r10_breakfast,I eat bread for breakfast.,من در نان صبح نان می‌خورم.,breakfast,review
+10,r10_brush,In the morning I brush my teeth.,صبح من دندان‌هایم را برس می‌کنم.,tb_brush,review
+10,r10_morning,It is morning. The sun is up.,صبح است. آفتاب برآمده است.,morning,review
+10,r10_six_oclock,Look at the clock. It is six o'clock.,ساعت را ببین. ساعت شش است.,clock_6,review
+10,r10_sleep,Good night! I sleep at night.,شب بخیر! من شب می‌خوابم.,sleep,review
 
 # 11 Clothes 1
 11,clothes,clothes,کالا,,clothes
@@ -146,6 +158,28 @@ unit,key,en,fa,picture,tags
 12,take_off_your_shoes,Take off your shoes.,بوت‌هایت را بکش.,,phrase
 12,cold_dialogue,f: It is cold. Put on your coat. // m: My coat is warm.,هوا سرد است. بالاپوشت را بپوش. بالاپوش من گرم است.,,dialogue
 
+# 12b Rain and snow (version 2)
+12b,rain,rain,باران,rain,weather
+12b,snow,snow,برف,snow,weather
+12b,ice,ice,یخ,ice,weather
+12b,wind,wind,باد,wind,weather
+12b,it_is_hot_today,It is hot today.,امروز هوا گرم است.,,phrase
+12b,it_rains,It rains. I take my umbrella.,باران می‌بارد. من چتری‌ام را می‌گیرم.,,phrase
+12b,it_snows,It snows. I wear my coat and my hat.,برف می‌بارد. من بالاپوش و کلاهم را می‌پوشم.,,phrase
+12b,the_wind_is_cold,The wind is cold.,باد سرد است.,,phrase
+12b,weather_dialogue,"f: Is it cold today? // m: Yes, it is. Look! Snow!",امروز هوا سرد است؟ بلی، سرد است. ببین! برف!,,dialogue
+
+# 12c The four seasons (version 2)
+12c,spring,spring,بهار,spring,season
+12c,summer,summer,تابستان,summer,season
+12c,autumn,autumn,خزان,autumn,season
+12c,winter,winter,زمستان,winter,season
+12c,season,season,فصل,,season
+12c,in_winter_i_wear,In winter I wear a warm coat.,در زمستان من بالاپوش گرم می‌پوشم.,,phrase
+12c,in_summer_i_wear,In summer I wear sandals.,در تابستان من چپلک می‌پوشم.,,phrase
+12c,in_spring_it_rains,In spring it rains.,در بهار باران می‌بارد.,,phrase
+12c,season_dialogue,m: What season is it? // f: It is autumn. The wind is cold.,حالا کدام فصل است؟ خزان است. باد سرد است.,,dialogue
+
 # 13 She gets up early
 13,cook,cook,پختن,cook,work
 13,work,work,کار کردن,work,work
@@ -168,7 +202,7 @@ unit,key,en,fa,picture,tags
 14,do_dialogue_1,"f: Do you go to school? // m: Yes, I do.",تو به مکتب می‌روی؟ بلی، می‌روم.,,dialogue
 14,does_dialogue_1,"m: Does she play? // f: Yes, she does.",او بازی می‌کند؟ بلی، می‌کند.,,dialogue
 14,does_dialogue_2,"f: Does he get up late? // m: No, he doesn't. He never gets up late.",او ناوقت از خواب می‌خیزد؟ نه، نمی‌خیزد. او هیچ وقت ناوقت از خواب نمی‌خیزد.,,dialogue
-14,r14_play,play,بازی کردن,play,review
+14,run,run,دویدن,run,routine
 
 # 15 My home 1
 15,room,room,اطاق,room,home
@@ -194,11 +228,23 @@ unit,key,en,fa,picture,tags
 16,it_is_dark,"It is dark. Give me the lamp, please.",تاریک است. لطفاً چراغ را به من بده.,,phrase
 16,home_dialogue_2,m: What is this? // f: This is a mirror.,این چیست؟ این آیینه است.,,dialogue
 
+# 16b Around the house (version 2)
+16b,toilet,toilet,تشناب,latrine,home
+16b,chimney,chimney,دودکش,chimney,home
+16b,fence,fence,کتاره,fence,home
+16b,pump,pump,بمبه,water_pump,home
+16b,water_from_the_pump,We get water from the pump.,ما از بمبه آب می‌گیریم.,,phrase
+16b,the_toilet_is_in_the_yard,The toilet is in the yard.,تشناب در حویلی است.,,phrase
+16b,our_yard_has_a_fence,Our yard has a fence.,حویلی ما کتاره دارد.,,phrase
+16b,toilet_dialogue,"f: Where is the toilet, please? // m: It is next to the wall.",لطفاً، تشناب کجاست؟ پهلوی دیوار است.,,dialogue
+
 # 17 Where is it?
 17,in,in,در,pos_in,place
 17,on,on,بالای,pos_on,place
 17,under,under,زیر,pos_under,place
 17,next_to,next to,پهلوی,pos_next_to,place
+17,behind,behind,پشت,pos_behind,place
+17,in_front_of,in front of,پیش روی,pos_in_front,place
 17,where_is_it,Where is it?,کجاست؟,,phrase
 17,the_ball_is_in_the_box,The ball is in the box.,توپ در صندوق است.,,phrase
 17,the_cat_is_under_the_table,The cat is under the table.,پشک زیر میز است.,,phrase
@@ -206,26 +252,26 @@ unit,key,en,fa,picture,tags
 17,where_dialogue_2,f: Where is my shoe? // m: It is under the bed.,بوت من کجاست؟ زیر تخت خواب است.,,dialogue
 17,where_dialogue_3,m: Where is the cat? // f: It is on the roof.,پشک کجاست؟ بالای بام است.,,dialogue
 
-# 18 I can read: words with a and o (reading is practised in sound_catcher, sentence_train, memory and baskets)
+# 18 I can read: words with a and o. Version 2: new three-letter words here; the words the child knows by ear (cat, hat, dog ...) are read in sound_catcher, sentence_train, memory and baskets
 18,fox,fox,روباه,fox,read
-18,r18_cat,cat,پشک,cat,read
-18,r18_hat,hat,کلاه,hat,read
-18,r18_bag,bag,بکس,bag,read
-18,r18_dog,dog,سگ,dog,read
-18,r18_pot,pot,دیگ,pot,read
-18,r18_box,box,صندوق,box,read
+18,map,map,نقشه,map,read
+18,pan,pan,تابه,pan,read
+18,log,log,کنده چوب,log,read
+18,ant,ant,مورچه,ant,read
+18,fan,fan,پکه,fan,read
 18,i_can_read,I can read.,من خوانده می‌توانم.,,phrase
 18,a_cat_and_a_hat,A cat and a hat.,یک پشک و یک کلاه.,,phrase
 18,a_fox_in_a_box,A fox in a box.,یک روباه در صندوق.,,phrase
+18,an_ant_on_a_log,An ant on a log.,یک مورچه بالای کنده چوب.,,phrase
 
 # 19 I can read: words with e, i and u
 19,jug,jug,کوزه,water_jug,read
-19,r19_pen,pen,قلم,pen,read
-19,r19_hen,hen,مرغ,hen,read
-19,r19_bed,bed,تخت خواب,bed,read
-19,r19_leg,leg,لنگ,leg,read
-19,r19_sun,sun,آفتاب,sun,read
-19,r19_cup,cup,پیاله,cup,read
+19,net,net,جال,net,read
+19,web,web,تار جولا,web,read
+19,pin,pin,سنجاق,pin,read
+19,lid,lid,سرپوش,lid,read
+19,bug,bug,خزنده,bug,read
+19,rug,rug,قالینچه,carpet,read
 19,a_red_hen,A red hen.,یک مرغ سرخ.,,phrase
 19,ten_pens,Ten pens.,ده قلم.,,phrase
 19,six_big_jugs,Six big jugs.,شش کوزهٔ کلان.,,phrase
@@ -236,8 +282,8 @@ unit,key,en,fa,picture,tags
 20,review_dialogue_3,"f: Do you help your mother? // m: Yes, I do.",تو به مادرت کمک می‌کنی؟ بلی، می‌کنم.,,dialogue
 20,review_dialogue_4,m: What time does she get up? // f: She gets up at six o'clock.,او ساعت چند از خواب می‌خیزد؟ او ساعت شش از خواب می‌خیزد.,,dialogue
 20,review_dialogue_5,f: Where is your brother? // m: He is in the kitchen.,برادرت کجاست؟ او در آشپزخانه است.,,dialogue
-20,r20_kite,kite,کاغذپران,kite,review
-20,r20_shirt,shirt,پیراهن,shirt,review
-20,r20_lamp,lamp,چراغ,lamp,review
-20,r20_cook,cook,پختن,cook,review
-20,r20_room,room,اطاق,room,review
+20,r20_kite,I play with my kite.,من با کاغذپرانم بازی می‌کنم.,kite,review
+20,r20_shirt,This is my new shirt.,این پیراهن نو من است.,shirt,review
+20,r20_lamp,The lamp is on the table.,چراغ بالای میز است.,lamp,review
+20,r20_cook,My mother and my sister cook dinner.,مادرم و خواهرم نان شب می‌پزند.,cook,review
+20,r20_room,This is my room.,این اطاق من است.,room,review

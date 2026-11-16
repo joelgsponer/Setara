@@ -1,0 +1,79 @@
+round,intro_fa,say_en,say_fa,targets,others,need,help_fa
+# Catch what the rule says. The rule is spoken in English; Y gives it in Dari.
+# 05: face and body. The plural is heard: eyes; feet; teeth.
+05,گوش کن که کدام عضو بدن را بگیری. فقط همان را بگیر. چیزهای دیگر را بگذار که بیفتد.,Catch the heads.,,head,leg|tooth|mouth|foot|arm,3,سر را بگیر.
+05,,Catch the hair.,,hair,eye|hand|head|tooth|mouth,3,موی را بگیر.
+05,,Catch the eyes.,,eye,hair|head|arm|nose|mouth,3,چشم را بگیر.
+05,,Catch the ears.,,ear,head|foot|hand|mouth|tooth,3,گوش را بگیر.
+05,,Catch the noses.,,nose,hand|arm|finger|head|ear,3,بینی را بگیر.
+05,,Catch the mouths.,,mouth,arm|head|tooth|foot|nose,3,دهن را بگیر.
+05,,Catch the hands.,,hand,arm|finger|head|nose|eye,3,دست را بگیر.
+05,,Catch the arms.,,arm,ear|nose|tooth|foot|hair,3,بازو را بگیر.
+05,,Catch the legs.,,leg,eye|mouth|head|hair|hand,3,لنگ را بگیر.
+05,,Catch the feet.,,foot,finger|arm|hair|nose|tooth,3,پای را بگیر.
+05,,Catch the fingers.,,finger,nose|foot|head|ear|eye,3,انگشت را بگیر.
+05,,Catch the tooth.,,tooth,head|eye|hand|finger|hair,3,دندان را بگیر.
+05,,Catch the eyes and the ears.,,eye|ear,nose|mouth|hand|foot,4,چشم‌ها و گوش‌ها را بگیر.
+05,,Catch the hands and the feet.,,hand|foot,head|ear|tooth|eye,4,دست‌ها و پای‌ها را بگیر.
+# 09: food and drink.
+09,گوش کن که کدام خوراکی را بگیری. فقط همان را بگیر. چیزهای دیگر را نگیر.,Catch the rice.,,rice,water|tea|sugar|egg|yoghurt,3,برنج را بگیر.
+09,,Catch the milk.,,milk,tea|bread|egg|apple|meat,3,شیر را بگیر.
+09,,Catch the meat.,,meat,apple|milk|water|bread|egg,3,گوشت را بگیر.
+09,,Catch the yoghurt.,,yoghurt,egg|meat|milk|sugar|apple,3,ماست را بگیر.
+09,,Catch the sugar.,,sugar,yoghurt|egg|apple|milk|water,3,بوره را بگیر.
+09,,Catch the food.,,rice|milk|meat|yoghurt|sugar|bread|egg,ball|rope|box|key|comb|stone|leaf,5,خوراکی‌ها را بگیر.
+09,,Catch the milk and the tea.,,milk|tea,rice|meat|water|sugar,4,شیر و چای را بگیر.
+09,,Catch the bread and the rice.,,bread|rice,meat|milk|egg|yoghurt,4,نان و برنج را بگیر.
+09,,Catch the white food.,,rice|milk|yoghurt|sugar|egg,meat|tea|bread|apple,5,خوراکی‌های سفید را بگیر.
+09,,Catch the meat and the eggs.,,meat|egg,rice|milk|tea|bread,4,گوشت و تخم مرغ‌ها را بگیر.
+09,,Catch the yoghurt and the sugar.,,yoghurt|sugar,milk|meat|water|egg,4,ماست و بوره را بگیر.
+09,,Catch what I like: rice and meat.,,rice|meat,sugar|tea|apple|yoghurt,4,چیزی را بگیر که من خوش دارم: برنج و گوشت.
+# 12: fruit and vegetables; the words of unit 13.
+12,گوش کن: میوه را بگیری یا ترکاری را؟ یا فقط یک چیز را؟ فقط همان را بگیر.,Catch the fruit.,,grapes|pomegranate|watermelon|orange|apricot|mulberry,potato|tomato|onion|carrot|spinach,5,میوه‌ها را بگیر.
+12,,Catch the vegetables.,,potato|tomato|onion|carrot|spinach,grapes|pomegranate|watermelon|orange|apricot,5,ترکاری‌ها را بگیر.
+12,,Catch the grapes.,,grapes,apricot|mulberry|carrot|onion,3,انگور را بگیر.
+12,,Catch the pomegranates.,,pomegranate,watermelon|onion|orange|tomato,3,انار را بگیر.
+12,,Catch the watermelons.,,watermelon,carrot|tomato|pomegranate|orange,3,تربوز را بگیر.
+12,,Catch the oranges.,,orange,watermelon|potato|mulberry|onion,3,مالته را بگیر.
+12,,Catch the apricots.,,apricot,tomato|watermelon|grapes|mulberry,3,زردآلو را بگیر.
+12,,Catch the mulberries.,,mulberry,grapes|spinach|apricot|onion,3,توت را بگیر.
+12,,Catch the potatoes.,,potato,watermelon|tomato|onion|grapes,3,کچالو را بگیر.
+12,,Catch the tomatoes.,,tomato,apricot|spinach|orange|potato,3,بادنجان رومی را بگیر.
+12,,Catch the onions.,,onion,spinach|potato|grapes|watermelon,3,پیاز را بگیر.
+12,,Catch the carrots.,,carrot,mulberry|onion|apricot|watermelon,3,زردک را بگیر.
+12,,Catch the spinach.,,spinach,carrot|potato|onion|tomato,3,پالک را بگیر.
+12,,Catch the red fruit.,,pomegranate|apple,grapes|orange|apricot|tomato,4,میوه‌های سرخ را بگیر.
+12,,Catch the walnuts and the almonds.,,walnut|almond,potato|stone|apricot|onion,4,چهارمغزها و بادام‌ها را بگیر.
+12,,Catch the honey and the sweets.,,honey|candy,corn|onion|spinach|potato,4,عسل و شیرینی را بگیر.
+# 15: animals: one kind; all; the big ones; the small ones; the babies.
+15,گوش کن که کدام حیوان را بگیری. فقط همان را بگیر. حیوان‌های دیگر را بگذار که بروند.,Catch the animals.,,sheep|goat|cow|donkey|hen|horse|dog|cat|sparrow|fish|mouse|camel,rice|milk|meat|yoghurt|sugar|ball|rope|box|key|comb,5,حیوان‌ها را بگیر.
+15,,Catch the sheep.,,sheep,fish|cow|mouse|calf|sparrow,3,گوسفند را بگیر.
+15,,Catch the goats.,,goat,fish|dog|donkey|camel|sparrow,3,بز را بگیر.
+15,,Catch the cows.,,cow,fish|camel|goat|calf|cat,3,گاو را بگیر.
+15,,Catch the donkeys.,,donkey,chick|sheep|camel|lamb|kitten,3,خر را بگیر.
+15,,Catch the hens.,,hen,horse|kitten|fish|sheep|sparrow,3,مرغ را بگیر.
+15,,Catch the horses.,,horse,sheep|chick|fish|kitten|calf,3,اسپ را بگیر.
+15,,Catch the dogs.,,dog,camel|hen|calf|lamb|sparrow,3,سگ را بگیر.
+15,,Catch the cats.,,cat,hen|sheep|donkey|chick|dog,3,پشک را بگیر.
+15,,Catch the birds.,,sparrow,donkey|dog|mouse|kitten|cat,3,پرنده را بگیر.
+15,,Catch the fish.,,fish,goat|camel|kitten|sparrow|donkey,3,ماهی را بگیر.
+15,,Catch the mouse.,,mouse,cat|camel|donkey|goat|lamb,3,موش را بگیر.
+15,,Catch the camels.,,camel,donkey|horse|dog|mouse|lamb,3,شتر را بگیر.
+15,,Catch the big animals.,,cow|horse|camel|donkey,mouse|chick|fish|sparrow|kitten,4,حیوان‌های کلان را بگیر.
+15,,Catch the small animals.,,mouse|chick|sparrow|kitten,cow|horse|camel|donkey,4,حیوان‌های خُرد را بگیر.
+15,,Catch the baby animals.,,lamb|calf|chick|kitten,sheep|cow|hen|cat,4,چوچه‌های حیوان‌ها را بگیر.
+# 18: things at home.
+18,گوش کن که کدام چیز خانه را بگیری. فقط همان را بگیر. چیزهای دیگر را نگیر.,Catch the beds.,,bed,pillow|bucket|carpet|blanket|basket,3,تخت خواب را بگیر.
+18,,Catch the carpets.,,carpet,bucket|bed|plate|broom|pot,3,قالین را بگیر.
+18,,Catch the cups.,,cup,soap|broom|basket|bed|spoon,3,پیاله را بگیر.
+18,,Catch the plates.,,plate,pillow|spoon|pot|blanket|soap,3,بشقاب را بگیر.
+18,,Catch the spoons.,,spoon,bucket|broom|blanket|pot|carpet,3,قاشق را بگیر.
+18,,Catch the pots.,,pot,plate|soap|blanket|basket|spoon,3,دیگ را بگیر.
+18,,Catch the blankets.,,blanket,carpet|pot|soap|pillow|broom,3,کمپل را بگیر.
+18,,Catch the pillows.,,pillow,carpet|soap|basket|plate|cup,3,بالشت را بگیر.
+18,,Catch the baskets.,,basket,pillow|spoon|cup|soap|bucket,3,سبد را بگیر.
+18,,Catch the buckets.,,bucket,blanket|cup|plate|basket|bed,3,سطل را بگیر.
+18,,Catch the brooms.,,broom,plate|blanket|spoon|soap|cup,3,جاروب را بگیر.
+18,,Catch the soap.,,soap,pillow|bed|basket|bucket|plate,3,صابون را بگیر.
+18,,Catch the cups and the plates.,,cup|plate,pot|spoon|bucket|basket,4,پیاله‌ها و بشقاب‌ها را بگیر.
+18,,Catch the pillows and the blankets.,,pillow|blanket,carpet|bed|broom|soap,4,بالشت‌ها و کمپل‌ها را بگیر.

@@ -1,0 +1,11 @@
+round,intro_fa,say_en,say_fa,goods,target,units,mode,help_fa
+# PRACTISE where a quantity fits: the number is inside a sentence about helping, in the past.
+19,هر جمله از کمک می‌گوید و یک عدد دارد. گوش کن که چند دانه بود و همان قدر روی ترازو بگذار.,I brought four eggs for my neighbour.,,egg,4,1,count,من برای همسایه‌ام چهار تخم مرغ آوردم.
+19,,She cooked soup with six potatoes.,,potato,6,1,count,او با شش کچالو شوربا پخت.
+19,,We carried three buckets of water.,,water_bucket,3,1,count,ما سه سطل آب بردیم.
+19,,Grandmother wanted five apples.,,apple,5,1,count,مادرکلان پنج سیب می‌خواست.
+19,,I gave her two blankets.,,blanket,2,1,count,من به او دو کمپل دادم.
+19,,He carried eight pieces of firewood.,,firewood,8,1,count,او هشت دانه هیزم برد.
+19,,Mother gave ten onions to the neighbour.,,onion,10,1,count,مادر به همسایه ده پیاز داد.
+19,,The nurse had seven bandages.,,bandage,7,1,count,نرس هفت بنداژ داشت.
+19,,I bought twelve lemons for the tea.,,lemon,12,1,count,من برای چای دوازده لیمو خریدم.

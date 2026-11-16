@@ -9,6 +9,12 @@ round,say_en,say_fa,show,answer,distractors,help_fa,hop
 03,f: How much is the book? // m: It is sixty afghani.,,book,t:60,t:16|t:6|t:70,کتاب چند است؟ شصت افغانی است.,
 03,It is eighty afghani.,,,t:80,t:18|t:8|t:88,هشتاد افغانی است.,
 03,m: How much is the bag? // f: It is seventy afghani.,,bag,t:70,t:17|t:7|t:60,بکس چند است؟ هفتاد افغانی است.,
+# version 2: more prices; every round is a pool (draw 8). Round 03 now also has the teens, so that thirty and thirteen are both right answers.
+03,It is thirteen afghani.,,,t:13,t:30|t:3|t:31,سیزده افغانی است.,
+03,It is fifteen afghani.,,,t:15,t:50|t:5|t:51,پانزده افغانی است.,
+03,m: How much is the pen? // f: It is fourteen afghani.,,pen,t:14,t:40|t:4|t:41,قلم چند است؟ چهارده افغانی است.,
+03,f: How much is the rope? // m: It is nineteen afghani.,,rope,t:19,t:90|t:9|t:91,ریسمان چند است؟ نزده افغانی است.,
+03,It is sixteen afghani.,,,t:16,t:60|t:6|t:61,شانزده افغانی است.,
 # 10: any price up to one hundred.
 10,f: How much are the bananas? // m: They are sixty-five afghani.,,banana,t:65,t:56|t:75|t:60,کیله‌ها چند است؟ شصت و پنج افغانی است.,
 10,m: How much are the pears? // f: They are forty-eight afghani.,,pear,t:48,t:84|t:40|t:58,ناک‌ها چند است؟ چهل و هشت افغانی است.,
@@ -18,6 +24,11 @@ round,say_en,say_fa,show,answer,distractors,help_fa,hop
 10,m: How much is a jar of honey? // f: It is one hundred afghani.,,jar,t:100,t:10|t:90|t:1,یک مرتبان عسل چند است؟ صد افغانی است.,
 10,f: How much is the garlic? // m: It is thirty-six afghani.,,garlic,t:36,t:63|t:26|t:30,سیر چند است؟ سی و شش افغانی است.,
 10,m: How much are the cherries? // f: They are eighty-three afghani.,,cherries,t:83,t:38|t:80|t:93,گیلاس چند است؟ هشتاد و سه افغانی است.,
+10,f: How much are the plums? // m: They are fifty-seven afghani.,,plum,t:57,t:75|t:50|t:47,آلوها چند است؟ پنجاه و هفت افغانی است.,
+10,m: How much are the figs? // f: They are twenty-nine afghani.,,fig,t:29,t:92|t:19|t:20,انجیرها چند است؟ بیست و نُه افغانی است.,
+10,f: How much is the turnip? // m: It is twelve afghani.,,turnip,t:12,t:20|t:2|t:21,شلغم چند است؟ دوازده افغانی است.,
+10,m: How much are the raisins? // f: They are eighty-six afghani.,,raisins,t:86,t:68|t:80|t:96,کشمش چند است؟ هشتاد و شش افغانی است.,
+10,f: How much is half a kilo of meat? // m: It is sixty-one afghani.,,meat,t:61,t:16|t:60|t:71,نیم کیلو گوشت چند است؟ شصت و یک افغانی است.,
 # 18: hundreds.
 18,It is two hundred afghani.,,,t:200,t:100|t:20|t:300,دوصد افغانی است.,
 18,It is five hundred afghani.,,,t:500,t:50|t:400|t:900,پنجصد افغانی است.,
@@ -27,3 +38,8 @@ round,say_en,say_fa,show,answer,distractors,help_fa,hop
 18,m: How much is the shovel? // f: It is two hundred and twenty afghani.,,shovel,t:220,t:202|t:212|t:120,بیل چند است؟ دوصد و بیست افغانی است.,
 18,f: How much is the hammer? // m: It is one hundred and ten afghani.,,hammer,t:110,t:101|t:200|t:10,چکش چند است؟ یکصد و ده افغانی است.,
 18,m: How much is it all together? // f: It is four hundred and sixty afghani.,,,t:460,t:416|t:406|t:640,جمله چند می‌شود؟ چهارصد و شصت افغانی می‌شود.,
+18,f: How much is the teapot? // m: It is two hundred and fifty afghani.,,teapot,t:250,t:205|t:215|t:520,چاینک چند است؟ دوصد و پنجاه افغانی است.,
+18,m: How much is the tray? // f: It is one hundred and thirty afghani.,,tray,t:130,t:113|t:103|t:310,پتنوس چند است؟ یکصد و سی افغانی است.,
+18,f: How much is the blanket? // m: It is seven hundred afghani.,,blanket,t:700,t:70|t:17|t:600,کمپل چند است؟ هفت‌صد افغانی است.,
+18,m: How much is the watch? // f: It is three hundred and forty afghani.,,watch,t:340,t:304|t:314|t:430,ساعت دستی چند است؟ سه‌صد و چهل افغانی است.,
+18,It is six hundred afghani.,,,t:600,t:60|t:16|t:500,شش‌صد افغانی است.,

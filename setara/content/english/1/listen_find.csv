@@ -1,0 +1,82 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+# Two and three words together: a red book; three red apples; What colour is the pen? How many red pens?
+# 11: a colour and a thing. Wrong choices: the same thing in other colours and another thing in the same colour.
+11,دو کلمه را با هم گوش کن: رنگ و چیز. تصویری را انتخاب کن که هر دو در آن درست است.,a red book,,,book,book_yellow|book_blue|pen_red,یک کتاب سرخ
+11,,Look! A blue book.,,,book_blue,book|book_green|pencil_blue,یک کتاب آبی
+11,,a green book,,,book_green,book|book_yellow|pencil_green,یک کتاب سبز
+11,,a yellow book,,,book_yellow,book_green|book|pencil,یک کتاب زرد
+11,,a blue pen,,,pen,pen_red|pen_black|book_blue,یک قلم آبی
+11,,Look! A red pen.,,,pen_red,pen_black|pen|apple,یک قلم سرخ
+11,,a green pen,,,pen_green,pen|pen_black|apple_green,یک قلم سبز
+11,,Look! A green bag.,,,bag_green,bag_red|bag_blue|pen_green,یک بکس سبز
+11,,a red bag,,,bag_red,bag|bag_blue|pen_red,یک بکس سرخ
+11,,a blue bag,,,bag_blue,bag_green|bag_red|pen,یک بکس آبی
+11,,a yellow pencil,,,pencil,pencil_red|pencil_green|apple_yellow,یک پنسل زرد
+11,,a red pencil,,,pencil_red,pencil|pencil_blue|pen_red,یک پنسل سرخ
+11,,a blue pencil,,,pencil_blue,pencil_green|pencil|book_blue,یک پنسل آبی
+11,,a green pencil,,,pencil_green,pencil_red|pencil|pen_green,یک پنسل سبز
+11,,a red apple,,,apple,apple_yellow|apple_green|pen_red,یک سیب سرخ
+11,,a green apple,,,apple_green,apple_yellow|apple|pen_green,یک سیب سبز
+11,,a yellow apple,,,apple_yellow,apple_green|apple|pencil,یک سیب زرد
+# 12: number; colour and thing: three red apples. Wrong choices differ in the number; the colour or the thing.
+12,سه کلمه را گوش کن: چند دانه، چه رنگ و چه چیز. حساب کن و تصویر درست را انتخاب کن.,a black pen,,,pen_black,pen_red|pen_green|board,یک قلم سیاه
+12,,a brown bag,,,bag,bag_green|bag_red|chair,یک بکس نصواری
+12,,two red pens,,,p:pen_red*2,p:pen_red*3|p:pen_green*2|p:apple*2,دو قلم سرخ
+12,,three green pencils,,,p:pencil_green*3,p:pencil_green*4|p:pencil*3|p:pen_green*3,سه پنسل سبز
+12,,four red apples,,,p:apple*4,p:apple*2|p:apple_green*4|p:pencil_red*4,چهار سیب سرخ
+12,,five yellow pencils,,,p:pencil*5,p:pencil*3|p:pencil_red*5|p:apple_yellow*5,پنج پنسل زرد
+12,,two green apples,,,p:apple_green*2,p:apple_green*3|p:apple*2|p:bag_green*2,دو سیب سبز
+12,,three blue bags,,,p:bag_blue*3,p:bag_blue*4|p:bag*3|p:pen*3,سه بکس آبی
+12,,four black pens,,,p:pen_black*4,p:pen_black*2|p:pen_red*4|p:board*4,چهار قلم سیاه
+12,,three yellow books,,,p:book_yellow*3,p:book_yellow*4|p:book*3|p:pencil*3,سه کتاب زرد
+12,,five red pencils,,,p:pencil_red*5,p:pencil_red*3|p:pencil*5|p:apple*5,پنج پنسل سرخ
+12,,two brown bags,,,p:bag*2,p:bag*3|p:bag_blue*2|p:chair*2,دو بکس نصواری
+12,,three white eggs,,,p:egg*3,p:egg*5|p:apple*3|p:apple_yellow*3,سه تخم مرغ سفید
+12,,four green books,,,p:book_green*4,p:book_green*2|p:book*4|p:pencil_green*4,چهار کتاب سبز
+12,,five blue pens,,,p:pen*5,p:pen*3|p:pen_red*5|p:pencil_blue*5,پنج قلم آبی
+12,,two yellow apples,,,p:apple_yellow*2,p:apple_yellow*3|p:apple*2|p:pencil*2,دو سیب زرد
+# 17: a number and a thing; with the plural. Wrong choices: the same thing in another number; another thing in the same number.
+17,گوش کن که چند دانه است و چه چیز است. تصویرها را حساب کن و تصویر درست را انتخاب کن.,Look! Two books.,,,p:book*2,p:book*3|p:bag*2|p:bag*3,دو کتاب
+17,,five pencils,,,p:pencil*5,p:pencil*2|p:pen*5|p:pen*2,پنج پنسل
+17,,three bags,,,p:bag*3,p:bag*5|p:book*3|p:book*5,سه بکس
+17,,four eggs,,,p:egg*4,p:egg*2|p:apple*4|p:apple*2,چهار تخم مرغ
+17,,six apples,,,p:apple*6,p:apple*3|p:egg*6|p:egg*3,شش سیب
+17,,one pen,,,p:pen*1,p:pen*4|p:pencil*1|p:pencil*4,یک قلم
+17,,seven books,,,p:book*7,p:book*4|p:pen*7|p:pen*4,هفت کتاب
+17,,eight pens,,,p:pen*8,p:pen*5|p:pencil*8|p:pencil*5,هشت قلم
+17,,nine eggs,,,p:egg*9,p:egg*6|p:apple*9|p:apple*6,نُه تخم مرغ
+17,,ten pencils,,,p:pencil*10,p:pencil*6|p:pen*10|p:pen*6,ده پنسل
+17,,two chairs,,,p:chair*2,p:chair*4|p:table*2|p:table*4,دو چوکی
+17,,three doors,,,p:door*3,p:door*1|p:window*3|p:window*1,سه دروازه
+17,,four windows,,,p:window*4,p:window*2|p:door*4|p:door*2,چهار کلکین
+17,,one table,,,p:table*1,p:table*3|p:chair*1|p:chair*3,یک میز
+# 19: a question about the picture in the middle: What colour is the pen? The answer is a colour.
+19,تصویر میانه را ببین و سوال را گوش کن: چه رنگ است؟ رنگ درست را انتخاب کن.,What colour is the pen?,,pen_red,color_red,color_blue|color_white|color_yellow,قلم چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the pen?,,pen_green,color_green,color_white|color_red|color_blue,قلم چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the book?,,book_blue,color_blue,color_green|color_white|color_yellow,کتاب چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the book?,,book_yellow,color_yellow,color_red|color_blue|color_brown,کتاب چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the bag?,,bag_green,color_green,color_black|color_yellow|color_blue,بکس چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the table?,,table,color_brown,color_white|color_black|color_yellow,میز چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the pencil?,,pencil,color_yellow,color_brown|color_blue|color_white,پنسل چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the pencil?,,pencil_blue,color_blue,color_yellow|color_green|color_red,پنسل چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the apple?,,apple,color_red,color_black|color_brown|color_green,سیب چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the apple?,,apple_green,color_green,color_yellow|color_black|color_brown,سیب چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the door?,,door,color_brown,color_red|color_yellow|color_black,دروازه چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the board?,,board,color_black,color_green|color_red|color_brown,تخته چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the egg?,,egg,color_white,color_yellow|color_red|color_black,تخم مرغ چه رنگ است؟ تصویر میانه را ببین.
+19,,What colour is the chair?,,chair,color_brown,color_green|color_white|color_black,چوکی چه رنگ است؟ تصویر میانه را ببین.
+# 20: How many ...? Count the pictures in the middle; pick the numeral. Every number from 1 to 10 is right once or twice.
+20,سوال را گوش کن: چند دانه؟ تصویرهای میانه را حساب کن و عدد درست را انتخاب کن.,How many red pens?,,p:pen_red*3,t:3,t:2|t:4|t:5,چند قلم سرخ است؟ حساب کن.
+20,,How many blue books?,,p:book_blue*2,t:2,t:1|t:3|t:4,چند کتاب آبی است؟ حساب کن.
+20,,How many green bags?,,p:bag_green*4,t:4,t:3|t:5|t:6,چند بکس سبز است؟ حساب کن.
+20,,How many yellow pencils?,,p:pencil*5,t:5,t:4|t:6|t:7,چند پنسل زرد است؟ حساب کن.
+20,,How many red apples?,,p:apple*6,t:6,t:5|t:7|t:8,چند سیب سرخ است؟ حساب کن.
+20,,How many green apples?,,p:apple_green*1,t:1,t:2|t:3,چند سیب سبز است؟ حساب کن.
+20,,How many black pens?,,p:pen_black*7,t:7,t:6|t:8|t:9,چند قلم سیاه است؟ حساب کن.
+20,,How many white eggs?,,p:egg*8,t:8,t:7|t:9|t:10,چند تخم مرغ سفید است؟ حساب کن.
+20,,How many chairs?,,p:chair*2,t:2,t:1|t:3|t:4,چند چوکی است؟ حساب کن.
+20,,How many green books?,,p:book_green*9,t:9,t:8|t:10|t:7,چند کتاب سبز است؟ حساب کن.
+20,,How many blue pencils?,,p:pencil_blue*10,t:10,t:9|t:8,چند پنسل آبی است؟ حساب کن.
+20,,How many tables?,,p:table*3,t:3,t:2|t:4|t:5,چند میز است؟ حساب کن.
+20,,How many windows?,,p:window*4,t:4,t:3|t:5|t:6,چند کلکین است؟ حساب کن.
+20,,How many red bags?,,p:bag_red*5,t:5,t:4|t:6|t:7,چند بکس سرخ است؟ حساب کن.

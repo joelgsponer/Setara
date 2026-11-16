@@ -1,6 +1,7 @@
 unit,key,en,fa,picture,tags
 # English level 4 "At the bazaar". unit = classroom lesson number.
-# Rows tagged review repeat an earlier word so that the picture game has at least five pictures in the unit.
+# Rows tagged review bring back a word of an earlier LEVEL; a word of this level comes back only in the review units 10 and 20, inside a new sentence.
+# Units with a letter (06b, 07b, 19b) were added in version 2: more words on the same theme.
 
 # 01 The bazaar
 01,bazaar,bazaar,بازار,bazaar,place
@@ -8,7 +9,8 @@ unit,key,en,fa,picture,tags
 01,shopkeeper,shopkeeper,دکاندار,shopkeeper,people
 01,customer,customer,مشتری,customer,people
 01,street,street,سرک,street,place
-01,cart,cart,کراچی,cart,thing
+01,cart,cart,کراچی,cart,bazaar
+01,butchers,butcher's,قصابی,butcher,bazaar
 01,this_is_the_bazaar,This is the bazaar.,این بازار است.,,phrase
 01,lets_go_to_the_bazaar,Let's go to the bazaar.,بیا که به بازار برویم.,,phrase
 01,welcome_dialogue,f: Hello! // m: Hello! Welcome to my shop.,سلام! سلام! به دکان من خوش آمدید.,,dialogue
@@ -20,8 +22,8 @@ unit,key,en,fa,picture,tags
 02,money,money,پول,money,money
 02,r02_basket,basket,سبد,basket,review
 02,r02_bread,bread,نان,bread,review
-02,r02_apple,apple,سیب,apple,review
-02,r02_egg,egg,تخم مرغ,egg,review
+02,r02_fish,fish,ماهی,fish,review
+02,r02_meat,meat,گوشت,meat,review
 02,i_want_to_buy_bread,I want to buy bread.,من می‌خواهم نان بخرم.,,phrase
 02,he_sells_apples,He sells apples.,او سیب می‌فروشد.,,phrase
 02,want_dialogue,"f: What do you want? // m: I want to buy eggs, please.",شما چه می‌خواهید؟ لطفاً، من می‌خواهم تخم مرغ بخرم.,,dialogue
@@ -75,12 +77,23 @@ unit,key,en,fa,picture,tags
 06,fresh_dialogue,"m: Are the tomatoes fresh? // f: Yes, they are.",بادنجان رومی تازه است؟ بلی، تازه است.,,dialogue
 06,how_much_dialogue_4,f: How much is the cabbage? // m: It is fifteen afghani.,کرم چند است؟ پانزده افغانی است.,,dialogue
 
+# 06b Dried fruit and more (version 2)
+06b,plum,plum,آلو,plum,fruit
+06b,fig,fig,انجیر,fig,fruit
+06b,turnip,turnip,شلغم,turnip,vegetable
+06b,radish,radish,ملی,radish,vegetable
+06b,raisins,raisins,کشمش,raisins,fruit
+06b,pistachios,pistachios,پسته,pistachios,fruit
+06b,these_plums_are_sour,These plums are sour.,این آلوها ترش است.,,phrase
+06b,raisins_and_pistachios,I want some raisins and some pistachios.,من کمی کشمش و کمی پسته می‌خواهم.,,phrase
+06b,radishes_and_turnips,Radishes and turnips are vegetables.,ملی و شلغم ترکاری است.,,phrase
+06b,fig_dialogue,"f: Are the figs sweet? // m: Yes, they are very sweet.",انجیرها شیرین است؟ بلی، بسیار شیرین است.,,dialogue
 # 07 A kilo of rice
 07,kilo,kilo,کیلو,kilo,measure
 07,scales,scales,ترازو,scales,measure
 07,sack,sack,بوجی,sack,thing
 07,heavy,heavy,سنگین,heavy_load,measure
-07,r07_onion,onion,پیاز,onion,review
+07,r07_carrot,carrot,زردک,carrot,review
 07,r07_potato,potato,کچالو,potato,review
 07,a_kilo_of_rice,a kilo of rice,یک کیلو برنج,,phrase
 07,half_a_kilo_of_meat,half a kilo of meat,نیم کیلو گوشت,,phrase
@@ -88,6 +101,16 @@ unit,key,en,fa,picture,tags
 07,the_sack_is_heavy,The sack is heavy.,بوجی سنگین است.,,phrase
 07,kilo_dialogue,f: How much is a kilo of rice? // m: It is ninety afghani.,یک کیلو برنج چند است؟ نود افغانی است.,,dialogue
 
+# 07b Long and short, heavy and light (version 2)
+07b,long,long,دراز,rope_long,measure
+07b,short,short,کوتاه,rope_short,measure
+07b,light,light,سبک,feather,measure
+07b,half,half,نیم,bread_half,measure
+07b,i_want_the_long_rope,I want the long rope.,من ریسمان دراز را می‌خواهم.,,phrase
+07b,this_rope_is_too_short,This rope is too short.,این ریسمان بسیار کوتاه است.,,phrase
+07b,light_and_heavy,The basket is light. The sack is heavy.,سبد سبک است. بوجی سنگین است.,,phrase
+07b,half_a_watermelon,"Half a watermelon, please.",لطفاً نیم تربوز.,,phrase
+07b,rope_dialogue,"m: Do you want the long rope or the short rope? // f: The long rope, please.",ریسمان دراز را می‌خواهید یا کوتاه را؟ لطفاً ریسمان دراز را.,,dialogue
 # 08 How many? How much?
 08,ten_eggs,ten eggs,ده تخم مرغ,p:egg*10,phrase
 08,six_lemons,six lemons,شش لیمو,p:lemon*6,phrase
@@ -105,7 +128,7 @@ unit,key,en,fa,picture,tags
 09,tin,tin,قطی,can,thing
 09,packet,packet,پاکت,packet,thing
 09,jar,jar,مرتبان,jar,thing
-09,r09_sack,sack,بوجی,sack,review
+09,plastic_bag,plastic bag,خریطه پلاستیکی,plastic_bag,bazaar
 09,a_bottle_of_oil,a bottle of oil,یک بوتل روغن,,phrase
 09,a_packet_of_tea,a packet of tea,یک پاکت چای,,phrase
 09,a_jar_of_honey,a jar of honey,یک مرتبان عسل,,phrase
@@ -113,12 +136,12 @@ unit,key,en,fa,picture,tags
 09,packet_dialogue,"m: A packet of tea and a jar of honey, please. // f: Here you are.",لطفاً یک پاکت چای و یک مرتبان عسل. بفرمایید.,,dialogue
 
 # 10 Review: at the fruit and vegetable stall
-10,r10_shopkeeper,shopkeeper,دکاندار,shopkeeper,review
-10,r10_money,money,پول,money,review
-10,r10_melon,melon,خربوزه,melon,review
-10,r10_cucumber,cucumber,بادرنگ,cucumber,review
-10,r10_scales,scales,ترازو,scales,review
-10,r10_jar,jar,مرتبان,jar,review
+10,r10_shopkeeper,The shopkeeper has fresh fruit.,دکاندار میوهٔ تازه دارد.,shopkeeper,review
+10,r10_money,Here is the money.,این پول است.,money,review
+10,r10_melon,This melon is big and sweet.,این خربوزه کلان و شیرین است.,melon,review
+10,r10_cucumber,"Two cucumbers, please.",لطفاً دو بادرنگ.,cucumber,review
+10,r10_scales,Put the rice on the scales.,برنج را روی ترازو بگذارید.,scales,review
+10,r10_jar,The honey is in the jar.,عسل در مرتبان است.,jar,review
 10,review_dialogue_1,f: Hello! How much are the bananas? // m: They are sixty afghani a kilo.,سلام! کیله‌ها چند است؟ کیلوی شصت افغانی است.,,dialogue
 10,review_dialogue_2,"m: Two kilos of tomatoes, please. // f: Here you are. Eighty afghani.",لطفاً دو کیلو بادنجان رومی. بفرمایید. هشتاد افغانی.,,dialogue
 10,review_dialogue_3,"f: How many lemons do you want? // m: Five, please.",چند لیمو می‌خواهید؟ لطفاً پنج دانه.,,dialogue
@@ -140,8 +163,8 @@ unit,key,en,fa,picture,tags
 12,empty,empty,خالی,bowl_empty,word
 12,full,full,پُر,food_bowl,word
 12,shelf,shelf,رف,shelf,thing
-12,r12_egg,egg,تخم مرغ,egg,review
-12,r12_cheese,cheese,پنیر,cheese,review
+12,r12_honey,honey,عسل,honey,review
+12,r12_yoghurt,yoghurt,ماست,yoghurt,review
 12,i_have_some_rice,I have some rice.,من کمی برنج دارم.,,phrase
 12,do_you_have_any_eggs,Do you have any eggs?,شما تخم مرغ دارید؟,,phrase
 12,the_shelf_is_empty,The shelf is empty.,رف خالی است.,,phrase
@@ -167,6 +190,8 @@ unit,key,en,fa,picture,tags
 14,kebab,kebab,کباب,kebab,food
 14,samosa,samosa,سمبوسه,samosa,food
 14,chocolate,chocolate,چاکلیت,chocolate,food
+14,oven,oven,تنور,oven,bazaar
+14,ice_cream,ice cream,شیریخ,ice_cream,food
 14,the_bread_is_hot_and_fresh,The bread is hot and fresh.,نان گرم و تازه است.,,phrase
 14,the_baker_sells_bread,The baker sells bread.,نانوا نان می‌فروشد.,,phrase
 14,can_i_have_some_bread,"Can I have some bread, please?",لطفاً کمی نان بدهید.,,phrase
@@ -179,7 +204,9 @@ unit,key,en,fa,picture,tags
 15,needle,needle,سوزن,needle,thing
 15,button,button,دکمه,button,review
 15,wool,wool,پشم,wool,thing
-15,metre,metre,متر,metre,measure
+15,metre,metre,متر,metre,tailor
+15,thread,thread,تار,thread,tailor
+15,sewing_machine,sewing machine,ماشین خیاطی,sewing_machine,tailor
 15,three_metres_of_cloth,three metres of cloth,سه متر تکه,,phrase
 15,i_need_a_needle,I need a needle and some thread.,من به یک سوزن و کمی تار ضرورت دارم.,,phrase
 15,can_dialogue_3,"f: Can you make a dress? // m: Yes, I can.",یک پیراهن دوخته می‌توانید؟ بلی، می‌توانم.,,dialogue
@@ -192,7 +219,9 @@ unit,key,en,fa,picture,tags
 16,hammer,hammer,چکش,hammer,thing
 16,lock,lock,قفل,lock,thing
 16,shovel,shovel,بیل,shovel,thing
-16,axe,axe,تبر,axe,thing
+16,axe,axe,تبر,axe,house
+16,nail,nail,میخ,iron_nail,house
+16,saw,saw,اره,saw,house
 16,a_box_of_matches,a box of matches,یک قطی گوگرد,,phrase
 16,i_need_a_lamp,I need a lamp and some candles.,من به یک چراغ و چند شمع ضرورت دارم.,,phrase
 16,any_dialogue_2,"f: Do you have any locks? // m: Yes, I have some. They are fifty afghani.",شما قفل دارید؟ بلی، دارم. پنجاه افغانی است.,,dialogue
@@ -201,11 +230,12 @@ unit,key,en,fa,picture,tags
 # 17 Excuse me!
 17,excuse_me,Excuse me.,ببخشید.,,phrase
 17,youre_welcome,You're welcome.,قابل تشکر نیست.,,phrase
-17,r17_bakery,bakery,نانوایی,bakery,review
-17,r17_tailor,tailor,خیاط,tailor,review
-17,r17_lamp,lamp,چراغ,lamp,review
-17,r17_street,street,سرک,street,review
-17,r17_candle,candle,شمع,candle,review
+17,left,left,چپ,arrow_left,way
+17,right,right,راست,arrow_right,way
+17,straight_on,straight on,مستقیم,arrow_up,way
+17,r17_bridge,bridge,پل,bridge,review
+17,r17_clinic,clinic,کلینیک,clinic,review
+17,way_dialogue,"f: Excuse me, where is the clinic? // m: Go straight on. Then turn left.",ببخشید، کلینیک کجاست؟ مستقیم بروید. بعد به طرف چپ بگردید.,,dialogue
 17,where_dialogue_2,"f: Excuse me, where is the bakery? // m: It is next to the tailor.",ببخشید، نانوایی کجاست؟ پهلوی خیاط است.,,dialogue
 17,where_dialogue_3,"m: Excuse me, where can I buy candles? // f: At that shop, over there.",ببخشید، شمع را از کجا خریده می‌توانم؟ از آن دکان، آنجا.,,dialogue
 17,thanks_dialogue,f: Thank you very much. // m: You're welcome.,بسیار تشکر. قابل تشکر نیست.,,dialogue
@@ -213,11 +243,11 @@ unit,key,en,fa,picture,tags
 
 # 18 Too expensive!
 18,scarf,scarf,چادر,scarf_red,review
-18,r18_carpet,carpet,قالین,carpet,review
-18,r18_cheap,cheap,ارزان,cheap,review
-18,r18_expensive,expensive,گران,expensive,review
-18,r18_purse,purse,بکس پول,purse,review
-18,r18_note,note,نوت,note,review
+18,teapot,teapot,چاینک,teapot,bazaar
+18,tray,tray,پتنوس,tray,bazaar
+18,r18_blanket,blanket,کمپل,blanket,review
+18,r18_watch,watch,ساعت دستی,watch,review
+18,r18_mirror,mirror,آیینه,mirror,review
 18,it_is_too_expensive,It is too expensive.,بسیار گران است.,,phrase
 18,can_you_make_it_cheaper,Can you make it cheaper?,ارزانتر کرده می‌توانید؟,,phrase
 18,how_much_is_it_all_together,How much is it all together?,جمله چند می‌شود؟,,phrase
@@ -230,20 +260,29 @@ unit,key,en,fa,picture,tags
 19,charcoal,charcoal,زغال,charcoal,thing
 19,umbrella,umbrella,چتری,umbrella,thing
 19,glasses,glasses,عینک,glasses,thing
-19,r19_cart,cart,کراچی,cart,review
+19,lorry,lorry,لاری,lorry,bazaar
 19,i_sell_eggs_at_the_bazaar,I sell eggs at the bazaar.,من در بازار تخم مرغ می‌فروشم.,,phrase
 19,the_shop_is_open,The shop is open.,دکان باز است.,,phrase
 19,the_shop_is_closed,The shop is closed.,دکان بسته است.,,phrase
 19,sell_dialogue_2,f: What do you sell? // m: I sell firewood and charcoal. They are cheap.,شما چه می‌فروشید؟ من هیزم و زغال می‌فروشم. ارزان است.,,dialogue
 19,open_dialogue,"m: Is the bakery open? // f: No, it is closed. Come back tomorrow.",نانوایی باز است؟ نه، بسته است. فردا دوباره بیایید.,,dialogue
 
+# 19b The shop is open (version 2)
+19b,open,open,باز,shop_open,bazaar
+19b,closed,closed,بسته,shop_closed,bazaar
+19b,list,list,لست,list,bazaar
+19b,seeds,seeds,دانه,seed,bazaar
+19b,sand,sand,ریگ,sand,bazaar
+19b,i_have_a_list,"I have a list. I need salt, oil and tea.",من یک لست دارم. من به نمک، روغن و چای ضرورت دارم.,,phrase
+19b,seeds_for_my_field,I want to buy seeds for my field.,من می‌خواهم برای کشتزارم دانه بخرم.,,phrase
+19b,closed_dialogue,"f: Are you open? // m: Sorry, we are closed. Come back at eight o'clock.",باز هستید؟ ببخشید، بسته هستیم. ساعت هشت دوباره بیایید.,,dialogue
 # 20 Review: at the bazaar
-20,r20_bazaar,bazaar,بازار,bazaar,review
-20,r20_scales,scales,ترازو,scales,review
-20,r20_peach,peach,شفتالو,peach,review
-20,r20_lamp,lamp,چراغ,lamp,review
-20,r20_scissors,scissors,قیچی,scissors,review
-20,r20_juice,juice,آب میوه,juice,review
+20,r20_bazaar,I like the bazaar.,من بازار را خوش دارم.,bazaar,review
+20,r20_scales,The scales are on the table.,ترازو روی میز است.,scales,review
+20,r20_peach,"A kilo of peaches, please.",لطفاً یک کیلو شفتالو.,peach,review
+20,r20_lamp,I want to buy a lamp.,من می‌خواهم یک چراغ بخرم.,lamp,review
+20,r20_scissors,The tailor has scissors.,خیاط قیچی دارد.,scissors,review
+20,r20_juice,"Can I have some juice, please?",لطفاً کمی آب میوه بدهید.,juice,review
 20,i_can_speak_english_at_the_bazaar,I can speak English at the bazaar.,من در بازار انگلیسی گپ زده می‌توانم.,,phrase
 20,review_dialogue_4,"f: Good morning! Can I help you? // m: Yes, please. Do you have any rice?",صبح بخیر! شما را کمک کرده می‌توانم؟ بلی، لطفاً. شما برنج دارید؟,,dialogue
 20,review_dialogue_5,"f: How much is a kilo? // m: Ninety afghani. // f: Two kilos, please.",یک کیلو چند است؟ نود افغانی. لطفاً دو کیلو.,,dialogue
