@@ -234,12 +234,12 @@ function Place:draw()
   local total = math.ceil(#self.games / COLS)
   if total > 2 then
     local bob = math.sin(self.t * 4) * 2
-    if first > 0 then ui.arrow("up", 626, 118 + bob, 8, ui.c.ink) end
-    if first + 2 < total then ui.arrow("down", 626, 468 + bob, 8, ui.c.ink) end
+    if first > 0 then ui.arrow("up", 633, 118 + bob, 6, ui.c.ink) end
+    if first + 2 < total then ui.arrow("down", 633, 468 + bob, 6, ui.c.ink) end
     -- one small mark per row of games, the rows in view filled
     for r = 1, total do
       ui.set(ui.c.ink, (r > first and r <= first + 2) and 0.9 or 0.25)
-      g.rectangle("fill", 623, 190 + (r - 1) * 12, 6, 8, 2, 2)
+      g.rectangle("fill", 630, 190 + (r - 1) * 12, 6, 8, 2, 2)
     end
   end
   for i, game in ipairs(self.games) do
