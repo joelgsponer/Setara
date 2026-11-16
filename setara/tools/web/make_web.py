@@ -32,6 +32,10 @@ def find_lovejs() -> Path:
     raise SystemExit("love.js not found: run `npm install love.js` in tools/web, or set LOVEJS")
 
 
+PREVIEW = ["en-1", "fa-1", "fa-1-alphabet", "math-1", "garden-1", "garden-4", "garden-4-world",
+           "teacher-en-1", "guide-math-1", "guide-garden-1"]
+
+
 def lighter(data: bytes, cache: Path) -> bytes:
     """A speech clip at a lower rate for the browser (16 kHz, low quality): about
     a third of the size. The card keeps the full clips. Cached by content."""
@@ -56,7 +60,13 @@ def main() -> None:
     ap.add_argument("--slow", action="store_true", help="include the slow speech variants (much larger)")
     ap.add_argument("--light-audio", action="store_true", help="re-encode speech at 16 kHz: a smaller download, duller sound")
     ap.add_argument("--only", action="append", help="include only these packs (smaller download)")
+    ap.add_argument("--all", action="store_true", help="every pack (well over a gigabyte: too much for a browser)")
     args = ap.parse_args()
+    if not args.only and not args.all:
+        # The whole content is far too large for one download. The preview
+        # carries level 1 of every subject, the Dari alphabet, health 4 with the
+        # geography pack, the first lesson book and two guides: about 185 MB.
+        args.only = PREVIEW
 
     work = ROOT / "dist" / "web-work"
     love = work / "setara-web.love"
