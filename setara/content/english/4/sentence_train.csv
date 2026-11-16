@@ -12,7 +12,7 @@ round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 02,She sells fish.,,t:She|t:sells|t:fish,t:sell,,She sells fish.,,او ماهی می‌فروشد.
 02,Let's go to the bazaar.,,t:Let's|t:go|t:to|t:the|t:bazaar,,,Let's go to the bazaar.,,بیا که به بازار برویم.
 02,I have a basket.,,t:I|t:have|t:a|t:basket,t:has,,I have a basket.,,من یک سبد دارم.
-02,The shopkeeper sells bread.,,t:The|t:shopkeeper|t:sells|t:bread,t:sell,,The shopkeeper sells bread.,,دکاندار نان می‌فروشد.
+02,My father sells fruit.,,t:My|t:father|t:sells|t:fruit,t:sell,,My father sells fruit.,,پدرم میوه می‌فروشد.
 02,Welcome to my shop.,,t:Welcome|t:to|t:my|t:shop,t:your,,Welcome to my shop.,,به دکان من خوش آمدید.
 05,How much is it?,,t:How|t:much|t:is|t:it,,,How much is it?,,قیمتش چند است؟
 05,It is ten afghani.,,t:It|t:is|t:ten|t:afghani,t:are,,It is ten afghani.,,ده افغانی است.
@@ -34,7 +34,7 @@ round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 07,I want the long rope.,,t:I|t:want|t:the|t:long|t:rope,t:short,,I want the long rope.,,من ریسمان دراز را می‌خواهم.
 07,This rope is too short.,,t:This|t:rope|t:is|t:too|t:short,t:long,,This rope is too short.,,این ریسمان بسیار کوتاه است.
 07,The basket is light.,,t:The|t:basket|t:is|t:light,t:heavy,,The basket is light.,,سبد سبک است.
-07,"Half a watermelon, please.",,t:Half|t:a|t:watermelon|t:please,t:kilo,,"Half a watermelon, please.",,لطفاً نیم تربوز.
+07,"Half a melon, please.",,t:Half|t:a|t:melon|t:please,t:kilo,,"Half a melon, please.",,لطفاً نیم خربوزه.
 07,Put it on the scales.,,t:Put|t:it|t:on|t:the|t:scales,t:in,,Put it on the scales.,,آن را روی ترازو بگذارید.
 07,"Three kilos of onions, please.",,t:Three|t:kilos|t:of|t:onions|t:please,t:kilo,,"Three kilos of onions, please.",,لطفاً سه کیلو پیاز.
 07,A sack of rice is heavy.,,t:A|t:sack|t:of|t:rice|t:is|t:heavy,t:light,,A sack of rice is heavy.,,یک بوجی برنج سنگین است.
@@ -58,8 +58,8 @@ round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 12,The shelf is empty.,,t:The|t:shelf|t:is|t:empty,t:are,,The shelf is empty.,,رف خالی است.
 12,I need salt and oil.,,t:I|t:need|t:salt|t:and|t:oil,t:needs,,I need salt and oil.,,من به نمک و روغن ضرورت دارم.
 12,What do you need?,,t:What|t:do|t:you|t:need,t:needs,,What do you need?,,شما به چه ضرورت دارید؟
-12,Do you have any raisins?,,t:Do|t:you|t:have|t:any|t:raisins,t:some,,Do you have any raisins?,,شما کشمش دارید؟
-12,I have some pistachios.,,t:I|t:have|t:some|t:pistachios,t:any,,I have some pistachios.,,من کمی پسته دارم.
+12,Do you have any plums?,,t:Do|t:you|t:have|t:any|t:plums,t:some,,Do you have any plums?,,شما آلو دارید؟
+12,I have some raisins.,,t:I|t:have|t:some|t:raisins,t:any,,I have some raisins.,,من کمی کشمش دارم.
 12,The jar is full.,,t:The|t:jar|t:is|t:full,t:empty,,The jar is full.,,مرتبان پُر است.
 12,"Sorry, I don't have any.",,t:Sorry|t:I|t:don't|t:have|t:any,t:some,,"Sorry, I don't have any.",,ببخشید، هیچ ندارم.
 13,Can I help you?,,t:Can|t:I|t:help|t:you,,,Can I help you?,,شما را کمک کرده می‌توانم؟
@@ -92,7 +92,7 @@ round,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 18,Here is your change.,,t:Here|t:is|t:your|t:change,t:are,,Here is your change.,,این باقی پول شما است.
 18,The shop is closed.,,t:The|t:shop|t:is|t:closed,t:are,,The shop is closed.,,دکان بسته است.
 18,It is too expensive.,,t:It|t:is|t:too|t:expensive,t:cheap,,It is too expensive.,,بسیار گران است.
-18,How much is it all together?,,t:How much|t:is it|t:all|t:together,,,How much is it all together?,,جمله چند می‌شود؟
+18,How much is it all together?,,t:How|t:much|t:is it|t:all|t:together,,,How much is it all together?,,جمله چند می‌شود؟
 18,The shop is open.,,t:The|t:shop|t:is|t:open,t:closed,,The shop is open.,,دکان باز است.
 18,Is the bakery open?,,t:Is|t:the|t:bakery|t:open,t:are,,Is the bakery open?,,نانوایی باز است؟
 18,The teapot is cheap.,,t:The|t:teapot|t:is|t:cheap,t:expensive,,The teapot is cheap.,,چاینک ارزان است.

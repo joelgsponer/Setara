@@ -1,0 +1,7 @@
+# Pictures drawn for en-1-letters. Format: name: what to draw.
+# Everything else this pack shows is from the shared library, or is a letter (t:A).
+ink: a round glass ink pot with a brown collar, half full of dark ink, a yellow pen standing in it and one ink drop beside it (key word of I)
+quilt: a square patchwork quilt of nine coloured squares with a stitched dot in each, seen flat (key word of Q)
+zebra: a zebra standing, side view, drawn like the library horse but white with dark stripes and a striped mane (key word of Z)
+van: a white passenger van with a green lower half, three windows, two wheels, side view (V)
+zip: a zip half open on blue cloth: teeth open at the top, closed below, a yellow slider with its pull tab (Z)

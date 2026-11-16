@@ -1,41 +1,43 @@
 round,say_en,say_fa,show,answer,distractors,help_fa,hop
-# 05: numbers 1 to 5. First hear and pick the numeral, then count the pictures.
+# Numbers 1 to 10. First hear the number and pick the numeral; then count the pictures (Count the apples.).
+# 06b: 1 to 10 mixed; with close numbers as wrong choices. 07: ages. 17: a number and a thing.
+# 05
 05,one,,,t:1,,یک,
 05,two,,,t:2,,دو,
 05,three,,,t:3,,سه,
 05,four,,,t:4,,چهار,
 05,five,,,t:5,,پنج,
-05,three,,p:apple*3,t:3,,سه,
-05,five,,p:pen*5,t:5,,پنج,
-05,two,,p:book*2,t:2,,دو,
-05,four,,p:egg*4,t:4,,چهار,
-# 06: numbers 6 to 10.
+05,Count the apples.,,p:apple*3,t:3,,سیب‌ها را حساب کن.,
+05,Count the pens.,,p:pen*5,t:5,,قلم‌ها را حساب کن.,
+05,Count the books.,,p:book*2,t:2,,کتاب‌ها را حساب کن.,
+05,Count the eggs.,,p:egg*4,t:4,,تخم مرغ‌ها را حساب کن.,
+# 06
 06,six,,,t:6,,شش,
 06,seven,,,t:7,,هفت,
 06,eight,,,t:8,,هشت,
 06,nine,,,t:9,,نُه,
 06,ten,,,t:10,,ده,
-06,seven,,p:apple*7,t:7,,هفت,
-06,ten,,p:egg*10,t:10,,ده,
-06,six,,p:pen*6,t:6,,شش,
-06,nine,,p:book*9,t:9,,نُه,
-# 06b: 1 to 10 mixed, with close numbers as wrong choices.
-06b,three,,,t:3,t:2|t:4|t:8,سه,
-06b,eight,,,t:8,t:6|t:7|t:9,هشت,
-06b,one,,,t:1,t:2|t:7|t:10,یک,
-06b,six,,,t:6,t:5|t:7|t:9,شش,
-06b,ten,,,t:10,t:1|t:8|t:9,ده,
-06b,four,,,t:4,t:3|t:5|t:6,چهار,
-06b,nine,,,t:9,t:5|t:6|t:10,نُه,
-06b,seven,,,t:7,t:1|t:6|t:8,هفت,
-# 07: ages.
+06,Count the red apples.,,p:apple*7,t:7,,سیب‌های سرخ را حساب کن.,
+06,Count the white eggs.,,p:egg*10,t:10,,تخم مرغ‌های سفید را حساب کن.,
+06,Count the blue pens.,,p:pen*6,t:6,,قلم‌های آبی را حساب کن.,
+06,Count the red books.,,p:book*9,t:9,,کتاب‌های سرخ را حساب کن.,
+# 06b
+06b,The number three.,,,t:3,t:2|t:4|t:8,عدد سه.,
+06b,The number eight.,,,t:8,t:6|t:7|t:9,عدد هشت.,
+06b,The number one.,,,t:1,t:2|t:7|t:10,عدد یک.,
+06b,The number six.,,,t:6,t:5|t:7|t:9,عدد شش.,
+06b,The number ten.,,,t:10,t:1|t:8|t:9,عدد ده.,
+06b,The number four.,,,t:4,t:3|t:5|t:6,عدد چهار.,
+06b,The number nine.,,,t:9,t:5|t:6|t:10,عدد نُه.,
+06b,The number seven.,,,t:7,t:1|t:6|t:8,عدد هفت.,
+# 07
 07,I am eight.,,,t:8,,من هشت ساله هستم.,
 07,I am six.,,,t:6,,من شش ساله هستم.,
 07,f: How old are you? // m: I am seven.,,,t:7,,چند ساله هستی؟ من هفت ساله هستم.,
 07,m: How old are you? // f: I am ten.,,,t:10,,چند ساله هستی؟ من ده ساله هستم.,
 07,I am nine.,,,t:9,,من نُه ساله هستم.,
 07,f: How old are you? // m: I am five.,,,t:5,,چند ساله هستی؟ من پنج ساله هستم.,
-# 17: a number and a thing.
+# 17
 17,three pens,,p:pen*3,t:3,t:2|t:4|t:5,سه قلم,
 17,five apples,,p:apple*5,t:5,t:3|t:4|t:6,پنج سیب,
 17,two books,,p:book*2,t:2,t:1|t:3|t:4,دو کتاب,

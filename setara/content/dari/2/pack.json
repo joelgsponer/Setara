@@ -2,7 +2,7 @@
  "pack": "fa-2",
  "subject": "fa",
  "level": 2,
- "version": 1,
+ "version": 2,
  "title_en": "Dari 2: The whole alphabet",
  "title_fa": "دری ۲: همه الفبا",
  "games": [
@@ -15,7 +15,8 @@
    "intro_fa": "گوش کن و جواب درست را انتخاب کن.",
    "icon": "flower",
    "v1": true,
-   "sheet": "alefba_garden.csv"
+   "sheet": "alefba_garden.csv",
+   "draw": 8
   },
   {
    "id": "letter_shapes",
@@ -26,7 +27,8 @@
    "intro_fa": "هر حرف چند شکل دارد. هر شکل را در سبد درست بگذار: اول کلمه، وسط کلمه، آخر کلمه، یا تنها.",
    "icon": "basket",
    "v1": true,
-   "sheet": "letter_shapes.csv"
+   "sheet": "letter_shapes.csv",
+   "draw": 8
   },
   {
    "id": "word_weaver",
@@ -36,7 +38,8 @@
    "title_fa": "کلمه‌باف",
    "intro_fa": "حرف‌ها را از راست به چپ کنار هم بگذار و کلمه بساز.",
    "icon": "rope",
-   "sheet": "word_weaver.csv"
+   "sheet": "word_weaver.csv",
+   "draw": 5
   },
   {
    "id": "syllable_catch",
@@ -46,7 +49,8 @@
    "title_fa": "بگیر بگیر",
    "intro_fa": "گوش کن و فقط حرف درست را بگیر.",
    "icon": "ball",
-   "sheet": "syllable_catch.csv"
+   "sheet": "syllable_catch.csv",
+   "draw": 6
   },
   {
    "id": "read_along",
@@ -64,9 +68,43 @@
    "letter": "f",
    "title_en": "Verse Corner",
    "title_fa": "گوشه شعر",
-   "intro_fa": "هر حرف را با تصویری جوره کن که نامش با آن حرف شروع می‌شود.",
+   "intro_fa": "هر حرف را با جوره‌اش پیدا کن: با تصویری که نامش با آن حرف شروع می‌شود، یا با شکل دیگر همان حرف.",
    "icon": "moon",
-   "sheet": "verse_corner.csv"
+   "sheet": "verse_corner.csv",
+   "draw": 6
+  },
+  {
+   "id": "letter_hunt",
+   "engine": "sorter",
+   "letter": "g",
+   "title_en": "Letter Hunt",
+   "title_fa": "حرف‌یاب",
+   "intro_fa": "حرف را در کلمه پیدا کن و کلمه را در سبد درست بگذار.",
+   "icon": "glasses",
+   "draw": 8,
+   "sheet": "letter_hunt.csv"
+  },
+  {
+   "id": "sound_detective",
+   "engine": "listen_pick",
+   "letter": "h",
+   "title_en": "Sound Detective",
+   "title_fa": "صدایاب",
+   "intro_fa": "خوب گوش کن و کلمه‌ای را پیدا کن که می‌پرسم.",
+   "icon": "listen",
+   "draw": 8,
+   "sheet": "sound_detective.csv"
+  },
+  {
+   "id": "alefba_journey",
+   "engine": "journey",
+   "letter": "i",
+   "title_en": "Alefba Journey",
+   "title_fa": "سفر الفبا",
+   "intro_fa": "با هر جواب درست یک قدم پیش برو.",
+   "icon": "mountain",
+   "draw": 8,
+   "sheet": "alefba_journey.csv"
   }
  ]
 }

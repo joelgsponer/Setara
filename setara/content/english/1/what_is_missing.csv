@@ -2,130 +2,130 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 # Hear three words; see four pictures; pick the one that was NOT said. The child must know all three words.
 # Generated combinations: no triple occurs twice.
 # 01: greetings; teacher; class. Three of the four pictures are named; the child picks the one that was not.
-01,چهار تصویر است، اما فقط سه کلمه گفته می‌شود. خوب گوش کن و تصویری را انتخاب کن که نامش گفته نشد.,Good morning. teacher. class.,,,wave,sun|teacher|class,این سه گفته شد: صبح بخیر، معلم، صنف. تصویری را انتخاب کن که نامش گفته نشد.
-01,,class. Goodbye. teacher.,,,wave,class|goodbye|teacher,این سه گفته شد: صنف، خداحافظ، معلم. تصویری را انتخاب کن که نامش گفته نشد.
-01,,Good morning. class. teacher.,,,wave,sun|class|teacher,این سه گفته شد: صبح بخیر، صنف، معلم. تصویری را انتخاب کن که نامش گفته نشد.
-01,,Hello. Good morning. class.,,,goodbye,wave|sun|class,این سه گفته شد: سلام، صبح بخیر، صنف. تصویری را انتخاب کن که نامش گفته نشد.
-01,,Good morning. Hello. class.,,,goodbye,sun|wave|class,این سه گفته شد: صبح بخیر، سلام، صنف. تصویری را انتخاب کن که نامش گفته نشد.
-01,,teacher. Hello. Good morning.,,,goodbye,teacher|wave|sun,این سه گفته شد: معلم، سلام، صبح بخیر. تصویری را انتخاب کن که نامش گفته نشد.
-01,,teacher. Hello. Goodbye.,,,sun,teacher|wave|goodbye,این سه گفته شد: معلم، سلام، خداحافظ. تصویری را انتخاب کن که نامش گفته نشد.
-01,,class. Hello. teacher.,,,sun,class|wave|teacher,این سه گفته شد: صنف، سلام، معلم. تصویری را انتخاب کن که نامش گفته نشد.
-01,,Goodbye. Hello. class.,,,sun,goodbye|wave|class,این سه گفته شد: خداحافظ، سلام، صنف. تصویری را انتخاب کن که نامش گفته نشد.
-01,,Good morning. Goodbye. class.,,,teacher,sun|goodbye|class,این سه گفته شد: صبح بخیر، خداحافظ، صنف. تصویری را انتخاب کن که نامش گفته نشد.
-01,,Goodbye. class. Hello.,,,teacher,goodbye|class|wave,این سه گفته شد: خداحافظ، صنف، سلام. تصویری را انتخاب کن که نامش گفته نشد.
-01,,class. Good morning. Goodbye.,,,teacher,class|sun|goodbye,این سه گفته شد: صنف، صبح بخیر، خداحافظ. تصویری را انتخاب کن که نامش گفته نشد.
-01,,Hello. Goodbye. teacher.,,,class,wave|goodbye|teacher,این سه گفته شد: سلام، خداحافظ، معلم. تصویری را انتخاب کن که نامش گفته نشد.
-01,,Good morning. teacher. Goodbye.,,,class,sun|teacher|goodbye,این سه گفته شد: صبح بخیر، معلم، خداحافظ. تصویری را انتخاب کن که نامش گفته نشد.
-01,,Good morning. Hello. teacher.,,,class,sun|wave|teacher,این سه گفته شد: صبح بخیر، سلام، معلم. تصویری را انتخاب کن که نامش گفته نشد.
+01,چهار تصویر است، اما فقط سه کلمه گفته می‌شود. خوب گوش کن و تصویری را انتخاب کن که نامش گفته نشد.,Good morning. teacher. class.,,t:?,wave,sun|teacher|class,این سه گفته شد: صبح بخیر، معلم، صنف. تصویری را انتخاب کن که نامش گفته نشد.
+01,,class. Goodbye. teacher.,,t:?,wave,class|goodbye|teacher,این سه گفته شد: صنف، خداحافظ، معلم. تصویری را انتخاب کن که نامش گفته نشد.
+01,,Good morning. class. teacher.,,t:?,wave,sun|class|teacher,این سه گفته شد: صبح بخیر، صنف، معلم. تصویری را انتخاب کن که نامش گفته نشد.
+01,,Hello. Good morning. class.,,t:?,goodbye,wave|sun|class,این سه گفته شد: سلام، صبح بخیر، صنف. تصویری را انتخاب کن که نامش گفته نشد.
+01,,Good morning. Hello. class.,,t:?,goodbye,sun|wave|class,این سه گفته شد: صبح بخیر، سلام، صنف. تصویری را انتخاب کن که نامش گفته نشد.
+01,,teacher. Hello. Good morning.,,t:?,goodbye,teacher|wave|sun,این سه گفته شد: معلم، سلام، صبح بخیر. تصویری را انتخاب کن که نامش گفته نشد.
+01,,teacher. Hello. Goodbye.,,t:?,sun,teacher|wave|goodbye,این سه گفته شد: معلم، سلام، خداحافظ. تصویری را انتخاب کن که نامش گفته نشد.
+01,,class. Hello. teacher.,,t:?,sun,class|wave|teacher,این سه گفته شد: صنف، سلام، معلم. تصویری را انتخاب کن که نامش گفته نشد.
+01,,Goodbye. Hello. class.,,t:?,sun,goodbye|wave|class,این سه گفته شد: خداحافظ، سلام، صنف. تصویری را انتخاب کن که نامش گفته نشد.
+01,,Good morning. Goodbye. class.,,t:?,teacher,sun|goodbye|class,این سه گفته شد: صبح بخیر، خداحافظ، صنف. تصویری را انتخاب کن که نامش گفته نشد.
+01,,Goodbye. class. Hello.,,t:?,teacher,goodbye|class|wave,این سه گفته شد: خداحافظ، صنف، سلام. تصویری را انتخاب کن که نامش گفته نشد.
+01,,class. Good morning. Goodbye.,,t:?,teacher,class|sun|goodbye,این سه گفته شد: صنف، صبح بخیر، خداحافظ. تصویری را انتخاب کن که نامش گفته نشد.
+01,,Hello. Goodbye. teacher.,,t:?,class,wave|goodbye|teacher,این سه گفته شد: سلام، خداحافظ، معلم. تصویری را انتخاب کن که نامش گفته نشد.
+01,,Good morning. teacher. Goodbye.,,t:?,class,sun|teacher|goodbye,این سه گفته شد: صبح بخیر، معلم، خداحافظ. تصویری را انتخاب کن که نامش گفته نشد.
+01,,Good morning. Hello. teacher.,,t:?,class,sun|wave|teacher,این سه گفته شد: صبح بخیر، سلام، معلم. تصویری را انتخاب کن که نامش گفته نشد.
 # 02: the first five commands.
-02,سه فرمان گفته می‌شود. یک تصویر گفته نمی‌شود. همان را پیدا کن.,Look. Listen. Clap.,,,stand_up,look|listen|clap,این سه گفته شد: ببین، گوش کن، چک چک کن. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Look. Sit down. Clap.,,,stand_up,look|sit_down|clap,این سه گفته شد: ببین، بنشین، چک چک کن. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Listen. Sit down. Look.,,,stand_up,listen|sit_down|look,این سه گفته شد: گوش کن، بنشین، ببین. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Stand up. Look. Listen.,,,sit_down,stand_up|look|listen,این سه گفته شد: ایستاده شو، ببین، گوش کن. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Listen. Look. Clap.,,,sit_down,listen|look|clap,این سه گفته شد: گوش کن، ببین، چک چک کن. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Stand up. Listen. Clap.,,,sit_down,stand_up|listen|clap,این سه گفته شد: ایستاده شو، گوش کن، چک چک کن. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Sit down. Listen. Stand up.,,,clap,sit_down|listen|stand_up,این سه گفته شد: بنشین، گوش کن، ایستاده شو. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Sit down. Listen. Look.,,,clap,sit_down|listen|look,این سه گفته شد: بنشین، گوش کن، ببین. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Sit down. Stand up. Listen.,,,clap,sit_down|stand_up|listen,این سه گفته شد: بنشین، ایستاده شو، گوش کن. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Clap. Sit down. Look.,,,listen,clap|sit_down|look,این سه گفته شد: چک چک کن، بنشین، ببین. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Stand up. Look. Sit down.,,,listen,stand_up|look|sit_down,این سه گفته شد: ایستاده شو، ببین، بنشین. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Look. Stand up. Clap.,,,listen,look|stand_up|clap,این سه گفته شد: ببین، ایستاده شو، چک چک کن. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Clap. Listen. Sit down.,,,look,clap|listen|sit_down,این سه گفته شد: چک چک کن، گوش کن، بنشین. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Stand up. Sit down. Listen.,,,look,stand_up|sit_down|listen,این سه گفته شد: ایستاده شو، بنشین، گوش کن. تصویری را انتخاب کن که نامش گفته نشد.
-02,,Clap. Sit down. Stand up.,,,look,clap|sit_down|stand_up,این سه گفته شد: چک چک کن، بنشین، ایستاده شو. تصویری را انتخاب کن که نامش گفته نشد.
+02,سه فرمان گفته می‌شود. یک تصویر گفته نمی‌شود. همان را پیدا کن.,Look. Listen. Clap.,,t:?,stand_up,look|listen|clap,این سه گفته شد: ببین، گوش کن، چک چک کن. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Look. Sit down. Clap.,,t:?,stand_up,look|sit_down|clap,این سه گفته شد: ببین، بنشین، چک چک کن. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Listen. Sit down. Look.,,t:?,stand_up,listen|sit_down|look,این سه گفته شد: گوش کن، بنشین، ببین. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Stand up. Look. Listen.,,t:?,sit_down,stand_up|look|listen,این سه گفته شد: ایستاده شو، ببین، گوش کن. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Listen. Look. Clap.,,t:?,sit_down,listen|look|clap,این سه گفته شد: گوش کن، ببین، چک چک کن. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Stand up. Listen. Clap.,,t:?,sit_down,stand_up|listen|clap,این سه گفته شد: ایستاده شو، گوش کن، چک چک کن. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Sit down. Listen. Stand up.,,t:?,clap,sit_down|listen|stand_up,این سه گفته شد: بنشین، گوش کن، ایستاده شو. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Sit down. Listen. Look.,,t:?,clap,sit_down|listen|look,این سه گفته شد: بنشین، گوش کن، ببین. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Sit down. Stand up. Listen.,,t:?,clap,sit_down|stand_up|listen,این سه گفته شد: بنشین، ایستاده شو، گوش کن. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Clap. Sit down. Look.,,t:?,listen,clap|sit_down|look,این سه گفته شد: چک چک کن، بنشین، ببین. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Stand up. Look. Sit down.,,t:?,listen,stand_up|look|sit_down,این سه گفته شد: ایستاده شو، ببین، بنشین. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Look. Stand up. Clap.,,t:?,listen,look|stand_up|clap,این سه گفته شد: ببین، ایستاده شو، چک چک کن. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Clap. Listen. Sit down.,,t:?,look,clap|listen|sit_down,این سه گفته شد: چک چک کن، گوش کن، بنشین. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Stand up. Sit down. Listen.,,t:?,look,stand_up|sit_down|listen,این سه گفته شد: ایستاده شو، بنشین، گوش کن. تصویری را انتخاب کن که نامش گفته نشد.
+02,,Clap. Sit down. Stand up.,,t:?,look,clap|sit_down|stand_up,این سه گفته شد: چک چک کن، بنشین، ایستاده شو. تصویری را انتخاب کن که نامش گفته نشد.
 # 09: the nine classroom things of units 08 and 09.
-09,چیزهای صنف. سه چیز را می‌شنوی. کدام یک گفته نشد؟ همان را انتخاب کن.,window. pen. table.,,,book,window|pen|table,این سه گفته شد: کلکین، قلم، میز. تصویری را انتخاب کن که نامش گفته نشد.
-09,,door. pencil. pen.,,,book,door|pencil|pen,این سه گفته شد: دروازه، پنسل، قلم. تصویری را انتخاب کن که نامش گفته نشد.
-09,,table. door. pencil.,,,pen,table|door|pencil,این سه گفته شد: میز، دروازه، پنسل. تصویری را انتخاب کن که نامش گفته نشد.
-09,,book. board. door.,,,pen,book|board|door,این سه گفته شد: کتاب، تخته، دروازه. تصویری را انتخاب کن که نامش گفته نشد.
-09,,window. board. table.,,,pencil,window|board|table,این سه گفته شد: کلکین، تخته، میز. تصویری را انتخاب کن که نامش گفته نشد.
-09,,board. door. table.,,,pencil,board|door|table,این سه گفته شد: تخته، دروازه، میز. تصویری را انتخاب کن که نامش گفته نشد.
-09,,book. window. pencil.,,,bag,book|window|pencil,این سه گفته شد: کتاب، کلکین، پنسل. تصویری را انتخاب کن که نامش گفته نشد.
-09,,chair. window. pencil.,,,bag,chair|window|pencil,این سه گفته شد: چوکی، کلکین، پنسل. تصویری را انتخاب کن که نامش گفته نشد.
-09,,board. door. pen.,,,chair,board|door|pen,این سه گفته شد: تخته، دروازه، قلم. تصویری را انتخاب کن که نامش گفته نشد.
-09,,door. pencil. book.,,,chair,door|pencil|book,این سه گفته شد: دروازه، پنسل، کتاب. تصویری را انتخاب کن که نامش گفته نشد.
-09,,pencil. board. window.,,,table,pencil|board|window,این سه گفته شد: پنسل، تخته، کلکین. تصویری را انتخاب کن که نامش گفته نشد.
-09,,door. bag. window.,,,table,door|bag|window,این سه گفته شد: دروازه، بکس، کلکین. تصویری را انتخاب کن که نامش گفته نشد.
-09,,book. table. pen.,,,door,book|table|pen,این سه گفته شد: کتاب، میز، قلم. تصویری را انتخاب کن که نامش گفته نشد.
-09,,pen. board. window.,,,door,pen|board|window,این سه گفته شد: قلم، تخته، کلکین. تصویری را انتخاب کن که نامش گفته نشد.
-09,,pen. board. pencil.,,,window,pen|board|pencil,این سه گفته شد: قلم، تخته، پنسل. تصویری را انتخاب کن که نامش گفته نشد.
-09,,pen. pencil. book.,,,window,pen|pencil|book,این سه گفته شد: قلم، پنسل، کتاب. تصویری را انتخاب کن که نامش گفته نشد.
-09,,window. door. table.,,,board,window|door|table,این سه گفته شد: کلکین، دروازه، میز. تصویری را انتخاب کن که نامش گفته نشد.
-09,,bag. table. door.,,,board,bag|table|door,این سه گفته شد: بکس، میز، دروازه. تصویری را انتخاب کن که نامش گفته نشد.
+09,چیزهای صنف. سه چیز را می‌شنوی. کدام یک گفته نشد؟ همان را انتخاب کن.,window. pen. table.,,t:?,book,window|pen|table,این سه گفته شد: کلکین، قلم، میز. تصویری را انتخاب کن که نامش گفته نشد.
+09,,door. pencil. pen.,,t:?,book,door|pencil|pen,این سه گفته شد: دروازه، پنسل، قلم. تصویری را انتخاب کن که نامش گفته نشد.
+09,,table. door. pencil.,,t:?,pen,table|door|pencil,این سه گفته شد: میز، دروازه، پنسل. تصویری را انتخاب کن که نامش گفته نشد.
+09,,book. board. door.,,t:?,pen,book|board|door,این سه گفته شد: کتاب، تخته، دروازه. تصویری را انتخاب کن که نامش گفته نشد.
+09,,window. board. table.,,t:?,pencil,window|board|table,این سه گفته شد: کلکین، تخته، میز. تصویری را انتخاب کن که نامش گفته نشد.
+09,,board. door. table.,,t:?,pencil,board|door|table,این سه گفته شد: تخته، دروازه، میز. تصویری را انتخاب کن که نامش گفته نشد.
+09,,book. window. pencil.,,t:?,bag,book|window|pencil,این سه گفته شد: کتاب، کلکین، پنسل. تصویری را انتخاب کن که نامش گفته نشد.
+09,,chair. window. pencil.,,t:?,bag,chair|window|pencil,این سه گفته شد: چوکی، کلکین، پنسل. تصویری را انتخاب کن که نامش گفته نشد.
+09,,board. door. pen.,,t:?,chair,board|door|pen,این سه گفته شد: تخته، دروازه، قلم. تصویری را انتخاب کن که نامش گفته نشد.
+09,,door. pencil. book.,,t:?,chair,door|pencil|book,این سه گفته شد: دروازه، پنسل، کتاب. تصویری را انتخاب کن که نامش گفته نشد.
+09,,pencil. board. window.,,t:?,table,pencil|board|window,این سه گفته شد: پنسل، تخته، کلکین. تصویری را انتخاب کن که نامش گفته نشد.
+09,,door. bag. window.,,t:?,table,door|bag|window,این سه گفته شد: دروازه، بکس، کلکین. تصویری را انتخاب کن که نامش گفته نشد.
+09,,book. table. pen.,,t:?,door,book|table|pen,این سه گفته شد: کتاب، میز، قلم. تصویری را انتخاب کن که نامش گفته نشد.
+09,,pen. board. window.,,t:?,door,pen|board|window,این سه گفته شد: قلم، تخته، کلکین. تصویری را انتخاب کن که نامش گفته نشد.
+09,,pen. board. pencil.,,t:?,window,pen|board|pencil,این سه گفته شد: قلم، تخته، پنسل. تصویری را انتخاب کن که نامش گفته نشد.
+09,,pen. pencil. book.,,t:?,window,pen|pencil|book,این سه گفته شد: قلم، پنسل، کتاب. تصویری را انتخاب کن که نامش گفته نشد.
+09,,window. door. table.,,t:?,board,window|door|table,این سه گفته شد: کلکین، دروازه، میز. تصویری را انتخاب کن که نامش گفته نشد.
+09,,bag. table. door.,,t:?,board,bag|table|door,این سه گفته شد: بکس، میز، دروازه. تصویری را انتخاب کن که نامش گفته نشد.
 # 10: commands 2; with two commands of unit 02.
-10,فرمان‌ها را گوش کن. سه فرمان گفته می‌شود. تصویری را انتخاب کن که فرمانش گفته نشد.,Sit down. Go. Come here.,,,open,sit_down|go|come_here,این سه گفته شد: بنشین، برو، اینجا بیا. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Come here. Point to. Go.,,,open,come_here|point|go,این سه گفته شد: اینجا بیا، نشان بده، برو. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Go. Sit down. Stand up.,,,close,go|sit_down|stand_up,این سه گفته شد: برو، بنشین، ایستاده شو. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Come here. Point to. Sit down.,,,close,come_here|point|sit_down,این سه گفته شد: اینجا بیا، نشان بده، بنشین. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Point to. Go. Open.,,,come_here,point|go|open,این سه گفته شد: نشان بده، برو، باز کن. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Close. Open. Go.,,,come_here,close|open|go,این سه گفته شد: بسته کن، باز کن، برو. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Sit down. Point to. Stand up.,,,go,sit_down|point|stand_up,این سه گفته شد: بنشین، نشان بده، ایستاده شو. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Sit down. Open. Come here.,,,go,sit_down|open|come_here,این سه گفته شد: بنشین، باز کن، اینجا بیا. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Stand up. Close. Open.,,,point,stand_up|close|open,این سه گفته شد: ایستاده شو، بسته کن، باز کن. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Go. Stand up. Open.,,,point,go|stand_up|open,این سه گفته شد: برو، ایستاده شو، باز کن. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Open. Go. Point to.,,,stand_up,open|go|point,این سه گفته شد: باز کن، برو، نشان بده. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Sit down. Come here. Close.,,,stand_up,sit_down|come_here|close,این سه گفته شد: بنشین، اینجا بیا، بسته کن. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Go. Open. Point to.,,,sit_down,go|open|point,این سه گفته شد: برو، باز کن، نشان بده. تصویری را انتخاب کن که نامش گفته نشد.
-10,,Stand up. Come here. Open.,,,sit_down,stand_up|come_here|open,این سه گفته شد: ایستاده شو، اینجا بیا، باز کن. تصویری را انتخاب کن که نامش گفته نشد.
+10,فرمان‌ها را گوش کن. سه فرمان گفته می‌شود. تصویری را انتخاب کن که فرمانش گفته نشد.,Sit down. Go. Come here.,,t:?,open,sit_down|go|come_here,این سه گفته شد: بنشین، برو، اینجا بیا. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Come here. Point to. Go.,,t:?,open,come_here|point|go,این سه گفته شد: اینجا بیا، نشان بده، برو. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Go. Sit down. Stand up.,,t:?,close,go|sit_down|stand_up,این سه گفته شد: برو، بنشین، ایستاده شو. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Come here. Point to. Sit down.,,t:?,close,come_here|point|sit_down,این سه گفته شد: اینجا بیا، نشان بده، بنشین. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Point to. Go. Open.,,t:?,come_here,point|go|open,این سه گفته شد: نشان بده، برو، باز کن. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Close. Open. Go.,,t:?,come_here,close|open|go,این سه گفته شد: بسته کن، باز کن، برو. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Sit down. Point to. Stand up.,,t:?,go,sit_down|point|stand_up,این سه گفته شد: بنشین، نشان بده، ایستاده شو. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Sit down. Open. Come here.,,t:?,go,sit_down|open|come_here,این سه گفته شد: بنشین، باز کن، اینجا بیا. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Stand up. Close. Open.,,t:?,point,stand_up|close|open,این سه گفته شد: ایستاده شو، بسته کن، باز کن. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Go. Stand up. Open.,,t:?,point,go|stand_up|open,این سه گفته شد: برو، ایستاده شو، باز کن. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Open. Go. Point to.,,t:?,stand_up,open|go|point,این سه گفته شد: باز کن، برو، نشان بده. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Sit down. Come here. Close.,,t:?,stand_up,sit_down|come_here|close,این سه گفته شد: بنشین، اینجا بیا، بسته کن. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Go. Open. Point to.,,t:?,sit_down,go|open|point,این سه گفته شد: برو، باز کن، نشان بده. تصویری را انتخاب کن که نامش گفته نشد.
+10,,Stand up. Come here. Open.,,t:?,sit_down,stand_up|come_here|open,این سه گفته شد: ایستاده شو، اینجا بیا، باز کن. تصویری را انتخاب کن که نامش گفته نشد.
 # 12: the eight colours.
-12,رنگ‌ها. سه رنگ را می‌شنوی. کدام رنگ گفته نشد؟,brown. blue. white.,,,color_red,color_brown|color_blue|color_white,این سه گفته شد: نصواری، آبی، سفید. تصویری را انتخاب کن که نامش گفته نشد.
-12,,orange. black. yellow.,,,color_red,color_orange|color_black|color_yellow,این سه گفته شد: نارنجی، سیاه، زرد. تصویری را انتخاب کن که نامش گفته نشد.
-12,,white. brown. red.,,,color_blue,color_white|color_brown|color_red,این سه گفته شد: سفید، نصواری، سرخ. تصویری را انتخاب کن که نامش گفته نشد.
-12,,green. black. brown.,,,color_blue,color_green|color_black|color_brown,این سه گفته شد: سبز، سیاه، نصواری. تصویری را انتخاب کن که نامش گفته نشد.
-12,,red. yellow. orange.,,,color_green,color_red|color_yellow|color_orange,این سه گفته شد: سرخ، زرد، نارنجی. تصویری را انتخاب کن که نامش گفته نشد.
-12,,blue. yellow. orange.,,,color_green,color_blue|color_yellow|color_orange,این سه گفته شد: آبی، زرد، نارنجی. تصویری را انتخاب کن که نامش گفته نشد.
-12,,brown. white. red.,,,color_yellow,color_brown|color_white|color_red,این سه گفته شد: نصواری، سفید، سرخ. تصویری را انتخاب کن که نامش گفته نشد.
-12,,blue. brown. orange.,,,color_yellow,color_blue|color_brown|color_orange,این سه گفته شد: آبی، نصواری، نارنجی. تصویری را انتخاب کن که نامش گفته نشد.
-12,,brown. blue. orange.,,,color_black,color_brown|color_blue|color_orange,این سه گفته شد: نصواری، آبی، نارنجی. تصویری را انتخاب کن که نامش گفته نشد.
-12,,brown. white. blue.,,,color_black,color_brown|color_white|color_blue,این سه گفته شد: نصواری، سفید، آبی. تصویری را انتخاب کن که نامش گفته نشد.
-12,,yellow. blue. red.,,,color_white,color_yellow|color_blue|color_red,این سه گفته شد: زرد، آبی، سرخ. تصویری را انتخاب کن که نامش گفته نشد.
-12,,blue. black. brown.,,,color_white,color_blue|color_black|color_brown,این سه گفته شد: آبی، سیاه، نصواری. تصویری را انتخاب کن که نامش گفته نشد.
-12,,blue. red. black.,,,color_brown,color_blue|color_red|color_black,این سه گفته شد: آبی، سرخ، سیاه. تصویری را انتخاب کن که نامش گفته نشد.
-12,,black. red. green.,,,color_brown,color_black|color_red|color_green,این سه گفته شد: سیاه، سرخ، سبز. تصویری را انتخاب کن که نامش گفته نشد.
-12,,black. blue. brown.,,,color_orange,color_black|color_blue|color_brown,این سه گفته شد: سیاه، آبی، نصواری. تصویری را انتخاب کن که نامش گفته نشد.
-12,,white. yellow. blue.,,,color_orange,color_white|color_yellow|color_blue,این سه گفته شد: سفید، زرد، آبی. تصویری را انتخاب کن که نامش گفته نشد.
+12,رنگ‌ها. سه رنگ را می‌شنوی. کدام رنگ گفته نشد؟,brown. blue. white.,,t:?,color_red,color_brown|color_blue|color_white,این سه گفته شد: نصواری، آبی، سفید. تصویری را انتخاب کن که نامش گفته نشد.
+12,,orange. black. yellow.,,t:?,color_red,color_orange|color_black|color_yellow,این سه گفته شد: نارنجی، سیاه، زرد. تصویری را انتخاب کن که نامش گفته نشد.
+12,,white. brown. red.,,t:?,color_blue,color_white|color_brown|color_red,این سه گفته شد: سفید، نصواری، سرخ. تصویری را انتخاب کن که نامش گفته نشد.
+12,,green. black. brown.,,t:?,color_blue,color_green|color_black|color_brown,این سه گفته شد: سبز، سیاه، نصواری. تصویری را انتخاب کن که نامش گفته نشد.
+12,,red. yellow. orange.,,t:?,color_green,color_red|color_yellow|color_orange,این سه گفته شد: سرخ، زرد، نارنجی. تصویری را انتخاب کن که نامش گفته نشد.
+12,,blue. yellow. orange.,,t:?,color_green,color_blue|color_yellow|color_orange,این سه گفته شد: آبی، زرد، نارنجی. تصویری را انتخاب کن که نامش گفته نشد.
+12,,brown. white. red.,,t:?,color_yellow,color_brown|color_white|color_red,این سه گفته شد: نصواری، سفید، سرخ. تصویری را انتخاب کن که نامش گفته نشد.
+12,,blue. brown. orange.,,t:?,color_yellow,color_blue|color_brown|color_orange,این سه گفته شد: آبی، نصواری، نارنجی. تصویری را انتخاب کن که نامش گفته نشد.
+12,,brown. blue. orange.,,t:?,color_black,color_brown|color_blue|color_orange,این سه گفته شد: نصواری، آبی، نارنجی. تصویری را انتخاب کن که نامش گفته نشد.
+12,,brown. white. blue.,,t:?,color_black,color_brown|color_white|color_blue,این سه گفته شد: نصواری، سفید، آبی. تصویری را انتخاب کن که نامش گفته نشد.
+12,,yellow. blue. red.,,t:?,color_white,color_yellow|color_blue|color_red,این سه گفته شد: زرد، آبی، سرخ. تصویری را انتخاب کن که نامش گفته نشد.
+12,,blue. black. brown.,,t:?,color_white,color_blue|color_black|color_brown,این سه گفته شد: آبی، سیاه، نصواری. تصویری را انتخاب کن که نامش گفته نشد.
+12,,blue. red. black.,,t:?,color_brown,color_blue|color_red|color_black,این سه گفته شد: آبی، سرخ، سیاه. تصویری را انتخاب کن که نامش گفته نشد.
+12,,black. red. green.,,t:?,color_brown,color_black|color_red|color_green,این سه گفته شد: سیاه، سرخ، سبز. تصویری را انتخاب کن که نامش گفته نشد.
+12,,black. blue. brown.,,t:?,color_orange,color_black|color_blue|color_brown,این سه گفته شد: سیاه، آبی، نصواری. تصویری را انتخاب کن که نامش گفته نشد.
+12,,white. yellow. blue.,,t:?,color_orange,color_white|color_yellow|color_blue,این سه گفته شد: سفید، زرد، آبی. تصویری را انتخاب کن که نامش گفته نشد.
 # 13: food; with book and bag from unit 08.
-13,خوراکی‌ها و دو چیز صنف. سه کلمه را می‌شنوی. تصویری را انتخاب کن که گفته نشد.,bread. bag. book.,,,apple,bread|bag|book,این سه گفته شد: نان، بکس، کتاب. تصویری را انتخاب کن که نامش گفته نشد.
-13,,tea. book. bread.,,,apple,tea|book|bread,این سه گفته شد: چای، کتاب، نان. تصویری را انتخاب کن که نامش گفته نشد.
-13,,egg. tea. water.,,,bread,egg|tea|water,این سه گفته شد: تخم مرغ، چای، آب. تصویری را انتخاب کن که نامش گفته نشد.
-13,,bag. apple. book.,,,bread,bag|apple|book,این سه گفته شد: بکس، سیب، کتاب. تصویری را انتخاب کن که نامش گفته نشد.
-13,,egg. book. apple.,,,water,egg|book|apple,این سه گفته شد: تخم مرغ، کتاب، سیب. تصویری را انتخاب کن که نامش گفته نشد.
-13,,apple. egg. book.,,,water,apple|egg|book,این سه گفته شد: سیب، تخم مرغ، کتاب. تصویری را انتخاب کن که نامش گفته نشد.
-13,,bread. bag. tea.,,,egg,bread|bag|tea,این سه گفته شد: نان، بکس، چای. تصویری را انتخاب کن که نامش گفته نشد.
-13,,bag. book. tea.,,,egg,bag|book|tea,این سه گفته شد: بکس، کتاب، چای. تصویری را انتخاب کن که نامش گفته نشد.
-13,,bread. water. apple.,,,tea,bread|water|apple,این سه گفته شد: نان، آب، سیب. تصویری را انتخاب کن که نامش گفته نشد.
-13,,bread. water. egg.,,,tea,bread|water|egg,این سه گفته شد: نان، آب، تخم مرغ. تصویری را انتخاب کن که نامش گفته نشد.
-13,,bread. egg. bag.,,,book,bread|egg|bag,این سه گفته شد: نان، تخم مرغ، بکس. تصویری را انتخاب کن که نامش گفته نشد.
-13,,tea. bread. egg.,,,book,tea|bread|egg,این سه گفته شد: چای، نان، تخم مرغ. تصویری را انتخاب کن که نامش گفته نشد.
-13,,egg. book. bread.,,,bag,egg|book|bread,این سه گفته شد: تخم مرغ، کتاب، نان. تصویری را انتخاب کن که نامش گفته نشد.
-13,,water. apple. bread.,,,bag,water|apple|bread,این سه گفته شد: آب، سیب، نان. تصویری را انتخاب کن که نامش گفته نشد.
+13,خوراکی‌ها و دو چیز صنف. سه کلمه را می‌شنوی. تصویری را انتخاب کن که گفته نشد.,bread. bag. book.,,t:?,apple,bread|bag|book,این سه گفته شد: نان، بکس، کتاب. تصویری را انتخاب کن که نامش گفته نشد.
+13,,tea. book. bread.,,t:?,apple,tea|book|bread,این سه گفته شد: چای، کتاب، نان. تصویری را انتخاب کن که نامش گفته نشد.
+13,,egg. tea. water.,,t:?,bread,egg|tea|water,این سه گفته شد: تخم مرغ، چای، آب. تصویری را انتخاب کن که نامش گفته نشد.
+13,,bag. apple. book.,,t:?,bread,bag|apple|book,این سه گفته شد: بکس، سیب، کتاب. تصویری را انتخاب کن که نامش گفته نشد.
+13,,egg. book. apple.,,t:?,water,egg|book|apple,این سه گفته شد: تخم مرغ، کتاب، سیب. تصویری را انتخاب کن که نامش گفته نشد.
+13,,apple. egg. book.,,t:?,water,apple|egg|book,این سه گفته شد: سیب، تخم مرغ، کتاب. تصویری را انتخاب کن که نامش گفته نشد.
+13,,bread. bag. tea.,,t:?,egg,bread|bag|tea,این سه گفته شد: نان، بکس، چای. تصویری را انتخاب کن که نامش گفته نشد.
+13,,bag. book. tea.,,t:?,egg,bag|book|tea,این سه گفته شد: بکس، کتاب، چای. تصویری را انتخاب کن که نامش گفته نشد.
+13,,bread. water. apple.,,t:?,tea,bread|water|apple,این سه گفته شد: نان، آب، سیب. تصویری را انتخاب کن که نامش گفته نشد.
+13,,bread. water. egg.,,t:?,tea,bread|water|egg,این سه گفته شد: نان، آب، تخم مرغ. تصویری را انتخاب کن که نامش گفته نشد.
+13,,bread. egg. bag.,,t:?,book,bread|egg|bag,این سه گفته شد: نان، تخم مرغ، بکس. تصویری را انتخاب کن که نامش گفته نشد.
+13,,tea. bread. egg.,,t:?,book,tea|bread|egg,این سه گفته شد: چای، نان، تخم مرغ. تصویری را انتخاب کن که نامش گفته نشد.
+13,,egg. book. bread.,,t:?,bag,egg|book|bread,این سه گفته شد: تخم مرغ، کتاب، نان. تصویری را انتخاب کن که نامش گفته نشد.
+13,,water. apple. bread.,,t:?,bag,water|apple|bread,این سه گفته شد: آب، سیب، نان. تصویری را انتخاب کن که نامش گفته نشد.
 # 15: commands 3; with listen and look.
-15,فرمان‌های صنف. سه فرمان گفته می‌شود. کدام یک گفته نشد؟,Count. Write. Read.,,,draw,count|write|read,این سه گفته شد: حساب کن، بنویس، بخوان. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Count. Listen. Look.,,,draw,count|listen|look,این سه گفته شد: حساب کن، گوش کن، ببین. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Draw. Say. Read.,,,write,draw|say|read,این سه گفته شد: رسم کن، بگو، بخوان. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Say. Listen. Count.,,,write,say|listen|count,این سه گفته شد: بگو، گوش کن، حساب کن. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Draw. Say. Count.,,,read,draw|say|count,این سه گفته شد: رسم کن، بگو، حساب کن. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Draw. Write. Look.,,,read,draw|write|look,این سه گفته شد: رسم کن، بنویس، ببین. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Read. Say. Draw.,,,count,read|say|draw,این سه گفته شد: بخوان، بگو، رسم کن. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Say. Draw. Read.,,,count,say|draw|read,این سه گفته شد: بگو، رسم کن، بخوان. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Count. Write. Look.,,,say,count|write|look,این سه گفته شد: حساب کن، بنویس، ببین. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Count. Draw. Write.,,,say,count|draw|write,این سه گفته شد: حساب کن، رسم کن، بنویس. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Count. Look. Read.,,,listen,count|look|read,این سه گفته شد: حساب کن، ببین، بخوان. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Read. Write. Look.,,,listen,read|write|look,این سه گفته شد: بخوان، بنویس، ببین. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Count. Write. Say.,,,look,count|write|say,این سه گفته شد: حساب کن، بنویس، بگو. تصویری را انتخاب کن که نامش گفته نشد.
-15,,Say. Count. Read.,,,look,say|count|read,این سه گفته شد: بگو، حساب کن، بخوان. تصویری را انتخاب کن که نامش گفته نشد.
+15,فرمان‌های صنف. سه فرمان گفته می‌شود. کدام یک گفته نشد؟,Count. Write. Read.,,t:?,draw,count|write|read,این سه گفته شد: حساب کن، بنویس، بخوان. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Count. Listen. Look.,,t:?,draw,count|listen|look,این سه گفته شد: حساب کن، گوش کن، ببین. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Draw. Say. Read.,,t:?,write,draw|say|read,این سه گفته شد: رسم کن، بگو، بخوان. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Say. Listen. Count.,,t:?,write,say|listen|count,این سه گفته شد: بگو، گوش کن، حساب کن. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Draw. Say. Count.,,t:?,read,draw|say|count,این سه گفته شد: رسم کن، بگو، حساب کن. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Draw. Write. Look.,,t:?,read,draw|write|look,این سه گفته شد: رسم کن، بنویس، ببین. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Read. Say. Draw.,,t:?,count,read|say|draw,این سه گفته شد: بخوان، بگو، رسم کن. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Say. Draw. Read.,,t:?,count,say|draw|read,این سه گفته شد: بگو، رسم کن، بخوان. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Count. Write. Look.,,t:?,say,count|write|look,این سه گفته شد: حساب کن، بنویس، ببین. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Count. Draw. Write.,,t:?,say,count|draw|write,این سه گفته شد: حساب کن، رسم کن، بنویس. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Count. Look. Read.,,t:?,listen,count|look|read,این سه گفته شد: حساب کن، ببین، بخوان. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Read. Write. Look.,,t:?,listen,read|write|look,این سه گفته شد: بخوان، بنویس، ببین. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Count. Write. Say.,,t:?,look,count|write|say,این سه گفته شد: حساب کن، بنویس، بگو. تصویری را انتخاب کن که نامش گفته نشد.
+15,,Say. Count. Read.,,t:?,look,say|count|read,این سه گفته شد: بگو، حساب کن، بخوان. تصویری را انتخاب کن که نامش گفته نشد.
 # 18: please; thank you; sorry; give; happy; sad and friend from units 14 and 16.
-18,کلمه‌های مهربانی و دوستی. سه کلمه را می‌شنوی. تصویری را انتخاب کن که گفته نشد.,sorry. happy. thank you.,,,please,sorry|happy|thank_you,این سه گفته شد: ببخشید، خوش، تشکر. تصویری را انتخاب کن که نامش گفته نشد.
-18,,thank you. sad. friend.,,,please,thank_you|sad|friends,این سه گفته شد: تشکر، غمگین، دوست. تصویری را انتخاب کن که نامش گفته نشد.
-18,,friend. please. happy.,,,thank_you,friends|please|happy,این سه گفته شد: دوست، لطفاً، خوش. تصویری را انتخاب کن که نامش گفته نشد.
-18,,give. happy. friend.,,,thank_you,give|happy|friends,این سه گفته شد: بده، خوش، دوست. تصویری را انتخاب کن که نامش گفته نشد.
-18,,sad. give. thank you.,,,sorry,sad|give|thank_you,این سه گفته شد: غمگین، بده، تشکر. تصویری را انتخاب کن که نامش گفته نشد.
-18,,give. happy. thank you.,,,sorry,give|happy|thank_you,این سه گفته شد: بده، خوش، تشکر. تصویری را انتخاب کن که نامش گفته نشد.
-18,,thank you. happy. please.,,,give,thank_you|happy|please,این سه گفته شد: تشکر، خوش، لطفاً. تصویری را انتخاب کن که نامش گفته نشد.
-18,,happy. please. friend.,,,give,happy|please|friends,این سه گفته شد: خوش، لطفاً، دوست. تصویری را انتخاب کن که نامش گفته نشد.
-18,,please. sad. friend.,,,happy,please|sad|friends,این سه گفته شد: لطفاً، غمگین، دوست. تصویری را انتخاب کن که نامش گفته نشد.
-18,,friend. give. sorry.,,,happy,friends|give|sorry,این سه گفته شد: دوست، بده، ببخشید. تصویری را انتخاب کن که نامش گفته نشد.
-18,,sorry. give. thank you.,,,sad,sorry|give|thank_you,این سه گفته شد: ببخشید، بده، تشکر. تصویری را انتخاب کن که نامش گفته نشد.
-18,,please. happy. thank you.,,,sad,please|happy|thank_you,این سه گفته شد: لطفاً، خوش، تشکر. تصویری را انتخاب کن که نامش گفته نشد.
-18,,sad. happy. give.,,,friends,sad|happy|give,این سه گفته شد: غمگین، خوش، بده. تصویری را انتخاب کن که نامش گفته نشد.
-18,,sad. please. sorry.,,,friends,sad|please|sorry,این سه گفته شد: غمگین، لطفاً، ببخشید. تصویری را انتخاب کن که نامش گفته نشد.
+18,کلمه‌های مهربانی و دوستی. سه کلمه را می‌شنوی. تصویری را انتخاب کن که گفته نشد.,sorry. happy. thank you.,,t:?,please,sorry|happy|thank_you,این سه گفته شد: ببخشید، خوش، تشکر. تصویری را انتخاب کن که نامش گفته نشد.
+18,,thank you. sad. friend.,,t:?,please,thank_you|sad|friends,این سه گفته شد: تشکر، غمگین، دوست. تصویری را انتخاب کن که نامش گفته نشد.
+18,,friend. please. happy.,,t:?,thank_you,friends|please|happy,این سه گفته شد: دوست، لطفاً، خوش. تصویری را انتخاب کن که نامش گفته نشد.
+18,,give. happy. friend.,,t:?,thank_you,give|happy|friends,این سه گفته شد: بده، خوش، دوست. تصویری را انتخاب کن که نامش گفته نشد.
+18,,sad. give. thank you.,,t:?,sorry,sad|give|thank_you,این سه گفته شد: غمگین، بده، تشکر. تصویری را انتخاب کن که نامش گفته نشد.
+18,,give. happy. thank you.,,t:?,sorry,give|happy|thank_you,این سه گفته شد: بده، خوش، تشکر. تصویری را انتخاب کن که نامش گفته نشد.
+18,,thank you. happy. please.,,t:?,give,thank_you|happy|please,این سه گفته شد: تشکر، خوش، لطفاً. تصویری را انتخاب کن که نامش گفته نشد.
+18,,happy. please. friend.,,t:?,give,happy|please|friends,این سه گفته شد: خوش، لطفاً، دوست. تصویری را انتخاب کن که نامش گفته نشد.
+18,,please. sad. friend.,,t:?,happy,please|sad|friends,این سه گفته شد: لطفاً، غمگین، دوست. تصویری را انتخاب کن که نامش گفته نشد.
+18,,friend. give. sorry.,,t:?,happy,friends|give|sorry,این سه گفته شد: دوست، بده، ببخشید. تصویری را انتخاب کن که نامش گفته نشد.
+18,,sorry. give. thank you.,,t:?,sad,sorry|give|thank_you,این سه گفته شد: ببخشید، بده، تشکر. تصویری را انتخاب کن که نامش گفته نشد.
+18,,please. happy. thank you.,,t:?,sad,please|happy|thank_you,این سه گفته شد: لطفاً، خوش، تشکر. تصویری را انتخاب کن که نامش گفته نشد.
+18,,sad. happy. give.,,t:?,friends,sad|happy|give,این سه گفته شد: غمگین، خوش، بده. تصویری را انتخاب کن که نامش گفته نشد.
+18,,sad. please. sorry.,,t:?,friends,sad|please|sorry,این سه گفته شد: غمگین، لطفاً، ببخشید. تصویری را انتخاب کن که نامش گفته نشد.

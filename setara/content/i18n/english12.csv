@@ -11,6 +11,46 @@ fa,en
 چهار تصویر است، اما فقط سه کلمه گفته می‌شود. تصویری را انتخاب کن که نامش گفته نشد.,"There are four pictures, but only three words are said. Pick the picture that was not named."
 چهار چیز را می‌شنوی. یکی از آن‌ها از گروه نیست. همان را انتخاب کن.,You hear four things. One of them is not of the group. Pick that one.
 چیستان را گوش کن. این چیست؟ تصویر درست را انتخاب کن.,Listen to the riddle. What is it? Pick the right picture.
+یک,one
+دو,two
+سه,three
+چهار,four
+پنج,five
+سیب‌ها را حساب کن.,Count the apples.
+قلم‌ها را حساب کن.,Count the pens.
+کتاب‌ها را حساب کن.,Count the books.
+تخم مرغ‌ها را حساب کن.,Count the eggs.
+شش,six
+هفت,seven
+هشت,eight
+نُه,nine
+ده,ten
+سیب‌های سرخ را حساب کن.,Count the red apples.
+تخم مرغ‌های سفید را حساب کن.,Count the white eggs.
+قلم‌های آبی را حساب کن.,Count the blue pens.
+کتاب‌های سرخ را حساب کن.,Count the red books.
+عدد سه.,The number three.
+عدد هشت.,The number eight.
+عدد یک.,The number one.
+عدد شش.,The number six.
+عدد ده.,The number ten.
+عدد چهار.,The number four.
+عدد نُه.,The number nine.
+عدد هفت.,The number seven.
+من هشت ساله هستم.,I am eight.
+من شش ساله هستم.,I am six.
+چند ساله هستی؟ من هفت ساله هستم.,How old are you? I am seven.
+چند ساله هستی؟ من ده ساله هستم.,How old are you? I am ten.
+من نُه ساله هستم.,I am nine.
+چند ساله هستی؟ من پنج ساله هستم.,How old are you? I am five.
+سه قلم,three pens
+پنج سیب,five apples
+دو کتاب,two books
+هشت تخم مرغ,eight eggs
+شش پنسل,six pencils
+ده سیب,ten apples
+چهار بکس,four bags
+هفت قلم,seven pens
 این پسر است؟ تصویر را ببین.,Is this a boy? Look at the picture.
 پسر است؟ تصویر را ببین.,Is it a boy? Look at the picture.
 دختر است؟ تصویر را ببین.,Is it a girl? Look at the picture.
@@ -299,7 +339,6 @@ fa,en
 پنج قلم آبی,five blue pens
 دو سیب زرد,two yellow apples
 سه کلمه را گوش کن: چند دانه، چه رنگ و چه چیز. حساب کن و تصویر درست را انتخاب کن.,"Listen to three words: how many, what colour and what thing. Count and pick the right picture."
-دو کتاب,two books
 پنج پنسل,five pencils
 سه بکس,three bags
 چهار تخم مرغ,four eggs
@@ -540,7 +579,7 @@ fa,en
 نادیه گفت: من هفت ساله هستم. عدد هفت را انتخاب کن.,Nadia said: I am seven. Pick the number seven.
 خداحافظ معلم! خداحافظ صنف!,"Goodbye, teacher! Goodbye, class!"
 سلام! نام من یوسف است. ببین! سیب‌ها!,Hello! My name is Yusuf. Look! Apples!
-سیب چه رنگ است؟,What colour is the apple?
+سیب سرخ است، سبز است یا زرد؟,"Is the apple red, green or yellow?"
 دوباره سیب‌های درخت را ببین. آن‌ها سرخ هستند. رنگ سرخ را انتخاب کن.,Look at the apples on the tree again. They are red. Pick the colour red.
 من یوسف هستم. من نُه ساله هستم. من شیرین هستم. من هشت ساله هستم.,I am Yusuf. I am nine. I am Shirin. I am eight.
 یوسف، این سیب است. این چیست؟,"Yusuf, this is an apple. What is this?"
@@ -548,7 +587,7 @@ fa,en
 یک، دو، سه! سه سیب سرخ.,"One, two, three! Three red apples."
 خداحافظ! خداحافظ!,Goodbye! Goodbye!
 سلام! نام من جواد است. من ده ساله هستم. ببین! این نان است.,Hello! My name is Jawad. I am ten. Look! This is bread.
-این چیست؟,What is this?
+ببین جواد! این چیست؟,"Look, Jawad! What is this?"
 این نان نیست. جواد نان در دست دارد. نان را انتخاب کن.,This is not bread. Jawad is holding bread. Pick the bread.
 سلام نادیه! چطور هستی؟ خوب هستم، تشکر.,"Hello, Nadia! How are you? I'm fine, thank you."
 این نان است. تشکر جواد!,"This is bread. Thank you, Jawad!"
@@ -607,16 +646,15 @@ fa,en
 یک، دو، سه، چهار.,"One, two, three, four."
 عددها به ترتیب. گوش کن و عددها را همان طور که شنیدی پشت هم بگذار.,Numbers in order. Listen and put the numbers one after the other as you heard them.
 من هفت ساله هستم.,I am seven.
-من نُه ساله هستم.,I am nine.
 نام من نادیه است. من شش ساله هستم.,My name is Nadia. I am six.
 چند ساله هستی؟,How old are you?
-من هشت ساله هستم.,I am eight.
 من ده ساله هستم.,I am ten.
 نام من زهرا است.,My name is Zahra.
 چند ساله هستی؟ جمله را گوش کن و کلمه‌ها را به ترتیب بگذار.,How old are you? Listen to the sentence and put the words in order.
 این کتاب من است.,This is my book.
 این بکس من است.,This is my bag.
 این قلم من است.,This is my pen.
+این چیست؟,What is this?
 این کتاب است.,This is a book.
 این قلم است.,This is a pen.
 این بکس است.,This is a bag.
@@ -684,7 +722,7 @@ fa,en
 یک دروازه رسم کن.,Draw a door.
 بخوان و بنویس.,Read and write.
 خداحافظ بگو.,Say goodbye.
-قلم‌ها را حساب کن.,Count the pens.
+چوکی‌ها را حساب کن.,Count the chairs.
 فرمان‌ها: رسم کن، بنویس، بخوان، حساب کن، بگو. جمله را گوش کن و بساز.,"Commands: draw, write, read, count, say. Listen to the sentence and build it."
 من غمگین هستم.,I am sad.
 سلام! چطور هستی؟,Hello! How are you?
@@ -730,6 +768,38 @@ fa,en
 این صنف من است.,This is my classroom.
 دروازه کلان است.,The door is big.
 همه چیز با هم. جمله را گوش کن و بساز.,Everything together. Listen to the sentence and build it.
+یازده,eleven
+دوازده,twelve
+سیزده,thirteen
+چهارده,fourteen
+پانزده,fifteen
+شانزده,sixteen
+هفده,seventeen
+هژده,eighteen
+نزده,nineteen
+بیست,twenty
+عدد سیزده.,The number thirteen.
+عدد بیست.,The number twenty.
+عدد پانزده.,The number fifteen.
+عدد دوازده.,The number twelve.
+عدد هژده.,The number eighteen.
+عدد شانزده.,The number sixteen.
+عدد یازده.,The number eleven.
+چند ستاره؟,How many stars?
+چند گل؟,How many flowers?
+چند درخت؟,How many trees?
+چند سنگ؟,How many stones?
+چند تخم مرغ؟,How many eggs?
+چند پنسل؟,How many pencils?
+چند برگ؟,How many leaves?
+چند بز؟ دو بز.,How many goats? Two goats.
+چند مرغ؟ سیزده مرغ.,How many hens? Thirteen hens.
+چند گاو؟,How many cows?
+چند گوسفند؟,How many sheep?
+چند سگ؟ سه سگ.,How many dogs? Three dogs.
+چند ماهی؟,How many fish?
+چند چوچهٔ مرغ؟,How many chicks?
+چند خر؟,How many donkeys?
 این مادر است؟ تصویر را ببین.,Is this the mother? Look at the picture.
 این مادر من است. بلی یا نه؟ تصویر را ببین.,This is my mother. Yes or no? Look at the picture.
 این پدر من است. بلی یا نه؟ تصویر را ببین.,This is my father. Yes or no? Look at the picture.
@@ -1117,15 +1187,15 @@ fa,en
 چیزها,things
 فامیل,family
 دو سبد است: میوه و ترکاری. گوش کن و هر چیز را در سبد درست بینداز.,There are two baskets: fruit and vegetables. Listen and drop each thing into the right basket.
-میوه,fruit
 ترکاری,vegetables
+میوه,fruit
 سه سبد است: حیوان‌ها، خوراکی و فامیل. گوش کن و هر تصویر را در سبد درست بینداز.,"There are three baskets: animals, food and family. Listen and drop each picture into the right basket."
 حیوان‌ها,animals
 چهار سبد است: چیزهای خانه، حیوان‌ها، میوه و ترکاری. خوب گوش کن و هر تصویر را در سبد درست بینداز.,"There are four baskets: things at home, animals, fruit and vegetables. Listen well and drop each picture into the right basket."
 چیزهای خانه,things at home
 دو سبد است: در خانه و در قریه. گوش کن: این چیز در خانه است یا بیرون در قریه؟ تصویر را در سبد درست بینداز.,There are two baskets: at home and in the village. Listen: is this thing at home or outside in the village? Drop the picture into the right basket.
-در خانه,at home
 در قریه,in the village
+در خانه,at home
 سر را بگیر.,Catch the heads.
 موی را بگیر.,Catch the hair.
 چشم را بگیر.,Catch the eyes.
@@ -1289,7 +1359,7 @@ fa,en
 سلام! نام من حمید است. این مادر من است. ببین! نان.,Hello! My name is Hamid. This is my mother. Look! Bread.
 من نان دارم. من نان را خوش دارم.,I have bread. I like bread.
 بفرما، بگیر. تشکر حمید!,"Here you are. Thank you, Hamid!"
-این کیست؟,Who is this?
+حمید، این کیست؟,"Hamid, who is this?"
 این پدرکلان نیست. پدرکلان ریش سفید دارد. دوباره انتخاب کن.,This is not the grandfather. The grandfather has a white beard. Choose again.
 این خواهر من است. من نان را خوش دارم. تشکر!,This is my sister. I like bread. Thank you!
 فامیل نان دارد. و این؟ این چیست؟,The family has bread. And this? What is it?
@@ -1299,11 +1369,11 @@ fa,en
 این چیست؟ مرغ را نشان بده.,What is this? Point to the hen.
 این مرغ نیست. مرغ دو لنگ دارد و تخم می‌دهد. دوباره انتخاب کن.,This is not a hen. A hen has two legs and lays eggs. Choose again.
 ببین! تخم مرغ‌ها! من تخم مرغ را خوش دارم.,Look! Eggs! I like eggs.
-چند تخم مرغ؟,How many eggs?
 دوباره حساب کن. یک، دو، سه. سه تخم مرغ است.,"Count again. One, two, three. There are three eggs."
 مادر، من سه تخم مرغ دارم. تشکر لیلا!,"Mother, I have three eggs. Thank you, Laila!"
 این فامیل من است. من مرغ‌هایم را خوش دارم. خداحافظ!,This is my family. I like my hens. Goodbye!
 سلام! نام من مریم است. ببین! این چیست؟,Hello! My name is Mariam. Look! What is this?
+این حیوان چیست؟,What is this animal?
 این پشک نیست. دوباره تصویر را ببین: این حیوان نارنجی پشک است.,This is not a cat. Look at the picture again: this orange animal is a cat.
 پشک غمگین است. پشک، تو شیر را خوش داری؟ تو نان را خوش داری؟,"The cat is sad. Do you like milk, cat? Do you like bread?"
 من نان دارم. بفرما پشک، بگیر.,"I have bread. Here you are, cat."
@@ -1311,7 +1381,6 @@ fa,en
 دوباره تصویر را ببین. پشک نان می‌خورد. نان را انتخاب کن.,Look at the picture again. The cat is eating bread. Pick the bread.
 پشک خوش است. من یک پشک دارم! خداحافظ!,The cat is happy. I have a cat! Goodbye!
 سلام! نام من نوید است. من گوسفند دارم.,Hello! My name is Navid. I have sheep.
-چند گوسفند؟,How many sheep?
 دوباره حساب کن. یک، دو، سه. نوید سه گوسفند دارد.,"Count again. One, two, three. Navid has three sheep."
 من یک بره دارم. خُرد است. بره! اینجا بیا!,I have a lamb. It is small. Lamb! Come here!
 ببین! این چیست؟,Look! What is this?
@@ -1330,6 +1399,7 @@ fa,en
 او مادر من است.,She is my mother.
 این مادر من است.,This is my mother.
 این پدر من است.,This is my father.
+این کیست؟,Who is this?
 این خواهر من است.,This is my sister.
 او برادر من است.,He is my brother.
 فامیل من. جمله را گوش کن و کلمه‌ها را به ترتیب درست پشت هم بگذار.,My family. Listen to the sentence and put the words one after the other in the right order.
@@ -1378,12 +1448,8 @@ fa,en
 هفده، هژده، نزده، بیست.,"Seventeen, eighteen, nineteen, twenty."
 چهارده، پانزده، شانزده.,"Fourteen, fifteen, sixteen."
 عددهای یازده تا بیست به ترتیب. گوش کن و عددها را همان طور که شنیدی پشت هم بگذار.,The numbers eleven to twenty in order. Listen and put the numbers one after the other as you heard them.
-چند گل؟,How many flowers?
-چند برگ؟,How many leaves?
 من دوازده سنگ دارم.,I have twelve stones.
 پانزده ستاره و یک مهتاب.,Fifteen stars and a moon.
-چند ستاره؟,How many stars?
-چند درخت؟,How many trees?
 من یازده قلم دارم.,I have eleven pens.
 من بیست سنگ دارم.,I have twenty stones.
 دو درخت و پنج گل.,Two trees and five flowers.

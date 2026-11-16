@@ -1,10 +1,10 @@
 round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 # Two and three words together: a blue ball; thirteen flowers; two goats; four spoons; What colour is the tree?
 # 03: the things of unit 03 with the colours and numbers of level 1: a blue ball; three keys; two blue balls.
-03,دو یا سه کلمه را با هم گوش کن: چند دانه، چه رنگ و چه چیز. تصویر درست را انتخاب کن.,a red ball,,,ball,ball_yellow|ball_blue|apple,یک توپ سرخ
-03,,a blue ball,,,ball_blue,ball_yellow|ball_green|book_blue,یک توپ آبی
-03,,a green ball,,,ball_green,ball_blue|ball_yellow|bag_green,یک توپ سبز
-03,,a yellow ball,,,ball_yellow,ball_green|ball_blue|key,یک توپ زرد
+03,دو یا سه کلمه را با هم گوش کن: چند دانه، چه رنگ و چه چیز. تصویر درست را انتخاب کن.,a red ball,,,ball,ball_yellow|ball_green|apple,یک توپ سرخ
+03,,a blue ball,,,ball_blue,ball_green|ball_yellow|book_blue,یک توپ آبی
+03,,a green ball,,,ball_green,ball|ball_blue|bag_green,یک توپ سبز
+03,,a yellow ball,,,ball_yellow,ball|ball_blue|key,یک توپ زرد
 03,,a yellow key,,,key,ball_yellow|comb|box,یک کلید زرد
 03,,a brown box,,,box,ball|key|bag_green,یک صندوق نصواری
 03,,two balls,,,p:ball*2,p:ball*3|p:key*2|p:key*3,دو توپ
@@ -37,14 +37,14 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 # 16: a number and an animal; the plural. Wrong choices: the same animal in another number; another animal.
 16,گوش کن که چند حیوان است و کدام حیوان. حساب کن و تصویر درست را انتخاب کن.,Look! Two goats.,,,p:goat*2,p:goat*3|p:sheep*2|p:sheep*3,دو بز
 16,,Look! Three cows.,,,p:cow*3,p:cow*2|p:horse*3|p:horse*2,سه گاو
-16,,Look! Five hens.,,,p:hen*5,p:hen*3|p:chick*5|p:chick*3,پنج مرغ
+16,,Look! Five hens.,,,p:hen*5,p:hen*3|p:dog*5|p:dog*3,پنج مرغ
 16,,Look! Four sheep.,,,p:sheep*4,p:sheep*2|p:goat*4|p:goat*2,چهار گوسفند
 16,,two cats,,,p:cat*2,p:cat*4|p:dog*2|p:dog*4,دو پشک
 16,,three dogs,,,p:dog*3,p:dog*5|p:cat*3|p:cat*5,سه سگ
-16,,six chicks,,,p:chick*6,p:chick*3|p:hen*6|p:hen*3,شش چوچهٔ مرغ
+16,,six chicks,,,p:chick*6,p:chick*3|p:lamb*6|p:lamb*3,شش چوچهٔ مرغ
 16,,two lambs,,,p:lamb*2,p:lamb*5|p:calf*2|p:calf*5,دو بره
-16,,four kittens,,,p:kitten*4,p:kitten*2|p:lamb*4|p:lamb*2,چهار چوچهٔ پشک
-16,,three calves,,,p:calf*3,p:calf*6|p:kitten*3|p:kitten*6,سه گوساله
+16,,four kittens,,,p:kitten*4,p:kitten*2|p:calf*4|p:calf*2,چهار چوچهٔ پشک
+16,,three calves,,,p:calf*3,p:calf*6|p:chick*3|p:chick*6,سه گوساله
 16,,two horses,,,p:horse*2,p:horse*4|p:donkey*2|p:donkey*4,دو اسپ
 16,,five fish,,,p:fish*5,p:fish*2|p:sparrow*5|p:sparrow*2,پنج ماهی
 16,,four donkeys,,,p:donkey*4,p:donkey*2|p:camel*4|p:camel*2,چهار خر
@@ -67,21 +67,21 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 17,,a red carpet,,,carpet,bed|basket|bucket,یک قالین سرخ
 17,,a white plate,,,plate,pot|broom|carpet,یک بشقاب سفید
 # 20: What colour is the ball? The colours of level 1 with the things of level 2. Close colours (orange; brown; red) are never offered together.
-20,تصویر میانه را ببین و سوال را گوش کن: چه رنگ است؟ رنگ درست را انتخاب کن.,What colour is the ball?,,ball_blue,color_blue,color_orange|color_red|color_green,توپ چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the ball?,,ball_green,color_green,color_black|color_orange|color_brown,توپ چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the flower?,,flower,color_red,color_green|color_white|color_yellow,گل چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the flower?,,flower_blue,color_blue,color_green|color_yellow|color_brown,گل چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the key?,,key,color_yellow,color_green|color_brown|color_blue,کلید چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the carpet?,,carpet,color_red,color_blue|color_black|color_green,قالین چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the tree?,,tree,color_green,color_white|color_black|color_yellow,درخت چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the leaf?,,leaf,color_green,color_orange|color_blue|color_yellow,برگ چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the tomato?,,tomato,color_red,color_white|color_green|color_yellow,بادنجان رومی چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the chick?,,chick,color_yellow,color_brown|color_blue|color_red,چوچهٔ مرغ چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the milk?,,milk,color_white,color_blue|color_orange|color_black,شیر چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the sheep?,,sheep,color_white,color_green|color_red|color_black,گوسفند چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the tooth?,,tooth,color_white,color_black|color_brown|color_red,دندان چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the carrot?,,carrot,color_orange,color_green|color_blue|color_white,زردک چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the cat?,,cat,color_orange,color_white|color_blue|color_green,پشک چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the horse?,,horse,color_brown,color_green|color_white|color_yellow,اسپ چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the potato?,,potato,color_brown,color_blue|color_yellow|color_green,کچالو چه رنگ است؟ تصویر میانه را ببین.
-20,,What colour is the star?,,star,color_yellow,color_blue|color_black|color_red,ستاره چه رنگ است؟ تصویر میانه را ببین.
+20,تصویر میانه را ببین و سوال را گوش کن: چه رنگ است؟ رنگ درست را انتخاب کن.,What colour is the ball?,,ball_blue,color_blue,color_green|color_red|color_orange,توپ چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the ball?,,ball_green,color_green,color_orange|color_brown|color_red,توپ چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the flower?,,flower,color_red,color_black|color_white|color_green,گل چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the flower?,,flower_blue,color_blue,color_brown|color_yellow|color_red,گل چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the key?,,key,color_yellow,color_blue|color_black|color_brown,کلید چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the carpet?,,carpet,color_red,color_black|color_green|color_blue,قالین چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the tree?,,tree,color_green,color_white|color_blue|color_yellow,درخت چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the leaf?,,leaf,color_green,color_yellow|color_brown|color_orange,برگ چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the tomato?,,tomato,color_red,color_yellow|color_black|color_blue,بادنجان رومی چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the chick?,,chick,color_yellow,color_black|color_green|color_brown,چوچهٔ مرغ چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the milk?,,milk,color_white,color_black|color_green|color_blue,شیر چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the sheep?,,sheep,color_white,color_orange|color_green|color_blue,گوسفند چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the tooth?,,tooth,color_white,color_brown|color_orange|color_blue,دندان چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the carrot?,,carrot,color_orange,color_blue|color_white|color_black,زردک چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the cat?,,cat,color_orange,color_white|color_green|color_blue,پشک چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the horse?,,horse,color_brown,color_white|color_green|color_blue,اسپ چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the potato?,,potato,color_brown,color_green|color_blue|color_white,کچالو چه رنگ است؟ تصویر میانه را ببین.
+20,,What colour is the star?,,star,color_yellow,color_black|color_red|color_blue,ستاره چه رنگ است؟ تصویر میانه را ببین.

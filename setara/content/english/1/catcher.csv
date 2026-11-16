@@ -64,7 +64,7 @@ round,intro_fa,say_en,say_fa,targets,others,need,help_fa
 19,,Catch the boys and the girls.,,boy|girl,teacher|table|chair|door,4,پسرها و دخترها را بگیر.
 19,,Catch yes.,,yes,no|color_green|color_red,3,بلی را بگیر.
 19,,Catch no.,,no,yes|color_red|color_green,3,نه را بگیر.
-19,,Catch happy.,,happy,sad|sorry|boy,3,خوش را بگیر.
-19,,Catch sad.,,sad,happy|girl|thank_you,3,غمگین را بگیر.
+19,,Catch happy.,,happy,sad|sorry|no,3,خوش را بگیر.
+19,,Catch sad.,,sad,happy|yes|thank_you,3,غمگین را بگیر.
 19,,Catch big.,,big,small|color_red|apple,3,کلان را بگیر.
 19,,Catch small.,,small,big|color_red|egg,3,خُرد را بگیر.

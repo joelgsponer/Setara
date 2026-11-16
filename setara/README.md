@@ -27,7 +27,7 @@ gates of the spec's own roadmap, and they are still ahead.
 | Pack builder: validation, speech, Dari shaping, pictures, checksums | Built, unit tested |
 | Card updates, damaged-pack handling, crash restart | Built, tested |
 | Content | See the table below |
-| Pictures | 1055 drawn as SVG, none reviewed locally |
+| Pictures | 1250 drawn as SVG, none reviewed locally |
 | Speech | Stand-in local voices. ElevenLabs path written, never run |
 | English mode for testers: English text and captions | Built. Translated by Claude, not checked by a native speaker |
 | Browser version, with a Dockerfile for hosting | Built, tested in Chromium and as a Docker image |
@@ -57,6 +57,7 @@ gates of the spec's own roadmap, and they are still ahead.
 | `garden-4-rights` My rights, your rights | 6 | 13 | 8 MB |
 | `garden-4-world` The world, Switzerland and Basel | 9 | 32 | 24 MB |
 | `garden-4` Health and environment 4: My future | 15 | 40 | 25 MB |
+| `guide-math-1` app strings and tutorial | | | 1 MB |
 | `math-1` Math 1: Counting to 20 | 6 | 44 | 11 MB |
 | `math-2-puzzles` Logic Puzzles | 9 | 43 | 14 MB |
 | `math-2` Math 2: Numbers to 100 | 6 | 42 | 12 MB |

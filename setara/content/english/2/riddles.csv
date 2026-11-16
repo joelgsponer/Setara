@@ -2,95 +2,95 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 # Riddles made of the words the child knows: colours; big and small; I have; I like; is not.
 # The three wrong pictures are written out for every riddle; so that only one picture fits.
 # 02: family and the things of unit 03.
-02,چیستان. کسی یا چیزی از خودش می‌گوید. خوب گوش کن و تصویرش را پیدا کن.,I am your mother's mother.,,,grandmother,mother|sister|baby,من مادرِ مادر تو هستم.
-02,,I am your father's father.,,,grandfather,father|brother|baby,من پدرِ پدر تو هستم.
-02,,Your mother and your father.,,,parents,grandmother|baby|sister,مادر تو و پدر تو.
-02,,I am small. I am one.,,,baby,grandfather|mother|father,من خُرد هستم. من یک ساله هستم.
-02,,I am a girl. This is my brother.,,,sister,brother|mother|grandfather,من دختر هستم. این برادر من است.
-02,,I am a boy. This is my sister.,,,brother,sister|father|grandmother,من پسر هستم. این خواهر من است.
-02,,"My mother, my father, my sister, my brother and I.",,,family,house|baby|grandmother,مادرم، پدرم، خواهرم، برادرم و من.
-02,,My family is here. It is big. Open the door!,,,house,box|ball|key,فامیل من اینجا است. کلان است. دروازه را باز کن!
-02,,I am your mother's father.,,,grandfather,grandmother|brother|sister,من پدرِ مادر تو هستم.
-02,,I am your father's mother.,,,grandmother,grandfather|mother|sister,من مادرِ پدر تو هستم.
-02,,I have it. Open the door!,,,key,comb|rope|ball,من این را دارم. دروازه را باز کن!
-02,,"Look at my hair! Give me this, please.",,,comb,key|box|rope,موی مرا ببین! لطفاً این را به من بده.
-02,,It is red. Boys and girls like it.,,,ball,box|key|comb,سرخ است. پسرها و دخترها آن را خوش دارند.
-02,,Open it and close it. It is brown.,,,box,ball|rope|comb,آن را باز کن و بسته کن. نصواری است.
+02,چیستان. کسی یا چیزی از خودش می‌گوید. خوب گوش کن و تصویرش را پیدا کن.,I am your mother's mother.,,t:?,grandmother,mother|sister|baby,من مادرِ مادر تو هستم.
+02,,I am your father's father.,,t:?,grandfather,father|brother|baby,من پدرِ پدر تو هستم.
+02,,Your mother and your father.,,t:?,parents,grandmother|baby|sister,مادر تو و پدر تو.
+02,,I am small. I am one.,,t:?,baby,grandfather|father|sister,من خُرد هستم. من یک ساله هستم.
+02,,I am a girl. This is my brother.,,t:?,sister,mother|grandfather|baby,من دختر هستم. این برادر من است.
+02,,I am a boy. This is my sister.,,t:?,brother,father|grandmother|baby,من پسر هستم. این خواهر من است.
+02,,"My mother, my father, my sister, my brother and I.",,t:?,family,house|baby|grandmother,مادرم، پدرم، خواهرم، برادرم و من.
+02,,My family is here. It is big. Open the door!,,t:?,house,box|ball|key,فامیل من اینجا است. کلان است. دروازه را باز کن!
+02,,I am your mother's father.,,t:?,grandfather,grandmother|brother|sister,من پدرِ مادر تو هستم.
+02,,I am your father's mother.,,t:?,grandmother,grandfather|mother|sister,من مادرِ پدر تو هستم.
+02,,I have it. Open the door!,,t:?,key,comb|rope|ball,من این را دارم. دروازه را باز کن!
+02,,"Look at my hair! Give me this, please.",,t:?,comb,key|box|rope,موی مرا ببین! لطفاً این را به من بده.
+02,,It is red. Boys and girls like it.,,t:?,ball,box|key|comb,سرخ است. پسرها و دخترها آن را خوش دارند.
+02,,Open it and close it. It is brown.,,t:?,box,ball|rope|comb,آن را باز کن و بسته کن. نصواری است.
 # 05: face and body; then a little counting: How many eyes? Three boys.
-05,چیستان بدن. خوب گوش کن: کدام عضو بدن است؟ یا: چند دانه است؟ جواب درست را انتخاب کن.,I have two. Listen!,,,ear,eye|nose|mouth,من دو دانه دارم. گوش کن!
-05,,I have two. Look!,,,eye,ear|mouth|nose,من دو دانه دارم. ببین!
-05,,I have one. It is not my mouth. It is not my head.,,,nose,mouth|head|ear,من یک دانه دارم. دهن من نیست. سر من نیست.
-05,,I have ten.,,,finger,hand|arm|nose,من ده دانه دارم.
-05,,They are white. I have many. Look at my mouth!,,,tooth,finger|eye|hair,آن‌ها سفید هستند. من بسیار دارم. دهن مرا ببین!
-05,,It is black or brown. I have a comb.,,,hair,head|ear|hand,سیاه یا نصواری است. من یک شانه دارم.
-05,,I have two. Clap!,,,hand,foot|ear|eye,من دو دانه دارم. چک چک کن!
-05,,"I have two. Go, go, go!",,,foot,hand|ear|eye,من دو دانه دارم. برو، برو، برو!
-05,,Cows have four. I have two. It is not my arm.,,,leg,arm|head|nose,گاوها چهار دانه دارند. من دو دانه دارم. بازوی من نیست.
-05,,I have two. It is not my leg. My hand is here.,,,arm,leg|head|mouth,من دو دانه دارم. لنگ من نیست. دست من اینجا است.
-05,,"I have one. My hair, my eyes and my ears.",,,head,hand|foot|leg,من یک دانه دارم. موی من، چشم‌های من و گوش‌های من.
-05,,I have one. Say hello! Open and close.,,,mouth,nose|ear|eye,من یک دانه دارم. سلام بگو! باز کن و بسته کن.
-05,,How many fingers? Two hands.,,,t:10,t:2|t:5|t:20,چند انگشت؟ دو دست.
-05,,How many eyes? Three boys.,,,t:6,t:3|t:2|t:8,چند چشم؟ سه پسر.
-05,,How many ears? Two sisters.,,,t:4,t:2|t:6|t:1,چند گوش؟ دو خواهر.
-05,,How many noses? Five brothers.,,,t:5,t:10|t:2|t:15,چند بینی؟ پنج برادر.
+05,چیستان بدن. خوب گوش کن: کدام عضو بدن است؟ یا: چند دانه است؟ جواب درست را انتخاب کن.,I have two. Listen!,,t:?,ear,eye|nose|mouth,من دو دانه دارم. گوش کن!
+05,,I have two. Look!,,t:?,eye,ear|mouth|nose,من دو دانه دارم. ببین!
+05,,I have one. It is not my mouth. It is not my head.,,t:?,nose,mouth|ear|hand,من یک دانه دارم. دهن من نیست. سر من نیست.
+05,,I have ten.,,t:?,finger,foot|nose|ear,من ده دانه دارم.
+05,,They are white. I have many. Look at my mouth!,,t:?,tooth,finger|eye|hair,آن‌ها سفید هستند. من بسیار دارم. دهن مرا ببین!
+05,,It is black or brown. I have a comb.,,t:?,hair,ear|hand|foot,سیاه یا نصواری است. من یک شانه دارم.
+05,,I have two. Clap!,,t:?,hand,foot|ear|eye,من دو دانه دارم. چک چک کن!
+05,,"I have two. Go, go, go!",,t:?,foot,hand|ear|eye,من دو دانه دارم. برو، برو، برو!
+05,,Cows have four. I have two. It is not my arm.,,t:?,leg,arm|head|nose,گاوها چهار دانه دارند. من دو دانه دارم. بازوی من نیست.
+05,,I have two. It is not my leg. My hand is here.,,t:?,arm,leg|head|mouth,من دو دانه دارم. لنگ من نیست. دست من اینجا است.
+05,,"I have one. My hair, my eyes and my ears.",,t:?,head,hand|foot|leg,من یک دانه دارم. موی من، چشم‌های من و گوش‌های من.
+05,,I have one. Say hello! Open and close.,,t:?,mouth,nose|ear|eye,من یک دانه دارم. سلام بگو! باز کن و بسته کن.
+05,,How many fingers? Two hands.,,t:?,t:10,t:2|t:5|t:20,چند انگشت؟ دو دست.
+05,,How many eyes? Three boys.,,t:?,t:6,t:3|t:2|t:8,چند چشم؟ سه پسر.
+05,,How many ears? Two sisters.,,t:?,t:4,t:2|t:6|t:1,چند گوش؟ دو خواهر.
+05,,How many noses? Five brothers.,,t:?,t:5,t:10|t:2|t:15,چند بینی؟ پنج برادر.
 # 11: food; fruit and vegetables; told by colour; size and who likes it.
-11,چیستان خوراکی. گوش کن: چه رنگ است؟ کلان است یا خُرد؟ میوه است یا ترکاری؟ تصویرش را پیدا کن.,It is a fruit. It is big and green.,,,watermelon,apricot|pomegranate|orange,میوه است. کلان و سبز است.
-11,,It is a fruit. It is small and orange. I have two.,,,apricot,watermelon|pomegranate|grapes,میوه است. خُرد و نارنجی است. من دو دانه دارم.
-11,,It is a fruit. It is red.,,,pomegranate,grapes|apricot|orange,میوه است. سرخ است.
-11,,It is a fruit. It is green and small. I have many.,,,grapes,watermelon|pomegranate|orange,میوه است. سبز و خُرد است. من بسیار دارم.
-11,,It is white. Babies and cats like it.,,,milk,tea|water|honey,سفید است. طفل‌ها و پشک‌ها آن را خوش دارند.
-11,,It is yellow. I like bread and this.,,,honey,milk|meat|onion,زرد است. من نان را با این خوش دارم.
-11,,It is a vegetable. It is orange.,,,carrot,potato|tomato|spinach,ترکاری است. نارنجی است.
-11,,It is a vegetable. It is red.,,,tomato,carrot|potato|spinach,ترکاری است. سرخ است.
-11,,It is a vegetable. It is green.,,,spinach,tomato|potato|carrot,ترکاری است. سبز است.
-11,,It is a vegetable. It is brown.,,,potato,tomato|carrot|spinach,ترکاری است. نصواری است.
-11,,It is food. It is brown. A dog likes it.,,,meat,rice|milk|sugar,خوراکی است. نصواری است. سگ آن را خوش دارد.
-11,,It is yellow. A hen likes it.,,,corn,carrot|meat|milk,زرد است. مرغ آن را خوش دارد.
-11,,"It is not a fruit. It is red, yellow and green. Do you like it? Yes, I do!",,,candy,grapes|tomato|corn,میوه نیست. سرخ، زرد و سبز است. تو آن را خوش داری؟ بلی، خوش دارم!
-11,,It is a fruit. It is red. It is not a pomegranate.,,,apple,pomegranate|tomato|orange,میوه است. سرخ است. انار نیست.
-11,,It is white and small. I have it from my hen.,,,egg,milk|sugar|stone,سفید و خُرد است. من آن را از مرغ خود دارم.
+11,چیستان خوراکی. گوش کن: چه رنگ است؟ کلان است یا خُرد؟ میوه است یا ترکاری؟ تصویرش را پیدا کن.,It is a fruit. It is big and green.,,t:?,watermelon,apricot|pomegranate|orange,میوه است. کلان و سبز است.
+11,,It is a fruit. It is small and orange. I have two.,,t:?,apricot,watermelon|pomegranate|grapes,میوه است. خُرد و نارنجی است. من دو دانه دارم.
+11,,It is a fruit. It is red.,,t:?,pomegranate,grapes|apricot|orange,میوه است. سرخ است.
+11,,It is a fruit. It is green and small. I have many.,,t:?,grapes,watermelon|pomegranate|orange,میوه است. سبز و خُرد است. من بسیار دارم.
+11,,It is white. Babies and cats like it.,,t:?,milk,tea|water|honey,سفید است. طفل‌ها و پشک‌ها آن را خوش دارند.
+11,,It is yellow. I like bread and this.,,t:?,honey,milk|meat|onion,زرد است. من نان را با این خوش دارم.
+11,,It is a vegetable. It is orange.,,t:?,carrot,potato|tomato|spinach,ترکاری است. نارنجی است.
+11,,It is a vegetable. It is red.,,t:?,tomato,carrot|potato|spinach,ترکاری است. سرخ است.
+11,,It is a vegetable. It is green.,,t:?,spinach,tomato|potato|carrot,ترکاری است. سبز است.
+11,,It is a vegetable. It is brown.,,t:?,potato,tomato|carrot|spinach,ترکاری است. نصواری است.
+11,,It is food. It is brown. A dog likes it.,,t:?,meat,rice|milk|sugar,خوراکی است. نصواری است. سگ آن را خوش دارد.
+11,,It is yellow. A hen likes it.,,t:?,corn,carrot|meat|milk,زرد است. مرغ آن را خوش دارد.
+11,,"It is not a fruit. It is red, yellow and green. Do you like it? Yes, I do!",,t:?,candy,grapes|tomato|corn,میوه نیست. سرخ، زرد و سبز است. تو آن را خوش داری؟ بلی، خوش دارم!
+11,,It is a fruit. It is red. It is not a pomegranate.,,t:?,apple,pomegranate|tomato|orange,میوه است. سرخ است. انار نیست.
+11,,It is white and small. I have it from my hen.,,t:?,egg,milk|sugar|stone,سفید و خُرد است. من آن را از مرغ خود دارم.
 # 15: the animals tell about themselves.
-15,چیستان حیوان‌ها. یک حیوان از خودش می‌گوید. خوب گوش کن و حیوان را پیدا کن.,I am an animal. I am big. I have milk.,,,cow,dog|hen|mouse,من حیوان هستم. من کلان هستم. من شیر دارم.
-15,,I am an animal. I am small. The cat is not my friend.,,,mouse,horse|cow|camel,من حیوان هستم. من خُرد هستم. پشک دوست من نیست.
-15,,I am an animal. I like water. I have no legs.,,,fish,mouse|hen|cat,من حیوان هستم. من آب را خوش دارم. من لنگ ندارم.
-15,,I am an animal. I have two legs. I have eggs.,,,hen,cat|goat|fish,من حیوان هستم. من دو لنگ دارم. من تخم دارم.
-15,,I am an animal. I am small. I have two legs. I like trees.,,,sparrow,mouse|fish|dog,من حیوان هستم. من خُرد هستم. من دو لنگ دارم. من درخت‌ها را خوش دارم.
-15,,I like milk and fish. The mouse is not my friend.,,,cat,dog|cow|hen,من شیر و ماهی را خوش دارم. موش دوست من نیست.
-15,,I am your friend. I have four legs. I don't like cats.,,,dog,hen|fish|sparrow,من دوست تو هستم. من چهار لنگ دارم. من پشک‌ها را خوش ندارم.
-15,,I am a big animal. I am not a horse. I am not a cow. I am not a donkey.,,,camel,horse|cow|donkey,من یک حیوان کلان هستم. من اسپ نیستم. من گاو نیستم. من خر نیستم.
-15,,I am a big animal. I am brown. I am not a cow. I am not a camel.,,,horse,cow|camel|hen,من یک حیوان کلان هستم. من نصواری هستم. من گاو نیستم. من شتر نیستم.
-15,,I am an animal. I am not big and not small. I have big ears.,,,donkey,horse|fish|hen,من حیوان هستم. نه کلان هستم و نه خُرد. من گوش‌های کلان دارم.
-15,,I am an animal. I have milk. I am not a cow. I am not a sheep.,,,goat,cow|sheep|dog,من حیوان هستم. من شیر دارم. من گاو نیستم. من گوسفند نیستم.
-15,,I am a white animal. I am not a hen. I have four legs.,,,sheep,hen|horse|dog,من یک حیوان سفید هستم. من مرغ نیستم. من چهار لنگ دارم.
+15,چیستان حیوان‌ها. یک حیوان از خودش می‌گوید. خوب گوش کن و حیوان را پیدا کن.,I am an animal. I am big. I have milk.,,t:?,cow,dog|hen|mouse,من حیوان هستم. من کلان هستم. من شیر دارم.
+15,,I am an animal. I am small. The cat is not my friend.,,t:?,mouse,horse|cow|camel,من حیوان هستم. من خُرد هستم. پشک دوست من نیست.
+15,,I am an animal. I like water. I have no legs.,,t:?,fish,mouse|hen|cat,من حیوان هستم. من آب را خوش دارم. من لنگ ندارم.
+15,,I am an animal. I have two legs. I have eggs.,,t:?,hen,cat|goat|fish,من حیوان هستم. من دو لنگ دارم. من تخم دارم.
+15,,I am an animal. I am small. I have two legs. I like trees.,,t:?,sparrow,mouse|fish|dog,من حیوان هستم. من خُرد هستم. من دو لنگ دارم. من درخت‌ها را خوش دارم.
+15,,I like milk and fish. The mouse is not my friend.,,t:?,cat,dog|cow|hen,من شیر و ماهی را خوش دارم. موش دوست من نیست.
+15,,I am your friend. I have four legs. I don't like cats.,,t:?,dog,hen|fish|sparrow,من دوست تو هستم. من چهار لنگ دارم. من پشک‌ها را خوش ندارم.
+15,,I am a big animal. I am not a horse. I am not a cow. I am not a donkey.,,t:?,camel,horse|cow|donkey,من یک حیوان کلان هستم. من اسپ نیستم. من گاو نیستم. من خر نیستم.
+15,,I am a big animal. I am brown. I am not a cow. I am not a camel.,,t:?,horse,cow|camel|hen,من یک حیوان کلان هستم. من نصواری هستم. من گاو نیستم. من شتر نیستم.
+15,,I am an animal. I am not big and not small. I have big ears.,,t:?,donkey,horse|fish|hen,من حیوان هستم. نه کلان هستم و نه خُرد. من گوش‌های کلان دارم.
+15,,I am an animal. I have milk. I am not a cow. I am not a sheep.,,t:?,goat,cow|sheep|dog,من حیوان هستم. من شیر دارم. من گاو نیستم. من گوسفند نیستم.
+15,,I am a white animal. I am not a hen. I have four legs.,,t:?,sheep,hen|horse|dog,من یک حیوان سفید هستم. من مرغ نیستم. من چهار لنگ دارم.
 # 16: mothers and babies; then legs; ears and eyes to count for several animals.
-16,چیستان چوچه‌ها و حساب. گوش کن: چوچهٔ کدام حیوان است؟ یا: چند لنگ است؟ جواب درست را انتخاب کن.,I am a baby sheep.,,,lamb,calf|chick|kitten,من چوچهٔ گوسفند هستم.
-16,,I am a baby cow.,,,calf,lamb|kitten|chick,من چوچهٔ گاو هستم.
-16,,I am a baby hen. I am yellow.,,,chick,lamb|calf|kitten,من چوچهٔ مرغ هستم. من زرد هستم.
-16,,I am a baby cat.,,,kitten,chick|lamb|calf,من چوچهٔ پشک هستم.
-16,,My baby is a lamb.,,,sheep,cow|hen|cat,چوچهٔ من بره است.
-16,,My baby is a calf.,,,cow,sheep|cat|hen,چوچهٔ من گوساله است.
-16,,My baby is a chick.,,,hen,cat|cow|sheep,چوچهٔ من چوچهٔ مرغ است.
-16,,My baby is a kitten.,,,cat,hen|sheep|cow,چوچهٔ من چوچهٔ پشک است.
-16,,How many legs? I am a cow.,,,t:4,t:2|t:6|t:8,چند لنگ؟ من گاو هستم.
-16,,How many legs? I am a hen.,,,t:2,t:4|t:6|t:1,چند لنگ؟ من مرغ هستم.
-16,,How many legs? Two goats.,,,t:8,t:4|t:2|t:6,چند لنگ؟ دو بز.
-16,,How many ears? Three donkeys.,,,t:6,t:3|t:12|t:2,چند گوش؟ سه خر.
-16,,How many eyes? Five kittens.,,,t:10,t:5|t:20|t:2,چند چشم؟ پنج چوچهٔ پشک.
-16,,How many legs? Three cows.,,,t:12,t:3|t:6|t:4,چند لنگ؟ سه گاو.
-16,,How many legs? Five sheep.,,,t:20,t:5|t:10|t:4,چند لنگ؟ پنج گوسفند.
+16,چیستان چوچه‌ها و حساب. گوش کن: چوچهٔ کدام حیوان است؟ یا: چند لنگ است؟ جواب درست را انتخاب کن.,I am a baby sheep.,,t:?,lamb,calf|chick|kitten,من چوچهٔ گوسفند هستم.
+16,,I am a baby cow.,,t:?,calf,lamb|kitten|chick,من چوچهٔ گاو هستم.
+16,,I am a baby hen. I am yellow.,,t:?,chick,lamb|calf|kitten,من چوچهٔ مرغ هستم. من زرد هستم.
+16,,I am a baby cat.,,t:?,kitten,chick|lamb|calf,من چوچهٔ پشک هستم.
+16,,My baby is a lamb.,,t:?,sheep,cow|hen|cat,چوچهٔ من بره است.
+16,,My baby is a calf.,,t:?,cow,sheep|cat|hen,چوچهٔ من گوساله است.
+16,,My baby is a chick.,,t:?,hen,cat|cow|sheep,چوچهٔ من چوچهٔ مرغ است.
+16,,My baby is a kitten.,,t:?,cat,hen|sheep|cow,چوچهٔ من چوچهٔ پشک است.
+16,,How many legs? I am a cow.,,t:?,t:4,t:2|t:6|t:8,چند لنگ؟ من گاو هستم.
+16,,How many legs? I am a hen.,,t:?,t:2,t:4|t:6|t:1,چند لنگ؟ من مرغ هستم.
+16,,How many legs? Two goats.,,t:?,t:8,t:4|t:2|t:6,چند لنگ؟ دو بز.
+16,,How many ears? Three donkeys.,,t:?,t:6,t:3|t:12|t:2,چند گوش؟ سه خر.
+16,,How many eyes? Five kittens.,,t:?,t:10,t:5|t:20|t:2,چند چشم؟ پنج چوچهٔ پشک.
+16,,How many legs? Three cows.,,t:?,t:12,t:3|t:6|t:4,چند لنگ؟ سه گاو.
+16,,How many legs? Five sheep.,,t:?,t:20,t:5|t:10|t:4,چند لنگ؟ پنج گوسفند.
 # 19: the village; the sky and the things at home.
-19,چیستان قریه و خانه. گوش کن که چه رنگ است، کلان است یا خُرد، و چه نیست. تصویرش را پیدا کن.,It is big. It is yellow. Good morning!,,,sun,moon|star|mountain,کلان است. زرد است. صبح بخیر!
-19,,It is not the sun. It is not a star. It is yellow.,,,moon,sun|star|mountain,آفتاب نیست. ستاره نیست. زرد است.
-19,,It is small and yellow. How many? Twenty!,,,star,sun|moon|stone,خُرد و زرد است. چند دانه؟ بیست!
-19,,It is very big. It is brown and white. It is not a house.,,,mountain,house|tree|stone,بسیار کلان است. نصواری و سفید است. خانه نیست.
-19,,It is water. It is big. Fish like it.,,,river,bucket|cup|field,آب است. کلان است. ماهی‌ها آن را خوش دارند.
-19,,I have water from it. I have a bucket and a rope.,,,well,field|mountain|tree,من از آن آب می‌گیرم. من یک سطل و یک ریسمان دارم.
-19,,It is big and green. Cows and sheep like it.,,,field,mountain|river|well,کلان و سبز است. گاوها و گوسفندها آن را خوش دارند.
-19,,It is big and green. Birds like it. I have apples from it.,,,tree,flower|stone|mountain,کلان و سبز است. پرنده‌ها آن را خوش دارند. من از آن سیب می‌گیرم.
-19,,It is small and green. It is from a tree.,,,leaf,flower|stone|star,خُرد و سبز است. از درخت است.
-19,,"It is small. It is red, yellow or blue. It is not a ball.",,,flower,ball|leaf|stone,خُرد است. سرخ، زرد یا آبی است. توپ نیست.
-19,,A mountain is big. I am small. I am a small mountain!,,,stone,tree|leaf|star,کوه کلان است. من خُرد هستم. من مثل یک کوه خُرد هستم!
-19,,I have a pillow and a blanket. Good night!,,,bed,carpet|basket|pot,من یک بالشت و یک کمپل دارم. شب بخیر!
-19,,"Tea, please! Give me this.",,,cup,plate|broom|soap,لطفاً چای! این را به من بده.
-19,,"Rice and meat, please! Give me this and a spoon.",,,plate,bucket|pillow|broom,لطفاً برنج و گوشت! این و یک قاشق را به من بده.
-19,,It is not a pillow. It is not a carpet. It is red.,,,blanket,pillow|carpet|cup,بالشت نیست. قالین نیست. سرخ است.
+19,چیستان قریه و خانه. گوش کن که چه رنگ است، کلان است یا خُرد، و چه نیست. تصویرش را پیدا کن.,It is big. It is yellow. Good morning!,,t:?,sun,moon|star|mountain,کلان است. زرد است. صبح بخیر!
+19,,It is not the sun. It is not a star. It is yellow.,,t:?,moon,sun|star|mountain,آفتاب نیست. ستاره نیست. زرد است.
+19,,It is small and yellow. How many? Twenty!,,t:?,star,sun|leaf|stone,خُرد و زرد است. چند دانه؟ بیست!
+19,,It is very big. It is brown and white. It is not a house.,,t:?,mountain,house|tree|stone,بسیار کلان است. نصواری و سفید است. خانه نیست.
+19,,It is water. It is big. Fish like it.,,t:?,river,bucket|cup|field,آب است. کلان است. ماهی‌ها آن را خوش دارند.
+19,,I have water from it. I have a bucket and a rope.,,t:?,well,field|mountain|tree,من از آن آب می‌گیرم. من یک سطل و یک ریسمان دارم.
+19,,It is big and green. Cows and sheep like it.,,t:?,field,mountain|river|well,کلان و سبز است. گاوها و گوسفندها آن را خوش دارند.
+19,,It is big and green. Birds like it. I have apples from it.,,t:?,tree,flower|stone|mountain,کلان و سبز است. پرنده‌ها آن را خوش دارند. من از آن سیب می‌گیرم.
+19,,It is small and green. It is from a tree.,,t:?,leaf,ball|stone|star,خُرد و سبز است. از درخت است.
+19,,"It is small. It is red, yellow or blue. It is not a ball.",,t:?,flower,ball|leaf|stone,خُرد است. سرخ، زرد یا آبی است. توپ نیست.
+19,,A mountain is big. I am small. I am a small mountain!,,t:?,stone,tree|leaf|star,کوه کلان است. من خُرد هستم. من مثل یک کوه خُرد هستم!
+19,,I have a pillow and a blanket. Good night!,,t:?,bed,carpet|basket|pot,من یک بالشت و یک کمپل دارم. شب بخیر!
+19,,"Tea, please! Give me this.",,t:?,cup,plate|broom|soap,لطفاً چای! این را به من بده.
+19,,"Rice and meat, please! Give me this and a spoon.",,t:?,plate,bucket|pillow|broom,لطفاً برنج و گوشت! این و یک قاشق را به من بده.
+19,,It is not a pillow. It is not a carpet. It is red.,,t:?,blanket,pillow|carpet|cup,بالشت نیست. قالین نیست. سرخ است.

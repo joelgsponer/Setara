@@ -2,100 +2,100 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 # Four words are spoken; three belong to a group that is named in English; the child picks the one that does not.
 # Generated combinations: no set of four occurs twice.
 # 05: three of the family and one that is not: a part of the body or a thing.
-05,چهار کلمه را می‌شنوی. سه تای آن از فامیل است و یکی نیست. آن یکی را پیدا کن که از فامیل نیست.,ball. brother. parents. baby. Which one is not family?,,,ball,brother|parents|baby,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,house. mother. parents. sister. Which one is not family?,,,house,parents|sister|mother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,mother. father. grandmother. head. Which one is not family?,,,head,mother|grandmother|father,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,sister. baby. grandmother. arm. Which one is not family?,,,arm,sister|baby|grandmother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,grandmother. father. comb. brother. Which one is not family?,,,comb,brother|grandmother|father,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,father. grandmother. hair. baby. Which one is not family?,,,hair,baby|grandmother|father,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,nose. parents. baby. sister. Which one is not family?,,,nose,baby|sister|parents,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,grandmother. parents. hand. father. Which one is not family?,,,hand,grandmother|parents|father,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,father. brother. box. sister. Which one is not family?,,,box,brother|sister|father,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,mother. father. brother. rope. Which one is not family?,,,rope,father|brother|mother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,grandfather. mother. grandmother. ear. Which one is not family?,,,ear,mother|grandfather|grandmother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,parents. sister. brother. key. Which one is not family?,,,key,parents|sister|brother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,mother. father. eye. baby. Which one is not family?,,,eye,baby|father|mother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-05,,sister. mouth. brother. grandmother. Which one is not family?,,,mouth,brother|grandmother|sister,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,چهار کلمه را می‌شنوی. سه تای آن از فامیل است و یکی نیست. آن یکی را پیدا کن که از فامیل نیست.,ball. brother. parents. baby. Which one is not family?,,t:?,ball,brother|parents|baby,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,house. mother. parents. sister. Which one is not family?,,t:?,house,parents|sister|mother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,mother. father. grandmother. head. Which one is not family?,,t:?,head,mother|grandmother|father,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,sister. baby. grandmother. arm. Which one is not family?,,t:?,arm,sister|baby|grandmother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,grandmother. father. comb. brother. Which one is not family?,,t:?,comb,brother|grandmother|father,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,father. grandmother. hair. baby. Which one is not family?,,t:?,hair,baby|grandmother|father,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,nose. parents. baby. sister. Which one is not family?,,t:?,nose,baby|sister|parents,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,grandmother. parents. hand. father. Which one is not family?,,t:?,hand,grandmother|parents|father,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,father. brother. box. sister. Which one is not family?,,t:?,box,brother|sister|father,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,mother. father. brother. rope. Which one is not family?,,t:?,rope,father|brother|mother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,grandfather. mother. grandmother. ear. Which one is not family?,,t:?,ear,mother|grandfather|grandmother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,parents. sister. brother. key. Which one is not family?,,t:?,key,parents|sister|brother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,mother. father. eye. baby. Which one is not family?,,t:?,eye,baby|father|mother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+05,,sister. mouth. brother. grandmother. Which one is not family?,,t:?,mouth,brother|grandmother|sister,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
 # 09: three foods and one thing that is not food.
-09,چهار کلمه را می‌شنوی. سه تای آن خوراکی است و یکی خوراکی نیست. آن یکی را انتخاب کن.,rice. meat. box. bread. Which one is not food?,,,box,meat|rice|bread,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,stone. bread. rice. milk. Which one is not food?,,,stone,bread|rice|milk,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,star. yoghurt. water. egg. Which one is not food?,,,star,egg|water|yoghurt,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,sugar. apple. ball. bread. Which one is not food?,,,ball,apple|bread|sugar,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,egg. tea. rice. book. Which one is not food?,,,book,egg|tea|rice,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,comb. milk. egg. meat. Which one is not food?,,,comb,egg|milk|meat,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,milk. sugar. apple. hand. Which one is not food?,,,hand,apple|milk|sugar,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,apple. leaf. egg. tea. Which one is not food?,,,leaf,apple|tea|egg,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,egg. key. rice. milk. Which one is not food?,,,key,rice|milk|egg,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,sugar. bread. pen. yoghurt. Which one is not food?,,,pen,bread|yoghurt|sugar,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,meat. tree. bread. sugar. Which one is not food?,,,tree,bread|sugar|meat,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,tea. water. tooth. egg. Which one is not food?,,,tooth,egg|water|tea,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,water. rice. rope. yoghurt. Which one is not food?,,,rope,yoghurt|water|rice,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-09,,apple. flower. tea. yoghurt. Which one is not food?,,,flower,tea|yoghurt|apple,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,چهار کلمه را می‌شنوی. سه تای آن خوراکی است و یکی خوراکی نیست. آن یکی را انتخاب کن.,rice. meat. box. apple. Which one is not food?,,t:?,box,meat|rice|apple,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,stone. rice. egg. bread. Which one is not food?,,t:?,stone,bread|egg|rice,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,leaf. sugar. apple. yoghurt. Which one is not food?,,t:?,leaf,sugar|yoghurt|apple,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,tooth. sugar. yoghurt. meat. Which one is not food?,,t:?,tooth,yoghurt|sugar|meat,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,egg. yoghurt. rice. pen. Which one is not food?,,t:?,pen,egg|yoghurt|rice,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,comb. rice. egg. milk. Which one is not food?,,t:?,comb,egg|rice|milk,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,meat. sugar. milk. hand. Which one is not food?,,t:?,hand,milk|meat|sugar,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,apple. milk. yoghurt. ball. Which one is not food?,,t:?,ball,apple|yoghurt|milk,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,bread. rice. apple. book. Which one is not food?,,t:?,book,rice|bread|apple,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,meat. bread. flower. apple. Which one is not food?,,t:?,flower,bread|apple|meat,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,star. milk. meat. bread. Which one is not food?,,t:?,star,milk|meat|bread,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,meat. tree. rice. bread. Which one is not food?,,t:?,tree,meat|bread|rice,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,rice. sugar. rope. bread. Which one is not food?,,t:?,rope,rice|sugar|bread,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+09,,milk. key. yoghurt. sugar. Which one is not food?,,t:?,key,sugar|milk|yoghurt,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
 # 11: three fruits and one that is not a fruit: another food; a thing; a part of the body.
-11,چهار کلمه را می‌شنوی. سه تای آن میوه است و یکی میوه نیست. آن یکی را انتخاب کن.,orange. pomegranate. ball. apple. Which one is not a fruit?,,,ball,orange|apple|pomegranate,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,mulberry. grapes. yoghurt. apple. Which one is not a fruit?,,,yoghurt,apple|mulberry|grapes,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,mulberry. orange. milk. apple. Which one is not a fruit?,,,milk,orange|apple|mulberry,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,watermelon. bread. orange. grapes. Which one is not a fruit?,,,bread,grapes|orange|watermelon,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,orange. apricot. mulberry. tea. Which one is not a fruit?,,,tea,apricot|orange|mulberry,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,mulberry. watermelon. meat. pomegranate. Which one is not a fruit?,,,meat,pomegranate|mulberry|watermelon,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,leaf. mulberry. pomegranate. watermelon. Which one is not a fruit?,,,leaf,watermelon|pomegranate|mulberry,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,mulberry. nose. pomegranate. orange. Which one is not a fruit?,,,nose,orange|mulberry|pomegranate,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,grapes. orange. watermelon. key. Which one is not a fruit?,,,key,watermelon|grapes|orange,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,apricot. egg. orange. mulberry. Which one is not a fruit?,,,egg,orange|apricot|mulberry,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,pomegranate. stone. apricot. watermelon. Which one is not a fruit?,,,stone,apricot|pomegranate|watermelon,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,sugar. orange. pomegranate. apple. Which one is not a fruit?,,,sugar,orange|pomegranate|apple,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,orange. grapes. rice. apricot. Which one is not a fruit?,,,rice,apricot|grapes|orange,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-11,,mulberry. pomegranate. rice. orange. Which one is not a fruit?,,,rice,pomegranate|mulberry|orange,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,چهار کلمه را می‌شنوی. سه تای آن میوه است و یکی میوه نیست. آن یکی را انتخاب کن.,pomegranate. orange. leaf. apricot. Which one is not a fruit?,,t:?,leaf,orange|apricot|pomegranate,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,apple. grapes. milk. watermelon. Which one is not a fruit?,,t:?,milk,watermelon|apple|grapes,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,apple. tea. grapes. pomegranate. Which one is not a fruit?,,t:?,tea,grapes|pomegranate|apple,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,apricot. orange. rice. apple. Which one is not a fruit?,,t:?,rice,orange|apple|apricot,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,watermelon. bread. orange. grapes. Which one is not a fruit?,,t:?,bread,grapes|orange|watermelon,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,orange. apricot. mulberry. yoghurt. Which one is not a fruit?,,t:?,yoghurt,apricot|orange|mulberry,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,mulberry. watermelon. meat. pomegranate. Which one is not a fruit?,,t:?,meat,pomegranate|mulberry|watermelon,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,egg. mulberry. pomegranate. watermelon. Which one is not a fruit?,,t:?,egg,watermelon|pomegranate|mulberry,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,mulberry. ball. pomegranate. orange. Which one is not a fruit?,,t:?,ball,orange|mulberry|pomegranate,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,grapes. orange. watermelon. key. Which one is not a fruit?,,t:?,key,watermelon|grapes|orange,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,apricot. stone. orange. mulberry. Which one is not a fruit?,,t:?,stone,orange|apricot|mulberry,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,pomegranate. nose. apricot. watermelon. Which one is not a fruit?,,t:?,nose,apricot|pomegranate|watermelon,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,sugar. orange. pomegranate. apple. Which one is not a fruit?,,t:?,sugar,orange|pomegranate|apple,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+11,,orange. grapes. milk. apricot. Which one is not a fruit?,,t:?,milk,apricot|grapes|orange,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
 # 12: three vegetables and one that is not: a fruit or another food.
-12,چهار کلمه را می‌شنوی. سه تای آن ترکاری است و یکی ترکاری نیست. آن یکی را انتخاب کن.,onion. carrot. egg. spinach. Which one is not a vegetable?,,,egg,carrot|onion|spinach,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,onion. apple. potato. tomato. Which one is not a vegetable?,,,apple,onion|potato|tomato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,meat. potato. spinach. carrot. Which one is not a vegetable?,,,meat,carrot|spinach|potato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,tomato. carrot. apricot. potato. Which one is not a vegetable?,,,apricot,potato|carrot|tomato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,carrot. potato. pomegranate. spinach. Which one is not a vegetable?,,,pomegranate,carrot|spinach|potato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,potato. spinach. tomato. milk. Which one is not a vegetable?,,,milk,potato|tomato|spinach,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,potato. grapes. tomato. spinach. Which one is not a vegetable?,,,grapes,spinach|potato|tomato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,carrot. potato. rice. tomato. Which one is not a vegetable?,,,rice,potato|carrot|tomato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,spinach. bread. tomato. potato. Which one is not a vegetable?,,,bread,potato|tomato|spinach,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,spinach. carrot. onion. watermelon. Which one is not a vegetable?,,,watermelon,carrot|spinach|onion,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,potato. orange. onion. spinach. Which one is not a vegetable?,,,orange,potato|onion|spinach,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,tomato. potato. mulberry. onion. Which one is not a vegetable?,,,mulberry,potato|tomato|onion,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,onion. orange. potato. carrot. Which one is not a vegetable?,,,orange,carrot|potato|onion,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-12,,tomato. bread. onion. carrot. Which one is not a vegetable?,,,bread,tomato|carrot|onion,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,چهار کلمه را می‌شنوی. سه تای آن ترکاری است و یکی ترکاری نیست. آن یکی را انتخاب کن.,spinach. onion. tomato. grapes. Which one is not a vegetable?,,t:?,grapes,onion|tomato|spinach,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,onion. carrot. egg. spinach. Which one is not a vegetable?,,t:?,egg,carrot|onion|spinach,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,onion. apple. potato. tomato. Which one is not a vegetable?,,t:?,apple,onion|potato|tomato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,meat. potato. spinach. carrot. Which one is not a vegetable?,,t:?,meat,carrot|spinach|potato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,tomato. carrot. apricot. potato. Which one is not a vegetable?,,t:?,apricot,potato|carrot|tomato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,carrot. potato. pomegranate. spinach. Which one is not a vegetable?,,t:?,pomegranate,carrot|spinach|potato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,potato. spinach. tomato. milk. Which one is not a vegetable?,,t:?,milk,potato|tomato|spinach,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,potato. watermelon. tomato. spinach. Which one is not a vegetable?,,t:?,watermelon,spinach|potato|tomato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,carrot. potato. rice. tomato. Which one is not a vegetable?,,t:?,rice,potato|carrot|tomato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,spinach. bread. tomato. potato. Which one is not a vegetable?,,t:?,bread,potato|tomato|spinach,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,spinach. carrot. onion. mulberry. Which one is not a vegetable?,,t:?,mulberry,carrot|spinach|onion,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,potato. orange. onion. spinach. Which one is not a vegetable?,,t:?,orange,potato|onion|spinach,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,tomato. potato. watermelon. onion. Which one is not a vegetable?,,t:?,watermelon,potato|tomato|onion,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+12,,onion. orange. potato. carrot. Which one is not a vegetable?,,t:?,orange,carrot|potato|onion,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
 # 15: three animals and one that is not an animal.
-15,چهار کلمه را می‌شنوی. سه تای آن حیوان است و یکی حیوان نیست. آن یکی را انتخاب کن.,donkey. ball. calf. hen. Which one is not an animal?,,,ball,calf|hen|donkey,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,bird. cat. meat. sheep. Which one is not an animal?,,,meat,sheep|cat|sparrow,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,lamb. sheep. hen. spinach. Which one is not an animal?,,,spinach,sheep|hen|lamb,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,fish. mouse. baby. horse. Which one is not an animal?,,,baby,mouse|horse|fish,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,rice. hen. chick. sheep. Which one is not an animal?,,,rice,chick|sheep|hen,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,chick. sugar. horse. cow. Which one is not an animal?,,,sugar,chick|cow|horse,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,calf. brother. goat. hen. Which one is not an animal?,,,brother,hen|calf|goat,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,sheep. donkey. carrot. hen. Which one is not an animal?,,,carrot,sheep|donkey|hen,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,mouse. chick. cat. flower. Which one is not an animal?,,,flower,cat|chick|mouse,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,potato. donkey. dog. hen. Which one is not an animal?,,,potato,donkey|dog|hen,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,tree. donkey. chick. bird. Which one is not an animal?,,,tree,donkey|chick|sparrow,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,donkey. lamb. cat. onion. Which one is not an animal?,,,onion,donkey|lamb|cat,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,yoghurt. horse. calf. cow. Which one is not an animal?,,,yoghurt,horse|calf|cow,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,bird. cat. donkey. tomato. Which one is not an animal?,,,tomato,sparrow|cat|donkey,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,sister. mouse. camel. dog. Which one is not an animal?,,,sister,camel|mouse|dog,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-15,,cat. milk. hen. horse. Which one is not an animal?,,,milk,cat|horse|hen,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,چهار کلمه را می‌شنوی. سه تای آن حیوان است و یکی حیوان نیست. آن یکی را انتخاب کن.,kitten. brother. dog. donkey. Which one is not an animal?,,t:?,brother,kitten|dog|donkey,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,fish. mouse. sister. camel. Which one is not an animal?,,t:?,sister,mouse|camel|fish,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,sheep. hen. calf. rice. Which one is not an animal?,,t:?,rice,sheep|hen|calf,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,goat. spinach. donkey. lamb. Which one is not an animal?,,t:?,spinach,donkey|goat|lamb,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,potato. cat. lamb. hen. Which one is not an animal?,,t:?,potato,cat|lamb|hen,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,sheep. bird. ball. camel. Which one is not an animal?,,t:?,ball,sparrow|camel|sheep,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,dog. kitten. hen. onion. Which one is not an animal?,,t:?,onion,kitten|hen|dog,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,dog. chick. carrot. sheep. Which one is not an animal?,,t:?,carrot,sheep|chick|dog,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,baby. lamb. hen. camel. Which one is not an animal?,,t:?,baby,camel|hen|lamb,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,lamb. calf. sheep. milk. Which one is not an animal?,,t:?,milk,sheep|calf|lamb,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,calf. tomato. chick. horse. Which one is not an animal?,,t:?,tomato,horse|calf|chick,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,sheep. lamb. tree. hen. Which one is not an animal?,,t:?,tree,lamb|hen|sheep,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,horse. flower. hen. calf. Which one is not an animal?,,t:?,flower,hen|calf|horse,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,yoghurt. horse. fish. cat. Which one is not an animal?,,t:?,yoghurt,fish|horse|cat,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,donkey. meat. mouse. lamb. Which one is not an animal?,,t:?,meat,donkey|mouse|lamb,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+15,,cow. donkey. mouse. sugar. Which one is not an animal?,,t:?,sugar,mouse|donkey|cow,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
 # 20: all five groups in turn; the odd one is a thing at home or in the village.
-20,همه گروه‌ها با هم: فامیل، خوراکی، میوه، ترکاری و حیوان. خوب گوش کن که کدام گروه گفته می‌شود، و آن یکی را پیدا کن که از گروه نیست.,parents. sister. father. mountain. Which one is not family?,,,mountain,sister|father|parents,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-20,,water. basket. milk. sugar. Which one is not food?,,,basket,water|milk|sugar,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-20,,orange. apple. mulberry. soap. Which one is not a fruit?,,,soap,apple|mulberry|orange,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-20,,onion. spinach. tomato. bed. Which one is not a vegetable?,,,bed,tomato|spinach|onion,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-20,,fish. cat. cow. house. Which one is not an animal?,,,house,cat|fish|cow,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-20,,sister. brother. carpet. grandfather. Which one is not family?,,,carpet,sister|grandfather|brother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-20,,river. apple. milk. yoghurt. Which one is not food?,,,river,apple|yoghurt|milk,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-20,,apple. moon. watermelon. pomegranate. Which one is not a fruit?,,,moon,pomegranate|watermelon|apple,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-20,,onion. broom. tomato. potato. Which one is not a vegetable?,,,broom,onion|tomato|potato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-20,,kitten. dog. sun. fish. Which one is not an animal?,,,sun,dog|fish|kitten,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-20,,plate. sister. parents. brother. Which one is not family?,,,plate,parents|sister|brother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-20,,bread. tea. rice. pillow. Which one is not food?,,,pillow,bread|rice|tea,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-20,,apple. apricot. field. watermelon. Which one is not a fruit?,,,field,apricot|watermelon|apple,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-20,,potato. tomato. cup. onion. Which one is not a vegetable?,,,cup,onion|potato|tomato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-20,,camel. kitten. pot. sheep. Which one is not an animal?,,,pot,sheep|camel|kitten,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
-20,,grandfather. parents. brother. spoon. Which one is not family?,,,spoon,brother|grandfather|parents,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
-20,,yoghurt. bucket. tea. milk. Which one is not food?,,,bucket,tea|milk|yoghurt,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
-20,,pomegranate. well. orange. apple. Which one is not a fruit?,,,well,apple|orange|pomegranate,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
-20,,onion. potato. spinach. bed. Which one is not a vegetable?,,,bed,potato|spinach|onion,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
-20,,blanket. dog. sheep. mouse. Which one is not an animal?,,,blanket,sheep|mouse|dog,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+20,همه گروه‌ها با هم: فامیل، خوراکی، میوه، ترکاری و حیوان. خوب گوش کن که کدام گروه گفته می‌شود، و آن یکی را پیدا کن که از گروه نیست.,parents. mother. grandmother. spoon. Which one is not family?,,t:?,spoon,grandmother|mother|parents,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+20,,bread. milk. basket. egg. Which one is not food?,,t:?,basket,milk|bread|egg,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+20,,watermelon. soap. pomegranate. orange. Which one is not a fruit?,,t:?,soap,watermelon|orange|pomegranate,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+20,,broom. spinach. onion. potato. Which one is not a vegetable?,,t:?,broom,onion|potato|spinach,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+20,,pot. camel. calf. goat. Which one is not an animal?,,t:?,pot,camel|goat|calf,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+20,,sister. carpet. brother. grandfather. Which one is not family?,,t:?,carpet,sister|grandfather|brother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+20,,yoghurt. sugar. milk. pillow. Which one is not food?,,t:?,pillow,yoghurt|sugar|milk,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+20,,apple. orange. grapes. field. Which one is not a fruit?,,t:?,field,apple|grapes|orange,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+20,,tomato. potato. carrot. moon. Which one is not a vegetable?,,t:?,moon,tomato|potato|carrot,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+20,,calf. dog. fish. house. Which one is not an animal?,,t:?,house,dog|calf|fish,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+20,,mountain. sister. brother. parents. Which one is not family?,,t:?,mountain,parents|brother|sister,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+20,,river. yoghurt. egg. apple. Which one is not food?,,t:?,river,egg|yoghurt|apple,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+20,,mulberry. watermelon. well. apricot. Which one is not a fruit?,,t:?,well,watermelon|mulberry|apricot,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+20,,tomato. cup. carrot. potato. Which one is not a vegetable?,,t:?,cup,potato|carrot|tomato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+20,,kitten. blanket. goat. lamb. Which one is not an animal?,,t:?,blanket,lamb|kitten|goat,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.
+20,,brother. baby. father. plate. Which one is not family?,,t:?,plate,baby|father|brother,سه تای این‌ها از فامیل است. یکی از فامیل نیست. همان را انتخاب کن.
+20,,bucket. meat. sugar. milk. Which one is not food?,,t:?,bucket,sugar|meat|milk,سه تای این‌ها خوراکی است. یکی خوراکی نیست. همان را انتخاب کن.
+20,,apple. pomegranate. mulberry. sun. Which one is not a fruit?,,t:?,sun,mulberry|apple|pomegranate,سه تای این‌ها میوه است. یکی میوه نیست. همان را انتخاب کن.
+20,,tomato. bed. potato. carrot. Which one is not a vegetable?,,t:?,bed,carrot|potato|tomato,سه تای این‌ها ترکاری است. یکی ترکاری نیست. همان را انتخاب کن.
+20,,goat. horse. cat. sun. Which one is not an animal?,,t:?,sun,goat|horse|cat,سه تای این‌ها حیوان است. یکی حیوان نیست. همان را انتخاب کن.

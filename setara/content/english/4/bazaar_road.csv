@@ -28,7 +28,7 @@ round,say_en,say_fa,show,answer,distractors,help_fa,hop
 20,Which one can you drink?,,,juice,kebab|biscuits|samosa,کدام یک را نوشیده می‌توانی؟,
 20,The tailor needs it. What is it?,,,needle,hammer|shovel|lock,خیاط به آن ضرورت دارد. آن چیست؟,
 20,"f: Can you carry the sack? // m: No, I can't. It is too heavy. // f: What is too heavy?",,,sack,basket|bottle|purse,بوجی را برده می‌توانید؟ نه، نمی‌توانم. بسیار سنگین است. چه چیز بسیار سنگین است؟,
-20,"f: Excuse me, where is the tailor? // m: Go straight on. He is on the left. // f: Where is the tailor?",,,arrow_left,arrow_right|arrow_up,ببخشید، خیاط کجاست؟ مستقیم بروید. به طرف چپ است. خیاط کجاست؟,
+20,"f: Excuse me, where is the tailor? // m: Go straight on. He is on the left. // f: Where is the tailor?",,,arrow_left,arrow_right|arrow_up|arrow_down,ببخشید، خیاط کجاست؟ مستقیم بروید. به طرف چپ است. خیاط کجاست؟,
 20,It is at the bakery. The baker makes hot bread in it.,,,oven,lamp|sack|shelf,در نانوایی است. نانوا در آن نان گرم می‌پزد.,
 20,The teapot is two hundred afghani. The tray is one hundred afghani. How much is it all together?,,,t:300,t:200|t:400|t:120,چاینک دوصد افغانی است. پتنوس صد افغانی است. جمله چند می‌شود؟,
 20,"m: Anything else? // f: Yes, a box of matches, please. // m: What does she want?",,,matches,candle|lamp|lock,چیز دیگر؟ بلی، لطفاً یک قطی گوگرد. او چه می‌خواهد؟,

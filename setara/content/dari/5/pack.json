@@ -1,0 +1,96 @@
+{
+ "pack": "fa-5",
+ "subject": "fa",
+ "level": 5,
+ "version": 1,
+ "title_en": "Dari 5: Stories",
+ "title_fa": "دری ۵: قصه‌ها",
+ "games": [
+  {
+   "id": "animal_fables",
+   "engine": "story",
+   "letter": "a",
+   "title_en": "Animal Fables",
+   "title_fa": "قصه‌های حیوانات",
+   "intro_fa": "قصه را بخوان و گوش کن. در میان قصه به سوال‌ها جواب بده.",
+   "icon": "fox",
+   "v1": true,
+   "sheet": "animal_fables.csv"
+  },
+  {
+   "id": "village_stories",
+   "engine": "story",
+   "letter": "b",
+   "title_en": "Village Stories",
+   "title_fa": "قصه‌های قریه",
+   "intro_fa": "قصه را بخوان و گوش کن. در میان قصه به سوال‌ها جواب بده.",
+   "icon": "scene_village",
+   "sheet": "village_stories.csv"
+  },
+  {
+   "id": "old_tales",
+   "engine": "story",
+   "letter": "c",
+   "title_en": "Old Tales",
+   "title_fa": "قصه‌های کهن",
+   "intro_fa": "قصه را بخوان و گوش کن. در میان قصه به سوال‌ها جواب بده.",
+   "icon": "book",
+   "sheet": "old_tales.csv"
+  },
+  {
+   "id": "story_builder",
+   "engine": "builder",
+   "letter": "d",
+   "title_en": "Story Builder",
+   "title_fa": "قصه‌ساز",
+   "intro_fa": "قصه را به ترتیب بساز و جمله‌ها را از کلمه‌ها جور کن.",
+   "icon": "rope",
+   "draw": 5,
+   "sheet": "story_builder.csv"
+  },
+  {
+   "id": "story_baskets",
+   "engine": "sorter",
+   "letter": "e",
+   "title_en": "Story Baskets",
+   "title_fa": "سبدهای قصه",
+   "intro_fa": "هر گپ را بخوان و در سبد درست بگذار.",
+   "icon": "basket",
+   "draw": 8,
+   "sheet": "story_baskets.csv"
+  },
+  {
+   "id": "word_pairs",
+   "engine": "pairs",
+   "letter": "f",
+   "title_en": "Word Pairs",
+   "title_fa": "جوره‌های کلمه",
+   "intro_fa": "دو کارتی را که با هم جور است، پیدا کن.",
+   "icon": "friends",
+   "draw": 5,
+   "sheet": "word_pairs.csv"
+  },
+  {
+   "id": "missing_word",
+   "engine": "listen_pick",
+   "letter": "g",
+   "title_en": "The Missing Word",
+   "title_fa": "کلمه گمشده",
+   "intro_fa": "گوش کن. کلمه‌ها را بخوان و کلمه درست را انتخاب کن.",
+   "icon": "look",
+   "draw": 8,
+   "sheet": "missing_word.csv"
+  },
+  {
+   "id": "story_review",
+   "engine": "listen_pick",
+   "letter": "h",
+   "title_en": "Which Story?",
+   "title_fa": "کدام قصه؟",
+   "intro_fa": "قصه‌هایی را که خوانده‌ای به یاد بیاور و تصویر درست را انتخاب کن.",
+   "icon": "reading",
+   "draw": 8,
+   "sheet": "story_review.csv"
+  }
+ ]
+}

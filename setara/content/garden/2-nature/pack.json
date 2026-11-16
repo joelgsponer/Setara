@@ -1,0 +1,119 @@
+{
+ "pack": "garden-2-nature",
+ "subject": "garden",
+ "level": 2,
+ "version": 1,
+ "optional": true,
+ "title_en": "Nature and how things work",
+ "title_fa": "طبیعت و کار چیزها",
+ "games": [
+  {
+   "id": "nature_tales",
+   "engine": "story",
+   "letter": "a",
+   "title_en": "Nature Tales",
+   "title_fa": "قصه‌های طبیعت",
+   "intro_fa": "قصه را گوش کن. اول یاد می‌گیریم، و بعد به سوال‌ها جواب می‌دهیم.",
+   "icon": "frog",
+   "sheet": "nature_tales.csv"
+  },
+  {
+   "id": "how_it_works",
+   "engine": "story",
+   "letter": "b",
+   "title_en": "How Does It Work?",
+   "title_fa": "چطور کار می‌کند؟",
+   "intro_fa": "گوش کن که چیزها چطور کار می‌کنند. بعد به سوال‌ها جواب بده.",
+   "icon": "magnet",
+   "sheet": "how_it_works.csv"
+  },
+  {
+   "id": "nature_riddles",
+   "engine": "listen_pick",
+   "letter": "c",
+   "title_en": "What Am I?",
+   "title_fa": "من چه هستم؟",
+   "intro_fa": "چیستان را بشنو و تصویر درست را انتخاب کن.",
+   "icon": "elephant",
+   "sheet": "nature_riddles.csv",
+   "draw": 8
+  },
+  {
+   "id": "nature_journey",
+   "engine": "journey",
+   "letter": "d",
+   "title_en": "Explorer's Path",
+   "title_fa": "راه جستجوگر",
+   "intro_fa": "گوش کن و تصویر درست را انتخاب کن.",
+   "icon": "compass",
+   "sheet": "nature_journey.csv",
+   "draw": 8
+  },
+  {
+   "id": "nature_baskets",
+   "engine": "sorter",
+   "letter": "e",
+   "title_en": "Nature Baskets",
+   "title_fa": "سبدهای طبیعت",
+   "intro_fa": "هر تصویر را در سبد درست بینداز.",
+   "icon": "feather",
+   "sheet": "nature_baskets.csv",
+   "draw": 8
+  },
+  {
+   "id": "nature_order",
+   "engine": "builder",
+   "letter": "f",
+   "title_en": "First and Next",
+   "title_fa": "اول چه، بعد چه؟",
+   "intro_fa": "تصویرها را به ترتیب درست بمان.",
+   "icon": "moon_crescent",
+   "sheet": "nature_order.csv",
+   "draw": 4
+  },
+  {
+   "id": "nature_pairs",
+   "engine": "pairs",
+   "letter": "g",
+   "title_en": "Nature Pairs",
+   "title_fa": "جوره‌های طبیعت",
+   "intro_fa": "دو تصویر را که با هم جور است پیدا کن.",
+   "icon": "foal",
+   "sheet": "nature_pairs.csv",
+   "draw": 5
+  },
+  {
+   "id": "nature_catch",
+   "engine": "catch",
+   "letter": "h",
+   "title_en": "Quick Catch",
+   "title_fa": "زود بگیر",
+   "intro_fa": "گپ را بشنو و تنها چیزهای درست را بگیر.",
+   "icon": "basket",
+   "sheet": "nature_catch.csv",
+   "draw": 4
+  },
+  {
+   "id": "nature_true",
+   "engine": "sorter",
+   "letter": "i",
+   "title_en": "True or Not",
+   "title_fa": "درست یا نادرست",
+   "intro_fa": "گپ را بشنو. درست را در سبد سبز بینداز و نادرست را در سبد سرخ.",
+   "icon": "yes",
+   "sheet": "nature_true.csv",
+   "draw": 8
+  },
+  {
+   "id": "nature_odd",
+   "engine": "listen_pick",
+   "letter": "j",
+   "title_en": "Odd One Out",
+   "title_fa": "کدام جور نیست؟",
+   "intro_fa": "سه تصویر با هم جور است. آن یکی را که جور نیست پیدا کن.",
+   "icon": "rainbow",
+   "sheet": "nature_odd.csv",
+   "draw": 8
+  }
+ ]
+}

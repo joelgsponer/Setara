@@ -41,7 +41,8 @@ class B:
         self.fa, self.en = " ".join(fa.split()), " ".join(en.split())
 
     def __add__(self, other: "B") -> "B":
-        return B(self.fa + " " + other.fa, self.en + " " + other.en)
+        glue = lambda x, y: x + ("" if y[:1] in ".،,:؛;" else " ") + y  # no space before punctuation
+        return B(glue(self.fa, other.fa), glue(self.en, other.en))
 
     def __str__(self) -> str:
         return self.fa
@@ -176,12 +177,15 @@ SHAPES = {
 CAP = {l: v[0] for l, v in SHAPES.items()}
 SM = {l: v[1] for l, v in SHAPES.items()}
 SND = {l: v[2] for l, v in SHAPES.items()}
+# the small shape described on its own, where no big letter is in sight
+SMX = {l: (CAP[l] if SM[l] is SAME else SM[l]) for l in SHAPES}
+ONE_SHAPE = B(". کلان و خُرد این حرف یک شکل دارد", ". The big and the small of this letter have one shape")
 
 # Pictured words by first letter: (english, picture, dari). The first one is
 # the key word of the letter. Words up to the bar are known from en-1 / en-2;
 # the comment NEW marks words this pack introduces.
 WORDS = {
-    "a": [("apple", "apple", "سیب"), ("ant", "ant", "مورچه"), ("almond", "almond", "بادام"), ("apricot", "apricot", "زردآلو")],  # ant NEW
+    "a": [("apple", "apple", "سیب"), ("ant", "ant", "مورچه"), ("axe", "axe", "تبر")],  # ant, axe NEW; almond and apricot do not begin with the short a
     "b": [("bag", "bag", "بکس"), ("book", "book", "کتاب"), ("ball", "ball", "توپ"), ("bed", "bed", "تخت خواب"),
           ("bread", "bread", "نان"), ("bucket", "bucket", "سطل"), ("broom", "broom", "جاروب"), ("basket", "basket", "سبد"),
           ("baby", "baby", "طفل خُرد"), ("boy", "boy", "پسر")],
@@ -203,7 +207,7 @@ WORDS = {
     "m": [("moon", "moon", "مهتاب"), ("milk", "milk", "شیر"), ("meat", "meat", "گوشت"), ("mouse", "mouse", "موش"),
           ("mother", "mother", "مادر"), ("mountain", "mountain", "کوه"), ("mouth", "mouth", "دهن"), ("mirror", "mirror", "آیینه")],  # mirror NEW
     "n": [("nose", "nose", "بینی"), ("nest", "nest", "آشیانه"), ("needle", "needle", "سوزن"), ("nail", "nail", "ناخن")],  # nest, needle, nail NEW
-    "o": [("orange", "orange", "مالته"), ("onion", "onion", "پیاز"), ("on", "pos_on", "روی"), ("open", "open", "باز کن")],  # on NEW
+    "o": [("orange", "orange", "مالته"), ("on", "pos_on", "روی")],  # on NEW; onion and open begin with other sounds
     "p": [("pen", "pen", "قلم"), ("pencil", "pencil", "پنسل"), ("pot", "pot", "دیگ"), ("plate", "plate", "بشقاب"),
           ("pillow", "pillow", "بالشت"), ("potato", "potato", "کچالو"), ("pear", "pear", "ناک"), ("pumpkin", "pumpkin", "کدو"),
           ("parrot", "parrot", "طوطی")],  # pear, pumpkin, parrot NEW
@@ -211,7 +215,7 @@ WORDS = {
     "r": [("rope", "rope", "ریسمان"), ("rice", "rice", "برنج"), ("river", "river", "دریا"), ("rain", "rain", "باران"),
           ("radio", "radio", "رادیو"), ("rooster", "rooster", "خروس")],  # rain, radio, rooster NEW
     "s": [("sun", "sun", "آفتاب"), ("star", "star", "ستاره"), ("stone", "stone", "سنگ"), ("soap", "soap", "صابون"),
-          ("spoon", "spoon", "قاشق"), ("snake", "snake", "مار"), ("sugar", "sugar", "بوره")],  # snake NEW
+          ("spoon", "spoon", "قاشق"), ("snake", "snake", "مار")],  # snake NEW; sugar begins with another sound
     "t": [("table", "table", "میز"), ("tea", "tea", "چای"), ("tree", "tree", "درخت"), ("tooth", "tooth", "دندان"),
           ("tomato", "tomato", "بادنجان رومی"), ("tent", "tent", "خیمه"), ("train", "train", "ریل"), ("tap", "tap", "نل")],  # tent, train, tap NEW
     "u": [("umbrella", "umbrella", "چتری"), ("up", "arrow_up", "بالا")],  # both NEW
@@ -229,16 +233,16 @@ KEY = {l: (w[0] if w else X_WORDS[0]) for l, w in WORDS.items()}
 HEARD = {
     "a": [("animal", "حیوان"), ("and", "و")], "b": [("big", "کلان"), ("blue", "آبی"), ("black", "سیاه")],
     "c": [("count", "حساب کن"), ("clap", "چک چک کن"), ("class", "صنف")], "d": [("draw", "رسم کن"), ("door", "دروازه")],
-    "e": [("eleven", "یازده"), ("egg", "تخم مرغ")], "f": [("four", "چهار"), ("five", "پنج"), ("friend", "دوست")],
+    "e": [("end", "آخر"), ("empty", "خالی")], "f": [("four", "چهار"), ("five", "پنج"), ("friend", "دوست")],
     "g": [("go", "برو"), ("give", "بده"), ("green", "سبز")], "h": [("hello", "سلام"), ("happy", "خوش")],
     "i": [("is", "است"), ("it", "آن")], "j": [("juice", "آب میوه"), ("jar", "مرتبان")],
     "k": [("kebab", "کباب"), ("kite", "کاغذپران")], "l": [("look", "ببین"), ("listen", "گوش کن")],
     "m": [("my", "از من"), ("morning", "صبح")], "n": [("no", "نه"), ("nine", "نُه"), ("name", "نام")],
-    "o": [("on", "روی"), ("onion", "پیاز")], "p": [("please", "لطفاً"), ("point", "نشان بده"), ("parents", "پدر و مادر")],
+    "o": [("olive", "زیتون"), ("ox", "گاو نر")], "p": [("please", "لطفاً"), ("point", "نشان بده"), ("parents", "پدر و مادر")],
     "q": [("question", "سوال"), ("quick", "تیز")], "r": [("red", "سرخ"), ("read", "بخوان")],
     "s": [("six", "شش"), ("seven", "هفت"), ("sad", "غمگین")], "t": [("ten", "ده"), ("two", "دو"), ("teacher", "معلم")],
     "u": [("under", "زیر"), ("up", "بالا")], "v": [("vegetables", "ترکاری"), ("van", "موتر مسافربری")],
-    "w": [("white", "سفید"), ("write", "بنویس")], "y": [("yes", "بلی"), ("you", "تو")],
+    "w": [("white", "سفید"), ("we", "ما")], "y": [("yes", "بلی"), ("you", "تو")],
     "z": [("zero", "صفر"), ("zip", "زنجیرک")], "x": [],
 }
 
@@ -485,7 +489,7 @@ def letter_names() -> None:
                 help_fa=B("حرف کلان را بگیر:", "Take the big letter:") + CAP[l] + B(".", "."))
             row(g, r, say_en=say(f"small {l}", L), answer=form(l, "small"), right=form(l, "small"),
                 distractors=things(wrong_letters(l, pool, "small"), "small"),
-                help_fa=B("حرف خُرد را بگیر:", "Take the small letter:") + SM[l] + B(".", "."))
+                help_fa=B("حرف خُرد را بگیر:", "Take the small letter:") + SMX[l] + (ONE_SHAPE if SM[l] is SAME else B("", "")) + B(".", "."))
             tail = "at the end of box" if l == "x" else f"as in {word}"
             row(g, r, say_en=say(f"{L}, {tail}", L), answer=form(l, "both"), right=form(l, "both"),
                 distractors=things(wrong_letters(l, pool, "both"), "both"),
@@ -495,7 +499,7 @@ def letter_names() -> None:
             for l in SETS[k - 1]:
                 row(g, r, say_en=say(f"Find the letter {l.upper()}.", l.upper()), answer=form(l, "small"), right=form(l, "small"),
                     distractors=things(wrong_letters(l, upto(k), "small"), "small"),
-                    help_fa=B("این حرف را پیش‌تر دیدی. خُرد آن:", "You have seen this letter before. Its small shape:") + SM[l] + B(".", "."))
+                    help_fa=B("این حرف را پیش‌تر دیدی. خُرد آن:", "You have seen this letter before. Its small shape:") + SMX[l] + B(".", "."))
         if k >= 2:
             for l in SETS[k - 2]:
                 row(g, r, say_en=say(f"Now find {l.upper()}.", l.upper()), answer=form(l, "cap"), right=form(l, "cap"),
@@ -798,7 +802,7 @@ def starts_with() -> None:
     used: set[str] = set()
 
     def wrong_pics(l: str, letters: list[str], answer: str) -> str:
-        cands = [w[1] for c in letters if c != l and c not in SAME_SOUND.get(l, "") for w in WORDS[c][:6] if w[1] != answer and not w[1].startswith("t:")]
+        cands = [w[1] for c in letters if c != l and c not in SAME_SOUND.get(l, "") for w in WORDS[c][:6] if w[1] != answer and not w[1].startswith(("t:", "pos_", "arrow_"))]
         RNG.shuffle(cands)
         out, firsts = [], set()
         for p in cands:
@@ -896,7 +900,7 @@ def abc_order() -> None:
         text = ", ".join(seq.upper() if not small else seq) + "."
         first = seq[0].lower()
         row(g, r, say_en=say(text, seq.upper()), tiles="|".join("t:" + c for c in seq), done_en=text, right="|".join(seq),
-            help_fa=B("از طرف چپ شروع کن. اول این حرف می‌آید:", "Start on the left. This letter comes first:") + (SM if small else CAP)[first]
+            help_fa=B("از طرف چپ شروع کن. اول این حرف می‌آید:", "Start on the left. This letter comes first:") + (SMX if small else CAP)[first]
             + B(". باقی را به همان ترتیبی بمان که شنیدی.", ". Put the rest in the order you heard."))
 
     for s, n in [(0, 4), (1, 4), (2, 4), (3, 4), (5, 4), (6, 4), (8, 4), (9, 4), (0, 5), (2, 5), (4, 5), (6, 5), (8, 5), (1, 5)]:
@@ -926,7 +930,7 @@ def abc_order() -> None:
         done = ", ".join(c.upper() for c in seq) + "."
         row(g, "04", say_en=say(said, "".join(heard).upper()), tiles="|".join("t:" + c for c in seq), done_en=say(done, "".join(seq).upper()), right="|".join(seq),
             help_fa=B("این بار ترتیبی که شنیدی درست نیست. حرفی که در الفبا پیش‌تر است، طرف چپ می‌رود. اول این حرف:", "This time the order you heard is not right. The letter that is earlier in the alphabet goes to the left. First this letter:")
-            + (SM if small else CAP)[seq[0].lower()] + B(". در آخر این حرف:", ". Last this letter:") + (SM if small else CAP)[seq[-1].lower()] + B(".", "."))
+            + (SMX if small else CAP)[seq[0].lower()] + B(". در آخر این حرف:", ". Last this letter:") + (SMX if small else CAP)[seq[-1].lower()] + B(".", "."))
     intro("abc_order", "04", B("گد و ود. این بار گوینده چهار حرف را بی‌ترتیب می‌گوید. تو خودت آن‌ها را به ترتیب الفبا بمان: حرفی که در الفبا پیش‌تر می‌آید، طرف چپ. اگر یادت رفت، الفبا را آهسته با خود بخوان.",
                                "Mixed up. This time the speaker says four letters out of order. Put them in alphabet order yourself: the letter that comes earlier in the alphabet goes on the left. If you forget, say the alphabet quietly to yourself."))
 
@@ -938,13 +942,13 @@ def abc_next() -> None:
     g = "abc_next"
     UP = ALPHA.upper()
 
-    def near(i: int, small: bool = False) -> str:
-        cands = [i + 1, i - 1, i + 2, i - 2, i + 3, i - 3]
-        out = [(ALPHA if small else UP)[c] for c in cands if 0 <= c < 26][:3]
+    def near(i: int, small: bool = False, shown: tuple = ()) -> str:
+        cands = [i + 1, i - 1, i + 2, i - 2, i + 3, i - 3, i + 4, i - 4]
+        out = [(ALPHA if small else UP)[c] for c in cands if 0 <= c < 26 and c not in shown][:3]
         return "|".join("t:" + c for c in out)
 
     def shape_help(i: int, small: bool = False) -> B:
-        return B("جواب این شکل را دارد:", "The answer has this shape:") + (SM if small else CAP)[ALPHA[i]] + B(".", ".")
+        return B("جواب این شکل را دارد:", "The answer has this shape:") + (SMX if small else CAP)[ALPHA[i]] + B(".", ".")
 
     for r, lo, hi, text in [("01", 2, 12, B("از اول تا میان الفبا. دو حرف را می‌بینی و می‌شنوی. حرف بعدی کدام است؟ جواب بده و پیش برو.",
                                             "From the start to the middle of the alphabet. You see and hear two letters. Which is the next one? Answer and move on.")),
@@ -952,25 +956,25 @@ def abc_next() -> None:
                                              "From the middle to the end of the alphabet. Two letters in a row, and then? Choose the third letter."))]:
         for i in range(lo, hi + 1):
             a, b = UP[i - 2], UP[i - 1]
-            row(g, r, say_en=say(f"{a}, {b}. What comes next?", a + b), show=f"t:{a} {b} ?", answer="t:" + UP[i], right="t:" + UP[i], distractors=near(i),
+            row(g, r, say_en=say(f"{a}, {b}. What comes next?", a + b), show=f"t:{a} {b} ?", answer="t:" + UP[i], right="t:" + UP[i], distractors=near(i, shown=(i - 1, i - 2)),
                 help_fa=B("الفبا را از اول آهسته با خود بخوان تا به این دو حرف برسی.", "Say the alphabet quietly to yourself from the start until you reach these two letters.") + shape_help(i))
         first = lo - 2
-        row(g, r, say_en=say(f"What comes after {UP[first]}?", UP[first]), show=f"t:{UP[first]} ?", answer="t:" + UP[first + 1], right="t:" + UP[first + 1], distractors=near(first + 1),
+        row(g, r, say_en=say(f"What comes after {UP[first]}?", UP[first]), show=f"t:{UP[first]} ?", answer="t:" + UP[first + 1], right="t:" + UP[first + 1], distractors=near(first + 1, shown=(first,)),
             help_fa=B("تنها یک حرف را می‌بینی. حرف بعد از آن را بگیر.", "You see only one letter. Take the letter after it.") + shape_help(first + 1))
         intro(g, r, text)
     r = "03"
     for i in [3, 6, 9, 12, 15, 18, 21, 24, 1, 10, 19, 25]:
-        row(g, r, say_en=say(f"What comes before {UP[i]}?", UP[i]), show=f"t:? {UP[i]}", answer="t:" + UP[i - 1], right="t:" + UP[i - 1], distractors=near(i - 1),
+        row(g, r, say_en=say(f"What comes before {UP[i]}?", UP[i]), show=f"t:? {UP[i]}", answer="t:" + UP[i - 1], right="t:" + UP[i - 1], distractors=near(i - 1, shown=(i,)),
             help_fa=B("این بار حرف پیش از آن را می‌خواهیم: حرفی که طرف چپ آن می‌ایستد.", "This time we want the letter before it: the one that stands on its left.") + shape_help(i - 1))
     for i in [2, 5, 7, 11, 14, 17, 20, 23]:
         a, b = UP[i - 1], UP[i + 1]
-        row(g, r, say_en=say(f"Which letter is between {a} and {b}?", a + b), show=f"t:{a} ? {b}", answer="t:" + UP[i], right="t:" + UP[i], distractors=near(i),
+        row(g, r, say_en=say(f"Which letter is between {a} and {b}?", a + b), show=f"t:{a} ? {b}", answer="t:" + UP[i], right="t:" + UP[i], distractors=near(i, shown=(i - 1, i + 1)),
             help_fa=B("دو حرف را می‌بینی و میان آن‌ها یک جای خالی است. حرف میانی را بگیر.", "You see two letters with an empty place between them. Take the middle letter.") + shape_help(i))
     intro(g, r, B("پیش از آن و در میان. دو قسم سوال: کدام حرف پیش از این حرف می‌آید، و کدام حرف میان این دو حرف است. نشان سوال جای خالی را نشان می‌دهد.",
                   "Before, and in between. Two kinds of question: which letter comes before this letter, and which letter is between these two. The question mark shows the empty place."))
     r = "04"
     for i in [1, 2, 4, 5, 7, 8, 10, 11, 14, 16, 17, 19, 20, 22, 23, 25]:
-        row(g, r, say_en=say(f"What comes after {UP[i - 1]}?", UP[i - 1]), show=f"t:{ALPHA[i - 1]} ?", answer="t:" + ALPHA[i], right="t:" + ALPHA[i], distractors=near(i, True),
+        row(g, r, say_en=say(f"What comes after {UP[i - 1]}?", UP[i - 1]), show=f"t:{ALPHA[i - 1]} ?", answer="t:" + ALPHA[i], right="t:" + ALPHA[i], distractors=near(i, True, shown=(i - 1,)),
             help_fa=B("حرف‌ها این بار خُرد است، اما ترتیب همان است.", "The letters are small this time, but the order is the same.") + shape_help(i, True))
     row(g, r, say_fa=B("اولین حرف الفبا کدام است؟", "Which is the first letter of the alphabet?"), answer="t:a", right="t:a", distractors="t:z|t:b|t:e",
         help_fa=B("الفبا با آن شروع می‌شود.", "The alphabet begins with it.") + shape_help(0, True))
@@ -1077,13 +1081,17 @@ ANCHOR_EN = {"a": "anar", "b": "buz", "c": "kitab", "d": "darwaza", "e": "imroz"
              "k": "kilid", "l": "lab", "m": "madar", "n": "nan", "o": "aftab", "p": "padar", "r": "roz", "s": "seb", "t": "tut", "u": "agar",
              "v": "fil", "y": "yak", "z": "zamin"}
 SPELL = {
-    "01": [("cat", "پشک"), ("bag", "بکس"), ("hat", "کلاه"), ("ant", "مورچه"), ("tap", "نل"), ("sad", "غمگین"), ("van", "موتر مسافربری"), ("can", "قطی"), ("and", "و")],
+    "01": [("cat", "پشک"), ("bag", "بکس"), ("hat", "کلاه"), ("ant", "مورچه"), ("tap", "نل"), ("sad", "غمگین"), ("van", "موتر مسافربری"), ("can", "قطی"), ("map", "نقشه")],
     "02": [("hen", "مرغ"), ("pen", "قلم"), ("bed", "تخت خواب"), ("leg", "لنگ"), ("red", "سرخ"), ("ten", "ده"), ("yes", "بلی"), ("egg", "تخم مرغ"), ("net", "جال")],
     "03": [("big", "کلان"), ("six", "شش"), ("zip", "زنجیرک"), ("ink", "سیاهی قلم"), ("dog", "سگ"), ("box", "صندوق"), ("fox", "روباه"), ("pot", "دیگ"), ("in", "در داخل"), ("on", "روی")],
     "04": [("sun", "آفتاب"), ("cup", "پیاله"), ("jug", "کوزه"), ("up", "بالا"), ("milk", "شیر"), ("hand", "دست"), ("nest", "آشیانه"), ("lamp", "چراغ"), ("drum", "دهل"),
            ("cat", "پشک"), ("hen", "مرغ"), ("dog", "سگ")],
 }
-EN_OF.update({"قطی": "can", "جال": "net", "تیز": "quick"})
+EN_OF.update({"قطی": "can", "جال": "net", "تیز": "quick", "نقشه": "map"})
+
+
+COUNT_FA = {2: "دو", 3: "سه", 4: "چهار"}
+COUNT_EN = {2: "two", 3: "three", 4: "four"}
 
 
 def sound_of(l: str, pos: B) -> B:
@@ -1124,7 +1132,7 @@ def spell_it() -> None:
             spelled = ", ".join(c.upper() for c in word)
             row(g, r, say_fa=B(wfa, word), say_en=word, tiles="|".join("t:" + c for c in word), extra=extra,
                 done_en=say(f"{spelled}. {word}.", word.upper()), right=word,
-                help_fa=B(f"کلمه {len(word)} صدا دارد:", f"The word has {len(word)} sounds:") + hint + B(".", "."))
+                help_fa=B(f"کلمه {COUNT_FA[len(word)]} حرف دارد:", f"The word has {COUNT_EN[len(word)]} letters:") + hint + B(".", "."))
     intro(g, "01", B("کلمه‌های سه حرفی با صدای میانی باز. اول معنای کلمه را به دری می‌شنوی، بعد کلمهٔ انگلیسی را. آن را آهسته با خود بگو و صداهایش را جدا کن. برای هر صدا یک حرف بگیر و از چپ به راست بمان.",
                          "Three-letter words with the open middle sound. First you hear the meaning of the word in Dari, then the English word. Say it slowly to yourself and take its sounds apart. Take one letter for every sound and put them from left to right."))
     intro(g, "02", B("کلمه‌های سه حرفی با یک صدای میانی دیگر. کلمه را بشنو، صداهایش را جدا کن و حرف‌ها را به ترتیب بمان. در یک کلمه، حرف آخر دو بار می‌آید.",
@@ -1187,6 +1195,23 @@ def phonemes(text: str) -> str:
 
 NAME_PH = dict(A="eI", B="bi:", C="si:", D="di:", E="i:", F="Ef", G="dZi:", H="eItS", I="aI", J="dZeI", K="keI", L="El", M="Em", N="En",
                O="oU", P="pi:", Q="kju:", R="A@", S="Es", T="ti:", U="ju:", V="vi:", W="dVb@Lju:", X="Eks", Y="waI", Z="zi:")
+
+
+FIRST_PH = dict(a="a", b="b", c="k", d="d", e="E", f="f", g="g", h="h", i="I", j="dZ", k="k", l="l", m="m", n="n", o="0 A O", p="p",
+                q="kw", r="r", s="s", t="t", u="V", v="v", w="w", y="j", z="z")
+
+
+def check_sounds() -> list[str]:
+    """Every word of the word bank must begin with the sound its letter is taught with."""
+    if not shutil.which("espeak-ng"):
+        return []
+    bad = []
+    for l in ALPHA:
+        for word in [w[0] for w in WORDS[l]] + [w[0] for w in HEARD[l]]:
+            ph = re.sub(r"[',_ ]", "", phonemes(word))
+            if not any(ph.startswith(x) for x in FIRST_PH[l].split()):
+                bad.append(f"{word!r} does not begin with the sound of {l}: {ph!r}")
+    return bad
 
 
 def check_names() -> list[str]:
@@ -1277,7 +1302,7 @@ def main() -> int:
             for a, n in ans.items():
                 if n > 3:
                     problems.append(f"{gid}: answer {a} is right {n} times")
-    bad = check_names()
+    bad = check_names() + check_sounds()
     print(f"\nLetter names: {len(set(NAMES))} English lines must name a letter; the phonemizer gets {len(set(NAMES)) - len(bad)} right.")
     problems += bad
     print(f"Dari texts with an English twin: {len(TWINS)}")

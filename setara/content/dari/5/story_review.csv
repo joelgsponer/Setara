@@ -1,0 +1,57 @@
+round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
+05,قصه‌های ۱ تا ۵ را به یاد بیاور. به سوال گوش کن و تصویر درست را انتخاب کن.,,در کدام قصه یک برگ کسی را از آب نجات داد؟,,scene_ant_dove,scene_dog_bridge|scene_crow_fox|scene_ant_grasshopper,این قصه «مورچه و کبوتر» بود.
+05,,,در کدام قصه یک استخوان در آب افتاد؟,,scene_dog_bridge,scene_ant_dove|scene_crow_fox|scene_ant_grasshopper,این قصه «سگ و استخوان» بود.
+05,,,در کدام قصه کسی برای یک توته پنیر گپ شیرین زد؟,,scene_crow_fox,scene_ant_dove|scene_dog_bridge|scene_ant_grasshopper,این قصه «زاغ و روباه» بود.
+05,,,در کدام قصه کسی تمام تابستان آواز خواند؟,,scene_ant_grasshopper,scene_ant_dove|scene_dog_bridge|scene_crow_fox,این قصه «مورچه و ملخ» بود.
+05,,,در کدام قصه دو دوست از پشک پنهان شدند؟,,scene_two_mice,scene_ant_dove|scene_dog_bridge|scene_crow_fox,این قصه «موش شهر و موش قریه» بود.
+05,,,کدام قصه می‌گوید: خُرد هم می‌تواند به کلان کمک کند؟,,scene_ant_dove,scene_dog_bridge|scene_crow_fox|scene_ant_grasshopper,مورچه خُرد به کبوتر کمک کرد.
+05,,,کدام قصه می‌گوید: به آنچه داری خوش باش؟,,scene_dog_bridge,scene_ant_dove|scene_crow_fox|scene_ant_grasshopper,سگ یک استخوان داشت، دو خواست و هیچ نماند.
+05,,,کدام قصه می‌گوید: هر گپ شیرین را زود باور نکن؟,,scene_crow_fox,scene_ant_dove|scene_dog_bridge|scene_ant_grasshopper,زاغ گپ شیرین روباه را باور کرد و پنیرش رفت.
+05,,,کدام قصه می‌گوید: برای روز سخت چیزی جمع کن؟,,scene_ant_grasshopper,scene_ant_dove|scene_dog_bridge|scene_crow_fox,مورچه در تابستان برای زمستان دانه جمع کرد.
+05,,,کدام قصه می‌گوید: نان ساده با دل آرام بهتر است؟,,scene_two_mice,scene_ant_dove|scene_dog_bridge|scene_crow_fox,موش قریه نان خشک خود را با دل آرام می‌خورد.
+05,,,چه کسی پای مَرد را گزید تا دوستش پرواز کند؟,,ant,pigeon|dog|mouse,مورچه پای مَرد را گزید و کبوتر پرواز کرد.
+05,,,چه کسی در آب عکس خود را دید؟,,dog,fox|cat|mouse,سگ از بالای پُل عکس خود را در آب دید.
+05,,,چه کسی از شهر به قریه برگشت؟,,mouse,ant|dog|fox,موش قریه به خانه خود زیر درخت توت برگشت.
+05,,,چه کسی در زمستان به دروازه مورچه رفت؟,,grasshopper,pigeon|crow|cat,ملخ گرسنه بود و به دروازه مورچه رفت.
+10,قصه‌های ۶ تا ۱۰ را به یاد بیاور. به سوال گوش کن و تصویر درست را انتخاب کن.,,در کدام قصه هیچ کس نخواست زنگوله را ببندد؟,,scene_mice_bell,scene_crow_peacock|scene_broken_jug|scene_stepping_stones,این قصه «موش‌ها و زنگوله» بود.
+10,,,در کدام قصه کسی پَرهای دیگران را پوشید؟,,scene_crow_peacock,scene_mice_bell|scene_broken_jug|scene_stepping_stones,این قصه «زاغ و پَرهای طاووس» بود.
+10,,,در کدام قصه یک دختر راست گفت و دلش سبک شد؟,,scene_broken_jug,scene_mice_bell|scene_crow_peacock|scene_stepping_stones,این قصه «کوزه شکسته» بود.
+10,,,در کدام قصه بچه‌ها با سنگ یک پُل ساختند؟,,scene_stepping_stones,scene_mice_bell|scene_crow_peacock|scene_broken_jug,این قصه «سنگ‌های جوی» بود.
+10,,,در کدام قصه یک دختر برای بی‌بی خود خط خواند؟,,scene_letter_grandmother,scene_mice_bell|scene_crow_peacock|scene_broken_jug,این قصه «خط برای بی‌بی» بود.
+10,,,کدام قصه می‌گوید: گپ زدن آسان است، کار کردن سخت است؟,,scene_mice_bell,scene_crow_peacock|scene_broken_jug|scene_stepping_stones,موش پیر این را به موش‌ها گفت.
+10,,,کدام قصه می‌گوید: خودت باش، تو هم در کاری قوی هستی؟,,scene_crow_peacock,scene_mice_bell|scene_broken_jug|scene_stepping_stones,زاغ پیر گفت: بال‌های تو قوی است.
+10,,,کدام قصه می‌گوید: راست گفتن دل را سبک می‌کند؟,,scene_broken_jug,scene_mice_bell|scene_crow_peacock|scene_stepping_stones,زرمینه راست گفت و دلش سبک شد.
+10,,,کدام قصه می‌گوید: چند نفر با هم کار کلان کرده می‌توانند؟,,scene_stepping_stones,scene_mice_bell|scene_crow_peacock|scene_broken_jug,کریم، نادیه و بچه‌ها با هم یک پُل ساختند.
+10,,,کدام قصه می‌گوید: خواندن برای تمام خانه خوب است؟,,scene_letter_grandmother,scene_mice_bell|scene_crow_peacock|scene_broken_jug,پروین خواند، و بی‌بی هم خواندن یاد گرفت.
+10,,,کدام چیز از گِل پخته است و در آن آب می‌آوریم؟,,water_jug,bell|rope|basket,کوزه از گِل پخته است.
+10,,,کدام چیز وقتی شور بخورد، «جرنگ جرنگ» می‌گوید؟,,bell,stone|rope|feather,زنگوله وقتی شور بخورد، صدا می‌دهد.
+10,,,کدام پرنده دُم کلان و رنگارنگ دارد؟,,peacock,pigeon|sparrow|hen,طاووس دُم کلان و رنگارنگ دارد.
+10,,,کاکا رحیم برای بی‌بی چه می‌آورد؟,,scarf,basket|glasses|shoes,در خط نوشته بود: یک چادر گرم می‌آورم.
+15,قصه‌های ۱۱ تا ۱۵ را به یاد بیاور. به سوال گوش کن و تصویر درست را انتخاب کن.,,در کدام قصه گنجشک‌ها از صدای قوطی‌ها گریختند؟,,scene_scarecrow,scene_boy_dove|scene_seed_sack|scene_girl_reads_class,این قصه «مترسک» بود.
+15,,,در کدام قصه یک بچه پرنده‌ای را رها کرد، چون دوستش داشت؟,,scene_boy_dove,scene_scarecrow|scene_seed_sack|scene_girl_reads_class,این قصه «کبوتر یاسین» بود.
+15,,,در کدام قصه یک جوال گندم، بیست جوال شد؟,,scene_seed_sack,scene_scarecrow|scene_boy_dove|scene_girl_reads_class,این قصه «نان سال آینده» بود.
+15,,,در کدام قصه یک لبخند به کسی جرأت داد؟,,scene_girl_reads_class,scene_scarecrow|scene_boy_dove|scene_seed_sack,این قصه «صدای ثریا» بود.
+15,,,در کدام قصه سه بچه نتوانستند یک دسته را بشکنند؟,,scene_bundle_sticks,scene_scarecrow|scene_boy_dove|scene_seed_sack,این قصه «دسته چوب» بود.
+15,,,کدام قصه می‌گوید: اگر فکر اول کار ندهد، فکر نو کن؟,,scene_scarecrow,scene_boy_dove|scene_seed_sack|scene_girl_reads_class,امید و مینه به مترسک قوطی بسته کردند.
+15,,,کدام قصه می‌گوید: جای پرنده آسمان است؟,,scene_boy_dove,scene_scarecrow|scene_seed_sack|scene_girl_reads_class,پدرکلان این را به یاسین گفت.
+15,,,کدام قصه می‌گوید: صبر امروز، نان فردا است؟,,scene_seed_sack,scene_scarecrow|scene_boy_dove|scene_girl_reads_class,فرید صبر کرد و گندم تخمی را نخورد.
+15,,,کدام قصه می‌گوید: ترس مثل برف است و کم کم آب می‌شود؟,,scene_girl_reads_class,scene_scarecrow|scene_boy_dove|scene_seed_sack,معلم این را به ثریا گفت.
+15,,,کدام قصه می‌گوید: با هم قوی هستیم؟,,scene_bundle_sticks,scene_scarecrow|scene_boy_dove|scene_seed_sack,جمیله، نسیم و هیله این را با هم گفتند.
+15,,,کدام پرنده دانه‌های گندم را می‌خورد؟,,sparrow,pigeon|peacock|rooster,گنجشک‌ها دسته دسته می‌آمدند و گندم را می‌خوردند.
+15,,,باد کدام چیز را تکان داد تا صدا بدهد؟,,can,basket|stone|sack,باد قوطی‌های خالی را تکان می‌داد.
+15,,,معلم روی کدام چیز می‌نویسد؟,,board,roof|sack|basket,معلم روی تخته می‌نویسد.
+15,,,یاسین کبوتر را در چه ماند تا آرام کند؟,,basket,sack|water_jug|can,یاسین در یک سبد کاه نرم انداخت.
+20,قصه‌های ۱۶ تا ۲۰ را به یاد بیاور. به سوال گوش کن و تصویر درست را انتخاب کن.,,در کدام قصه یک دختر در راه بازار خیال می‌کرد؟,,scene_yoghurt_girl,scene_vineyard_dig|scene_wise_girl|scene_salt_donkey,این قصه «گلالی و دیگ ماست» بود.
+20,,,در کدام قصه سه فرزند تمام باغ را کَندند؟,,scene_vineyard_dig,scene_yoghurt_girl|scene_wise_girl|scene_salt_donkey,این قصه «گنج در باغ انگور» بود.
+20,,,در کدام قصه یک دختر به سه سوال سخت جواب داد؟,,scene_wise_girl,scene_yoghurt_girl|scene_vineyard_dig|scene_salt_donkey,این قصه «دختر دانا» بود.
+20,,,در کدام قصه یک حیله بار سوم کار نداد؟,,scene_salt_donkey,scene_yoghurt_girl|scene_vineyard_dig|scene_wise_girl,این قصه «خر و بار نمک» بود.
+20,,,در کدام قصه کسی از آفتاب، ابر، باد و کوه سوال کرد؟,,scene_mouse_mountain,scene_yoghurt_girl|scene_vineyard_dig|scene_wise_girl,این قصه «موش و قوی‌ترین چیز دنیا» بود.
+20,,,کدام قصه می‌گوید: خیال خوب است، اما قدم به قدم برو؟,,scene_yoghurt_girl,scene_vineyard_dig|scene_wise_girl|scene_salt_donkey,مادر گلالی این را گفت.
+20,,,کدام قصه می‌گوید: گنج راستی از کار پیدا می‌شود؟,,scene_vineyard_dig,scene_yoghurt_girl|scene_wise_girl|scene_salt_donkey,شبنم فهمید که گنج، انگورها بود.
+20,,,کدام قصه می‌گوید: فکر از اسپ هم تیزتر است؟,,scene_wise_girl,scene_yoghurt_girl|scene_vineyard_dig|scene_salt_donkey,زهره گفت: تیزترین چیز دنیا فکر است.
+20,,,کدام قصه می‌گوید: حیله در آخر خود آدم را می‌گیرد؟,,scene_salt_donkey,scene_yoghurt_girl|scene_vineyard_dig|scene_wise_girl,بشیر این را به خر گفت.
+20,,,کدام قصه می‌گوید: هر کس در کاری قوی است؟,,scene_mouse_mountain,scene_yoghurt_girl|scene_vineyard_dig|scene_wise_girl,موش فهمید که او در کَندن قوی است.
+20,,,کدام چیز در آب حل می‌شود؟,,salt,wool|stone|wheat,نمک در آب حل می‌شود.
+20,,,کدام چیز وقتی تَر شود، بسیار سنگین می‌شود؟,,wool,salt|feather|leaf,پشم آب را به خود می‌کشد و سنگین می‌شود.
+20,,,با کدام چیز زمین باغ را می‌کَنیم؟,,shovel,broom|rope|spoon,با بیل زمین را می‌کَنیم.
+20,,,کدام چیز روی آفتاب را می‌پوشاند؟,,cloud,wind|mountain|moon,ابر روی آفتاب را می‌پوشاند.

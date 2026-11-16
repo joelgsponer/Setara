@@ -13,13 +13,13 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 02,,This is my grandmother. Yes or no?,,grandmother,yes,no,این مادرکلان من است. بلی یا نه؟ تصویر را ببین.
 02,,Look! My grandmother. Yes or no?,,baby,no,yes,ببین! مادرکلان من. بلی یا نه؟ تصویر را ببین.
 02,,Look! My grandfather. Yes or no?,,grandfather,yes,no,ببین! پدرکلان من. بلی یا نه؟ تصویر را ببین.
-02,,Is this the grandfather?,,family,no,yes,این پدرکلان است؟ تصویر را ببین.
+02,,Is this the grandfather?,,mother,no,yes,این پدرکلان است؟ تصویر را ببین.
 02,,Parents? Yes or no?,,parents,yes,no,پدر و مادر؟ بلی یا نه؟ تصویر را ببین.
-02,,Look! Parents. Yes or no?,,mother,no,yes,ببین! پدر و مادر. بلی یا نه؟ تصویر را ببین.
+02,,Look! Parents. Yes or no?,,sister,no,yes,ببین! پدر و مادر. بلی یا نه؟ تصویر را ببین.
 02,,This is my baby. Yes or no?,,baby,yes,no,این طفل خرد من است. بلی یا نه؟ تصویر را ببین.
 02,,Look! My baby. Yes or no?,,father,no,yes,ببین! طفل خرد من. بلی یا نه؟ تصویر را ببین.
 02,,Look! My family. Yes or no?,,family,yes,no,ببین! فامیل من. بلی یا نه؟ تصویر را ببین.
-02,,Is this the family?,,sister,no,yes,این فامیل است؟ تصویر را ببین.
+02,,Is this the family?,,house,no,yes,این فامیل است؟ تصویر را ببین.
 # 03: I have a ball. The picture shows what the speaker has; or something else.
 03,کسی می‌گوید چه دارد. تصویر را ببین: همان چیز است؟ همان قدر است؟ بلی یا نه را انتخاب کن.,I have a ball. Yes or no?,,ball,yes,no,من یک توپ دارم. بلی یا نه؟ تصویر را ببین.
 03,,I have a ball. Yes or no?,,box,no,yes,من یک توپ دارم. بلی یا نه؟ تصویر را ببین.
@@ -41,7 +41,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 03,,I have three keys. Yes or no?,,p:key*2,no,yes,من سه کلید دارم. بلی یا نه؟ تصویر را ببین.
 # 05: face and body.
 05,روی و بدن. تصویر را ببین و گوش کن. همان عضو بدن است؟ بلی یا نه را انتخاب کن.,Is this a head?,,head,yes,no,این سر است؟ تصویر را ببین.
-05,,Is it a head?,,mouth,no,yes,سر است؟ تصویر را ببین.
+05,,Is it a head?,,hand,no,yes,سر است؟ تصویر را ببین.
 05,,Look! Hair. Yes or no?,,hair,yes,no,ببین! موی. بلی یا نه؟ تصویر را ببین.
 05,,Is it hair?,,hand,no,yes,این موی است؟ تصویر را ببین.
 05,,This is an eye. Yes or no?,,eye,yes,no,این چشم است. بلی یا نه؟ تصویر را ببین.
@@ -66,7 +66,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 05,,Is this a tooth?,,nose,no,yes,این دندان است؟ تصویر را ببین.
 # 09: food and drink; five words of level 1 come back.
 09,خوردنی و نوشیدنی. تصویر را ببین و گوش کن. همان خوراکی است؟ بلی یا نه را انتخاب کن.,Look! Rice. Yes or no?,,rice,yes,no,ببین! برنج. بلی یا نه؟ تصویر را ببین.
-09,,Is it rice?,,yoghurt,no,yes,این برنج است؟ تصویر را ببین.
+09,,Is it rice?,,bread,no,yes,این برنج است؟ تصویر را ببین.
 09,,Is it milk?,,milk,yes,no,این شیر است؟ تصویر را ببین.
 09,,Milk? Yes or no?,,sugar,no,yes,شیر؟ بلی یا نه؟ تصویر را ببین.
 09,,Meat? Yes or no?,,meat,yes,no,گوشت؟ بلی یا نه؟ تصویر را ببین.
@@ -174,7 +174,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 18,,Is it a blanket?,,blanket,yes,no,کمپل است؟ تصویر را ببین.
 18,,This is a blanket. Yes or no?,,soap,no,yes,این کمپل است. بلی یا نه؟ تصویر را ببین.
 18,,This is a pillow. Yes or no?,,pillow,yes,no,این بالشت است. بلی یا نه؟ تصویر را ببین.
-18,,Is this a pillow?,,bed,no,yes,این بالشت است؟ تصویر را ببین.
+18,,Is this a pillow?,,carpet,no,yes,این بالشت است؟ تصویر را ببین.
 18,,Is this a basket?,,basket,yes,no,این سبد است؟ تصویر را ببین.
 18,,Is it a basket?,,carpet,no,yes,سبد است؟ تصویر را ببین.
 18,,Is it a bucket?,,bucket,yes,no,سطل است؟ تصویر را ببین.
@@ -185,7 +185,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 18,,Look! Soap. Yes or no?,,spoon,no,yes,ببین! صابون. بلی یا نه؟ تصویر را ببین.
 # 19: the village; star; flower; tree; stone; leaf from unit 08; house from unit 02.
 19,قریه و بیرون خانه. تصویر را ببین و گوش کن. همان چیز است؟ بلی یا نه را انتخاب کن.,This is a mountain. Yes or no?,,mountain,yes,no,این کوه است. بلی یا نه؟ تصویر را ببین.
-19,,Is this a mountain?,,sun,no,yes,این کوه است؟ تصویر را ببین.
+19,,Is this a mountain?,,star,no,yes,این کوه است؟ تصویر را ببین.
 19,,Is this a river?,,river,yes,no,این دریا است؟ تصویر را ببین.
 19,,Is it a river?,,star,no,yes,دریا است؟ تصویر را ببین.
 19,,Is it a well?,,well,yes,no,چاه است؟ تصویر را ببین.

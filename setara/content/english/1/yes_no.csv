@@ -5,11 +5,11 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 04,تصویر را ببین و سوال را گوش کن. اگر درست است، بلی را انتخاب کن. اگر درست نیست، نه را انتخاب کن.,Is this a boy?,,boy,yes,no,این پسر است؟ تصویر را ببین.
 04,,Is it a boy?,,girl,no,yes,پسر است؟ تصویر را ببین.
 04,,Is it a girl?,,girl,yes,no,دختر است؟ تصویر را ببین.
-04,,This is a girl. Yes or no?,,class,no,yes,این دختر است. بلی یا نه؟ تصویر را ببین.
+04,,This is a girl. Yes or no?,,teacher,no,yes,این دختر است. بلی یا نه؟ تصویر را ببین.
 04,,This is a teacher. Yes or no?,,teacher,yes,no,این معلم است. بلی یا نه؟ تصویر را ببین.
-04,,Is this a teacher?,,class,no,yes,این معلم است؟ تصویر را ببین.
+04,,Is this a teacher?,,boy,no,yes,این معلم است؟ تصویر را ببین.
 04,,Is this a class?,,class,yes,no,این صنف است؟ تصویر را ببین.
-04,,Is it a class?,,girl,no,yes,صنف است؟ تصویر را ببین.
+04,,Is it a class?,,teacher,no,yes,صنف است؟ تصویر را ببین.
 04,,Are you a boy?,,boy,yes,no,تو پسر هستی؟ تصویر را ببین.
 04,,Are you a boy?,,girl,no,yes,تو پسر هستی؟ تصویر را ببین.
 04,,Are you a girl?,,girl,yes,no,تو دختر هستی؟ تصویر را ببین.
@@ -39,15 +39,15 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 09,چیزهای صنف را ببین. گوش کن: همان چیز است؟ بلی یا نه را انتخاب کن.,This is a chair. Yes or no?,,chair,yes,no,این چوکی است. بلی یا نه؟ تصویر را ببین.
 09,,Is this a chair?,,table,no,yes,این چوکی است؟ تصویر را ببین.
 09,,Is this a table?,,table,yes,no,این میز است؟ تصویر را ببین.
-09,,Is it a table?,,window,no,yes,میز است؟ تصویر را ببین.
+09,,Is it a table?,,door,no,yes,میز است؟ تصویر را ببین.
 09,,Is it a door?,,door,yes,no,دروازه است؟ تصویر را ببین.
 09,,This is a door. Yes or no?,,window,no,yes,این دروازه است. بلی یا نه؟ تصویر را ببین.
 09,,This is a window. Yes or no?,,window,yes,no,این کلکین است. بلی یا نه؟ تصویر را ببین.
-09,,Is this a window?,,classroom,no,yes,این کلکین است؟ تصویر را ببین.
+09,,Is this a window?,,board,no,yes,این کلکین است؟ تصویر را ببین.
 09,,Is this a board?,,board,yes,no,این تخته است؟ تصویر را ببین.
-09,,Is it a board?,,classroom,no,yes,تخته است؟ تصویر را ببین.
+09,,Is it a board?,,chair,no,yes,تخته است؟ تصویر را ببین.
 09,,Is it a classroom?,,classroom,yes,no,اطاق صنف است؟ تصویر را ببین.
-09,,This is a classroom. Yes or no?,,table,no,yes,این اطاق صنف است. بلی یا نه؟ تصویر را ببین.
+09,,This is a classroom. Yes or no?,,bag,no,yes,این اطاق صنف است. بلی یا نه؟ تصویر را ببین.
 09,,A book? Yes or no?,,book,yes,no,کتاب؟ بلی یا نه؟ تصویر را ببین.
 09,,A book? Yes or no?,,board,no,yes,کتاب؟ بلی یا نه؟ تصویر را ببین.
 09,,A pen? Yes or no?,,pen,yes,no,قلم؟ بلی یا نه؟ تصویر را ببین.

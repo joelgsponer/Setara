@@ -1,0 +1,110 @@
+{
+ "pack": "fa-1-alphabet",
+ "subject": "fa",
+ "level": 1,
+ "version": 1,
+ "optional": true,
+ "title_en": "The whole alphabet",
+ "title_fa": "همه الفبا",
+ "games": [
+  {
+   "id": "letter_names",
+   "engine": "listen_pick",
+   "letter": "a",
+   "title_en": "Letter Names",
+   "title_fa": "نام حرف‌ها",
+   "intro_fa": "به نام حرف گوش کن و حرف را پیدا کن.",
+   "icon": "listen",
+   "draw": 8,
+   "sheet": "letter_names.csv"
+  },
+  {
+   "id": "letter_sounds",
+   "engine": "listen_pick",
+   "letter": "b",
+   "title_en": "Letter Sounds",
+   "title_fa": "صدای حرف‌ها",
+   "intro_fa": "به صدا گوش کن و حرف آن را پیدا کن.",
+   "icon": "ear",
+   "draw": 8,
+   "sheet": "letter_sounds.csv"
+  },
+  {
+   "id": "key_pictures",
+   "engine": "listen_pick",
+   "letter": "c",
+   "title_en": "A Picture for Every Letter",
+   "title_fa": "هر حرف یک تصویر",
+   "intro_fa": "تصویر و حرف را با هم پیدا کن.",
+   "icon": "pomegranate",
+   "draw": 8,
+   "sheet": "key_pictures.csv"
+  },
+  {
+   "id": "alphabet_row",
+   "engine": "listen_pick",
+   "letter": "d",
+   "title_en": "The Alphabet Row",
+   "title_fa": "قطار الفبا",
+   "intro_fa": "الفبا ترتیب دارد. حرفی را پیدا کن که کم است.",
+   "icon": "train",
+   "draw": 8,
+   "sheet": "alphabet_row.csv"
+  },
+  {
+   "id": "alphabet_builder",
+   "engine": "builder",
+   "letter": "e",
+   "title_en": "Alphabet Builder",
+   "title_fa": "الفبا بساز",
+   "intro_fa": "حرف‌ها را به ترتیب الفبا، از راست به چپ، بگذار.",
+   "icon": "brick",
+   "draw": 5,
+   "sheet": "alphabet_builder.csv"
+  },
+  {
+   "id": "letter_baskets",
+   "engine": "sorter",
+   "letter": "f",
+   "title_en": "Dots and Families",
+   "title_fa": "نقطه‌ها و خانواده‌ها",
+   "intro_fa": "هر حرف را در سبد درست بگذار.",
+   "icon": "basket",
+   "draw": 8,
+   "sheet": "letter_baskets.csv"
+  },
+  {
+   "id": "letter_catch",
+   "engine": "catch",
+   "letter": "g",
+   "title_en": "Letter Catch",
+   "title_fa": "حرف را بگیر",
+   "intro_fa": "گوش کن و فقط حرف درست را بگیر.",
+   "icon": "ball",
+   "draw": 6,
+   "sheet": "letter_catch.csv"
+  },
+  {
+   "id": "letter_pairs",
+   "engine": "pairs",
+   "letter": "h",
+   "title_en": "Letter Pairs",
+   "title_fa": "جوره‌های حرف",
+   "intro_fa": "هر حرف را با جوره‌اش پیدا کن.",
+   "icon": "glasses",
+   "draw": 6,
+   "sheet": "letter_pairs.csv"
+  },
+  {
+   "id": "alphabet_journey",
+   "engine": "journey",
+   "letter": "i",
+   "title_en": "Alphabet Journey",
+   "title_fa": "سفر الفبا",
+   "intro_fa": "از الف تا یا سفر کن. با هر جواب درست یک قدم پیش برو.",
+   "icon": "mountain",
+   "draw": 8,
+   "sheet": "alphabet_journey.csv"
+  }
+ ]
+}

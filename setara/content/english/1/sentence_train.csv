@@ -124,7 +124,7 @@ round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 15,,Draw a door.,,t:Draw|t:a|t:door,t:an,,Draw a door.,,یک دروازه رسم کن.
 15,,Read and write.,,t:Read|t:and|t:write,t:Draw,,Read and write.,,بخوان و بنویس.
 15,,Say goodbye.,,t:Say|t:goodbye,t:Count,,Say goodbye.,,خداحافظ بگو.
-15,,Count the pens.,,t:Count|t:the|t:pens,t:pen,,Count the pens.,,قلم‌ها را حساب کن.
+15,,Count the chairs.,,t:Count|t:the|t:chairs,t:chair,,Count the chairs.,,چوکی‌ها را حساب کن.
 # 16
 16,چطور هستی؟ جمله را گوش کن و بساز.,How are you?,,t:How|t:are|t:you,,,How are you?,,چطور هستی؟
 16,,"I'm fine, thank you.",,t:I'm|t:fine|t:thank|t:you,,,"I'm fine, thank you.",,خوب هستم، تشکر.

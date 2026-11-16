@@ -21,12 +21,12 @@ round,intro_fa,say_en,say_fa,goods,target,units,mode,help_fa
 05,,"m: How many peaches do you want? // f: Fifteen peaches, please.",,peach,15,1,count,چند شفتالو می‌خواهید؟ لطفاً پانزده شفتالو.
 05,,"f: How many melons do you want? // m: Two melons, please.",,melon,2,1,count,چند خربوزه می‌خواهید؟ لطفاً دو خربوزه.
 05,,"m: How many pears do you want? // f: Eleven pears, please.",,pear,11,1,count,چند ناک می‌خواهید؟ لطفاً یازده ناک.
-05,,"Seven plums, please.",,plum,7,1,count,لطفاً هفت آلو.
+05,,"Seventeen plums, please.",,plum,17,1,count,لطفاً هفده آلو.
 05,,"I want thirteen figs, please.",,fig,13,1,count,لطفاً، من سیزده انجیر می‌خواهم.
 05,,"Sixteen lemons, please.",,lemon,16,1,count,لطفاً شانزده لیمو.
-05,,"I want eight peaches, please.",,peach,8,1,count,لطفاً، من هشت شفتالو می‌خواهم.
+05,,"I want nineteen peaches, please.",,peach,19,1,count,لطفاً، من نزده شفتالو می‌خواهم.
 05,,"Fourteen bananas, please.",,banana,14,1,count,لطفاً چهارده کیله.
-05,,"I want three melons, please.",,melon,3,1,count,لطفاً، من سه خربوزه می‌خواهم.
+05,,"I want eighteen apples, please.",,apple,18,1,count,لطفاً، من هژده سیب می‌خواهم.
 # 07: kilos. The child puts one-kilo weights on the scale.
 07,مشتری چند کیلو می‌خواهد؟ گوش کن و همان قدر سنگ یک کیلویی روی ترازو بگذار.,"Two kilos of rice, please.",,kilo,2,1,count,لطفاً دو کیلو برنج.
 07,,"Five kilos of potatoes, please.",,kilo,5,1,count,لطفاً پنج کیلو کچالو.

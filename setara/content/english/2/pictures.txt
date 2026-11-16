@@ -30,3 +30,15 @@ scene_farid_grandfather: the grandfather sits under a tree in an orchard; beside
 scene_farid_gives_grapes: Farid hands the bunch of grapes to his grandfather; both smile
 scene_twelve_apples: a cloth on the ground with exactly twelve red apples in three rows of four, large and easy to count; Farid kneels behind it
 scene_farid_goodbye: Farid leads the donkey, which carries a basket of apples, towards the village; he turns and waves goodbye; the grandfather waves from under the tree
+
+# Variety games (version 2): the same things in other colours, made by recolouring the plain picture
+ball_blue: the same ball as "ball", blue
+ball_green: the same ball as "ball", green
+ball_yellow: the same ball as "ball", yellow
+flower_yellow: the same flower as "flower", with yellow petals and an orange centre
+flower_blue: the same flower as "flower", with blue petals
+# Basket labels: three small library pictures on a cream tray
+set_animals: a cow, a hen and a cat together (the basket "animals")
+set_fruit: grapes, a pomegranate and an orange together (the basket "fruit")
+set_vegetables: a carrot, a potato and an onion together (the basket "vegetables")
+set_home_things: a bed, a pot and a broom together (the basket "things at home")

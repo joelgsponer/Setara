@@ -533,7 +533,7 @@ fa,en
 شب تاریک و آرام,"a dark, quiet night"
 سگ,dog
 زنبور عسل,bee
-خر,donkey
+شتر,camel
 سبزه,grass
 نهال,sapling
 شاخه شکوفه,a branch in blossom
@@ -551,12 +551,12 @@ fa,en
 آب یخ بسته است,the water has frozen
 گوسفند,sheep
 اسپ,horse
-شتر,camel
 شیر درنده,lion
 بقه,frog
 فیل,elephant
 عقاب,eagle
-مرغ,hen
+طوطی,parrot
+خر,donkey
 بز,goat
 پروانه,butterfly
 مگس,fly
@@ -935,7 +935,6 @@ fa,en
 مالته,orange
 بادنجان سیاه,aubergine
 شفتالو,peach
-برنج,rice
 زردک,carrot
 انگور,grapes
 انار,pomegranate

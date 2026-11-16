@@ -115,3 +115,20 @@ scene_omar_ali: Omar stands beside his friend Ali, a slightly smaller boy; Omar'
 scene_three_pens: a table top with exactly three pens in a row: one red, one blue, one black; the two boys look at them
 scene_omar_gives_pen: Omar hands the red pen to Ali; both smile
 scene_boys_goodbye: Omar and Ali stand at the classroom door, smiling and waving goodbye to us
+
+# Variety games (version 2): the same things in other colours, made by recolouring the plain picture
+book_green: the same book as "book", with a green cover
+book_yellow: the same book as "book", with a yellow cover
+pen_green: the same pen as "pen", coloured green
+pen_black: the same pen as "pen", coloured black
+bag_red: the same bag as "bag", coloured red
+bag_blue: the same bag as "bag", coloured blue
+pencil_red: the same pencil as "pencil", with a red body
+pencil_blue: the same pencil as "pencil", with a blue body
+pencil_green: the same pencil as "pencil", with a green body
+apple_green: the same apple as "apple", light green
+apple_yellow: the same apple as "apple", yellow
+# Basket labels: three small library pictures on a cream tray
+set_food: bread, an apple and an egg together (the basket "food")
+set_school_things: a book, a pencil and a bag together (the basket "classroom things")
+set_people: the teacher, a boy and a girl together (the basket "people")

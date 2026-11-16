@@ -1,5 +1,5 @@
 round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
-01,دستهٔ اول . هر سبد یک حرف است. تصویر را ببین، کلمه را بشنو و آن را در سبد حرف اولش بینداز. اول هر سبد نام حرف و کلمهٔ خود را می‌گوید.,apricot,apricot,,t:a,,"A, A, apple."
+01,دستهٔ اول. هر سبد یک حرف است. تصویر را ببین، کلمه را بشنو و آن را در سبد حرف اولش بینداز. اول هر سبد نام حرف و کلمهٔ خود را می‌گوید.,t:A,big A,,t:a,,"A, A, apple."
 01,,pillow,pillow,,t:p,,"P, P, pen."
 01,,tea,tea,,t:t,,"T, T, table."
 01,,table,table,,t:t,,
@@ -13,7 +13,7 @@ round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
 01,,pencil,pencil,,t:p,,
 01,,pen,pen,,t:p,,
 01,,tomato,tomato,,t:t,,
-01,,almond,almond,,t:a,,
+01,,axe,axe,,t:a,,
 01,,star,star,,t:s,,
 01,,apple,apple,,t:a,,
 01,,plate,plate,,t:p,,
@@ -21,7 +21,7 @@ round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
 01,,tent,tent,,t:t,,
 01,,pot,pot,,t:p,,
 01,,tooth,tooth,,t:t,,
-02,دستهٔ دوم . هر سبد یک حرف است. تصویر را ببین، کلمه را بشنو و آن را در سبد حرف اولش بینداز. به صدای اول کلمه گوش کن.,egg,egg,,t:e,,"E, E, egg."
+02,دستهٔ دوم. هر سبد یک حرف است. تصویر را ببین، کلمه را بشنو و آن را در سبد حرف اولش بینداز. به صدای اول کلمه گوش کن.,egg,egg,,t:e,,"E, E, egg."
 02,,eggplant,eggplant,,t:e,,
 02,,garlic,garlic,,t:g,,"G, G, goat."
 02,,cow,cow,,t:c,,"C, C, cat."
@@ -41,11 +41,11 @@ round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
 02,,grandmother,grandmother,,t:g,,
 02,,nose,nose,,t:n,,
 02,,nest,nest,,t:n,,
-03,دستهٔ سوم . هر سبد یک حرف است. تصویر را ببین، کلمه را بشنو و آن را در سبد حرف اولش بینداز. اگر یک حرف کلان آمد، آن را در سبد خُرد همان حرف بینداز.,open,open,,t:o,,"O, O, orange."
+03,دستهٔ سوم. هر سبد یک حرف است. تصویر را ببین، کلمه را بشنو و آن را در سبد حرف اولش بینداز. اگر یک حرف کلان آمد، آن را در سبد خُرد همان حرف بینداز.,t:Oo,O. Big and small.,,t:o,,"O, O, orange."
 03,,horse,horse,,t:h,,"H, H, hen."
 03,,door,door,,t:d,,"D, D, dog."
 03,,honey,honey,,t:h,,
-03,,onion,onion,,t:o,,
+03,,pos_on,on,,t:o,,
 03,,orange,orange,,t:o,,
 03,,moon,moon,,t:m,,"M, M, moon."
 03,,milk,milk,,t:m,,
@@ -57,11 +57,11 @@ round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
 03,,drum,drum,,t:d,,
 03,,dog,dog,,t:d,,
 03,,house,house,,t:h,,
-03,,pos_on,on,,t:o,,
+03,,t:O,big O,,t:o,,
 03,,meat,meat,,t:m,,
 03,,hen,hen,,t:h,,
 03,,mother,mother,,t:m,,
-04,دستهٔ چهارم . هر سبد یک حرف است. تصویر را ببین، کلمه را بشنو و آن را در سبد حرف اولش بینداز. کلمه‌های نو هم در میان است: کمک، سبدها را دوباره می‌گوید.,bucket,bucket,,t:b,,"B, B, bag."
+04,دستهٔ چهارم. هر سبد یک حرف است. تصویر را ببین، کلمه را بشنو و آن را در سبد حرف اولش بینداز. کلمه‌های نو هم در میان است: کمک، سبدها را دوباره می‌گوید.,bucket,bucket,,t:b,,"B, B, bag."
 04,,rope,rope,,t:r,,"R, R, rope."
 04,,ink,ink,,t:i,,"I, I, ink."
 04,,ball,ball,,t:b,,
@@ -83,7 +83,7 @@ round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
 04,,t:I,big I,,t:i,,
 04,,t:Ii,I. Big and small.,,t:i,,
 04,,bag,bag,,t:b,,
-05,دستهٔ پنجم . هر سبد یک حرف است. تصویر را ببین، کلمه را بشنو و آن را در سبد حرف اولش بینداز. چهار سبد، چهار حرف. شتاب نکن.,t:K,big K,,t:k,,"K, K, key."
+05,دستهٔ پنجم. هر سبد یک حرف است. تصویر را ببین، کلمه را بشنو و آن را در سبد حرف اولش بینداز. چهار سبد، چهار حرف. شتاب نکن.,t:K,big K,,t:k,,"K, K, key."
 05,,key,key,,t:k,,
 05,,umbrella,umbrella,,t:u,,"U, U, umbrella."
 05,,water,water,,t:w,,"W, W, water."

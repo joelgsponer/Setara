@@ -26,7 +26,7 @@ report, speech = B.Report(), Speech("silent")
 for src in B.find_packs(content):
     pack = B.Pack(src, content, speech, report, make_audio=False)
     kind = pack.meta.get("kind", "learner")
-    {"learner": B.build_learner, "teacher": B.build_teacher, "core": B.build_core}[kind](pack)
+    {"learner": B.build_learner, "teacher": B.build_teacher, "core": B.build_core, "guide": B.build_guide}[kind](pack)
     for name in pack.pictures:
         used.setdefault(name, []).append(pack.id)
 

@@ -1,0 +1,19 @@
+round,intro_fa,say_en,say_fa,targets,others,need,help_fa
+01,حیوان‌ها را زود بگیر! گپ را بشنو و تنها حیوان‌هایی را بگیر که با آن جور است.,,حیوان‌های وحشی را بگیر.,wolf|fox|lion|eagle|snake,cow|sheep|hen|donkey,5,گرگ، روباه، شیر، عقاب و مار وحشی هستند. گاو، گوسفند، مرغ و خر پیش ما زندگی می‌کنند.
+01,,,حیوان‌های اهلی را بگیر.,cow|sheep|goat|donkey|horse,wolf|fox|lion|snake,5,گاو، گوسفند، بز، خر و اسپ اهلی هستند و به ما کمک می‌کنند.
+01,,,هر چه پر و بال دارد بگیر.,eagle|pigeon|sparrow|hen|parrot,cat|fish|frog|mouse,5,عقاب، کبوتر، گنجشک، مرغ و طوطی پرنده هستند.
+01,,,حشره‌های شش‌پا را بگیر.,bee|ant|butterfly|fly,sparrow|mouse|frog|fish,4,زنبور، مورچه، پروانه و مگس حشره هستند. هر حشره شش پا دارد.
+01,,,گیاه‌خورها را بگیر.,cow|sheep|goat|horse|camel,wolf|lion|eagle|snake,5,گاو، گوسفند، بز، اسپ و شتر سبزه و برگ می‌خورند.
+01,,,حیوان‌هایی را بگیر که از تخم می‌برآیند.,hen|pigeon|snake|fish|frog,cow|cat|dog|sheep,5,پرنده، مار، ماهی و بقه از تخم می‌برآیند. چوچه گاو، پشک، سگ و گوسفند زنده به دنیا می‌آید.
+02,آسمان، هوا و گیاه. گپ را بشنو و تنها چیزهای درست را بگیر.,,هر چه در آسمان شب است بگیر.,moon|star|moon_half|moon_crescent,sun_noon|rainbow|butterfly|kite,4,شب مهتاب و ستاره‌ها را می‌بینیم. آفتاب و کمان رستم از روز است.
+02,,,چیزهایی را بگیر که از خود روشنی دارد.,sun|fire|lamp|candle|lightning,moon|mirror|stone|window,5,آفتاب، آتش، چراغ، شمع و برق خودشان روشنی می‌دهند. مهتاب و آیینه تنها روشنی را پس می‌دهند.
+02,,,شکل‌های آب را بگیر.,ice|snow|steam|rain|hail,sand|stone|fire|feather,5,یخ، برف، بخار، باران و ژاله همه آب است.
+02,,,قسمت‌های گیاه را بگیر.,root|stem|leaf|flower|seed,stone|feather|bone|wool,5,ریشه، ساقه، برگ، گل و دانه قسمت‌های گیاه است.
+02,,,چیزهای سرد را بگیر.,ice|snow|hail|iceberg|snowman,fire|sun|steam|candle,5,یخ، برف، ژاله و کوه یخ سرد است. آتش، آفتاب و بخار داغ است.
+02,,,هر چه در هوای توفانی است بگیر.,rain|hail|lightning|wind|cloud,sun|star|moon|butterfly,5,در توفان باد، ابر، باران، ژاله و برق است.
+03,چیزها و مواد. گپ را بشنو و تنها چیزهای درست را بگیر.,,چیزهایی را بگیر که روی آب می‌ماند.,wood_dry|leaf|feather|ball,stone|key|coin|iron_nail,4,چوب، برگ، پر و توپ روی آب می‌ماند. سنگ، کلید، سکه و میخ غرق می‌شود.
+03,,,چیزهای آهنی را بگیر که به آهن‌ربا می‌چسپد.,iron_nail|needle|scissors|hammer|axe,pencil|leaf|stone|cloth,5,میخ، سوزن، قیچی، چکش و تبر آهن دارد. پنسل، برگ، سنگ و تکه نمی‌چسپد.
+03,,,ماشین‌های ساده را بگیر.,wheel|lever|pulley|ramp,stone|leaf|pillow|feather,4,چرخ، اهرم، قرقره و تخته کج کار را آسان می‌کنند.
+03,,,چیزهایی را بگیر که صدا می‌دهد.,drum|bell|flute|radio|rooster,pillow|stone|feather|cloth,5,دهل، زنگ، توله، رادیو و خروس صدا می‌دهند.
+03,,,چیزهای نرم را بگیر.,pillow|wool|cloth|feather|blanket,stone|key|brick|hammer,5,بالشت، پشم، تکه، پر و کمپل نرم است. سنگ، کلید، خشت و چکش سخت است.
+03,,,چیزهای چوبی را بگیر.,table|chair|door|wood_dry|pencil,key|stone|jar|coin,5,میز، چوکی، دروازه و پنسل از چوب است.
