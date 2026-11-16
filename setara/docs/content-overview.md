@@ -49,6 +49,7 @@ changed on that day, so its numbers may have moved. The table in the project
 | `garden-1` | Garden 1: Me | `garden` | 1 | no | 12 | 39 |
 | `garden-2-nature` | Nature and how things work | `garden` | 2 | **yes** | 10 | 43 |
 | `garden-2` | Garden 2: My Home | `garden` | 2 | no | 13 | 36 |
+| `garden-3-village` | My village: staying well, land and weather | `garden` | 3 | **yes** | 11 | 46 |
 | `garden-3` | Health 3: First aid | `garden` | 3 | no | 8 | 25 |
 | `garden-4-rights` | My rights, your rights | `garden` | 4 | **yes** | 6 | 13 |
 | `garden-4-world` | The world, Switzerland and Basel | `garden` | 4 | **yes** | 9 | 32 |
@@ -59,9 +60,10 @@ changed on that day, so its numbers may have moved. The table in the project
 | `math-3` | Math 3: Numbers to 1,000 | `math` | 3 | no | 10 | 67 |
 | `math-4` | Math 4: Times Tables and Sharing | `math` | 4 | no | 11 | 63 |
 | `math-5` | Math 5: Large Numbers and Fractions | `math` | 5 | no | 12 | 63 |
-| **Total** | 29 learner packs | | | 8 add-ons | **310** | **1847** |
+| `math-6` | Math 6: Percent, Ratio and Averages | `math` | 6 | no | 12 | 61 |
+| **Total** | 31 learner packs | | | 9 add-ons | **333** | **1954** |
 
-Besides these: 17 teacher's guide packs (270 chapters, about 3,450 pages), two lesson packs and the core pack. The per-pack descriptions further down cover only the first 14 packs as they were on 14 November; for everything else read each pack's `SOURCES.md` and `curriculum.md`.
+Besides these: 22 teacher's guide packs (372 chapters, about 4,900 pages), two lesson packs and the core pack. The per-pack descriptions further down cover only the first 14 packs as they were on 14 November; for everything else read each pack's `SOURCES.md` and `curriculum.md`.
 
 ### Other packs
 

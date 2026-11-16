@@ -51,18 +51,19 @@ More of it:
 
 ## What is in it
 
-1,847 rounds in 29 learner packs, a teacher's guide of about 3,450 pages in
-17 guide packs, 40 classroom lessons, and about 1,350 pictures:
+1,954 rounds in 31 learner packs, a teacher's guide of about 4,900 pages in
+22 guide packs, 40 classroom lessons, and about 1,400 pictures:
 
 - **English** 1 to 6, from "Hello" to telling a story, with all 26 letters,
   a story book, and classroom lessons for levels 1 and 2
 - **Dari reading** 1 to 6, from hearing sounds to proverbs and poems, with
   all 32 letters and a story book
-- **Math** 1 to 5: both digit systems, the number line, word problems from
-  village life, tables, fractions, decimals, charts; and logic puzzles
+- **Math** 1 to 6: both digit systems, the number line, word problems from
+  village life, tables, fractions, decimals, charts, percent, ratio, a
+  household budget; and logic puzzles
 - **Health and environment** 1 to 4: hygiene, safe water, food, first aid,
-  growth, feelings, drought and flood, energy; and a pack on nature and how
-  things work
+  growth, feelings, drought and flood, energy; a pack on nature and how
+  things work, and one on staying well, land and weather in the village
 - **Teacher's guide** for every subject: what to teach and how, with
   figures, on the device and for printing
 - Two packs the local team may prefer to leave out: children's rights, and

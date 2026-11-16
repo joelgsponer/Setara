@@ -27,7 +27,7 @@ gates of the spec's own roadmap, and they are still ahead.
 | Pack builder: validation, speech, Dari shaping, pictures, checksums | Built, unit tested |
 | Card updates, damaged-pack handling, crash restart | Built, tested |
 | Content | See the table below |
-| Pictures | 1354 drawn as SVG, none reviewed locally |
+| Pictures | 1414 drawn as SVG, none reviewed locally |
 | Speech | Stand-in local voices. ElevenLabs path written, never run |
 | English mode for testers: English text and captions | Built. Translated by Claude, not checked by a native speaker |
 | Browser version, with a Dockerfile for hosting | Built, tested in Chromium and as a Docker image |
@@ -60,6 +60,7 @@ gates of the spec's own roadmap, and they are still ahead.
 | `garden-1` Garden 1: Me | 12 | 39 | 20 MB |
 | `garden-2-nature` Nature and how things work | 10 | 43 | 26 MB |
 | `garden-2` Garden 2: My Home | 13 | 36 | 21 MB |
+| `garden-3-village` My village: staying well, land and weather | 11 | 46 | 40 MB |
 | `garden-3` Health 3: First aid | 8 | 25 | 22 MB |
 | `garden-4-rights` My rights, your rights | 6 | 13 | 8 MB |
 | `garden-4-world` The world, Switzerland and Basel | 9 | 32 | 24 MB |
@@ -68,37 +69,42 @@ gates of the spec's own roadmap, and they are still ahead.
 | `guide-en-2` app strings and tutorial | | | 22 MB |
 | `guide-en-3` app strings and tutorial | | | 26 MB |
 | `guide-en-4` app strings and tutorial | | | 24 MB |
+| `guide-en-5` app strings and tutorial | | | 28 MB |
+| `guide-en-6` app strings and tutorial | | | 28 MB |
 | `guide-fa-1` app strings and tutorial | | | 16 MB |
 | `guide-fa-2` app strings and tutorial | | | 17 MB |
 | `guide-fa-3` app strings and tutorial | | | 14 MB |
 | `guide-fa-4` app strings and tutorial | | | 14 MB |
+| `guide-fa-5` app strings and tutorial | | | 21 MB |
+| `guide-fa-6` app strings and tutorial | | | 23 MB |
 | `guide-garden-1` app strings and tutorial | | | 11 MB |
 | `guide-garden-2` app strings and tutorial | | | 17 MB |
-| `guide-garden-3` app strings and tutorial | | | 17 MB |
+| `guide-garden-3` app strings and tutorial | | | 28 MB |
 | `guide-garden-4` app strings and tutorial | | | 19 MB |
-| `guide-math-1` app strings and tutorial | | | 11 MB |
+| `guide-math-1` app strings and tutorial | | | 12 MB |
 | `guide-math-2` app strings and tutorial | | | 11 MB |
-| `guide-math-3` app strings and tutorial | | | 11 MB |
-| `guide-math-4` app strings and tutorial | | | 13 MB |
+| `guide-math-3` app strings and tutorial | | | 12 MB |
+| `guide-math-4` app strings and tutorial | | | 14 MB |
 | `guide-math-5` app strings and tutorial | | | 15 MB |
+| `guide-math-6` app strings and tutorial | | | 13 MB |
 | `math-1` Math 1: Counting to 20 | 10 | 71 | 48 MB |
 | `math-2-puzzles` Logic Puzzles | 9 | 43 | 14 MB |
 | `math-2` Math 2: Numbers to 100 | 10 | 70 | 60 MB |
 | `math-3` Math 3: Numbers to 1,000 | 10 | 67 | 76 MB |
 | `math-4` Math 4: Times Tables and Sharing | 11 | 63 | 64 MB |
 | `math-5` Math 5: Large Numbers and Fractions | 12 | 63 | 75 MB |
+| `math-6` Math 6: Percent, Ratio and Averages | 12 | 61 | 101 MB |
 | `teacher-en-1` English 1 lessons | 20 lessons, Phrase Board, tips | | 10 MB |
 | `teacher-en-2` English 2 lessons | 20 lessons, Phrase Board, tips | | 12 MB |
-| **Total** | | **1847** | |
+| **Total** | | **1954** | |
 <!-- /content -->
 
 Health 3 is the first-aid pack: burns, cuts, bites, nosebleed, choking, what
 to do when someone collapses, and when to take a sick relative to the clinic.
 Its facts and what was simplified are in `content/garden/3/SOURCES.md`.
 
-Not written yet: math 6, the rest of health 3 (germs, common illnesses,
-soil, crops, weather), classroom lessons beyond English 2, teacher's guides
-for levels 5 and 6. The teaching design is in `docs/curriculum.md`. Most of
+Every level of the curriculum is written, with a teacher's guide for each.
+Not written yet: classroom lesson scripts beyond English 2. The teaching design is in `docs/curriculum.md`. Most of
 the content is days old and unchecked.
 
 All of it is a first draft written by Claude. Before it reaches children it
