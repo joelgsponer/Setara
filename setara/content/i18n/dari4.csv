@@ -1000,12 +1000,10 @@ fa,en
 با هم بخوانیم,Read Along
 قصه را بخوان و به آن گوش کن. در میان قصه به سوال‌ها جواب بده.,Read the story and listen to it. Answer the questions along the way.
 خوب نگاه کن. کلمه کار را بخوان و پیدا کن.,Look well. Read and find the action word.
-می‌شکند,breaks
 او می‌کشد.,He or she draws.
 به تصویر نگاه کن. او چه می‌کند؟ کلمه درست را انتخاب کن.,Look at the picture closely. What is he or she doing? Choose the right word.
 او می‌شمارد.,He or she counts.
 این تصویر را ببین. کلمه این کار کدام است؟,See this picture. Which is the word for this action?
-می‌ریزد,falls
 او می‌رود.,He or she goes.
 ببین که چه می‌شود. کدام کلمه این کار را می‌گوید؟,See what is happening. Which word says this action?
 می‌جوید,chews
@@ -1074,7 +1072,6 @@ fa,en
 کلمه آخر این جمله کدام است؟ برف سفید است. زغال,Which is the last word of this sentence? Snow is white. Charcoal is ...
 برف سفید است. زغال سیاه است.,Snow is white. Charcoal is black.
 کلمه آخر این جمله کدام است؟ عسل شیرین است. لیمو,Which is the last word of this sentence? Honey is sweet. Lemon is ...
-ترش,sour
 عسل شیرین است. لیمو ترش است.,Honey is sweet. Lemon is sour.
 کلمه آخر این جمله کدام است؟ سنگ سخت است. پشم,Which is the last word of this sentence? Stone is hard. Wool is ...
 سنگ سخت است. پشم نرم است.,Stone is hard. Wool is soft.
@@ -1109,7 +1106,6 @@ fa,en
 کلمه آخر این جمله کدام است؟ پشک شیر,Which is the last word of this sentence? The cat ... milk
 پشک شیر می‌خورد. یک پشک است.,The cat drinks milk. It is one cat.
 کلمه آخر این جمله کدام است؟ بچه‌ها در حویلی توپ‌بازی,Which is the last word of this sentence? The children ... ball in the yard
-می‌کنند,play
 می‌کنم,I do
 می‌کارند,plant
 بچه‌ها توپ‌بازی می‌کنند. چند بچه است.,The children play ball. There are several children.
@@ -1320,13 +1316,11 @@ fa,en
 تو چرا می‌خندی؟,Why are you laughing?
 من خوش هستم. جمله را بساز.,I am happy. Build the sentence.
 هستم؟,am?
-تاریک,dark
 شب تاریک است. جمله را بساز.,The night is dark. Build the sentence.
 شب تاریک است.,The night is dark.
 چای گرم است. جمله را بساز.,The tea is warm. Build the sentence.
 چای گرم است.,The tea is warm.
 بز برگ می‌خورد. جمله را بساز.,The goat eats leaves. Build the sentence.
-درس,lesson
 معلم درس می‌دهد. جمله را بساز.,The teacher teaches. Build the sentence.
 باران تیز می‌بارد. جمله را بساز.,The rain falls hard. Build the sentence.
 باران تیز می‌بارد.,The rain falls hard.
@@ -1347,7 +1341,6 @@ fa,en
 نرگس در حویلی می‌دود.,Narges runs in the yard.
 پدر از دکان آمد. جمله را بساز.,Father came from the shop. Build the sentence.
 پدر از دکان آمد.,Father came from the shop.
-می‌برد.,carries.
 خر بار را می‌برد. جمله را بساز.,The donkey carries the load. Build the sentence.
 خر بار را می‌برد.,The donkey carries the load.
 طفل پیش مادر است. جمله را بساز.,The baby is with mother. Build the sentence.
@@ -1380,7 +1373,6 @@ fa,en
 تو چه داری؟,What do you have?
 من یک توپ دارم. جمله را بساز.,I have a ball. Build the sentence.
 دارم؟,have?
-می‌رسد.,ripens.
 در تابستان گندم می‌رسد. جمله را بساز.,In summer the wheat ripens. Build the sentence.
 در تابستان گندم می‌رسد.,In summer the wheat ripens.
 مادر هر صبح نان می‌پزد. جمله را بساز.,Mother bakes bread every morning. Build the sentence.

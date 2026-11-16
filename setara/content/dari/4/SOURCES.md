@@ -4,6 +4,90 @@
 AI (Claude). Every sentence needs a Dari-speaking educator before a child
 sees it. The English of every text is in `content/i18n/dari4.csv`.
 
+## Version 2: more variety (read this first)
+
+Version 2 answers one complaint: the same questions came back. The sections
+below describe version 1 unless they say otherwise. **Still nobody who speaks
+Dari has read or heard this pack**, and version 2 adds about 150 new items
+that need the same review.
+
+**Size**: 10 games, 56 rounds, 531 items (version 1: 7 games, 50 rounds, 383
+rows). How it was counted: a script reads `items.csv` and every sheet and counts each spoken prompt (`say_fa` + `say_en`, for derived games the word itself) over the whole pack; "more than twice" counts the items whose prompt occurs three times or more.
+
+| Game | Rounds v1 → v2 | Items v1 → v2 | Draw | Prompts heard more than twice, v1 → v2 |
+| --- | --- | --- | --- | --- |
+| action_words | 4 → 4 | 32 → 48 | 8 | 27 → 0 |
+| read_and_choose | 8 → 8 | 64 → 64 | - | 64 → 0 |
+| sentence_weaver | 10 → 10 | 60 → 100 | 8 | 0 → 0 |
+| sentence_baskets | 8 → 8 | 65 → 97 | 8 | 49 → 0 |
+| who_what_where | 6 → 6 | 48 → 48 | - | 0 → 0 |
+| word_catch | 4 → 4 | 24 → 24 | - | 0 → 0 |
+| read_along | 10 → 10 | 90 → 90 | - | 0 → 0 |
+| fits_or_not | - → 2 | - → 20 | - | - → 0 |
+| story_order | - → 2 | - → 16 | - | - → 0 |
+| complete_sentence | - → 2 | - → 24 | 8 | - → 0 |
+
+Whole pack: 140 of 383 items had a prompt that is heard more than twice (five
+fixed instructions: "Read the sentence. Which picture is right?" 64 times,
+"Read. Which basket does it go in?" 33 times, and three more); now 0 of 531.
+
+What was done, and what that number hides:
+
+- **The fixed instruction is worded differently each time.** In this pack
+  the sentence must not be read aloud, so in Read and Choose, Sentence
+  Baskets 3 to 8 and Action Words the voice can only give an instruction.
+  It is now put together from ten openings and several endings ("Read it
+  word by word. Which picture goes with it?"). **This is a change of wording
+  only**: in those 180 items the task is the same as before. The real
+  variety is in the new forms and the pools.
+- **Three new games in new forms**:
+  - Fits or Not? (`i`, story engine; 20): a picture and one written
+    sentence; the child reads and answers yes or no; after a wrong answer
+    the guide says why ("The fish is in the water, not in the tree.").
+  - First, Then, Last (`j`, story engine; 16): a story of three short
+    sentences is read, and one question asks what came first, next or last
+    ("What did Laila do first?"); the answer is a picture. The engine cannot
+    show sentences as tiles at 30 px, so the story is not put in order by
+    hand; the child shows that she has kept the order.
+  - Finish the Sentence (`f`, journey; 24): the sentence is spoken without
+    its last word; the child reads four look-alike words. Round 01 is one
+    or many (می‌رود / می‌روند), round 02 is opposites (گرم، خرد، تاریک ...).
+- **Pools.** Action Words, Sentence Weaver, Sentence Baskets and Finish the
+  Sentence are pools (`"draw"`): 10 to 13 items a round, eight asked each
+  play. The story games cannot be pools.
+- **New material**: 40 sentences to build, 32 to sort, 16 verbs asked both
+  ways (new: می‌کشد، می‌وزد، می‌جوشد، می‌روید، می‌دوزد), 24 cloze sentences. No new
+  pictures.
+- **Story-question cards**: all written answers in the story games were
+  measured again; none is drawn below 30 px.
+
+For the reviewer (version 2):
+
+1. Finish the Sentence: the voice says the sentence up to the missing word
+   («کلمه آخر این جمله کدام است؟ لیلا و زهرا به مکتب»). A voice may let this
+   sound odd; nobody has heard it. Plural subjects of animals take a plural
+   verb here (مرغ‌ها دانه می‌خورند، گاوها علف می‌خورند); the stories of version 1
+   use a singular verb for things (برگ‌ها می‌ریزد). Consistent enough?
+2. Opposites in round 02: سخت / نرم، روشن / تاریک، تر / خشک، نو / کهنه، تیز /
+   آهسته. The wrong words include دود، آمده، آینده.
+3. First, Then, Last: «مادر آرد را خمیر کرد», «پشک توپ را پایین انداخت»,
+   «از تخم چوچه برآمد», «چوپان رمه را به خانه آورد» ("flock" is answered
+   with the picture of a sheep).
+4. Fits or Not?: true sentences and false ones are ten each; the false ones
+   are plainly false (a fish in a tree), not near misses.
+5. New sorter sentences: «نمک شور است», «شیر سیاه است» (not true; شیر is
+   milk here), «آتش تر است», «کالای گرم» (winter; not a sentence), «خروس
+   خواند» (day), «چراغ می‌سوزد» (night), «گوساله دارد», «چوچه دارد», «تر است»
+   (fish).
+6. Fits or Not? has only the answers yes and no, ten each; that is the form.
+
+Checked for version 2: `validate --only fa-4` ok, 0 warnings, 0 untranslated
+lines (456 English lines added to `i18n/dari4.csv`); silent build ok;
+`tests/fuzz_rounds.lua` on the scratch build ends "fuzz ok"; screenshots of
+the three new games, a sorter round and an Action Words round looked at; all
+new tiles, sorter cards and choice cards measured at 30 px or more. Not
+checked: audio, a real handheld, children.
+
 ## What the pack teaches
 
 Curriculum, level 4: *read simple sentences with punctuation and understand

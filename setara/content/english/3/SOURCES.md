@@ -5,6 +5,104 @@ the villages has read or heard any of it yet. The unit-by-unit word list is
 in [`syllabus.md`](syllabus.md); the briefs of the new pictures are in
 [`pictures.txt`](pictures.txt).
 
+## Version 2: more variety (read this first)
+
+Version 2 answers one complaint: the same questions came back. Everything
+below this section describes version 1 unless it says otherwise; this section
+says what changed. Still nobody who speaks Dari or teaches English has read
+or heard it.
+
+**Size**: 15 games, 104 rounds, 1006 items (version 1: 11 games, 86 rounds,
+617 items). How it was counted: a script reads `items.csv` and every sheet and counts each spoken prompt (`say_fa` + `say_en`, for derived games the word itself) over the whole pack; "more than twice" counts the items whose prompt occurs three times or more.
+
+| Game | Rounds v1 → v2 | Items v1 → v2 | Draw | Prompts heard more than twice, v1 → v2 |
+| --- | --- | --- | --- | --- |
+| word_stall | 20 → 24 | 100 → 118 | - | 49 → 0 |
+| echo | 20 → 24 | 200 → 237 | - | 61 → 0 |
+| sound_catcher | 6 → 6 | 19 → 27 | - | 0 → 0 |
+| sentence_train | 11 → 12 | 67 → 142 | 8 | 23 → 0 |
+| shopkeeper | 4 → 4 | 24 → 48 | 8 | 0 → 0 |
+| radio_stories | 3 → 4 | 27 → 35 | - | 0 → 0 |
+| number_stall | 4 → 4 | 34 → 58 | 8 | 7 → 0 |
+| day_journey | 4 → 4 | 40 → 60 | 8 | 5 → 0 |
+| memory | 5 → 5 | 30 → 59 | 6 | 15 → 0 |
+| baskets | 6 → 6 | 51 → 84 | 8 | 19 → 0 |
+| yes_no | 3 → 3 | 25 → 40 | 8 | 0 → 0 |
+| riddles | - → 3 | - → 41 | 8 | - → 0 |
+| day_in_order | - → 2 | - → 21 | - | - → 0 |
+| odd_one_out | - → 2 | - → 24 | 8 | - → 0 |
+| opposites | - → 1 | - → 12 | 6 | - → 0 |
+
+Whole pack: 179 of 617 items had a prompt that is heard more than twice;
+now 0 of 1006.
+
+What was done:
+
+- **Pools.** Seven sheet games are now pools (`"draw"`): a round holds 12 to
+  16 items and each play asks eight (pairs: six of about twelve). Sound
+  Catcher, the stories and the two new builder games are not pools.
+- **No word a third time.** Word Stall and Echo both say every word of the
+  word bank, so a third bare "hat" in a sheet was the main repetition. Review
+  rows outside the review units 10 and 20 were replaced by new words; in the
+  review units the word comes back inside a new sentence ("I play with my
+  kite."). Sheets that only repeated the word now say something else (Memory
+  says "a cat", Baskets says "my shirt").
+- **35 new words** (the reviewer of version 1 asked for 30 to 50): toothbrush,
+  toothpaste, dirty (unit 01b); rain, snow, ice, wind (12b); spring, summer,
+  autumn, winter, season (12c); toilet, chimney, fence, pump (16b); wheel,
+  knife, noon, watch, clinic, run (in place of review rows); behind, in front
+  of (17); map, pan, log, ant, fan (18) and net, web, pin, lid, bug, rug (19)
+  as new three-letter words to read. The words known by ear (cat, hat, dog
+  ...) are still read in Sound Catcher, Sentence Train, Memory and Baskets.
+- **Four new games**: Riddles (two short sentences, pick the picture; 41),
+  First, Then (hear two to four things, put their pictures in that order;
+  21), Odd One Out (24) and Opposites (picture pairs; 12). A fourth story
+  ("Snow!", round 12c) uses the weather and season words.
+- **Number Stall 04b** asks tens and teens inside sentences ("My brother is
+  thirteen."), and Memory 05 pairs mirror numbers (47 / 74).
+- **The day names** are no longer four long tiles in a row. Sentence Train
+  has a new round 09b in which each day is built from its parts (Wed + nes +
+  day), every tile at 24 px or more; the order of the days is asked in Day
+  Journey ("Which day comes after Monday?", Dari choices read aloud) and in
+  First, Then. Other long tiles were widened by joining small words ("in the"
+  is one tile). One tile is still drawn at 20 px: "homework".
+- **Towel** is now «روی‌پاک». «دستمال» is "handkerchief" in the shared English
+  table (the math pack uses it so); with its own Dari word the English mode
+  shows "towel" again and the other packs are untouched. **A Dari speaker must
+  confirm «روی‌پاک».**
+- **Pictures**: 11 new ones (bug, fan, lid, log, map, net, pan, pin, web,
+  pos_behind, pos_in_front; briefs in `pictures.txt`). `wind` was drawn by
+  another writer at the same time and is reused.
+
+Decisions and doubts of version 2:
+
+- **Yes or No still has only two answers** (21 yes, 19 no in the pools). The
+  rule "no answer right more than about three times a game" cannot hold for
+  it; a play now draws eight of 12 to 15 questions, so the questions change.
+- **Odd One Out never counts the cards** ("Which one is not for your feet?"),
+  because the app shows two, three or four cards depending on how the child
+  is doing.
+- New Dari words to confirm: برس دندان، کریم دندان، چتل، باد، یخ، فصل، تشناب،
+  دودکش، کتاره (fence)، بمبه (pump)، چرخ (wheel; or ارابه?)، کارد، چاشت
+  (noon)، ساعت دستی، کلینیک، پشت، پیش روی (in front of)، نقشه، تابه (pan; or
+  کرایی?)، کنده چوب (log)، مورچه، پکه (fan)، جال (net)، تار جولا (web)، سنجاق،
+  سرپوش، حشره (bug)، قالینچه (rug).
+- "bug" is drawn as a ladybird, "lid" as a dome lid, "pan" with an egg in
+  it, "net" as a hand net, "map" without any letters. "rug" reuses the
+  picture `carpet` (level 2 calls it carpet).
+- `pos_behind` and `pos_in_front` show the ball half hidden behind the box
+  and overlapping it in front; try them with children beside `pos_next_to`.
+- The riddles use a few words that are only explained by the Dari help:
+  "round", "around", "over", "tells stories", "holds". An English teacher
+  should read all 41.
+- "It rains", "It snows" are taught as fixed sentences (present simple, as
+  the level asks), not "It is raining".
+- Checked for version 2: `validate --only en-3` ok, 0 warnings, 0 Dari texts
+  without English; silent build ok; `tests/fuzz_rounds.lua` on the scratch
+  build ends "fuzz ok"; screenshots of the four new games, the new story,
+  Sentence Train 09b and one pool round looked at. Not checked: audio, a
+  real handheld, children.
+
 ## What the pack teaches
 
 The curriculum line (spec section 8): *describe her day, tell the time, days
@@ -170,8 +268,6 @@ Words I chose and am not sure of:
 
 ## Left open
 
-- English mode: a few Dari words of this pack get their English from other
-  packs' tables (`دستمال` shows "handkerchief", here it means towel), since
-  the table is shared and keyed by the Dari text.
+- (Fixed in version 2: towel is «روی‌پاک», see above.)
 - The spec's "from English level 3, Garden and Workshop games can be
   replayed in English" is not part of this pack.

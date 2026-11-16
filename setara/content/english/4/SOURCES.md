@@ -4,8 +4,100 @@
 (Claude) from the curriculum in the product spec (section 8: level 4, "Buy
 and sell, ask prices and quantities, ask and answer questions politely; How
 much / many, can, some / any, reading short sentences"). Nobody has heard the
-audio, and it has not been run in the app (no LÖVE on the authoring machine);
-the builder validated and built it.
+audio. Version 1 was not run in the app; version 2 was (round fuzz test and
+screenshots, see below).
+
+## Version 2: more variety (read this first)
+
+Version 2 answers one complaint: the same questions came back. The sections
+below describe version 1 unless they say otherwise. Still nothing here has
+been reviewed by a person.
+
+**Size**: 16 games, 90 rounds, 887 items (version 1: 11 games, 76 rounds,
+564 items). How it was counted: a script reads `items.csv` and every sheet and counts each spoken prompt (`say_fa` + `say_en`, for derived games the word itself) over the whole pack; "more than twice" counts the items whose prompt occurs three times or more.
+
+| Game | Rounds v1 → v2 | Items v1 → v2 | Draw | Prompts heard more than twice, v1 → v2 |
+| --- | --- | --- | --- | --- |
+| word_stall | 20 → 23 | 114 → 136 | - | 72 → 0 |
+| echo | 20 → 23 | 207 → 242 | - | 72 → 0 |
+| basket_catch | 3 → 3 | 9 → 9 | - | 0 → 0 |
+| sentence_train | 8 → 8 | 45 → 96 | 8 | 0 → 0 |
+| shopkeeper | 7 → 7 | 42 → 84 | 8 | 0 → 0 |
+| radio_stories | 3 → 3 | 26 → 26 | - | 0 → 0 |
+| price_tags | 3 → 3 | 24 → 39 | 8 | 0 → 0 |
+| stall_pairs | 5 → 5 | 30 → 50 | 6 | 30 → 0 |
+| which_basket | 3 → 3 | 30 → 53 | 8 | 20 → 0 |
+| bazaar_road | 2 → 2 | 19 → 31 | 8 | 0 → 0 |
+| read_pick | 2 → 2 | 18 → 28 | 8 | 18 → 0 |
+| what_do_you_say | - → 1 | - → 14 | 8 | - → 0 |
+| riddles | - → 2 | - → 26 | 8 | - → 0 |
+| odd_one_out | - → 2 | - → 24 | 8 | - → 0 |
+| first_then | - → 2 | - → 17 | - | - → 0 |
+| opposites | - → 1 | - → 12 | 6 | - → 0 |
+
+Whole pack: 212 of 564 items had a prompt that is heard more than twice;
+now 0 of 887.
+
+What was done:
+
+- **Pools.** Seven sheet games are pools (`"draw"`): 10 to 20 items a round,
+  eight asked each play (pairs: six of ten).
+- **No word a third time.** Stall Pairs spoke the bare word again ("pear");
+  it now speaks a small phrase when the pair is found ("a sweet pear", "a
+  jar of honey"). Which Basket? says the plural in round 06, and rounds 08
+  and 12 use words that are not word-bank words of this level. Review rows
+  that repeated a word of this level were replaced by new words or by words
+  of levels 2 and 3 (fish, meat, carrot, honey, yoghurt, bridge, clinic,
+  blanket, watch, mirror); in the review units 10 and 20 the word comes back
+  inside a new sentence.
+- **Read and Pick**: the word must not be said, so the spoken line is an
+  instruction. It is now worded differently every time ("Read it letter by
+  letter. Which is its picture?"); this is a change of wording only, the
+  task is the same.
+- **30 new words** (the pack was about 100 of the 250 the curriculum asks):
+  butcher's (01); plum, fig, turnip, radish, raisins, pistachios, sour (06b);
+  long, short, light, half (07b); plastic bag (09); oven, ice cream (14);
+  thread (now with a picture), sewing machine (15); nail, saw (16); left,
+  right, straight on, turn (17); teapot, tray (18); lorry (19); open,
+  closed, list, seeds, sand (19b). The 250 are still far away: see "Left
+  open".
+- **Five new games**: What Do You Say? (a small scene, four short written
+  answers: Excuse me, Of course, That's all ...; 14), Riddles (26), Odd One
+  Out (24), First, Then (what happens first and next in a shop, and where
+  things come from: wheat, flour, bread; 17) and Opposites (cheap /
+  expensive, heavy / light ...; 12 pairs).
+- **Pictures**: 17 new ones (shop_open, shop_closed, butcher, teapot, tray,
+  plum, fig, turnip, radish, raisins, pistachios, oven, ice_cream, thread,
+  sewing_machine, saw, list; briefs in `pictures.txt`). `feather` (for
+  "light") and `iron_nail` were drawn by another writer at the same time and
+  are reused.
+
+Decisions and doubts of version 2:
+
+- **Shopkeeper round 20** was three pairs (serve, then pay). As a pool the
+  pairs come apart, so each new item says everything it needs ("Nine figs
+  are forty-five afghani").
+- **Odd One Out never counts the cards**, because the app shows two to four
+  cards depending on how the child is doing.
+- **What Do You Say?** needs reading of two-word English answers; they are
+  kept short so that they are drawn at 24 px ("No, thanks", not "No, thank
+  you").
+- New Dari words to confirm: قصابی، آلو، انجیر، شلغم، ملی (radish)، کشمش،
+  پسته، ترش، دراز، کوتاه، سبک، نیم، خریطه پلاستیکی، تنور، شیریخ، تار، ماشین
+  خیاطی، میخ، اره، چپ، راست، مستقیم، «به طرف چپ بگردید» (turn left)، چاینک،
+  پتنوس، لاری، باز، بسته، لست، دانه (seeds; or تخم?)، ریگ.
+- "light" is shown by a feather: the idea has to be taught. `oven` is a
+  clay tandoor with a flame and a bread beside it; `butcher` is a stall with
+  meat on hooks and no person; `shop_open` and `shop_closed` are the same
+  shop front with the shutter up or down and a lock.
+- In English mode «لاری» shows as "Lāri (lorry)", from the Dari packs' table.
+- Opposites pairs "sell and buy" as shopkeeper and customer, and "sweet and
+  sour" as sweets and a lemon; both need the spoken line to be understood.
+- Checked for version 2: `validate --only en-4` ok, 0 warnings, 0 Dari texts
+  without English; silent build ok; `tests/fuzz_rounds.lua` on the scratch
+  build ends "fuzz ok" (version 1 had never been run in the app; it now has);
+  screenshots of the five new games and of Read and Pick looked at. Not
+  checked: audio, a real handheld, children.
 
 ## What the pack teaches
 

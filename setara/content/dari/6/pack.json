@@ -1,0 +1,128 @@
+{
+ "pack": "fa-6",
+ "subject": "fa",
+ "level": 6,
+ "version": 1,
+ "title_en": "Dari 6: Fluent reader",
+ "title_fa": "دری ۶: خواننده روان",
+ "games": [
+  {
+   "id": "info_texts",
+   "engine": "story",
+   "letter": "a",
+   "title_en": "Texts to Learn From",
+   "title_fa": "متن‌های دانستنی",
+   "intro_fa": "متن را بخوان. در میان آن به سوال‌ها جواب بده.",
+   "icon": "globe",
+   "v1": true,
+   "sheet": "info_texts.csv"
+  },
+  {
+   "id": "proverbs",
+   "engine": "story",
+   "letter": "b",
+   "title_en": "Proverbs",
+   "title_fa": "ضرب‌المثل‌ها",
+   "intro_fa": "ضرب‌المثل را بخوان، معنای آن را بفهم و به سوال‌ها جواب بده.",
+   "icon": "clap",
+   "sheet": "proverbs.csv"
+  },
+  {
+   "id": "poems",
+   "engine": "story",
+   "letter": "c",
+   "title_en": "Poems",
+   "title_fa": "شعرها",
+   "intro_fa": "شعر را بخوان و گوش کن. بعد به سوال‌ها جواب بده.",
+   "icon": "star",
+   "sheet": "poems.csv"
+  },
+  {
+   "id": "letter_talk",
+   "engine": "story",
+   "letter": "k",
+   "title_en": "Letters That Sound Alike",
+   "title_fa": "حرف‌های هم‌آواز",
+   "intro_fa": "بخوان که چرا بعضی حرف‌ها یک آواز دارند، و به سوال‌ها جواب بده.",
+   "icon": "parrot",
+   "sheet": "letter_talk.csv"
+  },
+  {
+   "id": "letter_baskets",
+   "engine": "sorter",
+   "letter": "d",
+   "title_en": "Letter Baskets",
+   "title_fa": "سبد حرف‌ها",
+   "intro_fa": "کلمه را بشنو و آن را در سبد حرف درست بگذار.",
+   "icon": "basket",
+   "draw": 8,
+   "sheet": "letter_baskets.csv"
+  },
+  {
+   "id": "spell_it",
+   "engine": "listen_pick",
+   "letter": "e",
+   "title_en": "Which Is Right?",
+   "title_fa": "کدام درست است؟",
+   "intro_fa": "کلمه را بشنو. نوشته درست را انتخاب کن.",
+   "icon": "look",
+   "draw": 8,
+   "sheet": "spell_it.csv"
+  },
+  {
+   "id": "text_builder",
+   "engine": "builder",
+   "letter": "f",
+   "title_en": "Text Builder",
+   "title_fa": "متن‌ساز",
+   "intro_fa": "قدم‌ها را به ترتیب بگذار و جمله‌ها را از کلمه‌ها بساز.",
+   "icon": "rope",
+   "draw": 5,
+   "sheet": "text_builder.csv"
+  },
+  {
+   "id": "fact_baskets",
+   "engine": "sorter",
+   "letter": "g",
+   "title_en": "Fact Baskets",
+   "title_fa": "سبد دانستنی‌ها",
+   "intro_fa": "کارت را خودت بخوان و در سبد درست بگذار.",
+   "icon": "yes",
+   "draw": 8,
+   "sheet": "fact_baskets.csv"
+  },
+  {
+   "id": "meaning_pairs",
+   "engine": "pairs",
+   "letter": "h",
+   "title_en": "Meaning Pairs",
+   "title_fa": "جوره‌های معنا",
+   "intro_fa": "دو کارتی را که با هم جور است، پیدا کن.",
+   "icon": "friends",
+   "draw": 5,
+   "sheet": "meaning_pairs.csv"
+  },
+  {
+   "id": "missing_word",
+   "engine": "listen_pick",
+   "letter": "i",
+   "title_en": "The Missing Word",
+   "title_fa": "کلمه گمشده",
+   "intro_fa": "گوش کن. کلمه‌ها را بخوان و کلمه درست را انتخاب کن.",
+   "icon": "pen",
+   "draw": 8,
+   "sheet": "missing_word.csv"
+  },
+  {
+   "id": "review",
+   "engine": "listen_pick",
+   "letter": "j",
+   "title_en": "What Do You Remember?",
+   "title_fa": "چه به یاد داری؟",
+   "intro_fa": "آنچه را خوانده‌ای به یاد بیاور و تصویر درست را انتخاب کن.",
+   "icon": "reading",
+   "draw": 8,
+   "sheet": "review.csv"
+  }
+ ]
+}

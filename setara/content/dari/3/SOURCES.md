@@ -4,6 +4,85 @@ Written by an AI (Claude). **No Dari speaker, teacher or child has seen or
 heard any of it.** This file says what the pack teaches, what was decided
 while writing it, and what a human reviewer has to decide.
 
+## Version 2: more variety (read this first)
+
+Version 2 answers one complaint: the same questions came back. The sections
+below describe version 1 unless they say otherwise. **Still no Dari speaker
+has seen or heard any of it**, and version 2 adds about 280 new items that
+need the same review.
+
+**Size**: 10 games, 66 rounds, 735 items (version 1: 7 games, 60 rounds, 458
+items). How it was counted: a script reads `items.csv` and every sheet and counts each spoken prompt (`say_fa` + `say_en`, for derived games the word itself) over the whole pack; "more than twice" counts the items whose prompt occurs three times or more.
+
+| Game | Rounds v1 → v2 | Items v1 → v2 | Draw | Prompts heard more than twice, v1 → v2 |
+| --- | --- | --- | --- | --- |
+| alefba_garden | 16 → 16 | 130 → 209 | 8 | 64 → 0 |
+| letter_shapes | 11 → 11 | 94 → 153 | 8 | 34 → 0 |
+| word_weaver | 10 → 10 | 60 → 84 | 8 | 0 → 0 |
+| syllable_catch | 6 → 6 | 44 → 44 | - | 0 → 0 |
+| read_along | 6 → 6 | 52 → 52 | - | 0 → 0 |
+| verse_corner | 7 → 7 | 42 → 69 | 6 | 0 → 0 |
+| word_journey | 4 → 5 | 36 → 64 | 8 | 10 → 0 |
+| riddles | - → 2 | - → 28 | 8 | - → 0 |
+| one_and_many | - → 1 | - → 16 | 8 | - → 0 |
+| opposites | - → 2 | - → 16 | 6 | - → 0 |
+
+Whole pack: 108 of 458 items had a prompt that is heard more than twice (two
+fixed instructions, "Read this word. Which is its picture?" 74 times and
+"Read this word. Which basket does it go in?" 34 times); now 0 of 735.
+
+What was done, and what that number hides:
+
+- **A new form in the reading rounds.** Alefba Garden's even rounds had one
+  form: read a word, pick its picture. They now also have 48 clue questions:
+  the picture is shown, a clue is spoken that does not say the word ("Mother
+  bakes this in the oven. Which is its name?"), and the child reads four
+  look-alike words (نان، نمک، بام، مار). Reading is still the exercise.
+- **The fixed instruction is worded differently each time.** Where the word
+  must not be said (read a word and pick the picture; read a word and choose
+  the basket) the voice can only give an instruction. It is now put together
+  from nine openings and nine endings ("Read it syllable by syllable. Find
+  its picture."), so that no two are the same. **This is a change of wording
+  only**; the task in those items is the same as before. If the review finds
+  the many wordings confusing, one sentence per round is the alternative.
+- **Pools.** Five games are pools (`"draw"`): 12 to 14 items a round, eight
+  asked each play (pairs: six of ten). Word Weaver got six more words a round
+  only in the letter rounds 1 to 4; its syllable rounds 5 to 10 still have
+  six items, because every new syllable break and vowel mark is a risk until
+  a Dari reader has seen the first ones.
+- **Three new games**: Riddles (`h`; who does what, and what is it; a spoken
+  question, four written look-alike answers; 28), One and Many (`i`; the
+  picture shows one thing or several, the child picks the word with or
+  without ها; 16) and Opposites (`j`; pairs of written words; 16). Word
+  Journey has a new round 05 on opposites (14).
+- **About 25 new words**: بد، نو، کهنه، بالا، پایین، سیاه، سفید، پاک، چتل، دور،
+  نزدیک، پر، خالی، تر، خشک، کم، زیاد، باز، بسته، غمگین، گرفت, the plural
+  ending ها on sixteen nouns, and مادرکلان and پدرکلان now have a question each.
+  No new pictures.
+
+For the reviewer (version 2):
+
+1. The clue sentences (Alefba Garden even rounds) and the riddles: natural,
+   and is each answer the only one? Doubtful: «این حیوان مرغ را می‌برد» (fox),
+   «با آن نان را می‌جویم» (tooth), «او بچه نیست» (girl), «از روی آن به آن سوی
+   دریا می‌رویم» (bridge), «پدرِ پدر من کیست؟».
+2. Opposites: خوش / غمگین (the English packs use غمگین for sad), داد / گرفت,
+   کم / زیاد, تر / خشک, باز / بسته. Is «چتل» wanted beside «پاک»?
+3. One and Many writes the plural with a half-space (سیب‌ها). People and
+   animals also take ها here (دخترها، بچه‌ها، مرغ‌ها); «ان» is not taught.
+4. New rhyme pairs: دست / ماست، چای / پای، گفت / رفت، دید / کلید، خاله /
+   پیاله، دندان / آسمان، نمک / زردک. Do they rhyme in your Dari?
+5. New syllable counts in Word Baskets 5 to 7: پل، بام، گاو، خر، مار one; قلم،
+   بچه، انار، زردک، انگور، گوسفند، قالین، خروس two; کتابچه، دروازه three.
+6. The voice: «پُر» is written with a mark in the spoken text, like «خُرد».
+   The plural pairs and the opposites are spoken as "word, word".
+
+Checked for version 2: `validate --only fa-3` ok, 0 warnings, 0 untranslated
+lines (469 English lines added to `i18n/dari3.csv`, generated together with
+the Dari); silent build ok; `tests/fuzz_rounds.lua` on the scratch build ends
+"fuzz ok"; screenshots of the three new games, a clue round and the
+opposites round looked at. Not checked: audio, a real handheld, children.
+
 ## What it teaches
 
 Curriculum, level 3: join letters into syllables and words, read 150 common

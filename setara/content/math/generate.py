@@ -1406,6 +1406,15 @@ BLANK = "_"
 GAP = "جای خالی"
 
 
+SHOW_UNITS = 8   # what a card shows at 24 px or more: eight digits or signs (a space counts as half)
+
+
+def units(thing: str) -> float:
+    """The width of a written thing, in digits."""
+    body = thing[2:] if thing[:2] in ("t:", "f:") else ""
+    return sum(0.5 if c == " " else 1 for c in body)
+
+
 def spoken_row(seq, gap: int) -> tuple[str, str]:
     return ("، ".join(GAP if i == gap else fa(x) for i, x in enumerate(seq)),
             ", ".join("blank" if i == gap else str(x) for i, x in enumerate(seq)))
@@ -1415,8 +1424,21 @@ def row_item(s, rnd, intro, start, step, count, gap, rng, lo, hi, script="W"):
     """A run of numbers with one missing (3 4 _ 6), or the next one asked (2 4 6 _)."""
     seq = [start + i * step for i in range(count)]
     assert 1 <= gap < count and all(lo <= x <= hi for x in seq), seq
+
+    def written(numbers, at):
+        return "t:" + " ".join(BLANK if i == at else str(x) for i, x in enumerate(numbers))
+
+    # The card holds about eight digits at a readable size: a longer row loses
+    # its far end (never the number before the gap), and a row that is still
+    # too long is only spoken.
+    while units(written(seq, gap)) > SHOW_UNITS and len(seq) > 3:
+        if gap == len(seq) - 1 or (gap >= 2 and len(seq) - 1 - gap < gap):
+            seq, gap = seq[1:], gap - 1
+        else:
+            seq = seq[:-1]
+    count = len(seq)
     ans, prev = seq[gap], seq[gap - 1]
-    shown = "t:" + " ".join(BLANK if i == gap else str(x) for i, x in enumerate(seq))
+    shown = written(seq, gap) if units(written(seq, gap)) <= SHOW_UNITS else ""
     last = gap == count - 1
     if last:
         say = tr("، ".join(fa(x) for x in seq[:-1]) + f". بعد کدام عدد می{Z}آید؟", ", ".join(str(x) for x in seq[:-1]) + ". Which number comes next?")
@@ -1488,6 +1510,8 @@ def addend_item(s, rnd, intro, a, total, rng, hi, first=False, op="+"):
     b = total - a if op == "+" else total // a
     assert b >= 0 and (op == "+" or a * b == total)
     shown = f"t:{BLANK}{sign}{a}={total}" if first else f"t:{a}{sign}{BLANK}={total}"
+    if units(shown) > SHOW_UNITS:
+        shown = ""   # too long for the card: the sum is only spoken
     word, en = OP_WORD[op], OP_EN[op]
     if first:
         say = tr(f"چند {word} {fa(a)}، {fa(total)} می{Z}شود؟", f"What {en} {a} makes {total}?")
@@ -1565,13 +1589,17 @@ def same_sum_round(s, level, game, rnd, cands, n=16, hi=None):
     by_value: dict = {}
     for a, op, b in cands:
         by_value.setdefault(calc4(a, op, b), []).append((a, op, b))
-    values = sorted(v for v, g in by_value.items() if len(g) >= 2)
+    values = sorted(v for v, g in by_value.items() if len({(t[1], *sorted((t[0], t[2]))) for t in g}) >= 2)
     assert len(values) * CAP >= n, (rnd, len(values))
 
     def gen(rng):
         for v in even(0, len(values) - 1, n, rng):
             v = values[v]
-            (a, op, b), (c, op2, d) = rng.sample(by_value[v], 2)
+            (a, op, b) = rng.choice(by_value[v])
+            twins = [t for t in by_value[v] if (t[1], *sorted((t[0], t[2]))) != (op, *sorted((a, b)))]   # not 3×7 for 7×3
+            if not twins:
+                raise Retry("only the same sum turned round")
+            (c, op2, d) = rng.choice(twins)
             others = [t for u in values if u != v and abs(u - v) <= max(3, v // 4) for t in by_value[u]]
             if len({calc4(*t) for t in others}) < 3:
                 others = [t for u in values if u != v for t in by_value[u]]
@@ -3137,7 +3165,7 @@ def market45(level: int) -> Sheet:
         def big_change(rng):
             deals = [(k, p, 1000) for k in (2, 3, 4, 5, 6) for p in range(60, 301, 10) if 300 <= k * p < 1000]
             for j, (k, p, given) in enumerate(pick_even(deals, N, rng, key=lambda c: c[2] - c[0] * c[1], cap=1)):
-                change_row("06", j, k, p, given, COUNTABLE[j % len(COUNTABLE)], [10, 20, 50, 100, 500])
+                change_row("06", j, k, p, given, several[j % 4], [10, 20, 50, 100, 500])   # blankets, hens, sacks: things of this price
         B("06", big_change)
     return s
 
@@ -3589,13 +3617,13 @@ def pairs45(level: int) -> Sheet:
         by_value: dict = {}
         for a, op, b in cands:
             by_value.setdefault(calc(a, op, b), []).append((a, op, b))
-        values = [v for v in sorted(by_value) if len({tuple(sorted((a, b))) for a, _, b in by_value[v]}) >= 2 or len(by_value[v]) >= 2]
+        values = [v for v in sorted(by_value) if len({tuple(sorted((a, b))) for a, _, b in by_value[v]}) >= 2]
 
         def gen(rng):
             for v in pick_even(values, n, rng, cap=1):
                 group = rng.sample(by_value[v], len(by_value[v]))
                 first = group[0]
-                rest = [t for t in group[1:] if tuple(sorted((t[0], t[2]))) != tuple(sorted((first[0], first[2])))] or group[1:]
+                rest = [t for t in group[1:] if tuple(sorted((t[0], t[2]))) != tuple(sorted((first[0], first[2])))]
                 second = rest[0]
                 (d1, e1), (d2, e2) = say_sum(*first), say_sum(*second)
                 pair(rnd, I_PAIR_SAME_SUM, sum_text(*first), sum_text(*second),
@@ -4244,13 +4272,14 @@ def riddles(level: int) -> Sheet:
             return {"+": a + b == c, "-": a - b == c, "*": a * b == c, "/": b and a == b * c}[op]
 
         def gen(rng):
-            good = [(a, op, b) for a, op, b in facts if sum(fits(a, o, b, calc4(a, op, b)) for o in "+-*/") == 1]
+            good = [(a, op, b) for a, op, b in facts if sum(fits(a, o, b, calc4(a, op, b)) for o in "+-*/") == 1
+                    and units(f"t:{a}{BLANK}{b}={calc4(a, op, b)}") <= SHOW_UNITS]
             for op in "+-*/":
                 for a, _, b in rng.sample([t for t in good if t[1] == op], n // 4):
                     c = calc4(a, op, b)
                     d, e = names[op]
                     lp(s, rnd, I_SIGN, tr(f"{fa(a)}، جای خالی، {fa(b)}، مساوی {fa(c)}. کدام نشان درست است؟", f"{a}, blank, {b}, equals {c}. Which sign is right?"),
-                       shown[op], [shown[o] for o in "+-*/" if o != op], show=f"t:{a} {BLANK} {b} = {c}",
+                       shown[op], [shown[o] for o in "+-*/" if o != op], show=f"t:{a}{BLANK}{b}={c}",
                        help_fa=tr(f"{fa(a)} {d} {fa(b)} مساوی {fa(c)}. نشان {d} درست است.", f"{a} {e} {b} equals {c}. The {e} sign is right."),
                        truth=lambda ch, a=a, b=b, c=c: fits(a, {v: k for k, v in shown.items()}[ch], b, c))
         B(rnd, gen, few=4)
@@ -4383,7 +4412,7 @@ def riddles(level: int) -> Sheet:
         B("03", equal_value)
         biggest_round("04", [(a, "*", b) for a in (10, 20, 30, 40, 50, 12, 15, 25) for b in range(2, 10)] + [(a, "+", b) for a in range(100, 400, 50) for b in range(50, 300, 50)])
         facts = [(a, "*", b) for a in range(11, 30) for b in range(2, 10)] + [(a * b, "/", b) for a in range(11, 30) for b in range(2, 10)] + \
-                [(a, "+", b) for a in range(120, 900, 20) for b in range(15, 99, 7)] + [(a, "-", b) for a in range(200, 900, 20) for b in range(15, 99, 7)]
+                [(a, "+", b) for a in range(25, 90) for b in range(15, 60) if a + b < 100] + [(a, "-", b) for a in range(50, 100) for b in range(15, 46)]
         sign_round("05", facts)
     return s
 
@@ -4456,7 +4485,7 @@ def truefalse(level: int) -> Sheet:
                      [(a * b, "/", b) for a in range(11, 30) for b in range(2, 8)])
 
         def frac_sums(rng):
-            sums = [(a, b, n) for n in range(5, 11) for a in range(1, n) for b in range(1, n) if a < b and a + b < n]
+            sums = [(a, b, n) for n in range(5, 10) for a in range(1, n) for b in range(1, n) if a < b and a + b < n]   # one-digit denominators fit the card
             for i, (a, b, n) in enumerate(rng.sample(sums, 16)):
                 true = i % 2 == 0
                 top, bottom = (a + b, n) if true else rng.choice([(a + b, 2 * n), (a + b + 1, n), (a + b - 1, n)])
@@ -4826,11 +4855,14 @@ def check_answers45() -> None:
 # It reads only the finished rows, as the builder will, and knows nothing of
 # how they were made.
 
-MAX_CHARS = {"choice": 9, "show": 23, "tile": 8, "thing": 15, "card": 9, "catch": 4}   # Latin text that still reads on its card
+# Latin text that is still drawn at 24 px or more on its card, in digits
+# (measured on screenshots: a choice or question card holds eight, the wide
+# sorter card twelve; the round card of Number Rain three digits or "1.25").
+MAX_CHARS = {"choice": SHOW_UNITS, "show": SHOW_UNITS, "tile": 8, "thing": 12, "card": 8, "catch": 4}
 
 
-def chars(thing: str) -> int:
-    return len(thing) - 2 if thing[:2] in ("t:", "f:") else 0
+def chars(thing: str) -> float:
+    return units(thing) if thing[:2] == "t:" else len(thing) - 2 if thing[:2] == "f:" and not DARI_LETTER.search(thing) else 0
 
 
 def self_check(packs: dict) -> tuple[list[str], list[tuple]]:

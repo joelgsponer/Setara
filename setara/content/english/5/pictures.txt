@@ -1,0 +1,43 @@
+# NEW pictures drawn for English level 5 (everything else reuses the shared library in content/pictures/). Format: name: what was drawn.
+# Style (docs/authoring.md): thick dark outline, flat colours, no text, no digits, readable at 3 cm.
+# People: rural Afghan, modest everyday dress; girls and women with a headscarf, boys and men with a cap. A local reviewer approves every picture of a person.
+
+# Unit 01 feelings
+sick: a girl in bed under a blue blanket, eyes closed, sad mouth, red cheeks, a white cloth on her forehead
+hungry: a boy with a sad face behind a big empty bowl, grey "rumbling" lines at his sides
+thirsty: a girl with her tongue out under a hot sun, an empty tilted cup and one last drop
+hot: a boy with red cheeks and open mouth under a big sun, three drops of sweat
+cold: a girl with crossed arms, a wavy mouth, snowflakes and shiver lines around her
+
+# Units 02 and 03 body and illness
+back: a figure seen from behind, a yellow frame on the back
+shoulder: a boy from the front, one shoulder marked with a yellow line and arrow
+neck: a boy with a long neck framed in yellow, a yellow arrow pointing at it
+throat: the same boy with his mouth wide open, a red spot on the front of the neck and red pain marks
+headache: a girl holding her head with both hands, eyes squeezed shut, red marks above
+toothache: a girl with a hand on her cheek, red pain marks, a small white tooth above
+stomach_ache: a boy holding his belly with both hands, red pain marks left and right
+earache: a boy with one ear drawn large, red waves coming from it
+
+# Units 04 and 05 the clinic
+doctor: a woman in a white coat with a headscarf and a stethoscope
+nurse: a man in a light blue tunic holding a roll of bandage
+bandage: a roll of white bandage with a loose end
+thermometer: a glass thermometer lying diagonally, red bulb and red line, tick marks only
+open_mouth: a boy with his mouth wide open
+lie_down: a girl lying awake on a mattress, a red arrow pointing down
+wait: a boy sitting behind a bench, a clock (ticks only) above him
+
+# Unit 08 to 12
+fall: a boy tumbling over a stone, red motion marks
+road: a wide grey road with a broken white middle line running to the horizon, green on both sides
+near: a girl standing right beside a house
+far: the same girl in front, a winding path and a very small house on a far hill
+pos_between: a red ball between two wooden boxes (same style as pos_behind, pos_in_front)
+turn_left: a thick blue arrow that goes up and bends to the left
+turn_right: the same arrow bending to the right
+stop: a raised open hand inside a red ring
+cloudy: a white and a grey cloud, no rain
+storm: a dark cloud with a yellow lightning bolt and slanting rain
+walk: a girl walking, seen from the front, legs apart, motion lines
+rest: a girl sitting with closed eyes against a tree

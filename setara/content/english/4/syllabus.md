@@ -318,3 +318,72 @@ Phrases and sentences:
 - m: Here is your change. // f: Thank you. Goodbye! = این باقی پول شما است. تشکر. خداحافظ!
 
 Review: bazaar, scales, peach, lamp, scissors, juice
+
+## Version 2: what changed in the word bank
+
+The unit sections above describe version 1. Version 2 added three units (06b, 07b, 19b), added words to units 01 (butcher's), 09 (plastic bag), 14 (oven, ice cream), 15 (thread, sewing machine), 16 (nail, saw) and 19 (lorry), replaced review rows that repeated a word of this level, and turned the review rows of units 10 and 20 into sentences. The units below are listed from `items.csv` as it is now.
+
+### 06b Dried fruit and more
+
+- plum = آلو (picture)
+- fig = انجیر (picture)
+- turnip = شلغم (picture)
+- radish = ملی (picture)
+- raisins = کشمش (picture)
+- pistachios = پسته (picture)
+- These plums are sour. = این آلوها ترش است.
+- I want some raisins and some pistachios. = من کمی کشمش و کمی پسته می‌خواهم.
+- Radishes and turnips are vegetables. = ملی و شلغم ترکاری است.
+- f: Are the figs sweet? // m: Yes, they are very sweet. = انجیرها شیرین است؟ بلی، بسیار شیرین است.
+
+### 07b Long and short, heavy and light
+
+- long = دراز (picture)
+- short = کوتاه (picture)
+- light = سبک (picture)
+- half = نیم (picture)
+- I want the long rope. = من ریسمان دراز را می‌خواهم.
+- This rope is too short. = این ریسمان بسیار کوتاه است.
+- The basket is light. The sack is heavy. = سبد سبک است. بوجی سنگین است.
+- Half a watermelon, please. = لطفاً نیم تربوز.
+- m: Do you want the long rope or the short rope? // f: The long rope, please. = ریسمان دراز را می‌خواهید یا کوتاه را؟ لطفاً ریسمان دراز را.
+
+### 17 Excuse me! (now with left, right, straight on)
+
+- Excuse me. = ببخشید.
+- You're welcome. = قابل تشکر نیست.
+- left = چپ (picture)
+- right = راست (picture)
+- straight on = مستقیم (picture)
+- bridge = پل (picture)
+- clinic = کلینیک (picture)
+- f: Excuse me, where is the clinic? // m: Go straight on. Then turn left. = ببخشید، کلینیک کجاست؟ مستقیم بروید. بعد به طرف چپ بگردید.
+- f: Excuse me, where is the bakery? // m: It is next to the tailor. = ببخشید، نانوایی کجاست؟ پهلوی خیاط است.
+- m: Excuse me, where can I buy candles? // f: At that shop, over there. = ببخشید، شمع را از کجا خریده می‌توانم؟ از آن دکان، آنجا.
+- f: Thank you very much. // m: You're welcome. = بسیار تشکر. قابل تشکر نیست.
+- m: Anything else? // f: No, thank you. That's all. = چیز دیگر؟ نه، تشکر. همین قدر بس است.
+
+### 18 Too expensive! (new things to bargain for)
+
+- scarf = چادر (picture)
+- teapot = چاینک (picture)
+- tray = پتنوس (picture)
+- blanket = کمپل (picture)
+- watch = ساعت دستی (picture)
+- mirror = آیینه (picture)
+- It is too expensive. = بسیار گران است.
+- Can you make it cheaper? = ارزانتر کرده می‌توانید؟
+- How much is it all together? = جمله چند می‌شود؟
+- f: How much is the scarf? // m: It is three hundred afghani. // f: That is too expensive. = چادر چند است؟ سه‌صد افغانی است. بسیار گران است.
+- m: Can you make it cheaper? // f: All right. Two hundred and fifty afghani. = ارزانتر کرده می‌توانید؟ خوب است. دوصد و پنجاه افغانی.
+
+### 19b The shop is open
+
+- open = باز (picture)
+- closed = بسته (picture)
+- list = لست (picture)
+- seeds = دانه (picture)
+- sand = ریگ (picture)
+- I have a list. I need salt, oil and tea. = من یک لست دارم. من به نمک، روغن و چای ضرورت دارم.
+- I want to buy seeds for my field. = من می‌خواهم برای کشتزارم دانه بخرم.
+- f: Are you open? // m: Sorry, we are closed. Come back at eight o'clock. = باز هستید؟ ببخشید، بسته هستیم. ساعت هشت دوباره بیایید.

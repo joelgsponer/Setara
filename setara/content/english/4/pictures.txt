@@ -71,3 +71,22 @@ scene_roya_navid: Roya and Navid in front of the row of stalls; Roya holds a not
 scene_scarf_shop: a stall with a red scarf and a blue scarf hanging on a rail; the shopkeeper behind the counter; Roya and Navid in front
 scene_roya_pays: the same stall; only the blue scarf hangs; the folded red scarf lies on the counter under the shopkeeper's hand; Roya holds out two notes
 scene_grandmother_scarf: at home; the grandmother sits on a cushion with the red scarf round her shoulders and laughs; Roya and Navid on either side
+
+# Version 2 (17 new pictures; `feather` and `iron_nail` were drawn by another writer and are reused)
+shop_open: a shop front with a red and white awning; the shutter is up, a counter with fruit shows
+shop_closed: the same shop front; the grey shutter is down, with a yellow padlock
+butcher: a butcher's stall without a person: a beam with three pieces of meat on hooks, a counter with a knife
+teapot: a round blue teapot with a white band, a cream lid with a red knob, spout to the left
+tray: an oval metal tray with two glasses of tea
+plum: a purple plum with a stalk and a green leaf
+fig: a purple fig and a cut half that shows the red inside with seeds
+turnip: a white turnip with a purple top and green leaves
+radish: a red radish with a thin root and two leaves
+raisins: a blue bowl heaped with dark purple raisins
+pistachios: three pistachios, the cream shells open, the green nut showing
+oven: a clay bread oven (tandoor) with a flame at the mouth and a round bread beside it
+ice_cream: a pink scoop with a red cherry on a cone
+thread: a spool of red thread with a loose end
+sewing_machine: a black hand sewing machine on a wooden base, a strip of purple cloth under the needle
+saw: a hand saw with a wooden handle and a toothed grey blade
+list: a sheet of paper with four lines, two ticked in green, one empty box; no letters

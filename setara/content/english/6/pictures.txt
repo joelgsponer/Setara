@@ -1,0 +1,37 @@
+# NEW pictures drawn for English level 6 (everything else reuses the shared library in content/pictures/). Format: name: what was drawn.
+# Style (docs/authoring.md): thick dark outline, flat colours, no text, no digits, readable at 3 cm.
+# People: rural Afghan, modest everyday dress; girls and women with a headscarf, boys and men with a cap. A local reviewer approves every picture of a person.
+
+# Units 01 to 03 jobs and tools
+farmer: a bearded man with a cap holding a bunch of yellow wheat
+shepherd: a boy with a long crook, a white sheep with a dark head beside him
+baker: a woman holding two big flat breads, steam above
+driver: a bearded man behind a steering wheel, in a window frame
+builder: a bearded man with a trowel beside a half-built brick wall
+carpenter: a bearded man sawing a plank
+weaver: a woman at an upright loom with a red carpet growing at the bottom
+mechanic: a man with a spanner beside a wheel
+engineer: a woman with a yellow helmet over her headscarf, holding a plan with a bridge drawn on it
+tractor: a red tractor with a big back wheel and a small front wheel
+
+# Unit 07 travel
+bus: a blue bus from the side with four windows and a yellow stripe
+car: a small green car from the side
+bicycle: a red bicycle from the side
+motorbike: a red motorbike from the side with a yellow lamp
+boat: a wooden sailing boat on blue waves
+ticket: a yellow ticket with cut-out ends, a dotted tear line and lines instead of writing
+
+# Units 08 to 11
+city: four tall buildings of different heights with many windows
+rabbit: a sand-coloured rabbit with long ears, sitting, seen from the side
+tortoise: a tortoise with a green patterned shell, seen from the side
+strong: a boy holding a big grey rock above his head, smiling
+weak: the same boy unable to lift the rock from the ground, sweating
+new_shoe: a brown laced shoe with yellow sparkles (same shape as shoe)
+old_shoe: the same shoe grey and worn, a patch, the sole coming off, toes showing through a hole
+
+# Unit 17 messages
+phone: a simple mobile phone with keys, blue signal waves
+calendar: a wall calendar with a red top, rings and a grid of days, one day marked red (no digits)
+present: a blue box tied with a yellow ribbon and bow

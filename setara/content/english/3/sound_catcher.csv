@@ -26,7 +26,7 @@ round,intro_fa,say_en,say_fa,targets,others,need,help_fa
 05,,Catch the word cup.,این کلمه را بگیر.,t:cup,t:cap|t:cut|t:pup|t:cop,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «پیاله» است.
 05,,Catch the word net.,این کلمه را بگیر.,t:net,t:not|t:nut|t:pet|t:ten,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «جال» است.
 05,,Catch the word pin.,این کلمه را بگیر.,t:pin,t:pan|t:pen|t:bin|t:pit,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «سنجاق» است.
-05,,Catch the word bug.,این کلمه را بگیر.,t:bug,t:bag|t:big|t:rug|t:bud,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «خزنده» است.
+05,,Catch the word bug.,این کلمه را بگیر.,t:bug,t:bag|t:big|t:rug|t:bud,4,هر سه حرف را ببین. کلمه‌ای را بگیر که معنایش «حشره» است.
 # 06: word families. Words that end with the same two letters.
 06,گوش کن. کلمه‌هایی را بگیر که آخرشان مثل کلمه‌ای است که می‌شنوی.,Catch the words that end like cat.,کلمه‌هایی را بگیر که آخرشان مثل این کلمه است.,t:hat|t:bat|t:mat,t:hen|t:bag|t:pot|t:man,4,دو حرف آخر را ببین. آخر کلمه باید مثل آخر کلمه‌ای باشد که می‌شنوی.
 06,,Catch the words that end like pen.,کلمه‌هایی را بگیر که آخرشان مثل این کلمه است.,t:hen|t:ten|t:men,t:pet|t:pin|t:bed|t:hat,4,دو حرف آخر را ببین. آخر کلمه باید مثل آخر کلمه‌ای باشد که می‌شنوی.

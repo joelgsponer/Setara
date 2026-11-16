@@ -53,3 +53,16 @@ scene_mina_sleeps: night; the moon in the window; Mina asleep on her mattress, h
 scene_shoe_morning: Mina, dressed for school, holds one shoe up in her hand and looks surprised; one foot has a shoe, the other only a sock; the wall clock shows seven o'clock
 scene_shoe_room: the room: on the left the bed with a yellow pillow on it; in the middle an open box with the red ball in it; on the right a table with the cat sitting under it and the missing shoe next to the cat
 scene_shoe_found: Mina has both shoes on and throws her arms up, laughing; the cat sits beside her
+
+# Version 2 (11 new pictures; `wind` was drawn by another writer and is reused)
+pos_behind: the red ball of the pos_ series half hidden behind the closed box
+pos_in_front: the same box, the ball in front of it and overlapping it
+map: a folded paper map with a blue river, green hills, a red house and a red cross; no letters
+pan: a dark frying pan seen from above with a fried egg, the handle to the upper right
+log: a short brown log lying on its side, the cut end with rings to the right
+fan: a yellow hand fan with a red band and a wooden handle
+net: a hand net: a blue ring, a cream mesh bag, a wooden handle
+web: a spider web with a small black spider
+pin: a pin with a round red head
+lid: a grey dome lid with a brown knob
+bug: a ladybird seen from above: red with black dots, black head, six legs

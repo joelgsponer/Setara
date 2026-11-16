@@ -15,7 +15,7 @@ New words:
 - wash = شستن
 - brush my teeth = دندان‌هایم را برس می‌کنم
 - face = روی
-- towel = دستمال
+- towel = روی‌پاک (version 2; was دستمال)
 - teeth = دندان‌ها
 
 Phrases and sentences:
@@ -313,3 +313,95 @@ Phrases and sentences:
 - f: Where is your brother? // m: He is in the kitchen. = برادرت کجاست؟ او در آشپزخانه است.
 
 Review: kite, shirt, lamp, cook, room
+
+## Version 2: what changed in the word bank
+
+The unit sections above describe version 1. Version 2 added four units (01b, 12b, 12c, 16b), replaced the review rows of units 04, 05, 07, 08 and 14 by new words (wheel, knife, noon, watch, clinic, run), put new three-letter words into units 18 and 19, and turned the review rows of units 10 and 20 into sentences. Towel is now «روی‌پاک». The units below are listed from `items.csv` as it is now.
+
+### 01b Clean and ready
+
+- toothbrush = برس دندان (picture)
+- toothpaste = کریم دندان (picture)
+- dirty = چتل (picture)
+- wash my hands = دست‌هایم را می‌شویم (picture)
+- comb my hair = مویم را شانه می‌کنم (picture)
+- My hands are dirty. I wash my hands. = دست‌های من چتل است. من دست‌هایم را می‌شویم.
+- I comb my hair. = من مویم را شانه می‌کنم.
+- I put toothpaste on my toothbrush. = من کریم دندان را روی برس دندان می‌مانم.
+- f: Are your hands clean? // m: No, they are dirty. // f: Wash your hands, please. = دست‌هایت پاک است؟ نه، چتل است. لطفاً دست‌هایت را بشوی.
+
+### 12b Rain and snow
+
+- rain = باران (picture)
+- snow = برف (picture)
+- ice = یخ (picture)
+- wind = باد (picture)
+- It is hot today. = امروز هوا گرم است.
+- It rains. I take my umbrella. = باران می‌بارد. من چتری‌ام را می‌گیرم.
+- It snows. I wear my coat and my hat. = برف می‌بارد. من بالاپوش و کلاهم را می‌پوشم.
+- The wind is cold. = باد سرد است.
+- f: Is it cold today? // m: Yes, it is. Look! Snow! = امروز هوا سرد است؟ بلی، سرد است. ببین! برف!
+
+### 12c The four seasons
+
+- spring = بهار (picture)
+- summer = تابستان (picture)
+- autumn = خزان (picture)
+- winter = زمستان (picture)
+- season = فصل
+- In winter I wear a warm coat. = در زمستان من بالاپوش گرم می‌پوشم.
+- In summer I wear sandals. = در تابستان من چپلک می‌پوشم.
+- In spring it rains. = در بهار باران می‌بارد.
+- m: What season is it? // f: It is autumn. The wind is cold. = حالا کدام فصل است؟ خزان است. باد سرد است.
+
+### 16b Around the house
+
+- toilet = تشناب (picture)
+- chimney = دودکش (picture)
+- fence = کتاره (picture)
+- pump = بمبه (picture)
+- We get water from the pump. = ما از بمبه آب می‌گیریم.
+- The toilet is in the yard. = تشناب در حویلی است.
+- Our yard has a fence. = حویلی ما کتاره دارد.
+- f: Where is the toilet, please? // m: It is next to the wall. = لطفاً، تشناب کجاست؟ پهلوی دیوار است.
+
+### 17 Where is it? (now with behind and in front of)
+
+- in = در (picture)
+- on = بالای (picture)
+- under = زیر (picture)
+- next to = پهلوی (picture)
+- behind = پشت (picture)
+- in front of = پیش روی (picture)
+- Where is it? = کجاست؟
+- The ball is in the box. = توپ در صندوق است.
+- The cat is under the table. = پشک زیر میز است.
+- The lamp is next to the bed. = چراغ پهلوی تخت خواب است.
+- f: Where is my shoe? // m: It is under the bed. = بوت من کجاست؟ زیر تخت خواب است.
+- m: Where is the cat? // f: It is on the roof. = پشک کجاست؟ بالای بام است.
+
+### 18 I can read: words with a and o (new words)
+
+- fox = روباه (picture)
+- map = نقشه (picture)
+- pan = تابه (picture)
+- log = کنده چوب (picture)
+- ant = مورچه (picture)
+- fan = پکه (picture)
+- I can read. = من خوانده می‌توانم.
+- A cat and a hat. = یک پشک و یک کلاه.
+- A fox in a box. = یک روباه در صندوق.
+- An ant on a log. = یک مورچه بالای کنده چوب.
+
+### 19 I can read: words with e, i and u (new words)
+
+- jug = کوزه (picture)
+- net = جال (picture)
+- web = تار جولا (picture)
+- pin = سنجاق (picture)
+- lid = سرپوش (picture)
+- bug = حشره (picture)
+- rug = قالینچه (picture)
+- A red hen. = یک مرغ سرخ.
+- Ten pens. = ده قلم.
+- Six big jugs. = شش کوزهٔ کلان.
