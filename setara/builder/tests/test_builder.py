@@ -98,3 +98,14 @@ def test_a_pack_with_errors_is_not_written(tmp_path):
     content = pack(tmp_path, "round,say_en,answer,distractors\n01,,apple,bread\n")
     build(content, tmp_path / "out", tts="silent")
     assert not (tmp_path / "out" / "en-1.zip").exists()
+
+
+def test_brackets_are_mirrored_in_dari():
+    from setara_builder import shaping
+    line = shaping.shape_line("او گفت «کتاب» را (نه) بخوان.")
+    # in drawing order, from the left: the closing mark, the word, the opening mark,
+    # each turned so that it opens towards the word
+    assert line.index("«") < line.index("»")
+    assert line.index("(") < line.index(")")
+    # between Latin letters nothing is turned
+    assert "(a cat)" in shaping.shape_line("بگویید hello (a cat) now حالا")

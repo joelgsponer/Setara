@@ -72,14 +72,14 @@ round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 12,,Why is mother worried?,,t:Why|t:is|t:mother|t:worried,t:Because,,Why is mother worried?,,چرا مادر پریشان است؟
 12,,He is angry because his kite is lost.,,t:He|t:is|t:angry|t:because|t:his|t:kite|t:is|t:lost,,,He is angry because his kite is lost.,,او قهر است چون کاغذپرانش گم شده است.
 12,,I am calm because you are here.,,t:I|t:am|t:calm|t:because|t:you|t:are|t:here,t:why,,I am calm because you are here.,,من آرام هستم چون تو اینجا هستی.
-13,جمله‌های دراز با because: اول کار یا آرزو، بعد دلیل. حصه‌های جمله روی کارت‌ها است. آنها را به ترتیب بگذار.,I want to be a doctor because I want to help sick people.,,t:I want to be|t:a doctor|t:because|t:I want to help|t:sick people,t:but,,I want to be a doctor because I want to help sick people.,,من می‌خواهم داکتر شوم چون می‌خواهم به مردم مریض کمک کنم.
-13,,I am going to take an umbrella because it is going to rain.,,t:I am going to take|t:an umbrella|t:because|t:it is going to rain,t:why,,I am going to take an umbrella because it is going to rain.,,من چتری می‌گیرم چون باران خواهد بارید.
-13,,We are going to go by bus because it is far.,,t:We are going to go|t:by bus|t:because|t:it is|t:far,t:near,,We are going to go by bus because it is far.,,ما با بس می‌رویم چون دور است.
+13,جمله‌های دراز با because: اول کار یا آرزو، بعد دلیل. حصه‌های جمله روی کارت‌ها است. آنها را به ترتیب بگذار.,I want to be a doctor because I like to help.,,t:I want|t:to be|t:a doctor|t:because|t:I like|t:to help,t:but,,I want to be a doctor because I like to help.,,من می‌خواهم داکتر شوم چون کمک کردن را خوش دارم.
+13,,I take an umbrella because it is raining.,,t:I take|t:an umbrella|t:because|t:it is|t:raining,t:why,,I take an umbrella because it is raining.,,من چتری می‌گیرم چون باران می‌بارد.
+13,,We go by bus because it is far.,,t:We go|t:by bus|t:because|t:it is|t:far,t:near,,We go by bus because it is far.,,ما با بس می‌رویم چون دور است.
 13,,I like spring because it is warm.,,t:I|t:like|t:spring|t:because|t:it|t:is|t:warm,t:cold,,I like spring because it is warm.,,من بهار را خوش دارم چون هوا گرم است.
 13,,I am tired because I worked.,,t:I|t:am|t:tired|t:because|t:I|t:worked,t:why,,I am tired because I worked.,,من مانده هستم چون کار کردم.
-13,,He wants to be a farmer because he likes animals.,,t:He wants to be|t:a farmer|t:because|t:he likes|t:animals,t:and,,He wants to be a farmer because he likes animals.,,او می‌خواهد دهقان شود چون حیوان‌ها را خوش دارد.
+13,,He wants to be a farmer because he likes animals.,,t:He wants|t:to be|t:a farmer|t:because|t:he likes|t:animals,t:and,,He wants to be a farmer because he likes animals.,,او می‌خواهد دهقان شود چون حیوان‌ها را خوش دارد.
 13,,She learns English because she wants to read.,,t:She|t:learns|t:English|t:because|t:she|t:wants|t:to|t:read,,,She learns English because she wants to read.,,او انگلیسی یاد می‌گیرد چون می‌خواهد بخواند.
-13,,I am going to sleep because I am tired.,,t:I am going to sleep|t:because|t:I am|t:tired,t:hungry,,I am going to sleep because I am tired.,,من می‌خوابم چون مانده هستم.
+13,,I am going to sleep because I am tired.,,t:I am going|t:to sleep|t:because|t:I am|t:tired,t:hungry,,I am going to sleep because I am tired.,,من می‌خوابم چون مانده هستم.
 13,,We stay at home because it is raining.,,t:We|t:stay|t:at|t:home|t:because|t:it|t:is|t:raining,,,We stay at home because it is raining.,,ما در خانه می‌مانیم چون باران می‌بارد.
 14,دو قسم کار است. در جمله‌ها کلمه‌ها را به ترتیب بگذار. در قصه‌های کوتاه تصویرها را به ترتیب قصه بگذار: One day، Then، Suddenly، Finally.,One day a fox saw a crow.,,t:One|t:day|t:a|t:fox|t:saw|t:a|t:crow,t:Finally,,One day a fox saw a crow.,,یک روز یک روباه یک زاغ را دید.
 14,,Suddenly it started to rain.,,t:Suddenly|t:it|t:started|t:to|t:rain,t:Slowly,,Suddenly it started to rain.,,ناگهان باران شروع شد.
@@ -100,23 +100,23 @@ round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 15,,He asked the way to the clinic.,,t:He|t:asked|t:the|t:way|t:to|t:the|t:clinic,t:ask,,He asked the way to the clinic.,,او راه کلینیک را پرسید.
 15,,I asked my mother.,,t:I|t:asked|t:my|t:mother,t:said,,I asked my mother.,,من از مادرم پرسیدم.
 17,حالا خودت یک پیام می‌نویسی، با کارت‌ها. پیام سه حصه دارد: اول Dear و نام، بعد گپ اصلی، در آخر From و نام. کارت‌ها را به ترتیب بگذار.,"Dear Sara, How are you? I am fine. From Mina.",,"t:Dear Sara,|t:How are you?|t:I am fine.|t:From Mina",t:Goodbye,,"Dear Sara, How are you? I am fine. From Mina.",,سارای عزیز، چطور هستی؟ من خوب هستم. از طرف مینا.
-17,,"Dear Omar, I am going to come on Friday. See you soon. From Ali.",,"t:Dear Omar,|t:I am going to come|t:on Friday.|t:See you soon.|t:From Ali","t:Dear Ali,",,"Dear Omar, I am going to come on Friday. See you soon. From Ali.",,عمر عزیز، من روز جمعه می‌آیم. به امید دیدار. از طرف علی.
+17,,"Dear Omar, I am going to come on Friday. From Ali.",,"t:Dear Omar,|t:I am going|t:to come|t:on Friday.|t:From Ali","t:Dear Ali,",,"Dear Omar, I am going to come on Friday. From Ali.",,عمر عزیز، من روز جمعه می‌آیم. از طرف علی.
 17,,"Dear mother, I am in Kabul. I am fine. From Farid.",,"t:Dear mother,|t:I am in Kabul.|t:I am fine.|t:From Farid",t:From mother,,"Dear mother, I am in Kabul. I am fine. From Farid.",,مادر عزیز، من در کابل هستم. من خوب هستم. از طرف فرید.
 17,,"Dear Laila, Thank you for the letter. From Roya.",,"t:Dear Laila,|t:Thank you|t:for the letter.|t:From Roya","t:Dear Roya,",,"Dear Laila, Thank you for the letter. From Roya.",,لیلای عزیز، تشکر از خط تو. از طرف رویا.
 17,,How are you?,,t:How|t:are|t:you,t:is,,How are you?,,چطور هستی؟
 17,,See you soon.,,t:See|t:you|t:soon,t:son,,See you soon.,,به امید دیدار.
 17,,I am going to write a letter.,,t:I|t:am|t:going|t:to|t:write|t:a|t:letter,t:read,,I am going to write a letter.,,من یک خط می‌نویسم.
 17,,The letter is from my uncle.,,t:The|t:letter|t:is|t:from|t:my|t:uncle,t:for,,The letter is from my uncle.,,این خط از طرف کاکایم است.
-17,,"Dear uncle, I am going to visit you next week. From Yusuf.",,"t:Dear uncle,|t:I am going to visit you|t:next week.|t:From Yusuf",t:tonight,,"Dear uncle, I am going to visit you next week. From Yusuf.",,کاکای عزیز، هفتهٔ آینده به دیدن شما می‌آیم. از طرف یوسف.
+17,,"Dear uncle, I am going to visit you next week. From Yusuf.",,"t:Dear uncle,|t:I am going|t:to visit you|t:next week.|t:From Yusuf",t:tonight,,"Dear uncle, I am going to visit you next week. From Yusuf.",,کاکای عزیز، هفتهٔ آینده به دیدن شما می‌آیم. از طرف یوسف.
 18,سه قسم پیام را با کارت‌ها بنویس: دعوت، تشکر و معذرت. اول Dear، در آخر From. در معذرت دلیل را با because بگو.,"Dear Shirin, Please come to my house on Friday. From Nargis.",,"t:Dear Shirin,|t:Please come|t:to my house|t:on Friday.|t:From Nargis",t:Thank you,,"Dear Shirin, Please come to my house on Friday. From Nargis.",,شیرین عزیز، لطفاً روز جمعه به خانهٔ ما بیا. از طرف نرگس.
-18,,"Dear aunt, Thank you for the present. From Navid.",,"t:Dear aunt,|t:Thank you|t:for the present.|t:From Navid",t:I am sorry,,"Dear aunt, Thank you for the present. From Navid.",,خالهٔ عزیز، تشکر از تحفه. از طرف نوید.
-18,,"Dear Karim, I am sorry, I can't come because I am sick. From Hamid.",,"t:Dear Karim,|t:I am sorry,|t:I can't come|t:because|t:I am sick.|t:From Hamid",t:Please come,,"Dear Karim, I am sorry, I can't come because I am sick. From Hamid.",,کریم عزیز، ببخش، آمده نمی‌توانم چون مریض هستم. از طرف حمید.
-18,,"Dear Hamid, Get well soon! See you next week. From Karim.",,"t:Dear Hamid,|t:Get well soon!|t:See you|t:next week.|t:From Karim","t:Dear Karim,",,"Dear Hamid, Get well soon! See you next week. From Karim.",,حمید عزیز، زود جور شوی! هفتهٔ آینده می‌بینیم. از طرف کریم.
+18,,"Dear aunt, Thank you for the present. From Navid.",,"t:Dear aunt,|t:Thank you|t:for the|t:present.|t:From Navid",t:I am sorry,,"Dear aunt, Thank you for the present. From Navid.",,خالهٔ عزیز، تشکر از تحفه. از طرف نوید.
+18,,"Dear Karim, I am sorry. I am sick. From Hamid.",,"t:Dear Karim,|t:I am sorry.|t:I am sick.|t:From Hamid",t:Please come,,"Dear Karim, I am sorry. I am sick. From Hamid.",,کریم عزیز، ببخش. من مریض هستم. از طرف حمید.
+18,,"Dear Hamid, Get well soon! See you soon. From Karim.",,"t:Dear Hamid,|t:Get well soon!|t:See you soon.|t:From Karim","t:Dear Karim,",,"Dear Hamid, Get well soon! See you soon. From Karim.",,حمید عزیز، زود جور شوی! به امید دیدار. از طرف کریم.
 18,,Thank you for the present.,,t:Thank|t:you|t:for|t:the|t:present,t:from,,Thank you for the present.,,تشکر از تحفه.
 18,,I am sorry I am late.,,t:I|t:am|t:sorry|t:I|t:am|t:late,t:sad,,I am sorry I am late.,,ببخش که ناوقت آمدم.
 18,,Please come to my house.,,t:Please|t:come|t:to|t:my|t:house,t:go,,Please come to my house.,,لطفاً به خانهٔ ما بیا.
 18,,I can't come because I am sick.,,t:I|t:can't|t:come|t:because|t:I|t:am|t:sick,t:why,,I can't come because I am sick.,,آمده نمی‌توانم چون مریض هستم.
-18,,"Dear teacher, I am sorry I was late. I am going to come early tomorrow. From Zarmina.",,"t:Dear teacher,|t:I am sorry|t:I was late.|t:I am going to come|t:early tomorrow.|t:From Zarmina",t:Thank you,,"Dear teacher, I am sorry I was late. I am going to come early tomorrow. From Zarmina.",,معلم عزیز، ببخشید که ناوقت آمدم. فردا وقت می‌آیم. از طرف زرمینه.
+18,,"Dear teacher, I am sorry. I was late. From Zarmina.",,"t:Dear teacher,|t:I am sorry.|t:I was late.|t:From Zarmina",t:Thank you,,"Dear teacher, I am sorry. I was late. From Zarmina.",,معلم عزیز، ببخشید. من ناوقت آمدم. از طرف زرمینه.
 19,جمله‌هایی از آینده: going to و because با هم. جمله را بساز.,I am going to study.,,t:I|t:am|t:going|t:to|t:study,t:studies,,I am going to study.,,من درس می‌خوانم.
 19,,I am going to help my village.,,t:I|t:am|t:going|t:to|t:help|t:my|t:village,t:helps,,I am going to help my village.,,من به قریهٔ خود کمک می‌کنم.
 19,,We are going to build a new school.,,t:We|t:are|t:going|t:to|t:build|t:a|t:new|t:school,,,We are going to build a new school.,,ما یک مکتب نو می‌سازیم.

@@ -32,12 +32,21 @@ h2 { font-size: 1.3em; margin-top: 2em; color: #2f6f73; page-break-after: avoid;
 .figure, .example { border-color: #f2b705; } .games { border-color: #e07a3f; }
 .fig { display: flex; flex-wrap: wrap; gap: 6px; margin: .4em 0; }
 .fig svg { width: 84px; height: 84px; } .fig.scene svg { width: 260px; height: 195px; }
+.fig.word { font-size: 3em; line-height: 1.4; padding: 0 .3em; border: 2px solid #d8cbb0; border-radius: 10px; display: inline-block; }
 .en { direction: ltr; text-align: left; font: 13px/1.5 system-ui, sans-serif; color: #6b5d4f; margin-top: .3em; }
 @media print { body { margin: 0; } h2 { page-break-before: auto; } }
 """
 
 
 def figure(spec: str) -> str:
+    # written things: a Dari word, a Latin word, one form of a letter
+    if spec.startswith("f:") or spec.startswith("t:"):
+        return f'<div class="fig word">{html.escape(spec[2:])}</div>'
+    if spec.startswith("lf:"):
+        _, letter, form = (spec.split(":") + ["alone"])[:3]
+        join = "\u0640"   # a joining stroke shows the start, middle and end forms
+        shown = {"alone": letter, "start": letter + join, "middle": join + letter + join, "end": join + letter}.get(form, letter)
+        return f'<div class="fig word">{html.escape(shown)}</div>'
     m = re.fullmatch(r"p:([a-z0-9_]+)\*(\d+)", spec)
     name, count = (m.group(1), int(m.group(2))) if m else (spec, 1)
     svg = ROOT / "content" / "pictures" / f"{name}.svg"

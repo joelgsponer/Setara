@@ -58,25 +58,30 @@ Thirteen games, 129 rounds, 1162 rows:
 | l Pairs | pairs | 5 | 9-10, shows 5 | job to picture, big / bigger, a reason and what it calls for |
 | m Read and Decide | story | 20 | | reading texts over two to four pages, what and why |
 
-Reading: 60 to 85 words over two or three pages in every unit, 90 words on
-four pages in unit 20. Every text has at least one "why" question; from
-unit 12 the text itself says "because".
+Reading: 58 to 92 words over two or three pages in every unit, 104 words on
+four pages in unit 20, with four to six questions. Every text has at least
+one "why" question; from unit 12 the text itself says "because". Written
+answers are at most 14 letters long (a card is one line), so some are notes
+("clinic is far", "did not stop"), not sentences.
 
 **"Write a short message"**: the device has no keyboard. The child reads
 messages (units 17, 18, 20), sorts message sentences (Baskets 18), chooses
 what to write (Which One? 18) and builds whole messages from four to six
 phrase tiles in Sentence Train 17 and 18 ("Dear Sara," / "How are you?" /
-"I am fine." / "From Mina"), with one tile that does not belong.
+"I am fine." / "From Mina"), with one tile that does not belong. A tile is
+at most 130 pixels wide, so a phrase on it has at most about 14 letters and
+the messages are short.
 
 ## Repetition (counted by a script over the sheets)
 
-- 894 different spoken questions and prompts: 778 are said once, 116 twice,
+- 896 different spoken questions and prompts: 782 are said once, 114 twice,
   none more than twice.
 - No picture or word is the right answer more than three times in a game,
   except where the form of the game makes it so: Yes or No? (yes 38, no 34)
   and Baskets (the basket is the answer).
 - Every question row has a `help_fa`; every sheet round has its own
-  `intro_fa`, each with an English twin in `content/i18n/english6.csv`.
+  `intro_fa` (105), each with an English twin in
+  `content/i18n/english6.csv` (261 lines).
 
 ## Decisions taken
 
@@ -84,9 +89,7 @@ phrase tiles in Sentence Train 17 and 18 ("Dear Sara," / "How are you?" /
 - **New words: fewer than the target.** The spec asks for about 300. The
   sheets hold about 235 word forms that do not occur in levels 1 to 5 (about
   170 dictionary words). **Open**, as in levels 4 and 5.
-- **Comparatives only.** Superlatives are not taught. "the fastest" occurs
-  twice inside a question (Which One? 10, Yes or No? 15) and should be
-  explained by the teacher or reworded.
+- **Comparatives only.** Superlatives are not taught and not used.
 - **"going to" in Dari.** Dari has no separate near future in everyday
   speech; the meanings are given in the present («فردا به دیدن خاله‌ام
   می‌روم») and "It is going to rain" as «باران خواهد بارید».

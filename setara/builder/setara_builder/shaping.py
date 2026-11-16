@@ -75,12 +75,35 @@ def width(shaped: str, size: int = BODY_SIZE) -> float:
     return total
 
 
+_PAIRS = {"(": ")", ")": "(", "«": "»", "»": "«", "[": "]", "]": "[", "<": ">", ">": "<"}
+
+
+def _mirror(text: str) -> str:
+    """Brackets and quotation marks inside right-to-left text are drawn as
+    their mirror image («کتاب» opens on the right). The bidi library puts them
+    in the right place but does not turn them, so they are swapped here.
+    Brackets that sit between Latin letters on both sides are left alone."""
+    def strong(chars) -> str:
+        for c in chars:
+            if "\u0600" <= c <= "\u06ff" or "\ufb50" <= c <= "\ufeff":
+                return "R"
+            if c.isascii() and c.isalpha():
+                return "L"
+        return "R"   # the line as a whole runs right to left
+    out = []
+    for i, c in enumerate(text):
+        if c in _PAIRS and not (strong(reversed(text[:i])) == "L" and strong(text[i + 1:]) == "L"):
+            c = _PAIRS[c]
+        out.append(c)
+    return "".join(out)
+
+
 def shape_line(text: str) -> str:
     """One logical-order line to one visual-order line. No wrapping."""
     text = " ".join(text.split())
     if not has_arabic(text):
         return text
-    reshaped = _reshaper.reshape(text)
+    reshaped = _reshaper.reshape(_mirror(text))
     visual = get_display(reshaped, base_dir="R")
     return visual.replace(ZWNJ, "")
 

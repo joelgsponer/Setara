@@ -68,22 +68,23 @@ Thirteen games, 132 rounds, 1171 rows:
 | l Pairs | pairs | 7 | 9-12, shows 5 | written word to picture; walk / walked; go / went; opposites |
 | m Read and Decide | story | 20 | | reading pages and what / why questions |
 
-Reading grows through the level: 30 words on one page in unit 01, about 45
-in the middle, two pages from unit 10, three pages (about 85 words) in unit
-20. Written answers start in unit 01 with two or three short words.
+Reading grows through the level: 29 words on one page in unit 01, 40 to 45
+on one page in the middle units, 60 to 75 on two pages in units 10, 13, 16,
+17 and 19, and 92 words on three pages in unit 20. Each text has three to
+six questions, one of them a "why". Written answers start in unit 01 with
+two or three short words.
 
 ## Repetition (counted by a script over the sheets)
 
 - 881 different spoken questions and prompts: 720 are said once, 161 twice,
   none more than twice.
 - No picture or word is the right answer more than three times in a game,
-  with three exceptions that lie in the form of the game: Yes or No? (yes 53,
-  no 44), Baskets (the basket is the answer), and in Question Road "no" (3)
-  and "clinic" (3) after trimming.
+  with two exceptions that lie in the form of the game: Yes or No? (yes 53,
+  no 44) and Baskets (the basket is the answer).
 - Every question row has a `help_fa`; every sheet round has its own
-  `intro_fa` (130 of them, each with an English twin in
-  `content/i18n/english5.csv`). The rounds of Word Stall and Echo use the
-  game's instruction.
+  `intro_fa` (104 of them, each with an English twin in
+  `content/i18n/english5.csv`, 241 lines). The rounds of Word Stall and Echo
+  use the game's instruction.
 
 ## Health content is language practice only
 
@@ -132,9 +133,9 @@ she is told. It adds no medical fact to the health packs:
 - **Clinic staff.** The doctor is a woman, the nurse a man (pictures and
   pronouns). Level 6 mixes further.
 - **"road"** got the Dari «سرک», which level 4 gave to "street".
-- **Written choices** are short because a card is one line. Three long ones
-  in stories ("t:behind the school", "t:to find the goat", "t:He fed the
-  hens") are drawn narrower.
+- **Written choices** are short because a card is one line and about 115
+  pixels wide in a story: at most 14 letters ("hot and tired", "Doctor is
+  kind", "a lot of work"). That makes some answers notes, not sentences.
 - **Names** (Omar, Ali, Hamid, Karim, Jawad, Navid, Yusuf, Farid; Laila,
   Sara, Mina, Roya, Nargis, Shirin, Zarmina) are common first names, not
   people. Girls and boys speak and act equally often; the helper and the
