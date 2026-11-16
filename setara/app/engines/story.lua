@@ -31,6 +31,7 @@ function E.new(round, ctx)
   for _, p in ipairs(self.pages) do if is_decision(p) then self.decisions = self.decisions + 1 end end
   self.i, self.seen = 0, 0
   self.solved = {}      -- pages whose decision is made
+  self.read = {}        -- pages already shown once
   self.wrongs, self.attempts, self.first_right = 0, 0, 0
   self.phase, self.t = "wait", 0
   return self
@@ -97,11 +98,21 @@ function E:show(i)
   self.right = self.decision and right_index(page) or nil
   self.sel = self.solved[i] and self.right or 1
   self.phase, self.t = "page", 0
-  self.ctx.say(page.audio)
+  -- Read first: on a reading page of a "read_first" game the voice waits, so
+  -- that the child tries alone. A page seen before is read at once.
+  self.hold = nil
+  if page.wait and not self.read[i] then
+    self.hold = page.wait
+    audio.stop()
+  else
+    self.ctx.say(page.audio)
+  end
+  self.read[i] = true
 end
 
 function E:again(slow)
   if not self.page or self.phase == "right" then return end
+  self.hold = nil
   if self.phase == "oops" then self.phase = "page" end
   self.t = 0
   self.ctx.say(self.page.audio, { slow = slow })
@@ -165,6 +176,10 @@ function E:input(b)
     if b == "left" then step(self, -1)
     elseif b == "right" then step(self, 1)
     elseif b == "a" then self:choose() end
+  elseif b == "a" and self.hold then
+    self.hold = nil          -- "read it to me now"
+    self.t = 0
+    self.ctx.say(self.page.audio)
   elseif b == "a" then
     if audio.busy() then
       audio.stop()
@@ -181,6 +196,15 @@ end
 
 function E:update(dt)
   self.t = self.t + dt
+  if self.hold then
+    self.hold = self.hold - dt
+    if self.hold <= 0 then
+      self.hold = nil
+      self.t = 0
+      self.ctx.say(self.page.audio)
+    end
+    return
+  end
   if self.phase == "right" and self.t > 0.9 then
     self:show(self.i + 1)
   elseif self.phase == "oops" and not audio.busy() and self.t > 1.5 then

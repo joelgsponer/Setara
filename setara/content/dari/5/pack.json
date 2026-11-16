@@ -7,7 +7,7 @@
  "title_fa": "دری ۵: قصه‌ها",
  "games": [
   {
-   "id": "animal_fables",
+   "id": "animal_fables", "read_first": true,
    "engine": "story",
    "letter": "a",
    "title_en": "Animal Fables",
@@ -18,7 +18,7 @@
    "sheet": "animal_fables.csv"
   },
   {
-   "id": "village_stories",
+   "id": "village_stories", "read_first": true,
    "engine": "story",
    "letter": "b",
    "title_en": "Village Stories",
@@ -28,7 +28,7 @@
    "sheet": "village_stories.csv"
   },
   {
-   "id": "old_tales",
+   "id": "old_tales", "read_first": true,
    "engine": "story",
    "letter": "c",
    "title_en": "Old Tales",

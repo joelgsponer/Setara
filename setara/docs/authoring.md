@@ -255,7 +255,9 @@ round,picture,say_en,say_fa,show_fa,choices,right,wrong_say_fa,wrong_picture
   60 words) or about 330 letters of English; with `choices` on the same row,
   at most 4 lines. The builder refuses a page that would not fit. The page
   is still spoken (`say_fa` or `say_en`, normally the same text). Put a
-  picture row in between now and then. Questions about the text are rows
+  picture row in between now and then. With `"read_first": true` on the game
+  the voice waits on each reading page (about a second and a half a line)
+  so that the child reads alone first; A makes it read at once. Questions about the text are rows
   with `choices`, which may be written words (`f:مرغ`, `t:a hen`).
 
 ## Teacher lessons: content/teacher/<name>/

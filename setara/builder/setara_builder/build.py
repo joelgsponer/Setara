@@ -471,6 +471,10 @@ def parse_sheet(pack: Pack, game: dict, rows: list[dict], sheet: str) -> dict[st
                     pack.report.error(where, f"reading page too long: {len(item['fa'])} lines of Dari, at most {room}")
                 if len(row.get("show_en") or "") > room * 42:
                     pack.report.error(where, f"reading page too long: at most {room * 42} letters of English")
+                if game.get("read_first") and not row.get("choices"):
+                    # the voice waits while the child reads: about a second and a half a line
+                    lines = len(item.get("fa") or []) or max(1, len(row.get("show_en") or "") // 42)
+                    item["wait"] = round(min(14, 2 + 1.5 * lines), 1)
             if row.get("choices"):
                 item["choices"] = pack.things(row["choices"], where)
                 right = pack.thing(row.get("right", ""), where)

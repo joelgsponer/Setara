@@ -7,7 +7,7 @@
  "title_fa": "دری ۶: خواننده روان",
  "games": [
   {
-   "id": "info_texts",
+   "id": "info_texts", "read_first": true,
    "engine": "story",
    "letter": "a",
    "title_en": "Texts to Learn From",
