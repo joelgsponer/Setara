@@ -555,7 +555,6 @@ def similar_numbers(x: int, rng: random.Random, lo: int, hi: int) -> list[int]:
     return [x] + rng.sample(cands, 3)
 
 
-
 # ---------------------------------------------------------------------------
 # 2. Number Hop (journey)
 # ---------------------------------------------------------------------------
@@ -636,7 +635,6 @@ def money_story(s, rnd, intro, a, op, b, rng, hi):
     else:
         say = tr(f"{fa(a)} افغانی داشتی، {fa(b)} افغانی خرج کردی. چند افغانی ماند؟", f"You had {a} afghani, you spent {b} afghani. How many afghani are left?")
     hop_item(s, rnd, intro, a, op, b, rng, hi, say=say, why=WHY[op])
-
 
 
 # ---------------------------------------------------------------------------
@@ -985,15 +983,6 @@ def third_item(s, rnd, intro, n, rng):
             f"One of 3 equal parts is called 1/3. {n} divided by 3 equals {c}."), rng, 100, lo=1)
 
 
-def pie_item(s, rnd, intro, which):
-    (k, n), name, en = PIES4[which]
-    wrong = [pie(*kn) for kn, _, _ in PIES4 if kn != (k, n)]
-    wrong = wrong[which % 4:] + wrong[:which % 4]
-    row = lp(s, rnd, intro, tr(f"کدام شکل {name} را نشان می{Z}دهد؟", f"Which picture shows {en}?"), pie(k, n), wrong[:3],
-             help_fa=tr(f"{name} یعنی {fa(k)} حصه از {fa(n)} حصه برابر.", f"{cap(en)} means {k} of {n} equal parts."))
-    CHECK_META.append((row, Fraction(k, n)))
-
-
 def parts_item(s, rnd, intro, k, n, rng):
     numq(s, rnd, intro, tr("این دایره چند حصه برابر شده است؟", "Into how many equal parts is this circle divided?"), n, [k, n + 1, n - 1],
          tr(f"دایره {fa(n)} حصه برابر شده است.", f"The circle is divided into {n} equal parts."), rng, 9, lo=1, show=pie(k, n))
@@ -1147,11 +1136,6 @@ I_PAIR_SAME = tr("کسرهای مساوی را جوره کن.", "Pair the fracti
 I_PAIR_FRAC = tr("هر شکل را با کسر آن جوره کن.", "Pair each picture with its fraction.")
 I_PAIR_DEC = tr("هر عدد اعشاری را با کسر مساوی آن جوره کن.", "Pair each decimal number with the fraction equal to it.")
 
-# ---------------------------------------------------------------------------
-# Levels 4 and 5: Number Rain (catch)
-# ---------------------------------------------------------------------------
-
-I_RAIN = tr("گوش کن و فقط عددهای درست را بگیر.", "Listen and catch only the right numbers.")
 
 # ---------------------------------------------------------------------------
 # Level 4: Days and Months (listen_pick; the choices are read aloud)
