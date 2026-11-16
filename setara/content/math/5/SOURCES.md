@@ -8,21 +8,37 @@ questions are made from).
 ## What it teaches (spec, section 8, level 5)
 
 Large numbers, multi-digit multiplication, comparing and adding fractions,
-decimals through money; area, reading tables and simple charts. 10 games, 47
-rounds, 335 items.
+decimals through money; area, reading tables and simple charts. 12 games, 63
+rounds, 1101 items (version 1: 10 games, 47 rounds, 335 items).
 
 | Game | Engine | Rounds | Content |
 | --- | --- | --- | --- |
-| Count the Flock | listen_pick | 6 | hearing thousands, four-digit numbers with zeros, numbers to one million, Dari digits, thousands-hundreds-tens-ones, comparing, before and after |
-| Number Hop | journey | 8 | adding and subtracting thousands; ×10 and ×100; two and three digits times one digit, with and without carrying; two digits times two digits; longer divisions; word problems |
-| Market Scales | market | 5 | prices in the thousands with 500 and 1000 notes; several of one thing; change from 500 and 1000; many kilos; half price and a shared price |
-| Carpet Weaver | builder | 5 | counting in thousands; ordering large numbers, fractions and decimals; building `1/5 + 2/5 = 3/5` |
+| Count the Flock | listen_pick | 6 | hearing thousands, four-digit numbers with zeros, numbers to two million, Dari digits, thousands-hundreds-tens-ones, comparing, before and after |
+| Number Hop | journey | 12 | adding and subtracting thousands; ×10 and ×100; two and three digits times one digit, with and without carrying; two digits times two digits; longer divisions; word problems; **new:** stories with large numbers (plus, minus, how many more), village multiplication and division stories, the missing number (100 × _ = 3100, 950 + _ = 1000) |
+| Market Scales | market | 6 | prices in the thousands with 500 and 1000 notes; several of one thing; change from 500 and 1000; many kilos; half price and a shared price; **new:** several of one thing and the change from 1000 |
+| Carpet Weaver | builder | 6 | counting in thousands; ordering large numbers, fractions and decimals; building `1/5 + 2/5 = 3/5`; **new:** building `12 × 3 = 36` and `96 ÷ 4 = 24` |
 | Share the Bread | sorter | 4 | fractions less than, equal to, more than a half; equal fractions; money below or above 1 afghani; numbers below or above 5000 |
-| Shape Mason | listen_pick | 4 | area by counting squares, length times width, the missing side, perimeter or area |
-| Twin Tiles | pairs | 3 | equal fractions; circle and fraction; decimal and fraction |
-| Number Rain | catch | 2 | divisible by 5, 10, 100; tables of 12 and 25; fractions and decimals against a half and against one |
-| Tables and Charts | listen_pick | 4 | two block charts and two picture tables: most, how many, together, how many more, altogether |
-| Fair Shares | listen_pick | 6 | naming a fraction, finding its picture, comparing, adding with the same denominator, afghani and pul as a decimal, comparing and adding decimals |
+| Shape Mason | listen_pick | 5 | area by counting squares, length times width, the missing side, perimeter or area; **new:** wire around a garden or tiles on a floor: which of the two is needed |
+| Twin Tiles | pairs | 4 | equal fractions; circle and fraction; decimal and fraction; **new:** spoken money and its decimal |
+| Number Rain | catch | 2 | divisible by 5, 10, 100; tables of 12, 15 and 25; fractions against a half, a quarter, a third and one; decimals against 0.5, 1, 1.5 and 2 |
+| Tables and Charts | listen_pick | 4 | six block charts and six picture tables: most, how many, of which thing are there n, together, how many more, altogether |
+| Fair Shares | listen_pick | 6 | naming the coloured and the white fraction, finding the picture (also of an equal fraction), comparing, adding with the same denominator, afghani and pul as a decimal, comparing and adding decimals |
+| Number Riddles (new) | listen_pick | 5 | the missing number in rows of 250, 500, 1000, 10000; bigger or smaller than; which number is equal (1/2, 2/4, 0.5); which sum is the biggest; which sign is missing |
+| True or False (new) | sorter | 3 | written multiplications and divisions, fraction sums, "3/4 = 0.75" |
+
+## Pools (version 2)
+
+Every game has `"draw": 8` (Twin Tiles: 6 pairs). A round is a pool of 16 to
+24 questions and a play asks eight of them, a different eight each time. The
+generator makes each pool with a fixed seed per round, spreads the answers
+evenly over the round's number range and allows no answer to be right more
+than three times in a pool. Where a round has only a handful of possible
+answers at all (seven days, the four signs) they are balanced instead; in a
+sorter every basket gets at least half its even share.
+`python3 content/math/generate.py --check` checks all of this again from the
+finished rows and prints the table.
+
+Smaller pool: Twin Tiles 02 (15: fifteen fraction circles are drawn).
 
 ## Decisions taken
 
@@ -38,11 +54,12 @@ rounds, 335 items.
   that the result needs no simplifying. The typical mistake (adding the
   denominators too, 3/10 for 1/5 + 2/5) is always among the wrong choices.
 - **Area** is «مساحت» in «متر مربع». The counting round uses the engine's own
-  counted pictures, which lie in full rows only for 4, 6, 9, 12, 16 and 20
-  squares; that is why it has six items.
+  counted pictures, which lie in full rows only for 2, 3, 4, 6, 9, 12, 16 and
+  20 squares; each is asked once with Western and once with Dari digits.
 - **Charts.** A picture has no text or digits, so a chart is three columns of
   blocks over three small pictures, and a table three rows of dots read from
-  the right. Three things, not four, so that the small pictures stay
+  the right. Version 2 has twelve of them (three per round), all drawn by
+  `draw_pictures.py` from the list the questions are made from. Three things, not four, so that the small pictures stay
   recognisable in the 140 px picture box. "Which is the fewest?" is not asked:
   the builder always deals four choices, the fourth is a thing that is not in
   the chart, and it could be argued to be the fewest. The question "of which
@@ -83,6 +100,15 @@ A Dari-speaking mathematics teacher should decide:
     too hard without paper? It may be better as a teacher-led round.
 12. The charts are small on the 3.5 inch screen (about 15 mm). They read well
     on a PC screenshot; they must be tried with children on the device.
+
+13. New in version 2: «جای خالی» for a gap; «کدام نشان درست است؟» with the
+    choices +, −, ×, ÷; «درست» / «غلط»; «چند حصه سفید مانده است؟»; «صورت»
+    in «کسرهایی که صورت آنها یک است». The large-number stories name a school
+    box with 2500 afghani, a store with 4000 kilos of flour, villages of 1500
+    people, a cow for 4000 and a sheep for 2750 afghani: are the sizes sensible?
+14. A row of large numbers with a gap (8750, 9250, _, 10250) and a long
+    missing-number sum (100 × _ = 3100) do not fit a question card at a
+    readable size and are only spoken. Is that enough at this level?
 
 Nobody has listened to the audio, and nothing has been tried on a handheld or
 with children.

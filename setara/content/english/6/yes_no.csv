@@ -57,7 +57,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 15,,"""Stop!"" shouted the driver. Did the driver speak quietly?",,driver,no,yes,نه. دریور چیغ زد: shouted، با آواز بلند.
 15,,"""Thank you,"" said the farmer. Was the farmer polite?",,farmer,yes,no,بلی. دهقان تشکر کرد.
 15,,"""Is it far?"" asked the girl. Did the girl know the way?",,road,no,yes,نه. دختر پرسید که دور است یا نه. او راه را نمی‌دانست.
-15,,"""I am the fastest,"" said the rabbit. Did the tortoise say that?",,tortoise,no,yes,نه. این را خرگوش گفت، نه سنگ‌پشت.
+15,,"""I am faster than you,"" said the rabbit. Did the tortoise say that?",,tortoise,no,yes,نه. این را خرگوش گفت، نه سنگ‌پشت.
 15,,"""Come in,"" said the teacher. Did the teacher say: Go away?",,teacher,no,yes,نه. معلم گفت Come in: داخل بیا.
 15,,"""I found it!"" shouted the boy. Was the boy happy?",,happy,yes,no,بلی. پسر چیزی را پیدا کرد و خوش بود.
 19,یک طفل از آیندهٔ خود می‌گوید. بعد یک سوال می‌آید. خوب گوش کن که چه می‌کند و چرا.,Roya is going to study because she wants to be a doctor. Does Roya want to be a doctor?,,doctor,yes,no,بلی. رویا می‌خواهد داکتر شود.

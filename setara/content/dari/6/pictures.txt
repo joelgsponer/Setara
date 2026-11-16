@@ -1,0 +1,7 @@
+dough: a brown bowl with a pale ball of dough (خمیر)
+tandoor: a clay oven, glowing opening on top, a flat bread on the wall (تنور)
+sickle: a sickle, grey curved blade, wooden handle (داس)
+snow_leopard: a pale grey big cat with dark ring spots and a long thick tail (پلنگ برفی)
+scene_caravan: three loaded camels in a row in a sandy land, a man leads them
+scene_wheat_harvest: a man with a sickle and a girl at the edge of a yellow wheat field, sheaves
+scene_snow_leopard: the snow leopard on snow in front of two snowy peaks

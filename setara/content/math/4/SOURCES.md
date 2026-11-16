@@ -7,19 +7,37 @@ thirds, charts) are drawn by `content/math/draw_pictures.py`.
 ## What it teaches (spec, section 8, level 4)
 
 All tables to 10, division as sharing, halves, quarters and thirds; weight and
-volume, perimeter, calendar. 9 games, 45 rounds, 321 items.
+volume, perimeter, calendar. 11 games, 63 rounds, 1084 items (version 1: 9
+games, 45 rounds, 321 items).
 
 | Game | Engine | Rounds | Content |
 | --- | --- | --- | --- |
-| Count the Flock | listen_pick | 6 | sharing counted things among people; equal groups in baskets; half, quarter and third of a number; fraction circles |
-| Number Hop | journey | 10 | tables of 3, 4, 6, 7, 8, 9, one round each; all tables with Dari-digit answers; division facts; word problems |
-| Market Scales | market | 6 | one person's share on the scales; bills from the tables; price by the kilo; half, one and a half, two and a half kilos; bill and change |
-| Carpet Weaver | builder | 5 | the tables as number rows; building `3 × 7 = 21` and `24 ÷ 4 = 6` from tiles |
+| Count the Flock | listen_pick | 6 | sharing counted things among people; equal groups in baskets; half, quarter and third of a number; fraction circles (which shows a half, how many parts, how many coloured) |
+| Number Hop | journey | 14 | tables of 3, 4, 6, 7, 8, 9, one round each; all tables with Dari-digit answers; division facts; word problems; **new:** village multiplication stories, village division stories (sharing and grouping), the missing factor (4 × _ = 28), double, triple, half and quarter |
+| Market Scales | market | 7 | one person's share on the scales; bills from the tables; price by the kilo; half, one and a half, two and a half kilos; bill and change; **new:** two kinds of things on one bill |
+| Carpet Weaver | builder | 7 | the tables as number rows; building `3 × 7 = 21` and `24 ÷ 4 = 6` from tiles; **new:** mixed sums with the tables of 2, 5, 10, arranging numbers |
 | Share the Bread | sorter | 4 | whole, half, third, quarter (picture baskets); multiplications and divisions into the basket of their answer |
-| Shape Mason | listen_pick | 5 | kilo and gram; weight and litre word problems; perimeter of square, rectangle, triangle |
-| Twin Tiles | pairs | 4 | multiplication and division with its answer; fraction circle with its spoken name |
-| Number Rain | catch | 2 | catch the numbers of one times table (both digit systems) |
-| Days and Months | listen_pick, choices read aloud | 3 | days of the week, months and seasons of the solar year, days, weeks, months |
+| Shape Mason | listen_pick | 6 | kilo and gram; weight and litre word problems; perimeter of square, rectangle, triangle; **new:** kilos and grams together, half-litre bottles |
+| Twin Tiles | pairs | 4 | multiplication and division with its answer; fraction circle or piece of a fruit with its spoken name |
+| Number Rain | catch | 3 | the numbers of one times table (both digit systems), even and odd, bigger, smaller, between; **new:** numbers in two tables at once, a number times itself |
+| Days and Months | listen_pick, choices read aloud | 4 | days of the week, months and seasons of the solar year, days, weeks, months; **new:** three days later, two days ago |
+| Number Riddles (new) | listen_pick | 5 | the missing number in a table row; the next number of a table row, forwards and backwards; which sum is the same (3 × 4 and 2 × 6); which sum is the biggest; which sign is missing |
+| True or False (new) | sorter | 3 | written multiplications, divisions and mixed sums that are right or wrong |
+
+## Pools (version 2)
+
+Every game has `"draw": 8` (Twin Tiles: 6 pairs). A round is a pool of 16 to
+24 questions and a play asks eight of them, a different eight each time. The
+generator makes each pool with a fixed seed per round, spreads the answers
+evenly over the round's number range and allows no answer to be right more
+than three times in a pool. Where a round has only a handful of possible
+answers at all (seven days, the four signs) they are balanced instead; in a
+sorter every basket gets at least half its even share.
+`python3 content/math/generate.py --check` checks all of this again from the
+finished rows and prints the table.
+
+Smaller pools: Share the Bread 03 (14 sums: these answers have no more in the
+tables), Twin Tiles 03 (10: the tables give only ten different quotients).
 
 ## Decisions taken
 
@@ -78,6 +96,16 @@ A Dari-speaking mathematics teacher should decide:
     `bread_third` and `bread_quarter` are cut from a round one. The whole
     should probably be redrawn round; it is an older library picture and was
     not touched.
+
+11. New in version 2: «دو چند» / «سه چند» for double and triple; «جای خالی»
+    for a gap; «کدام نشان درست است؟» with the choices +, −, ×, ÷; «درست» /
+    «غلط»; «عددهایی که از ضرب یک عدد در خودش ساخته می‌شوند»; «هم در جدول ضرب
+    دو و هم در جدول ضرب سه». The story sentences are in `STORIES` in the
+    generator («رمه», «قطارهای شش تایی», «خریده می‌توانی»).
+12. `orange_half`, `orange_third`, `orange_quarter` and the same of a
+    pomegranate are new pictures, drawn by the script like the bread pieces.
+    The library's whole pomegranate shows a cut piece beside the fruit and is
+    therefore not used as a "whole".
 
 Nobody has listened to the audio, and nothing has been tried on a handheld or
 with children.

@@ -27,7 +27,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 10,تکرار درس‌های یک تا نُه: کار، سفر، دنیا و مقایسه. بعضی جواب‌ها نوشته است.,Which one is not a job?,,,bus,weaver|carpenter|shepherd,قالین‌باف، نجار و چوپان کار است. بس یک موتر کلان است.
 10,,Which one does not go on the road?,,,boat,bus|car|lorry,کشتی روی آب می‌رود. بس، موتر و لاری روی سرک می‌روند.
 10,,Which one flies?,,,aeroplane,boat|bicycle|train,طیاره پرواز می‌کند.
-10,,Which one is the fastest way to another country?,,,aeroplane,bicycle|cart|walk,طیاره از همه تیزتر است.
+10,,Which one is faster than a bus?,,,aeroplane,bicycle|cart|walk,طیاره از بس تیزتر است. بایسکل، کراچی و پیاده رفتن آهسته‌تر است.
 10,,Which one is bigger than a village?,,,city,house|shop|well,شهر از قریه کلانتر است.
 10,,Which one has no water?,,,desert,sea|lake|river,دشت خشک است و آب ندارد.
 10,,Which one is taller?,,,tree_tall,tree_short,این درخت بلندتر است: taller.

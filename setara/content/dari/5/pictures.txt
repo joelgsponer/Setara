@@ -1,0 +1,25 @@
+crow: a black crow, side view, grey beak, yellow legs (زاغ)
+grasshopper: a green grasshopper, side view, long back leg, feelers (ملخ)
+king: head and shoulders of a fairy-tale king, white beard, yellow crown, purple coat (پادشاه)
+letter: a written sheet of paper coming out of an envelope (خط)
+scarecrow: a scarecrow of two sticks, red shirt, brown cap, a tin hanging from each arm (مترسک)
+scene_ant_dove: a stream, a leaf on the water with an ant on it, a dove in a tree
+scene_dog_bridge: a dog with a bone on a wooden bridge, its reflection in the water below
+scene_crow_fox: a crow with cheese on a branch, a fox looking up
+scene_ant_grasshopper: a wheat field, an ant with a grain, a grasshopper on a leaf
+scene_two_mice: two mice at a table with cheese, a window
+scene_mice_bell: three mice under a bell, a cat in a dark doorway
+scene_crow_peacock: a peacock and a crow with green and blue feathers in its tail
+scene_broken_jug: a sad girl on a path, a jug broken in two, spilled water
+scene_stepping_stones: a girl, a small boy and a big boy crossing a stream on flat stones
+scene_letter_grandmother: a girl reads a letter to her grandmother who sits on a carpet
+scene_scarecrow: the scarecrow in a wheat field, two sparrows
+scene_boy_dove: a boy on a flat roof with raised hands lets a white dove fly
+scene_seed_sack: a father with a turban and his son beside a sack and ears of wheat
+scene_girl_reads_class: a girl with a book in front of the board, a second girl encourages her
+scene_bundle_sticks: a grandmother on a carpet, a bundle of sticks, a girl and a boy
+scene_yoghurt_girl: a girl with a pot on her head, a thought bubble with a chick and a goat
+scene_vineyard_dig: a girl and a boy with a spade between two vines
+scene_wise_girl: a king on a red seat, a girl speaking to him
+scene_salt_donkey: a donkey with a sack standing in a river, a boy on the bank
+scene_mouse_mountain: a mouse in front of a mountain, sun, cloud and wind lines
