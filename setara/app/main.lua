@@ -244,6 +244,9 @@ function love.mousereleased(_, _, _, istouch) if not istouch then touch.released
 function love.resize(w, h) touch.layout(w, h) end
 
 function love.keypressed(key)
+  -- On a phone the system's Back key arrives as "escape": it is B, back one
+  -- step, and must not close the app under a child's thumb.
+  if key == "escape" and touch.on then input.fake("b") return end
   if key == "escape" then love.event.quit() end
   if key == "f11" then love.window.setFullscreen(not love.window.getFullscreen()) end
   input.keypressed(key)

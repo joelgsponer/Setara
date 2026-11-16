@@ -122,6 +122,11 @@ def main() -> None:
     if assets.is_dir():
         shutil.copytree(assets, args.out / "assets")
     version = (ROOT / "app" / "version.lua").read_text().split('"')[1]
+    # installable web app: the manifest and the worker that keeps it for offline use
+    here = Path(__file__).parent
+    shutil.copy(here / "manifest.webmanifest", args.out / "manifest.webmanifest")
+    build = hashlib.sha1(f"{version}-{size}-{love.stat().st_mtime}".encode()).hexdigest()[:10]
+    (args.out / "sw.js").write_text((here / "sw.js").read_text("utf-8").replace("__BUILD__", build), "utf-8")
     (args.out / "version.json").write_text(json.dumps({"version": version, "packs": [p.stem for p in packs if not args.only or p.stem in args.only or p.stem == "core"]}))
     total = sum(f.stat().st_size for f in args.out.rglob("*") if f.is_file()) / 1e6
     print(f"web build: {args.out}  ({total:.0f} MB)")
