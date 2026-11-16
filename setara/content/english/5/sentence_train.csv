@@ -22,7 +22,7 @@ round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 03,,She has an earache.,,t:She|t:has|t:an|t:earache,t:a,,She has an earache.,,او گوش‌درد دارد.
 05,فرمان‌های داکتر را بساز. فرمان با فعل شروع می‌شود: Open، Lie، Show. برای «نکن» اول Don't می‌آید.,"Open your mouth, please.",,t:Open|t:your|t:mouth|t:please,t:my,,"Open your mouth, please.",,لطفاً دهانت را باز کن.
 05,,Lie down here.,,t:Lie|t:down|t:here,t:up,,Lie down here.,,اینجا دراز بکش.
-05,,Show me your arm.,,t:Show|t:me|t:your|t:arm,t:my,,Show me your arm.,,بازویت را به من نشان بده.
+05,,Show me your right arm.,,t:Show|t:me|t:your|t:right|t:arm,t:my,,Show me your right arm.,,بازوی راستت را به من نشان بده.
 05,,Don't move your leg.,,t:Don't|t:move|t:your|t:leg,t:Not,,Don't move your leg.,,پایت را شور نده.
 05,,Come back tomorrow.,,t:Come|t:back|t:tomorrow,t:go,,Come back tomorrow.,,فردا باز بیا.
 05,,Breathe in and breathe out.,,t:Breathe|t:in|t:and|t:breathe|t:out,t:on,,Breathe in and breathe out.,,نفس بکش و نفست را بیرون کن.
@@ -59,7 +59,7 @@ round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 09,,The school is not far.,,t:The|t:school|t:is|t:not|t:far,t:no,,The school is not far.,,مکتب دور نیست.
 11,راه را نشان بده. Turn left چپ، Turn right راست، Go straight مستقیم، Cross the bridge از پل تیر شو. جمله را بساز.,Turn left at the school.,,t:Turn|t:left|t:at|t:the|t:school,t:right,,Turn left at the school.,,پیش مکتب به دست چپ دور بخور.
 11,,"Go straight, then turn right.",,t:Go|t:straight|t:then|t:turn|t:right,t:left,,"Go straight, then turn right.",,مستقیم برو، بعد به دست راست دور بخور.
-11,,Cross the bridge.,,t:Cross|t:the|t:bridge,t:road,,Cross the bridge.,,از پل تیر شو.
+11,,Cross the bridge slowly.,,t:Cross|t:the|t:bridge|t:slowly,t:road,,Cross the bridge slowly.,,آهسته از پل تیر شو.
 11,,It is on the right.,,t:It|t:is|t:on|t:the|t:right,t:in,,It is on the right.,,در دست راست است.
 11,,How do I get to the clinic?,,t:How|t:do|t:I|t:get|t:to|t:the|t:clinic,t:go,,How do I get to the clinic?,,چطور به کلینیک بروم؟
 11,,Stop at the well.,,t:Stop|t:at|t:the|t:well,t:Go,,Stop at the well.,,پیش چاه ایستاد شو.

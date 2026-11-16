@@ -16,7 +16,7 @@ round,intro_fa,a,b,say_en,say_fa
 05,,t:Breathe in,breathe_slow,Breathe in slowly.,
 05,,t:Stand up,stand_up,"Stand up, please.",
 05,,t:Say ah,open_mouth,Open your mouth and say ah.,
-05,,t:Your arm,arm,Show me your arm.,
+05,,t:Your arm,arm,"Your arm, please.",
 05,,t:Look,look,Look at me.,
 05,,t:Listen,listen,Listen to me.,
 10,تکرار: کلمه را بخوان و تصویر آن را پیدا کن. کلمه‌های نُه درس اول.,t:sick,sick,She is sick.,

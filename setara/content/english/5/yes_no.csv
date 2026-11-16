@@ -12,16 +12,16 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 01,,Is she happy?,,sad,no,yes,نه. او گریه می‌کند. غمگین است.
 01,,Is he thirsty?,,hungry,no,yes,نه. او نان می‌خواهد. گرسنه است، تشنه نیست.
 01,,Does she want to sleep?,,feel_tired,yes,no,بلی. او مانده است و می‌خواهد بخوابد.
-03,تصویر یک مریضی را نشان می‌دهد. سوال را گوش کن: آیا او همین مریضی را دارد؟,Does he have a headache?,,headache,yes,no,بلی. او سر خود را گرفته است. سردرد دارد: headache.
-03,,Does she have a headache?,,toothache,no,yes,نه. او روی خود را گرفته است. دندانش درد می‌کند، نه سرش.
+03,تصویر یک مریضی را نشان می‌دهد. سوال را گوش کن: آیا او همین مریضی را دارد؟,Does she have a headache?,,headache,yes,no,بلی. او سر خود را گرفته است. سردرد دارد: headache.
+03,,Does the girl have a headache?,,toothache,no,yes,نه. او روی خود را گرفته است. دندانش درد می‌کند، نه سرش.
 03,,Does she have a toothache?,,toothache,yes,no,بلی. دندانش درد می‌کند: toothache.
 03,,Does he have a stomach ache?,,stomach_ache,yes,no,بلی. او شکم خود را گرفته است. شکم‌درد دارد: stomach ache.
-03,,Does her ear hurt?,,earache,yes,no,بلی. او گوش خود را گرفته است. گوشش درد می‌کند: earache.
+03,,Does his ear hurt?,,earache,yes,no,بلی. او گوش خود را گرفته است. گوشش درد می‌کند: earache.
 03,,Does the child have a fever?,,fa_fever_days,yes,no,بلی. طفل در بستر است و داغ است. تب دارد: fever.
 03,,Does the boy have a cough?,,fa_cough,yes,no,بلی. پسر سرفه می‌کند: cough.
 03,,Does she have a cold?,,sneeze,yes,no,بلی. او عطسه می‌زند. ریزش دارد: a cold.
 03,,Does she have a stomach ache?,,sneeze,no,yes,نه. او ریزش دارد. شکمش درد نمی‌کند.
-03,,Does his knee hurt?,,headache,no,yes,نه. سرش درد می‌کند، نه زانویش.
+03,,Does her knee hurt?,,headache,no,yes,نه. سرش درد می‌کند، نه زانویش.
 03,,Does his stomach hurt?,,stomach_ache,yes,no,بلی. شکمش درد می‌کند: his stomach hurts.
 03,,Is the boy well?,,fa_cough,no,yes,نه. او سرفه می‌کند. جور نیست.
 03,,Does he have a fever?,,happy,no,yes,نه. او خوش و جور است. تب ندارد.

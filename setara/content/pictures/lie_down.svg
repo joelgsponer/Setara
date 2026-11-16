@@ -5,7 +5,6 @@
 <path d="M44 70h56c8 0 8 20 0 20H44z" fill="#8e5bb5"/>
 <ellipse cx="112" cy="80" rx="8" ry="6" fill="#6b4a2b"/>
 <g transform="translate(-12 22) scale(0.6)" stroke-width="8.33"><path d="M30 60c0-24 14-40 34-40s34 16 34 40c0 14-4 26-10 34H40c-6-8-10-20-10-34z" fill="#3f7fbf"/><ellipse cx="64" cy="60" rx="22" ry="24" fill="#e8b98a"/><path d="M42 54c6-12 14-16 22-16s16 4 22 16" fill="none"/><circle cx="55" cy="62" r="3.5" fill="#3b2f2f" stroke="none"/><circle cx="73" cy="62" r="3.5" fill="#3b2f2f" stroke="none"/><path d="M56 73c5 5 11 5 16 0" fill="none" stroke-width="6.666666666666667"/></g>
-<path d="M52 62h44" fill="none" stroke="#4e9a51" stroke-width="0"/>
 <path d="M92 30v24m-9-9l9 9 9-9" fill="none" stroke="#e0483f" stroke-width="6"/>
 </g>
 </svg>

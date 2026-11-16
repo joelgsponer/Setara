@@ -1,7 +1,7 @@
 round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 # PRACTISE. Question to answer. Many answers are written words: the child reads them. Pools of twelve, eight per play.
-02,تصویر را ببین و کلمهٔ درست را بخوان و انتخاب کن. اینجا خودت می‌خوانی: back کمر، neck گردن، knee زانو، shoulder شانه، throat گلو، stomach شکم.,What hurts?,,back,t:back,t:neck|t:knee,این کمر است: back.
-02,,What hurts?,,neck,t:neck,t:knee|t:back,این گردن است: neck.
+02,تصویر را ببین و کلمهٔ درست را بخوان و انتخاب کن. اینجا خودت می‌خوانی: back کمر، neck گردن، knee زانو، shoulder شانه، throat گلو، stomach شکم.,Look. What hurts?,,back,t:back,t:neck|t:knee,این کمر است: back.
+02,,Which part hurts?,,neck,t:neck,t:knee|t:back,این گردن است: neck.
 02,,Where does it hurt?,,knee,t:knee,t:neck|t:throat,این زانو است: knee.
 02,,Where does it hurt?,,shoulder,t:shoulder,t:stomach|t:back,این شانه است: shoulder.
 02,,Read. What is it?,,throat,t:throat,t:tooth|t:foot,این گلو است: throat. با th شروع می‌شود.
@@ -23,7 +23,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 04,,A doctor and a nurse work in our clinic. How many people is that?,,,t:2,t:1|t:3,یک داکتر و یک نرس: دو نفر.
 04,,The nurse says: Wait here. What do you do?,,,wait,run|sleep|play,منتظر می‌مانی: wait.
 04,,The clinic is closed. Can you see the doctor now?,,,no,yes,نه. کلینیک بسته است. فردا باز بیا.
-04,,Does a nurse work at the bakery?,,,no,yes,نه. نرس در کلینیک کار می‌کند، نه در نانوایی.
+04,,What does the nurse put on a cut?,,,bandage,thermometer|soap|spoon,نرس روی زخم بنداژ می‌بندد.
 07,کسی یک مشکل دارد و می‌پرسد What should I do یعنی «چه کنم بهتر است». تو مشورهٔ خوب را انتخاب کن.,I am thirsty. What should I do?,,,drink,sleep|run|wash_face,کسی که تشنه است بهتر است آب بنوشد: You should drink water.
 07,,I am tired. What should I do?,,,sleep,play|run|work,کسی که مانده است بهتر است بخوابد: You should sleep.
 07,,My hands are dirty. What should I do?,,,wash_hands,eating|read|write,دست‌های چتل را باید شست: You should wash your hands.
@@ -45,7 +45,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 08,,Your friend is hurt. Do you go away?,,,no,yes,نه. پیش او می‌مانی و کمک می‌خواهی.
 08,,Your friend is hurt. You wait for help. What do you do?,,,fa_stay_with,play|run|sleep,پیش دوستت می‌مانی: Stay with him.
 08,,Is fire dangerous for a baby?,,,yes,no,بلی. آتش برای طفل خُرد خطرناک است.
-08,,Is a pillow dangerous?,,,no,yes,نه. بالشت خطرناک نیست.
+08,,Which one is safe?,,,pillow,fire|knife|snake,بالشت بی‌خطر است. آتش، چاقو و مار خطرناک است.
 08,,What is dangerous?,,,snake,ball|pillow|book,مار خطرناک است. توپ، بالشت و کتاب خطرناک نیست.
 08,,The pot is hot. The baby comes near. What do you say?,,,t:Stop!,t:Good!|t:Please!,می‌گویی Stop: ایستاد شو. دیگ داغ است.
 09,تصویر را ببین و کلمهٔ درست را بخوان: توپ کجا است؟ behind پشت، in front of پیش روی، between بین، next to پهلوی، near نزدیک، far دور.,Where is the ball?,,pos_behind,t:behind,t:between|t:in front of,توپ پشت صندوق است: behind.
@@ -78,7 +78,7 @@ round,intro_fa,say_en,say_fa,show,answer,distractors,help_fa
 14,,My mother ... at the bazaar yesterday.,,,t:was,t:were|t:are,مادر یک نفر است: My mother was.
 14,,Today I ... well.,,,t:am,t:was|t:were,برای امروز am می‌آید: Today I am well.
 14,,Today the sky ... blue.,,,t:is,t:was|t:were,برای امروز is می‌آید: The sky is blue.
-14,,Yesterday I was at the clinic. Today I am at school. Where was I yesterday?,,,clinic,school|bazaar|bakery,دیروز در کلینیک بودم: I was at the clinic.
+14,,Yesterday I was at the bakery. Today I am at school. Where was I yesterday?,,,bakery,school|bazaar|clinic,دیروز در نانوایی بودم: I was at the bakery.
 14,,It was windy yesterday. Today it is sunny. What is the weather like today?,,,sun,wind|rain|snow,امروز آفتابی است. باد دیروز بود.
 14,,Last night the children were tired. How were the children?,,,feel_tired,happy|hungry|thirsty,اطفال دیشب مانده بودند: tired.
 14,,Yesterday mother was at the bazaar. Where was mother?,,,bazaar,clinic|school|kitchen,مادر دیروز در بازار بود.

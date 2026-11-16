@@ -2,7 +2,6 @@
 <g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
 <path d="M4 62c30-20 50-20 62-8s40 8 58-4v70H4z" fill="#9ccb7a"/>
 <path d="M36 122c-10-22 40-28 30-46s18-22 28-26" fill="none" stroke="#e8d2a6" stroke-width="9"/>
-<path d="M36 122c-10-22 40-28 30-46s18-22 28-26" fill="none" stroke="#3b2f2f" stroke-width="0"/>
 <path d="M88 30.799999999999997h21.599999999999998v12.959999999999999h-21.599999999999998z" fill="#e8d2a6"/>
 <path d="M85.84 30.799999999999997l12.959999999999999-9.36 12.959999999999999 9.36z" fill="#9a6b3f"/>
 <rect x="96.64" y="35.84" width="4.68" height="7.92" rx="0" fill="#6b4a2b" stroke-width="2.5"/>

@@ -18,24 +18,24 @@ round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
 05,,cook,She is going to cook rice.,,t:tomorrow,,
 05,,play,We played in the yard.,,t:yesterday,,
 05,,play,We are going to play in the yard.,,t:tomorrow,,
-05,,rain,It rained.,,t:yesterday,,
-05,,rain,It is going to rain.,,t:tomorrow,,
-05,,shoes,He bought shoes.,,t:yesterday,,
-05,,shoes,He is going to buy shoes.,,t:tomorrow,,
+05,,rain,It rained again.,,t:yesterday,,
+05,,rain,It is going to rain again.,,t:tomorrow,,
+05,,shoes,He bought new shoes.,,t:yesterday,,
+05,,shoes,He is going to buy new shoes.,,t:tomorrow,,
 05,,read,I read a book.,,t:yesterday,,
 05,,read,I am going to read a book.,,t:tomorrow,,
-11,دو سبد است. صفت‌های کوتاه er می‌گیرند: bigger. صفت‌های دراز more می‌گیرند: more expensive. کلمه را بخوان و در سبد درست بینداز.,t:big,big,,t:...er,با er در آخر,with er
-11,,t:small,small,,t:...er,,
-11,,t:tall,tall,,t:...er,,
-11,,t:fast,fast,,t:...er,,
-11,,t:old,old,,t:...er,,
-11,,t:cheap,cheap,,t:...er,,
-11,,t:strong,strong,,t:...er,,
-11,,t:expensive,expensive,,t:more ...,با more در پیش,with more
-11,,t:beautiful,beautiful,,t:more ...,,
-11,,t:difficult,difficult,,t:more ...,,
-11,,t:dangerous,dangerous,,t:more ...,,
-11,,t:careful,careful,,t:more ...,,
+11,دو سبد است. صفت‌های کوتاه er می‌گیرند: bigger. صفت‌های دراز more می‌گیرند: more expensive. کلمه را بخوان و در سبد درست بینداز.,t:big,a big city,,t:...er,با er در آخر,with er
+11,,t:small,a small mouse,,t:...er,,
+11,,t:tall,a tall tree,,t:...er,,
+11,,t:fast,a fast horse,,t:...er,,
+11,,t:old,an old house,,t:...er,,
+11,,t:cheap,a cheap pen,,t:...er,,
+11,,t:strong,a strong man,,t:...er,,
+11,,t:expensive,an expensive carpet,,t:more ...,با more در پیش,with more
+11,,t:beautiful,a beautiful flower,,t:more ...,,
+11,,t:difficult,a difficult question,,t:more ...,,
+11,,t:dangerous,a dangerous road,,t:more ...,,
+11,,t:careful,a careful driver,,t:more ...,,
 14,سه سبد است: شروع قصه، میان قصه و آخر قصه. جمله را گوش کن و فکر کن که در کجای قصه می‌آید.,sun_morning,One day a girl went to the river.,,t:start,شروع قصه,the start
 14,,fox,One day a fox was very hungry.,,t:start,,
 14,,farmer,One day a farmer found a small bird.,,t:start,,
@@ -44,19 +44,19 @@ round,intro_fa,thing,say_en,say_fa,basket,basket_say_fa,basket_say_en
 14,,rain,Then it started to rain.,,t:middle,,
 14,,run,After that she ran home.,,t:middle,,
 14,,fall,Suddenly he fell.,,t:middle,,
-14,,happy,In the end everybody was happy.,,t:end,آخر قصه,the end
-14,,house,Finally they came home.,,t:end,,
+14,,happy,In the end the farmer was happy.,,t:end,آخر قصه,the end
+14,,house,Finally the family came home.,,t:end,,
 14,,sleep,In the end the baby slept.,,t:end,,
 14,,friends,Finally the two girls were friends again.,,t:end,,
 18,سه سبد است: دعوت، تشکر و معذرت. جملهٔ پیام را گوش کن و بگو که از کدام قسم است.,house,Please come to my house on Friday.,,t:Please come,دعوت,an invitation
 18,,eating,Can you come for dinner tonight?,,t:Please come,,
 18,,play,Come and play with us tomorrow.,,t:Please come,,
 18,,tea,Please come and drink tea with us.,,t:Please come,,
-18,,present,Thank you for the present.,,t:Thank you,تشکر,thanks
+18,,present,Thank you for the beautiful present.,,t:Thank you,تشکر,thanks
 18,,help,Thank you for your help.,,t:Thank you,,
 18,,letter,Thank you for your letter.,,t:Thank you,,
 18,,book,Thank you for the book. I like it.,,t:Thank you,,
 18,,sick,"I am sorry, I can't come because I am sick.",,t:I am sorry,معذرت,an apology
-18,,clock_9,I am sorry I am late.,,t:I am sorry,,
+18,,clock_9,I am sorry I am so late.,,t:I am sorry,,
 18,,sad,I am sorry I was angry yesterday.,,t:I am sorry,,
 18,,notebook,I am sorry. I lost your notebook.,,t:I am sorry,,

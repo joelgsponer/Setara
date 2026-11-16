@@ -119,7 +119,7 @@ round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 18,,"Dear teacher, I am sorry I was late. I am going to come early tomorrow. From Zarmina.",,"t:Dear teacher,|t:I am sorry|t:I was late.|t:I am going to come|t:early tomorrow.|t:From Zarmina",t:Thank you,,"Dear teacher, I am sorry I was late. I am going to come early tomorrow. From Zarmina.",,معلم عزیز، ببخشید که ناوقت آمدم. فردا وقت می‌آیم. از طرف زرمینه.
 19,جمله‌هایی از آینده: going to و because با هم. جمله را بساز.,I am going to study.,,t:I|t:am|t:going|t:to|t:study,t:studies,,I am going to study.,,من درس می‌خوانم.
 19,,I am going to help my village.,,t:I|t:am|t:going|t:to|t:help|t:my|t:village,t:helps,,I am going to help my village.,,من به قریهٔ خود کمک می‌کنم.
-19,,We are going to build a new school.,,t:We|t:are|t:going|t:to|t:build|t:a|t:new|t:school,t:old,,We are going to build a new school.,,ما یک مکتب نو می‌سازیم.
+19,,We are going to build a new school.,,t:We|t:are|t:going|t:to|t:build|t:a|t:new|t:school,,,We are going to build a new school.,,ما یک مکتب نو می‌سازیم.
 19,,I want to be an engineer.,,t:I|t:want|t:to|t:be|t:an|t:engineer,t:a,,I want to be an engineer.,,من می‌خواهم انجنیر شوم.
 19,,Our village needs a doctor.,,t:Our|t:village|t:needs|t:a|t:doctor,t:need,,Our village needs a doctor.,,قریهٔ ما به داکتر ضرورت دارد.
 19,,I learn English because I want to read.,,t:I|t:learn|t:English|t:because|t:I|t:want|t:to|t:read,,,I learn English because I want to read.,,من انگلیسی یاد می‌گیرم چون می‌خواهم بخوانم.
