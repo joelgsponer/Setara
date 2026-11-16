@@ -144,7 +144,7 @@ spec says. Health content adds no medical advice beyond its fact sheets
 | Lessons, English 3–6 | planned |
 | Lessons for Dari reading, math, health | planned |
 | Guide format, reader on the device, print export | written |
-| Guides: math 1–5, Dari 1–4, English 1–4, health 1–4 | written; the math guides predate the newest math games |
+| Guides: math 1–5, Dari 1–4, English 1–4, health 1–4 | written |
 | Guides: English 5–6, Dari 5–6 | planned |
 
 ## 10. What an educator should decide first

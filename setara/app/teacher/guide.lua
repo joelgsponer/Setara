@@ -67,7 +67,9 @@ function Guide:draw()
   local speaking = audio.busy()
   ui.card(14, y, 612, 438 - y, { fill = speaking and ui.mix(ui.c.paper, ui.c.gold, 0.2) or ui.c.paper, border = ui.c.line })
   ui.set(ui.c.ink)
-  text.fa(page.fa or {}, 28, y + 6, 584, page.img and 24 or 30, text.locale == "en" and "left" or "right")
+  -- eight lines are allowed on a page without a picture: they fit a size smaller
+  local size = page.img and 24 or (#(page.fa or {}) > 7 and 26 or 30)
+  text.fa(page.fa or {}, 28, y + 6, 584, size, text.locale == "en" and "left" or "right")
   T.hints({ { "a", "hint_play" }, { "arrows", "hint_next" } })
 end
 
