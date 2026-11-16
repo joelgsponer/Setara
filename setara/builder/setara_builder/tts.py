@@ -42,6 +42,13 @@ DEFAULT_VOICES = {
         "fa": {"f": "fa_IR-amir-medium", "m": "fa_IR-amir-medium"},
     },
     "espeak": {"en": {"f": "en-us+f3", "m": "en-us"}, "fa": {"f": "fa+f3", "m": "fa"}},
+    # eli-tts on ladon (Qwen3-TTS, cloned voices; Joel's pick, intercom #239).
+    # No Persian in Qwen3-TTS: a language without a voice here uses `fallback`.
+    "eli": {
+        "url": os.environ.get("SETARA_ELI_TTS_URL", "http://127.0.0.1:8179"),
+        "fallback": "piper",
+        "en": {"f": "maat", "m": "humboldt"},
+    },
     "elevenlabs": {
         "model": "eleven_multilingual_v2",
         "en": {"f": "", "m": ""},
@@ -151,6 +158,28 @@ class Speech:
         v = self.voices["espeak"][lang][voice]
         speed = "105" if slow else "150"
         subprocess.run(["espeak-ng", "-v", v, "-s", speed, "-w", str(wav), text], check=True)
+
+    def _synth_eli(self, lang, voice, text, slow, wav: Path) -> None:
+        cfg = self.voices["eli"]
+        name = (cfg.get(lang) or {}).get(voice)
+        if not name:
+            return getattr(self, f"_synth_{cfg.get('fallback', 'piper')}")(lang, voice, text, slow, wav)
+        token = os.environ.get("SETARA_ELI_TTS_TOKEN", "")
+        tf = Path.home() / ".config/setara/eli-tts-token"
+        if not token and tf.exists():
+            token = tf.read_text().strip()
+        body = {"input": text, "voice": name, "language": lang, "response_format": "wav"}
+        req = urllib.request.Request(
+            cfg["url"] + "/v1/audio/speech", data=json.dumps(body).encode(),
+            headers={"Content-Type": "application/json", "Authorization": f"Bearer {token}"},
+        )
+        raw = wav.with_suffix(".eli.wav")
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            raw.write_bytes(resp.read())
+        # The stream's WAV header has no sizes; ffmpeg rewrites it. Qwen has no speed
+        # control, so "slow" is a pitch-keeping time stretch.
+        af = ["-af", "atempo=0.8"] if slow else []
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(raw), *af, str(wav)], check=True)
 
     def _synth_elevenlabs(self, lang, voice, text, slow, wav: Path) -> None:
         cfg = self.voices["elevenlabs"]
