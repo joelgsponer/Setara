@@ -117,7 +117,7 @@ For every subject and level:
 | 3 | to 1,000, carrying, tables of 2, 5, 10 | metres and centimetres, simple bills | written |
 | 4 | all tables, division as sharing, halves, quarters, thirds | weight, volume, perimeter, calendar | written |
 | 5 | large numbers, multi-digit multiplication, fractions, decimals through money | area, tables and charts | written |
-| 6 | percent, ratio, averages | profit and loss, a household budget, scale on a map | planned |
+| 6 | percent, ratio, averages | profit and loss, a household budget, scale on a map | written |
 
 ## 8. Health and environment
 
@@ -145,8 +145,7 @@ spec says. Health content adds no medical advice beyond its fact sheets
 | Lessons for Dari reading, math, health | planned |
 | Guide format, reader on the device, print export | written |
 | Guides: math 1–5, Dari 1–4, English 1–4, health 1–4 | written |
-| Guides: Dari 5–6 | written |
-| Guides: English 5–6, math 6 | in work |
+| Guides: English 5–6, Dari 5–6, math 6 | written |
 
 ## 10. What an educator should decide first
 
