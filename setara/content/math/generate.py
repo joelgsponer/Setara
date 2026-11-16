@@ -3738,7 +3738,7 @@ def catch45(level: int) -> Sheet:
         square = (tr("عددهایی را بگیر که از ضرب یک عدد در خودش ساخته می" + Z + "شوند.", "Catch the numbers that are made by multiplying a number by itself."),
                   tr("دو ضرب دو مساوی چهار، سه ضرب سه مساوی نه، چهار ضرب چهار مساوی شانزده و همین طور پیش برو.", "2 times 2 equals 4, 3 times 3 equals 9, 4 times 4 equals 16 and so on."),
                   lambda x: int(x ** 0.5 + 0.5) ** 2 == x, ())
-        number_round("03", [(both(a, b), 4, 100) for a, b in ((2, 3), (2, 5), (3, 4), (3, 5), (2, 7), (4, 6), (2, 9))] + [(square, 2, 100)])
+        number_round("03", [(both(a, b), 4, 120) for a, b in ((2, 3), (2, 5), (3, 4), (3, 5), (2, 7), (4, 6), (4, 5))] + [(square, 2, 100)])
     else:
         hundred = (tr("عددهایی را بگیر که بر صد تقسیم می" + Z + "شوند.", "Catch the numbers that can be divided by 100."),
                    tr("عددی بر صد تقسیم می" + Z + "شود که دو رقم آخر آن صفر است.", "A number can be divided by 100 when its last two digits are 0."), lambda x: x % 100 == 0, (150, 250, 350, 510, 990))
@@ -4247,7 +4247,7 @@ def riddles(level: int) -> Sheet:
                        help_fa=tr(f"{fa(v)} از {fa(ref)} بیشتر است.", f"{v} is more than {ref}."), truth=lambda c, r=ref: int(c.split("*")[1]) > r)
                 else:
                     ref = v + rng.randint(1, 3)
-                    wrong = rng.sample(range(ref, 15), 3)
+                    wrong = rng.sample(range(ref, ref + 5), 3)
                     lp(s, "03", I_EQUAL, tr("در کدام تصویر کمتر از این است؟", "Which picture has fewer than this?"),
                        f"p:{p2}*{v}", [f"p:{p2}*{x}" for x in wrong], show=f"p:{p1}*{ref}",
                        help_fa=tr(f"{fa(v)} از {fa(ref)} کمتر است.", f"{v} is fewer than {ref}."), truth=lambda c, r=ref: int(c.split("*")[1]) < r)
