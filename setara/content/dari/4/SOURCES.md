@@ -82,7 +82,7 @@ For the reviewer (version 2):
 6. Fits or Not? has only the answers yes and no, ten each; that is the form.
 
 Checked for version 2: `validate --only fa-4` ok, 0 warnings, 0 untranslated
-lines (456 English lines added to `i18n/dari4.csv`); silent build ok;
+lines (448 English lines added to `i18n/dari4.csv`); silent build ok;
 `tests/fuzz_rounds.lua` on the scratch build ends "fuzz ok"; screenshots of
 the three new games, a sorter round and an Action Words round looked at; all
 new tiles, sorter cards and choice cards measured at 30 px or more. Not
