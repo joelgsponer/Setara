@@ -4,6 +4,7 @@ local audio = require("core.audio")
 local sfx = require("core.sfx")
 local store = require("core.store")
 local ui = require("core.ui")
+local touch = require("core.touch")
 
 app = { stack = {}, time = 0, play_seconds = 0, version = require("version") }
 
@@ -52,8 +53,9 @@ end
 -- LÖVE callbacks ----------------------------------------------------------------
 
 function love.load()
+  touch.init()
   love.graphics.setDefaultFilter("linear", "linear")
-  love.mouse.setVisible(false)
+  love.mouse.setVisible(touch.on and love.system.getOS() ~= "Android" and love.system.getOS() ~= "iOS")
   canvas = love.graphics.newCanvas(ui.W, ui.H)
   sfx.load()
   store.load()
@@ -120,6 +122,21 @@ local function run_script(dt)
     if top and top.step and top.happy then input.fake("start") coroutine.yield(0.5) end
   end
   -- Jump straight into a round: start_round("en-1", "word_stall", 1, { pair = true })
+  -- the whole window, with the touch buttons (shots show the picture only)
+  api.window_shot = function(name)
+    love.filesystem.createDirectory("shots")
+    love.graphics.captureScreenshot("shots/" .. name .. ".png")
+    coroutine.yield(0.2)
+  end
+  api.touch = function(button, hold)
+    for _, b in ipairs(touch.buttons) do
+      if b.name == button then
+        love.touchpressed("t" .. button, b.x, b.y)
+        if not hold then love.touchreleased("t" .. button) end
+      end
+    end
+    coroutine.yield(0.1)
+  end
   api.start_round = function(pack_id, game_id, index, opts)
     local packs = require("core.packs")
     local pack = assert(packs.list[pack_id], "no pack " .. tostring(pack_id))
@@ -207,13 +224,24 @@ function love.draw()
     shot_name = nil
   end
   local w, h = love.graphics.getDimensions()
-  local s = math.min(w / ui.W, h / ui.H)
-  love.graphics.clear(0, 0, 0)
+  if w ~= touch.w or h ~= touch.h then touch.layout(w, h) end
+  local s = touch.canvas.s
+  love.graphics.clear(touch.on and 0.23 or 0, touch.on and 0.18 or 0, touch.on and 0.18 or 0)
   -- "Brightness" dims the picture; the backlight itself belongs to the firmware.
   local b = math.max(0.3, math.min(1, tonumber(store.progress and store.progress.settings.brightness) or 1))
   love.graphics.setColor(b, b, b)
-  love.graphics.draw(canvas, (w - ui.W * s) / 2, (h - ui.H * s) / 2, 0, s, s)
+  love.graphics.draw(canvas, touch.canvas.x, touch.canvas.y, 0, s, s)
+  love.graphics.setColor(1, 1, 1)
+  touch.draw()
 end
+
+-- Fingers on the glass (phones, tablets). A mouse does the same on a PC.
+function love.touchpressed(id, x, y) touch.pressed(id, x, y) end
+function love.touchreleased(id) touch.released(id) end
+function love.touchmoved(id, x, y) touch.moved(id, x, y) end
+function love.mousepressed(x, y, _, istouch) if touch.on and not istouch then touch.pressed("mouse", x, y) end end
+function love.mousereleased(_, _, _, istouch) if not istouch then touch.released("mouse") end end
+function love.resize(w, h) touch.layout(w, h) end
 
 function love.keypressed(key)
   if key == "escape" then love.event.quit() end
