@@ -118,6 +118,7 @@ function E:input(b)
     self.phase, self.t, self.picked = "right", 0, b
     sfx.play("right")
     audio.stop()
+    if not self.quiz.tried and self.ctx.solved then self.ctx.solved(self.item) end
     self.quiz:right()
     self.ctx.next_player()
     local to = self:place()
@@ -127,6 +128,7 @@ function E:input(b)
     self.shake, self.shake_t = b, 0.4
     sfx.play("wrong")
     self.quiz:wrong()
+    if self.ctx.missed then self.ctx.missed(self.item) end
     self.misses = (self.misses or 0) + 1
     -- as in Listen and Pick: the second miss brings the explanation and shows the way
     if self.misses >= 2 then self.show_right = true end

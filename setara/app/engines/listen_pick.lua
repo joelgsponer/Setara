@@ -62,6 +62,7 @@ function E:input(b)
     self.phase, self.t, self.picked = "right", 0, b
     sfx.play("right")
     audio.stop()
+    if not self.quiz.tried and self.ctx.solved then self.ctx.solved(self.item) end
     self.quiz:right()
     self.ctx.next_player()
   else
@@ -69,6 +70,7 @@ function E:input(b)
     self.shake, self.shake_t = b, 0.4
     sfx.play("wrong")
     self.quiz:wrong()
+    if self.ctx.missed then self.ctx.missed(self.item) end
     self.misses = (self.misses or 0) + 1
     -- A wrong answer is answered: the first time the question is said again,
     -- the second time the explanation comes by itself and the right card is

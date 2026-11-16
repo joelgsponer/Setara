@@ -45,6 +45,8 @@ One shared record per device. There is no per-child record.
 | `teacher_lesson` | The number of the teacher's current lesson | teacher mode |
 | `tutorial_done` | The button tutorial has been seen | `scenes/tutorial.lua` |
 | `calibration_seen` | The button calibration has been offered | `scenes/calibrate.lua` |
+| `missed` | Up to 300 question keys (round and answer) that were answered wrong on this device, so that they come back first in the warm-up; removed when answered right at the first try. Nothing about who | `scenes/play.lua` |
+| `teacher_pack`, `teacher_lessons` | Which lesson book and lesson the teacher is on | `teacher/common.lua` |
 | `starts` | How often the app has been started. Used only to seed the random numbers, because handhelds without a clock battery start at the same "time" every day | `main.lua` |
 
 ### stats.json: anonymous counts

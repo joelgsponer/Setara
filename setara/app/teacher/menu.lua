@@ -43,6 +43,10 @@ function Menu:input(b)
     app.pop()
   elseif b == "start" then
     app.push(require("scenes.pause").new({ teacher = true }))
+  elseif b == "y" then
+    sfx.play("right")
+    store.count_teacher("open_class")
+    app.push(require("teacher.class").new())
   elseif self.row == 0 then
     local n = T.lesson_number()
     if not n then self.row = 1 return end
@@ -155,6 +159,7 @@ function Menu:draw()
     local s = T.S(tool.key)
     if s.fa and s.fa[1] then text.centered("fabold", s.fa[1], x + 4, y + 60, 192, 40, 24) end
   end
+  T.hints({ { "y", "class_title" } })
 end
 
 return Menu

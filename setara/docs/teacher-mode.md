@@ -344,3 +344,25 @@ teachers and should change it freely.
 Things the trainer should say plainly: the device does not replace her; the
 timer is not a test; a wrong button never breaks anything; B always goes
 back.
+
+## My class (Y in the teacher menu)
+
+One list, most useful first:
+
+- **Today's lesson**: the learner games of the unit that belongs to the
+  lesson on the lesson row. A starts the round on the loudspeaker, so the
+  class can play it together right after the lesson.
+- **Hard for the class**: the rounds with the fewest first-try answers on
+  this device (at least eight answers given, under 80 % right), with a bar.
+  A starts the round again.
+- **Quick Check**: the lessons whose check went worst, with a bar.
+
+These are counts for the device, never for a child.
+
+## Teacher's guide (Teacher's Course, third tab)
+
+For every subject and level a guide in chapters: the goal, what the teacher
+should know, how to explain it, figures, examples, common mistakes, class
+activities, the games that practise it, how to check. A reads the page
+aloud, left and right turn pages. The same guides print with
+`python3 tools/guide_book.py` (add `--english` for reviewers).

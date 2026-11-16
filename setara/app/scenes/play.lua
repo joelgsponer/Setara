@@ -33,6 +33,26 @@ local function make_ctx(self, pack)
     ctx.player = self.player
   end
   ctx.player = self.player
+  -- What this device's children got wrong comes back first in the warm-ups,
+  -- until it is answered right at the first try. Anonymous: a list of
+  -- question keys, nothing about who.
+  local function key(item)
+    return tostring(item.round or self.round_id) .. "|" .. tostring(item.answer)
+  end
+  ctx.missed = function(item)
+    if type(item) ~= "table" or item.answer == nil then return end
+    local m = store.progress.missed
+    if type(m) ~= "table" then m = {} store.progress.missed = m end
+    local n = 0
+    for _ in pairs(m) do n = n + 1 end
+    if m[key(item)] or n < 300 then m[key(item)] = math.min(3, (m[key(item)] or 0) + 1) end
+  end
+  ctx.solved = function(item)
+    local m = store.progress.missed
+    if type(m) ~= "table" or type(item) ~= "table" then return end
+    local k = key(item)
+    if m[k] then m[k] = m[k] > 1 and m[k] - 1 or nil end
+  end
   return ctx
 end
 
@@ -52,6 +72,15 @@ function Play:make_warmup()
     end
     if #pool >= 5 then
       Quiz.shuffle(pool)
+      -- what was answered wrong before comes first
+      local missed = type(store.progress.missed) == "table" and store.progress.missed or {}
+      local first, rest = {}, {}
+      for _, entry in ipairs(pool) do
+        local hit = missed[tostring(entry.round) .. "|" .. tostring(entry.answer)]
+        if hit and #first < 3 then first[#first + 1] = entry else rest[#rest + 1] = entry end
+      end
+      pool = first
+      for _, entry in ipairs(rest) do pool[#pool + 1] = entry end
       local items, seen = {}, {}
       for _, entry in ipairs(pool) do
         if entry.answer ~= nil and not seen[entry.answer] and #items < 5 then
