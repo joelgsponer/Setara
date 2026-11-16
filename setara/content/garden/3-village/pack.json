@@ -1,0 +1,129 @@
+{
+ "pack": "garden-3-village",
+ "subject": "garden",
+ "level": 3,
+ "version": 1,
+ "optional": true,
+ "title_en": "My village: staying well, land and weather",
+ "title_fa": "قریه من: صحت، زمین و هوا",
+ "games": [
+  {
+   "id": "village_health",
+   "engine": "story",
+   "letter": "a",
+   "title_en": "Staying Well",
+   "title_fa": "قصه‌های صحت قریه",
+   "intro_fa": "چهار قصه: میکروب، واکسین، ریزش و تب، و اسهال. اول گوش کن و یاد بگیر، بعد به سوال‌ها جواب بده.",
+   "icon": "vaccine",
+   "sheet": "village_health.csv"
+  },
+  {
+   "id": "village_safe",
+   "engine": "story",
+   "letter": "b",
+   "title_en": "Safe Outdoors",
+   "title_fa": "بی‌خطر در بیرون",
+   "intro_fa": "چهار قصه: سرک، آب، گرمی و سردی و توفان، و حیوان‌ها و گم شدن. اول گوش کن و یاد بگیر، بعد به سوال‌ها جواب بده.",
+   "icon": "hold_hand",
+   "sheet": "village_safe.csv"
+  },
+  {
+   "id": "village_land",
+   "engine": "story",
+   "letter": "c",
+   "title_en": "Land, Water and Weather",
+   "title_fa": "زمین، آب و هوا",
+   "intro_fa": "شش قصه: خاک، کود، سال دهقان، سرچشمه‌های آب، آب پاک، و هوا. اول گوش کن و یاد بگیر، بعد به سوال‌ها جواب بده.",
+   "icon": "water_spring",
+   "sheet": "village_land.csv"
+  },
+  {
+   "id": "village_riddles",
+   "engine": "listen_pick",
+   "letter": "d",
+   "title_en": "What Am I?",
+   "title_fa": "من چه هستم؟",
+   "intro_fa": "چیستان را بشنو و تصویر درست را انتخاب کن.",
+   "icon": "worm",
+   "sheet": "village_riddles.csv",
+   "draw": 8
+  },
+  {
+   "id": "village_path",
+   "engine": "journey",
+   "letter": "e",
+   "title_en": "The Village Path",
+   "title_fa": "راه قریه",
+   "intro_fa": "به هر سوال جواب درست بده و در راه قریه پیش برو.",
+   "icon": "road",
+   "sheet": "village_path.csv",
+   "draw": 8
+  },
+  {
+   "id": "village_baskets",
+   "engine": "sorter",
+   "letter": "f",
+   "title_en": "Village Baskets",
+   "title_fa": "سبدهای قریه",
+   "intro_fa": "گپ را بشنو و هر تصویر را در سبد درست بینداز. هر دور سبدهای دیگر دارد.",
+   "icon": "bucket_clean",
+   "sheet": "village_baskets.csv",
+   "draw": 8
+  },
+  {
+   "id": "village_true",
+   "engine": "sorter",
+   "letter": "g",
+   "title_en": "True or Not",
+   "title_fa": "درست است یا نه؟",
+   "intro_fa": "گپ را بشنو. درست را در سبد سبز بینداز و نادرست را در سبد سرخ.",
+   "icon": "yes",
+   "sheet": "village_true.csv",
+   "draw": 8
+  },
+  {
+   "id": "village_order",
+   "engine": "builder",
+   "letter": "h",
+   "title_en": "First and Next",
+   "title_fa": "اول چه، بعد چه؟",
+   "intro_fa": "گپ را بشنو و تصویرها را به ترتیب درست بمان.",
+   "icon": "sowing",
+   "sheet": "village_order.csv",
+   "draw": 4
+  },
+  {
+   "id": "village_pairs",
+   "engine": "pairs",
+   "letter": "i",
+   "title_en": "Village Pairs",
+   "title_fa": "جوره‌های قریه",
+   "intro_fa": "دو تصویر را که با هم جور است پیدا کن.",
+   "icon": "sickle",
+   "sheet": "village_pairs.csv",
+   "draw": 5
+  },
+  {
+   "id": "village_catch",
+   "engine": "catch",
+   "letter": "j",
+   "title_en": "Quick Catch",
+   "title_fa": "زود بگیر",
+   "intro_fa": "گپ را بشنو و تنها چیزهای درست را بگیر.",
+   "icon": "basket",
+   "sheet": "village_catch.csv",
+   "draw": 4
+  },
+  {
+   "id": "village_odd",
+   "engine": "listen_pick",
+   "letter": "k",
+   "title_en": "Odd One Out",
+   "title_fa": "کدام یک جور نیست؟",
+   "intro_fa": "همه تصویرها غیر از یکی با هم جور است. خوب گوش کن و آن یکی را که جور نیست پیدا کن.",
+   "icon": "scarecrow",
+   "sheet": "village_odd.csv",
+   "draw": 8
+  }
+ ]
+}

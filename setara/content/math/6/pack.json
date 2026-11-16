@@ -1,0 +1,144 @@
+{
+ "pack": "math-6",
+ "subject": "math",
+ "level": 6,
+ "version": 1,
+ "title_en": "Math 6: Percent, Ratio and Averages",
+ "title_fa": "ریاضی ۶: فیصد، نسبت و اوسط",
+ "games": [
+  {
+   "id": "count_the_flock",
+   "engine": "listen_pick",
+   "letter": "a",
+   "title_en": "Count the Flock",
+   "title_fa": "رمه را بشمار",
+   "intro_fa": "فیصد یعنی از صد. بشمار و فیصد درست را انتخاب کن.",
+   "icon": "sheep",
+   "v1": true,
+   "sheet": "count_the_flock.csv",
+   "draw": 8
+  },
+  {
+   "id": "number_hop",
+   "engine": "journey",
+   "letter": "b",
+   "title_en": "Number Hop",
+   "title_fa": "خیز عددها",
+   "intro_fa": "حساب کن و جواب درست را انتخاب کن.",
+   "icon": "frog",
+   "v1": true,
+   "sheet": "number_hop.csv",
+   "draw": 8
+  },
+  {
+   "id": "market_scales",
+   "engine": "market",
+   "letter": "c",
+   "title_en": "Market Scales",
+   "title_fa": "ترازوی بازار",
+   "intro_fa": "حساب کن و با سکه‌ها و نوت‌ها پول بده.",
+   "icon": "scales",
+   "sheet": "market_scales.csv",
+   "draw": 8
+  },
+  {
+   "id": "carpet_weaver",
+   "engine": "builder",
+   "letter": "d",
+   "title_en": "Carpet Weaver",
+   "title_fa": "قالین‌باف",
+   "intro_fa": "به ترتیب درست بچین.",
+   "icon": "carpet",
+   "sheet": "carpet_weaver.csv",
+   "draw": 8
+  },
+  {
+   "id": "share_the_bread",
+   "engine": "sorter",
+   "letter": "e",
+   "title_en": "Share the Bread",
+   "title_fa": "نان را تقسیم کن",
+   "intro_fa": "هر چیز را در سبد درست بینداز.",
+   "icon": "bread",
+   "sheet": "share_the_bread.csv",
+   "draw": 8
+  },
+  {
+   "id": "shape_mason",
+   "engine": "listen_pick",
+   "letter": "f",
+   "title_en": "Shape Mason",
+   "title_fa": "گلکار شکل‌ها",
+   "intro_fa": "نقشه و پیاله اندازه‌گیری را ببین و حساب کن.",
+   "icon": "brick",
+   "sheet": "shape_mason.csv",
+   "draw": 8
+  },
+  {
+   "id": "twin_tiles",
+   "engine": "pairs",
+   "letter": "g",
+   "title_en": "Twin Tiles",
+   "title_fa": "جوره‌ها",
+   "intro_fa": "دو کارت را که با هم جور است پیدا کن.",
+   "icon": "box",
+   "sheet": "twin_tiles.csv",
+   "draw": 6
+  },
+  {
+   "id": "number_rain",
+   "engine": "catch",
+   "letter": "h",
+   "title_en": "Number Rain",
+   "title_fa": "باران عددها",
+   "intro_fa": "گوش کن و فقط آنهایی را بگیر که درست هستند.",
+   "icon": "basket",
+   "sheet": "number_rain.csv",
+   "draw": 8
+  },
+  {
+   "id": "tables_and_charts",
+   "engine": "listen_pick",
+   "letter": "j",
+   "title_en": "Tables and Charts",
+   "title_fa": "جدول و گراف",
+   "intro_fa": "گراف را ببین و اوسط را پیدا کن.",
+   "icon": "chart_bars_1",
+   "sheet": "tables_and_charts.csv",
+   "draw": 8
+  },
+  {
+   "id": "number_riddles",
+   "engine": "listen_pick",
+   "letter": "l",
+   "title_en": "Number Riddles",
+   "title_fa": "چیستان عددها",
+   "intro_fa": "خوب فکر کن و جواب درست را انتخاب کن.",
+   "icon": "star",
+   "sheet": "number_riddles.csv",
+   "draw": 8
+  },
+  {
+   "id": "true_or_false",
+   "engine": "sorter",
+   "letter": "m",
+   "title_en": "True or False",
+   "title_fa": "درست یا غلط",
+   "intro_fa": "درست است یا غلط؟ در سبد خودش بینداز.",
+   "icon": "yes",
+   "sheet": "true_or_false.csv",
+   "draw": 8
+  },
+  {
+   "id": "cooking_pot",
+   "engine": "listen_pick",
+   "letter": "n",
+   "title_en": "The Cooking Pot",
+   "title_fa": "دیگ آشپزی",
+   "intro_fa": "نسبت را پیدا کن و حساب کن.",
+   "icon": "pot",
+   "sheet": "cooking_pot.csv",
+   "draw": 8
+  }
+ ]
+}

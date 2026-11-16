@@ -1,0 +1,24 @@
+round,intro_fa,say_en,say_fa,targets,others,need,help_fa
+01,زود بگیر: صحت. گپ را بشنو و تنها چیزهایی را بگیر که با آن جور است.,,هر چه راه میکروب را می‌بندد بگیر.,soap|water_boiling|food_covered|cough_elbow|water_covered,fly|dirty_hands|food_uncovered|garbage,5,صابون، جوش دادن آب، سرپوش خوراک و سرفه در آرنج راه میکروب را می‌بندد.
+01,,,هر چه میکروب می‌آورد بگیر.,fly|dirty_hands|garbage|water_puddle|food_uncovered,soap|water_boiled|food_covered|wash_hands,5,مگس، دست چتل، کثافات، آب ایستاده و خوراک سرباز میکروب دارد.
+01,,,برای کسی که ریزش دارد، کارهای درست را بگیر.,bed|drink|cough_elbow|wash_hands|food_bowl,run|fa_medicine|ball|kite,5,دم گرفتن، نوشیدن، خوراک، پوشاندن سرفه و دست شستن. دوا را تنها کارمند صحی می‌گوید.
+01,,,نشانه‌های خطر را بگیر.,fa_breath_hard|fa_cannot_drink|fa_hard_to_wake|fa_fit|fa_fever_days,happy|play|eating|run,5,به سختی نفس کشیدن، نوشیده نتوانستن، به سختی بیدار شدن، تشنج، و تب بیشتر از دو سه روز. همین حالا کلینیک.
+01,,,برای طفلی که اسهال دارد، چیزهای درست را بگیر.,ors_packet|ors_sip|food_bowl|wash_hands,soda|candy|fa_medicine|bowl_empty,4,او آر اس، خوراک و دست پاک. نوشابه، شیرینی و دوای خودسر نه.
+02,زود بگیر: بی‌خطر در بیرون. گپ را بشنو و تنها چیزهایی را بگیر که با آن جور است.,,کارهای درست در سرک را بگیر.,look|hold_hand|stop|lamp,run|ball|play|kite,4,ایستاد می‌شویم، می‌بینیم، دست خوردتر را می‌گیریم، و در تاریکی چراغ می‌گیریم.
+02,,,جاهایی را بگیر که طفل خورد در آن هیچ وقت تنها نمی‌ماند.,river|pond|well_open|fast_water|stream,bed|house|school|yard,5,طفل خورد در کنار دریا، جوی، حوض و چاه هیچ وقت تنها نمی‌ماند.
+02,,,چیزهای روز گرم را بگیر.,hat|water|rest|drink,coat|socks|blanket|fire,4,در گرمی سر را می‌پوشانیم، آب می‌نوشیم و در سایه دم می‌گیریم.
+02,,,چیزهای روز سرد را بگیر.,coat|socks|blanket|scarf|shoes,sandals|ice_cream|fan|umbrella,5,در سردی کالای گرم و خشک می‌پوشیم.
+02,,,وقت رعد و برق از این‌ها دور می‌شویم: درخت تنها، آب و سر کوه. آنها را بگیر.,tree|river|mountain|pond,house|bed|carpet|pillow,4,زیر درخت تنها، کنار آب و سر کوه خطر دارد. در خانه می‌مانیم.
+02,,,به این‌ها نزدیک نمی‌شویم: مار، گرگ، روباه و سگ ناشناس. آنها را بگیر.,snake|wolf|fox|dog,chick|lamb|butterfly|sparrow,4,از مار، حیوان وحشی و سگ ناشناس آرام دور می‌شویم.
+03,زود بگیر: خاک و کشت. گپ را بشنو و تنها چیزهایی را بگیر که با آن جور است.,,هر چه در چقوری کود می‌پوسد بگیر.,peel|leaf_yellow|grass|leaf,plastic_bag|bottle|can|iron_nail,4,پوست ترکاری، برگ و سبزه می‌پوسد. پلاستیک، شیشه و آهن نه.
+03,,,اسباب کار دهقان را بگیر.,shovel|sickle|tractor|sack,pen|comb|toothbrush|book,4,بیل، داس، تراکتور و بوجی در کشت به کار می‌آید.
+03,,,غله و دانه را بگیر.,wheat|corn|rice|seed,apple|grapes|carrot|onion,4,گندم، جواری و برنج غله است.
+03,,,میوه‌های درخت را بگیر.,apple|apricot|mulberry|walnut|pear,potato|carrot|onion|wheat,5,سیب، زردآلو، توت، چارمغز و ناک روی درخت کلان می‌شود.
+03,,,هر چه خاک تپه را نگه می‌کند بگیر.,sapling|root|grass|tree,axe|tree_stump|goat_sapling|plastic_bag,4,نهال، ریشه، سبزه و درخت خاک را نگه می‌کند.
+03,,,هر چه زیر خاک کلان می‌شود بگیر.,potato|carrot|onion|turnip|radish,apple|wheat|corn|tomato,5,کچالو، زردک، پیاز، شلغم و ملی زیر خاک است.
+04,زود بگیر: آب و هوا. گپ را بشنو و تنها چیزهایی را بگیر که با آن جور است.,,سرچشمه‌های آب را بگیر.,water_spring|well|river|stream,stone|fire|sand|tree,4,چشمه، چاه، دریا و جوی به ما آب می‌دهد.
+04,,,هر چه از ابر می‌بارد بگیر.,rain|snow|hail,stone|leaf_yellow|sand|feather,3,باران، برف و ژاله از ابر می‌بارد.
+04,,,هر چه آب را پاک نگه می‌کند بگیر.,well_covered|latrine_far|water_covered|bucket_clean|water_ladle,garbage_water|latrine_near_well|well_open|bucket_dirty,5,چاه سرپوشیده، تشناب دور، ظرف سرپوش‌دار، سطل پاک و چمچه پاک.
+04,,,هر چه آب را چتل می‌کند بگیر.,garbage_water|latrine_near_well|plastic_bag|animals_water,well_covered|water_covered|bucket_clean|latrine_far,4,کثافات، تشناب نزدیک چاه، پلاستیک، و حیوان در جای آب گرفتن.
+04,,,نشانه‌های توفان را بگیر.,storm|lightning|wind|cloud,sun|rainbow|star|moon,4,ابر سیاه، باد تیز و رعد و برق نشانه توفان است.
+04,,,چیزهای زمستان را بگیر.,snow|ice|coat|snowman|firewood,blossom|apricot|butterfly|fan,5,برف، یخ، کالای گرم و هیزم از زمستان است.

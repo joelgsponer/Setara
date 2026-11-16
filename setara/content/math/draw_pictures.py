@@ -4,6 +4,9 @@ the fraction circles (frac_<k>_<n>), the third of a naan and of a circle, the
 half, third and quarter of an orange and of a pomegranate (for sorting whole,
 half and quarter), and the charts of Tables and Charts, whose numbers come
 from CHARTS in generate.py so that picture and questions cannot drift apart.
+For level 6: the hundred squares (pct_<n>), the measuring cup filled to one
+of its marks (cup_marks_<k>) and the drawn maps of an invented village area
+(map_scale_<i>), from GRID_PCTS, CUP_MARKS and MAPS6 in generate.py.
 
     python3 content/math/draw_pictures.py            # draw what is missing
     python3 content/math/draw_pictures.py --force    # redraw this series
@@ -19,7 +22,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from generate import CHARTS, PIES4, PIES5  # noqa: E402
+from generate import CHARTS, CUP_MARKS, GRID_PCTS, MAPS6, PIES4, PIES5  # noqa: E402
 
 PICTURES = Path(__file__).resolve().parents[1] / "pictures"
 INK, BLUE, WHITE, CREAM, GREY = "#3b2f2f", "#3f7fbf", "#ffffff", "#fff6dc", "#b9ae9b"
@@ -154,6 +157,62 @@ def table(rows) -> str:
     return out
 
 
+YELLOW, RED, WATER = "#f2b705", "#e0483f", "#5da9d6"
+
+
+def hundred(n: int) -> str:
+    """A hundred square: ten rows of ten, the first n squares yellow, row by
+    row from the top (drawn as fig_math_pul_grid is). A wider gap after five
+    rows and five columns makes the tens and the fives easy to count."""
+    out = HEAD
+    for i in range(100):
+        row, col = divmod(i, 10)
+        x, y = 5 + col * 11.6 + (2 if col >= 5 else 0), 5 + row * 11.6 + (2 if row >= 5 else 0)
+        out += (f'<rect x="{n2(x)}" y="{n2(y)}" width="11.6" height="11.6" fill="{YELLOW if i < n else WHITE}" '
+                f'stroke="{INK}" stroke-width="1.5"/>\n')
+    out += f'<rect x="3.5" y="3.5" width="121" height="121" rx="3" fill="none" stroke="{INK}" stroke-width="3"/>\n</svg>\n'
+    return out
+
+
+def cup(k: int, marks: int) -> str:
+    """A clear measuring cup with `marks` marks and no digits, filled to mark k from the bottom."""
+    assert 1 <= k <= marks
+    top, bottom, step = 22, 114, 14
+    level = bottom - k * step
+    out = HEAD + GROUP
+    out += f'<path d="M30 12H98V{bottom - 6}a8 8 0 0 1-8 8H38a8 8 0 0 1-8-8z" fill="{WHITE}"/>\n'
+    out += f'<path d="M32.5 {level}H95.5V{bottom - 7}a6 6 0 0 1-6 6H38.5a6 6 0 0 1-6-6z" fill="{WATER}" stroke="none"/>\n'
+    out += f'<path d="M32.5 {level}H95.5" fill="none" stroke="#3f7fbf" stroke-width="3"/>\n'
+    for j in range(1, marks + 1):
+        y = bottom - j * step
+        out += f'<path d="M30 {y}H{58 if j % 2 == 0 else 50}" fill="none" stroke-width="4"/>\n'
+    out += f'<path d="M30 12H98V{bottom - 6}a8 8 0 0 1-8 8H38a8 8 0 0 1-8-8z" fill="none"/>\n'
+    out += '<path d="M98 34h10a10 10 0 0 1 10 10v22a10 10 0 0 1-10 10H98" fill="none"/>\n'
+    assert top <= level
+    return out + "</g>\n</svg>\n"
+
+
+def village_map(places, pieces) -> str:
+    """Three places on two straight roads. Each road is made of pieces of one
+    length, coloured in turn like a scale bar: a piece stands for one centimetre."""
+    (a, _, _), (b, _, _), (c, _, _) = places
+    across, down = pieces
+    icon = 34
+    piece = min(22, (128 - 8 - 2 * icon - 2) // max(across, down))   # as long as the square allows, the same on both roads
+    wide, high = 2 * icon + 2 + across * piece, 2 * icon + 2 + down * piece
+    ax, ay = (128 - wide) / 2, (128 - high) / 2
+    bx, cy = ax + icon + 1 + across * piece + 1, ay + icon + 1 + down * piece + 1
+    out = HEAD + f'<rect x="1.5" y="1.5" width="125" height="125" rx="6" fill="{CREAM}" stroke="{INK}" stroke-width="3"/>\n'
+    for j in range(across):
+        out += (f'<rect x="{n2(ax + icon + 1 + j * piece)}" y="{n2(ay + 12)}" width="{piece}" height="11" '
+                f'fill="{RED if j % 2 == 0 else WHITE}" stroke="{INK}" stroke-width="2.5"/>\n')
+    for j in range(down):
+        out += (f'<rect x="{n2(bx + 11.5)}" y="{n2(ay + icon + 1 + j * piece)}" width="11" height="{piece}" '
+                f'fill="{RED if j % 2 == 0 else WHITE}" stroke="{INK}" stroke-width="2.5"/>\n')
+    out += small(a, ax, ay, icon) + small(b, bx, ay, icon) + small(c, bx, cy, icon)
+    return out + "</svg>\n"
+
+
 def main() -> None:
     force = "--force" in sys.argv
     todo = {f"frac_{k}_{n}": pie(k, n) for k, n in sorted({kn for kn, _, _ in PIES4} | set(PIES5))}
@@ -164,6 +223,12 @@ def main() -> None:
             todo[f"{fruit}_{part}"] = fruit_piece(fruit, part)
     for name, rows in CHARTS.items():
         todo[name] = bars(rows) if "bars" in name else table(rows)
+    for n in GRID_PCTS:
+        todo[f"pct_{n}"] = hundred(n)
+    for k in range(1, CUP_MARKS + 1):
+        todo[f"cup_marks_{k}"] = cup(k, CUP_MARKS)
+    for name, (places, pieces) in MAPS6.items():
+        todo[name] = village_map(places, pieces)
     for name, svg in todo.items():
         path = PICTURES / f"{name}.svg"
         if path.exists() and not force:

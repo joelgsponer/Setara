@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generates the math packs (levels 1 to 5): every CSV sheet, pack.json and
+"""Generates the math packs (levels 1 to 6): every CSV sheet, pack.json and
 pictures.txt in this folder, and the English of every Dari text in them
 (content/i18n/math.csv, for the English mode of the app).
 
@@ -1807,6 +1807,8 @@ def village_round(s, level, rnd, intro, kinds: dict, hi, n=N):
 # ---------------------------------------------------------------------------
 
 def flock(level: int) -> Sheet:
+    if level == 6:
+        return flock6(level)
     if level >= 4:
         return flock45(level)
     s = Sheet(LP_COLS)
@@ -1949,6 +1951,8 @@ def flock(level: int) -> Sheet:
 # ---------------------------------------------------------------------------
 
 def hop(level: int) -> Sheet:
+    if level == 6:
+        return hop6(level)
     if level >= 4:
         return hop45(level)
     s = Sheet(LP_COLS)
@@ -2168,6 +2172,8 @@ COUNT_GOODS = GOODS + [("tomato", "بادنجان رومی"), ("orange", "مال
 
 
 def market(level: int) -> Sheet:
+    if level == 6:
+        return market6(level)
     if level >= 4:
         return market45(level)
     s = Sheet(MARKET_COLS)
@@ -2318,6 +2324,8 @@ def order_round(s, level, rnd, lo, hi, sizes=(4, 5), n=16, close=False):
 
 
 def weaver(level: int) -> Sheet:
+    if level == 6:
+        return weaver6(level)
     if level >= 4:
         return weaver45(level)
     s = Sheet(BUILDER_COLS)
@@ -2382,6 +2390,8 @@ I_COUNT_TRUE = tr("بشمار و بگو: درست است یا غلط؟", "Count 
 
 
 def sorter(level: int) -> Sheet:
+    if level == 6:
+        return sorter6(level)
     if level >= 4:
         return sorter45(level)
     s = Sheet(SORTER_COLS)
@@ -2465,6 +2475,8 @@ I_LENGTH_STORY = tr("قصه را گوش کن و درازی را حساب کن.",
 
 
 def mason(level: int) -> Sheet:
+    if level == 6:
+        return mason6(level)
     if level >= 4:
         return mason45(level)
     s = Sheet(LP_COLS)
@@ -3576,6 +3588,8 @@ def card_value(card: str, say: str):
 
 
 def pairs45(level: int) -> Sheet:
+    if level == 6:
+        return pairs6(level)
     s = Sheet(PAIRS_COLS)
 
     def B(rnd, gen, **kw):
@@ -3708,6 +3722,8 @@ NEED = 4
 
 
 def catch45(level: int) -> Sheet:
+    if level == 6:
+        return catch6(level)
     s = Sheet(CATCH_COLS)
 
     def rule(rnd, say, targets, others, help_fa, test):
@@ -4001,6 +4017,8 @@ CHART_ROUNDS = [["chart_bars_1", "chart_bars_3", "chart_bars_5"], ["chart_table_
 
 
 def charts5(level: int) -> Sheet:
+    if level == 6:
+        return charts6(level)
     s = Sheet(LP_COLS)
     for r, names in enumerate(CHART_ROUNDS):
         rnd = f"{r + 1:02d}"
@@ -4206,6 +4224,8 @@ I_EQUAL_VALUE = tr("عددی را پیدا کن که با این عدد مساو
 
 
 def riddles(level: int) -> Sheet:
+    if level == 6:
+        return riddles6(level)
     s = Sheet(LP_COLS)
 
     def B(rnd, gen, **kw):
@@ -4406,6 +4426,8 @@ def riddles(level: int) -> Sheet:
 # ---------------------------------------------------------------------------
 
 def truefalse(level: int) -> Sheet:
+    if level == 6:
+        return truefalse6(level)
     s = Sheet(SORTER_COLS)
 
     def B(rnd, gen, **kw):
@@ -4599,6 +4621,1431 @@ for _name, _rows in CHARTS.items():
 
 
 # ---------------------------------------------------------------------------
+# Level 6: percent, ratio, averages; profit and loss, a household budget,
+# measuring liquids, scale on a map
+# ---------------------------------------------------------------------------
+#
+# Percent is «فیصد» and written 25% in Western digits; a ratio is said «دو به
+# سه» (a fraction is «دو بر سه») and written 2:3; the mean is «اوسط»; profit
+# and loss «فایده» and «ضرر»; income and spending «عاید» and «مصرف»; saving
+# «پس‌انداز»; the scale of a map «مقیاس».
+#
+# Measuring a dose is arithmetic about measuring only. No medicine is named,
+# no amount is tied to an age or a weight, the amounts differ from question
+# to question, and every such question and its help say that the amount comes
+# from the health worker or the label (DOSE_RULE; check_answers6 asserts it).
+
+PCT = "فیصد"
+ML = "ملی" + Z + "لیتر"
+KM = "کیلومتر"
+L6_META: list[tuple[dict, object]] = []   # a row and a test that the finished row must pass
+DOSE_ROWS: list[dict] = []                # every row that speaks of medicine
+GRID_PCTS = [1, 5, 10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90, 95, 99, 100]   # the hundred squares that are drawn
+CUP_MARKS = 6                             # the measuring cup that is drawn has six marks
+DOSE_RULE = (tr("اندازه دوا را همیشه کارمند صحی یا نوشته روی بوتل می" + Z + "گوید، نه حساب ما.",
+                "The amount of medicine always comes from the health worker or the writing on the bottle, never from our own sums."),
+             "The amount of medicine always comes from the health worker or the writing on the bottle, never from our own sums.")
+# A drawn map: three places on two straight roads, each road made of pieces
+# that stand for one centimetre. Drawn from this list by draw_pictures.py.
+MAPS6 = {
+    "map_scale_1": ((("house", "خانه", "house"), ("well", "چاه", "well"), ("school", "مکتب", "school")), (3, 2)),
+    "map_scale_2": ((("school", "مکتب", "school"), ("bridge", "پل", "bridge"), ("shop", "دکان", "shop")), (2, 4)),
+    "map_scale_3": ((("tree", "درخت", "tree"), ("house", "خانه", "house"), ("clinic", "کلینیک", "clinic")), (4, 1)),
+    "map_scale_4": ((("shop", "دکان", "shop"), ("school", "مکتب", "school"), ("well", "چاه", "well")), (1, 3)),
+    "map_scale_5": ((("clinic", "کلینیک", "clinic"), ("tree", "درخت", "tree"), ("bridge", "پل", "bridge")), (4, 3)),
+    "map_scale_6": ((("well", "چاه", "well"), ("shop", "دکان", "shop"), ("house", "خانه", "house")), (2, 1)),
+}
+CHARTS.update({
+    "chart_bars_7": [("hen", "مرغ", 2), ("goat", "بز", 1), ("lamb", "بره", 3)],
+    "chart_table_7": [("tomato", "بادنجان رومی", 1), ("potato", "کچالو", 3), ("onion", "پیاز", 2)],
+    "chart_bars_8": [("walnut", "چهارمغز", 4), ("pomegranate", "انار", 3), ("orange", "مالته", 5)],
+    "chart_table_8": [("pencil", "پنسل", 3), ("notebook", "کتابچه", 5), ("book", "کتاب", 4)],
+})
+CHART_EXTRA.update({"chart_bars_7": "cow", "chart_table_7": "carrot", "chart_bars_8": "apple", "chart_table_8": "ball"})
+MEAN_CHARTS = [["chart_bars_2", "chart_bars_7", "chart_bars_8"], ["chart_table_1", "chart_table_7", "chart_table_8"],
+               ["chart_bars_5", "chart_table_3", "chart_table_5"]]
+
+_val5 = val
+
+
+def val(thing: str):   # noqa: F811
+    """As before, and the forms of level 6: a percent (t:25%), a ratio
+    (t:2:3, the value of the first number over the second), a hundred square
+    (pct_25)."""
+    m = re.fullmatch(r"pct_(\d+)", thing)
+    if m:
+        return Fraction(int(m.group(1)), 100)
+    if thing[:2] in ("t:", "f:"):
+        body = "".join(str(DARI_DIGITS.index(c)) if c in DARI_DIGITS else c for c in thing[2:])
+        m = re.fullmatch(r"(\d+)[%٪]", body)
+        if m:
+            return Fraction(int(m.group(1)), 100)
+        m = re.fullmatch(r"(\d+):(\d+)", body)
+        if m:
+            return Fraction(int(m.group(1)), int(m.group(2)))
+    return _val5(thing)
+
+
+def P(n: int) -> str:
+    """A percent tile."""
+    assert 0 < n <= 100, n
+    return f"t:{n}%"
+
+
+def R(a: int, b: int) -> str:
+    """A ratio tile."""
+    return f"t:{a}:{b}"
+
+
+def grid(n: int) -> str:
+    """The picture of a hundred square with n squares coloured."""
+    assert n in GRID_PCTS, n
+    return f"pct_{n}"
+
+
+def fa_pct(n: int) -> str:
+    return f"{fa(n)} {PCT}"
+
+
+def fa_ratio(a: int, b: int) -> str:
+    return f"{fa(a)} به {fa(b)}"
+
+
+def dec2(p: int) -> str:
+    """A percent as a decimal with two places: 25 -> 0.25."""
+    assert 0 < p < 100
+    return f"0.{p:02d}"
+
+
+def pct_frac(p: int) -> tuple[int, int]:
+    f = Fraction(p, 100)
+    return f.numerator, f.denominator
+
+
+def fa_list(nums) -> tuple[str, str]:
+    """'three, five and four' in both languages."""
+    nums = list(nums)
+    return "، ".join(fa(x) for x in nums[:-1]) + " و " + fa(nums[-1]), ", ".join(str(x) for x in nums[:-1]) + " and " + str(nums[-1])
+
+
+def ask(say, en, ans, wrong, help_fa, help_en, show="", key=None):
+    """One question of a level 6 pool, as a thing pick_even can spread. ans is
+    a whole number (the wrong numbers are then typical mistakes that near()
+    fills up) or a thing (the wrong things are candidates that pick_wrong sifts)."""
+    if key is None:
+        key = ans if isinstance(ans, int) else val(ans) if val(ans) is not None else ans
+    if not isinstance(key, (int, Fraction, str)):
+        key = repr(key)   # pick_even sorts numbers before names
+    return (tr(say, en), ans, tuple(wrong), tr(help_fa, help_en), show, key)
+
+
+def pool6(s, game, rnd, intro, parts, cap=2, dari=0, few=0, small="", lo=1):
+    """A listen-and-pick round of level 6. parts: [(candidates, how many)];
+    every dari-th numeric question gets Dari digits."""
+    def gen(rng):
+        picked = []
+        for cands, n in parts:
+            picked += pick_even(cands, n, rng, key=lambda c: c[5], cap=cap)
+        rng.shuffle(picked)
+        for i, (say, ans, wrong, help_fa, show, _) in enumerate(picked):
+            if isinstance(ans, int):
+                sc = "D" if dari and i % dari == dari - 1 else "W"
+                prefer = [w for w in wrong if isinstance(w, int) and w >= lo]
+                wr = near(ans, rng, lo, 10_000_000, prefer)
+                row = lp(s, rnd, intro, say, num(ans, sc), [num(x, sc) for x in wr], show=show, help_fa=help_fa)
+                CHECK_META.append((row, Fraction(ans)))
+            elif val(ans) is not None:
+                lp(s, rnd, intro, say, ans, pick_wrong(ans, wrong), show=show, help_fa=help_fa, truth=lambda c, a=ans: val(c) == val(a))
+            else:
+                wr = [w for w in uniq(wrong) if w != ans][:3]
+                lp(s, rnd, intro, say, ans, wr, show=show, help_fa=help_fa, truth=lambda c, a=ans: c == a)
+    build(s, 6, game, rnd, gen, few=few, small=small)
+
+
+def pct_of(p: int, n: int) -> tuple[str, str, int]:
+    """The spoken way to p percent of n, and the result."""
+    assert (p * n) % 100 == 0, (p, n)
+    r = p * n // 100
+    if p == 100:
+        return f"صد {PCT} یعنی همه. جواب {fa(n)} است.", f"100 percent means all of it. The answer is {n}.", r
+    if p == 50:
+        return f"پنجاه {PCT} یعنی نیم. نیم {fa(n)}، {fa(r)} است.", f"50 percent means half. Half of {n} is {r}.", r
+    if p == 25:
+        return (f"بیست و پنج {PCT} یعنی چارک. {fa(n)} تقسیم چهار مساوی {fa(r)}.",
+                f"25 percent means a quarter. {n} divided by 4 equals {r}.", r)
+    if p == 75:
+        q = n // 4
+        return (f"هفتاد و پنج {PCT} یعنی سه چارک. چارک {fa(n)}، {fa(q)} است. سه ضرب {fa(q)} مساوی {fa(r)}.",
+                f"75 percent means three quarters. A quarter of {n} is {q}. 3 times {q} equals {r}.", r)
+    if p == 10:
+        return (f"ده {PCT} یعنی یک حصه از ده حصه. {fa(n)} تقسیم ده مساوی {fa(r)}.",
+                f"10 percent means one part out of 10. {n} divided by 10 equals {r}.", r)
+    if p == 20:
+        return (f"بیست {PCT} یعنی یک حصه از پنج حصه. {fa(n)} تقسیم پنج مساوی {fa(r)}.",
+                f"20 percent means one part out of 5. {n} divided by 5 equals {r}.", r)
+    if p % 10 == 0 and n % 10 == 0:
+        t = n // 10
+        return (f"اول ده {PCT}: {fa(n)} تقسیم ده مساوی {fa(t)}. {fa_pct(p)}، {fa(p // 10)} تا ده {PCT} است: {fa(p // 10)} ضرب {fa(t)} مساوی {fa(r)}.",
+                f"First 10 percent: {n} divided by 10 equals {t}. {p} percent is {p // 10} times 10 percent: {p // 10} times {t} equals {r}.", r)
+    assert p % 20 == 0 and n % 5 == 0, (p, n)
+    u = n // 5
+    return (f"اول بیست {PCT}: {fa(n)} تقسیم پنج مساوی {fa(u)}. {fa_pct(p)}، {fa(p // 20)} تا بیست {PCT} است: {fa(p // 20)} ضرب {fa(u)} مساوی {fa(r)}.",
+            f"First 20 percent: {n} divided by 5 equals {u}. {p} percent is {p // 20} times 20 percent: {p // 20} times {u} equals {r}.", r)
+
+
+def pct_wrong(p: int, n: int) -> list[int]:
+    """What children typically answer instead of p percent of n."""
+    r = p * n // 100
+    return [n - p if n > p else None, p if p != r else None, n // p if n % p == 0 else None, r * 10, r // 10 if r % 10 == 0 else None, n - r if n != 2 * r else None]
+
+
+def near_pcts(n: int) -> list[str]:
+    """Percent tiles that could be taken for n percent."""
+    xs = [100 - n, n + 10, n - 10, n * 10, n // 10 if n % 10 == 0 else 0, n + 5, n - 5, n + 20, n - 20, n + 1, n - 1, 50, 25]
+    return [P(x) for x in uniq(xs) if 0 < x <= 100 and x != n]
+
+
+# -- Count the Flock: what a percent is ---------------------------------------
+
+I_PCT_GRID = tr("صد خانه را ببین. فیصد یعنی «از صد»: خانه" + Z + "های رنگ" + Z + "شده را بشمار.",
+                "Look at the hundred squares. Percent means \"out of a hundred\": count the coloured squares.")
+I_PCT_HEAR = tr("فیصد یعنی از صد. گوش کن و فیصد را پیدا کن.", "Percent means out of a hundred. Listen and find the percent.")
+I_PCT_FRAC = tr("هر فیصد یک کسر است. فیصد و کسر مساوی آن را پیدا کن.", "Every percent is a fraction. Find the percent and the fraction equal to it.")
+I_PCT_DEC = tr("هر فیصد یک عدد اعشاری است. فیصد و عدد اعشاری مساوی آن را پیدا کن.", "Every percent is a decimal number. Find the percent and the decimal number equal to it.")
+I_PCT_GROUP = tr("بشمار و فیصد دسته را حساب کن.", "Count and work out the percent of the group.")
+I_PCT_OUTOF = tr("چند از چند؟ فیصد آن را پیدا کن.", "How many out of how many? Find its percent.")
+
+# "k out of a hundred": the sentence, with its English, for round 2
+HUNDRED_STORIES = [
+    (lambda k: f"از صد گوسفند رمه، {fa(k)} گوسفند سیاه است. چند {PCT} رمه سیاه است؟", lambda k: f"Out of the 100 sheep of the flock, {k} are black. What percent of the flock is black?"),
+    (lambda k: f"در قریه صد خانه است. {fa(k)} خانه چاه دارد. چند {PCT} خانه{Z}ها چاه دارند؟", lambda k: f"There are 100 houses in the village. {k} have a well. What percent of the houses have a well?"),
+    (lambda k: f"در مکتب صد شاگرد است. {fa(k)} نفر آنها دختر هستند. چند {PCT} شاگردان دختر هستند؟", lambda k: f"There are 100 pupils in the school. {k} of them are girls. What percent of the pupils are girls?"),
+    (lambda k: f"دهقان صد نهال شاند. {fa(k)} نهال سبز شد. چند {PCT} نهال{Z}ها سبز شد؟", lambda k: f"The farmer planted 100 saplings. {k} grew. What percent of the saplings grew?"),
+    (lambda k: f"صد افغانی داشتی و {fa(k)} افغانی را خرج کردی. چند {PCT} پولت را خرج کردی؟", lambda k: f"You had 100 afghani and spent {k} afghani. What percent of your money did you spend?"),
+    (lambda k: f"در مکتب صد شاگرد است. {fa(k)} نفر آنها بچه هستند. چند {PCT} شاگردان بچه هستند؟", lambda k: f"There are 100 pupils in the school. {k} of them are boys. What percent of the pupils are boys?"),
+]
+# "k out of m": Dari, English, and whether the story makes sense with these numbers
+def _isare(k: int) -> str:
+    return "is" if k == 1 else "are"
+
+
+_few = lambda m, k: 2 * k <= m          # noqa: E731  (a small part: what broke, who stayed at home)
+_class = lambda m, k: m >= 20 and 3 * m <= 10 * k <= 7 * m   # noqa: E731  (girls and boys of one class)
+OUTOF_STORIES = [
+    (lambda m, k: f"از {fa(m)} سیب، {fa(k)} سیب خراب است. چند {PCT} سیب{Z}ها خراب است؟", lambda m, k: f"Out of {m} apples, {k} went bad. What percent of the apples went bad?", _few),
+    (lambda m, k: f"در صنف {fa(m)} شاگرد است. {fa(k)} نفر امروز نیامده است. چند {PCT} شاگردان نیامده است؟", lambda m, k: f"There are {m} pupils in the class. {k} did not come today. What percent of the pupils did not come?", lambda m, k: m >= 20 and 4 * k <= m),
+    (lambda m, k: f"مرغ{Z}ها {fa(m)} تخم دادند. {fa(k)} تخم شکست. چند {PCT} تخم{Z}ها شکست؟", lambda m, k: f"The hens laid {m} eggs. {k} broke. What percent of the eggs broke?", _few),
+    (lambda m, k: f"از {fa(m)} درخت باغ، {fa(k)} درخت چهارمغز است. چند {PCT} درخت{Z}ها چهارمغز است؟", lambda m, k: f"Out of the {m} trees of the garden, {k} {_isare(k)} walnut. What percent of the trees are walnut trees?", lambda m, k: True),
+    (lambda m, k: f"{fa(m)} افغانی داشتی. {fa(k)} افغانی را پس{Z}انداز کردی. چند {PCT} پولت را پس{Z}انداز کردی؟", lambda m, k: f"You had {m} afghani. You saved {k} afghani. What percent of your money did you save?", lambda m, k: True),
+    (lambda m, k: f"در صنف {fa(m)} شاگرد است و {fa(k)} نفر آنها دختر هستند. چند {PCT} صنف دختر است؟", lambda m, k: f"There are {m} pupils in the class and {k} of them are girls. What percent of the class are girls?", _class),
+    (lambda m, k: f"در صنف {fa(m)} شاگرد است و {fa(k)} نفر آنها بچه هستند. چند {PCT} صنف بچه است؟", lambda m, k: f"There are {m} pupils in the class and {k} of them are boys. What percent of the class are boys?", _class),
+    (lambda m, k: f"از {fa(m)} گوسفند، {fa(k)} گوسفند سفید است. چند {PCT} گوسفندها سفید است؟", lambda m, k: f"Out of {m} sheep, {k} {_isare(k)} white. What percent of the sheep are white?", lambda m, k: True),
+]
+
+
+def flock6(level: int) -> Sheet:
+    s = Sheet(LP_COLS)
+    means = (f"{PCT} یعنی از صد.", "Percent means out of a hundred.")
+
+    # 01: the hundred square
+    coloured = [("چند {P} این شکل رنگ شده است؟", "What percent of this picture is coloured?"),
+                ("از صد خانه چند خانه رنگ شده است؟ {P} آن را پیدا کن.", "How many squares out of a hundred are coloured? Find the percent."),
+                ("خانه" + Z + "های رنگ" + Z + "شده را ده ده بشمار. چند {P} است؟", "Count the coloured squares in tens. What percent is it?")]
+    white = [("چند {P} این شکل سفید مانده است؟", "What percent of this picture is still white?"),
+             ("خانه" + Z + "های سفید چند {P} شکل است؟", "What percent of the picture are the white squares?")]
+    c1 = []
+    for i, n in enumerate(GRID_PCTS):
+        d, e = coloured[i % 3]
+        c1.append(ask(d.format(P=PCT), e, P(n), near_pcts(n), f"{means[0]} از صد خانه، {fa(n)} خانه رنگ شده است: {fa_pct(n)}.",
+                      f"{means[1]} Out of 100 squares, {n} {'is' if n == 1 else 'are'} coloured: {n} percent.", show=grid(n)))
+        if n < 100:
+            d, e = white[i % 2]
+            c1.append(ask(d.format(P=PCT), e, P(100 - n), near_pcts(100 - n),
+                          f"{fa(n)} خانه رنگ شده است. صد منفی {fa(n)} مساوی {fa(100 - n)}. {fa_pct(100 - n)} سفید است.",
+                          f"{n} {'square is' if n == 1 else 'squares are'} coloured. 100 minus {n} equals {100 - n}. {100 - n} percent is white.", show=grid(n)))
+    pool6(s, "flock", "01", I_PCT_GRID, [(c1, N)])
+
+    # 02: hearing "out of a hundred"
+    plain, back, pics, told = [], [], [], []
+    for i, k in enumerate([3, 7, 12, 18, 33, 45, 55, 64, 72, 88, 96, 100]):
+        d, e = [("{k} از صد، چند {P} است؟", "{k} out of 100 is what percent?"), ("از هر صد تا، {k} تا. این چند {P} است؟", "{k} out of every 100. What percent is this?")][i % 2]
+        plain.append(ask(d.format(k=fa(k), P=PCT), e.format(k=k), P(k), near_pcts(k), f"{means[0]} {fa(k)} از صد، {fa_pct(k)} است.", f"{means[1]} {k} out of 100 is {k} percent."))
+    for i, k in enumerate([4, 15, 27, 36, 48, 65, 85, 92]):
+        d, e = [("{p} یعنی چند از صد؟", "{k} percent means how many out of 100?"), ("اگر {p} صد خانه را رنگ کنیم، چند خانه رنگ می" + Z + "شود؟", "If we colour {k} percent of 100 squares, how many squares are coloured?")][i % 2]
+        back.append(ask(d.format(p=fa_pct(k)), e.format(k=k), k, [100 - k, k // 10 if k >= 10 else k * 10, k + 10], f"{means[0]} {fa_pct(k)} یعنی {fa(k)} از صد.", f"{means[1]} {k} percent means {k} out of 100."))
+    for i, n in enumerate(GRID_PCTS):
+        j = GRID_PCTS.index(n)
+        others = [grid(100 - n)] if 100 - n in GRID_PCTS and n != 50 else []
+        others += [grid(GRID_PCTS[(j + d) % len(GRID_PCTS)]) for d in (1, -1, 2, -2, 3)]
+        d, e = [("کدام شکل {p} را نشان می" + Z + "دهد؟", "Which picture shows {n} percent?"), ("در کدام شکل {p} خانه" + Z + "ها رنگ شده است؟", "In which picture are {n} percent of the squares coloured?")][i % 2]
+        pics.append(ask(d.format(p=fa_pct(n)), e.format(n=n), grid(n), others, f"{fa_pct(n)} یعنی از صد خانه، {fa(n)} خانه رنگ شده است.", f"{n} percent means that out of 100 squares, {n} {'is' if n == 1 else 'are'} coloured."))
+    for i, k in enumerate([8, 14, 21, 26, 35, 42, 52, 58, 61, 68, 77, 83, 91, 94]):
+        d, e = HUNDRED_STORIES[i % len(HUNDRED_STORIES)]
+        told.append(ask(d(k), e(k), P(k), near_pcts(k), f"{means[0]} {fa(k)} از صد، {fa_pct(k)} است.", f"{means[1]} {k} out of 100 is {k} percent."))
+    pool6(s, "flock", "02", I_PCT_HEAR, [(plain, 4), (back, 3), (pics, 5), (told, 6)])
+
+    # 03: percent and fraction
+    c3 = []
+    base = [50, 25, 75, 10, 20, 30, 40, 60, 70, 80, 90, 5, 1]
+    for i, p in enumerate(base):
+        k, n = pct_frac(p)
+        others = [fr(*pct_frac(q)) for q in base[i + 1:] + base[:i]]
+        wrong = ([fr(1, p)] if 2 <= p <= 100 else []) + [fr(n, k) if k > 1 else fr(k, n * 10)] + others
+        if (k, n) == (p, 100):
+            help_pair = (f"{fa_pct(p)} یعنی {fa_frac(p, 100)}.", f"{p} percent means {p}/100.")
+        else:
+            help_pair = (f"{fa_pct(p)} یعنی {fa_frac(p, 100)}. صورت و مخرج را بر {fa(100 // n)} تقسیم کن: {fa_frac(k, n)}.",
+                         f"{p} percent means {p}/100. Divide the numerator and the denominator by {100 // n}: {k}/{n}.")
+        c3.append(ask(f"{fa_pct(p)} مساوی کدام کسر است؟", f"{p} percent is equal to which fraction?", fr(k, n), wrong, *help_pair))
+        f = 100 // n
+        back_help = ((f"{fa_frac(k, n)} یعنی {fa(k)} از صد: {fa_pct(p)}.", f"{k}/{n} means {k} out of 100: {p} percent.") if n == 100 else
+                     (f"مخرج را به صد برسان: {fa(n)} ضرب {fa(f)} مساوی صد. صورت را هم در {fa(f)} ضرب کن: {fa(k * f)}. {fa(k * f)} از صد، {fa_pct(p)} است.",
+                      f"Bring the denominator to 100: {n} times {f} equals 100. Multiply the numerator by {f} too: {k * f}. {k * f} out of 100 is {p} percent."))
+        c3.append(ask(f"{fa_frac(k, n)} چند {PCT} است؟", f"{k}/{n} is what percent?", P(p), [P(n)] + ([P(k * 10)] if k * 10 <= 100 else []) + near_pcts(p), *back_help))
+    for word, en, p in (("نیم", "A half", 50), ("چارک", "A quarter", 25), ("سه چارک", "Three quarters", 75)):
+        k, n = pct_frac(p)
+        c3.append(ask(f"{word} یعنی چند {PCT}؟", f"{en} means what percent?", P(p), near_pcts(p),
+                      f"{word} یعنی {fa_frac(k, n)}. {fa_frac(k, n)} مساوی {fa_frac(p, 100)} است: {fa_pct(p)}.", f"{en} means {k}/{n}. {k}/{n} is equal to {p}/100: {p} percent.",
+                      key=("word", p)))
+    c3.append(ask(f"همه، یعنی یک پوره، چند {PCT} است؟", "All of it, one whole, is what percent?", P(100), near_pcts(100),
+                  f"یک پوره یعنی صد از صد: صد {PCT}.", "One whole means 100 out of 100: 100 percent."))
+    pool6(s, "flock", "03", I_PCT_FRAC, [(c3, N)])
+
+    # 04: percent and decimal
+    c4 = []
+    for i, p in enumerate([50, 25, 75, 10, 20, 30, 40, 60, 70, 80, 90, 5, 1, 15, 35, 45, 65, 95]):
+        d = dec2(p)
+        wrong = [f"t:{p // 10}.{p % 10}", f"t:{p}.0", "t:" + dec2(100 - p), "t:0.0" + str(p)[0], "t:" + dec2(p + 10 if p < 90 else p - 10), "t:" + dec2(p + 1)]
+        if i % 2 == 0:
+            c4.append(ask(f"{fa_pct(p)} با عدد اعشاری کدام است؟", f"Which one is {p} percent as a decimal number?", "t:" + d, wrong,
+                          f"{fa_pct(p)} یعنی {fa_frac(p, 100)}. این را {fa_dec(d)} می{Z}نویسیم.", f"{p} percent means {p}/100. We write this as {d}."))
+        else:
+            c4.append(ask(f"{fa_dec(d)} چند {PCT} است؟", f"{d} is what percent?", P(p), ([P(p * 10)] if p * 10 <= 100 else []) + ([P(p // 10)] if p % 10 == 0 else []) + near_pcts(p),
+                          f"{fa_dec(d)} یعنی {fa_frac(p, 100)}: {fa(p)} از صد. جواب {fa_pct(p)} است.", f"{d} means {p}/100: {p} out of 100. The answer is {p} percent."))
+    for p in (2, 8, 12, 24, 33, 55, 66, 85, 99):
+        c4.append(ask(f"{fa(p)} پول چند {PCT} یک {AFN} است؟", f"{p} pul is what percent of 1 afghani?", P(p), near_pcts(p),
+                      f"یک {AFN} صد پول است. {fa(p)} از صد، {fa_pct(p)} است.", f"1 afghani is 100 pul. {p} out of 100 is {p} percent."))
+    pool6(s, "flock", "04", I_PCT_DEC, [(c4[:18], 12), (c4[18:], 6)])
+
+    # 05: a percent of things you can count
+    combos = [(n, p) for n in (4, 8, 12, 16) for p in (25, 50, 75)] + [(4, 100), (20, 25), (20, 75), (20, 50)] + \
+             [(10, p) for p in range(10, 101, 10)] + [(20, p) for p in (10, 20, 30, 40, 60, 70, 80, 90)] + [(5, p) for p in (20, 40, 60, 80, 100)] + [(15, 20), (15, 40), (15, 60)]
+    c5 = []
+    for i, (n, p) in enumerate(combos):
+        pic, noun = COUNT_OBJS[(i * 5) % len(COUNT_OBJS)]
+        d, e, r = pct_of(p, n)
+        say = [(f"اینجا {fa(n)} {noun} است. {fa_pct(p)} آنها چند {noun} است؟", f"Here are {cnt(n, noun)}. How many {many(noun)} is {p} percent of them?"),
+               (f"{fa_pct(p)} این {fa(n)} {noun} چند تا می{Z}شود؟", f"How many is {p} percent of these {cnt(n, noun)}?")][i % 2]
+        c5.append(ask(say[0], say[1], r, [n - r if n != 2 * r else None, r + 1, r - 1, n], d, e, show=f"p:{pic}*{n}"))
+    pool6(s, "flock", "05", I_PCT_GROUP, [(c5, N)], dari=4)
+
+    # 06: k out of m as a percent
+    c6 = []
+    i = 0
+    for m in (4, 5, 10, 20, 25, 50):
+        f = 100 // m
+        for k in range(1, m):
+            p = k * f
+            if m in (20, 25, 50) and p % 10 and p % 25 and (k * 7 + m) % 3:
+                continue   # not every one of the many odd percents
+            while not OUTOF_STORIES[i % len(OUTOF_STORIES)][2](m, k):   # the next story that fits these numbers
+                i += 1
+            d, e, _ = OUTOF_STORIES[i % len(OUTOF_STORIES)]
+            i += 1
+            c6.append(ask(d(m, k), e(m, k), P(p), [P(k)] + ([P(m)] if m != p else []) + near_pcts(p),
+                          f"{fa(m)} ضرب {fa(f)} مساوی صد. پس {fa(k)} را هم در {fa(f)} ضرب کن: {fa(p)}. {fa(k)} از {fa(m)}، {fa_pct(p)} است.",
+                          f"{m} times {f} equals 100. So multiply {k} by {f} too: {p}. {k} out of {m} is {p} percent."))
+    pool6(s, "flock", "06", I_PCT_OUTOF, [(c6, N)])
+    return s
+
+
+# -- Number Hop: percent of an amount, averages, profit and loss, a budget ------
+
+I_TEN_PCT = tr("ده فیصد یعنی یک حصه از ده حصه: بر ده تقسیم کن.", "10 percent means one part out of 10: divide by 10.")
+I_HALF_PCT = tr("پنجاه فیصد یعنی نیم و بیست و پنج فیصد یعنی چارک.", "50 percent means half and 25 percent means a quarter.")
+I_MORE_PCT = tr("هفتاد و پنج فیصد یعنی سه چارک. فیصدهای بزرگ را حساب کن.", "75 percent means three quarters. Work out the big percents.")
+I_PCT_STORY = tr("قصه را گوش کن و فیصد را حساب کن.", "Listen to the story and work out the percent.")
+I_DISCOUNT = tr("تخفیف یعنی قیمت کم می" + Z + "شود. تخفیف و قیمت نو را حساب کن.", "A discount means the price goes down. Work out the discount and the new price.")
+I_GROW = tr("چیزی چند فیصد زیاد شده است. حساب کن که حالا چند است.", "Something has grown by some percent. Work out how much it is now.")
+I_MEAN = tr("اوسط یعنی اگر همه را برابر تقسیم کنیم، به هر کدام چند می" + Z + "رسد. جمع کن و تقسیم کن.",
+            "The average means: if we share everything out evenly, how much does each one get? Add and divide.")
+I_MEAN_STORY = tr("قصه را گوش کن و اوسط را حساب کن.", "Listen to the story and work out the average.")
+I_PROFIT = tr("فایده یا ضرر؟ قیمت خرید و قیمت فروش را مقایسه کن.", "Profit or loss? Compare the buying price and the selling price.")
+I_BUDGET = tr("عاید، مصرف و پس" + Z + "انداز یک خانواده را حساب کن.", "Work out the income, the spending and the saving of a family.")
+
+PCT_GROUPS = [   # (Dari, English) of n and p; the answer is p percent of n
+    (lambda n, p: f"در مکتب {fa(n)} شاگرد است. {fa_pct(p)} آنها دختر هستند. چند دختر در مکتب است؟", lambda n, p: f"There are {n} pupils in the school. {p} percent of them are girls. How many girls are in the school?"),
+    (lambda n, p: f"در رمه {fa(n)} گوسفند است. {fa_pct(p)} آنها بره دارند. چند گوسفند بره دارد؟", lambda n, p: f"There are {n} sheep in the flock. {p} percent of them have a lamb. How many sheep have a lamb?"),
+    (lambda n, p: f"دهقان {fa(n)} کیلو گندم درو کرد. {fa_pct(p)} آن را برای تخم نگه می{Z}دارد. چند کیلو را نگه می{Z}دارد؟", lambda n, p: f"The farmer harvested {n} kilos of wheat. {p} percent of it is kept for seed. How many kilos are kept?"),
+    (lambda n, p: f"در باغ {fa(n)} درخت است. {fa_pct(p)} آنها درخت سیب است. چند درخت سیب در باغ است؟", lambda n, p: f"There are {n} trees in the garden. {p} percent of them are apple trees. How many apple trees are in the garden?"),
+    (lambda n, p: f"در مکتب {fa(n)} شاگرد است. {fa_pct(p)} آنها بچه هستند. چند بچه در مکتب است؟", lambda n, p: f"There are {n} pupils in the school. {p} percent of them are boys. How many boys are in the school?"),
+    (lambda n, p: f"در قریه {fa(n)} خانه است. {fa_pct(p)} خانه{Z}ها باغچه دارند. چند خانه باغچه دارد؟", lambda n, p: f"There are {n} houses in the village. {p} percent of the houses have a small garden. How many houses have a garden?"),
+    (lambda n, p: f"یک خانواده {fa(n)} {AFN} عاید دارد. {fa_pct(p)} آن را پس{Z}انداز می{Z}کند. چند {AFN} پس{Z}انداز می{Z}کند؟", lambda n, p: f"A family has an income of {n} afghani. It saves {p} percent of it. How many afghani does it save?"),
+    (lambda n, p: f"راه قریه تا بازار {fa(n)} دقیقه است. {fa_pct(p)} راه را رفته{Z}ای. چند دقیقه راه رفته{Z}ای؟", lambda n, p: f"The way from the village to the bazaar takes {n} minutes. You have gone {p} percent of the way. How many minutes have you walked?"),
+]
+SALE_GOODS = [("کمپل", "blanket"), ("جوره بوت", "pair of shoes"), ("قالینچه", "small carpet"), ("بوری آرد", "sack of flour"), ("چادر", "headscarf"), ("بکس مکتب", "school bag"),
+              ("دیگ", "pot"), ("چراغ", "lamp")]
+GROW_STORIES = [
+    (lambda b, p: f"پارسال در مکتب {fa(b)} شاگرد بود. امسال {fa_pct(p)} زیادتر شده است. امسال چند شاگرد است؟", lambda b, p: f"Last year there were {b} pupils in the school. This year there are {p} percent more. How many pupils are there this year?"),
+    (lambda b, p: f"پارسال رمه {fa(b)} گوسفند داشت. امسال {fa_pct(p)} زیادتر شده است. حالا رمه چند گوسفند دارد؟", lambda b, p: f"Last year the flock had {b} sheep. This year it has grown by {p} percent. How many sheep does the flock have now?"),
+    (lambda b, p: f"یک بوری برنج {fa(b)} {AFN} بود. قیمت آن {fa_pct(p)} بالا رفت. حالا چند {AFN} است؟", lambda b, p: f"A sack of rice was {b} afghani. Its price went up by {p} percent. How many afghani is it now?"),
+    (lambda b, p: f"پارسال دهقان {fa(b)} کیلو کچالو گرفت. امسال حاصل {fa_pct(p)} بیشتر شد. امسال چند کیلو گرفت؟", lambda b, p: f"Last year the farmer got {b} kilos of potatoes. This year the harvest was {p} percent bigger. How many kilos did the farmer get this year?"),
+    (lambda b, p: f"یک زن قالین{Z}باف هر ماه {fa(b)} {AFN} مزد می{Z}گرفت. مزد او {fa_pct(p)} زیاد شد. حالا چند {AFN} می{Z}گیرد؟", lambda b, p: f"A woman who weaves carpets earned {b} afghani a month. Her pay went up by {p} percent. How many afghani does she earn now?"),
+    (lambda b, p: f"در کتابخانه مکتب {fa(b)} کتاب بود. امسال {fa_pct(p)} زیادتر شد. حالا چند کتاب است؟", lambda b, p: f"There were {b} books in the school library. This year there are {p} percent more. How many books are there now?"),
+]
+# Averages told as stories: Dari and English of (how many numbers, the list said aloud), and the range of the numbers.
+MEAN_STORIES = [
+    (lambda k, d: f"مرغ{Z}ها در {fa(k)} روز {d} تخم دادند. اوسط هر روز چند تخم دادند؟", lambda k, e: f"In {k} days the hens laid {e} eggs. How many eggs did they lay a day on average?", 2, 9),
+    (lambda k, d: f"یک دختر در {fa(k)} امتحان این نمره{Z}ها را گرفت: {d}. اوسط نمره او چند است؟", lambda k, e: f"A girl got these marks in {k} tests: {e}. What is her average mark?", 5, 10),
+    (lambda k, d: f"یک بچه در {fa(k)} روز {d} صفحه کتاب خواند. اوسط هر روز چند صفحه خواند؟", lambda k, e: f"In {k} days a boy read {e} pages of a book. How many pages did he read a day on average?", 4, 16),
+    (lambda k, d: f"در {fa(k)} روز {d} مشتری به دکان آمد. اوسط هر روز چند مشتری آمد؟", lambda k, e: f"In {k} days {e} customers came to the shop. How many customers came a day on average?", 6, 20),
+    (lambda k, d: f"{fa(k)} دختر {d} چهارمغز جمع کردند. اگر همه را یکجا کنند و برابر تقسیم کنند، به هر دختر چند چهارمغز می{Z}رسد؟",
+     lambda k, e: f"{k} girls gathered {e} walnuts. If they put them all together and share them out evenly, how many walnuts does each girl get?", 3, 15),
+    (lambda k, d: f"گاو در {fa(k)} روز {d} لیتر شیر داد. اوسط هر روز چند لیتر شیر داد؟", lambda k, e: f"In {k} days the cow gave {e} litres of milk. How many litres of milk did it give a day on average?", 4, 12),
+    (lambda k, d: f"{fa(k)} بچه {d} سیب چیدند. اگر همه را یکجا کنند و برابر تقسیم کنند، به هر بچه چند سیب می{Z}رسد؟",
+     lambda k, e: f"{k} boys picked {e} apples. If they put them all together and share them out evenly, how many apples does each boy get?", 3, 15),
+    (lambda k, d: f"یک بچه در {fa(k)} امتحان این نمره{Z}ها را گرفت: {d}. اوسط نمره او چند است؟", lambda k, e: f"A boy got these marks in {k} tests: {e}. What is his average mark?", 5, 10),
+    (lambda k, d: f"یک دختر در {fa(k)} روز {d} دقیقه تا مکتب راه رفت. اوسط هر روز چند دقیقه راه رفت؟", lambda k, e: f"On {k} days a girl walked {e} minutes to school. How many minutes did she walk a day on average?", 10, 30),
+]
+TRADERS = [("دکاندار", "The shopkeeper"), ("یک زن", "A woman"), ("دهقان", "The farmer"), ("یک دختر", "A girl"), ("یک مرد", "A man"), ("یک بچه", "A boy")]
+TRADE_GOODS = [   # Dari, English, the buying prices
+    ("یک مرغ", "a hen", range(200, 401, 10)), ("یک صندوق انار", "a box of pomegranates", range(300, 901, 50)), ("ده کیلو کچالو", "10 kilos of potatoes", range(150, 401, 10)),
+    ("یک کمپل", "a blanket", range(400, 901, 50)), ("یک جوره بوت", "a pair of shoes", range(300, 801, 50)), ("یک بز", "a goat", range(3000, 6001, 500)),
+    ("یک سبد تخم", "a basket of eggs", range(100, 301, 10)), ("یک بوری پیاز", "a sack of onions", range(250, 601, 50)),
+]
+
+
+def mean_help(nums) -> tuple[str, str]:
+    total, k = sum(nums), len(nums)
+    return (" جمع ".join(fa(x) for x in nums) + f" مساوی {fa(total)}. {fa(k)} عدد است، پس {fa(total)} تقسیم {fa(k)} مساوی {fa(total // k)}.",
+            " plus ".join(str(x) for x in nums) + f" equals {total}. There are {k} numbers, so {total} divided by {k} equals {total // k}.")
+
+
+def mean_lists(tag, k: int, lo: int, hi: int, how_many: int) -> list[tuple]:
+    """Lists of k numbers from lo..hi whose mean is a whole number, not all the same."""
+    rng = rng_for("mean", tag, k, lo, hi)
+    out = []
+    while len(out) < how_many:
+        nums = [rng.randint(lo, hi) for _ in range(k - 1)]
+        m = rng.randint(lo + 1, hi - 1)
+        last = k * m - sum(nums)
+        if lo <= last <= hi and len(set(nums + [last])) > 1 and tuple(nums + [last]) not in out:
+            out.append(tuple(nums + [last]))
+    return out
+
+
+def hop6(level: int) -> Sheet:
+    s = Sheet(LP_COLS)
+
+    def amount(p, a, i):
+        d, e, r = pct_of(p, a)
+        say = [(f"{fa_pct(p)} {fa(a)} {AFN} چند {AFN} است؟", f"How many afghani is {p} percent of {a} afghani?"),
+               (f"{fa_pct(p)} {fa(a)} چند می{Z}شود؟", f"{p} percent of {a} makes how many?"),
+               (f"{fa(a)} کیلو گندم داری. {fa_pct(p)} آن چند کیلو است؟", f"You have {a} kilos of wheat. How many kilos is {p} percent of it?"),
+               (f"از {fa(a)} {AFN}، {fa_pct(p)} را جدا کن. چند {AFN} می{Z}شود؟", f"Set aside {p} percent of {a} afghani. How many afghani is that?")][i % 4]
+        return ask(say[0], say[1], r, pct_wrong(p, a), d, e)
+
+    ten = [amount(10, a, i) for i, a in enumerate(range(30, 901, 10)) if a != 100]
+    tens = [amount(p, a, i) for i, (p, a) in enumerate((p, a) for a in range(50, 501, 50) for p in (20, 30, 40))]
+    pool6(s, "hop", "01", I_TEN_PCT, [(ten, 12), (tens, 6)], cap=1)
+    half = [amount(50, a, i) for i, a in enumerate(list(range(30, 200, 2)) + list(range(200, 2001, 50)))]
+    quarter = [amount(25, a, i + 1) for i, a in enumerate(list(range(20, 200, 4)) + list(range(200, 1001, 40)))]
+    pool6(s, "hop", "02", I_HALF_PCT, [(half, 9), (quarter, 9)], cap=1)
+    three = [amount(75, a, i) for i, a in enumerate(list(range(20, 201, 4)) + list(range(240, 801, 40)))]
+    whole = [amount(100, a, i + 1) for i, a in enumerate((35, 80, 125, 260, 450, 990))]
+    big = [amount(p, a, i + 2) for i, (p, a) in enumerate((p, a) for a in range(20, 301, 10) for p in (60, 70, 80, 90))]
+    pool6(s, "hop", "03", I_MORE_PCT, [(three, 9), (whole, 2), (big, 7)], cap=1)
+
+    groups = []
+    combos = [(n, p) for n in (40, 60, 80, 120, 160, 200, 240, 300, 360, 400, 500, 600) for p in (10, 20, 25, 50, 75)]
+    for i, (n, p) in enumerate(combos):
+        if i % 8 == 7 and n > 120:
+            continue   # a walk of more than two hours is not a walk to the bazaar
+        d, e = PCT_GROUPS[i % len(PCT_GROUPS)]
+        hd, he, r = pct_of(p, n)
+        groups.append(ask(d(n, p), e(n, p), r, pct_wrong(p, n), hd, he))
+    pool6(s, "hop", "04", I_PCT_STORY, [(groups, N)], cap=1)
+
+    new_price, off = [], []
+    for i, (price, p) in enumerate((price, p) for price in range(200, 2001, 100) for p in (10, 20, 25, 50)):
+        noun, en = SALE_GOODS[i % len(SALE_GOODS)]
+        hd, he, r = pct_of(p, price)
+        first = (f"قیمت یک {noun} {fa(price)} {AFN} است. دکاندار {fa_pct(p)} تخفیف می{Z}دهد.", f"The price of a {en} is {price} afghani. The shopkeeper gives a discount of {p} percent.")
+        new_price.append(ask(f"{first[0]} حالا {noun} چند {AFN} است؟", f"{first[1]} How many afghani is the {en} now?", price - r, [r, price + r, price - p, price - r + 10],
+                             f"{hd} این تخفیف است. {fa(price)} منفی {fa(r)} مساوی {fa(price - r)}.", f"{he} This is the discount. {price} minus {r} equals {price - r}."))
+        off.append(ask(f"{first[0]} تخفیف چند {AFN} است؟", f"{first[1]} How many afghani is the discount?", r, [price - r, p, r * 2, r + 10], hd, he))
+    pool6(s, "hop", "05", I_DISCOUNT, [(new_price, 12), (off, 6)], cap=1)
+
+    grow = []
+    for i, (b, p) in enumerate((b, p) for b in (40, 60, 80, 100, 120, 160, 200, 240, 300, 400, 500, 600, 800) for p in (10, 25, 50, 20, 100)):
+        d, e = GROW_STORIES[i % len(GROW_STORIES)]
+        hd, he, r = pct_of(p, b)
+        if p == 100:
+            hd, he = f"صد {PCT} زیادتر یعنی یک بار دیگر همان قدر.", "100 percent more means the same amount once again."
+        grow.append(ask(d(b, p), e(b, p), b + r, [r, b + p, b - r if b != r else None, b + r + 10],
+                        f"{hd} {fa(b)} جمع {fa(r)} مساوی {fa(b + r)}.", f"{he} {b} plus {r} equals {b + r}."))
+    pool6(s, "hop", "06", I_GROW, [(grow, N)], cap=1)
+
+    plain = []
+    wording = [("اوسط {d} چند است؟", "What is the average of {e}?"), ("{d}. اوسط این عددها را پیدا کن.", "{e}. Find the average of these numbers."),
+               ("اگر {d} را یکجا کنیم و برابر تقسیم کنیم، هر حصه چند می" + Z + "شود؟", "If we put {e} together and share them out evenly, how much is each share?")]
+    for i, nums in enumerate(mean_lists("plain", 3, 1, 20, 60)):
+        d, e = fa_list(nums)
+        w = wording[i % 3]
+        m = sum(nums) // 3
+        hd, he = mean_help(nums)
+        plain.append(ask(w[0].format(d=d), w[1].format(e=e), m, [sum(nums), sorted(nums)[1] if sorted(nums)[1] != m else None, max(nums) if max(nums) != m else None, m + 1, m - 1], hd, he))
+    pool6(s, "hop", "07", I_MEAN, [(plain, N)], dari=5)
+
+    told = []
+    for t, (d, e, lo, hi) in enumerate(MEAN_STORIES):
+        for j, nums in enumerate(mean_lists(t, 4 + (t + 1) % 2, lo, hi, 5) + mean_lists(t, 4 + t % 2, lo, hi, 3)):
+            ld, le = fa_list(nums)
+            k, m = len(nums), sum(nums) // len(nums)
+            hd, he = mean_help(nums)
+            told.append(ask(d(k, ld), e(k, le), m, [sum(nums), max(nums) if max(nums) != m else None, m + 1, m - 1, sum(nums) // (k - 1) if sum(nums) % (k - 1) == 0 else None], hd, he))
+    pool6(s, "hop", "08", I_MEAN_STORY, [(told, N)])
+
+    trade = {"profit": [], "loss": [], "sell": [], "cost": []}
+    i = 0
+    for g, (noun, en, prices) in enumerate(TRADE_GOODS):
+        step = 10 if prices.step == 10 else 50 if prices.step == 50 else 250
+        for c in list(prices)[g % 3::3]:
+            for f in (step * 2, step * 3, step * 5):
+                who, who_en = TRADERS[i % len(TRADERS)]
+                i += 1
+                sold, low = c + f, c - f
+                trade["profit"].append(ask(f"{who} {noun} را به {fa(c)} {AFN} خرید و به {fa(sold)} {AFN} فروخت. چند {AFN} فایده کرد؟",
+                                           f"{who_en} bought {en} for {c} afghani and sold it for {sold} afghani. How many afghani was the profit?", f, [c + sold, sold, f + step, f - step if f > step else None],
+                                           f"قیمت فروش از قیمت خرید بیشتر است، پس فایده کرد. {fa(sold)} منفی {fa(c)} مساوی {fa(f)}.",
+                                           f"The selling price is more than the buying price, so there was a profit. {sold} minus {c} equals {f}."))
+                if low > 0:
+                    trade["loss"].append(ask(f"{who} {noun} را به {fa(c)} {AFN} خرید، اما به {fa(low)} {AFN} فروخت. چند {AFN} ضرر کرد؟",
+                                             f"{who_en} bought {en} for {c} afghani, but sold it for {low} afghani. How many afghani was the loss?", f, [c + low, low, f + step, f - step if f > step else None],
+                                             f"قیمت فروش از قیمت خرید کمتر است، پس ضرر کرد. {fa(c)} منفی {fa(low)} مساوی {fa(f)}.",
+                                             f"The selling price is less than the buying price, so there was a loss. {c} minus {low} equals {f}."))
+                trade["sell"].append(ask(f"{who} {noun} را به {fa(c)} {AFN} خرید و می{Z}خواهد {fa(f)} {AFN} فایده کند. آن را به چند {AFN} بفروشد؟",
+                                         f"{who_en} bought {en} for {c} afghani and wants a profit of {f} afghani. For how many afghani should it be sold?", sold, [c - f if c > f else None, c, sold + step, sold - step],
+                                         f"قیمت خرید جمع فایده مساوی قیمت فروش. {fa(c)} جمع {fa(f)} مساوی {fa(sold)}.", f"The buying price plus the profit equals the selling price. {c} plus {f} equals {sold}."))
+                trade["cost"].append(ask(f"{who} {noun} را به {fa(sold)} {AFN} فروخت و {fa(f)} {AFN} فایده کرد. آن را به چند {AFN} خریده بود؟",
+                                         f"{who_en} sold {en} for {sold} afghani and made a profit of {f} afghani. For how many afghani had it been bought?", c, [sold + f, sold, c + step, c - step if c > step else None],
+                                         f"قیمت فروش منفی فایده مساوی قیمت خرید. {fa(sold)} منفی {fa(f)} مساوی {fa(c)}.", f"The selling price minus the profit equals the buying price. {sold} minus {f} equals {c}."))
+    pool6(s, "hop", "09", I_PROFIT, [(trade["profit"], 6), (trade["loss"], 4), (trade["sell"], 4), (trade["cost"], 4)], cap=1)
+
+    left, needs, save, goal, week = [], [], [], [], []
+    for i, (inc, sp) in enumerate((inc, sp) for inc in range(1500, 9001, 500) for sp in range(1000, inc, 750)):
+        span, span_en = [("یک هفته", "a week"), ("یک ماه", "a month")][inc >= 4000]
+        left.append(ask(f"یک خانواده در {span} {fa(inc)} {AFN} عاید دارد و {fa(sp)} {AFN} مصرف می{Z}کند. چند {AFN} می{Z}ماند؟",
+                        f"In {span_en} a family has an income of {inc} afghani and spends {sp} afghani. How many afghani are left?", inc - sp, [inc + sp, sp, inc - sp + 500, inc - sp - 250 if inc - sp > 250 else None],
+                        f"عاید منفی مصرف مساوی آنچه می{Z}ماند. {fa(inc)} منفی {fa(sp)} مساوی {fa(inc - sp)}.", f"Income minus spending equals what is left. {inc} minus {sp} equals {inc - sp}."))
+    things = [("خوراک", "food", "لباس", "clothes"), ("خوراک", "food", "چیزهای مکتب", "school things"), ("آرد و روغن", "flour and oil", "چوب سوخت", "firewood"),
+              ("خوراک", "food", "دوا و صابون", "medicine and soap")]
+    for i, (inc, a, b) in enumerate((inc, a, b) for inc in range(3000, 9001, 1000) for a in range(1500, inc - 500, 1000) for b in (500, 750, 1000) if a + b < inc):
+        t = things[i % len(things)]
+        rest = inc - a - b
+        needs.append(ask(f"عاید یک خانواده در یک ماه {fa(inc)} {AFN} است. {fa(a)} {AFN} برای {t[0]} و {fa(b)} {AFN} برای {t[2]} مصرف می{Z}شود. چند {AFN} می{Z}ماند؟",
+                         f"A family's income in a month is {inc} afghani. {a} afghani are spent on {t[1]} and {b} afghani on {t[3]}. How many afghani are left?", rest, [inc - a, inc - b, a + b, rest + 500],
+                         f"اول مصرف{Z}ها را جمع کن: {fa(a)} جمع {fa(b)} مساوی {fa(a + b)}. بعد از عاید کم کن: {fa(inc)} منفی {fa(a + b)} مساوی {fa(rest)}.",
+                         f"First add what is spent: {a} plus {b} equals {a + b}. Then take it from the income: {inc} minus {a + b} equals {rest}."))
+    for i, (w, k) in enumerate((w, k) for w in (20, 25, 30, 40, 50, 75, 100, 150) for k in (4, 6, 8, 10, 12)):
+        who, who_en = [("یک دختر", "A girl"), ("یک خانواده", "A family"), ("یک بچه", "A boy")][i % 3]
+        save.append(ask(f"{who} هر هفته {fa(w)} {AFN} پس{Z}انداز می{Z}کند. بعد از {fa(k)} هفته چند {AFN} پس{Z}انداز شده است؟",
+                        f"{who_en} saves {w} afghani every week. How many afghani are saved after {k} weeks?", w * k, [w + k, w * (k - 1), w * k + w, w * 10 if k != 10 else None],
+                        f"هر هفته همان قدر است، پس ضرب می{Z}کنیم. {fa(k)} ضرب {fa(w)} مساوی {fa(w * k)}.", f"It is the same amount every week, so we multiply. {k} times {w} equals {w * k}."))
+    wants = [("یک بز", "a goat"), ("یک ماشین خیاطی", "a sewing machine"), ("یک بایسکل", "a bicycle"), ("کتاب" + Z + "های مکتب", "the school books")]
+    for i, (w, k) in enumerate((w, k) for w in (200, 250, 300, 400, 500) for k in (3, 4, 5, 6, 8, 9, 12)):
+        noun, en = wants[i % len(wants)]
+        g = w * k
+        goal.append(ask(f"برای خریدن {noun} {fa(g)} {AFN} لازم است. خانواده هر ماه {fa(w)} {AFN} پس{Z}انداز می{Z}کند. بعد از چند ماه پول آن جمع می{Z}شود؟",
+                        f"To buy {en}, {g} afghani are needed. The family saves {w} afghani every month. After how many months is the money together?", k, [k + 1, k - 1, k * 2, 10 if k != 10 else None],
+                        f"می{Z}شماریم که چند بار {fa(w)} در {fa(g)} جای می{Z}شود. {fa(g)} تقسیم {fa(w)} مساوی {fa(k)}.", f"We count how many times {w} goes into {g}. {g} divided by {w} equals {k}."))
+    for i, d in enumerate((40, 50, 60, 80, 90, 100, 120, 150, 200, 250)):
+        who, who_en, what, what_en = [("یک زن", "A woman", "فروش تخم", "selling eggs"), ("یک مرد", "A man", "فروش شیر", "selling milk"), ("یک زن", "A woman", "خیاطی", "sewing"), ("یک مرد", "A man", "کار در باغ", "work in the garden")][i % 4]
+        week.append(ask(f"{who} هر روز از {what} {fa(d)} {AFN} عاید دارد. در یک هفته چند {AFN} عاید دارد؟",
+                        f"{who_en} has an income of {d} afghani every day from {what_en}. How many afghani is the income in a week?", 7 * d, [6 * d, d + 7, 7 * d + d, 5 * d],
+                        f"یک هفته هفت روز است. هفت ضرب {fa(d)} مساوی {fa(7 * d)}.", f"A week is 7 days. 7 times {d} equals {7 * d}."))
+    pool6(s, "hop", "10", I_BUDGET, [(left, 5), (needs, 4), (save, 4), (goal, 3), (week, 2)], cap=1)
+    return s
+
+
+# -- Market Scales: discount, selling price, profit, what is left, saving, a share ------
+
+M_INTRO[6] = {
+    "01": tr("تخفیف را حساب کن و قیمت نو را بده.", "Work out the discount and pay the new price."),
+    "02": tr("قیمت خرید و فایده را جمع کن. مشتری چند بدهد؟", "Add the buying price and the profit. How much should the customer pay?"),
+    "03": tr("فایده دکاندار را حساب کن و جدا بگذار.", "Work out the shopkeeper's profit and put it aside."),
+    "04": tr("از عاید، مصرف را کم کن. آنچه می" + Z + "ماند را پس" + Z + "انداز کن.", "Take the spending from the income. Save what is left."),
+    "05": tr("پس" + Z + "انداز چند هفته را حساب کن.", "Work out the saving of several weeks."),
+    "06": tr("پول را به نسبت تقسیم کن و حصه یک نفر را بده.", "Share the money in the ratio and pay one person's share."),
+}
+
+
+def market6(level: int) -> Sheet:
+    s = Sheet(MARKET_COLS)
+    notes = [10, 20, 50, 100, 500]
+
+    def B(rnd, gen):
+        s.intro[rnd] = M_INTRO[6][rnd]
+        build(s, 6, "market", rnd, gen)
+
+    def discount(rng):
+        deals = [(pr, p) for pr in range(200, 1001, 100) for p in (10, 20)] + [(pr, p) for pr in range(120, 1001, 40) for p in (25, 50)]
+        for j, (pr, p) in enumerate(pick_even(deals, N, rng, key=lambda c: c[0] - c[0] * c[1] // 100, cap=1)):
+            pic, noun = BIG[j % len(BIG)]
+            d, e, r = pct_of(p, pr)
+            market_row(s, "01", tr(f"{noun} {fa(pr)} {AFN} است. امروز {fa_pct(p)} تخفیف دارد. قیمت نو را بده.",
+                                   cap(f"{costs(noun, pr)}. Today there is a discount of {p} percent. Pay the new price.")),
+                       pic, pr - r, notes, "pay", tr(f"{d} {fa(pr)} منفی {fa(r)} مساوی {fa(pr - r)}.", f"{e} {pr} minus {r} equals {pr - r}."))
+    B("01", discount)
+
+    def selling(rng):
+        deals = [(c, f) for c in range(150, 801, 50) for f in (20, 30, 40, 50, 60, 80, 100, 150)]
+        for j, (c, f) in enumerate(pick_even(deals, N, rng, key=sum, cap=1)):
+            pic, noun = BIG[(j + 2) % len(BIG)]
+            market_row(s, "02", tr(f"دکاندار {noun} را به {fa(c)} {AFN} خریده است و می{Z}خواهد {fa(f)} {AFN} فایده کند. مشتری چند {AFN} بدهد؟ {PAY_IT}",
+                                   f"The shopkeeper bought the {bare(noun)} for {c} afghani and wants a profit of {f} afghani. How many afghani should the customer pay? Pay for it."),
+                       pic, c + f, notes, "pay", tr(f"قیمت خرید جمع فایده مساوی قیمت فروش. {fa(c)} جمع {fa(f)} مساوی {fa(c + f)}.",
+                                                   f"The buying price plus the profit equals the selling price. {c} plus {f} equals {c + f}."))
+    B("02", selling)
+
+    def profit(rng):
+        deals = [(c, f) for c in range(200, 901, 50) for f in range(20, 301, 10)]
+        for j, (c, f) in enumerate(pick_even(deals, N, rng, key=lambda d: d[1], cap=1)):
+            pic, noun = BIG[(j + 4) % len(BIG)]
+            market_row(s, "03", tr(f"دکاندار {noun} را به {fa(c)} {AFN} خرید و به {fa(c + f)} {AFN} فروخت. فایده او چند {AFN} است؟ فایده را جدا بگذار.",
+                                   f"The shopkeeper bought the {bare(noun)} for {c} afghani and sold it for {c + f} afghani. How many afghani is the profit? Put the profit aside."),
+                       pic, f, [10, 20, 50, 100], "pay", tr(f"قیمت فروش منفی قیمت خرید مساوی فایده. {fa(c + f)} منفی {fa(c)} مساوی {fa(f)}.",
+                                                              f"The selling price minus the buying price equals the profit. {c + f} minus {c} equals {f}."))
+    B("03", profit)
+
+    def left(rng):
+        things = [("چیزهای مکتب", "school things"), ("صابون و چای", "soap and tea"), ("لباس", "clothes"), ("چوب سوخت", "firewood")]
+        deals = [(inc, a, b) for inc in range(800, 2001, 100) for a in range(400, inc, 70) for b in (100, 150, 200, 250, 300) if 50 <= inc - a - b <= 600]
+        for j, (inc, a, b) in enumerate(pick_even(deals, N, rng, key=lambda d: d[0] - d[1] - d[2], cap=1)):
+            what, what_en = things[j % len(things)]
+            rest = inc - a - b
+            market_row(s, "04", tr(f"این هفته {fa(inc)} {AFN} عاید داری. {fa(a)} {AFN} برای خوراک و {fa(b)} {AFN} برای {what} مصرف می{Z}شود. آنچه می{Z}ماند را در کیسه پس{Z}انداز بگذار.",
+                                   f"This week you have an income of {inc} afghani. {a} afghani are spent on food and {b} afghani on {what_en}. Put what is left into the savings purse."),
+                       "purse", rest, notes, "pay", tr(f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)}. {fa(inc)} منفی {fa(a + b)} مساوی {fa(rest)}.",
+                                                       f"{a} plus {b} equals {a + b}. {inc} minus {a + b} equals {rest}."))
+    B("04", left)
+
+    def saving(rng):
+        deals = [(w, k) for w in (20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 150) for k in range(3, 11)]
+        for j, (w, k) in enumerate(pick_even(deals, N, rng, key=lambda d: d[0] * d[1], cap=1)):
+            market_row(s, "05", tr(f"هر هفته {fa(w)} {AFN} پس{Z}انداز می{Z}کنی. پس{Z}انداز {fa(k)} هفته را در کیسه بگذار.",
+                                   f"Every week you save {w} afghani. Put the saving of {k} weeks into the purse."),
+                       "money", w * k, notes, "pay", tr(f"{fa(k)} ضرب {fa(w)} مساوی {fa(w * k)}.", f"{k} times {w} equals {w * k}."))
+    B("05", saving)
+
+    def shares(rng):
+        deals = [(a, b, u) for a, b in ((1, 2), (2, 1), (1, 3), (3, 1), (2, 3), (3, 2), (1, 4), (3, 4), (4, 1), (2, 5)) for u in (20, 30, 40, 50, 60, 80, 100, 150)]
+        for j, (a, b, u) in enumerate(pick_even(deals, N, rng, key=lambda d: d[2] * (d[0] if (d[0] + d[1] + d[2]) % 20 else d[1]), cap=1)):
+            first = bool((a + b + u) % 20)
+            total, part = u * (a + b), u * (a if first else b)
+            who = ("اول", "first") if first else ("دوم", "second")
+            market_row(s, "06", tr(f"دو نفر {fa(total)} {AFN} را به نسبت {fa_ratio(a, b)} تقسیم می{Z}کنند. حصه نفر {who[0]} را بده.",
+                                   f"Two people share {total} afghani in the ratio {a} to {b}. Pay the share of the {who[1]} person."),
+                       "money", part, notes, "pay",
+                       tr(f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)} حصه. {fa(total)} تقسیم {fa(a + b)} مساوی {fa(u)}: هر حصه {fa(u)} {AFN} است. نفر {who[0]} {fa(a if first else b)} حصه می{Z}گیرد: {fa(a if first else b)} ضرب {fa(u)} مساوی {fa(part)}.",
+                          f"{a} plus {b} equals {a + b} parts. {total} divided by {a + b} equals {u}: each part is {u} afghani. The {who[1]} person gets {nn(a if first else b, 'part')}: {a if first else b} times {u} equals {part}."))
+    B("06", shares)
+    return s
+
+
+# -- Carpet Weaver: order percents, build an equality ---------------------------
+
+I_ORDER_PCT = tr("فیصدها را به ترتیب بچین.", "Put the percents in order.")
+I_ORDER_MIX = tr("فیصد، کسر و عدد اعشاری را به ترتیب بچین. اول همه را به فیصد برگردان.", "Put the percent, the fraction and the decimal number in order. First turn them all into percents.")
+I_BUILD_PCT = tr("جمله را بچین: فیصد مساوی کدام کسر یا عدد اعشاری است؟", "Build the sentence: the percent is equal to which fraction or decimal number?")
+I_BUILD_RATIO = tr("جمله را بچین: کدام نسبت با این نسبت مساوی است؟", "Build the sentence: which ratio is equal to this ratio?")
+I_BUILD_SHOP = tr("حساب دکان و خانه را به ترتیب بچین.", "Put the sum of the shop and of the home in order.")
+
+
+def forms6(p: int) -> list[tuple[str, tuple[str, str]]]:
+    """The three ways of writing p percent, each with how it is said."""
+    k, n = pct_frac(p)
+    return [(P(p), (fa_pct(p), f"{p} percent")), (fr(k, n), (fa_frac(k, n), f"{k}/{n}")), ("t:" + dec2(p), (fa_dec(dec2(p)), dec2(p)))]
+
+
+def weaver6(level: int) -> Sheet:
+    s = Sheet(BUILDER_COLS)
+    up_say = tr("از کوچک به بزرگ بچین.", "Arrange them from small to big.")
+    down_say = tr("از بزرگ به کوچک بچین.", "Arrange them from big to small.")
+    pct_help = tr("فیصد بزرگتر یعنی حصه بیشتر از صد. از یک سر شروع کن و یکی یکی پیش برو.", "A bigger percent means a bigger part of the hundred. Start at one end and go on one by one.")
+    mix_help = tr("همه را به فیصد برگردان: نیم پنجاه فیصد است، چارک بیست و پنج فیصد، صفر اعشاریه هفتاد و پنج، هفتاد و پنج فیصد. بعد مقایسه کن.",
+                  "Turn them all into percents: a half is 50 percent, a quarter 25 percent, 0.75 is 75 percent. Then compare.")
+
+    def percents(rng):
+        seen = set()
+        while len(seen) < 16:
+            size = 4 + len(seen) % 2
+            picks = tuple(sorted(rng.sample([1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 99, 100], size)))
+            if picks in seen:
+                continue
+            seen.add(picks)
+            up = len(seen) % 3 != 0
+            order_things(s, "01", I_ORDER_PCT, [P(p) for p in picks], up, {P(p): (fa_pct(p), f"{p} percent") for p in picks}, up_say if up else down_say, pct_help)
+    build(s, 6, "weaver", "01", percents)
+
+    def mixed(rng):
+        seen = set()
+        while len(seen) < 16:
+            picks = tuple(sorted(rng.sample([10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90], 4)))
+            if picks in seen:
+                continue
+            seen.add(picks)
+            shift = rng.randrange(3)
+            chosen = [forms6(p)[(i + shift) % 3] for i, p in enumerate(picks)]
+            up = len(seen) % 3 != 0
+            order_things(s, "02", I_ORDER_MIX, [t for t, _ in chosen], up, dict(chosen), up_say if up else down_say, mix_help)
+    build(s, 6, "weaver", "02", mixed)
+
+    def equal(tiles, extra, say, done, help_fa, rnd, intro):
+        assert len(set(tiles + extra)) == len(tiles + extra) <= 8, (tiles, extra)
+        row = s.add(round=rnd, intro_fa=intro, say_fa=say, tiles="|".join(tiles), extra="|".join(extra), rtl="", done_fa=done, help_fa=help_fa)
+        L6_META.append((row, lambda r: (lambda t, x: len(t) == 3 and t[1] == "t:=" and val(t[0]) == val(t[2]) and all(val(e) != val(t[0]) for e in x))(r["tiles"].split("|"), r["extra"].split("|"))))
+
+    def pct_sentences(rng):
+        base = [50, 25, 75, 10, 20, 30, 40, 60, 70, 80, 90, 5]
+        cands = [(p, kind) for p in base for kind in (1, 2)]
+        for i, (p, kind) in enumerate(pick_even(cands, 16, rng, key=lambda c: c[0], cap=2)):
+            (right, (d, e)) = forms6(p)[kind]
+            others = [forms6(q)[kind][0] for q in rng.sample([q for q in base if q != p], 4)]
+            if kind == 1:
+                others = [fr(1, p)] + others if Fraction(1, p) != Fraction(p, 100) else others
+            else:
+                others = [f"t:{p // 10}.{p % 10}"] + others
+            extra = pick_wrong(right, others)
+            what, what_en = ("کدام کسر", "which fraction") if kind == 1 else ("کدام عدد اعشاری", "which decimal number")
+            flip = i % 4 == 3
+            tiles = [right, "t:=", P(p)] if flip else [P(p), "t:=", right]
+            if flip:
+                extra = pick_wrong(P(p), near_pcts(p))
+                say = tr(f"{d} مساوی چند {PCT} است؟ جمله را بچین.", f"{e} is equal to what percent? Build the sentence.")
+                done = tr(f"{d} مساوی {fa_pct(p)}.", f"{e} equals {p} percent.")
+            else:
+                say = tr(f"{fa_pct(p)} مساوی {what} است؟ جمله را بچین.", f"{p} percent is equal to {what_en}? Build the sentence.")
+                done = tr(f"{fa_pct(p)} مساوی {d}.", f"{p} percent equals {e}.")
+            equal(tiles, extra, say, done, tr(f"{fa_pct(p)} یعنی {fa_frac(p, 100)}. اول یک طرف، بعد نشان مساوی، بعد طرف دیگر.", f"{p} percent means {p}/100. First one side, then the equals sign, then the other side."), "03", I_BUILD_PCT)
+    build(s, 6, "weaver", "03", pct_sentences)
+
+    def ratio_sentences(rng):
+        cands = [(a, b, m) for a, b in RATIOS6 for m in (2, 3, 4, 5) if a * m <= 20 and b * m <= 20]
+        for i, (a, b, m) in enumerate(pick_even(cands, 16, rng, key=lambda c: (c[0] * 100 + c[1]), cap=1)):
+            right = R(a * m, b * m)
+            extra = pick_wrong(right, [R(a + m, b + m), R(b * m, a * m), R(a * m, b * m + b), R(a * m + a, b * m), R(a * m, b)])
+            down = i % 4 == 3   # from the big ratio to its simplest form
+            tiles = [right, "t:=", R(a, b)] if down else [R(a, b), "t:=", right]
+            if down:
+                extra = pick_wrong(R(a, b), [R(b, a), R(a + 1, b), R(a, b + 1), R(a * m, b), R(a, b * m)])
+                say = tr(f"{fa_ratio(a * m, b * m)} را ساده کن. جمله را بچین.", f"Simplify {a * m} to {b * m}. Build the sentence.")
+                done = tr(f"{fa_ratio(a * m, b * m)} مساوی {fa_ratio(a, b)}.", f"{a * m} to {b * m} equals {a} to {b}.")
+                help_fa = tr(f"هر دو عدد را بر {fa(m)} تقسیم کن.", f"Divide both numbers by {m}.")
+            else:
+                say = tr(f"{fa_ratio(a, b)} مساوی کدام نسبت است؟ جمله را بچین.", f"{a} to {b} is equal to which ratio? Build the sentence.")
+                done = tr(f"{fa_ratio(a, b)} مساوی {fa_ratio(a * m, b * m)}.", f"{a} to {b} equals {a * m} to {b * m}.")
+                help_fa = tr(f"هر دو عدد را در یک عدد ضرب کن. {fa(a)} ضرب {fa(m)} مساوی {fa(a * m)} و {fa(b)} ضرب {fa(m)} مساوی {fa(b * m)}.",
+                             f"Multiply both numbers by the same number. {a} times {m} equals {a * m} and {b} times {m} equals {b * m}.")
+            equal(tiles, extra, say, done, help_fa, "04", I_BUILD_RATIO)
+    build(s, 6, "weaver", "04", ratio_sentences)
+
+    minus_help = tr("اول عدد بزرگ، بعد نشان منفی، بعد عدد کوچک، بعد نشان مساوی و در آخر جواب.",
+                    "First the big number, then the minus sign, then the small number, then the equals sign and last the answer.")
+
+    def shop(rng):
+        deals = [(c, f) for c in range(40, 400, 10) for f in range(10, 151, 10) if f != c and c + f != 2 * f and c != 2 * f]
+        for i, (c, f) in enumerate(pick_even(deals, 16, rng, key=lambda d: d[1], cap=2)):
+            big = c + f
+            extra = [x for x in uniq([big + c, f + 10, f - 10, big + f]) if x > 0 and x not in (big, c, f)][:2]
+            if i % 2 == 0:
+                say = tr(f"دکاندار به {fa(c)} {AFN} خرید و به {fa(big)} {AFN} فروخت. فایده چند است؟ حساب را به ترتیب بچین.",
+                         f"The shopkeeper bought for {c} afghani and sold for {big} afghani. How much is the profit? Put the sum in order.")
+            else:
+                say = tr(f"عاید {fa(big)} {AFN} و مصرف {fa(c)} {AFN} است. چند {AFN} می{Z}ماند؟ حساب را به ترتیب بچین.",
+                         f"The income is {big} afghani and the spending is {c} afghani. How many afghani are left? Put the sum in order.")
+            row = s.add(round="05", intro_fa=I_BUILD_SHOP, say_fa=say, tiles="|".join([W(big), "t:−", W(c), "t:=", W(f)]), extra="|".join(W(x) for x in extra), rtl="",
+                        done_fa=tr(f"{fa(big)} منفی {fa(c)} مساوی {fa(f)}.", f"{big} minus {c} equals {f}."), help_fa=minus_help)
+            SENT_META.append(row)
+    build(s, 6, "weaver", "05", shop)
+    return s
+
+
+RATIOS6 = [(1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 5), (3, 4), (3, 5), (4, 5), (2, 1), (3, 1), (4, 1), (3, 2), (5, 2), (4, 3), (5, 3)]
+
+
+# -- Share the Bread: sorting ------------------------------------------------------
+
+I_PCT_HALF = tr("از نیم کمتر است، مساوی نیم است یا بیشتر؟ پنجاه فیصد یعنی نیم.", "Is it less than half, equal to half or more? 50 percent means half.")
+I_PROFIT_SORT = tr("خرید و فروش را ببین: فایده است یا ضرر؟", "Look at the buying and the selling: is it a profit or a loss?")
+I_SAME_PCT = tr("هر کدام را در سبد شکلی بینداز که با آن مساوی است.", "Put each one in the basket of the picture it is equal to.")
+I_INCOME = tr("پول به خانه می" + Z + "آید یا از خانه می" + Z + "رود؟ عاید یا مصرف؟", "Does the money come into the home or go out of it? Income or spending?")
+
+
+def sorter6(level: int) -> Sheet:
+    s = Sheet(SORTER_COLS)
+
+    def plain(rnd, intro, rows, kind=None, test=None):
+        def gen(rng):
+            for thing, say, en, basket, b_say, b_en in rng.sample(rows, len(rows)):
+                row = s.add(round=rnd, intro_fa=intro, thing=thing, say_fa=tr(say, en), basket=basket, basket_say_fa=tr(b_say, b_en))
+                if kind:
+                    SORT2_META.append((row, kind))
+                if test:
+                    L6_META.append((row, test))
+        build(s, 6, "sorter", rnd, gen)
+
+    tr("کمتر", "less"), tr("بیشتر", "more"), tr("نیم", "half")
+    less, same, more = ("f:کمتر", "کمتر از نیم", "less than half"), ("f:نیم", "مساوی نیم", "equal to half"), ("f:بیشتر", "بیشتر از نیم", "more than half")
+    rows = []
+    for thing, d, e in [(P(p), fa_pct(p), f"{p} percent") for p in (10, 25, 40, 45, 49, 50, 51, 60, 75, 90, 100)] + \
+                       [(fr(k, n), fa_frac(k, n), f"{k}/{n}") for k, n in ((1, 2), (2, 4), (5, 10), (3, 6))] + \
+                       [("t:" + x, fa_dec(x), x) for x in ("0.50", "0.25", "0.75")]:
+        v = val(thing)
+        rows.append((thing, d, e) + (less if v < Fraction(1, 2) else same if v == Fraction(1, 2) else more))
+    plain("01", I_PCT_HALF, rows, kind="half")
+
+    profit, loss = ("f:" + tr("فایده", "profit"), "فایده", "profit"), ("f:" + tr("ضرر", "loss"), "ضرر", "loss")
+    rows = []
+    for c, sold in [(50, 70), (80, 60), (120, 150), (200, 180), (90, 100), (100, 90), (35, 45), (60, 40), (250, 300), (300, 250), (15, 20), (75, 70), (400, 450), (500, 480),
+                    (65, 85), (150, 140), (20, 35), (110, 95)]:
+        rows.append((f"t:{c} → {sold}", f"به {fa(c)} خرید و به {fa(sold)} فروخت.", f"Bought for {c} and sold for {sold}.") + (profit if sold > c else loss))
+    plain("02", I_PROFIT_SORT, rows, test=lambda r: (lambda m: (int(m.group(2)) > int(m.group(1))) == (r["basket"] == "f:فایده") and r["basket"] in ("f:فایده", "f:ضرر"))(
+        re.fullmatch(r"t:(\d+) → (\d+)", r["thing"])))
+
+    baskets = {25: (grid(25), "بیست و پنج " + PCT, "25 percent"), 50: (grid(50), "پنجاه " + PCT, "50 percent"), 75: (grid(75), "هفتاد و پنج " + PCT, "75 percent"),
+               10: (grid(10), "ده " + PCT, "10 percent")}
+    rows = []
+    for p, extra in ((25, [(2, 8)]), (50, [(2, 4), (5, 10)]), (75, [(6, 8)]), (10, [(10, 100)])):
+        for thing, (d, e) in forms6(p) + [(fr(k, n), (fa_frac(k, n), f"{k}/{n}")) for k, n in extra]:
+            rows.append((thing, d, e) + baskets[p])
+    plain("03", I_SAME_PCT, rows, kind="same")
+
+    income, spend = ("f:" + tr("عاید", "income"), "عاید", "income"), ("f:" + tr("مصرف", "spending"), "مصرف", "spending")
+    rows = [(pic, d, e) + income for pic, d, e in [
+        ("egg", "تخم می" + Z + "فروشیم.", "We sell eggs."), ("milk", "شیر می" + Z + "فروشیم.", "We sell milk."), ("carpet", "قالین بافته را می" + Z + "فروشیم.", "We sell the carpet we wove."),
+        ("wheat", "گندم می" + Z + "فروشیم.", "We sell wheat."), ("apple", "سیب باغ را می" + Z + "فروشیم.", "We sell the apples of the garden."),
+        ("goat", "یک بز می" + Z + "فروشیم.", "We sell a goat."), ("walnut", "چهارمغز می" + Z + "فروشیم.", "We sell walnuts."), ("farmer", "مزد یک روز کار را می" + Z + "گیریم.", "We get the pay for a day's work."),
+        ("yoghurt", "ماست می" + Z + "فروشیم.", "We sell yoghurt.")]]
+    rows += [(pic, d, e) + spend for pic, d, e in [
+        ("flour_sack", "یک بوری آرد می" + Z + "خریم.", "We buy a sack of flour."), ("oil_can", "روغن می" + Z + "خریم.", "We buy oil."), ("notebook", "کتابچه می" + Z + "خریم.", "We buy a notebook."),
+        ("shoes", "بوت می" + Z + "خریم.", "We buy shoes."), ("soap", "صابون می" + Z + "خریم.", "We buy soap."), ("tea", "چای می" + Z + "خریم.", "We buy tea."),
+        ("sugar", "بوره می" + Z + "خریم.", "We buy sugar."), ("blanket", "یک کمپل می" + Z + "خریم.", "We buy a blanket."), ("pencil", "پنسل می" + Z + "خریم.", "We buy a pencil.")]]
+    plain("04", I_INCOME, rows, test=lambda r: ("می" + Z + "خریم" in r["say_fa"]) == (r["basket"] == "f:مصرف"))
+    return s
+
+
+# -- Shape Mason: the scale of a map, measuring liquids ---------------------------
+
+I_SCALE = tr("مقیاس نقشه می" + Z + "گوید که یک سانتی" + Z + "متر روی نقشه چند کیلومتر راه است. حساب کن.",
+             "The scale of a map tells how many kilometres one centimetre on the map stands for. Work it out.")
+I_SCALE_BACK = tr("از راه راستی به نقشه برگرد، یا مقیاس را پیدا کن.", "Go back from the real way to the map, or find the scale.")
+I_MAP = tr("نقشه را ببین. هر تکه راه یک سانتی" + Z + "متر است. تکه" + Z + "ها را بشمار و با مقیاس حساب کن.",
+           "Look at the map. Each piece of road is one centimetre. Count the pieces and work it out with the scale.")
+I_SPOON = tr("با قاشق اندازه" + Z + "گیری حساب کن: یک قاشق پنج ملی" + Z + "لیتر می" + Z + "گیرد.", "Work it out with the measuring spoon: one spoon holds 5 millilitres.")
+I_CUP = tr("پیاله اندازه" + Z + "گیری را ببین و خط" + Z + "ها را بشمار.", "Look at the measuring cup and count the marks.")
+I_BOTTLE = tr("حساب کن که بوتل برای چند روز بس است و چه قدر می" + Z + "ماند.", "Work out for how many days the bottle lasts and how much is left.")
+I_LITRE_ML = tr("یک لیتر هزار ملی" + Z + "لیتر است. لیتر و ملی" + Z + "لیتر را حساب کن.", "One litre is 1000 millilitres. Work out the litres and the millilitres.")
+SCALE_WAYS = [
+    (lambda n: f"دو قریه روی نقشه {fa(n)} سانتی{Z}متر از هم دور است. راه راستی چند {KM} است؟", lambda n: f"Two villages are {n} centimetres apart on the map. How many kilometres is the real way?"),
+    (lambda n: f"از قریه تا شهر روی نقشه {fa(n)} سانتی{Z}متر است. راه راستی چند {KM} است؟", lambda n: f"From the village to the town it is {n} centimetres on the map. How many kilometres is the real way?"),
+    (lambda n: f"دریا روی نقشه {fa(n)} سانتی{Z}متر دراز است. دریا راستی چند {KM} دراز است؟", lambda n: f"The river is {n} centimetres long on the map. How many kilometres long is the real river?"),
+    (lambda n: f"از مکتب تا بازار روی نقشه {fa(n)} سانتی{Z}متر است. راه راستی چند {KM} است؟", lambda n: f"From the school to the bazaar it is {n} centimetres on the map. How many kilometres is the real way?"),
+]
+
+
+def scale_say(k: int) -> tuple[str, str]:
+    return f"روی نقشه یک سانتی{Z}متر یعنی {fa(k)} {KM}.", f"On the map 1 centimetre stands for {nn(k, 'kilometre')}."
+
+
+def mason6(level: int) -> Sheet:
+    s = Sheet(LP_COLS)
+
+    forward = []
+    for i, (k, n) in enumerate((k, n) for k in (1, 2, 5, 10) for n in range(2, 13)):
+        d, e = SCALE_WAYS[i % len(SCALE_WAYS)]
+        sd, se = scale_say(k)
+        if k == 1:
+            hd, he = f"یک سانتی{Z}متر یعنی یک {KM}، پس {fa(n)} سانتی{Z}متر یعنی {fa(n)} {KM}.", f"1 centimetre stands for 1 kilometre, so {n} centimetres stand for {n} kilometres."
+        else:
+            hd, he = f"هر سانتی{Z}متر {fa(k)} {KM} است. {fa(n)} ضرب {fa(k)} مساوی {fa(n * k)}.", f"Each centimetre is {k} kilometres. {n} times {k} equals {n * k}."
+        forward.append(ask(f"{sd} {d(n)}", f"{se} {e(n)}", n * k, [n + k, n if k > 1 else n + 1, n * k + k, n * 10 if k != 10 else n], hd, he))
+    pool6(s, "mason", "01", I_SCALE, [(forward, N)], dari=6)
+
+    back, scale = [], []
+    for i, (k, n) in enumerate((k, n) for k in (2, 5, 10, 4) for n in range(2, 11)):
+        sd, se = scale_say(k)
+        d, e = [("از قریه تا شهر {x} {KM} راه است. روی نقشه چند سانتی" + Z + "متر می" + Z + "شود؟", "From the village to the town it is {x} kilometres. How many centimetres is that on the map?"),
+                ("یک سرک {x} {KM} دراز است. روی نقشه آن را چند سانتی" + Z + "متر بکشیم؟", "A road is {x} kilometres long. How many centimetres do we draw it on the map?")][i % 2]
+        back.append(ask(f"{sd} {d.format(x=fa(n * k), KM=KM)}", f"{se} {e.format(x=n * k)}", n, [n * k, n * k * k, n + k, n * k - k],
+                        f"هر {fa(k)} {KM} یک سانتی{Z}متر می{Z}شود. {fa(n * k)} تقسیم {fa(k)} مساوی {fa(n)}.", f"Every {k} kilometres make 1 centimetre. {n * k} divided by {k} equals {n}."))
+    for i, (k, n) in enumerate((k, n) for k in (2, 3, 4, 5, 6, 8, 10, 20) for n in (2, 3, 4, 5, 6) if n != k):
+        scale.append(ask(f"دو قریه روی نقشه {fa(n)} سانتی{Z}متر از هم دور است. راه راستی {fa(n * k)} {KM} است. یک سانتی{Z}متر نقشه چند {KM} است؟",
+                         f"Two villages are {n} centimetres apart on the map. The real way is {n * k} kilometres. How many kilometres does 1 centimetre of the map stand for?", k, [n, n * k, n * k - n, k + 1],
+                         f"{fa(n * k)} {KM} را بین {fa(n)} سانتی{Z}متر تقسیم کن. {fa(n * k)} تقسیم {fa(n)} مساوی {fa(k)}.", f"Share {n * k} kilometres among {n} centimetres. {n * k} divided by {n} equals {k}."))
+    pool6(s, "mason", "02", I_SCALE_BACK, [(back, 11), (scale, 7)])
+
+    piece = (f"هر تکه راه روی نقشه یک سانتی{Z}متر است", "each piece of road on the map is 1 centimetre")
+    for rnd, names in (("03", ["map_scale_1", "map_scale_2", "map_scale_3"]), ("04", ["map_scale_4", "map_scale_5", "map_scale_6"])):
+        cands = []
+        for name in names:
+            (a, b, c), (n1, n2) = MAPS6[name]
+            for i, k in enumerate((1, 2, 5)):
+                sd, se = f"{piece[0]} و یک سانتی{Z}متر یعنی {fa(k)} {KM}.", f"{cap(piece[1])} and 1 centimetre stands for {nn(k, 'kilometre')}."
+                for (x, y, n) in ((a, b, n1), (b, c, n2)):
+                    hd = f"تکه{Z}های راه را بشمار: {fa(n)}." + (f" {fa(n)} ضرب {fa(k)} مساوی {fa(n * k)}." if k > 1 else f" {fa(n)} سانتی{Z}متر یعنی {fa(n)} {KM}.")
+                    he = f"Count the pieces of road: {n}." + (f" {n} times {k} equals {n * k}." if k > 1 else f" {n} {'centimetre stands' if n == 1 else 'centimetres stand'} for {nn(n, 'kilometre')}.")
+                    cands.append(ask(f"{sd} از {x[1]} تا {y[1]} چند {KM} راه است؟", f"{se} How many kilometres is it from the {x[2]} to the {y[2]}?", n * k, [n1 * k if n != n1 else n2 * k, (n1 + n2) * k, n + k, n * k + 1], hd, he, show=name))
+                t = n1 + n2
+                cands.append(ask(f"{sd} از {a[1]} از راه {b[1]} تا {c[1]} چند {KM} راه است؟", f"{se} How many kilometres is it from the {a[2]} past the {b[2]} to the {c[2]}?", t * k, [n1 * k, n2 * k, t + k, t * k + k],
+                                 f"هر دو راه را بشمار: {fa(n1)} جمع {fa(n2)} مساوی {fa(t)} سانتی{Z}متر." + (f" {fa(t)} ضرب {fa(k)} مساوی {fa(t * k)}." if k > 1 else f" یعنی {fa(t)} {KM}."),
+                                 f"Count both roads: {n1} plus {n2} equals {t} centimetres." + (f" {t} times {k} equals {t * k}." if k > 1 else f" That is {t} kilometres."), show=name))
+                if i:
+                    big, small_ = ((a, b, n1), (b, c, n2)) if n1 > n2 else ((b, c, n2), (a, b, n1))
+                    df = big[2] - small_[2]
+                    cands.append(ask(f"{sd} راه {big[0][1]} تا {big[1][1]} چند {KM} از راه {small_[0][1]} تا {small_[1][1]} درازتر است؟",
+                                     f"{se} How many kilometres longer is the way from the {big[0][2]} to the {big[1][2]} than the way from the {small_[0][2]} to the {small_[1][2]}?", df * k, [big[2] * k, small_[2] * k, t * k, df],
+                                     f"{fa(big[2])} منفی {fa(small_[2])} مساوی {fa(df)} سانتی{Z}متر." + (f" {fa(df)} ضرب {fa(k)} مساوی {fa(df * k)}." if k > 1 else ""),
+                                     f"{big[2]} minus {small_[2]} equals {nn(df, 'centimetre')}." + (f" {df} times {k} equals {df * k}." if k > 1 else ""), show=name))
+            for (x, y, n) in ((a, b, n1), (b, c, n2)):
+                cands.append(ask(f"{cap_fa(piece[0])}. از {x[1]} تا {y[1]} روی نقشه چند سانتی{Z}متر است؟", f"{cap(piece[1])}. How many centimetres is it on the map from the {x[2]} to the {y[2]}?", n, [n1 if n != n1 else n2, n1 + n2, n + 1, n - 1],
+                                 f"تکه{Z}های راه را بشمار: {fa(n)}.", f"Count the pieces of road: {n}.", show=name))
+        pool6(s, "mason", rnd, I_MAP, [(cands, N)], cap=3)
+
+    spoon = (f"یک قاشق اندازه{Z}گیری پنج {ML} می{Z}گیرد.", "A measuring spoon holds 5 millilitres.")
+    med, day, cook, back5 = [], [], [], []
+    for a in (5, 10, 15, 20):
+        k = a // 5
+        med.append(ask(f"کارمند صحی گفته است: هر بار {fa(a)} {ML} دوا. {spoon[0]} هر بار چند قاشق اندازه{Z}گیری می{Z}شود؟",
+                       f"The health worker said: {a} millilitres of medicine each time. {spoon[1]} How many measuring spoons is that each time?", k, [a, a + 5, k + 1, k + 2],
+                       f"{fa(a)} تقسیم پنج مساوی {fa(k)}. {DOSE_RULE[0]}", f"{a} divided by 5 equals {k}. {DOSE_RULE[1]}"))
+        med.append(ask(f"روی بوتل دوا نوشته است: هر بار {fa(a)} {ML}. {spoon[0]} چند قاشق اندازه{Z}گیری پر می{Z}شود؟",
+                       f"The writing on the bottle of medicine says: {a} millilitres each time. {spoon[1]} How many full measuring spoons is that?", k, [a, a + 5, k + 1, k + 2],
+                       f"می{Z}شماریم که چند بار پنج در {fa(a)} جای می{Z}شود: {fa(k)}. {DOSE_RULE[0]}", f"We count how many times 5 goes into {a}: {k}. {DOSE_RULE[1]}"))
+    for a in (5, 10, 15):
+        day.append(ask(f"کارمند صحی گفته است: صبح {fa(a)} {ML} و شام {fa(a)} {ML} دوا. در یک روز چند {ML} می{Z}شود؟",
+                       f"The health worker said: {a} millilitres of medicine in the morning and {a} millilitres in the evening. How many millilitres is that in a day?", 2 * a, [a, 3 * a, 2 * a + 5, a + 2],
+                       f"{fa(a)} جمع {fa(a)} مساوی {fa(2 * a)}. {DOSE_RULE[0]}", f"{a} plus {a} equals {2 * a}. {DOSE_RULE[1]}"))
+        day.append(ask(f"روی بوتل دوا نوشته است: روز سه بار، هر بار {fa(a)} {ML}. در یک روز چند {ML} می{Z}شود؟",
+                       f"The writing on the bottle of medicine says: three times a day, {a} millilitres each time. How many millilitres is that in a day?", 3 * a, [a, 2 * a, 3 * a + 5, a + 3],
+                       f"سه ضرب {fa(a)} مساوی {fa(3 * a)}. {DOSE_RULE[0]}", f"3 times {a} equals {3 * a}. {DOSE_RULE[1]}"))
+    dishes = [("برای خمیر", "For the dough", "روغن", "oil"), ("برای فرنی", "For the pudding", "شیر", "milk"), ("برای سالاد", "For the salad", "آب لیمو", "lemon juice"), ("برای آش", "For the soup", "روغن", "oil")]
+    for i, a in enumerate(range(10, 65, 5)):
+        dish, dish_en, liq, liq_en = dishes[i % len(dishes)]
+        cook.append(ask(f"{dish} {fa(a)} {ML} {liq} لازم است. {spoon[0]} چند قاشق {liq} لازم است؟", f"{dish_en}, {a} millilitres of {liq_en} are needed. {spoon[1]} How many spoons of {liq_en} are needed?", a // 5,
+                        [a, a // 5 + 1, a // 5 - 1, a - 5], f"می{Z}شماریم که چند بار پنج در {fa(a)} جای می{Z}شود. {fa(a)} تقسیم پنج مساوی {fa(a // 5)}.", f"We count how many times 5 goes into {a}. {a} divided by 5 equals {a // 5}."))
+    for i, k in enumerate(range(2, 13)):
+        liq, liq_en = [("روغن", "oil"), ("شیر", "milk"), ("آب", "water")][i % 3]
+        back5.append(ask(f"{fa(k)} قاشق اندازه{Z}گیری پر از {liq}، چند {ML} می{Z}شود؟ هر قاشق پنج {ML} می{Z}گیرد.", f"{k} full measuring spoons of {liq_en} make how many millilitres? Each spoon holds 5 millilitres.", 5 * k,
+                         [k, k + 5, 5 * k + 5, 10 * k], f"{fa(k)} ضرب پنج مساوی {fa(5 * k)}.", f"{k} times 5 equals {5 * k}."))
+    pool6(s, "mason", "05", I_SPOON, [(med, 5), (day, 3), (cook, 5), (back5, 5)], cap=3)
+
+    level_, fill = [], []
+    liquids = [("آب", "water"), ("شیر", "milk"), ("روغن", "oil"), ("چای", "tea")]
+    for i, (k, u) in enumerate((k, u) for u in (5, 10, 20, 25, 50) for k in range(1, CUP_MARKS + 1)):
+        liq, liq_en = liquids[i % 4]
+        level_.append(ask(f"در این پیاله اندازه{Z}گیری {liq} است. هر خط {fa(u)} {ML} است. چند {ML} {liq} در پیاله است؟",
+                          f"There is {liq_en} in this measuring cup. Each mark is {u} millilitres. How many millilitres of {liq_en} are in the cup?", k * u, [k, u, k * u + u, (CUP_MARKS - k) * u if 2 * k != CUP_MARKS else None],
+                          f"خط{Z}ها را از پایین تا سر {liq} بشمار: {fa(k)}. {fa(k)} ضرب {fa(u)} مساوی {fa(k * u)}.", f"Count the marks from the bottom to the top of the {liq_en}: {k}. {k} times {u} equals {k * u}.", show=f"cup_marks_{k}"))
+        if k < CUP_MARKS:
+            rest = CUP_MARKS - k
+            fill.append(ask(f"این پیاله اندازه{Z}گیری شش خط دارد و هر خط {fa(u)} {ML} است. برای پر شدن تا خط آخر چند {ML} {liq} دیگر لازم است؟",
+                            f"This measuring cup has 6 marks and each mark is {u} millilitres. How many more millilitres of {liq_en} are needed to fill it to the last mark?", rest * u, [k * u if k != rest else None, rest, CUP_MARKS * u, rest * u + u],
+                            f"خط{Z}های خالی را بشمار: {fa(rest)}. {fa(rest)} ضرب {fa(u)} مساوی {fa(rest * u)}.", f"Count the empty marks: {rest}. {rest} times {u} equals {rest * u}.", show=f"cup_marks_{k}"))
+    pool6(s, "mason", "06", I_CUP, [(level_, 11), (fill, 7)])
+
+    lasts, oil, left = [], [], []
+    for i, (b, d) in enumerate((b, d) for b in (60, 100, 120, 150, 200) for d in (5, 10, 15, 20) if b % d == 0):
+        first = [(f"یک بوتل دوا {fa(b)} {ML} دارد. کارمند صحی گفته است: هر روز {fa(d)} {ML}.", f"A bottle of medicine holds {b} millilitres. The health worker said: {d} millilitres every day."),
+                 (f"یک بوتل دوا {fa(b)} {ML} دارد. روی بوتل نوشته است: هر روز {fa(d)} {ML}.", f"A bottle of medicine holds {b} millilitres. The writing on the bottle says: {d} millilitres every day.")][i % 2]
+        lasts.append(ask(f"{first[0]} بوتل برای چند روز بس است؟", f"{first[1]} For how many days does the bottle last?", b // d, [b - d, d, b // d + 1, b // d * 2],
+                         f"می{Z}شماریم که چند بار {fa(d)} در {fa(b)} جای می{Z}شود. {fa(b)} تقسیم {fa(d)} مساوی {fa(b // d)}. {DOSE_RULE[0]}",
+                         f"We count how many times {d} goes into {b}. {b} divided by {d} equals {b // d}. {DOSE_RULE[1]}"))
+    for i, (b, d) in enumerate((b, d) for b in (500, 750, 1000) for d in (25, 50, 100, 125, 250) if b % d == 0):
+        oil.append(ask(f"یک بوتل روغن {fa(b)} {ML} دارد. هر روز {fa(d)} {ML} در پخت{Z}وپز مصرف می{Z}شود. بوتل برای چند روز بس است؟",
+                       f"A bottle of oil holds {b} millilitres. Every day {d} millilitres are used for cooking. For how many days does the bottle last?", b // d, [b - d, d, b // d + 1, b // d - 1],
+                       f"می{Z}شماریم که چند بار {fa(d)} در {fa(b)} جای می{Z}شود. {fa(b)} تقسیم {fa(d)} مساوی {fa(b // d)}.", f"We count how many times {d} goes into {b}. {b} divided by {d} equals {b // d}."))
+    for i, (b, d, k) in enumerate((b, d, k) for b in (250, 500, 750, 1000) for d in (20, 25, 50) for k in (3, 4, 5, 6, 8) if b - d * k >= 50):
+        liq, liq_en = [("روغن", "oil"), ("شیر", "milk"), ("آب لیمو", "lemon juice")][i % 3]
+        left.append(ask(f"در بوتل {fa(b)} {ML} {liq} بود. {fa(k)} روز، هر روز {fa(d)} {ML} از آن گرفته شد. چند {ML} مانده است؟",
+                        f"There were {b} millilitres of {liq_en} in the bottle. For {k} days, {d} millilitres were taken from it every day. How many millilitres are left?", b - d * k, [b - d, d * k, b - d * k + d, b - k],
+                        f"{fa(k)} ضرب {fa(d)} مساوی {fa(d * k)}. {fa(b)} منفی {fa(d * k)} مساوی {fa(b - d * k)}.", f"{k} times {d} equals {d * k}. {b} minus {d * k} equals {b - d * k}."))
+    pool6(s, "mason", "07", I_BOTTLE, [(lasts, 6), (oil, 6), (left, 6)], cap=3)
+
+    conv, cups, total = [], [], []
+    litre = (f"یک لیتر هزار {ML} است.", "One litre is 1000 millilitres.")
+    for word, en, ml, why, why_en in [("نیم لیتر", "half a litre", 500, "نیم هزار، پنج" + Z + "صد است.", "Half of 1000 is 500."), ("چارک لیتر", "a quarter of a litre", 250, "هزار تقسیم چهار مساوی دوصد و پنجاه.", "1000 divided by 4 equals 250."),
+                                      ("سه چارک لیتر", "three quarters of a litre", 750, "چارک آن دوصد و پنجاه است. سه ضرب دوصد و پنجاه مساوی هفت" + Z + "صد و پنجاه.", "A quarter of it is 250. 3 times 250 equals 750."),
+                                      ("یک و نیم لیتر", "one and a half litres", 1500, "هزار جمع پنج" + Z + "صد مساوی یک هزار و پنج" + Z + "صد.", "1000 plus 500 equals 1500."),
+                                      ("دو لیتر", "2 litres", 2000, "دو ضرب هزار مساوی دو هزار.", "2 times 1000 equals 2000."), ("دو و نیم لیتر", "two and a half litres", 2500, "دو هزار جمع پنج" + Z + "صد مساوی دو هزار و پنج" + Z + "صد.", "2000 plus 500 equals 2500."),
+                                      ("سه لیتر", "3 litres", 3000, "سه ضرب هزار مساوی سه هزار.", "3 times 1000 equals 3000."), ("پنج لیتر", "5 litres", 5000, "پنج ضرب هزار مساوی پنج هزار.", "5 times 1000 equals 5000."),
+                                      ("ده لیتر", "10 litres", 10000, "ده ضرب هزار مساوی ده هزار.", "10 times 1000 equals 10000.")]:
+        conv.append(ask(f"{word} چند {ML} است؟", f"How many millilitres is {en}?", ml, [ml // 10, ml * 10 if ml < 5000 else ml // 100, ml + 500, ml // 2], f"{litre[0]} {why}", f"{litre[1]} {why_en}"))
+    for i, (c, lt) in enumerate((c, lt) for c in (100, 125, 200, 250, 500) for lt in (1, 2, 3)):
+        liq, liq_en = [("شیر", "milk"), ("آب", "water"), ("دوغ", "doogh")][i % 3]
+        k = 1000 * lt // c
+        cups.append(ask(f"یک پیاله {fa(c)} {ML} می{Z}گیرد. برای {fa(lt)} لیتر {liq} چند پیاله لازم است؟", f"A cup holds {c} millilitres. How many cups are needed for {nn(lt, 'litre')} of {liq_en}?", k, [c // 10, k + 1, k - 1, k * 2],
+                        f"{fa(lt)} لیتر {fa(1000 * lt)} {ML} است. {fa(1000 * lt)} تقسیم {fa(c)} مساوی {fa(k)}.", f"{nn(lt, 'litre')} {'is' if lt == 1 else 'are'} {1000 * lt} millilitres. {1000 * lt} divided by {c} equals {k}."))
+    for i, (n, c) in enumerate((n, c) for c in (150, 200, 250) for n in range(3, 9)):
+        liq, liq_en = [("چای", "tea"), ("شیر", "milk"), ("آب", "water")][i % 3]
+        total.append(ask(f"{fa(n)} پیاله {liq} می{Z}ریزی، در هر پیاله {fa(c)} {ML}. همه چند {ML} می{Z}شود؟", f"You pour {n} cups of {liq_en}, {c} millilitres in each cup. How many millilitres is that altogether?", n * c, [n + c, n * c + c, n * c - c, n * 100],
+                         f"{fa(n)} ضرب {fa(c)} مساوی {fa(n * c)}.", f"{n} times {c} equals {n * c}."))
+    pool6(s, "mason", "08", I_LITRE_ML, [(conv, 6), (cups, 6), (total, 6)], cap=3)
+    return s
+
+
+def cap_fa(text: str) -> str:
+    return text
+
+
+# -- Twin Tiles ------------------------------------------------------------------
+
+I_PAIR_PCT_FRAC = tr("هر فیصد را با کسر مساوی آن جوره کن.", "Pair each percent with the fraction equal to it.")
+I_PAIR_PCT_DEC = tr("هر فیصد را با عدد اعشاری مساوی آن جوره کن.", "Pair each percent with the decimal number equal to it.")
+I_PAIR_PCT_PIC = tr("هر شکل را با فیصد آن جوره کن.", "Pair each picture with its percent.")
+I_PAIR_RATIO = tr("نسبت" + Z + "های مساوی را جوره کن.", "Pair the ratios that are equal.")
+
+
+def pairs6(level: int) -> Sheet:
+    s = Sheet(PAIRS_COLS)
+
+    def pair(rnd, intro, a, b, say):
+        row = s.add(round=rnd, intro_fa=intro, a=a, b=b, say_fa=say)
+        PAIR_META.append((row, "same"))
+
+    def fractions(rng):
+        for p in (50, 25, 75, 10, 20, 30, 40, 60, 70, 80, 90, 5, 1, 15, 35, 45):
+            k, n = pct_frac(p)
+            pair("01", I_PAIR_PCT_FRAC, P(p), fr(k, n), tr(f"{fa_pct(p)} مساوی {fa_frac(k, n)}.", f"{p} percent equals {k}/{n}."))
+    build(s, 6, "pairs", "01", fractions)
+
+    def decimals(rng):
+        for p in (50, 25, 75, 10, 20, 30, 40, 60, 70, 80, 90, 5, 1, 15, 65, 99):
+            pair("02", I_PAIR_PCT_DEC, P(p), "t:" + dec2(p), tr(f"{fa_pct(p)} مساوی {fa_dec(dec2(p))}.", f"{p} percent equals {dec2(p)}."))
+    build(s, 6, "pairs", "02", decimals)
+
+    def pictures(rng):
+        for n in GRID_PCTS:
+            pair("03", I_PAIR_PCT_PIC, grid(n), P(n), tr(f"از صد خانه، {fa(n)} خانه: {fa_pct(n)}.", f"Out of 100 squares, {nn(n, 'square')}: {n} percent."))
+    build(s, 6, "pairs", "03", pictures)
+
+    def ratios(rng):
+        for i, (a, b) in enumerate(RATIOS6):
+            m = 2 + i % 3
+            pair("04", I_PAIR_RATIO, R(a, b), R(a * m, b * m), tr(f"{fa_ratio(a, b)} مساوی {fa_ratio(a * m, b * m)}.", f"{a} to {b} equals {a * m} to {b * m}."))
+    build(s, 6, "pairs", "04", ratios)
+    return s
+
+
+# -- Number Rain -------------------------------------------------------------------
+
+def catch6(level: int) -> Sheet:
+    s = Sheet(CATCH_COLS)
+
+    def rule(rnd, say, targets, others, help_fa, test):
+        assert len(targets) >= 5 and len(others) >= 5 and not set(targets) & set(others), (say, targets, others)
+        assert all(len(x) - 2 <= 4 for x in targets + others), ("too wide for the round card", targets, others)
+        assert len(set(targets)) == len(targets) and len(set(others)) == len(others)
+        row = s.add(round=rnd, intro_fa=I_RAIN, say_fa=say, targets="|".join(targets), others="|".join(others), need=NEED, help_fa=help_fa)
+        CATCH_META.append((row, test))
+
+    half = Fraction(1, 2)
+    percents = [1, 2, 4, 5, 8, 9, 10, 11, 15, 20, 24, 25, 26, 30, 35, 40, 45, 49, 50, 51, 55, 60, 65, 70, 74, 75, 76, 80, 85, 89, 90, 91, 92, 95, 96, 98, 99, 100]
+
+    def compare(rng, say, help_fa, test, edge):
+        yes, no = [p for p in percents if test(Fraction(p, 100))], [p for p in percents if not test(Fraction(p, 100))]
+        ty = uniq([p for p in edge if p in yes] + rng.sample(yes, min(6, len(yes))))[:6]
+        tn = uniq([p for p in edge if p in no] + rng.sample(no, min(6, len(no))))[:6]
+        rule("01", say, [P(p) for p in ty], [P(p) for p in tn], help_fa, test)
+
+    same_as = {   # a value -> its other spellings, at most four characters wide
+        half: ["50%", "1/2", "0.5", "2/4", "3/6", "4/8", "5/10"], Fraction(1, 4): ["25%", "1/4", "0.25", "2/8", "3/12", "4/16"],
+        Fraction(3, 4): ["75%", "3/4", "0.75", "6/8", "9/12"], Fraction(1, 10): ["10%", "1/10", "0.1", "2/20", "0.10"],
+        Fraction(1, 5): ["20%", "1/5", "0.2", "2/10", "0.20", "3/15"], Fraction(1): ["100%", "2/2", "1.0", "4/4", "5/5", "3/3"],
+        Fraction(2, 5): ["40%", "2/5", "0.4", "4/10", "0.40", "6/15"], Fraction(3, 5): ["60%", "3/5", "0.6", "6/10", "0.60", "9/15"],
+    }
+
+    def equal(rng, v, name, name_en, help_fa):
+        others = [x for w, xs in same_as.items() if w != v for x in xs]
+        rule("01", tr(f"هر چه را که مساوی {name} است بگیر.", f"Catch everything that is equal to {name_en}."), ["t:" + x for x in same_as[v]],
+             ["t:" + x for x in rng.sample(others, 7)], help_fa, lambda x, v=v: x == v)
+
+    def percent_rules(rng):
+        look = tr("فیصد بزرگتر یعنی حصه بیشتر از صد. عددها را مقایسه کن.", "A bigger percent means a bigger part of the hundred. Compare the numbers.")
+        for k, edge in ((50, (49, 51)), (25, (24, 26)), (75, (74, 76)), (90, (89, 91))):
+            compare(rng, tr(f"فیصدهای بزرگتر از {fa_pct(k)} را بگیر.", f"Catch the percents bigger than {k} percent."), look, lambda x, k=k: x > Fraction(k, 100), edge + (k,))
+        for k, edge in ((50, (49, 51)), (25, (24, 26)), (75, (74, 76)), (10, (9, 11))):
+            compare(rng, tr(f"فیصدهای کوچکتر از {fa_pct(k)} را بگیر.", f"Catch the percents smaller than {k} percent."), look, lambda x, k=k: x < Fraction(k, 100), edge + (k,))
+        compare(rng, tr(f"فیصدهای بین بیست و پنج و هفتاد و پنج {PCT} را بگیر.", "Catch the percents between 25 and 75 percent."),
+                tr(f"این فیصدها از بیست و پنج {PCT} بزرگتر و از هفتاد و پنج {PCT} کوچکتر هستند.", "These percents are bigger than 25 percent and smaller than 75 percent."),
+                lambda x: Fraction(1, 4) < x < Fraction(3, 4), (25, 26, 74, 75))
+        equal(rng, half, "نیم", "a half", tr(f"نیم یعنی پنجاه {PCT}، یک بر دو، صفر اعشاریه پنج.", "A half means 50 percent, 1/2, 0.5."))
+        equal(rng, Fraction(1, 4), "چارک", "a quarter", tr(f"چارک یعنی بیست و پنج {PCT}، یک بر چهار، صفر اعشاریه بیست و پنج.", "A quarter means 25 percent, 1/4, 0.25."))
+        equal(rng, Fraction(3, 4), "سه چارک", "three quarters", tr(f"سه چارک یعنی هفتاد و پنج {PCT}، سه بر چهار، صفر اعشاریه هفتاد و پنج.", "Three quarters means 75 percent, 3/4, 0.75."))
+        equal(rng, Fraction(1, 10), f"ده {PCT}", "10 percent", tr(f"ده {PCT} یعنی یک بر ده، صفر اعشاریه یک.", "10 percent means 1/10, 0.1."))
+        equal(rng, Fraction(1, 5), f"بیست {PCT}", "20 percent", tr(f"بیست {PCT} یعنی یک بر پنج، صفر اعشاریه دو.", "20 percent means 1/5, 0.2."))
+        equal(rng, Fraction(1), "یک پوره", "one whole", tr(f"یک پوره یعنی صد {PCT}. وقتی صورت و مخرج یکی است، کسر یک پوره است.", "One whole means 100 percent. When the numerator and the denominator are the same, the fraction is one whole."))
+        equal(rng, Fraction(2, 5), f"چهل {PCT}", "40 percent", tr(f"چهل {PCT} یعنی چهار بر ده، که همان دو بر پنج است.", "40 percent means 4/10, which is the same as 2/5."))
+        equal(rng, Fraction(3, 5), f"شصت {PCT}", "60 percent", tr(f"شصت {PCT} یعنی شش بر ده، که همان سه بر پنج است.", "60 percent means 6/10, which is the same as 3/5."))
+    build(s, 6, "catch", "01", percent_rules)
+
+    def ratio_rules(rng):
+        bases = [(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 10), (2, 1), (3, 1), (4, 1), (5, 1), (10, 1)]
+        for a, b in bases:
+            yes = [R(a * m, b * m) for m in range(2, 10) if len(f"{a * m}:{b * m}") <= 4]
+            no = [R(x * m, y * m) for x, y in bases if (x, y) != (a, b) for m in (1, 2, 3) if len(f"{x * m}:{y * m}") <= 4]
+            no = uniq([R(b * 2, a * 2), R(b * 3, a * 3)] + rng.sample(no, 6)) if a != b else rng.sample(no, 7)
+            no = [x for x in no if len(x) - 2 <= 4 and val(x) != Fraction(a, b)][:7]
+            if a == b:
+                help_fa = tr("در نسبت یک به یک هر دو عدد یکی است.", "In the ratio 1 to 1 both numbers are the same.")
+            elif a == 1:
+                help_fa = tr(f"در نسبت {fa_ratio(a, b)} عدد دوم {fa(b)} چند عدد اول است.", f"In the ratio {a} to {b} the second number is {b} times the first.")
+            else:
+                help_fa = tr(f"در نسبت {fa_ratio(a, b)} عدد اول {fa(a)} چند عدد دوم است.", f"In the ratio {a} to {b} the first number is {a} times the second.")
+            rule("02", tr(f"نسبت{Z}های مساوی {fa_ratio(a, b)} را بگیر.", f"Catch the ratios equal to {a} to {b}."), rng.sample(yes, min(6, len(yes))), no, help_fa,
+                 lambda x, v=Fraction(a, b): x == v)
+    build(s, 6, "catch", "02", ratio_rules, small="eleven ratios have five or more equal ratios that fit a round card")
+    return s
+
+
+# -- Tables and Charts: the average as sharing out evenly ------------------------
+
+I_CHART_MEAN = tr("گراف را ببین. اوسط یعنی اگر همه ستون" + Z + "ها را برابر کنیم، هر ستون چند خانه می" + Z + "شود.",
+                  "Look at the chart. The average means: if we make all the columns equal, how many boxes does each column get?")
+I_TABLE_MEAN = tr("جدول را ببین. اوسط یعنی اگر همه قطارها را برابر کنیم، هر قطار چند تا می" + Z + "شود.",
+                  "Look at the table. The average means: if we make all the rows equal, how many does each row get?")
+
+
+def charts6(level: int) -> Sheet:
+    s = Sheet(LP_COLS)
+    for r, names in enumerate(MEAN_CHARTS):
+        rnd = f"{r + 1:02d}"
+        cands = []
+        for name in names:
+            rows = CHARTS[name]
+            values = [v for _, _, v in rows]
+            total, m = sum(values), sum(values) // 3
+            assert total % 3 == 0 and len(set(values)) == 3 and m in values, name
+            bars = "bars" in name
+            kw, ke, col, col_en = ("گراف", "chart", "ستون", "column") if bars else ("جدول", "table", "قطار", "row")
+            sums = " جمع ".join(fa(v) for v in values) + f" مساوی {fa(total)}.", " plus ".join(str(v) for v in values) + f" equals {total}."
+            mean_help = (f"{sums[0]} سه {col} است، پس {fa(total)} تقسیم سه مساوی {fa(m)}.", f"{sums[1]} There are 3 {col_en}s, so {total} divided by 3 equals {m}.")
+            pics = [p for p, _, _ in rows] + [CHART_EXTRA[name]]
+            nd, ne = "، ".join(n for _, n, _ in rows[:2]) + " و " + rows[2][1], ", ".join(many(n) for _, n, _ in rows[:2]) + " and " + many(rows[2][1])
+            top = max(rows, key=lambda x: x[2])
+            low = min(rows, key=lambda x: x[2])
+            cands.append(ask(f"در این {kw} {nd} با هم چند تا است؟", f"In this {ke}, how many are the {ne} together?", total, [total - 1, total + 1, max(values), m], *sums, show=name))
+            cands.append(ask(f"اگر {nd} این {kw} را یکجا کنیم و بین سه {col} برابر تقسیم کنیم، در هر {col} چند تا می{Z}شود؟",
+                             f"If we put the {ne} of this {ke} together and share them out evenly among the 3 {col_en}s, how many are in each {col_en}?", m, [total, max(values), min(values) if min(values) != m else None, m + 2],
+                             *mean_help, show=name, key=("mean", name)))
+            cands.append(ask(f"در این {kw} اوسط {nd} چند است؟", f"In this {ke}, what is the average of the {ne}?", m, [total, max(values), min(values), m + 2], *mean_help, show=name, key=("mean2", name)))
+            eq = next(x for x in rows if x[2] == m)
+            cands.append(ask(f"اوسط این {kw} {fa(m)} است. کدام چیز درست به اندازه اوسط است؟", f"The average of this {ke} is {m}. Which thing is exactly as many as the average?", eq[0], [p for p in pics if p != eq[0]],
+                             f"{eq[1]} {fa(m)} تا است، درست به اندازه اوسط.", f"There {'is' if m == 1 else 'are'} {m} of the {bare(eq[1])}, exactly the average.", show=name, key=name + "eq"))
+            cands.append(ask(f"اوسط این {kw} {fa(m)} است. کدام چیز از اوسط بیشتر است؟", f"The average of this {ke} is {m}. Which thing is more than the average?", top[0], [p for p in pics if p != top[0]],
+                             f"{top[1]} {fa(top[2])} تا است و {fa(top[2])} از {fa(m)} بیشتر است.", f"There are {top[2]} of the {bare(top[1])}, and {top[2]} is more than {m}.", show=name, key=name + "top"))
+            d = top[2] - m
+            cands.append(ask(f"در این {kw} از {col} {top[1]} چند تا را به {col} {low[1]} بدهیم تا هر سه {col} برابر شوند؟",
+                             f"In this {ke}, how many must we move from the {col_en} of the {bare(top[1])} to the {col_en} of the {bare(low[1])} so that all three {col_en}s are equal?", d, [top[2], m, d + 1, d + 2],
+                             f"اوسط {fa(m)} است. {col} {top[1]} {fa(top[2])} تا دارد. {fa(top[2])} منفی {fa(m)} مساوی {fa(d)}.", f"The average is {m}. The {col_en} of the {bare(top[1])} has {top[2]}. {top[2]} minus {m} equals {d}.", show=name, key=("move", name)))
+            for pic, noun, v in rows:
+                cands.append(ask(f"در این {kw} چند {noun} است؟", f"In this {ke}, how many {many(noun)} are there?", v, [x for x in values if x != v] + [v + 1],
+                                 f"خانه{Z}های {noun} را بشمار: {fa(v)}.", f"Count the boxes of the {bare(noun)}: {v}.", show=name, key=("count", name, pic)))
+        pool6(s, "charts", rnd, I_CHART_MEAN if "bars" in names[0] else I_TABLE_MEAN, [(cands, 20)], cap=3)
+    return s
+
+
+# -- Number Riddles ----------------------------------------------------------------
+
+I_SAME_VALUE6 = tr("فیصد، کسر و عدد اعشاری: آن را پیدا کن که مساوی است.", "Percent, fraction and decimal number: find the one that is equal.")
+I_BIGGEST6 = tr("همه را به فیصد برگردان و ببین کدام از همه بزرگتر یا کوچکتر است.", "Turn them all into percents and see which one is the biggest or the smallest.")
+I_RATIO_GAP = tr("در نسبت یک عدد کم است. آن را پیدا کن.", "One number is missing in the ratio. Find it.")
+I_MEAN_GAP = tr("اوسط را می" + Z + "دانی. عددی را که کم است پیدا کن.", "You know the average. Find the number that is missing.")
+I_REST_PCT = tr("همه صد فیصد است. حساب کن که باقی چند فیصد است.", "All of it is 100 percent. Work out what percent the rest is.")
+REST_STORIES = [
+    (lambda p: f"{fa_pct(p)} شاگردان صنف دختر هستند. چند {PCT} بچه هستند؟", lambda p: f"{p} percent of the pupils of the class are girls. What percent are boys?"),
+    (lambda p: f"دهقان {fa_pct(p)} زمین را گندم کاشت و باقی را جواری. چند {PCT} زمین جواری است؟", lambda p: f"The farmer sowed wheat on {p} percent of the land and maize on the rest. What percent of the land is maize?"),
+    (lambda p: f"{fa_pct(p)} راه را رفته{Z}ای. چند {PCT} راه مانده است؟", lambda p: f"You have gone {p} percent of the way. What percent of the way is left?"),
+    (lambda p: f"یک خانواده {fa_pct(p)} عاید خود را مصرف می{Z}کند و باقی را پس{Z}انداز. چند {PCT} عاید پس{Z}انداز می{Z}شود؟", lambda p: f"A family spends {p} percent of its income and saves the rest. What percent of the income is saved?"),
+    (lambda p: f"{fa_pct(p)} شاگردان صنف بچه هستند. چند {PCT} دختر هستند؟", lambda p: f"{p} percent of the pupils of the class are boys. What percent are girls?"),
+    (lambda p: f"از تخم{Z}های زیر مرغ {fa_pct(p)} چوچه شد. چند {PCT} چوچه نشد؟", lambda p: f"Of the eggs under the hen, {p} percent hatched. What percent did not hatch?"),
+    (lambda p: f"سطل {fa_pct(p)} پر است. چند {PCT} آن خالی است؟", lambda p: f"The bucket is {p} percent full. What percent of it is empty?"),
+]
+REST3_STORIES = [
+    (lambda a, b: f"یک خانواده {fa_pct(a)} عاید را برای خوراک و {fa_pct(b)} را برای چیزهای دیگر مصرف می{Z}کند. باقی پس{Z}انداز می{Z}شود. چند {PCT} پس{Z}انداز می{Z}شود؟",
+     lambda a, b: f"A family spends {a} percent of its income on food and {b} percent on other things. The rest is saved. What percent is saved?"),
+    (lambda a, b: f"در باغ {fa_pct(a)} درخت{Z}ها سیب و {fa_pct(b)} انار است. باقی چهارمغز است. چند {PCT} درخت{Z}ها چهارمغز است؟",
+     lambda a, b: f"In the garden {a} percent of the trees are apple and {b} percent pomegranate. The rest are walnut. What percent of the trees are walnut?"),
+    (lambda a, b: f"دهقان {fa_pct(a)} زمین را گندم، {fa_pct(b)} را کچالو و باقی را پیاز کاشت. چند {PCT} زمین پیاز است؟",
+     lambda a, b: f"The farmer sowed {a} percent of the land with wheat, {b} percent with potatoes and the rest with onions. What percent of the land is onions?"),
+]
+
+
+def riddles6(level: int) -> Sheet:
+    s = Sheet(LP_COLS)
+    base = [50, 25, 75, 10, 20, 30, 40, 60, 70, 80, 90, 5, 1]
+
+    c1 = []
+    for i, p in enumerate(base):
+        forms = forms6(p)
+        others = [forms6(q) for q in base[i + 1:] + base[:i]]
+        for a, b in ((0, 1), (0, 2), (1, 0), (2, 1), (1, 2), (2, 0)):
+            (shown, (sd, se)), (right, (rd, re_)) = forms[a], forms[b]
+            wrong = [o[b][0] for o in others[:3]] + [o[(b + 1) % 3][0] for o in others[3:6] if (b + 1) % 3 != a] + [o[b][0] for o in others[6:]]
+            if b == 0:
+                wrong = near_pcts(p)
+            c1.append(ask(f"کدام با {sd} مساوی است؟", f"Which one is equal to {se}?", right, wrong,
+                          f"{sd} یعنی {fa_frac(p, 100)}، یعنی {fa_pct(p)}. جواب {rd} است.", f"{se} means {p}/100, that is {p} percent. The answer is {re_}.", show=shown, key=(p, a, b)))
+    pool6(s, "riddles", "01", I_SAME_VALUE6, [(c1, N)])
+
+    c2 = []
+    rng = rng_for("riddles6", "biggest")
+    seen = set()
+    while len(c2) < 40:
+        picks = tuple(sorted(rng.sample([10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90], 4)))
+        shift = rng.randrange(3)
+        if (picks, shift) in seen:
+            continue
+        seen.add((picks, shift))
+        chosen = [forms6(p)[(i + shift) % 3] for i, p in enumerate(picks)]
+        spoken = dict(chosen)
+        biggest = len(c2) % 2 == 0
+        (right, (rd, re_)), want = (chosen[-1], picks[-1]) if biggest else (chosen[0], picks[0])
+        ld, le = said_list([t for t, _ in chosen], lambda t: spoken[t])
+        turned = "، ".join(f"{spoken[t][0]} یعنی {fa_pct(p)}" for (t, _), p in zip(chosen, picks) if t != P(p))
+        turned_en = ", ".join(f"{spoken[t][1]} means {p} percent" for (t, _), p in zip(chosen, picks) if t != P(p))
+        word, word_en = ("بزرگتر", "biggest") if biggest else ("کوچکتر", "smallest")
+        c2.append(ask(f"{ld}. کدام از همه {word} است؟", f"{le}. Which one is the {word_en}?", right, [t for t, _ in chosen if t != right],
+                      f"همه را به {PCT} برگردان: {turned}. {fa_pct(want)} از همه {word} است.", f"Turn them all into percents: {turned_en}. {want} percent is the {word_en}.", key=(want, biggest)))
+    pool6(s, "riddles", "02", I_BIGGEST6, [(c2, N)], cap=3)
+
+    c3 = []
+    for i, (a, b, m) in enumerate((a, b, m) for a, b in RATIOS6 for m in (2, 3, 4, 5, 6)):
+        if i % 2 == 0:
+            c3.append(ask(f"{fa_ratio(a, b)} مساوی {fa(a * m)} به چند است؟", f"{a} to {b} is equal to {a * m} to how many?", b * m, [b + a * m - a, a * m, b * m + b, b * m - 1],
+                          f"{fa(a)} ضرب {fa(m)} مساوی {fa(a * m)}. پس {fa(b)} را هم در {fa(m)} ضرب کن: {fa(b * m)}.", f"{a} times {m} equals {a * m}. So multiply {b} by {m} too: {b * m}."))
+        else:
+            c3.append(ask(f"چند به {fa(b * m)} مساوی {fa_ratio(a, b)} است؟", f"How many to {b * m} is equal to {a} to {b}?", a * m, [a + b * m - b, b * m, a * m + a, a * m + 1],
+                          f"{fa(b)} ضرب {fa(m)} مساوی {fa(b * m)}. پس {fa(a)} را هم در {fa(m)} ضرب کن: {fa(a * m)}.", f"{b} times {m} equals {b * m}. So multiply {a} by {m} too: {a * m}."))
+    pool6(s, "riddles", "03", I_RATIO_GAP, [(c3, N)])
+
+    c4 = []
+    for nums in mean_lists("gap3", 3, 2, 18, 40) + mean_lists("gap4", 4, 2, 15, 20):
+        k, m, known, gap = len(nums), sum(nums) // len(nums), nums[:-1], nums[-1]
+        ld, le = fa_list(known)
+        count, count_en = ("سه", "three") if k == 3 else ("چهار", "four")
+        rest, rest_en = (("دو عدد آن", "Two of them are"), ("سه عدد آن", "Three of them are"))[k - 3]
+        last, last_en = ("سوم", "third") if k == 3 else ("چهارم", "fourth")
+        c4.append(ask(f"اوسط {count} عدد {fa(m)} است. {rest} {ld} است. عدد {last} چند است؟", f"The average of {count_en} numbers is {m}. {rest_en} {le}. What is the {last_en} number?", gap,
+                      [m if m != gap else None, k * m, sum(known), gap + 1, gap - 1],
+                      f"اوسط {fa(m)} است و {count} عدد است، پس جمع همه {fa(k)} ضرب {fa(m)} مساوی {fa(k * m)} است. " + " جمع ".join(fa(x) for x in known) + f" مساوی {fa(sum(known))}. {fa(k * m)} منفی {fa(sum(known))} مساوی {fa(gap)}.",
+                      f"The average is {m} and there are {count_en} numbers, so the sum of all is {k} times {m} equals {k * m}. " + " plus ".join(str(x) for x in known) + f" equals {sum(known)}. {k * m} minus {sum(known)} equals {gap}."))
+    pool6(s, "riddles", "04", I_MEAN_GAP, [(c4, N)])
+
+    two, three = [], []
+    whole = (f"همه صد {PCT} است.", "All of it is 100 percent.")
+    for i, p in enumerate([10, 15, 20, 25, 30, 35, 40, 45, 55, 60, 65, 70, 75, 80, 85, 90, 95, 5]):
+        d, e = REST_STORIES[i % len(REST_STORIES)]
+        two.append(ask(d(p), e(p), P(100 - p), [P(p)] + near_pcts(100 - p), f"{whole[0]} صد منفی {fa(p)} مساوی {fa(100 - p)}.", f"{whole[1]} 100 minus {p} equals {100 - p}."))
+    for i, (a, b) in enumerate((a, b) for a in (30, 40, 50, 60, 45, 55) for b in (10, 20, 25, 30, 35) if a + b < 100):
+        d, e = REST3_STORIES[i % len(REST3_STORIES)]
+        r = 100 - a - b
+        three.append(ask(d(a, b), e(a, b), P(r), [P(a + b), P(100 - a), P(100 - b)] + near_pcts(r),
+                         f"{whole[0]} {fa(a)} جمع {fa(b)} مساوی {fa(a + b)}. صد منفی {fa(a + b)} مساوی {fa(r)}.", f"{whole[1]} {a} plus {b} equals {a + b}. 100 minus {a + b} equals {r}."))
+    pool6(s, "riddles", "05", I_REST_PCT, [(two, 10), (three, 8)])
+    return s
+
+
+# -- True or False -------------------------------------------------------------------
+
+I_TRUE_PCT = tr("فیصد و کسر یا عدد اعشاری: مساوی هستند؟ درست یا غلط؟", "A percent and a fraction or decimal number: are they equal? True or false?")
+I_TRUE_RATIO = tr("دو نسبت مساوی هستند؟ درست یا غلط؟", "Are the two ratios equal? True or false?")
+I_TRUE_MEAN = tr("اوسط این عددها همین است؟ درست یا غلط؟", "Is this the average of these numbers? True or false?")
+
+
+def truefalse6(level: int) -> Sheet:
+    s = Sheet(SORTER_COLS)
+
+    def percent(rng):
+        base = [50, 25, 75, 10, 20, 30, 40, 60, 70, 80, 90, 5]
+        picks = rng.sample([(p, kind) for p in base for kind in (1, 2)], N)
+        for i, (p, kind) in enumerate(picks):
+            true = i % 2 == 0
+            q = p if true else rng.choice([x for x in base if x != p and abs(x - p) <= 30] + ([p // 10] if p % 10 == 0 and kind == 2 and p >= 20 else []))
+            if kind == 1 and not true and i % 4 == 1 and Fraction(1, p) != Fraction(p, 100):
+                thing, (d, e) = fr(1, p), (fa_frac(1, p), f"1/{p}")   # the classic mistake: 20 percent = 1/20
+            elif kind == 2 and not true and q < 10 and q != 5:
+                thing, (d, e) = "t:" + dec2(q), (fa_dec(dec2(q)), dec2(q))
+            else:
+                thing, (d, e) = forms6(q)[kind]
+            tf_row(s, "01", I_TRUE_PCT, f"t:{p}% = {thing[2:]}", tr(f"{fa_pct(p)} مساوی {d} است.", f"{p} percent is equal to {e}."), true)
+            assert (val(thing) == Fraction(p, 100)) == true, (p, thing)
+    build(s, 6, "truefalse", "01", percent)
+
+    def ratio(rng):
+        picks = rng.sample([(a, b, m) for a, b in RATIOS6 for m in (2, 3, 4) if a * m <= 20 and b * m <= 20], N)
+        for i, (a, b, m) in enumerate(picks):
+            true = i % 2 == 0
+            x, y = (a * m, b * m) if true else [(a + m, b + m), (b * m, a * m), (a * m, b * m + b)][i % 3]
+            assert (Fraction(x, y) == Fraction(a, b)) == true
+            tf_row(s, "02", I_TRUE_RATIO, f"t:{a}:{b} = {x}:{y}", tr(f"{fa_ratio(a, b)} مساوی {fa_ratio(x, y)} است.", f"{a} to {b} is equal to {x} to {y}."), true)
+    build(s, 6, "truefalse", "02", ratio)
+
+    def mean(rng):
+        lists = mean_lists("tf3", 3, 1, 12, 12) + mean_lists("tf4", 4, 1, 9, 6)
+        for i, nums in enumerate(rng.sample(lists, N)):
+            true = i % 2 == 0
+            m = sum(nums) // len(nums)
+            wrong = [x for x in (sorted(nums)[1], max(nums), m + 1, m - 1, sum(nums)) if x != m and x > 0]
+            claim = m if true else wrong[i % 3 % len(wrong)]
+            ld, le = fa_list(nums)
+            row_n = len(s.rows)
+            tf_row(s, "03", I_TRUE_MEAN, "t:" + ", ".join(str(x) for x in nums), tr(f"اوسط {ld}، {fa(claim)} است.", f"The average of {le} is {claim}."), true)
+            L6_META.append((s.rows[row_n], lambda r, claim=claim: (lambda xs: (sum(xs) == claim * len(xs)) == (r["basket"] == "yes"))([int(x) for x in r["thing"][2:].split(", ")])))
+    build(s, 6, "truefalse", "03", mean)
+    return s
+
+
+# -- The Cooking Pot: ratio through recipes and mixing, sharing in a ratio ---------
+
+I_RATIO = tr("نسبت می" + Z + "گوید از هر چیز چند حصه می" + Z + "گیریم. نسبت را پیدا کن.", "A ratio tells how many parts of each thing we take. Find the ratio.")
+I_RATIO_UP = tr("دیگ کلان" + Z + "تر می" + Z + "پزیم: هر دو چیز را به یک اندازه زیاد کن.", "We cook a bigger pot: make both things bigger by the same amount.")
+I_RATIO_SAME = tr("نسبت مساوی را پیدا کن: هر دو عدد را در یک عدد ضرب یا بر یک عدد تقسیم کن.", "Find the equal ratio: multiply both numbers by the same number, or divide both by the same number.")
+I_RATIO_SHARE = tr("به نسبت تقسیم کن: اول حصه" + Z + "ها را جمع کن.", "Share in the ratio: first add the parts.")
+I_RATIO_PARTS = tr("از نسبت و یک عدد، عدد دیگر را پیدا کن.", "From the ratio and one number, find the other number.")
+# what we mix: the two things, the measure, the pot, a picture, and the ratios used
+RECIPES = [
+    ("برنج", "rice", "آب", "water", "پیاله", "cup", "برای پلو", "For the rice", "rice", [(2, 3), (1, 2), (3, 4)]),
+    ("شیر", "milk", "آب", "water", "پیاله", "cup", "برای شیرچای", "For milk tea", "milk", [(1, 2), (1, 3), (2, 3)]),
+    ("آرد", "flour", "آب", "water", "پیاله", "cup", "برای خمیر", "For the dough", "flour_sack", [(3, 1), (5, 2), (2, 1)]),
+    ("ماست", "yoghurt", "آب", "water", "پیاله", "cup", "برای دوغ", "For doogh", "yoghurt", [(1, 2), (1, 3), (2, 5)]),
+    ("ریگ", "sand", "سمنت", "cement", "بیل", "shovel", "برای مصاله دیوار", "For the mortar of a wall", "brick", [(3, 1), (4, 1), (5, 2)]),
+    ("خاک", "earth", "کاه", "straw", "سطل", "bucket", "برای کاه" + Z + "گل", "For mud plaster", "bucket", [(4, 1), (5, 1), (3, 2)]),
+    ("جو", "barley", "کاه", "straw", "کیلو", "kilo", "برای خوراک گاو", "For the cow's feed", "cow", [(1, 3), (1, 4), (2, 5)]),
+]
+TIMES_FA = {2: "دو چند", 3: "سه چند", 4: "چهار چند", 5: "پنج چند", 6: "شش چند"}
+SHARE_STORIES = [
+    (lambda a, b, t: f"دو همسایه یک کشتزار را با هم کار کردند: یکی {fa(a)} روز و دیگری {fa(b)} روز. آنها {fa(t)} کیلو گندم را به نسبت {fa_ratio(a, b)} تقسیم می{Z}کنند.",
+     lambda a, b, t: f"Two neighbours worked a field together: one for {nn(a, 'day')} and the other for {nn(b, 'day')}. They share {t} kilos of wheat in the ratio {a} to {b}.", "کیلو", "kilos"),
+    (lambda a, b, t: f"دو خواهر با هم قالین بافتند. آنها {fa(t)} {AFN} را به نسبت {fa_ratio(a, b)} تقسیم می{Z}کنند.",
+     lambda a, b, t: f"Two sisters wove a carpet together. They share {t} afghani in the ratio {a} to {b}.", AFN, "afghani"),
+    (lambda a, b, t: f"دو برادر {fa(t)} چهارمغز جمع کردند و آن را به نسبت {fa_ratio(a, b)} تقسیم می{Z}کنند.",
+     lambda a, b, t: f"Two brothers gathered {t} walnuts and share them in the ratio {a} to {b}.", "چهارمغز", "walnuts"),
+    (lambda a, b, t: f"نانوا {fa(t)} نان را بین دو خانواده به نسبت {fa_ratio(a, b)} تقسیم می{Z}کند.",
+     lambda a, b, t: f"The baker shares {t} loaves of bread between two families in the ratio {a} to {b}.", "نان", "loaves"),
+]
+GROUP_RATIOS = [("بز", "goats", "گوسفند", "sheep", "در رمه", "In the flock"), ("دختر", "girls", "بچه", "boys", "در صنف", "In the class"),
+                ("درخت سیب", "apple trees", "درخت انار", "pomegranate trees", "در باغ", "In the garden"), ("مرغ سفید", "white hens", "مرغ سیاه", "black hens", "در حویلی", "In the yard"),
+                ("بچه", "boys", "دختر", "girls", "در صنف", "In the class")]
+
+
+def ratio6(level: int) -> Sheet:
+    s = Sheet(LP_COLS)
+
+    c1, c2 = [], []
+    for A, A_en, B_, B_en, unit, unit_en, pot, pot_en, pic, pairs in RECIPES:
+        for a, b in pairs:
+            first = (f"{pot} {fa(a)} {unit} {A} و {fa(b)} {unit} {B_} می{Z}گیریم.", f"{pot_en} we take {nn(a, unit_en)} of {A_en} and {nn(b, unit_en)} of {B_en}.")
+            c1.append(ask(f"{first[0]} نسبت {A} به {B_} چند است؟", f"{first[1]} What is the ratio of {A_en} to {B_en}?", R(a, b), [R(b, a), R(a, a + b), R(b, a + b), R(a + 1, b), R(a, b + 1)],
+                          f"اول {A}: {fa(a)}. بعد {B_}: {fa(b)}. نسبت {A} به {B_}، {fa_ratio(a, b)} است.", f"First the {A_en}: {a}. Then the {B_en}: {b}. The ratio of {A_en} to {B_en} is {a} to {b}.", show=pic))
+            c1.append(ask(f"{first[0]} نسبت {B_} به {A} چند است؟", f"{first[1]} What is the ratio of {B_en} to {A_en}?", R(b, a), [R(a, b), R(b, a + b), R(a, a + b), R(b + 1, a), R(b, a + 1)],
+                          f"اول {B_}: {fa(b)}. بعد {A}: {fa(a)}. نسبت {B_} به {A}، {fa_ratio(b, a)} است.", f"First the {B_en}: {b}. Then the {A_en}: {a}. The ratio of {B_en} to {A_en} is {b} to {a}.", show=pic))
+            for m in (2, 3, 4, 5):
+                c2.append(ask(f"{pot} برای {fa(a)} {unit} {A}، {fa(b)} {unit} {B_} لازم است. برای {fa(a * m)} {unit} {A} چند {unit} {B_} لازم است؟",
+                              f"{pot_en}, {nn(a, unit_en)} of {A_en} {'needs' if a == 1 else 'need'} {nn(b, unit_en)} of {B_en}. How many {unit_en}s of {B_en} are needed for {nn(a * m, unit_en)} of {A_en}?", b * m,
+                              [b + a * m - a, a * m, b * m + b, b * m - b if m > 2 else b * m + 1],
+                              f"{A} {TIMES_FA[m]} شده است: {fa(a)} ضرب {fa(m)} مساوی {fa(a * m)}. پس {B_} هم {TIMES_FA[m]} می{Z}شود: {fa(b)} ضرب {fa(m)} مساوی {fa(b * m)}.",
+                              f"The {A_en} is {m} times as much: {a} times {m} equals {a * m}. So the {B_en} is {m} times as much too: {b} times {m} equals {b * m}.", show=pic))
+    pool6(s, "ratio", "01", I_RATIO, [(c1, N)], cap=3)
+    pool6(s, "ratio", "02", I_RATIO_UP, [(c2, N)])
+
+    c3 = []
+    for i, (a, b, m) in enumerate((a, b, m) for a, b in RATIOS6 for m in (2, 3, 4, 5) if a * m <= 20 and b * m <= 20):
+        if i % 3 < 2:
+            c3.append(ask(f"کدام نسبت با {fa_ratio(a, b)} مساوی است؟", f"Which ratio is equal to {a} to {b}?", R(a * m, b * m), [R(a + m, b + m), R(b * m, a * m), R(a * m, b * m + b), R(a * m + a, b * m), R(a * m, b)],
+                          f"هر دو عدد را در {fa(m)} ضرب کن: {fa(a)} ضرب {fa(m)} مساوی {fa(a * m)} و {fa(b)} ضرب {fa(m)} مساوی {fa(b * m)}.",
+                          f"Multiply both numbers by {m}: {a} times {m} equals {a * m} and {b} times {m} equals {b * m}.", show=R(a, b), key=(a, b, m)))
+        else:
+            c3.append(ask(f"{fa_ratio(a * m, b * m)} را ساده کن. کدام نسبت است؟", f"Simplify {a * m} to {b * m}. Which ratio is it?", R(a, b), [R(b, a), R(a + 1, b), R(a, b + 1), R(a * m, b), R(a, b * m)],
+                          f"هر دو عدد را بر {fa(m)} تقسیم کن: {fa(a * m)} تقسیم {fa(m)} مساوی {fa(a)} و {fa(b * m)} تقسیم {fa(m)} مساوی {fa(b)}.",
+                          f"Divide both numbers by {m}: {a * m} divided by {m} equals {a} and {b * m} divided by {m} equals {b}.", show=R(a * m, b * m), key=(a, b, m)))
+    pool6(s, "ratio", "03", I_RATIO_SAME, [(c3, N)])
+
+    c4 = []
+    for i, (a, b, u) in enumerate((a, b, u) for a, b in ((1, 2), (2, 3), (1, 3), (3, 2), (1, 4), (3, 4), (2, 1), (3, 5), (3, 1), (2, 5)) for u in (2, 3, 4, 5, 6, 8, 10, 20)):
+        d, e, unit, unit_en = SHARE_STORIES[i % len(SHARE_STORIES)]
+        if unit == AFN:
+            u *= 50
+        t = u * (a + b)
+        first = i % 3 != 2
+        part, k = (a * u, a) if first else (b * u, b)
+        who, who_en = ("اول", "first") if first else ("دوم", "second")
+        c4.append(ask(f"{d(a, b, t)} حصه {who} چند {unit} است؟", f"{e(a, b, t)} How many {unit_en} is the {who_en} share?", part, [t // 2 if t // 2 != part else None, (b if first else a) * u, u, t - k, part + u],
+                      f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)} حصه. {fa(t)} تقسیم {fa(a + b)} مساوی {fa(u)}: هر حصه {fa(u)} است. حصه {who} {fa(k)} حصه دارد: {fa(k)} ضرب {fa(u)} مساوی {fa(part)}.",
+                      f"{a} plus {b} equals {a + b} parts. {t} divided by {a + b} equals {u}: each part is {u}. The {who_en} share has {nn(k, 'part')}: {k} times {u} equals {part}."))
+    pool6(s, "ratio", "04", I_RATIO_SHARE, [(c4, N)])
+
+    other, total = [], []
+    for i, (a, b, m) in enumerate((a, b, m) for a, b in ((1, 2), (1, 3), (2, 3), (1, 4), (3, 4), (2, 5), (1, 1), (3, 2)) for m in (2, 3, 4, 5, 6, 8)):
+        X, X_en, Y, Y_en, where, where_en = GROUP_RATIOS[i % len(GROUP_RATIOS)]
+        head = (f"{where} نسبت {X} به {Y}، {fa_ratio(a, b)} است.", f"{where_en} the ratio of {X_en} to {Y_en} is {a} to {b}.")
+        other.append(ask(f"{head[0]} {fa(a * m)} {X} است. چند {Y} است؟", f"{head[1]} There are {a * m} {X_en}. How many {Y_en} are there?", b * m, [b + a * m - a, a * m if a != b else None, (a + b) * m, b * m + b],
+                         f"{fa(a)} حصه {fa(a * m)} تا است، پس هر حصه {fa(m)} تا است. {Y} {fa(b)} حصه است: {fa(b)} ضرب {fa(m)} مساوی {fa(b * m)}.",
+                         f"{nn(a, 'part')} {'is' if a == 1 else 'are'} {a * m}, so each part is {m}. The {Y_en} are {nn(b, 'part')}: {b} times {m} equals {b * m}."))
+        t = (a + b) * m
+        total.append(ask(f"{head[0]} همه با هم {fa(t)} تا هستند. چند {X} است؟", f"{head[1]} Altogether there are {t}. How many {X_en} are there?", a * m, [b * m if a != b else None, t // 2 if t // 2 != a * m else None, m, t - a],
+                         f"{fa(a)} جمع {fa(b)} مساوی {fa(a + b)} حصه. {fa(t)} تقسیم {fa(a + b)} مساوی {fa(m)}. {X} {fa(a)} حصه است: {fa(a)} ضرب {fa(m)} مساوی {fa(a * m)}.",
+                         f"{a} plus {b} equals {a + b} parts. {t} divided by {a + b} equals {m}. The {X_en} are {nn(a, 'part')}: {a} times {m} equals {a * m}."))
+    pool6(s, "ratio", "05", I_RATIO_PARTS, [(other, 9), (total, 9)])
+    return s
+
+
+for _name, _text in {   # library pictures that level 6 is the first math level to use
+    "pot": "a cooking pot with a lid (icon of The Cooking Pot)",
+    "purse": "a small cloth purse for coins",
+    "money": "a few banknotes and coins, no writing",
+    "milk": "a glass of milk",
+    "yoghurt": "a bowl of white yoghurt",
+    "bucket": "a metal bucket",
+    "wheat": "three ears of wheat",
+    "farmer": "a farmer standing with a tool, whole clothed figure",
+}.items():
+    PICTURES.setdefault(_name, _text)
+for _n in GRID_PCTS:
+    PICTURES[f"pct_{_n}"] = (f"a hundred square, ten rows of ten small squares; the first {_n} squares, row by row from the top, are filled yellow, "
+                             "the others white (drawn by content/math/draw_pictures.py)")
+for _k in range(1, CUP_MARKS + 1):
+    PICTURES[f"cup_marks_{_k}"] = (f"a clear measuring cup with {CUP_MARKS} marks on its side and no digits, filled with blue liquid exactly up to mark {_k} "
+                                   "counted from the bottom (drawn by content/math/draw_pictures.py)")
+for _name, (_places, (_n1, _n2)) in MAPS6.items():
+    PICTURES[_name] = (f"a simple drawn map of an invented village area: {_places[0][0]} top left, {_places[1][0]} top right, {_places[2][0]} bottom right; "
+                       f"a straight road of {_n1} pieces from the first to the second and a straight road of {_n2} pieces down to the third, "
+                       "the pieces coloured in turn like a scale bar (drawn by content/math/draw_pictures.py)")
+for _name in ("chart_bars_7", "chart_table_7", "chart_bars_8", "chart_table_8"):
+    _what = ", ".join(f"{_v} {_p}" for _p, _, _v in CHARTS[_name])
+    PICTURES[_name] = ((f"a block chart with three columns, a small picture under each column and one block per unit: {_what}" if "bars" in _name else
+                        f"a picture table with three rows read from the right: a small picture, then one dot per unit: {_what}")
+                       + " (drawn by content/math/draw_pictures.py)")
+
+
+def check_answers6(games: list) -> None:
+    """Level 6 once more, from the finished rows."""
+    for row, test in L6_META:
+        assert test(row), row
+    doses = 0
+    for game, sheet in games:
+        for row in sheet.rows:
+            text = row.get("say_fa", "")
+            if re.search("(?<![؀-ۿ])دوا(?![؀-ۿ])", text) and "دوا و صابون" not in text:   # the word, and not the line of a household budget
+                doses += 1
+                assert "کارمند صحی گفته است" in text or "نوشته است" in text, ("a dose without its source", row)
+                assert DOSE_RULE[0] in row["help_fa"], ("a dose without the rule", row)
+    assert doses >= 10, doses
+    for name, (places, (n1, n2)) in MAPS6.items():
+        assert len({p[0] for p in places}) == 3 and 1 <= n1 <= 4 and 1 <= n2 <= 4 and n1 != n2, name
+
+
+# ---------------------------------------------------------------------------
 # Packs
 # ---------------------------------------------------------------------------
 
@@ -4611,7 +6058,8 @@ GAMES = [
          intro_fa={1: tr("گوش کن و همان قدر روی ترازو بگذار.", "Listen and put that many on the scales."), 2: tr("قیمت را گوش کن و با سکه" + Z + "ها و نوت" + Z + "ها پول بده.", "Listen to the price and pay with the coins and notes."),
                    3: tr("حساب کن و با سکه" + Z + "ها و نوت" + Z + "ها پول بده.", "Work it out and pay with the coins and notes."),
                    4: tr("حساب کن و با سکه" + Z + "ها و نوت" + Z + "ها پول بده.", "Work it out and pay with the coins and notes."),
-                   5: tr("حساب کن و با سکه" + Z + "ها و نوت" + Z + "ها پول بده.", "Work it out and pay with the coins and notes.")},
+                   5: tr("حساب کن و با سکه" + Z + "ها و نوت" + Z + "ها پول بده.", "Work it out and pay with the coins and notes."),
+                   6: tr("حساب کن و با سکه" + Z + "ها و نوت" + Z + "ها پول بده.", "Work it out and pay with the coins and notes.")},
          icon="scales", sheet="market_scales.csv", make=market),
     dict(id="carpet_weaver", engine="builder", letter="d", title_en="Carpet Weaver", title_fa="قالین" + Z + "باف",
          intro_fa=tr("عددها را به ترتیب درست بگذار.", "Put the numbers in the right order."), icon="carpet", sheet="carpet_weaver.csv", make=weaver),
@@ -4638,20 +6086,34 @@ GAMES = [
          intro_fa=tr("خوب فکر کن و جواب درست را انتخاب کن.", "Think carefully and choose the right answer."), icon="star", sheet="number_riddles.csv", make=riddles),
     dict(id="true_or_false", engine="sorter", letter="m", title_en="True or False", title_fa="درست یا غلط",
          intro_fa=tr("درست است یا غلط؟ در سبد خودش بینداز.", "Is it true or false? Put it in its basket."), icon="yes", sheet="true_or_false.csv", make=truefalse),
+    # only level 6
+    dict(id="cooking_pot", engine="listen_pick", letter="n", title_en="The Cooking Pot", title_fa="دیگ آشپزی",
+         intro_fa=tr("نسبت را پیدا کن و حساب کن.", "Find the ratio and work it out."), icon="pot", sheet="cooking_pot.csv", make=ratio6),
 ]
+# The spoken instruction of a game where level 6 uses it for something else than the levels before.
+INTRO6 = {
+    "count_the_flock": tr("فیصد یعنی از صد. بشمار و فیصد درست را انتخاب کن.", "Percent means out of a hundred. Count and choose the right percent."),
+    "carpet_weaver": tr("به ترتیب درست بچین.", "Put them in the right order."),
+    "shape_mason": tr("نقشه و پیاله اندازه" + Z + "گیری را ببین و حساب کن.", "Look at the map and the measuring cup and work it out."),
+    "tables_and_charts": tr("گراف را ببین و اوسط را پیدا کن.", "Look at the chart and find the average."),
+    "number_rain": tr("گوش کن و فقط آنهایی را بگیر که درست هستند.", "Listen and catch only the ones that are right."),
+}
 TITLES = {1: ("Math 1: Counting to 20", "ریاضی ۱: شمارش تا بیست"),
           2: ("Math 2: Numbers to 100", "ریاضی ۲: عددها تا صد"),
           3: ("Math 3: Numbers to 1,000", "ریاضی ۳: عددها تا هزار"),
           4: ("Math 4: Times Tables and Sharing", "ریاضی ۴: جدول ضرب و تقسیم"),
-          5: ("Math 5: Large Numbers and Fractions", "ریاضی ۵: عددهای بزرگ و کسرها")}
+          5: ("Math 5: Large Numbers and Fractions", "ریاضی ۵: عددهای بزرگ و کسرها"),
+          6: ("Math 6: Percent, Ratio and Averages", "ریاضی ۶: فیصد، نسبت و اوسط")}
 VERSION = 2   # raise it whenever the content of the packs changes
+VERSIONS = {6: 1}   # a level that was written later counts for itself
 ROUNDS = {  # game -> rounds per level
-    "count_the_flock": {1: 12, 2: 10, 3: 8, 4: 6, 5: 6}, "number_hop": {1: 17, 2: 17, 3: 17, 4: 14, 5: 12},
-    "market_scales": {1: 7, 2: 7, 3: 7, 4: 7, 5: 6}, "carpet_weaver": {1: 8, 2: 8, 3: 8, 4: 7, 5: 6},
-    "share_the_bread": {1: 4, 2: 4, 3: 4, 4: 4, 5: 4}, "shape_mason": {1: 5, 2: 6, 3: 6, 4: 6, 5: 5},
-    "twin_tiles": {1: 4, 2: 4, 3: 4, 4: 4, 5: 4}, "number_rain": {1: 2, 2: 3, 3: 3, 4: 3, 5: 2}, "days_and_months": {4: 4},
-    "tables_and_charts": {5: 4}, "fair_shares": {5: 6},
-    "number_riddles": {1: 7, 2: 7, 3: 6, 4: 5, 5: 5}, "true_or_false": {1: 5, 2: 4, 3: 4, 4: 3, 5: 3},
+    "count_the_flock": {1: 12, 2: 10, 3: 8, 4: 6, 5: 6, 6: 6}, "number_hop": {1: 17, 2: 17, 3: 17, 4: 14, 5: 12, 6: 10},
+    "market_scales": {1: 7, 2: 7, 3: 7, 4: 7, 5: 6, 6: 6}, "carpet_weaver": {1: 8, 2: 8, 3: 8, 4: 7, 5: 6, 6: 5},
+    "share_the_bread": {1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4}, "shape_mason": {1: 5, 2: 6, 3: 6, 4: 6, 5: 5, 6: 8},
+    "twin_tiles": {1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4}, "number_rain": {1: 2, 2: 3, 3: 3, 4: 3, 5: 2, 6: 2}, "days_and_months": {4: 4},
+    "tables_and_charts": {5: 4, 6: 3}, "fair_shares": {5: 6},
+    "number_riddles": {1: 7, 2: 7, 3: 6, 4: 5, 5: 5, 6: 5}, "true_or_false": {1: 5, 2: 4, 3: 4, 4: 3, 5: 3, 6: 3},
+    "cooking_pot": {6: 5},
 }
 OLD_ROUNDS = {  # what version 1 had: no game may lose a round
     "count_the_flock": {1: 12, 2: 10, 3: 8, 4: 6, 5: 6}, "number_hop": {1: 12, 2: 12, 3: 12, 4: 10, 5: 8},
@@ -4955,7 +6417,7 @@ def main() -> None:
     used: set[str] = set()
     files: dict[Path, str] = {}
     packs: dict[int, list] = {}
-    for level in (1, 2, 3, 4, 5):
+    for level in (1, 2, 3, 4, 5, 6):
         games = []
         packs[level] = []
         for game in GAMES:
@@ -4967,16 +6429,19 @@ def main() -> None:
             entry = {k: v for k, v in game.items() if k != "make"}
             if isinstance(entry["intro_fa"], dict):
                 entry["intro_fa"] = entry["intro_fa"][level]
+            if level == 6:
+                entry["intro_fa"] = INTRO6.get(game["id"], entry["intro_fa"])
             entry["draw"] = PAIRS_DRAW if game["engine"] == "pairs" else DRAW
             used_en({"intro_fa": entry["intro_fa"]})
             used.add(entry["icon"])
             games.append(entry)
             packs[level].append((entry, sheet))
         assert len({g["letter"] for g in games}) == len(games)
-        pack = {"pack": f"math-{level}", "subject": "math", "level": level, "version": VERSION,
+        pack = {"pack": f"math-{level}", "subject": "math", "level": level, "version": VERSIONS.get(level, VERSION),
                 "title_en": TITLES[level][0], "title_fa": TITLES[level][1], "games": games}
         files[HERE / str(level) / "pack.json"] = json.dumps(pack, ensure_ascii=False, indent=1) + "\n"
     check_answers()
+    check_answers6(packs[6])
     faults, table = self_check(packs)
     missing = used - set(PICTURES)
     assert not missing, f"pictures without a description: {sorted(missing)}"

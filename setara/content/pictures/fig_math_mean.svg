@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<g stroke="#3b2f2f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect x="5" y="90" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="5" y="76" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="20" y="90" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="20" y="76" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="20" y="62" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="20" y="48" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="20" y="34" width="13" height="14" fill="#e07a3f" stroke-width="2.5"/>
+<rect x="20" y="20" width="13" height="14" fill="#e07a3f" stroke-width="2.5"/>
+<rect x="35" y="90" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="35" y="76" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="35" y="62" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="35" y="48" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<path d="M55 70L73 70M65.1 65.7L73 70L65.1 74.3" fill="none"/>
+<rect x="80" y="90" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="80" y="76" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="80" y="62" width="13" height="14" fill="#e07a3f" stroke-width="2.5"/>
+<rect x="80" y="48" width="13" height="14" fill="#e07a3f" stroke-width="2.5"/>
+<rect x="95" y="90" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="95" y="76" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="95" y="62" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="95" y="48" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="110" y="90" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="110" y="76" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="110" y="62" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<rect x="110" y="48" width="13" height="14" fill="#3f7fbf" stroke-width="2.5"/>
+<path d="M3 105H50M78 105H125" fill="none" stroke-width="3"/>
+<path d="M78 48H125" fill="none" stroke="#e0483f" stroke-width="3" stroke-dasharray="2 6"/>
+</g>
+</svg>

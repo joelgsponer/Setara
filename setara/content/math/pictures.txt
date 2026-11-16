@@ -11,6 +11,7 @@ bread_half: half of a round naan: a half disc, clean straight cut
 bread_quarter: a quarter of a round naan: a quarter disc
 bread_third: a third of a round naan: one of three equal wedges, drawn like bread_half and bread_quarter
 brick: one clay brick
+bucket: a metal bucket
 button: a round button with four holes
 carpet: a rectangular red Afghan carpet with a simple pattern, clearly longer than wide
 carrot: one orange carrot with green top
@@ -20,12 +21,16 @@ chart_bars_3: a block chart with three columns, a small picture under each colum
 chart_bars_4: a block chart with three columns, a small picture under each column and one block per unit: 3 cup, 4 plate, 1 egg (drawn by content/math/draw_pictures.py)
 chart_bars_5: a block chart with three columns, a small picture under each column and one block per unit: 1 potato, 3 onion, 5 carrot (drawn by content/math/draw_pictures.py)
 chart_bars_6: a block chart with three columns, a small picture under each column and one block per unit: 4 pomegranate, 2 orange, 1 apple (drawn by content/math/draw_pictures.py)
+chart_bars_7: a block chart with three columns, a small picture under each column and one block per unit: 2 hen, 1 goat, 3 lamb (drawn by content/math/draw_pictures.py)
+chart_bars_8: a block chart with three columns, a small picture under each column and one block per unit: 4 walnut, 3 pomegranate, 5 orange (drawn by content/math/draw_pictures.py)
 chart_table_1: a picture table with three rows read from the right: a small picture, then one dot per unit: 3 sheep, 5 hen, 1 cow (drawn by content/math/draw_pictures.py)
 chart_table_2: a picture table with three rows read from the right: a small picture, then one dot per unit: 2 pomegranate, 1 watermelon, 4 walnut (drawn by content/math/draw_pictures.py)
 chart_table_3: a picture table with three rows read from the right: a small picture, then one dot per unit: 5 apple, 3 carrot, 4 onion (drawn by content/math/draw_pictures.py)
 chart_table_4: a picture table with three rows read from the right: a small picture, then one dot per unit: 4 flower, 2 star, 5 fish (drawn by content/math/draw_pictures.py)
 chart_table_5: a picture table with three rows read from the right: a small picture, then one dot per unit: 2 book, 4 notebook, 3 pencil (drawn by content/math/draw_pictures.py)
 chart_table_6: a picture table with three rows read from the right: a small picture, then one dot per unit: 1 bread, 4 egg, 2 cup (drawn by content/math/draw_pictures.py)
+chart_table_7: a picture table with three rows read from the right: a small picture, then one dot per unit: 1 tomato, 3 potato, 2 onion (drawn by content/math/draw_pictures.py)
+chart_table_8: a picture table with three rows read from the right: a small picture, then one dot per unit: 3 pencil, 5 notebook, 4 book (drawn by content/math/draw_pictures.py)
 chick: one yellow chick, side view
 clock_1: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 1 and the long hand at 12
 clock_10: a round clock face with the numbers 1 to 12 in Western digits, the short hand pointing exactly at 10 and the long hand at 12
@@ -42,8 +47,15 @@ clock_9: a round clock face with the numbers 1 to 12 in Western digits, the shor
 coin: a round plain metal coin with no writing
 cow: one cow, side view
 cup: one small tea bowl (piala) without handle
+cup_marks_1: a clear measuring cup with 6 marks on its side and no digits, filled with blue liquid exactly up to mark 1 counted from the bottom (drawn by content/math/draw_pictures.py)
+cup_marks_2: a clear measuring cup with 6 marks on its side and no digits, filled with blue liquid exactly up to mark 2 counted from the bottom (drawn by content/math/draw_pictures.py)
+cup_marks_3: a clear measuring cup with 6 marks on its side and no digits, filled with blue liquid exactly up to mark 3 counted from the bottom (drawn by content/math/draw_pictures.py)
+cup_marks_4: a clear measuring cup with 6 marks on its side and no digits, filled with blue liquid exactly up to mark 4 counted from the bottom (drawn by content/math/draw_pictures.py)
+cup_marks_5: a clear measuring cup with 6 marks on its side and no digits, filled with blue liquid exactly up to mark 5 counted from the bottom (drawn by content/math/draw_pictures.py)
+cup_marks_6: a clear measuring cup with 6 marks on its side and no digits, filled with blue liquid exactly up to mark 6 counted from the bottom (drawn by content/math/draw_pictures.py)
 door: a rectangular wooden door, taller than wide
 egg: one white egg
+farmer: a farmer standing with a tool, whole clothed figure
 fish: one fish, side view
 flour_sack: a large tied sack of flour
 flower: one red flower on a short green stem
@@ -67,7 +79,14 @@ goat: one goat with small horns, side view
 handkerchief: a square cloth handkerchief laid flat
 hen: one brown hen, side view
 lamb: one lamb, side view
+map_scale_1: a simple drawn map of an invented village area: house top left, well top right, school bottom right; a straight road of 3 pieces from the first to the second and a straight road of 2 pieces down to the third, the pieces coloured in turn like a scale bar (drawn by content/math/draw_pictures.py)
+map_scale_2: a simple drawn map of an invented village area: school top left, bridge top right, shop bottom right; a straight road of 2 pieces from the first to the second and a straight road of 4 pieces down to the third, the pieces coloured in turn like a scale bar (drawn by content/math/draw_pictures.py)
+map_scale_3: a simple drawn map of an invented village area: tree top left, house top right, clinic bottom right; a straight road of 4 pieces from the first to the second and a straight road of 1 pieces down to the third, the pieces coloured in turn like a scale bar (drawn by content/math/draw_pictures.py)
+map_scale_4: a simple drawn map of an invented village area: shop top left, school top right, well bottom right; a straight road of 1 pieces from the first to the second and a straight road of 3 pieces down to the third, the pieces coloured in turn like a scale bar (drawn by content/math/draw_pictures.py)
+map_scale_5: a simple drawn map of an invented village area: clinic top left, tree top right, bridge bottom right; a straight road of 4 pieces from the first to the second and a straight road of 3 pieces down to the third, the pieces coloured in turn like a scale bar (drawn by content/math/draw_pictures.py)
+map_scale_6: a simple drawn map of an invented village area: well top left, shop top right, house bottom right; a straight road of 2 pieces from the first to the second and a straight road of 1 pieces down to the third, the pieces coloured in turn like a scale bar (drawn by content/math/draw_pictures.py)
 milk: a glass of milk
+money: a few banknotes and coins, no writing
 moon: a crescent moon (icon of Days and Months)
 mountain: a single mountain peak drawn as a clear triangle with a snow cap
 no: a red cross (the basket for false)
@@ -79,6 +98,22 @@ orange: a round orange fruit
 orange_half: half of a round orange: a half disc with the cut side and its segments showing (drawn by content/math/draw_pictures.py)
 orange_quarter: a quarter of a round orange: a quarter disc (drawn by content/math/draw_pictures.py)
 orange_third: a third of a round orange: one of three equal wedges (drawn by content/math/draw_pictures.py)
+pct_1: a hundred square, ten rows of ten small squares; the first 1 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_10: a hundred square, ten rows of ten small squares; the first 10 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_100: a hundred square, ten rows of ten small squares; the first 100 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_20: a hundred square, ten rows of ten small squares; the first 20 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_25: a hundred square, ten rows of ten small squares; the first 25 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_30: a hundred square, ten rows of ten small squares; the first 30 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_40: a hundred square, ten rows of ten small squares; the first 40 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_5: a hundred square, ten rows of ten small squares; the first 5 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_50: a hundred square, ten rows of ten small squares; the first 50 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_60: a hundred square, ten rows of ten small squares; the first 60 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_70: a hundred square, ten rows of ten small squares; the first 70 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_75: a hundred square, ten rows of ten small squares; the first 75 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_80: a hundred square, ten rows of ten small squares; the first 80 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_90: a hundred square, ten rows of ten small squares; the first 90 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_95: a hundred square, ten rows of ten small squares; the first 95 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
+pct_99: a hundred square, ten rows of ten small squares; the first 99 squares, row by row from the top, are filled yellow, the others white (drawn by content/math/draw_pictures.py)
 pencil: one yellow pencil
 pencil_long: a long new pencil, filling the width of the picture
 pencil_short: a short used pencil stub, a third of the width of the picture
@@ -87,7 +122,9 @@ pomegranate: one red pomegranate
 pomegranate_half: half of a round pomegranate: a half disc with red seeds showing (drawn by content/math/draw_pictures.py)
 pomegranate_quarter: a quarter of a round pomegranate: a quarter disc (drawn by content/math/draw_pictures.py)
 pomegranate_third: a third of a round pomegranate: one of three equal wedges (drawn by content/math/draw_pictures.py)
+pot: a cooking pot with a lid (icon of The Cooking Pot)
 potato: one potato
+purse: a small cloth purse for coins
 rice: a bowl of white rice
 rice_sack: a large tied sack of rice with a few grains shown
 rope_long: a long rope lying straight, filling the width of the picture
@@ -119,6 +156,8 @@ walnut: one walnut in its shell
 watermelon: a whole round watermelon
 watermelon_half: half a watermelon, red cut side showing
 watermelon_quarter: a quarter of a watermelon
+wheat: three ears of wheat
 wheel: a round cart wheel with spokes
 window: a square window with a wooden frame and four panes
 yes: a green tick (the basket for true)
+yoghurt: a bowl of white yoghurt
