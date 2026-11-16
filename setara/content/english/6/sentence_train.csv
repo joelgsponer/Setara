@@ -7,7 +7,7 @@ round,intro_fa,say_en,say_fa,tiles,extra,rtl,done_en,done_fa,help_fa
 02,,A builder builds houses.,,t:A|t:builder|t:builds|t:houses,t:build,,A builder builds houses.,,گلکار خانه می‌سازد.
 02,,He repairs cars and lorries.,,t:He|t:repairs|t:cars|t:and|t:lorries,t:repair,,He repairs cars and lorries.,,او موترها و لاری‌ها را ترمیم می‌کند.
 02,,She is an engineer.,,t:She|t:is|t:an|t:engineer,t:a,,She is an engineer.,,او انجنیر است.
-02,,What does a mechanic do?,,t:What|t:does|t:a|t:mechanic|t:do,t:do,,What does a mechanic do?,,مستری چه کار می‌کند؟
+02,,What does a mechanic do?,,t:What|t:does|t:a|t:mechanic|t:do,t:make,,What does a mechanic do?,,مستری چه کار می‌کند؟
 02,,My mother is a weaver.,,t:My|t:mother|t:is|t:a|t:weaver,t:an,,My mother is a weaver.,,مادرم قالین‌باف است.
 03,بگو که هر کس کجا و با چه کار می‌کند: in برای جای، with برای افزار. جمله را بساز.,Where does she work?,,t:Where|t:does|t:she|t:work,t:do,,Where does she work?,,او کجا کار می‌کند؟
 03,,She works in a clinic.,,t:She|t:works|t:in|t:a|t:clinic,t:work,,She works in a clinic.,,او در کلینیک کار می‌کند.
