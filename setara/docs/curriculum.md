@@ -127,7 +127,7 @@ For every subject and level:
 | 2 | My home | food groups, safe water, latrine, cooking smoke, diarrhoea | water cycle, waste, trees | written |
 | 2 add-on | Nature and how things work | senses | animals, plants, sky, weather, materials, light, sound, simple machines | written |
 | 3 | My village | first aid, poisoning, when to seek help | | written |
-| 3, rest | My village | germs and vaccines, common illnesses, staying safe outdoors | soil, crops, water sources, weather | planned |
+| 3 add-on | My village | germs, vaccines in general terms, common illnesses, staying safe outdoors | soil, crops, water sources, weather | written |
 | 4 | My future | growth, feelings, small children | drought and flood, energy, land and water | written |
 | 4 add-ons | | children's rights; the world, Switzerland and Basel | | written |
 
@@ -145,7 +145,8 @@ spec says. Health content adds no medical advice beyond its fact sheets
 | Lessons for Dari reading, math, health | planned |
 | Guide format, reader on the device, print export | written |
 | Guides: math 1–5, Dari 1–4, English 1–4, health 1–4 | written |
-| Guides: English 5–6, Dari 5–6 | planned |
+| Guides: Dari 5–6 | written |
+| Guides: English 5–6, math 6 | in work |
 
 ## 10. What an educator should decide first
 

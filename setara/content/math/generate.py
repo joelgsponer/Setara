@@ -5139,7 +5139,7 @@ def hop6(level: int) -> Sheet:
                         f"In {span_en} a family has an income of {inc} afghani and spends {sp} afghani. How many afghani are left?", inc - sp, [inc + sp, sp, inc - sp + 500, inc - sp - 250 if inc - sp > 250 else None],
                         f"عاید منفی مصرف مساوی آنچه می{Z}ماند. {fa(inc)} منفی {fa(sp)} مساوی {fa(inc - sp)}.", f"Income minus spending equals what is left. {inc} minus {sp} equals {inc - sp}."))
     things = [("خوراک", "food", "لباس", "clothes"), ("خوراک", "food", "چیزهای مکتب", "school things"), ("آرد و روغن", "flour and oil", "چوب سوخت", "firewood"),
-              ("خوراک", "food", "دوا و صابون", "medicine and soap")]
+              ("خوراک", "food", "صابون و چای", "soap and tea")]
     for i, (inc, a, b) in enumerate((inc, a, b) for inc in range(3000, 9001, 1000) for a in range(1500, inc - 500, 1000) for b in (500, 750, 1000) if a + b < inc):
         t = things[i % len(things)]
         rest = inc - a - b
@@ -6036,7 +6036,7 @@ def check_answers6(games: list) -> None:
     for game, sheet in games:
         for row in sheet.rows:
             text = row.get("say_fa", "")
-            if re.search("(?<![؀-ۿ])دوا(?![؀-ۿ])", text) and "دوا و صابون" not in text:   # the word, and not the line of a household budget
+            if re.search("(?<![؀-ۿ])دوا(?![؀-ۿ])", text):   # the word itself, not the start of «دوازده»
                 doses += 1
                 assert "کارمند صحی گفته است" in text or "نوشته است" in text, ("a dose without its source", row)
                 assert DOSE_RULE[0] in row["help_fa"], ("a dose without the rule", row)

@@ -1,0 +1,16 @@
+# pictures drawn for garden-3-village
+vaccine: A syringe with blue liquid, slanted, and beside it a small glass vial with a grey cap. No writing, no emblem.
+cough_elbow: A boy coughing into the bend of his raised elbow, which hides his mouth and nose; three small blue lines beside him.
+water_spring: Grey rocks with a dark opening; blue water runs out of it into a small pool; tufts of grass.
+frost: A dark blue night square with a moon; a small two-leaved plant with white edges on white ground, white frost stars around it.
+compost: A brown heap in a low pit with two wooden posts; on it an orange peel curl, a yellow leaf, straw and a green scrap; two wisps of vapour above.
+worm: A pink earthworm with rings rising in an S out of a mound of brown soil.
+sowing: A hand in a blue sleeve scattering yellow seeds over furrowed brown soil.
+weeding: A hand in a purple sleeve pulling a dark green spiky weed with its roots out of the soil between two wheat plants; a red arrow points up.
+grain_store: Three tied sacks with a grain mark standing on a raised wooden rack under a roof, clear of the ground.
+grain_wet: A sack lying in a blue puddle with dark green mould spots and three water drops.
+lean_well: A stone well and a child in orange bending far over its rim; three red warning strokes.
+scene_vaccination: A clinic room: a health worker (woman, white coat, blue headscarf) holds a small syringe at the arm of a baby on its mother's lap (purple dress and headscarf); a table with a vial, a window. No emblem.
+scene_karez: Cross-section of a karez: a snowy mountain on the left with blue water under its foot, a blue tunnel sloping gently under the ground to the right, four upright shafts with small earth rings at the top, a house, a tree and a green field where the water comes out.
+scene_upstream: A stream running down from snowy mountains: an upper village where a cow stands in the water and rubbish floats, the water brown below it; a lower village where a girl in red stands with a bucket; two white arrows show the flow.
+scene_road_look: A road seen from the side with a blue-and-red lorry coming; a girl in purple and a smaller boy in green stand at the near edge holding hands; two red arrows point left and right.
