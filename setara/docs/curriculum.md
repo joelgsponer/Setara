@@ -7,7 +7,7 @@ puts her). This document fills it in. It was designed by an AI and has not
 been checked by an educator; it is where an educator should start.
 
 Status words used below: **written** (in the repo, builds, every round
-opens), **in work**, **planned**. "Written" never means reviewed.
+opens), **written**, **planned**. "Written" never means reviewed.
 
 ## 1. Principles
 
@@ -86,46 +86,46 @@ For every subject and level:
 | Level | Theme | At the end a child can | New words | Status |
 | --- | --- | --- | --- | --- |
 | 1 | Hello | greet, say name and age, follow 15 commands, count to 10, name colours | 80 | written |
-| 1 add-on | Letters | name and sound all 26 letters, both forms, spell short words | | in work |
+| 1 add-on | Letters | name and sound all 26 letters, both forms, spell short words | | written |
 | 2 | My world | talk about family, body, food, animals; have, like; count to 20 | 120 | written |
-| 3 | My day | describe her day, tell the time, days, home, clothes; count to 100; do/does | 200 | written, being enlarged |
+| 3 | My day | describe her day, tell the time, days, home, clothes; count to 100; do/does | 200 | written |
 | 3 add-on | Story book | read 16 short stories | | written |
-| 4 | At the bazaar | buy and sell, prices, quantities, polite questions; can, some/any | 250 | written, being enlarged |
-| 5 | Health and help | say what hurts, follow clinic instructions, give directions, weather, yesterday; past simple, must/should | 250 | in work |
-| 6 | The wider world | jobs and plans, tell a story, compare, build a short message; going to, comparatives, because | 300 | in work |
+| 4 | At the bazaar | buy and sell, prices, quantities, polite questions; can, some/any | 250 | written |
+| 5 | Health and help | say what hurts, follow clinic instructions, give directions, weather, yesterday; past simple, must/should | 250 | written |
+| 6 | The wider world | jobs and plans, tell a story, compare, build a short message; going to, comparatives, because | 300 | written |
 
 ## 6. Dari reading: sounds to fluent reading
 
 | Level | Focus | At the end a child can | Status |
 | --- | --- | --- | --- |
-| 1 | Sounds and first letters | hear first and last sounds, rhyme, know 12 frequent letters | written, being enlarged |
-| 1 add-on | The whole alphabet | name, sound and order all 32 letters; tell look-alikes apart | in work |
-| 2 | Every letter in every position | read letters at the start, middle, end; short vowels | written, being enlarged |
+| 1 | Sounds and first letters | hear first and last sounds, rhyme, know 12 frequent letters | written |
+| 1 add-on | The whole alphabet | name, sound and order all 32 letters; tell look-alikes apart | written |
+| 2 | Every letter in every position | read letters at the start, middle, end; short vowels | written |
 | 3 | Syllables and words | join letters, read 150 common words | written |
 | 3 add-on | Story book | read 16 stories with questions | written |
 | 4 | Sentences | read and understand simple sentences with punctuation | written |
-| 5 | Stories | read a story alone and answer what, why, what would you do | in work |
-| 6 | Fluent reader | read information texts, proverbs, poems; sound-alike letters | in work |
+| 5 | Stories | read a story alone and answer what, why, what would you do | written |
+| 6 | Fluent reader | read information texts, proverbs, poems; sound-alike letters | written |
 
 ## 7. Math: tied to daily life
 
 | Level | Numbers and operations | Measures and life | Status |
 | --- | --- | --- | --- |
-| 1 | count, read, compare 0–20 in both digit systems; add and take away with things | shapes, longer/shorter, more/less | written, being enlarged |
-| 2 | numbers to 100, tens and ones, add and subtract within 20 fluently | time by the hour, coins and notes | written, being enlarged |
+| 1 | count, read, compare 0–20 in both digit systems; add and take away with things | shapes, longer/shorter, more/less | written |
+| 2 | numbers to 100, tens and ones, add and subtract within 20 fluently | time by the hour, coins and notes | written |
 | 2 add-on | Logic puzzles | patterns, order from clues, grids, thinking stories | written |
-| 3 | to 1,000, carrying, tables of 2, 5, 10 | metres and centimetres, simple bills | written, being enlarged |
-| 4 | all tables, division as sharing, halves, quarters, thirds | weight, volume, perimeter, calendar | written, being enlarged |
-| 5 | large numbers, multi-digit multiplication, fractions, decimals through money | area, tables and charts | written, being enlarged |
+| 3 | to 1,000, carrying, tables of 2, 5, 10 | metres and centimetres, simple bills | written |
+| 4 | all tables, division as sharing, halves, quarters, thirds | weight, volume, perimeter, calendar | written |
+| 5 | large numbers, multi-digit multiplication, fractions, decimals through money | area, tables and charts | written |
 | 6 | percent, ratio, averages | profit and loss, a household budget, scale on a map | planned |
 
 ## 8. Health and environment
 
 | Level | Circle | Health | Environment | Status |
 | --- | --- | --- | --- | --- |
-| 1 | Me | handwashing, teeth, body, sleep | animals and plants, seasons | written, being enlarged |
-| 2 | My home | food groups, safe water, latrine, cooking smoke, diarrhoea | water cycle, waste, trees | written, being enlarged |
-| 2 add-on | Nature and how things work | senses | animals, plants, sky, weather, materials, light, sound, simple machines | in work |
+| 1 | Me | handwashing, teeth, body, sleep | animals and plants, seasons | written |
+| 2 | My home | food groups, safe water, latrine, cooking smoke, diarrhoea | water cycle, waste, trees | written |
+| 2 add-on | Nature and how things work | senses | animals, plants, sky, weather, materials, light, sound, simple machines | written |
 | 3 | My village | first aid, poisoning, when to seek help | | written |
 | 3, rest | My village | germs and vaccines, common illnesses, staying safe outdoors | soil, crops, water sources, weather | planned |
 | 4 | My future | growth, feelings, small children | drought and flood, energy, land and water | written |
@@ -144,8 +144,8 @@ spec says. Health content adds no medical advice beyond its fact sheets
 | Lessons, English 3–6 | planned |
 | Lessons for Dari reading, math, health | planned |
 | Guide format, reader on the device, print export | written |
-| Guide, math 1, chapter 1 (the model) | written |
-| Guides for every subject and level | planned, after the learner packs settle |
+| Guides: math 1–5, Dari 1–4, English 1–4, health 1–4 | written; the math guides predate the newest math games |
+| Guides: English 5–6, Dari 5–6 | planned |
 
 ## 10. What an educator should decide first
 

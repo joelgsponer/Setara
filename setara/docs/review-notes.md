@@ -206,3 +206,38 @@ a person:
   charts are about 15 mm on the device.
 - **Geography, version 2**: names Afghanistan's six neighbours once as a list
   (no borders drawn); "about three hours" for the time difference to Basel.
+
+## The second wave, 16 November 2026
+
+Almost everything was enlarged or written new within a day: all learner
+packs went to version 2 with question pools and new game forms; English 5
+and 6, Dari 5 and 6, the two alphabet packs and the nature pack are new; 17
+teacher's guides (about 3,450 pages of Dari) are new. None of it has been
+read by a person. Start with each pack's `SOURCES.md`; they list the open
+questions. The ones that matter most:
+
+- **The teacher's guides are trusted by teachers, so review them first.**
+  They are the largest body of Dari in the project. The health guides state
+  only what the fact sheets state, with three additions that need sign-off
+  (a chalk-dust demonstration, classroom precautions for first aid, what a
+  teacher does when a child tells her something serious). The math guide
+  states local weights and coin and note values. The English guides write
+  pronunciation in Dari letters, approximately.
+- **Sound-alike letters (Dari 6):** ق and غ are kept apart in Afghan Dari;
+  the stand-in voice is Iranian and says them alike. The unit is misleading
+  until a Dari voice is used.
+- **Letter sounds (English letters pack):** always carried by words, never
+  spoken bare, because the stand-in voice cannot say a bare sound.
+- **Repetition figures** in the `SOURCES.md` tables count identical spoken
+  texts. In the Dari packs part of the improvement is the same instruction
+  worded in several ways.
+- **English teaches fewer words than the curriculum sets** at every level
+  from 3 up, because each pictured word needs a picture.
+- **New forms that may be too hard for six-year-olds:** judging whether a
+  reply fits a question; finding which of four words was not said; clue
+  rounds with four spoken clues.
+- **Proverbs and the writer's own poems (Dari 6)** need a Dari teacher.
+- **Stories:** some fables have gentler endings than the tradition; girls
+  who want to be engineers or doctors; a king with a crown.
+- **Text size:** some answer cards in Dari 5 and 6 and some word tiles in
+  English 5 and 6 are drawn below the 30 px / 24 px minimum.

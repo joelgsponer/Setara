@@ -27,7 +27,7 @@ gates of the spec's own roadmap, and they are still ahead.
 | Pack builder: validation, speech, Dari shaping, pictures, checksums | Built, unit tested |
 | Card updates, damaged-pack handling, crash restart | Built, tested |
 | Content | See the table below |
-| Pictures | 1250 drawn as SVG, none reviewed locally |
+| Pictures | 1354 drawn as SVG, none reviewed locally |
 | Speech | Stand-in local voices. ElevenLabs path written, never run |
 | English mode for testers: English text and captions | Built. Translated by Claude, not checked by a native speaker |
 | Browser version, with a Dockerfile for hosting | Built, tested in Chromium and as a Docker image |
@@ -41,41 +41,65 @@ gates of the spec's own roadmap, and they are still ahead.
 | Pack | Games | Rounds | Size |
 | --- | --- | --- | --- |
 | `core` app strings and tutorial | | | 1 MB |
-| `en-1` English 1: Hello | 7 | 65 | 9 MB |
-| `en-2` English 2: My world | 7 | 67 | 11 MB |
+| `en-1-letters` English letters: the whole alphabet | 13 | 69 | 60 MB |
+| `en-1` English 1: Hello | 15 | 123 | 44 MB |
+| `en-2` English 2: My world | 16 | 129 | 55 MB |
 | `en-3-stories` English story book | 4 | 16 | 31 MB |
-| `en-3` English 3: My day | 11 | 86 | 17 MB |
-| `en-4` English 4: At the bazaar | 11 | 76 | 18 MB |
-| `fa-1` Dari 1: Sounds and first letters | 6 | 38 | 8 MB |
-| `fa-2` Dari 2: The whole alphabet | 6 | 42 | 8 MB |
+| `en-3` English 3: My day | 15 | 104 | 35 MB |
+| `en-4` English 4: At the bazaar | 16 | 90 | 34 MB |
+| `en-5` English 5: Health and help | 13 | 132 | 56 MB |
+| `en-6` English 6: The wider world | 13 | 129 | 67 MB |
+| `fa-1-alphabet` The whole alphabet | 9 | 49 | 35 MB |
+| `fa-1` Dari 1: Sounds and first letters | 9 | 68 | 42 MB |
+| `fa-2` Dari 2: The whole alphabet | 9 | 68 | 42 MB |
 | `fa-3-stories` Dari story book | 4 | 16 | 22 MB |
-| `fa-3` Dari 3: Syllables and words | 7 | 60 | 13 MB |
-| `fa-4` Dari 4: Sentences | 7 | 50 | 13 MB |
-| `garden-1` Garden 1: Me | 6 | 22 | 7 MB |
-| `garden-2` Garden 2: My Home | 7 | 20 | 9 MB |
+| `fa-3` Dari 3: Syllables and words | 10 | 66 | 27 MB |
+| `fa-4` Dari 4: Sentences | 10 | 56 | 26 MB |
+| `fa-5` Dari 5: Stories | 8 | 64 | 48 MB |
+| `fa-6` Dari 6: Fluent reader | 11 | 63 | 44 MB |
+| `garden-1` Garden 1: Me | 12 | 39 | 20 MB |
+| `garden-2-nature` Nature and how things work | 10 | 43 | 26 MB |
+| `garden-2` Garden 2: My Home | 13 | 36 | 21 MB |
 | `garden-3` Health 3: First aid | 8 | 25 | 22 MB |
 | `garden-4-rights` My rights, your rights | 6 | 13 | 8 MB |
 | `garden-4-world` The world, Switzerland and Basel | 9 | 32 | 24 MB |
 | `garden-4` Health and environment 4: My future | 15 | 40 | 25 MB |
-| `guide-math-1` app strings and tutorial | | | 1 MB |
-| `math-1` Math 1: Counting to 20 | 6 | 44 | 11 MB |
+| `guide-en-1` app strings and tutorial | | | 23 MB |
+| `guide-en-2` app strings and tutorial | | | 22 MB |
+| `guide-en-3` app strings and tutorial | | | 26 MB |
+| `guide-en-4` app strings and tutorial | | | 24 MB |
+| `guide-fa-1` app strings and tutorial | | | 16 MB |
+| `guide-fa-2` app strings and tutorial | | | 17 MB |
+| `guide-fa-3` app strings and tutorial | | | 14 MB |
+| `guide-fa-4` app strings and tutorial | | | 14 MB |
+| `guide-garden-1` app strings and tutorial | | | 11 MB |
+| `guide-garden-2` app strings and tutorial | | | 17 MB |
+| `guide-garden-3` app strings and tutorial | | | 17 MB |
+| `guide-garden-4` app strings and tutorial | | | 19 MB |
+| `guide-math-1` app strings and tutorial | | | 11 MB |
+| `guide-math-2` app strings and tutorial | | | 11 MB |
+| `guide-math-3` app strings and tutorial | | | 11 MB |
+| `guide-math-4` app strings and tutorial | | | 13 MB |
+| `guide-math-5` app strings and tutorial | | | 15 MB |
+| `math-1` Math 1: Counting to 20 | 10 | 71 | 48 MB |
 | `math-2-puzzles` Logic Puzzles | 9 | 43 | 14 MB |
-| `math-2` Math 2: Numbers to 100 | 6 | 42 | 12 MB |
-| `math-3` Math 3: Numbers to 1,000 | 6 | 40 | 16 MB |
-| `math-4` Math 4: Times Tables and Sharing | 9 | 45 | 18 MB |
-| `math-5` Math 5: Large Numbers and Fractions | 10 | 47 | 19 MB |
+| `math-2` Math 2: Numbers to 100 | 10 | 70 | 60 MB |
+| `math-3` Math 3: Numbers to 1,000 | 10 | 67 | 76 MB |
+| `math-4` Math 4: Times Tables and Sharing | 11 | 63 | 64 MB |
+| `math-5` Math 5: Large Numbers and Fractions | 12 | 63 | 75 MB |
 | `teacher-en-1` English 1 lessons | 20 lessons, Phrase Board, tips | | 10 MB |
 | `teacher-en-2` English 2 lessons | 20 lessons, Phrase Board, tips | | 12 MB |
-| **Total** | | **929** | |
+| **Total** | | **1847** | |
 <!-- /content -->
 
 Health 3 is the first-aid pack: burns, cuts, bites, nosebleed, choking, what
 to do when someone collapses, and when to take a sick relative to the clinic.
 Its facts and what was simplified are in `content/garden/3/SOURCES.md`.
 
-Not written yet: English 5–6, Dari 5–6, math 6, teacher lessons beyond
-English 2. The packs from English 3, Dari 3, math 4 and health 4 upwards, the
-story books and the puzzles are the newest and least checked.
+Not written yet: math 6, the rest of health 3 (germs, common illnesses,
+soil, crops, weather), classroom lessons beyond English 2, teacher's guides
+for levels 5 and 6. The teaching design is in `docs/curriculum.md`. Most of
+the content is days old and unchecked.
 
 All of it is a first draft written by Claude. Before it reaches children it
 needs what the spec asks for in section 9: review of text, audio and pictures

@@ -51,26 +51,30 @@ More of it:
 
 ## What is in it
 
-929 rounds in 25 packs, about 1,050 pictures, and 40 classroom lessons:
+1,847 rounds in 29 learner packs, a teacher's guide of about 3,450 pages in
+17 guide packs, 40 classroom lessons, and about 1,350 pictures:
 
-- English 1 to 4, with the teacher's lessons for levels 1 and 2
-- Dari reading 1 to 4: sounds, letters, letter shapes, words, sentences
-- Math 1 to 5: counting in both digit systems, the number line, money,
-  times tables, fractions, decimals, charts
-- Health and environment 1 to 4: hygiene, safe water, food, a first-aid
-  pack (burns, bleeding, bites, choking, poisoning, what to do when someone
-  collapses, when to take a sick relative to the clinic), growth, feelings,
-  caring for small children, drought and flood, energy
-- Story books for children who can already read, in Dari and in English:
-  16 stories each, mostly text, with questions
-- Logic puzzles: patterns, odd one out, shadows and mirrors, order from
-  clues, grids, riddles, thinking stories
+- **English** 1 to 6, from "Hello" to telling a story, with all 26 letters,
+  a story book, and classroom lessons for levels 1 and 2
+- **Dari reading** 1 to 6, from hearing sounds to proverbs and poems, with
+  all 32 letters and a story book
+- **Math** 1 to 5: both digit systems, the number line, word problems from
+  village life, tables, fractions, decimals, charts; and logic puzzles
+- **Health and environment** 1 to 4: hygiene, safe water, food, first aid,
+  growth, feelings, drought and flood, energy; and a pack on nature and how
+  things work
+- **Teacher's guide** for every subject: what to teach and how, with
+  figures, on the device and for printing
 - Two packs the local team may prefer to leave out: children's rights, and
   geography from the globe to Switzerland and Basel
 
-Everything from English 3, Dari 3, Math 4 and Health 4 upwards, the story
-books and the puzzles were written in one day and have had less checking
-than the earlier packs.
+A round is a pool: it asks eight of its questions, different ones each
+time. Each level has a guided path: units in order, each one presented,
+practised in several forms and reviewed. See
+[`setara/docs/curriculum.md`](setara/docs/curriculum.md).
+
+Nearly all of this content was written within a few days by an AI and has
+not been reviewed by anyone.
 
 ## Try it
 

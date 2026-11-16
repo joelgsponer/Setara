@@ -30,31 +30,38 @@ changed on that day, so its numbers may have moved. The table in the project
 
 | Id | Title | Subject | Level | Optional | Games | Rounds |
 | --- | --- | --- | --- | --- | --- | --- |
-| `en-1` | English 1: Hello | `en` | 1 | no | 7 | 65 |
-| `en-2` | English 2: My world | `en` | 2 | no | 7 | 67 |
+| `en-1-letters` | English letters: the whole alphabet | `en` | 1 | **yes** | 13 | 69 |
+| `en-1` | English 1: Hello | `en` | 1 | no | 15 | 123 |
+| `en-2` | English 2: My world | `en` | 2 | no | 16 | 129 |
 | `en-3-stories` | English story book | `en` | 3 | **yes** | 4 | 16 |
-| `en-3` | English 3: My day | `en` | 3 | no | 11 | 86 |
-| `en-4` | English 4: At the bazaar | `en` | 4 | no | 11 | 76 |
-| `fa-1` | Dari 1: Sounds and first letters | `fa` | 1 | no | 6 | 38 |
-| `fa-2` | Dari 2: The whole alphabet | `fa` | 2 | no | 6 | 42 |
+| `en-3` | English 3: My day | `en` | 3 | no | 15 | 104 |
+| `en-4` | English 4: At the bazaar | `en` | 4 | no | 16 | 90 |
+| `en-5` | English 5: Health and help | `en` | 5 | no | 13 | 132 |
+| `en-6` | English 6: The wider world | `en` | 6 | no | 13 | 129 |
+| `fa-1-alphabet` | The whole alphabet | `fa` | 1 | **yes** | 9 | 49 |
+| `fa-1` | Dari 1: Sounds and first letters | `fa` | 1 | no | 9 | 68 |
+| `fa-2` | Dari 2: The whole alphabet | `fa` | 2 | no | 9 | 68 |
 | `fa-3-stories` | Dari story book | `fa` | 3 | **yes** | 4 | 16 |
-| `fa-3` | Dari 3: Syllables and words | `fa` | 3 | no | 7 | 60 |
-| `fa-4` | Dari 4: Sentences | `fa` | 4 | no | 7 | 50 |
-| `garden-1` | Garden 1: Me | `garden` | 1 | no | 6 | 22 |
-| `garden-2` | Garden 2: My Home | `garden` | 2 | no | 7 | 20 |
+| `fa-3` | Dari 3: Syllables and words | `fa` | 3 | no | 10 | 66 |
+| `fa-4` | Dari 4: Sentences | `fa` | 4 | no | 10 | 56 |
+| `fa-5` | Dari 5: Stories | `fa` | 5 | no | 8 | 64 |
+| `fa-6` | Dari 6: Fluent reader | `fa` | 6 | no | 11 | 63 |
+| `garden-1` | Garden 1: Me | `garden` | 1 | no | 12 | 39 |
+| `garden-2-nature` | Nature and how things work | `garden` | 2 | **yes** | 10 | 43 |
+| `garden-2` | Garden 2: My Home | `garden` | 2 | no | 13 | 36 |
 | `garden-3` | Health 3: First aid | `garden` | 3 | no | 8 | 25 |
 | `garden-4-rights` | My rights, your rights | `garden` | 4 | **yes** | 6 | 13 |
 | `garden-4-world` | The world, Switzerland and Basel | `garden` | 4 | **yes** | 9 | 32 |
 | `garden-4` | Health and environment 4: My future | `garden` | 4 | no | 15 | 40 |
-| `math-1` | Math 1: Counting to 20 | `math` | 1 | no | 6 | 44 |
+| `math-1` | Math 1: Counting to 20 | `math` | 1 | no | 10 | 71 |
 | `math-2-puzzles` | Logic Puzzles | `math` | 2 | **yes** | 9 | 43 |
-| `math-2` | Math 2: Numbers to 100 | `math` | 2 | no | 6 | 42 |
-| `math-3` | Math 3: Numbers to 1,000 | `math` | 3 | no | 6 | 40 |
-| `math-4` | Math 4: Times Tables and Sharing | `math` | 4 | no | 9 | 45 |
-| `math-5` | Math 5: Large Numbers and Fractions | `math` | 5 | no | 10 | 47 |
-| **Total** | 22 learner packs | | | 5 optional | **167** | **929** |
+| `math-2` | Math 2: Numbers to 100 | `math` | 2 | no | 10 | 70 |
+| `math-3` | Math 3: Numbers to 1,000 | `math` | 3 | no | 10 | 67 |
+| `math-4` | Math 4: Times Tables and Sharing | `math` | 4 | no | 11 | 63 |
+| `math-5` | Math 5: Large Numbers and Fractions | `math` | 5 | no | 12 | 63 |
+| **Total** | 29 learner packs | | | 8 add-ons | **310** | **1847** |
 
-The per-pack descriptions further down cover the first 14 packs; for the newer ones read each pack's `SOURCES.md`.
+Besides these: 17 teacher's guide packs (270 chapters, about 3,450 pages), two lesson packs and the core pack. The per-pack descriptions further down cover only the first 14 packs as they were on 14 November; for everything else read each pack's `SOURCES.md` and `curriculum.md`.
 
 ### Other packs
 
