@@ -301,6 +301,43 @@ title_fa,say_fa
 صنف بزرگ,وقتی صنف بزرگ است…
 ```
 
+## Teacher's guide: content/guide/<subject>-<level>/
+
+Everything a teacher needs to know to teach a level, chapter by chapter:
+what to teach, the background, how to explain it, figures, examples, common
+mistakes, activities without the device, which games practise it, and how to
+check. It is read on the device (teacher mode, Teacher's Course, the guide
+tab; every page is also spoken) and printed with `tools/guide_book.py`.
+
+`pack.json`: `{"pack": "guide-math-1", "kind": "guide", "subject": "math", "level": 1, "version": 1, "title_en": …, "title_fa": …}`
+
+### guide.csv
+
+```
+chapter,title_en,title_fa,kind,picture,text_fa
+1,Counting to five,شمردن تا پنج,goal,,در آخر این درس هر شاگرد می‌تواند…
+1,,,figure,p:sheep*5,هر چیز یک عدد می‌گیرد.
+```
+
+- One row is one page. The first row of a chapter carries the titles. A
+  chapter follows one unit of the learner pack, or one idea.
+- `kind`: `goal` (what pupils can do at the end), `know` (what the teacher
+  herself must know: the subject matter, in plain words), `explain` (how to
+  explain it to the class, step by step, with things found in a classroom),
+  `figure` (a picture with one or two sentences), `example` (a worked
+  example), `mistake` (common mistakes and what to do), `activity` (class
+  activities for up to 50 children without the device), `games` (which
+  games on the device practise it, named by their Dari titles), `check`
+  (how to see who has understood).
+- `picture`: a thing, as everywhere (`p:sheep*5`, a scene). With a picture
+  the text is at most 4 lines of Dari; without, at most 8 (about 60 words).
+  Split longer explanations over several pages of the same kind.
+- `text_fa` is shown and spoken. Plain Afghan Dari, short sentences, to a
+  teacher who may have little training: say what to do and what to say.
+
+A good chapter has 8 to 14 pages, in the order above. `content/guide/math-1`
+chapter 1 is the model.
+
 ## What has to be true before content ships
 
 The builder checks the form. People have to check the rest (spec section 9):

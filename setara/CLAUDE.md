@@ -47,6 +47,9 @@ convenience.
   `docs/authoring.md`.
 - `builder/` turns them into packs: validates, generates speech (cached),
   shapes Dari, renders pictures, writes checksummed zips to `packs/`.
+- `content/guide/` holds the teacher's guides (kind `guide`): per subject and
+  level, what to teach and how. Read on the device and printed with
+  `tools/guide_book.py`.
 - `image/make_card.py` assembles `dist/card/setara/`, the folder that goes on
   the SD card and also runs on a PC.
 - `app/` is the LÖVE app. `main.lua` runs a scene stack (`app.push`,

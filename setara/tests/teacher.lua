@@ -42,7 +42,14 @@ t.press("a") t.wait(3) t.shot("t23_stations_run") t.press("b") t.wait(0.3)
 -- course
 t.press("right") t.press("right") t.press("a") t.wait(0.4) t.shot("t24_course")
 t.press("right") t.press("a") t.wait(2) t.shot("t25_tip")
-t.press("b") t.press("b") t.wait(0.3)
+t.press("b") t.wait(0.3)
+-- the teacher's guide: third tab, first chapter, a few pages
+if #require("core.packs").guides > 0 then
+  t.press("left") t.wait(0.3) t.shot("t25b_guide_list")
+  t.press("a") t.wait(0.8) t.shot("t25c_guide_page")
+  t.press("right") t.press("right") t.press("a") t.wait(0.5) t.press("b") t.wait(0.3)
+end
+t.press("b") t.wait(0.3)
 t.press("start") t.wait(0.3) t.shot("t26_pause")
 
 -- Two lesson packs follow each other: past the last lesson of the first comes

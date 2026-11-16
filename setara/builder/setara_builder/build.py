@@ -44,6 +44,7 @@ class Report:
 
 COLUMNS = {
     "items": {"unit", "key", "en", "fa", "picture", "tags"},
+    "guide": {"chapter", "title_en", "title_fa", "kind", "picture", "text_fa"},
     "listen_pick": {"round", "intro_fa", "say_en", "say_fa", "show", "answer", "distractors", "help_fa", "hop", "tags"},
     "say_it": {"round", "intro_fa", "say_en", "say_fa", "picture", "meaning_fa"},
     "sorter": {"round", "intro_fa", "thing", "say_en", "say_fa", "basket", "basket_say_fa", "basket_say_en"},
@@ -763,6 +764,61 @@ def build_teacher(pack: Pack) -> dict:
     return out
 
 
+# -- teacher's guide ---------------------------------------------------------------
+
+GUIDE_KINDS = ("goal", "know", "explain", "figure", "example", "mistake", "activity", "games", "check")
+
+
+def build_guide(pack: Pack) -> dict:
+    """What the teacher needs to know to teach a level: per chapter the goal,
+    the background, how to explain it, figures, examples, common mistakes,
+    classroom activities, the games that practise it, and how to check."""
+    meta = pack.meta
+    out: dict = {"subject": meta.get("subject", "en"), "level": meta.get("level", 1)}
+    chapters: dict[int, dict] = {}
+    for row in read_csv(pack.src / "guide.csv", "guide", pack.report):
+        where = f"{pack.where}/guide.csv row {row['_row']}"
+        n = row.get("chapter", "")
+        if not n.isdigit():
+            pack.report.error(where, f"chapter must be a number, got {n!r}")
+            continue
+        chapter = chapters.setdefault(int(n), {"n": int(n), "pages": []})
+        if row.get("title_fa"):
+            chapter["title_fa"] = pack.fa(row["title_fa"], where, wrap=False)
+            chapter["title_en"] = row.get("title_en", "")
+            chapter["title_audio"] = pack.say("fa", row["title_fa"], where)
+        kind = row.get("kind") or "explain"
+        if kind not in GUIDE_KINDS:
+            pack.report.error(where, f"unknown kind {kind!r}, want one of {', '.join(GUIDE_KINDS)}")
+            continue
+        text = row.get("text_fa", "")
+        if not text:
+            pack.report.error(where, "a guide page needs text_fa")
+            continue
+        page = {"kind": kind, "fa": pack.fa(text, where), "audio": pack.say("fa", text, where)}
+        room = 8
+        if row.get("picture"):
+            page["img"] = pack.thing(row["picture"], where)
+            room = 4
+        if len(page["fa"]) > room:
+            pack.report.error(where, f"guide page too long: {len(page['fa'])} lines of Dari, at most {room}"
+                                     + (" beside a picture" if room == 4 else ""))
+        chapter["pages"].append(page)
+    listing = []
+    for n in sorted(chapters):
+        chapter = chapters[n]
+        if "title_fa" not in chapter:
+            pack.report.error(f"{pack.where}/guide.csv chapter {n}", "the first row of a chapter carries title_fa")
+        listing.append({"n": n, "title_en": chapter.get("title_en", ""), "title_fa": chapter.get("title_fa", []),
+                        "pages": len(chapter["pages"])})
+    if not listing:
+        pack.report.error(f"{pack.where}/guide.csv", "no chapters")
+    pack.add_json("guide.json", [chapters[n] for n in sorted(chapters)])
+    out["guide"] = "guide.json"
+    out["chapters"] = listing
+    return out
+
+
 # -- core pack -------------------------------------------------------------------
 
 
@@ -832,7 +888,7 @@ def build(content: Path, out_dir: Path | None, tts: str | None = None, only: lis
             seen[place] = src
         kind = pack.meta.get("kind", "learner")
         before = len(report.errors)
-        builders = {"learner": build_learner, "teacher": build_teacher, "core": build_core}
+        builders = {"learner": build_learner, "teacher": build_teacher, "core": build_core, "guide": build_guide}
         if kind not in builders:
             report.error(f"{where}/pack.json", f"unknown kind {kind!r}")
             continue

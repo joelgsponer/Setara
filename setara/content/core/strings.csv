@@ -120,3 +120,13 @@ num_19,nineteen,نزده,en
 num_20,twenty,بیست,en
 math_plus,plus,جمع,en
 math_minus,minus,منفی,en
+course_guide,Teacher's guide,رهنمای معلم,none
+guide_goal,Goal,هدف درس,none
+guide_know,What the teacher should know,دانستنی برای معلم,none
+guide_explain,How to explain it,چطور توضیح بدهیم,none
+guide_figure,Figure,شکل,none
+guide_example,Example,مثال,none
+guide_mistake,Common mistakes,اشتباه‌های معمول,none
+guide_activity,Activity in class,فعالیت در صنف,none
+guide_games,Games on the device,بازی‌های دستگاه,none
+guide_check,How to check,ارزیابی,none

@@ -39,7 +39,8 @@ en-1.zip
 }
 ```
 
-- `kind`: `learner`, `teacher` (has `lessons`, `phrases`, `tips` instead of
+- `kind`: `guide` (a teacher's guide: `guide` names `guide.json`, a list of
+  chapters with pages, and `chapters` lists their titles), `learner`, `teacher` (has `lessons`, `phrases`, `tips` instead of
   `games`) or `core` (has `strings`).
 - `files` lists every file of the pack with its SHA-256. This is what makes a
   pack self-checking.

@@ -16,6 +16,7 @@ M.FORMAT = 1
 M.list = {}      -- id -> pack
 M.subjects = {}  -- subject -> level -> pack
 M.teacher = {}   -- list of teacher packs
+M.guides = {}    -- teacher's guides, by subject and level
 M.core = nil
 
 local function hexhash(data)
@@ -48,6 +49,8 @@ local function usable(manifest, root)
   local function has(path) return type(path) == "string" and love.filesystem.getInfo(root .. path, "file") ~= nil end
   if manifest.kind == "core" then
     if not has(manifest.strings or "strings.json") then return false, "no strings" end
+  elseif manifest.kind == "guide" then
+    if not has(manifest.guide) or type(manifest.chapters) ~= "table" then return false, "no guide" end
   elseif manifest.kind == "teacher" then
     if type(manifest.lessons) ~= "table" then return false, "no lessons" end
     for _, lesson in ipairs(manifest.lessons) do
@@ -203,6 +206,8 @@ function M.load()
       M.core = p
       local strings = read_json(p.root .. (type(p.strings) == "string" and p.strings or "strings.json"))
       p.strings = type(strings) == "table" and strings or {}
+    elseif p.kind == "guide" then
+      M.guides[#M.guides + 1] = p
     elseif p.kind == "teacher" then
       M.teacher[#M.teacher + 1] = p
     end
@@ -210,7 +215,7 @@ function M.load()
   -- A level's own pack first, then optional packs that add games to it.
   local learners = {}
   for _, p in pairs(M.list) do
-    if p.kind ~= "core" and p.kind ~= "teacher" and p.subject and p.level then learners[#learners + 1] = p end
+    if p.kind ~= "core" and p.kind ~= "teacher" and p.kind ~= "guide" and p.subject and p.level then learners[#learners + 1] = p end
   end
   table.sort(learners, function(a, b)
     if (a.optional and 1 or 0) ~= (b.optional and 1 or 0) then return not a.optional end
@@ -231,6 +236,12 @@ function M.load()
     end
   end
   table.sort(M.teacher, function(a, b) return (a.level or 0) < (b.level or 0) end)
+  local order = { en = 1, fa = 2, math = 3, garden = 4 }
+  table.sort(M.guides, function(a, b)
+    local sa, sb = order[a.subject] or 9, order[b.subject] or 9
+    if sa ~= sb then return sa < sb end
+    return (a.level or 0) < (b.level or 0)
+  end)
 end
 
 function M.count()

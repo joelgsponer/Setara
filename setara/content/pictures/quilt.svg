@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<g stroke="#3b2f2f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M14 22h100v88H14z" fill="#fff6dc"/>
+<path d="M14 22h34v30H14z" fill="#e0483f"/><path d="M48 22h33v30H48z" fill="#f2b705"/><path d="M81 22h33v30H81z" fill="#3f7fbf"/>
+<path d="M14 52h34v29H14z" fill="#4e9a51"/><path d="M48 52h33v29H48z" fill="#8e5bb5"/><path d="M81 52h33v29H81z" fill="#e07a3f"/>
+<path d="M14 81h34v29H14z" fill="#f2b705"/><path d="M48 81h33v29H48z" fill="#3f7fbf"/><path d="M81 81h33v29H81z" fill="#e0483f"/>
+<path d="M14 22h100v88H14z" fill="none"/>
+</g>
+<g fill="#fff6dc"><circle cx="31" cy="37" r="4"/><circle cx="64.500" cy="37" r="4"/><circle cx="97.500" cy="37" r="4"/><circle cx="31" cy="66.500" r="4"/><circle cx="64.500" cy="66.500" r="4"/><circle cx="97.500" cy="66.500" r="4"/><circle cx="31" cy="95.500" r="4"/><circle cx="64.500" cy="95.500" r="4"/><circle cx="97.500" cy="95.500" r="4"/></g>
+</svg>

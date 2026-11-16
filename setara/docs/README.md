@@ -29,6 +29,7 @@ reach children before that review. See
 | Review the content: the open points a human still has to decide | [review-notes.md](review-notes.md) |
 | Know what the app stores, and how content is kept safe | [privacy-and-safety.md](privacy-and-safety.md) |
 | Get a short answer to a common question | [faq.md](faq.md) |
+| See what is taught, in what order, and how a session teaches | [curriculum.md](curriculum.md) |
 | Write or change lessons, stories and game sheets | [authoring.md](authoring.md) |
 | Look up the JSON of a round (level file) | [level-format.md](level-format.md) |
 | Look up what is in a pack, on the card, and in the saved data | [pack-format.md](pack-format.md) |
