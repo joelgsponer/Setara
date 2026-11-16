@@ -335,6 +335,14 @@ chapter,title_en,title_fa,kind,picture,text_fa
 - `text_fa` is shown and spoken. Plain Afghan Dari, short sentences, to a
   teacher who may have little training: say what to do and what to say.
 
+English inside a Dari page (the English guides): a question mark, full stop
+or comma that ends an English phrase is typed *before* the phrase
+(`?What's your name`), because in a right-to-left line the mark would
+otherwise be drawn at the wrong end. Put a line break (` / `) before an
+English phrase that might be cut by the wrap, and write numbers of a list as
+words next to English. The page voice is Dari and will not say the English
+well: pronunciation comes from the lesson tools.
+
 A good chapter has 8 to 14 pages, in the order above. `content/guide/math-1`
 chapter 1 is the model.
 
