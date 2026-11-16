@@ -47,7 +47,7 @@ RUN --mount=type=cache,id=setara-tts,target=/cache/tts \
     python3 -m setara_builder.cli build --quiet --tts "$TTS"
 COPY tools/web tools/web-src
 RUN --mount=type=cache,id=setara-web-audio,target=/src/dist/web-work/audio \
-    cp -r tools/web-src/make_web.py tools/web-src/index.html tools/web-src/assets tools/web/ && \
+    cp -r tools/web-src/make_web.py tools/web-src/index.html tools/web-src/assets tools/web-src/manifest.webmanifest tools/web-src/sw.js tools/web/ && \
     if [ "$START" = "dari" ]; then python3 tools/web/make_web.py --dari; else python3 tools/web/make_web.py; fi
 
 FROM nginx:1.27-alpine
