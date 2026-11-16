@@ -23,15 +23,17 @@ on-screen D-pad, as on the device.
 ## Android
 
 ```sh
-python3 tools/mobile/make_apk.py            # the starter set, about 240 MB
-python3 tools/mobile/make_apk.py --all      # every pack, over a gigabyte
+python3 tools/mobile/make_apk.py            # the starter set, about 115 MB
+python3 tools/mobile/make_apk.py --all      # every pack, over 800 MB
+python3 tools/mobile/make_apk.py --packs-url http://packs.example.org/setara   # starter, fetches the rest
 python3 tools/mobile/make_apk.py --only en-1 --only math-1 --english
 ```
 
 The result is `dist/android/setara-<version>-starter.apk`. It is the
 official *LÖVE for Android* package (11.5) with Setara inside, renamed to
-`org.setara.app`. The permissions for network, microphone, Bluetooth and
-vibration are taken out: the app cannot open a connection.
+`org.setara.app`. The permissions for microphone, Bluetooth and vibration
+are taken out, and without `--packs-url` the one for the network too: that
+app cannot open a connection.
 
 What the script needs (in `/opt/tools/android`, or where `SETARA_ANDROID`
 points): Java; `love-embed.apk` (`love-11.5-android-embed.apk` from the
@@ -59,11 +61,10 @@ over 200 MB. The honest route to the store is the Gradle project of
 love-android with Setara's `game.love`; sideloading and sharing the APK
 file need none of that.
 
-**Which packs.** The starter set is level 1 of every subject, both
-alphabets, the first lesson book and four guides. With `--all` the package
-is over a gigabyte; phones install it, but it is a heavy file to pass
-around. Adding packs to an installed app, as the handheld does from its
-card, is not built for phones.
+**Which packs.** The app carries a starter set: level 1 of every subject
+and the first lesson book, about 110 MB. Phone packs are lighter than card
+packs: no slow speech variants, and the teacher's guides without speech.
+`--all` puts every pack inside (over 800 MB).
 
 ## iPhone and iPad
 
@@ -93,6 +94,44 @@ Then, on a Mac:
 App Store review asks for a privacy statement ("no data collected" is the
 true answer) and may ask about content for children; the app has no
 links, no purchases and no accounts.
+
+## Fetching packs
+
+A phone app built with `--packs-url` shows every level of every place. A
+level that is not on the phone carries a small arrow; choosing it, or the
+"more lessons" button beside the level buttons, lists what can be fetched
+for that place with its size. A fetches a pack, shows how far it is, checks
+it and installs it exactly as the handheld installs a pack from its card.
+
+How it is built:
+
+- The build writes every pack as a lighter phone pack into
+  `dist/android/store/` (or `dist/mobile/store/`), each named by the first
+  20 letters of its SHA-256, with `catalogue.json`. **Put that folder on a
+  web server at the address given to `--packs-url`.** They are plain files;
+  any static server does.
+- The catalogue (pack, version, size, SHA-256, file name) is baked into the
+  app. The app never asks a server what exists: it knows.
+- A fetched file is accepted only if its SHA-256 is the one in the app. A
+  pack changed on the way, or a wrong file, is thrown away
+  (`tests/fetch/run.sh`). New or changed packs therefore need a new app
+  build; an old app keeps fetching the packs it was built with as long as
+  those files stay on the server.
+- What goes over the wire: one request per pack, for a file whose name is a
+  hash. Nothing about the phone or its user is sent, and the app keeps no
+  record of fetching.
+
+**The open point is the transport.** LÖVE 11.5 can only fetch over plain
+`http`, not `https`. Content cannot be forged (the hash check), and the
+file names say nothing, but someone watching the network sees that a phone
+talks to that server and how much it fetches. The server must answer on
+plain http without redirecting to https, which many hosting setups do by
+default. Proper https needs a LÖVE build with the `https` module (LÖVE 12,
+or 11.5 built from source with lua-https); `app/core/fetch.lua` uses that
+module when it is there. iOS refuses plain http unless the app declares an
+exception for the host in `Info.plist`.
+
+The handheld has no catalogue and never opens a connection.
 
 ## The browser as an app
 

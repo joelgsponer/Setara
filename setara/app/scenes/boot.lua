@@ -18,6 +18,7 @@ function Boot:enter()
     if not ok then store.log("install: " .. tostring(err):sub(1, 60)) end
     coroutine.yield()
     packs.load()
+    require("core.fetch").load()
   end)
 end
 

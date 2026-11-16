@@ -7,6 +7,8 @@ local store = require("core.store")
 local packs = require("core.packs")
 local g = love.graphics
 
+local fetch = require("core.fetch")
+
 local Place = {}
 Place.__index = Place
 
@@ -63,10 +65,19 @@ end
 function Place:chips()
   local chips = {}
   for l = 1, MAX_LEVEL[self.subject] or 6 do
-    chips[#chips + 1] = { kind = "level", level = l, on = packs.subjects[self.subject][l] ~= nil }
+    local have = packs.subjects[self.subject][l] ~= nil
+    -- on a phone a level that is not there yet can be fetched
+    local get = not have and #fetch.missing(function(e)
+      return e.subject == self.subject and e.level == l and e.kind == "learner" and not e.optional
+    end) > 0
+    chips[#chips + 1] = { kind = "level", level = l, on = have or get, get = get }
   end
   chips[#chips + 1] = { kind = "find", on = true }
   chips[#chips + 1] = { kind = "pair", on = true }
+  -- on a phone: more for this place (add-ons, lesson books, guides, further levels)
+  if #fetch.missing(function(e) return e.subject == self.subject end) > 0 then
+    chips[#chips + 1] = { kind = "get", on = true }
+  end
   return chips
 end
 
@@ -81,7 +92,8 @@ function Place:speak()
     audio.say(packs.clips(game.pack or self.pack, game.title_audio))
   elseif self.row == 0 then
     local chip = self:chips()[self.chip] or {}
-    if chip.kind == "level" then audio.say(packs.string("level_" .. chip.level).audio)
+    if chip.kind == "get" or chip.get then audio.say(packs.string("get_chip").audio)
+    elseif chip.kind == "level" then audio.say(packs.string("level_" .. chip.level).audio)
     elseif chip.kind == "find" then audio.say(packs.string("find_level").audio)
     else audio.say(packs.string(app.pair and "two_players" or "one_player").audio) end
   end
@@ -114,7 +126,7 @@ function Place:input(b)
         -- A level chip shows that level's games. It becomes the level in use
         -- only when the child goes down into it; passing over the chips on
         -- the way to another button changes nothing.
-        local show = chips[i].kind == "level" and chips[i].level or self.kept
+        local show = chips[i].kind == "level" and not chips[i].get and chips[i].level or self.kept
         if show ~= self.level then
           self.level = show
           self:load()
@@ -122,6 +134,10 @@ function Place:input(b)
         sfx.play("move")
         self:speak()
       end
+    elseif (b == "down" or b == "a") and chips[self.chip] and chips[self.chip].get then
+      app.push(require("scenes.download").new({ subject = self.subject, level = chips[self.chip].level }))
+    elseif b == "a" and chips[self.chip] and chips[self.chip].kind == "get" then
+      app.push(require("scenes.download").new({ subject = self.subject, level = self.level }))
     elseif b == "down" and rows > 0 then
       self.row = 1
       self.kept = self.level
@@ -205,12 +221,21 @@ function Place:draw()
     if chip.kind == "level" then
       ui.set(current and ui.c.white or ui.c.ink)
       text.centered("bold", tostring(chip.level), x, 54, w, 44, 30)
+      if chip.get then ui.arrow("down", x + w - 10, 62, 5, ui.c.ink) end
     elseif chip.kind == "find" then
       -- a magnifying glass: find my level
       ui.set(ui.c.ink)
       g.setLineWidth(4)
       g.circle("line", x + 28, 73, 10)
       g.line(x + 35, 81, x + 44, 90)
+      g.setLineWidth(1)
+    elseif chip.kind == "get" then
+      -- an arrow into a tray: get more lessons
+      ui.set(ui.c.ink)
+      g.setLineWidth(4)
+      g.line(x + w / 2, 62, x + w / 2, 80)
+      g.line(x + w / 2 - 8, 73, x + w / 2, 81, x + w / 2 + 8, 73)
+      g.line(x + w / 2 - 14, 82, x + w / 2 - 14, 90, x + w / 2 + 14, 90, x + w / 2 + 14, 82)
       g.setLineWidth(1)
     else
       -- one or two players

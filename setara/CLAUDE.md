@@ -17,8 +17,12 @@ convenience.
 - **No personal data.** No names, photos, voice recordings, location, school
   identifiers or profiles are stored, ever. Stats are anonymous counts with no
   timestamp finer than the week.
-- **No network in version 1.** The app never opens a connection. Updates
-  arrive as files on the SD card.
+- **No network on the handheld.** There the app never opens a connection;
+  updates arrive as files on the SD card. The phone apps alone may fetch
+  packs (decided by the owner on 16 November 2026): only when built with a
+  catalogue, only a request for a pack file named by its hash, nothing sent
+  about the device or its user, and a fetched pack is accepted only if it
+  matches the hash built into the app (`app/core/fetch.lua`).
 - **Eight buttons, no typing.** D-pad, A, B, X, Y, L, R, Start. Engines get
   button names from `app/core/input.lua`, never raw keys.
 - **Screen is 640×480 at 3.5 inches.** Latin text at least 24 px, Dari at

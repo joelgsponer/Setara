@@ -24,12 +24,12 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from bundle import ROOT, STARTER, write_love   # noqa: E402
+from bundle import ROOT, STARTER, write_love, write_store   # noqa: E402
 
 TOOLS = Path(os.environ.get("SETARA_ANDROID", "/opt/tools/android"))
 PACKAGE = "org.setara.app"
-# The app never opens a connection and never listens: these are taken out.
-DROP = ["INTERNET", "BLUETOOTH", "RECORD_AUDIO", "VIBRATE", "WRITE_EXTERNAL_STORAGE"]
+# The app never listens or records; without --packs-url it cannot open a connection either.
+DROP = ["BLUETOOTH", "RECORD_AUDIO", "VIBRATE", "WRITE_EXTERNAL_STORAGE"]
 
 
 def run(*cmd: str) -> None:
@@ -50,7 +50,7 @@ def main() -> None:
     ap.add_argument("--out", type=Path, default=ROOT / "dist" / "android")
     ap.add_argument("--all", action="store_true", help="every pack (over a gigabyte)")
     ap.add_argument("--only", action="append", help="these packs instead of the starter set")
-    ap.add_argument("--slow", action="store_true", help="include the slow speech variants (much larger)")
+    ap.add_argument("--packs-url", help="where the phone fetches further packs, e.g. http://packs.example.org/setara")
     ap.add_argument("--english", action="store_true", help="start in English mode (for testers)")
     ap.add_argument("--keystore", type=Path)
     ap.add_argument("--alias", default="setara")
@@ -66,14 +66,22 @@ def main() -> None:
 
     # the game
     only = None if args.all else (args.only or STARTER)
-    inside = write_love(apk / "assets" / "game.love", only, args.slow, args.english)
+    catalogue = None
+    if args.packs_url:
+        if args.packs_url.startswith("https:"):
+            print("note: LÖVE 11.5 for Android has no https module; this app can only fetch over https once it is "
+                  "built on a LÖVE that has one (see docs/mobile.md). Packs are checked against built-in hashes either way.")
+        catalogue = write_store(args.out / "store", args.packs_url)
+    inside = write_love(apk / "assets" / "game.love", only, args.english, catalogue)
 
     # the manifest: Setara's name, no network, lying or standing
     path = apk / "AndroidManifest.xml"
     m = path.read_text("utf-8")
-    for perm in DROP:
+    cleartext = bool(args.packs_url) and args.packs_url.startswith("http:")
+    for perm in DROP + ([] if args.packs_url else ["INTERNET"]):
         m = re.sub(rf'\s*<uses-permission[^>]*android\.permission\.{perm}"[^>]*/>', "", m)
-    m = m.replace('android:usesCleartextTraffic="true"', 'android:usesCleartextTraffic="false"')
+    if not cleartext:
+        m = m.replace('android:usesCleartextTraffic="true"', 'android:usesCleartextTraffic="false"')
     m = m.replace("LÖVE for Android", "Setara")
     m = m.replace('android:screenOrientation="landscape"', 'android:screenOrientation="fullUser"')
     m = m.replace('android:allowBackup="true"', 'android:allowBackup="false"')
@@ -118,6 +126,9 @@ def main() -> None:
     shutil.rmtree(work, ignore_errors=True)
     print(f"{final}  ({final.stat().st_size / 1e6:.0f} MB, {len(inside) - 1} packs"
           + (", signed with the TEST key" if test_key else "") + ")")
+    if catalogue:
+        total = sum(p["size"] for p in catalogue["packs"]) / 1e6
+        print(f"{args.out / 'store'}  ({len(catalogue['packs'])} packs to fetch, {total:.0f} MB): serve it at {catalogue['base']}")
 
 
 if __name__ == "__main__":

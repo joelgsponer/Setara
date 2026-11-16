@@ -135,3 +135,14 @@ class_today,Today's lesson: play with the class,درس امروز: با صنف �
 class_hard,Hard for the class: practise again,برای صنف سخت بود: دوباره تمرین کنید,none
 class_check,Quick Check,ارزیابی کوتاه,none
 class_empty,Nothing to show yet. Play some rounds and run a Quick Check first.,هنوز چیزی برای نشان دادن نیست. اول چند دور بازی کنید و یک ارزیابی کوتاه بگیرید.,none
+# Getting more lessons (phone apps only)
+get_title,More lessons,درس‌های بیشتر,none
+get_chip,More lessons. They are fetched from the internet.,درس‌های بیشتر. از انترنت گرفته می‌شود.,fa
+get_intro,These lessons are not on this phone yet. Choose one and press the green button. It needs the internet.,این درس‌ها هنوز در این تلفون نیست. یکی را انتخاب کن و دکمه سبز را فشار بده. به انترنت ضرورت دارد.,fa
+get_wait,Wait a little. The lessons are coming.,کمی صبر کن. درس‌ها می‌آید.,fa
+get_ready,Done. The new lessons are here.,تمام شد. درس‌های نو آمد.,fa
+get_failed,It did not work. Check the internet and try again.,نشد. انترنت را ببین و دوباره کوشش کن.,fa
+get_none,Everything for this place is already on this phone.,همه چیز این جا در این تلفون است.,fa
+get_kind_learner,Lessons and games,درس و بازی,none
+get_kind_teacher,Lesson book for the teacher,کتاب درس برای معلم,none
+get_kind_guide,Teacher's guide,رهنمای معلم,none

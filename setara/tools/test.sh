@@ -24,5 +24,6 @@ for script in "$ROOT"/tests/*.lua; do
   fi
 done
 if "$ROOT/tests/update/run.sh" >/dev/null 2>&1; then echo "ok   update"; else echo "FAIL update"; fail=1; fi
+if "$ROOT/tests/fetch/run.sh" >/dev/null 2>&1; then echo "ok   fetch"; else echo "FAIL fetch"; fail=1; fi
 echo "screenshots: $SAVE/*/love/setara/shots"
 exit $fail

@@ -282,3 +282,14 @@ AI, so an error in the Dari can be invisible in the English.
 A wrong fact, an unkind sentence, a picture that would cause trouble, a
 field that stores more than this page says: please report it. See
 [../../CONTRIBUTING.md](../../CONTRIBUTING.md).
+
+## Phone apps and the network
+
+The handheld never opens a connection. A phone app built to fetch packs
+(`docs/mobile.md`) makes one kind of request: for a pack file, named by a
+hash, from the address built into it. It sends nothing about the phone or
+its user, has no account and no identifier, and keeps no record of what was
+fetched beyond the pack itself. A fetched pack is accepted only if it
+matches the hash built into the app. With LÖVE 11.5 the request travels over
+plain http: its content cannot be forged, but a watcher on the network can
+see that the phone talks to that server.
