@@ -19,6 +19,7 @@ function Play.new(opts)
   local self = setmetatable({}, Play)
   self.pack, self.game, self.round_id, self.pair = opts.pack, opts.game, opts.round_id, opts.pair
   self.want_review = opts.review ~= false
+  self.level_pack = opts.level_pack
   self.t, self.elapsed = 0, 0
   self.player = 1
   return self
@@ -256,7 +257,15 @@ function Play:input(b)
   if self.state == "result" then
     if self.t < 0.8 then return end
     if b == "a" then
-      app.replace(Play.new({ pack = self.pack, game = self.game, round_id = self:next_round(), pair = self.pair }))
+      -- go on along the guided path of the level; without one, the next round of this game
+      local game, id = require("core.path").next_step(self.level_pack)
+      if game and id then
+        app.replace(Play.new({ pack = game.pack or self.level_pack, game = game, round_id = id, pair = self.pair,
+          level_pack = self.level_pack }))
+      else
+        app.replace(Play.new({ pack = self.pack, game = self.game, round_id = self:next_round(), pair = self.pair,
+          level_pack = self.level_pack }))
+      end
     elseif b == "b" then
       app.pop()
     end

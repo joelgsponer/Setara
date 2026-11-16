@@ -31,6 +31,18 @@ function Place:load()
   end
   self.col = math.min(self.col, math.max(1, #self.games))
   ui.clear_images()
+  self:suggest(true)
+end
+
+-- Where to go on: the next step of the guided path. The cursor starts there.
+function Place:suggest(move)
+  self.next_game, self.next_id = require("core.path").next_step(self.pack)
+  if not move then return end
+  for i, game in ipairs(self.games) do
+    if game == self.next_game then
+      self.row, self.col = math.floor((i - 1) / COLS) + 1, (i - 1) % COLS + 1
+    end
+  end
 end
 
 function Place:enter()
@@ -38,6 +50,7 @@ function Place:enter()
 end
 
 function Place:resume()
+  self:suggest(true)
   -- the placement game may have picked a level
   local want = store.progress.level[self.subject]
   if want and want ~= self.level and packs.subjects[self.subject][want] then
@@ -136,7 +149,8 @@ function Place:input(b)
     local game = self:selected_game()
     if game then
       store.progress.level[self.subject] = self.level
-      app.push(require("scenes.play").new({ pack = game.pack or self.pack, game = game, round_id = next_round(game),
+      local round_id = game == self.next_game and self.next_id or next_round(game)
+      app.push(require("scenes.play").new({ pack = game.pack or self.pack, game = game, round_id = round_id, level_pack = self.pack,
         pair = app.pair }))
     end
     return
@@ -222,6 +236,15 @@ function Place:draw()
       local tx, ty = 14 + col * (tw + 8), 110 + (row - first) * (th + 8)
       local selected = self.row == row + 1 and self.col == col + 1
       ui.card(tx, ty, tw, th, { selected = selected })
+      if game == self.next_game then
+        -- "go on here": a small gold flag on the tile of the next step
+        ui.set(ui.c.gold)
+        g.polygon("fill", tx + tw - 34, ty - 2, tx + tw - 8, ty - 2, tx + tw - 8, ty + 30, tx + tw - 21, ty + 20, tx + tw - 34, ty + 30)
+        ui.set(ui.c.ink)
+        g.setLineWidth(2)
+        g.polygon("line", tx + tw - 34, ty - 2, tx + tw - 8, ty - 2, tx + tw - 8, ty + 30, tx + tw - 21, ty + 20, tx + tw - 34, ty + 30)
+        g.setLineWidth(1)
+      end
       if game.icon then ui.thing(game.icon, (game.pack or self.pack).root, tx + 26, ty + 8, 95, 92) end
       ui.set(ui.c.ink)
       if game.title_fa and game.title_fa[1] then
