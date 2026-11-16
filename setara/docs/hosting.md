@@ -56,13 +56,14 @@ it. `--only en-1 --only garden-1` makes a smaller page with just those packs.
 
 ## What to know
 
-- **The first load is large**: about 225 MB with all 25 packs, because every
-  lesson, picture and clip of speech is in it. The browser's ordinary cache
-  keeps it for the next visit. To stay at that size the browser build leaves
-  out the slow speech variants (X repeats at normal speed). For a smaller
-  page: `make_web.py --light-audio` (speech at 16 kHz, about 160 MB, duller
-  sound) or `--only <pack>` for a selection; `--slow` puts the slow variants
-  back (about 360 MB).
+- **The preview carries a selection, not everything.** The whole content is
+  about 1.4 GB, too much for a browser. By default the web build holds level
+  1 of every subject, the Dari alphabet, health 4 with the geography pack,
+  the first lesson book and two teacher's guides: about 185 MB, kept by the
+  browser's ordinary cache after the first load. It leaves out the slow
+  speech variants (X repeats at normal speed). Choose other packs with
+  `make_web.py --only <pack>` (repeatable; add-ons need their level pack),
+  everything with `--all`, a duller but smaller sound with `--light-audio`.
 - **Sound starts after the first click or key press.** Browsers do not let a
   page play sound before that.
 - **Keys:** arrows, Z = A, X = B, A = X, S = Y, Q and W = L and R, Enter =
